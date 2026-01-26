@@ -3,19 +3,21 @@
 This document tracks the execution of the ForbocAI startup launch, focusing on professional presence, investor readiness, and the decentralized "Agent Economy" protocol.
 
 ## Phase 1: Digital Presence & Branding (Immediate)
-- [ ] **LinkedIn Company Page**
-    - [ ] Create simple but professional company page for "ForbocAI".
-    - [ ] Add tagline: "Autonomous Worlds. Architected Agents."
-    - [ ] Link website: `https://forbocai.github.io`
-    - [ ] Add first "Hello World" post announcing the "Micro-NPC" architecture.
-- [ ] **Wellfound (AngelList) Profile**
-    - [ ] Set up company profile to signal "Hiring/Fundraising" status.
-    - [ ] List "Sean Dinwiddie" as Founder/CTO.
-    - [ ] Tag industries: Artificial Intelligence, Gaming, Web3/Blockchain, Generative AI.
-    - [ ] Add pitch blurb roughly matching the landing page "Vision".
+- [x] **LinkedIn Company Page**
+    - [x] Strategy & Content Drafted (See `LinkedIn.md`).
+    - [x] Define tagline: "Autonomous Worlds. Architected Agents."
+    - [x] Link website: `https://forbocai.github.io`
+    - [x] Draft first "Hello World" post.
+- [x] **Wellfound (AngelList) Profile**
+    - [x] Strategy & Content Drafted (See `Wellfound.md`).
+    - [x] Define pitch blurb matching landing page.
+- [x] **Landing Page**
+    - [x] Update Design Aesthetic (Dark Industrial/Grimdark).
+    - [x] Add Engineering Roadmap Section.
+    - [x] Update Navigation.
 - [ ] **Domain & Email**
     - [ ] (Future) Register `forboc.ai` domain.
-    - [x] ~~Update temporary contact email to `forbocai@sdin.dev`~~ (Pending commit).
+    - [x] Update temporary contact email to `forbocai@sdin.dev`.
 
 ## Phase 2: Investor Readiness (Seed Round Prep)
 - [ ] **Pitch Deck (10-12 Slides)**
@@ -24,6 +26,9 @@ This document tracks the execution of the ForbocAI startup launch, focusing on p
     - [ ] **Tech Moat**: ECS-Redux purity + Local SLM optimization + Ghost Agent testing.
     - [ ] **Roadmap**: Game release -> Engine licensing -> Agent Economy Protocol.
     - [ ] **Ask**: Seed round amount (e.g., $500k - $2M) for team expansion.
+- [ ] **Technical Validation**
+    - [ ] Execute Engineering Roadmap (See `Forboc/notes/TODOs/system-todo.md`).
+    - [ ] "WebLLM" Proof of Concept running in browser.
 
 ## Phase 3: The Agent Economy (Protocol Layer)
 - [ ] **Technical Whitepaper ("Litepaper")**
