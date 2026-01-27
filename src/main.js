@@ -18,6 +18,19 @@ const render = () => {
     if (appElement) {
         // Pure functional rendering: State -> UI
         appElement.innerHTML = App(state);
+
+        // Post-render: Scroll to hash if present
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                target.scrollIntoView();
+            } else if (hash === '#whitepaper') {
+                window.scrollTo(0, 0);
+            }
+        } else {
+            window.scrollTo(0, 0);
+        }
     }
 };
 

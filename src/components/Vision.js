@@ -9,7 +9,7 @@ export const Vision = () => {
         <h2>Future Protocol: The Agent Economy</h2>
         <p>We are architecting a decentralized framing for autonomous agent interoperability. A tokenized layer where your unique NPC logic and memory states can be owned, traded, and utilized across compatible worlds.</p>
         <br>
-        <a href="whitepaper.html" class="btn btn-secondary">Read the Whitepaper</a>
+        <a href="#whitepaper" class="btn btn-secondary">Read the Whitepaper</a>
     </div>
     `;
 };

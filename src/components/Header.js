@@ -8,17 +8,17 @@ export const Header = (props) => {
         <div class="container">
             <nav>
                 <div class="logo">
-                     <a href="index.html">
+                     <a href="#">
                         <div class="logo-icon"></div>
                         <span class="badge">Forboc</span> AI
                      </a>
                 </div>
                 <!-- Simulating the function buttons -->
                 <div class="nav-links hardware-controls">
-                    <a href="index.html#technology" class="nav-btn" data-link>Technology</a>
-                    <a href="index.html#vision" class="nav-btn" data-link>Vision</a>
-                    <a href="index.html#roadmap" class="nav-btn" data-link>Roadmap</a>
-                    <a href="index.html#investors" class="nav-btn" data-link>Investors</a>
+                    <a href="#technology" class="nav-btn" data-link>Technology</a>
+                    <a href="#vision" class="nav-btn" data-link>Vision</a>
+                    <a href="#roadmap" class="nav-btn" data-link>Roadmap</a>
+                    <a href="#investors" class="nav-btn" data-link>Investors</a>
                 </div>
                 <div class="status-led"></div>
             </nav>

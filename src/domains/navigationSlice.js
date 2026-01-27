@@ -12,22 +12,14 @@ export const navigate = (path) => ({
     payload: path
 });
 
-
 const getPathFromHash = () => {
     const hash = window.location.hash.substring(1);
     return hash || 'hero';
 };
 
-const getPageFromPath = () => {
-    const path = window.location.pathname;
-    if (path.includes('whitepaper.html')) return 'whitepaper';
-    return 'index';
-};
-
 // Initial State
 const initialState = {
-    currentPath: getPathFromHash(),
-    currentPage: getPageFromPath()
+    currentPath: getPathFromHash()
 };
 
 // Pure Reducer
@@ -36,7 +28,7 @@ export const navigationReducer = (state = initialState, action) => {
         case NAVIGATE:
             return {
                 ...state,
-                currentPath: action.payload.replace('#', '')
+                currentPath: action.payload.replace('#', '') || 'hero'
             };
         default:
             return state;
@@ -45,4 +37,9 @@ export const navigationReducer = (state = initialState, action) => {
 
 // Selectors
 export const selectCurrentPath = (state) => state.navigation.currentPath;
-export const selectCurrentPage = (state) => state.navigation.currentPage;
+
+export const selectCurrentPage = (state) => {
+    const path = selectCurrentPath(state);
+    if (path === 'whitepaper') return 'whitepaper';
+    return 'index';
+};
