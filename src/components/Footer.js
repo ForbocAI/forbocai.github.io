@@ -15,6 +15,7 @@ export const Footer = () => {
                 <div class="socials">
                     <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold;">$FAI Token</a>
                     <a href="https://x.com/ForbocAi" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+                    <a href="https://t.me/forbocai" target="_blank" rel="noopener noreferrer">Telegram</a>
                     <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://www.linkedin.com/company/111540626" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Wellfound</a>
