@@ -1,0 +1,40 @@
+/**
+ * Technology Component
+ * Represents "The Substrate" section.
+ */
+export const Technology = () => {
+    return `
+    <h2>The Substrate</h2>
+    <p>A local-first, privacy-focused architecture that merges rigourous ECS game loops with fluid Large Language Models.</p>
+    
+    <div class="grid">
+        <div class="card">
+            <div class="screw screw-tl"></div>
+            <div class="screw screw-tr"></div>
+            <div class="screw screw-bl"></div>
+            <div class="screw screw-br"></div>
+            <span class="runic">Neural_Substrate // V.02</span>
+            <h3>Generative NPC Cortex</h3>
+            <p>Powered by fine-tuned SLMs (SmolLM2) and edge-resident RAG buffers. Our "Micro-NPC" architecture enables low-latency, context-aware dialogue with persistent long-term memory, running entirely on-device.</p>
+        </div>
+        <div class="card">
+            <div class="screw screw-tl"></div>
+            <div class="screw screw-tr"></div>
+            <div class="screw screw-bl"></div>
+            <div class="screw screw-br"></div>
+            <span class="runic">Deterministic_Backbone // functional_pipeline</span>
+            <h3>ECS-Redux Hybrid Engine</h3>
+            <p>A deterministic backbone. We decoupled state from behavior using a strictly functional Entity-Component-System pipeline, ensuring that every AI decision tree is replayable, auditable, and bug-free.</p>
+        </div>
+        <div class="card">
+            <div class="screw screw-tl"></div>
+            <div class="screw screw-tr"></div>
+            <div class="screw screw-bl"></div>
+            <div class="screw screw-br"></div>
+            <span class="runic">Autonomous_Audit // Zero_Dead-Ends</span>
+            <h3>Ghost Agent QA</h3>
+            <p>Autonomous testing pipelines that play the game before humans do. Our "Ghost Agents" rigorously audit procedurally generated capabilities using Playwright and Vitest, ensuring zero dead-ends.</p>
+        </div>
+    </div>
+    `;
+};
