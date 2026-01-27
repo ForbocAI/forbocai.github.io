@@ -11,7 +11,7 @@ export const Investors = () => {
         <span class="runic">Seed_Round // strategic_partners</span>
         <h2>Investor Relations</h2>
         <p class="investors-lead">We are currently opening our Seed Round for strategic partners. ForbocAI is positioning itself at the intersection of Gaming, AI, and Decentralized Infrastructure.</p>
-        <a href="mailto:forbocai@sdin.dev" class="btn btn-primary">Request Pitch Deck</a>
+        <a href="#pitch/1" class="btn btn-primary">View Pitch Deck</a>
     </div>
     `;
 };

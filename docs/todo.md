@@ -20,7 +20,7 @@ This document tracks the execution of the ForbocAI startup launch, focusing on p
     - [x] Update temporary contact email to `forbocai@sdin.dev`.
 
 ## Phase 2: Investor Readiness (Seed Round Prep)
-- [ ] **Pitch Deck (10-12 Slides)**
+- [/] **Pitch Deck (10-12 Slides)**
     - [ ] **Problem**: "Game AI is static; Generative AI is chaotic. Neither are persistent."
     - [ ] **Solution**: "The Forboc Engine: Neuro-symbolic, deterministic, and owned."
     - [ ] **Tech Moat**: ECS-Redux purity + Local SLM optimization + Ghost Agent testing.

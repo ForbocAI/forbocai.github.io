@@ -17,6 +17,7 @@ export const Footer = () => {
                     <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://www.linkedin.com/company/111540626" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Wellfound</a>
+                    <a href="#pitch/1">Deck</a>
                 </div>
             </div>
         </div>

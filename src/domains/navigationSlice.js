@@ -41,5 +41,16 @@ export const selectCurrentPath = (state) => state.navigation.currentPath;
 export const selectCurrentPage = (state) => {
     const path = selectCurrentPath(state);
     if (path === 'whitepaper') return 'whitepaper';
+    if (path.startsWith('pitch')) return 'pitch';
     return 'index';
+};
+
+export const selectPitchSlide = (state) => {
+    const path = selectCurrentPath(state);
+    if (!path.startsWith('pitch')) return 1;
+    const parts = path.split('/');
+    if (parts.length > 1) {
+        return parseInt(parts[1], 10) || 1;
+    }
+    return 1;
 };

@@ -10,6 +10,7 @@ import { Vision } from './Vision.js';
 import { Roadmap } from './Roadmap.js';
 import { Investors } from './Investors.js';
 import { Whitepaper } from './Whitepaper.js';
+import { PitchDeck } from './PitchDeck.js';
 import { selectCurrentPage } from '../domains/navigationSlice.js';
 
 export const App = (state) => {
@@ -18,6 +19,10 @@ export const App = (state) => {
     const renderContent = () => {
         if (page === 'whitepaper') {
             return Whitepaper();
+        }
+
+        if (page === 'pitch') {
+            return PitchDeck(state);
         }
 
         return `
