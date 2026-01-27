@@ -35,8 +35,10 @@ This document tracks the execution of the ForbocAI startup launch, focusing on p
     - [ ] Define the **"Agent Interoperability Standard" (AIS)**.
     - [ ] Explain how an NPC's *Memory State* (vector embeddings) and *Logic Config* (Behavior Tree weights) can be stored on-chain (or IPFS).
     - [ ] Define the value prop: "Train an agent in Forboc; sell it to a player in another world."
-- [ ] **Tokenomics Draft**
-    - [ ] Utility token ($AGNT?) for compute credits (cloud inference) or protocol upgrades.
+- [x] **Token Launch ($FAI)**
+    - [x] Created on Pump.fun: `$FAI` (ForbocAI).
+    - [x] Link: [pump.fun/coin/$FAI](https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump)
+    - [ ] Utility token ($AGNT?) strategy pending (future phase).
     - [ ] Governance layer for the Agent Standard.
 
 ## Phase 4: Product & Traction

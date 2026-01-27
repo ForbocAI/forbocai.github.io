@@ -18,6 +18,7 @@ export const Header = (props) => {
                     <a href="#technology" class="nav-btn" data-link>Technology</a>
                     <a href="#vision" class="nav-btn" data-link>Vision</a>
                     <a href="#roadmap" class="nav-btn" data-link>Roadmap</a>
+                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="nav-btn" target="_blank" style="color: var(--accent-color);">$FAI</a>
                     <a href="#investors" class="nav-btn" data-link>Investors</a>
                 </div>
                 <div class="status-led"></div>

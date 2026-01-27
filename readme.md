@@ -30,7 +30,7 @@ Our core technology is a **Neuro-Symbolic Game Engine** that combines the reliab
     *   "Ghost Agents" playtest the game procedurally, ensuring valid states and balanced difficulty curves before humans ever touch the build.
 
 4.  **The Agent Economy (Decentralized Protocol)**
-    *   A Web3 native layer for agent interoperability.
+    *   A Web3 native layer for agent interoperability powered by **$FAI**.
     *   **Tokenized Souls**: Users can own their NPC's logic weights and memory states, trading and transporting them across compatible multiverse environments.
 
 ---
@@ -46,6 +46,8 @@ Our core technology is a **Neuro-Symbolic Game Engine** that combines the reliab
 ## 🔗 Links
 
 - **Landing Page**: [forbocai.github.io](https://forbocai.github.io)
+- **Official Token ($FAI)**: [pump.fun/coin/$FAI](https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump)
+- **Contract Address**: `7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump`
 - **LinkedIn**: [company/forbocai](https://linkedin.com/company/forbocai)
 - **Founder**: [Sean Dinwiddie](https://sdin.dev)
 
