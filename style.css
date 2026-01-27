@@ -1,35 +1,47 @@
 :root {
-    --bg-color: #f7f9fc; /* Cold white chassis base */
-    --bg-accent: #ffffff;
-    --bg-dark: #121214;
+    --bg-color: #ebebeb; /* Cold white chassis base (Palette 239) */
+    --bg-accent: #ffffff; /* Palette 248 */
+    --bg-dark: #0f0f0f; /* Palette 18 */
     
     --surface-glass: rgba(255, 255, 255, 0.65);
     --surface-glass-border: rgba(255, 255, 255, 0.8);
     --surface-shadow: rgba(0, 0, 0, 0.04);
     
-    --text-primary: #1d1d1f;
-    --text-secondary: #515154;
-    --text-tertiary: #86868b;
+    --text-primary: #1f1f1f; /* Palette 37 */
+    --text-secondary: #4b4b4b; /* Palette 106 */
+    --text-tertiary: #8b8b8b; /* Palette 181 */
     
     /* Hardware Accents */
-    --hw-label-bg: #f2f2f7; 
-    --hw-label-text: #1d1d1f;
-    --hw-screw: #d1d1d6; /* Silver/White screws */
-    --hw-screw-slot: #8e8e93;
-    --hw-button-dark: #1d1d1f; 
-    --hw-button-light: #ffffff;
+    --hw-label-bg: #ebebeb; /* Palette 239 */
+    --hw-label-text: #1f1f1f; /* Palette 37 */
+    --hw-screw: #cbcbcb; /* Silver/White screws (Palette 224) */
+    --hw-screw-slot: #8b8b8b; /* Palette 181 */
+    --hw-button-dark: #1f1f1f; /* Palette 37 */
+    --hw-button-light: #ffffff; /* Palette 248 */
     
-    --accent-blue: #007aff;
-    --accent-red: #ff3b30;
+    --accent-blue: #0000ff; /* Palette 6 */
+    --accent-red: #ff0000; /* Palette 244 */
     
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     
     --max-width: 1200px;
-    --header-height: 70px;
-    --panel-radius: 20px; /* Modern radius */
+    --header-height: 160px;
+    --panel-radius: 4px; /* Reduced specific radius for machined look */
     --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 * {
@@ -210,6 +222,8 @@ h3 {
     font-size: 1.35rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
+    letter-spacing: 0.05em; /* Increased spacing for clinical feel */
+    text-transform: uppercase;
 }
 
 p {
@@ -297,15 +311,36 @@ nav {
     width: 100%;
 }
 
+
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
-    text-transform: uppercase;
+}
+
+.logo-icon {
+    width: 128px;
+    height: 128px;
+    margin-right: 1.5rem;
+    background-color: var(--text-primary);
+    -webkit-mask: url('logo.png') no-repeat center / contain;
+    mask: url('logo.png') no-repeat center / contain;
+    transition: var(--transition);
+}
+
+footer .logo-icon {
+    background-color: var(--accent-blue);
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
 }
 
 .logo span {
@@ -323,9 +358,10 @@ nav {
     font-weight: 800;
     color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em; /* Wider spacing */
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 2px; /* Sharper corners */
     position: relative;
     transition: var(--transition);
 }
@@ -369,23 +405,23 @@ nav {
     font-family: var(--font-heading);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    border-radius: 4px; /* Slightly rounded, like the rectangular buttons */
+    border-radius: 2px; /* Machined look */
 }
 
 /* Primary - Like the black label/pad */
 .btn-primary {
     background: var(--hw-button-dark);
-    color: #e5e5ea;
+    color: #ebebeb; /* Palette 239 */
     border: none;
     box-shadow: 
-        0 4px 0 #000,
+        0 4px 0 #000000, /* Palette 5 */
         0 5px 10px rgba(0,0,0,0.15);
-    border-radius: 8px;
+    border-radius: 2px;
 }
 
 .btn-primary:active {
     transform: translateY(4px);
-    box-shadow: 0 0 0 #000;
+    box-shadow: 0 0 0 #000000;
 }
 
 /* Secondary - Like the rectangular grey buttons */
@@ -394,14 +430,14 @@ nav {
     color: var(--text-primary);
     border: 1px solid rgba(0,0,0,0.05);
     box-shadow: 
-        0 4px 0 #8e8e93,
+        0 4px 0 #8b8b8b, /* Palette 181 */
         0 5px 8px rgba(0,0,0,0.1);
-    border-radius: 4px; /* Rectangular function buttons */
+    border-radius: 2px; /* Rectangular function buttons */
 }
 
 .btn-secondary:active {
     transform: translateY(4px);
-    box-shadow: 0 0 0 #8e8e93;
+    box-shadow: 0 0 0 #8b8b8b;
 }
 
 /* Recessed Label Effect */
@@ -433,20 +469,25 @@ nav {
     position: relative;
     margin: 2rem;
     
-    /* The Glass Chassis Look */
-    background: linear-gradient(120deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    /* The Glass Chassis Look - Updated for Machined Industrial */
+    background: linear-gradient(120deg, rgba(255,255,255,0.95), rgba(245,245,247,0.9)); /* Less transparent, more solid */
+    backdrop-filter: blur(40px); /* Heavy blur */
+    -webkit-backdrop-filter: blur(40px);
     
-    border: 1px solid rgba(255,255,255,0.8);
+    border: 1px solid #cbcbcb; /* Distinct silver border (Palette 224) */
     box-shadow: 
-        0 20px 40px -10px rgba(0,0,0,0.05),
-        inset 0 0 0 1px rgba(255,255,255, 0.5); /* Inner rim */
+        0 10px 30px -10px rgba(0,0,0,0.1), /* Sharper shadow */
+        inset 0 0 0 1px rgba(255,255,255, 1); /* Inner rim */
         
-    border-radius: 30px;
-    /* Chamfered Corner Effect similar to Hyte Y70 */
-    /* We can use a clip path or just a unique border radius */
-    border-top-right-radius: 80px; 
+    border-radius: 4px; /* Machined corners */
+    /* Architectural corner cut */
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        100% calc(100% - 60px), 
+        calc(100% - 60px) 100%, 
+        0 100%
+    );
     
     overflow: hidden;
 }
@@ -533,8 +574,8 @@ nav {
     transition: var(--transition);
     position: relative;
     box-shadow: 
-        0 10px 30px -10px rgba(0,0,0,0.03),
-        inset 0 0 0 1px rgba(255,255,255,0.5);
+        0 4px 6px -1px rgba(0,0,0,0.05),
+        0 2px 4px -1px rgba(0,0,0,0.03); /* Technical shadow */
     overflow: hidden;
 }
 
@@ -543,9 +584,9 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 4px;
-    background: rgba(0,0,0,0.02);
+    width: 100%; /* Top bar strip */
+    height: 6px;
+    background: rgba(0,0,0,0.05);
 }
 
 .card:hover {
@@ -560,7 +601,7 @@ nav {
     position: absolute;
     width: 16px; /* Smaller, cleaner screws */
     height: 16px;
-    background: radial-gradient(circle at 30% 30%, #ffffff, #d1d1d6);
+    background: radial-gradient(circle at 30% 30%, #ffffff, #cbcbcb); /* Palette 248, 224 */
     border-radius: 50%;
     box-shadow: 
         inset 0 1px 2px rgba(255,255,255,0.9),
@@ -576,7 +617,7 @@ nav {
 .screw::after, .screw::before {
     content: '';
     position: absolute;
-    background: #3a3a3c;
+    background: #3f3f3f; /* Palette 87 */
     border-radius: 1px;
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.8);
 }
@@ -610,12 +651,12 @@ nav {
 .tokenomics-banner {
     margin-top: 10rem;
     padding: 6rem;
-    border-radius: 24px;
+    border-radius: 4px; /* Machined */
     background: var(--bg-accent);
-    border: 2px solid var(--surface-glass-border);
+    border: 1px solid var(--surface-glass-border);
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 10px 40px rgba(0,0,0,0.05);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.02); /* Slight inner depth */
 }
 
 .tokenomics-banner::before {
@@ -666,7 +707,7 @@ footer {
     margin-top: 8rem;
     background: var(--bg-accent);
     position: relative;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 4px 4px;
 }
 
 footer::before {
@@ -813,9 +854,9 @@ footer::before {
 .status-led {
     width: 6px;
     height: 6px;
-    background: #4cd964;
+    background: #0000ff; /* Status LED switched to Blue (Palette 6) */
     border-radius: 50%;
-    box-shadow: 0 0 4px #4cd964;
+    box-shadow: 0 0 4px #0000ff;
     margin-left: 1rem;
     position: relative;
     opacity: 0.8;

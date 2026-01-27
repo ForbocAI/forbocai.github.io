@@ -8,7 +8,8 @@ export const Header = (props) => {
         <div class="container">
             <nav>
                 <div class="logo">
-                     <a href="index.html" style="display: flex; align-items: center; gap: inherit; color: inherit; text-decoration: none;">
+                     <a href="index.html">
+                        <div class="logo-icon"></div>
                         <span class="badge">Forboc</span> AI
                      </a>
                 </div>
