@@ -13,9 +13,10 @@ export const Footer = () => {
                 </div>
                 <p class="footer-copy">&copy; 2026 Forboc AI Systems. All rights reserved.</p>
                 <div class="socials">
-                    <a href="#">Twitter/X</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">LinkedIn</a>
+                    <a href="https://x.com/ForbocAi" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+                    <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/company/111540626" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Wellfound</a>
                 </div>
             </div>
         </div>
