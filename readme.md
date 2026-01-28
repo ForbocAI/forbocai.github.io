@@ -43,6 +43,16 @@ Our core technology is a **Neuro-Symbolic Game Engine** that combines the reliab
 
 ---
 
+## 🛠 Local Development
+
+To run the site locally, use `npx serve`:
+
+```bash
+npx -y serve ./
+```
+
+---
+
 ## 🔗 Links
 
 - **Landing Page**: [forbocai.github.io](https://forbocai.github.io)
