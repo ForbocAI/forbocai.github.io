@@ -382,9 +382,10 @@ const slides = [
             <div class="use-of-funds">
                 <h4>Use of Funds</h4>
                 <ul class="funds-list">
-                    <li><span class="runic-bullet">ᚠ</span><strong>60%</strong> — Engineering (Co-founder hires, contractors)</li>
-                    <li><span class="runic-bullet">ᚢ</span><strong>25%</strong> — Infrastructure (Compute, tooling, legal)</li>
-                    <li><span class="runic-bullet">ᚦ</span><strong>15%</strong> — Community & Marketing (Events, content, evangelism)</li>
+                    <li><span class="runic-bullet">ᚠ</span><strong>40%</strong> — Engineering (Co-founder hires, contractors)</li>
+                    <li><span class="runic-bullet">ᚢ</span><strong>20%</strong> — Infrastructure (Compute, tooling, legal)</li>
+                    <li><span class="runic-bullet">ᚦ</span><strong>30%</strong> — Community & Marketing (Events, content, evangelism)</li>
+                    <li><span class="runic-bullet">ᚨ</span><strong>10%</strong> — Legal & Compliance</li>
                 </ul>
             </div>
             <div class="runic-glyph">ᚷ ᛫ ᛟ ᛫ ᛖ ᛫ ᛏ ᛫ ᛖ ᛫ ᛁ ᛫ ᚨ ᛫ ᚾ</div>
