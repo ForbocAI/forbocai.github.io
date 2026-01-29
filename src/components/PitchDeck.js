@@ -66,16 +66,16 @@ const slides = [
     {
         id: 3,
         runicLabel: "ᛊᛟᛚᚢᛏᛁᛟᚾ",
-        runicSubtitle: "ᛖᚾᚷᛁᚾᛖ",
+        runicSubtitle: "ᛈᚱᛟᛏᛟᚲᛟᛚ",
         title: "The Solution",
         content: `
-            <span class="deck-runic-accent">ᚠᛟᚱᛒᛟᚲ ᛖᚾᚷᛁᚾᛖ</span>
-            <h3>The Forboc Engine</h3>
-            <p class="solution-intro">A hybrid architecture that marries <strong>deterministic ECS game loops</strong> with <strong>quantized Small Language Models</strong> running locally on-device.</p>
+            <span class="deck-runic-accent">ᚠᛟᚱᛒᛟᚲ ᛈᚱᛟᛏᛟᚲᛟᛚ</span>
+            <h3>The Forboc Intelligence Protocol</h3>
+            <p class="solution-intro">A <strong>Neuro-Symbolic Intelligence Layer</strong> that integrates into any game engine, giving NPCs persistent memory and true agency via <strong>local-first SLMs</strong>.</p>
             <div class="runic-glyph">᛭ ᚠ ᛫ ᚨ ᛫ ᛁ ᛭</div>
             <ul class="feature-list">
                 <li><span class="runic-bullet">ᚠ</span><strong>Local Inference (Cortex):</strong> Zero latency, zero server costs, complete privacy. Runs on browser, native, or headless.</li>
-                <li><span class="runic-bullet">ᛟ</span><strong>ECS-Redux Hybrid:</strong> AI outputs intent; deterministic systems validate and execute. Bug-free, replayable state.</li>
+                <li><span class="runic-bullet">ᛟ</span><strong>State-Aware Inference Layer:</strong> AI outputs intent; the layer validates against app logic. Bug-free, deterministic execution.</li>
                 <li><span class="runic-bullet">ᚱ</span><strong>RAG Memory Pipeline:</strong> NPCs observe, embed, and recall experiences. Agents that remember <em>everything</em>.</li>
                 <li><span class="runic-bullet">ᛊ</span><strong>Tokenized Souls (ERC-7007):</strong> Export agents to IPFS. Own, trade, and port them across worlds.</li>
             </ul>
@@ -95,7 +95,7 @@ const slides = [
                 <div class="moat-item">
                     <span class="moat-rune">ᛖ</span>
                     <h4>Neuro-Symbolic Bridge</h4>
-                    <p>Separation of Logic (ECS) and Vibes (LLM). The AI thinks; the engine enforces rules.</p>
+                    <p>Separation of Logic (App State) and Vibes (LLM). The AI thinks; the system enforces rules.</p>
                 </div>
                 <div class="moat-item">
                     <span class="moat-rune">ᛊ</span>
@@ -162,15 +162,15 @@ const slides = [
             <div class="business-grid">
                 <div class="business-item">
                     <span class="business-phase">Phase 1</span>
-                    <h4>Game Sales</h4>
-                    <p><strong>Goetéian Chthonica</strong>—our flagship title. Premium pricing, DLC, and mod marketplace.</p>
-                    <span class="revenue-type">Direct Revenue</span>
+                    <h4>SDK Licensing</h4>
+                    <p>SaaS for developers. Per-seat subscriptions for the <strong>Forboc SDK</strong> and local inference tools.</p>
+                    <span class="revenue-type">Recurring SaaS</span>
                 </div>
                 <div class="business-item">
                     <span class="business-phase">Phase 2</span>
-                    <h4>Engine Licensing</h4>
-                    <p>B2B SDK for studios wanting persistent AI NPCs. Per-title licensing or seat-based subscriptions.</p>
-                    <span class="revenue-type">Recurring SaaS</span>
+                    <h4>Enterprise Integration</h4>
+                    <p>Custom implementations for large studios and platforms requiring bespoke SLM fine-tuning.</p>
+                    <span class="revenue-type">High-Touch B2B</span>
                 </div>
                 <div class="business-item">
                     <span class="business-phase">Phase 3</span>
@@ -196,22 +196,22 @@ const slides = [
                 <li>
                     <span class="phase-rune">ᚠ</span>
                     <div class="gtm-content">
-                        <strong>Proof of Fun (2026)</strong>
-                        <p>Launch Goetéian Chthonica on Steam/itch.io. Prove the engine in a real product. Build community.</p>
+                        <strong>Proof of Intelligence (2026)</strong>
+                        <p>Launch <strong>Interactive Tech Demo</strong>. Showcase the Protocol in a rich narrative environment ("Goetéian Chthonica" lore).</p>
                     </div>
                 </li>
                 <li>
                     <span class="phase-rune">ᚢ</span>
                     <div class="gtm-content">
                         <strong>Developer Evangelism</strong>
-                        <p>Open-source SDK components. GDC talks. Modding community → SDK adoption pipeline.</p>
+                        <p>Open-source SDK components. GDC talks. Empower modders to build the first "Smart Mods".</p>
                     </div>
                 </li>
                 <li>
                     <span class="phase-rune">ᚦ</span>
                     <div class="gtm-content">
                         <strong>Studio Partnerships</strong>
-                        <p>Target mid-tier studios (50-200 employees) seeking AI differentiation without building in-house.</p>
+                        <p>Target mid-tier studios seeking deep AI integration for their narrative RPGs.</p>
                     </div>
                 </li>
                 <li>
@@ -319,7 +319,7 @@ const slides = [
             <span class="deck-runic-accent">ᚨᚲᚲᛟᛗᛈᛚᛁᛊᚺᛖᛞ</span>
             <ul class="traction-list">
                 <li><span class="runic-bullet">✓</span><strong>Technical Whitepaper:</strong> Published architecture for Neuro-Symbolic Bridge and Cortex.</li>
-                <li><span class="runic-bullet">✓</span><strong>ECS Engine Core:</strong> Deterministic game loop with Redux-style state management.</li>
+                <li><span class="runic-bullet">✓</span><strong>Core Architecture:</strong> Deterministic state loop with Redux-style state management.</li>
                 <li><span class="runic-bullet">✓</span><strong>Forboc Protocol Spec:</strong> Soul serialization format and ERC-7007 integration design.</li>
                 <li><span class="runic-bullet">✓</span><strong>Community Launch:</strong> Discord, Telegram, and Wellfound presence established.</li>
             </ul>
@@ -328,7 +328,7 @@ const slides = [
             <ul class="milestone-list">
                 <li><span class="runic-bullet">ᚠ</span>Q1 2026: Local Inference Alpha & RAG Integration</li>
                 <li><span class="runic-bullet">ᚢ</span>Q2 2026: Ghost Agent QA Tooling & Developer Preview</li>
-                <li><span class="runic-bullet">ᚦ</span>Q3 2026: Goetéian Chthonica Playable Demo</li>
+                <li><span class="runic-bullet">ᚦ</span>Q3 2026: Interactive Tech Demo / Reference Implementation</li>
             </ul>
         `
     },
@@ -361,7 +361,7 @@ const slides = [
                 </li>
                 <li>
                     <span class="phase-rune">ᚱ</span>
-                    <strong>2027:</strong> Goetéian Chthonica Full Release & Studio Partnerships
+                    <strong>2027:</strong> Protocol V1.0 & Enterprise Studio Partnerships
                 </li>
             </ol>
             <div class="runic-timeline">ᚠ ─── ᚢ ─── ᚦ ─── ᚨ ─── ᚱ</div>
@@ -378,7 +378,7 @@ const slides = [
         content: `
             <span class="deck-runic-accent">ᛊᛖᛖᛞ ᚱᛟᚢᚾᛞ</span>
             <h3>Seed Round</h3>
-            <p class="ask-intro">We're raising to build the founding team and ship the first playable proof of the Forboc Engine.</p>
+            <p class="ask-intro">We're raising to build the founding team or ship the first production-ready version of the Forboc Protocol.</p>
             <div class="use-of-funds">
                 <h4>Use of Funds</h4>
                 <ul class="funds-list">
@@ -418,6 +418,7 @@ export const PitchDeck = (state) => {
         </div>
         <div class="container">
             <div class="deck-frame">
+
                 <div class="deck-header">
                     <div class="slide-runic-label">${slide.runicLabel}</div>
                     <div class="slide-counter">SLIDE ${safeSlideIndex.toString().padStart(2, '0')} / ${totalSlides.toString().padStart(2, '0')}</div>

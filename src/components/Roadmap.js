@@ -12,8 +12,7 @@ export const Roadmap = () => {
         
         <div class="grid">
             <div class="card">
-                <div class="screw screw-tl"></div>
-                <div class="screw screw-tr"></div>
+
                 <span class="roadmap-phase-label phase-1">Phase 1 • Q1 2026</span>
                 <span class="runic">Córtex_Init</span>
                 <h3>The Cortex</h3>
@@ -24,8 +23,7 @@ export const Roadmap = () => {
                 </ul>
             </div>
             <div class="card">
-                <div class="screw screw-tl"></div>
-                <div class="screw screw-tr"></div>
+
                 <span class="roadmap-phase-label phase-2">Phase 2 • Q2 2026</span>
                 <span class="runic">Bridge_Protocol</span>
                 <h3>Neuro-Symbolic Bridge</h3>
@@ -36,8 +34,7 @@ export const Roadmap = () => {
                 </ul>
             </div>
             <div class="card">
-                <div class="screw screw-tl"></div>
-                <div class="screw screw-tr"></div>
+
                 <span class="roadmap-phase-label phase-3">Phase 3 • Q3 2026</span>
                 <span class="runic">Æconomy_Scále</span>
                 <h3>The Agent Economy</h3>
