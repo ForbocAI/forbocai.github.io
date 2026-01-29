@@ -21,7 +21,7 @@ Our core technology is a **Neuro-Symbolic Game Engine** that combines the reliab
     *   Optimized for high-concurrency agent simulations.
 
 2.  **Generative NPC Cortex**
-    *   **Local-First Inference**: Running fine-tuned Small Language Models (SLMs) like SmolLM2 directly in the browser via WebGPU.
+    *   **Local-First Inference**: Running fine-tuned Small Language Models (SLMs) like SmolLM2 directly on-device—browser, native, or headless.
     *   **RAG Memory Architecture**: "Micro-NPCs" with persistent long-term memory buffers using local vector stores (Orama/Voy).
     *   **Zero-Latency**: Eliminating cloud dependency for privacy and performance.
 
@@ -37,8 +37,8 @@ Our core technology is a **Neuro-Symbolic Game Engine** that combines the reliab
 
 ## 🗺 Roadmap
 
-*   **Q1 2026**: The Cortex (WebGPU Integration & Local RAG)
-*   **Q2 2026**: Neuro-Symbolic Bridge (LLM-to-ECS Action Translation)
+*   **Q1 2026**: The Cortex (Local Inference Engine & RAG Integration)
+*   **Q2 2026**: Neuro-Symbolic Bridge (Generative AI Language Model to Entity Component System [ECS] Action Translation)
 *   **Q3 2026**: Agent Economy Beta (Wallet Connect & IPFS Export)
 
 ---

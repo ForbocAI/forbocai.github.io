@@ -29,7 +29,7 @@ Founder & CTO at ForbocAI | Building Neuro-Symbolic Game Engines | Decentralized
 **Location**: Remote
 **Description**:
 Leading the development of the Forboc Engine, a local-first Generative AI gaming platform.
-*   **Architected** a high-performance Entity-Component-System (ECS) in TypeScript/WebGPU to support thousands of concurrent autonomous agents.
+*   **Architected** a high-performance Entity-Component-System (ECS) in TypeScript to support thousands of concurrent autonomous agents across browser, native, and headless runtimes.
 *   **Developed** the "Micro-NPC" cortex: a pipeline running quantized SLMs (Small Language Models) locally in the browser for privacy-focused, zero-latency character interactions.
 *   **Designed** the "Ghost Agent" automated testing suite, utilizing reinforcement learning techniques to audit procedural content generation.
 *   **Building** the Agent Economy Protocol for decentralized ownership of NPC behavioral weights and memory vectors.

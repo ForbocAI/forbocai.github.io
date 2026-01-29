@@ -25,7 +25,7 @@
 ForbocAI is building the substrate for **Autonomous Worlds**. We are bridging the gap between rigid traditional Game AI and chaotic Generative AI by deploying local-first Neuro-Symbolic AI engines.
 
 ### Our Vision
-- **The Cortex**: Local-first generative AI—WebGPU-accelerated SLM inference running entirely on-device for privacy-preserving NPC intelligence
+- **The Cortex**: Local-first generative AI—hardware-accelerated SLM inference running entirely on-device for privacy-preserving NPC intelligence
 - **Edge-Resident Memory**: RAG pipelines with browser-native vector search, enabling NPCs that remember, learn, and evolve through player interactions
 - **Neuro-Symbolic Bridge**: Hybrid architecture where LLMs set high-level goals while deterministic behavior trees handle real-time micro-actions
 - **Decentralized Agent Economy**: Tokenized NPC "souls" (memories, stats, trained logic) as portable, player-owned digital assets via IPFS and smart contracts

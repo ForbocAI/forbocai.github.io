@@ -35,10 +35,35 @@ export const Whitepaper = () => {
             <p>We introduce a rigorous separation of concerns between state (Logic) and personality (Vibes).</p>
 
             <h3>3.1 The Cortex: Local Inference</h3>
-            <p>At the edge, we deploy highly quantized models like <strong>SmolLM2</strong> running via WebGPU. This eliminates latency and server costs. The AI runs entirely on the user's device, ensuring privacy and zero-downtime gameplay.</p>
+            <p>At the edge, we deploy highly quantized models like <strong>SmolLM2</strong> running locally on-device. Whether through browser runtimes, native executables, or headless text interfaces—the AI runs entirely on the user's hardware. This eliminates latency and server costs while ensuring privacy and zero-downtime operation.</p>
             
             <h3>3.2 ECS-Redux Hybrid Engine</h3>
-            <p>To solve incoherence, we do not let the LLM change game state directly. Instead, we use a <strong>Neuro-Symbolic Bridge</strong>. The LLM outputs intent (e.g., "I want to trade"), which is parsed by a deterministic ECS system. The ECS validates the action against the game rules (Does the NPC have the item? Is the player in range?) and executes the state change via a Redux-like reducer. This ensures the game state remains bug-free and replayable.</p>
+            <p>To solve incoherence, we do not let the Generative AI Language Models change game state directly. Instead, we use a <strong>Neuro-Symbolic Bridge</strong>. The Generative AI Language Model outputs intent (e.g., "I want to trade"), which is parsed by a deterministic ECS system. The ECS validates the action against the game rules (Does the NPC have the item? Is the player in range?) and executes the state change via a Redux-like reducer. This ensures the game state remains bug-free and replayable.</p>
+
+            <h4>Understanding ECS: Entities as Data</h4>
+            <p>The Entity Component System (ECS) architecture fundamentally separates <strong>what things are</strong> from <strong>what they can do</strong>. An <strong>Entity</strong> is simply a unique identifier—a name tag. <strong>Components</strong> are data buckets that hold specific attributes (Health, Position, Inventory). <strong>Systems</strong> are the rules that operate on entities possessing certain components. This means creating a "Fire Mage" enemy doesn't require a new class—we simply attach Health, Position, CombatAI, and MagicResistance components to an ID. The game doesn't care if an entity is a player, a goblin, or a breakable crate; if it has a Health component, it can take damage.</p>
+
+            <h4>Beyond Dialogue: Full Cognitive Control</h4>
+            <p>The Generative AI layer is not limited to generating dialogue—it controls the NPC's entire cognitive stack:</p>
+            <ul>
+                <li><strong>Decision-Making:</strong> The model outputs structured JSON actions (e.g., <code>{"action": "RETREAT", "target": {"x": 10, "y": 20}}</code>) that are translated into ECS component updates.</li>
+                <li><strong>Memory &amp; Learning:</strong> Through a RAG (Retrieval-Augmented Generation) pipeline, NPCs observe events ("The player attacked me"), embed them as vectors, and store them in a local memory database. Before acting, NPCs recall relevant memories to inform their decisions—an NPC betrayed last session may act suspicious in future encounters.</li>
+                <li><strong>Emotional State:</strong> Internal values like fear, loyalty, and happiness are modified by the AI and influence subsequent behavior.</li>
+            </ul>
+            <p>The Generative AI is the NPC's <em>mind</em>—it thinks, speaks, remembers, and commands. The deterministic Game AI is the <em>nervous system</em> that executes those commands safely in real-time.</p>
+
+            <h4>Generative AI vs. Traditional Game AI</h4>
+            <p>Traditional advanced game AI relies on handcrafted logic structures:</p>
+            <ul>
+                <li><strong>Decision Trees:</strong> Binary branches (<code>if HP &lt; 20% → flee</code>) that explode combinatorially as complexity grows.</li>
+                <li><strong>Behavior Trees:</strong> Hierarchical task selectors (used in AAA games like Halo) that are powerful but still authored by designers.</li>
+                <li><strong>Finite State Machines (FSMs):</strong> Explicit states (Patrol → Alert → Combat) with rigid transitions.</li>
+                <li><strong>GOAP (Goal-Oriented Action Planning):</strong> Backward planning from goals, requiring all actions and preconditions to be manually defined.</li>
+                <li><strong>Utility AI:</strong> Weighted scoring systems where weights must be hand-tuned.</li>
+            </ul>
+            <p>These approaches are <strong>deterministic</strong>—given identical inputs, they produce identical outputs. They cannot handle novel situations outside their authored logic.</p>
+            <p>Generative AI decision-making is fundamentally different. It receives natural language context (persona, memories, current situation) and produces <strong>novel, contextual reasoning</strong> through pattern-matching over billions of parameters. Where a behavior tree says <code>if player_has_stolen → hostility = 1</code>, an LLM might reason: <em>"The player took my family heirloom. But they also saved my life last week. I feel conflicted—I'll confront them but give a chance to explain."</em></p>
+            <p>Forboc's hybrid approach leverages both: the <strong>LLM sets high-level goals</strong> (what to do), while <strong>Behavior Trees execute low-level tactics</strong> (how to do it). This delivers creative depth without sacrificing the reliability of traditional systems.</p>
 
             <h3>3.3 Ghost Agent QA</h3>
             <p>Procedural content is risky. To mitigate this, we employ "Ghost Agents"—headless instances of our AI that play the game at 100x speed in a simulation environment (Playwright/Vitest). They exhaustively test dialogue trees and puzzle solutions to ensure no dead-ends exist before content is shipped to players.</p>
@@ -53,14 +78,44 @@ export const Whitepaper = () => {
                 <li><strong>Long-term Memory Vector Store:</strong> The agent's lived experiences.</li>
                 <li><strong>State Vector:</strong> Current inventory, skills, and relationships.</li>
             </ul>
-            <p>These assets can be exported to IPFS and traded on a decentralized marketplace. A player might train a companion in a Forboc fantasy RPG and then import that same companion (with all its memories intact) into a completely different sci-fi simulation running on the Forboc Protocol.</p>
+            <p>These assets can be exported to IPFS and traded on a decentralized marketplace. A player might forge a companion in <strong>Goetéian Chthonica</strong>—the timeless fantasy cyber noir at the heart of Forboc, where medieval knights wield obsidian blades alongside cybernetic soldiers and spectral entities in the void between dimensions. That companion, with all its memories and battle-earned wisdom intact, can then be imported into <em>any world running on the Forboc Protocol</em>. The Protocol is genre-agnostic; the Soul transcends the simulation it was born in.</p>
+
+            <h3>4.2 The Forboc Protocol</h3>
+            <p>The <strong>Forboc Protocol</strong> is an interoperability standard for autonomous AI agents—analogous to what HTTP is for web pages or SMTP is for email, but for NPCs and companions. It defines:</p>
+            <ul>
+                <li><strong>Soul Serialization:</strong> A standardized format to export an agent's entire being: personality weights (LoRA), memory (vector store), and state (inventory, skills, relationships).</li>
+                <li><strong>Decentralized Storage:</strong> Souls are stored on IPFS, persisting independently of any single server or campaign.</li>
+                <li><strong>Verification (ERC-7007):</strong> Each Soul becomes a verifiable, ownable asset on-chain with provable AI lineage—ensuring authenticity and preventing fabrication.</li>
+                <li><strong>Cross-Module Import:</strong> Any campaign or module that implements the Protocol can import Souls from other modules. The agent retains its memories, personality, and learned behaviors across adventures.</li>
+            </ul>
+            <p>The Protocol is a <em>contract</em>—a set of rules that any creator can implement. It specifies the data schema (what fields define a Soul), serialization format (how to encode/decode for storage), and verification mechanisms (how to prove legitimate training).</p>
+
+            <h3>4.3 The Forboc SDK: Crafting Modules &amp; Campaigns</h3>
+            <p>The <strong>Forboc SDK</strong> is a toolkit for creators to build <em>modules and campaigns</em>—self-contained adventures, dungeons, and narrative arcs that plug into the Forboc ecosystem. Think of it like creating a D&amp;D module: you define the setting, encounters, NPCs, and story beats, but the underlying game mechanics and AI infrastructure are handled by the Protocol.</p>
+            <h4>SDK Components</h4>
+            <ul>
+                <li><strong>Cortex Integration:</strong> Drop-in module to add local SLM inference to your campaign—runtime-agnostic, running on browser, native, or headless environments. Handles model loading, prompt construction, and streaming output for NPC dialogue and decisions.</li>
+                <li><strong>Neuro-Symbolic Bridge:</strong> Utilities to connect LLM outputs to your module's ECS/state system. Translates NPC "intent" into validated game actions within your campaign's rules.</li>
+                <li><strong>RAG Pipeline:</strong> Pre-built vector store and embedding system for NPC memory. Your NPCs remember what happened in previous sessions—even if the player imports them from another module.</li>
+                <li><strong>Soul Import/Export:</strong> APIs to serialize characters to the Protocol format and export to IPFS, or import existing Souls into your module's world.</li>
+                <li><strong>Ghost Agent Tooling:</strong> Headless AI testing framework to QA your module's narrative paths, puzzle solutions, and encounter balance at scale before release.</li>
+            </ul>
+            <h4>Creator Flow</h4>
+            <p>A module creator defines:</p>
+            <ul>
+                <li><strong>World Lore:</strong> The setting, factions, and metaphysics of the campaign (e.g., a haunted marshland, a cybernetic underworld).</li>
+                <li><strong>NPC Templates:</strong> Character personas, starting memories, and behavioral tendencies that the AI will use as a foundation.</li>
+                <li><strong>Encounter Logic:</strong> Combat encounters, dialogue triggers, and quest structures—all validated by the deterministic ECS layer.</li>
+                <li><strong>Import Rules:</strong> How imported Souls adapt to the module's world (e.g., a sci-fi companion entering a fantasy module might have their "plasma rifle" re-skinned as a "lightning staff").</li>
+            </ul>
+            <p>Players can then explore your module with their own companions—Souls they've trained across other adventures—creating a persistent, evolving narrative that spans multiple creators' works.</p>
 
             <h2>5. Roadmap</h2>
             <ul>
-                <li><strong>Q1 2026:</strong> WebGPU Inference Alpha & RAG Integration.</li>
+                <li><strong>Q1 2026:</strong> Local Inference Alpha & RAG Integration.</li>
                 <li><strong>Q2 2026:</strong> Neuro-Symbolic Bridge & Ghost Agent QA Tooling.</li>
                 <li><strong>Q3 2026:</strong> Agent Economy Launch (Wallet Integration & IPFS Exports).</li>
-                <li><strong>Q4 2026:</strong> Forboc SDK for Third-Party Developers.</li>
+                <li><strong>Q4 2026:</strong> Forboc SDK for Module &amp; Campaign Creators.</li>
             </ul>
 
             <div class="whitepaper-footer-note">

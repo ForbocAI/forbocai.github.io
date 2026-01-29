@@ -9,7 +9,7 @@
 
 ## 2. Company Highlights (The "Why Us")
 *   **Neuro-Symbolic Architecture**: We are solving the "hallucination problem" in games by merging deterministic ECS game loops with fluid SLM (Small Language Model) intelligence.
-*   **Privacy-First AI**: Our "Micro-NPC" cortex runs entirely on-device using WebGPU, eliminating cloud costs and latency while preserving user privacy.
+*   **Privacy-First AI**: Our "Micro-NPC" cortex runs entirely on-device, eliminating cloud costs and latency while preserving user privacy.
 *   **Decentralized Ownership**: We are building the protocol for the "Agent Economy," enabling portable, tokenized ownership of trained NPC logic and memory states.
 
 ## 3. Product Description
@@ -33,4 +33,4 @@ Sean is a Full Stack Architect and AI Systems Engineer with deep expertise in fu
 
 ## 6. Hiring Status
 *   **Status**: Not currently hiring (or "Hiring for Founding Engineers" if applicable).
-*   **Looking For**: (Future) Rust Systems Engineers, WebGPU Specialists, Solidity Developers.
+*   **Looking For**: (Future) Rust Systems Engineers, Graphics/Compute Specialists, Solidity Developers.

@@ -15,7 +15,7 @@ export const Roadmap = () => {
                 <span class="runic">Cortex_Init</span>
                 <h3>The Cortex</h3>
                 <ul class="roadmap-list">
-                    <li><span>›</span> WebGPU Local Inference</li>
+                    <li><span>›</span> Local-First Inference Engine</li>
                     <li><span>›</span> RAG Memory Integration</li>
                     <li><span>›</span> Streaming Dialogue UI</li>
                 </ul>

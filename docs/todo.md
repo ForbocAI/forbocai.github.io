@@ -28,7 +28,7 @@ This document tracks the execution of the ForbocAI startup launch, focusing on p
     - [ ] **Ask**: Seed round amount (e.g., $500k - $2M) for team expansion.
 - [ ] **Technical Validation**
     - [ ] Execute Engineering Roadmap (See `Forboc/notes/TODOs/system-todo.md`).
-    - [ ] "WebLLM" Proof of Concept running in browser.
+    - [ ] "WebLLM" Proof of Concept running in browser. LLM or SLM or just Generative AI Language Model?
 
 ## Phase 3: The Agent Economy (Protocol Layer)
 - [ ] **Technical Whitepaper ("Litepaper")**
