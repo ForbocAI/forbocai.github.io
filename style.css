@@ -1143,6 +1143,142 @@ footer::before {
     position: relative;
     padding-top: calc(var(--header-height) + 2rem);
     z-index: 10;
+    overflow: hidden;
+}
+
+/* Runic Typography Background for Pitch Deck */
+.pitch-runic-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: min(20vw, 400px);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.03);
+    white-space: nowrap;
+    user-select: none;
+    font-family: "Noto Sans Runic", sans-serif;
+    z-index: 0;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+}
+
+/* Corner Runes Decoration */
+.pitch-corner-runes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.corner-rune {
+    position: absolute;
+    font-family: "Noto Sans Runic", sans-serif;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.08);
+    user-select: none;
+}
+
+.corner-rune.tl { top: 2rem; left: 2rem; }
+.corner-rune.tr { top: 2rem; right: 2rem; }
+.corner-rune.bl { bottom: 2rem; left: 2rem; }
+.corner-rune.br { bottom: 2rem; right: 2rem; }
+
+/* Slide Runic Labels */
+.slide-runic-label {
+    font-family: "Noto Sans Runic", sans-serif;
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    letter-spacing: 0.2em;
+    opacity: 0.8;
+}
+
+.slide-runic-subtitle {
+    font-family: "Noto Sans Runic", sans-serif;
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.3em;
+    margin-bottom: 0.5rem;
+    display: block;
+    opacity: 0.6;
+}
+
+/* Runic Accent Text in Slides */
+.deck-runic-accent {
+    font-family: "Noto Sans Runic", sans-serif;
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    letter-spacing: 0.25em;
+    display: block;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+/* Runic Bullets */
+.runic-bullet {
+    font-family: "Noto Sans Runic", sans-serif;
+    color: var(--accent-blue);
+    margin-right: 1rem;
+    font-size: 1.2em;
+}
+
+/* Runic Divider */
+.runic-divider {
+    font-family: "Noto Sans Runic", sans-serif;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.5em;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+
+/* Moat Item Runes */
+.moat-rune {
+    font-family: "Noto Sans Runic", sans-serif;
+    font-size: 2rem;
+    color: var(--accent-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Phase Runes in Roadmap */
+.phase-rune {
+    font-family: "Noto Sans Runic", sans-serif;
+    color: var(--accent-blue);
+    margin-right: 0.75rem;
+    font-size: 1.3em;
+}
+
+/* Runic Timeline */
+.runic-timeline {
+    font-family: "Noto Sans Runic", sans-serif;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Contact Runes */
+.contact-runes {
+    font-family: "Noto Sans Runic", sans-serif;
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    letter-spacing: 0.3em;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Footer Runes */
+.footer-runes {
+    font-family: "Noto Sans Runic", sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
 }
 
 .deck-frame {
@@ -1349,6 +1485,480 @@ footer::before {
     
     .slide-body {
         font-size: 1.1rem;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   NEW PITCH DECK SLIDE STYLES
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* Title Slide */
+.title-slide {
+    text-align: center;
+}
+
+.title-slide .tagline {
+    font-size: 2rem;
+    color: var(--bg-accent);
+    margin-bottom: 1rem;
+}
+
+.title-slide .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+    margin-bottom: 2rem;
+}
+
+.title-slide .deck-meta {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    letter-spacing: 0.2em;
+    margin-top: 1rem;
+}
+
+/* Runic Glyph (matches Whitepaper.js style) */
+.runic-glyph {
+    font-family: "Noto Sans Runic", sans-serif;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.4em;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Problem Slide - Two Column Grid */
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.problem-column h3 {
+    margin-bottom: 1rem;
+}
+
+.problem-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.problem-list li {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(255,255,255,0.1);
+}
+
+.impact-statement {
+    font-size: 1.5rem;
+    color: var(--bg-accent);
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* Solution Slide */
+.solution-intro {
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+}
+
+/* Tech Moat - 4 Column Grid */
+.moat-intro {
+    font-size: 1.1rem;
+    color: var(--text-tertiary);
+    margin-bottom: 2rem;
+}
+
+.pitch-deck .moat-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* Market Opportunity Slide */
+.market-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.metric-box {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Business Model Slide */
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.business-item {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.business-phase {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.business-item h4 {
+    color: var(--bg-accent);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.business-item p {
+    font-size: 0.95rem;
+    color: var(--text-tertiary);
+    margin-bottom: 1rem;
+}
+
+.revenue-type {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: inline-block;
+}
+
+/* Go-to-Market Slide */
+.gtm-steps {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 700px;
+}
+
+.gtm-steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.gtm-content {
+    flex: 1;
+}
+
+.gtm-content strong {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.gtm-content p {
+    font-size: 0.95rem;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+/* Competition Table Slide */
+.competition-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 1.5rem auto;
+}
+
+.comp-header,
+.comp-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 0.75rem 0;
+}
+
+.comp-header {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.comp-row {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.comp-name {
+    text-align: left;
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+}
+
+.comp-yes {
+    color: #00ff88;
+    font-size: 1.1rem;
+}
+
+.comp-no {
+    color: var(--accent-red);
+    font-size: 1.1rem;
+}
+
+.comp-partial {
+    color: #ffaa00;
+    font-size: 1.1rem;
+}
+
+.highlight-row {
+    background: rgba(0, 0, 255, 0.1);
+    border: 1px solid var(--accent-blue);
+}
+
+.highlight-row .comp-name {
+    color: var(--bg-accent);
+}
+
+.comp-note {
+    font-size: 0.95rem;
+    color: var(--text-tertiary);
+    margin-top: 1.5rem;
+}
+
+/* Team Slide */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.team-member {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.team-member.hiring {
+    border-color: var(--accent-blue);
+    border-style: dashed;
+}
+
+.team-rune {
+    font-family: "Noto Sans Runic", sans-serif;
+    font-size: 2rem;
+    color: var(--accent-blue);
+    display: block;
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
+}
+
+.team-member h4 {
+    color: var(--bg-accent);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+.hiring-badge {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-blue);
+    background: rgba(0, 0, 255, 0.15);
+    padding: 0.2rem 0.5rem;
+    display: inline-block;
+    margin-bottom: 0.5rem !important;
+    letter-spacing: 0.15em;
+}
+
+.team-note {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    text-align: center;
+}
+
+/* Traction Slide */
+.traction-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.traction-list li {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.traction-list .runic-bullet {
+    color: #00ff88;
+}
+
+.milestone-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 1rem auto 0;
+}
+
+.milestone-list li {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Roadmap Detailed */
+.roadmap-steps.detailed li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    border-left: none;
+    padding-left: 0;
+}
+
+/* The Ask Slide */
+.ask-intro {
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+    margin-bottom: 2rem;
+}
+
+.use-of-funds {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.use-of-funds h4 {
+    color: var(--accent-blue);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.funds-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.funds-list li {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.funds-list strong {
+    color: var(--bg-accent);
+    min-width: 3rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE OVERRIDES FOR NEW SLIDES
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+    .pitch-deck .moat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .market-metrics {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .metric-box {
+        padding: 1.5rem;
+    }
+    
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .pitch-deck .moat-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .competition-table {
+        font-size: 0.85rem;
+    }
+    
+    .comp-header,
+    .comp-row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    }
+    
+    .title-slide .tagline {
+        font-size: 1.5rem;
+    }
+    
+    .title-slide .subtitle {
+        font-size: 1rem;
     }
 }
 
