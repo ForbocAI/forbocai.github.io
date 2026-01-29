@@ -5,6 +5,9 @@
 export const Footer = () => {
     return `
     <footer>
+        <div class="measurement-scale"></div>
+        <div class="registration-mark reg-offset-bl" style="bottom: 10px; left: 10px;"><span></span></div>
+        <div class="registration-mark reg-offset-br" style="bottom: 10px; right: 10px;"><span></span></div>
         <div class="container">
             <div class="footer-content">
                 <div class="logo">

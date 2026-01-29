@@ -41,7 +41,7 @@ export const App = (state) => {
 
     return `
     <div class="tech-layer">
-        <span class="diagnostic-label" style="top: 2rem; right: 2rem; position: fixed;">ENV.STABLE // FORBOC.V1</span>
+        <span class="diagnostic-label diagnostic-flicker" style="top: 2rem; right: 2rem; position: fixed;">ENV.STABLE // FORBOC.V1</span>
         <div class="tech-grid"></div>
         <div class="tech-markings">
             <div class="marking-tl"></div>
