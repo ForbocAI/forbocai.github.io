@@ -8,6 +8,8 @@ export const Technology = () => {
     <p>A local-first, privacy-focused architecture that merges rigourous ECS game loops with fluid Large Language Models.</p>
     <div class="runic-glyph">᛭ ᛫ ᛬ ᛫ ᛭</div>
     
+    <div class="section-divider"><span>SUBSTRATE.MODULES</span></div>
+    
     <div class="grid">
         <div class="card">
             <div class="screw screw-tl"></div>

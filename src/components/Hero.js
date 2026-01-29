@@ -6,6 +6,8 @@ export const Hero = () => {
     <section class="hero-container">
         <!-- Decorative indentations/screws for the screen area -->
         <div class="hero">
+            <span class="diagnostic-label" style="top: 1.5rem; left: 1.5rem;">SYS.ONLINE // 2026.01</span>
+            <span class="diagnostic-label" style="bottom: 1.5rem; right: 1.5rem;">MEM.ACTIVE // CORTEX.READY</span>
             <div class="hero-content">
                 <div class="recessed-label">System_01 // Ready</div>
                 <span class="runic">Arcitect_Init // Boot_Séquence</span>

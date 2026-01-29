@@ -8,6 +8,8 @@ export const Roadmap = () => {
         <p>Our path to fully autonomous, decentralized narrative gaming.</p>
         <div class="runic-glyph">ᚠ ᛫ ᛒ ᛫ ᚨ</div>
         
+        <div class="section-divider"><span>TIMELINE.PHASES</span></div>
+        
         <div class="grid">
             <div class="card">
                 <div class="screw screw-tl"></div>
