@@ -8,6 +8,9 @@
 ## 1. The Capital Raise (Priority #1)
 *This is the most critical immediate function. We need someone who can secure the bag.*
 
+**Q: "AI infrastructure valuations are volatile. If an investor argues that 'Local Inference' will become a commodity handled by Apple/Google OS-level APIs, how do you defend Forboc's long-term value proposition?"**
+*   *Look for:* Understanding of the "Application Layer" vs "Infrastructure Layer." They should argue that while Apple provides the *chips* (NPU), Forboc provides the *standardized protocol* (like HTTP) that makes agents interoperable across apps, not just within one ecosystem.
+
 **Q: "Walk me through how you would pitch ForbocAI to a traditional SaaS VC versus a Web3-native fund. What parts of our narrative would you emphasize for each?"**
 *   *Look for:* Ability to toggle between "Enterprise AI Infrastructure" (SaaS VC) and "Decentralized Autonomous Agents/Protocol" (Web3 VC). They should know that SaaS VCs hate "tokens" and Web3 VCs hate "low upside recurring revenue."
 
@@ -19,7 +22,7 @@
 
 ---
 
-## 2. Product & Technology Grasp
+## 2. Product & Technology Grasp - [GAMING SPECIFIC]
 *They don't need to code, but they must sell deep tech.*
 
 **Q: "Explain our 'Neuro-Symbolic Bridge' to me as if I were a Studio Head who thinks Generative AI is just 'unpredictable chatbots'."**
@@ -36,13 +39,16 @@
 **Q: "Our roadmap starts with 'Mid-tier Studios' rather than AAA or Indies. Do you agree with this targeting? If so, how do you get a meeting with them? If not, who should we target?"**
 *   *Look for:* Strategic thinking. AAAs are too slow/risk-averse. Indies might not have the budget/technical skill. Mid-tier is likely the sweet spot (need differentiation to survive), but it's hard to break in. Do they have a plan?
 
-**Q: "We have a chicken-and-egg problem: Players won't value 'Portable Souls' until multiple games support them. Developers won't support them until players demand it. How do you break this loop?"**
+**Q: "We have a chicken-and-egg problem: Players won't value 'Portable Souls' until multiple games support them. Developers won't support them until players demand it. How do you break this loop?"** *[GAMING SPECIFIC]*
 *   *Look for:* "Reference Implementation" or "First-Party Content." They should realize we likely need to build (or heavily partner to build) the first "Killer App" (like *Goetéian Chthonica*) to prove value.
 
 ---
 
 ## 4. Operational & "Skin in the Game"
 *This is an equity-only role initially. We need true believers.*
+
+**Q: "The AI landscape shifts weekly. A new model (e.g., Llama 4) drops and changes our entire assumption set. Give me an example of how you handle extreme ambiguity and rapid pivoting in a previous role."**
+*   *Look for:* Mental Flexibility. We don't want rigidity. We want someone who says "Great, Llama 4 is out? How do we leverage that?" rather than "But we just finished the slide deck for Llama 3!"
 
 **Q: "This is an equity-only position until we raise our seed round. What is your personal runway, and how do you define 'success' for the next 6 months?"**
 *   *Look for:* Honesty and financial reality. If they need a salary in 1 month, they aren't a fit. "Success" should be defined as "Closing the Round" or "Signed Partnerships," not "Brand Awareness."
