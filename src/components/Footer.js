@@ -9,8 +9,9 @@ export const Footer = () => {
             <div class="footer-content">
                 <div class="logo">
                     <div class="logo-icon"></div>
-                    Forboc<span>AI</span>
+                    Fór-bóc<span>AI</span>
                 </div>
+                <div class="runic-footer">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
                 <p class="footer-copy">&copy; 2026 Forboc AI Systems. All rights reserved.</p>
                 <div class="socials">
                     <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold;">$FAI Token</a>

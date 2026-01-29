@@ -6,13 +6,14 @@ export const Roadmap = () => {
     <div id="roadmap" class="roadmap-section">
         <h2>Engineering Roadmap</h2>
         <p>Our path to fully autonomous, decentralized narrative gaming.</p>
+        <div class="runic-glyph">ᚠ ᛫ ᛒ ᛫ ᚨ</div>
         
         <div class="grid">
             <div class="card">
                 <div class="screw screw-tl"></div>
                 <div class="screw screw-tr"></div>
                 <span class="roadmap-phase-label phase-1">Phase 1 • Q1 2026</span>
-                <span class="runic">Cortex_Init</span>
+                <span class="runic">Córtex_Init</span>
                 <h3>The Cortex</h3>
                 <ul class="roadmap-list">
                     <li><span>›</span> Local-First Inference Engine</li>
@@ -36,7 +37,7 @@ export const Roadmap = () => {
                 <div class="screw screw-tl"></div>
                 <div class="screw screw-tr"></div>
                 <span class="roadmap-phase-label phase-3">Phase 3 • Q3 2026</span>
-                <span class="runic">Economy_Scale</span>
+                <span class="runic">Æconomy_Scále</span>
                 <h3>The Agent Economy</h3>
                 <ul class="roadmap-list">
                     <li><span>›</span> Wallet Integration</li>

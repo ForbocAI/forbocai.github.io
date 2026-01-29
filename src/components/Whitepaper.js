@@ -9,6 +9,7 @@ export const Whitepaper = () => {
             <div class="hero-content">
                 <h1>Technical <span class="gradient-text">Whitepaper</span></h1>
                 <p>Version 1.0 — January 2026</p>
+                <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
             </div>
         </div>
     </section>
@@ -18,6 +19,7 @@ export const Whitepaper = () => {
             <h2>1. Executive Summary</h2>
             <p>The gaming industry is at a stagnation point where graphical fidelity has peaked, but narrative depth remains scripted and static. Simultaneously, the rise of Large Language Models (LLMs) offers infinite generative potential but suffers from hallucinations, high latency, and lack of state persistence.</p>
             <p><strong>ForbocAI</strong> proposes a hybrid architecture: a local-first, neuro-symbolic engine that marries the determinism of ECS (Entity Component System) game loops with the fluidity of quantized Small Language Models (SLMs). This whitepaper outlines our technical approach to creating truly autonomous "Micro-NPCs" and the decentralized protocol that allows these agents to transcend their native worlds.</p>
+            <div class="runic-glyph">᛭ ᚠ ᛫ ᚨ ᛫ ᛁ ᛭</div>
 
             <h2>2. The Problem Space</h2>
             <h3>2.1 The "Scripted" Ceiling</h3>
@@ -30,6 +32,7 @@ export const Whitepaper = () => {
                 <li><strong>Cost:</strong> Continuous token generation APIs are economically unviable for persistent worlds.</li>
                 <li><strong>Incoherence:</strong> Pure LLMs struggle with game state logic (inventory counts, quest flags).</li>
             </ul>
+            <div class="runic-glyph">ᚦ ᛫ ᛊ ᛫ ᛟ ᛫ ᛚ ᛫ ᚢ ᛫ ᛏ ᛫ ᛁ ᛫ ᛟ ᛫ ᚾ</div>
 
             <h2>3. The ForbocAI Solution</h2>
             <p>We introduce a rigorous separation of concerns between state (Logic) and personality (Vibes).</p>
@@ -67,6 +70,7 @@ export const Whitepaper = () => {
 
             <h3>3.3 Ghost Agent QA</h3>
             <p>Procedural content is risky. To mitigate this, we employ "Ghost Agents"—headless instances of our AI that play the game at 100x speed in a simulation environment (Playwright/Vitest). They exhaustively test dialogue trees and puzzle solutions to ensure no dead-ends exist before content is shipped to players.</p>
+            <div class="runic-glyph">ᚠ ᛫ ᚢ ᛫ ᚦ ᛫ ᚨ ᛫ ᚱ ᛫ ᚲ</div>
 
             <h2>4. The Agent Economy</h2>
             <p>ForbocAI is not just an engine; it is a protocol for interoperability.</p>
@@ -106,9 +110,10 @@ export const Whitepaper = () => {
                 <li><strong>World Lore:</strong> The setting, factions, and metaphysics of the campaign (e.g., a haunted marshland, a cybernetic underworld).</li>
                 <li><strong>NPC Templates:</strong> Character personas, starting memories, and behavioral tendencies that the AI will use as a foundation.</li>
                 <li><strong>Encounter Logic:</strong> Combat encounters, dialogue triggers, and quest structures—all validated by the deterministic ECS layer.</li>
-                <li><strong>Import Rules:</strong> How imported Souls adapt to the module's world (e.g., a sci-fi companion entering a fantasy module might have their "plasma rifle" re-skinned as a "lightning staff").</li>
+                <li><strong>Import Rules:</strong> How imported Souls integrate with the module's world. In realms like Goetéian Chthonica—where obsidian-clad knights and cybernetic soldiers traverse the void between dimensions—a Soul's plasma rifle and arcane blade alike find their place in the genre-defiant darkness.</li>
             </ul>
             <p>Players can then explore your module with their own companions—Souls they've trained across other adventures—creating a persistent, evolving narrative that spans multiple creators' works.</p>
+            <div class="runic-glyph">ᛊ ᛫ ᛟ ᛫ ᚢ ᛫ ᛚ ᛫ ᛊ</div>
 
             <h2>5. Roadmap</h2>
             <ul>
@@ -117,6 +122,7 @@ export const Whitepaper = () => {
                 <li><strong>Q3 2026:</strong> Agent Economy Launch (Wallet Integration & IPFS Exports).</li>
                 <li><strong>Q4 2026:</strong> Forboc SDK for Module &amp; Campaign Creators.</li>
             </ul>
+            <div class="runic-divider">ᚷ ᛫ ᛟ ᛫ ᛖ ᛫ ᛏ ᛫ ᛖ ᛫ ᛁ ᛫ ᚨ ᛫ ᚾ</div>
 
             <div class="whitepaper-footer-note">
                 <p><em>This document is a technical draft. Specifications are subject to change as we iterate towards the Singularity.</em></p>
