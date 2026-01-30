@@ -1,1 +1,6 @@
 .DS_Store
+
+# Discord Automation
+node_modules/
+scripts/discord-automation/.env
+scripts/discord-automation/package-lock.json

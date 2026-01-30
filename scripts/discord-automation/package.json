@@ -1,0 +1,13 @@
+{
+    "name": "forbocai-discord-automation",
+    "version": "1.0.0",
+    "description": "Scripts to automate ForbocAI Discord server setup",
+    "main": "setup.js",
+    "scripts": {
+        "start": "node setup.js"
+    },
+    "dependencies": {
+        "discord.js": "^14.14.1",
+        "dotenv": "^16.4.5"
+    }
+}
