@@ -52,9 +52,13 @@ const render = () => {
         // Post-render: Scroll to hash if present
         const hash = window.location.hash;
         if (hash) {
-            const target = document.querySelector(hash);
-            if (target) {
-                target.scrollIntoView();
+            // Only scroll if it's a valid ID selector (starts with # and no slashes/special chars)
+            // This prevents "SyntaxError: '#pitch/1' is not a valid selector"
+            if (/^#[a-zA-Z][\w-]*$/.test(hash)) {
+                const target = document.querySelector(hash);
+                if (target) {
+                    target.scrollIntoView();
+                }
             } else if (hash === '#whitepaper') {
                 window.scrollTo(0, 0);
             }

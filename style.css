@@ -84,6 +84,7 @@ body {
     position: relative;
     min-height: 100vh;
     padding-bottom: 4rem;
+    width: 100%;
 }
 
 /* Ventilation Background Pattern */
@@ -130,6 +131,7 @@ body {
     font-family: "Noto Sans Runic", sans-serif;
     z-index: 0;
     letter-spacing: 0.1em;
+    pointer-events: none;
 }
 
 /* Technical Markings */
@@ -1274,6 +1276,8 @@ footer::before {
     z-index: 0;
     letter-spacing: 0.1em;
     pointer-events: none;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 /* Corner Runes Decoration */
@@ -2044,6 +2048,51 @@ footer::before {
     
     .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Fix Deck Frame Overflow */
+    .deck-frame {
+        padding: 1rem;
+        min-height: auto;
+    }
+    
+    .pitch-runic-bg {
+        font-size: 15vw; /* Smaller on mobile */
+    }
+
+    .pitch-deck {
+        padding-top: 6rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .slide-title {
+        font-size: 1.8rem;
+        word-wrap: break-word; /* Prevent long words from overflowing */
+    }
+    
+    .deck-header {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .slide-counter {
+        order: 3;
+        width: 100%;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .deck-controls {
+        order: 2;
+    }
+    
+    .slide-runic-label {
+        order: 1;
+        width: 100%;
+        margin-bottom: 0.5rem;
     }
 }
 
