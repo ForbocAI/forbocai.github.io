@@ -21,6 +21,8 @@ export const Footer = () => {
                     <a href="https://x.com/ForbocAi" target="_blank" rel="noopener noreferrer">Twitter/X</a>
                     <a href="https://t.me/forbocai" target="_blank" rel="noopener noreferrer">Telegram</a>
                     <a href="https://discord.gg/6hr2jHqnsG" target="_blank" rel="noopener noreferrer">Discord</a>
+                    <a href="https://www.instagram.com/forbocai/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/forbocai/" target="_blank" rel="noopener noreferrer">Facebook</a>
                     <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://www.linkedin.com/company/111540626" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Wellfound</a>
