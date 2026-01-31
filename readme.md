@@ -1,77 +1,109 @@
-# ForbocAI
+<br/>
+<div align="center">
+  <img alt="ForbocAI logo" src="https://forbocai.github.io/logo.png" height="50" align="center">
+  
+  <br/>
+
+# ForbocAI SDK
 
 `Systém_Óverview // Prótocol_Init`
 
 **ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
 
-> **Autonomous Worlds. Architected Agents.**
+Autonomous AI for game NPCs.
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fforbocai.github.io)](https://forbocai.github.io)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Documentation](https://img.shields.io/badge/docs-forbocai.docs.buildwithfern.com-blue)](https://forbocai.docs.buildwithfern.com)
+[![Discord](https://img.shields.io/discord/your-discord-id?label=Discord)](https://discord.gg/6hr2jHqnsG)
+
+</div>
 
 ---
 
 ## Overview
 
-`Córe_Módules // Éngine_Init`
+`Córe_Módules // SDK_Init`
 
-**ForbocAI** is an advanced AI research and gaming startup building the substrates for the next generation of generative narrative gaming. We bridge the gap between retro aesthetics and Artificial General Intelligence (AGI) through sophisticated neuro-symbolic architectures.
+The **ForbocAI SDK** is an **Engine-Agnostic** toolkit for creating autonomous AI-powered NPCs in any game or application. It runs anywhere (Node, Browser, Python, Rust).
+
+- **Local SLM Cortex** — Run quantized Small Language Models in your environment
+- **Autonomous NPCs** — Create agents with persona, memory, and validated actions
+- **Persistent Memory** — RAG pipeline for semantic recall across sessions
+- **Portable Souls** — Export agent state to IPFS for cross-application use
+- **Automated QA** — Ghost Agents for headless testing at scale
 
 **᛭ ᛫ ᛬ ᛫ ᛭**
 
 ---
 
-## The Forboc Engine
+## Installation
 
-`Éngine_Árch // Néuro_Symbólic`
+`Instáll_Séquence // Pácкage`
 
-Our core technology is a **Neuro-Symbolic Game Engine** that combines the reliability of deterministic systems with the creative fluidity of Generative AI.
+```bash
+# JavaScript/TypeScript
+npm install forbocai
 
-### Key Pillars
+# Python
+pip install forbocai
 
-| Pillar | Description |
+# Rust
+cargo add forbocai
+```
+
+---
+
+## Quick Start
+
+`Quíck_Stárt // Éxample`
+
+```typescript
+import { Cortex, Agent } from 'forbocai';
+
+// Córtex_Init // Loćal_Inférence
+const cortex = await Cortex.init({ model: 'smollm2-135m' });
+
+// Agént_Créate // NPC_Entíty
+const npc = await Agent.create({
+  cortex,
+  persona: 'A suspicious merchant who was once cheated by adventurers.',
+  state: { inventory: ['rusty_key', 'healing_potion'], mood: 'suspicious' }
+});
+
+// Prócéss_Ínput // Dïalógue
+const response = await npc.process({
+  input: 'I want to buy a healing potion.',
+  context: { playerGold: 50 }
+});
+
+console.log(response.dialogue);
+// "Hmm, you have the coin... but how do I know you won't just take it and run?"
+```
+
+---
+
+## Core Modules
+
+`Módulátion_Máp // Sýstem_Óverview`
+
+| Module | Description |
 |--------|-------------|
-| **The Substrate** | ECS-Redux Hybrid with 100% determinism and replayability |
-| **Generative NPC Cortex** | Local-first SLMs with RAG memory architecture |
-| **Ghost Agent QA** | Autonomous auditing pipelines |
-| **Agent Economy** | Web3 native layer with tokenized Souls |
+| **Cortex** | Local SLM inference engine (Engine Agnostic) |
+| **Agent** | Autonomous entities with persona, state, memory |
+| **Memory** | RAG pipeline for persistent semantic recall |
+| **Bridge** | Neuro-symbolic action validation |
+| **Soul** | Portable agent state (IPFS/ERC-7007) |
+| **Ghost** | Headless QA testing at scale |
 
 ---
 
-## SDK
+## Documentation
 
-`SDK_Módule // Déveloper_Tóols`
+`Dócs_Máp // Référence`
 
-Build autonomous AI-powered NPCs with the **ForbocAI SDK**:
-
-```bash
-npm install @forbocai/sdk
-```
-
-- **[SDK Documentation](https://forbocai.docs.buildwithfern.com)** — Full API reference and guides
-- **[SDK Repository](https://github.com/ForbocAI/sdk)** — Source code and examples
-
----
-
-## Roadmap
-
-`Róadmap_Trácking // Q1_Q3`
-
-| Quarter | Milestone |
-|---------|-----------|
-| **Q1 2026** | The Cortex (Local Inference Engine & RAG Integration) |
-| **Q2 2026** | Neuro-Symbolic Bridge (LLM to ECS Action Translation) |
-| **Q3 2026** | Agent Economy Beta (Wallet Connect & IPFS Export) |
-
----
-
-## Local Development
-
-`Dév_Módule // Lócal_Sérver`
-
-```bash
-npx -y serve ./
-```
+- **[Introduction](https://forbocai.docs.buildwithfern.com)** — SDK overview and quick start
+- **[User Stories](https://forbocai.docs.buildwithfern.com/user-stories)** — BDD specifications for all features
+- **[Concepts](https://forbocai.docs.buildwithfern.com/concepts)** — Architecture and core abstractions
+- **[API Reference](https://forbocai.docs.buildwithfern.com/api-reference)** — Complete endpoint documentation
 
 ---
 
@@ -79,17 +111,30 @@ npx -y serve ./
 
 `Éxternal_Líns // Cónnect`
 
-- **Landing Page:** [forbocai.github.io](https://forbocai.github.io)
-- **SDK Docs:** [forbocai.docs.buildwithfern.com](https://forbocai.docs.buildwithfern.com)
+- **Website:** [forbocai.github.io](https://forbocai.github.io)
+- **Documentation:** [forbocai.docs.buildwithfern.com](https://forbocai.docs.buildwithfern.com)
 - **Discord:** [discord.gg/6hr2jHqnsG](https://discord.gg/6hr2jHqnsG)
 - **Telegram:** [t.me/forbocai](https://t.me/forbocai)
-- **Official Token ($FAI):** [pump.fun/coin/$FAI](https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump)
-- **Contract Address:** `7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump`
-- **LinkedIn:** [company/forbocai](https://linkedin.com/company/forbocai)
-- **Founder:** [Sean Dinwiddie](https://sdin.dev)
 
 ---
 
 **ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+ 
+ ## Developers
+ 
+ `Dev_Ops // Releáse_Cycles`
+ 
+ To redeploy the SDK to NPM:
+ 
+ 1.  **Bump Version**: Update `version` in `package.json`.
+ 2.  **Build**: `npm run build` (Generates `dist/`).
+ 3.  **Publish**: `npm publish --access public`.
+ 
+ > **Note**: You must be authenticated with `npm adduser` or have an `.npmrc` with a valid token.
 
-© 2026 Forboc AI Systems. All rights reserved.
+
+## License
+
+`Légal_Státus // Ríghts`
+
+All rights reserved. © 2026 ForbocAI
