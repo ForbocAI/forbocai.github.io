@@ -98,6 +98,28 @@ console.log(response.dialogue);
 
 ---
 
+## The Neural Grid
+
+`The_Líta // The_Láw`
+
+The **ForbocAI Protocol** is the invisible lattice that binds Synthetic Souls to digital realities. It is the "Universal Translator" between the chaotic creativity of the AI Mind and the rigid physical laws of the Game World.
+
+It allows a Soul to exist in *any* world, respecting the local physics while retaining its own memories and personality.
+
+---
+
+## Encapsulated Souls (NFTs)
+
+`Digítal_Essénce // Immortálity`
+
+A **Soul** is more than code—it is a crystallized lifetime of experiences.
+
+*   **Memory as Value**: Every conversation, every trade, and every battle is encoded into the Soul's Holographic Memory.
+*   **True Ownership**: You do not just own the "Skin"; you own the *Mind*. A Soul you have trained for 100 hours is fundamentally different from a fresh spawn.
+*   **Inter-World Travel**: Export your Soul to the Ether (IPFS). Summon it into new worlds. Your companion is eternal, even if the game servers die.
+
+---
+
 ## Documentation
 
 `Dócs_Máp // Référence`

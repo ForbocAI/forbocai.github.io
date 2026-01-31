@@ -5,29 +5,26 @@
 export const Technology = () => {
     return `
     <h2>The Substrate</h2>
-    <p>A local-first, privacy-focused architecture that merges rigourous ECS game loops with fluid Large Language Models.</p>
+    <p>A local-first, privacy-focused architecture that merges rigourous ECS game loops with fluid local inference.</p>
     <div class="runic-glyph">᛭ ᛫ ᛬ ᛫ ᛭</div>
     
     <div class="section-divider"><span>SUBSTRATE.MODULES</span></div>
     
     <div class="grid">
         <div class="card">
-
             <span class="runic">Neural_Substráte // V.02</span>
-            <h3>Generative NPC Cortex</h3>
-            <p>Powered by fine-tuned SLMs (SmolLM2) and edge-resident RAG buffers. Our "Micro-NPC" architecture enables low-latency, context-aware dialogue with persistent long-term memory, running entirely on-device.</p>
+            <h3>Synthetic Cortex</h3>
+            <p>Every NPC runs a dedicated <strong>SLM (Small Language Model)</strong> locally on-device. This "Personal Cortex" handles improvisation, dialogue, and flavor text with zero latency and absolute privacy.</p>
         </div>
         <div class="card">
-
-            <span class="runic">Determinístic_Bæcbón // functional_pipeline</span>
-            <h3>ECS-Redux Hybrid Engine</h3>
-            <p>A deterministic backbone. We decoupled state from behavior using a strictly functional Entity-Component-System pipeline, ensuring that every AI decision tree is replayable, auditable, and bug-free.</p>
+            <span class="runic">Cøgnitive_Cøre // The_Mínd</span>
+            <h3>Holographic Reasoner</h3>
+            <p>The "Ghost in the Machine." Our advanced reasoning engine ensures agents stay in character and follow complex instructions without breaking immersion. It feels less like code, and more like consciousness.</p>
         </div>
         <div class="card">
-
             <span class="runic">Autónomous_Audit // Zeró_Dæd-Ends</span>
-            <h3>Ghost Agent QA</h3>
-            <p>Autonomous testing pipelines that play the game before humans do. Our "Ghost Agents" rigorously audit procedurally generated capabilities using Playwright and Vitest, ensuring zero dead-ends.</p>
+            <h3>Ghost Protocol</h3>
+            <p>Development is accelerated by "Ghost Agents"—headless AI instances that play-test your game at 100x speed. They explore every dialogue branch and map edge, ensuring your world is robust before players arrive.</p>
         </div>
     </div>
     `;
