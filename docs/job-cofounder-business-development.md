@@ -26,7 +26,7 @@ ForbocAI is building the substrate for **Autonomous Worlds**. We are bridging th
 
 ### Our Vision
 - **The Cortex**: Local-first generative AI—hardware-accelerated SLM inference running entirely on-device for privacy-preserving NPC intelligence
-- **Edge-Resident Memory**: RAG pipelines with browser-native vector search, enabling NPCs that remember, learn, and evolve through player interactions
+- **Edge-Resident Memory**: RAG pipelines with native vector search, enabling NPCs that remember, learn, and evolve through player interactions
 - **Neuro-Symbolic Bridge**: Hybrid architecture where LLMs set high-level goals while deterministic behavior trees handle real-time micro-actions
 - **Decentralized Agent Economy**: Tokenized NPC "souls" (memories, stats, trained logic) as portable, player-owned digital assets via IPFS and smart contracts
 
@@ -36,7 +36,7 @@ ForbocAI is building the substrate for **Autonomous Worlds**. We are bridging th
 | **Gaming AI** | $5.5B market growing 25%+ annually—ripe for disruption by edge AI |
 | **AI Gaming Agents** | Emerging category where players delegate or collaborate with intelligent NPCs |
 | **Web3 Gaming** | $65B+ market seeking genuine utility beyond speculation |
-| **Browser-Native AI** | Untapped opportunity for privacy-first, zero-install AI experiences |
+| **Native AI** | Untapped opportunity for privacy-first, zero-install AI experiences |
 
 ## What We're Looking For
 We are seeking a **founding business partner** to lead investor relations, strategic partnerships, and market positioning. As a cofounder, you will have significant ownership and influence over the company's growth trajectory.

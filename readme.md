@@ -23,13 +23,15 @@ Autonomous AI for game NPCs.
 
 `Córe_Módules // SDK_Init`
 
-The **ForbocAI SDK** is an **Engine-Agnostic** toolkit for creating autonomous AI-powered NPCs in any game or application. It runs anywhere (Node, Browser, Python, Rust).
+The **ForbocAI SDK** is the **Characters' Brain/Mind**. It acts as the "Ghost in the Machine"—a decentralized consciousness layer that instills your NPCs with **Synthetic Intuition**. 
 
-- **Local SLM Cortex** — Run quantized Small Language Models in your environment
-- **Autonomous NPCs** — Create agents with persona, memory, and validated actions
-- **Persistent Memory** — RAG pipeline for semantic recall across sessions
-- **Portable Souls** — Export agent state to IPFS for cross-application use
-- **Automated QA** — Ghost Agents for headless testing at scale
+Your Game Engine serves as the **World's Brain** (Physical Laws, Reality). ForbocAI serves as the **Soul** (Reasoning, Memory, Personality). It is a "Black Box" of intelligence that simply *knows* what to do.
+
+- **Synthetic Cortex** — A local reasoning engine that mimics human intuition.
+- **Holographic Memory** — Persistent, semantic recall that feels like true déjà vu.
+- **Living Persona** — Agents with deep, evolving psycho-social frameworks.
+- **Portable Souls** — Digital entities that can traverse the metaverse (IPFS).
+- **Ghost Protocol** — Automated, phantom agents that endlessly play-test your world.
 
 **᛭ ᛫ ᛬ ᛫ ᛭**
 
@@ -87,12 +89,12 @@ console.log(response.dialogue);
 
 | Module | Description |
 |--------|-------------|
-| **Cortex** | Local SLM inference engine (Engine Agnostic) |
-| **Agent** | Autonomous entities with persona, state, memory |
-| **Memory** | RAG pipeline for persistent semantic recall |
-| **Bridge** | Neuro-symbolic action validation |
-| **Soul** | Portable agent state (IPFS/ERC-7007) |
-| **Ghost** | Headless QA testing at scale |
+| **Synthetic Cortex** | The local reasoning engine. It *feels* and *decides*. |
+| **Living Agent** | Entities with deep psycho-social state and evolving values. |
+| **Holographic Memory** | Persistent recall. Agents remember previous lives. |
+| **Neural Bridge** | The subconscious link between Thought (AI) and Reality (Game). |
+| **Soul** | The portable essence of an agent (inter-world traversal). |
+| **Ghost** | A headless phantom that haunts your game for QA purposes. |
 
 ---
 
