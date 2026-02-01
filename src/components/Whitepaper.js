@@ -68,14 +68,20 @@ export const Whitepaper = () => {
             <h2>4. The Agent Economy</h2>
             <p>ForbocAI is not just a framework; it is a protocol for interoperability.</p>
 
-            <h3>4.1 ERC-7007 & Tokenized Logic</h3>
-            <p>We are implementing the <strong>ERC-7007 (Verifiable AI-Generated Content)</strong> standard to tokenize NPC "Souls". A Soul comprises:</p>
+            <h3>4.1 Solana & Metaplex Core</h3>
+            <p>We are building on <strong>Solana</strong> using the <strong>Metaplex Core</strong> standard. This allows for:</p>
+            <ul>
+                <li><strong>High Frequency Updates:</strong> Updating an agent's stats or memory hash costs fractions of a cent.</li>
+                <li><strong>Zero-Copy Assets:</strong> Lightweight NFTs that don't clog the network.</li>
+                <li><strong>$FAI Integration:</strong> The native <strong>$FAI</strong> token is used for all premium actions: Minting Souls, Buying API Credits, and Marketplace Trading.</li>
+            </ul>
+            <p>A "Soul" NFT contains:</p>
             <ul>
                 <li><strong>Base Model Weights:</strong> The fine-tuned personality (LoRA).</li>
-                <li><strong>Long-term Memory Vector Store:</strong> The agent's lived experiences.</li>
+                <li><strong>Long-term Memory Hash:</strong> A pointer to their IPFS-stored experiences.</li>
                 <li><strong>State Vector:</strong> Current inventory, skills, and relationships.</li>
             </ul>
-            <p>These assets can be exported to IPFS and traded on a decentralized marketplace.</p>
+            <p>These assets can be exported to IPFS and traded on a decentralized marketplace powered by Solana.</p>
 
             <h3>4.2 The Neural Grid Protocol</h3>
             <p>The <strong>Forboc Protocol</strong> is the interoperability standard for autonomous AI agents. It defines:</p>

@@ -32,14 +32,14 @@ This document tracks the execution of the ForbocAI startup launch, focusing on p
 
 ## Phase 3: The Agent Economy (Protocol Layer)
 - [ ] **Technical Whitepaper ("Litepaper")**
-    - [ ] Define the **"Agent Interoperability Standard" (AIS)**.
-    - [ ] Explain how an NPC's *Memory State* (vector embeddings) and *Logic Config* (Behavior Tree weights) can be stored on-chain (or IPFS).
-    - [ ] Define the value prop: "Train an agent in Forboc; sell it to a player in another world."
+    - [ ] Define the **"Agent Interoperability Standard" (AIS)** on **Solana**.
+    - [ ] Explain how **Metaplex Core** assets hold dynamic agent state.
+    - [ ] Define the **Premium Economy**: $FAI for Agents/Credits, Database Gold for gameplay.
 - [x] **Token Launch ($FAI)**
-    - [x] Created on Pump.fun: `$FAI` (ForbocAI).
+    - [x] Created on Pump.fun (Solana): `$FAI` (ForbocAI).
     - [x] Link: [pump.fun/coin/$FAI](https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump)
-    - [ ] Utility token ($AGNT?) strategy pending (future phase).
-    - [ ] Governance layer for the Agent Standard.
+    - [ ] **Consolidation**: $FAI is now the sole utility token for the API and Marketplace.
+    - [ ] Governance layer integrated via SPL/DAOs.
 
 ## Phase 4: Product & Traction
 - [ ] **Technical Demo Video**
