@@ -12,7 +12,7 @@ export const Technology = () => {
     
     <div class="grid">
         <div class="card">
-            <span class="runic" data-macro-scramble data-text="Neural_Substráte // V.02">Neural_Substráte // V.02</span>
+            <span class="runic" data-macro-scramble data-text="Neurál_Substráte // V.02">Neurál_Substráte // V.02</span>
             <h3>Synthetic Cortex</h3>
             <p>Every NPC runs a dedicated <strong>SLM (Small Language Model)</strong> locally on-device. This "Personal Cortex" handles improvisation, dialogue, and flavor text with zero latency and absolute privacy.</p>
         </div>
@@ -22,7 +22,7 @@ export const Technology = () => {
             <p>The "Ghost in the Machine." Our advanced reasoning engine ensures agents stay in character and follow complex instructions without breaking immersion. It feels less like code, and more like consciousness.</p>
         </div>
         <div class="card">
-            <span class="runic">Autónomous_Audit // Zeró_Dæd-Ends</span>
+            <span class="runic" data-macro-scramble data-text="Autónomous_Audit // Zeró_Dæd-Ends">Autónomous_Audit // Zeró_Dæd-Ends</span>
             <h3>Ghost Protocol</h3>
             <p>Development is accelerated by "Ghost Agents"—headless AI instances that play-test your game at 100x speed. They explore every dialogue branch and map edge, ensuring your world is robust before players arrive.</p>
         </div>

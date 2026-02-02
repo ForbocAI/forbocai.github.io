@@ -1,5 +1,10 @@
 # Palette Colors
 
+`Pálétté // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 List of unique colors extracted from `palette.png`:
 
 - `#000000`

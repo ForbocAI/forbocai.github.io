@@ -21,11 +21,13 @@ export const Whitepaper = () => {
                 
                 <div class="barcode-strip whitepaper-barcode"></div>
 
+                <span class="runic" data-macro-scramble data-text="Execútive_Summáry // Inít">Execútive_Summáry // Inít</span>
                 <h2>1. Executive Summary</h2>
             <p>The gaming industry is at a stagnation point where graphical fidelity has peaked, but narrative depth remains scripted and static. Simultaneously, the rise of Large Language Models (LLMs) offers infinite generative potential but suffers from hallucinations, high latency, and lack of state persistence.</p>
             <p><strong>ForbocAI</strong> proposes a different path: a <strong>Neuro-Symbolic Intelligence Protocol</strong> that marries the determinism of state-based applications with the fluidity of quantized Small Language Models (SLMs). This whitepaper outlines our technical approach to creating truly autonomous "Micro-NPCs" and the decentralized protocol that allows these agents to transcend their native environments.</p>
             <div class="runic-glyph">᛭ ᚠ ᛫ ᚨ ᛫ ᛁ ᛭</div>
 
+            <span class="runic" data-macro-scramble data-text="Próblem_Spáce // Errór_Lóg">Próblem_Spáce // Errór_Lóg</span>
             <h2>2. The Problem Space</h2>
             <h3>2.1 The "Scripted" Ceiling</h3>
             <p>Traditional NPCs are state machines guided by rigid behavior trees. They cannot improvise or remember interactions beyond pre-defined variables. This creates a "ludonarrative dissonance" where the game world feels visually real but intellectually dead.</p>
@@ -39,6 +41,7 @@ export const Whitepaper = () => {
             </ul>
             <div class="runic-glyph">ᚦ ᛫ ᛊ ᛫ ᛟ ᛫ ᛚ ᛫ ᚢ ᛫ ᛏ ᛫ ᛁ ᛫ ᛟ ᛫ ᚾ</div>
 
+            <span class="runic" data-macro-scramble data-text="Solútion_Arch // Córtex">Solútion_Arch // Córtex</span>
             <h2>3. The ForbocAI Solution</h2>
             <p>We introduce a rigorous separation of concerns between state (Logic) and personality (Vibes).</p>
 
@@ -65,6 +68,7 @@ export const Whitepaper = () => {
             <p>Procedural content is risky. To mitigate this, we employ "Ghost Agents"—headless instances of our AI that run through simulations at 100x speed. They exhaustively test content to ensure no dead-ends exist before shipping.</p>
             <div class="runic-glyph">ᚠ ᛫ ᚢ ᛫ ᚦ ᛫ ᚨ ᛫ ᚱ ᛫ ᚲ</div>
 
+            <span class="runic" data-macro-scramble data-text="Agént_Ecónomy // Protócol">Agént_Ecónomy // Protócol</span>
             <h2>4. The Agent Economy</h2>
             <p>ForbocAI is not just a framework; it is a protocol for interoperability.</p>
 
@@ -98,6 +102,7 @@ export const Whitepaper = () => {
             
             <div class="runic-glyph">ᛊ ᛫ ᛟ ᛫ ᚢ ᛫ ᛚ ᛫ ᛊ</div>
 
+            <span class="runic" data-macro-scramble data-text="Róadmbáp // Tímelíne">Róadmbáp // Tímelíne</span>
             <h2>5. Roadmap</h2>
             <ul>
                 <li><strong>Q1 2026:</strong> Local Inference Alpha & RAG Integration.</li>

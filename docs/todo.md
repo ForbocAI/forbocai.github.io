@@ -1,5 +1,10 @@
 # ForbocAI Startup Execution Checklist
 
+`Tódó // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 This document tracks the execution of the ForbocAI startup launch, focusing on professional presence, investor readiness, and the decentralized "Agent Economy" protocol.
 
 ## Phase 1: Digital Presence & Branding (Immediate)

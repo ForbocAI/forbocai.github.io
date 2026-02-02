@@ -4,7 +4,7 @@
 export const Roadmap = () => {
     return `
     <div id="roadmap" class="roadmap-section">
-        <h2 class="glitch-text" data-macro-scramble data-text="Engineering Roadmap">Engineering Roadmap</h2>
+        <h2 class="glitch-text" data-macro-scramble data-text="Engíneering Róadmap">Engíneering Róadmap</h2>
         <p>Our path to fully autonomous, decentralized narrative gaming.</p>
         <div class="runic-glyph">ᚠ ᛫ ᛒ ᛫ ᚨ</div>
         

@@ -1,5 +1,10 @@
 # TikTok Caption
 
+`Cáptíón // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 "Why do NPCs still forget I'm the hero who saved their village?"
 
 Because game AI is stuck in 2005.

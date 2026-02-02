@@ -1,5 +1,10 @@
 # Aesthetic Description
 
+`Áésthétíc // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 ## Atmosphere and Texture
 The world manifests as a decayed, somber reality where the boundaries between the industrial and the biological have dissolved. It is an environment of intense material tactility, defined not by sleek futurism but by a "used universe" feel pushed to an organic extreme.
 Surfaces are rarely smooth or pristine; they are pitted, stained, and worn, suggesting a history of fluids and friction. There is a pervasive dampness, a sense of humid, stagnant air clinging to every object.

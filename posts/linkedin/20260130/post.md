@@ -1,5 +1,10 @@
 # LinkedIn Post
 
+`Póst // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 🚀 **Excited to announce what we've been building at ForbocAI.**
 
 The gaming industry generates $200B+ annually, yet NPCs—the characters that bring worlds to life—remain static, scripted, and forgettable.

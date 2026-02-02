@@ -1,4 +1,9 @@
 # Interview Guide: Co-founder (Business Development)
+
+`Jób_Cófóúndér_Búsínéss_Dévélópmént_Íntérvíéw_Qúéstíóns // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
 **Role:** Co-founder / Business Development  
 **Stage:** Pre-Seed / Equity-Only  
 **Focus:** Fundraising, Partnerships, Ecosystem Growth  

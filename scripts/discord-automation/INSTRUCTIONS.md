@@ -1,5 +1,10 @@
 # Discord Automation Handbook
 
+`Ínstrúctíóns // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 > **Status:** ✅ Initial Setup Complete (v1.0.0)
 
 This directory contains scripts to automate the configuration of the ForbocAI Discord server.

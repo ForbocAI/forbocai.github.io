@@ -1,5 +1,10 @@
 # LinkedIn Digital Presence Strategy
 
+`Línkédín // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 ## 1. Company Page Setup
 **Name**: ForbocAI
 **Tagline**: Autonomous Worlds. Architected Agents.

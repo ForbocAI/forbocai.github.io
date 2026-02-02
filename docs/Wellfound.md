@@ -1,5 +1,10 @@
 # Wellfound (AngelList) Profile Strategy
 
+`Wéllfóúnd // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 ## 1. Company Information
 **Company Name**: ForbocAI
 **One-Line Pitch**: Local-first Neuro-Symbolic AI engines for the next generation of autonomous gaming.

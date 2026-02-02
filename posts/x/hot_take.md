@@ -1,5 +1,10 @@
 # Hot Take Tweet
 
+`Hót_Táké // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 Hot take: Every AAA game with $100M+ budget still has NPCs dumber than a 2026 open-source SLM running on a phone.
 
 The problem isn't compute.

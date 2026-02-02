@@ -1,5 +1,10 @@
 # Job Posting: Cofounder / Business Development (Equity Only, Pre-Funding)
 
+`Jób_Cófóúndér_Búsínéss_Dévélópmént // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 ## Position Overview
 **Title**: Cofounder / Business Development  
 **Type**: Cofounder  

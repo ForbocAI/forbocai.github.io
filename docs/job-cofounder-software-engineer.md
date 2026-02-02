@@ -1,5 +1,10 @@
 # Job Posting: Cofounder / Software Engineer (Equity Only, Pre-Funding)
 
+`Jób_Cófóúndér_Sóftwáré_Éngínéér // Sýstém_Dóc`
+
+**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+
+
 ## Position Overview
 **Title**: Cofounder / Software Engineer  
 **Type**: Cofounder  
