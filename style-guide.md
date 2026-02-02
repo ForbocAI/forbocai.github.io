@@ -35,6 +35,7 @@ The codebase is not merely functionality; it is a **MANIFESTATION** of the void.
 - **Robert E. Howard**: Guide for primal barbarism, ancient civilizations, and steel.
 - **Sir Arthur C. Clarke**: Guide for monolithic infrastructure, cosmic scale, and advanced mystery.
 - **Robert Heinlein**: Guide for orbital mechanics, military philosophy, and rugged individualism.
+- **Frater Acher**: Guide for high magic, ritual silence, and the mysteries of the daimon.
 
 > "In the chrome-plated silence of the machine, we find our demons."
 
