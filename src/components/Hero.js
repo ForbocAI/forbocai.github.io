@@ -18,9 +18,9 @@ export const Hero = () => {
             <span class="diagnostic-label diagnostic-flicker" style="top: 1.5rem; left: 1.5rem;">SYS.ONLINE // 2026.01</span>
             <span class="diagnostic-label diagnostic-flicker" style="bottom: 1.5rem; right: 1.5rem;">MEM.ACTIVE // CORTEX.READY</span>
             <div class="hero-content">
-                <div class="recessed-label">System_01 // Ready</div>
-                <span class="runic">Arcitect_Init // Boot_Séquence</span>
-                <h1><span class="gradient-text">Architected Agents.</span><br>Autonomous Worlds.</h1>
+                <div class="recessed-label" data-macro-scramble data-text="System_01 // Ready">System_01 // Ready</div>
+                <span class="runic encrypted-text" data-text="Architect_Init // Boot_Séquence">Architect_Init // Boot_Séquence</span>
+                <h1><span class="gradient-text glitch-text" data-macro-scramble data-text="Architected Agents.">Architected Agents.</span><br>Autonomous Worlds.</h1>
                 <p>We are bridging the gap between deterministic state and AGI. ForbocAI builds deterministic, neuro-symbolic protocols for the next generation of generative narrative experiences.</p>
                 <div class="runic-divider">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
                 <div class="hero-buttons">

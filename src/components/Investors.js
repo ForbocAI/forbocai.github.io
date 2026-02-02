@@ -5,8 +5,8 @@ export const Investors = () => {
     return `
     <div id="investors" class="card investors-card">
 
-        <span class="runic">Seed_Round // strategic_partners</span>
-        <h2>Investor Relations</h2>
+        <span class="runic" data-macro-scramble data-text="Seed_Round // strategic_partners">Seed_Round // strategic_partners</span>
+        <h2 class="glitch-text" data-macro-scramble data-text="Investor Relations">Investor Relations</h2>
         <p class="investors-lead">We are currently opening our Seed Round for strategic partners. ForbocAI is positioning itself at the intersection of Gaming, AI, and Decentralized Infrastructure.</p>
         <div class="runic-glyph">ᚷ ᛫ ᚨ ᛫ ᛁ</div>
         <a href="#pitch/1" class="btn btn-primary">View Pitch Deck</a>

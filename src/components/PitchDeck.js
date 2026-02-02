@@ -430,8 +430,8 @@ export const PitchDeck = (state) => {
                 </div>
                 
                 <div class="slide-content">
-                    <span class="slide-runic-subtitle">${slide.runicSubtitle}</span>
-                    <h2 class="slide-title">${slide.title}</h2>
+                    <span class="slide-runic-subtitle" data-macro-scramble data-text="${slide.runicSubtitle}">${slide.runicSubtitle}</span>
+                    <h2 class="slide-title glitch-text" data-macro-scramble data-text="${slide.title}">${slide.title}</h2>
                     <div class="slide-body">
                         ${slide.content}
                     </div>

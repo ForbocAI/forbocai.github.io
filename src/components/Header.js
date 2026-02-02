@@ -10,7 +10,7 @@ export const Header = (props) => {
                 <div class="logo">
                      <a href="#">
                         <div class="logo-icon"></div>
-                        <span class="badge">Forboc</span> AI
+                        <span class="badge glitch-text" data-macro-scramble data-text="Forboc">Forboc</span> AI
                      </a>
                 </div>
                 <!-- Desktop Navigation -->

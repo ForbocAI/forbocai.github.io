@@ -5,8 +5,8 @@
 export const Vision = () => {
     return `
     <div id="vision" class="tokenomics-banner">
-        <span class="runic">Fúture_Prótocol // The_Agent_Ecónomy</span>
-        <h2>The Agent Economy ($FAI)</h2>
+        <span class="runic" data-macro-scramble data-text="Fúture_Prótocol // The_Agent_Ecónomy">Fúture_Prótocol // The_Agent_Ecónomy</span>
+        <h2 class="glitch-text" data-macro-scramble data-text="The Agent Economy ($FAI)">The Agent Economy ($FAI)</h2>
         
         <div class="vision-grid">
             <div class="vision-card">

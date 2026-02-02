@@ -7,7 +7,7 @@ export const Whitepaper = () => {
     <section class="hero hero-whitepaper">
         <div class="container">
             <div class="hero-content">
-                <h1>Technical <span class="gradient-text">Whitepaper</span></h1>
+                <h1><span class="gradient-text glitch-text" data-macro-scramble data-text="Technical Whitepaper">Technical Whitepaper</span></h1>
                 <p>Version 1.0 — January 2026</p>
                 <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
             </div>

@@ -4,7 +4,7 @@
   
   <br/>
 
-# ForbocAI SDK
+# ForbocAI
 
 `Systém_Óverview // Prótocol_Init`
 
@@ -34,52 +34,6 @@ Your Game Engine serves as the **World's Brain** (Physical Laws, Reality). Forbo
 - **Ghost Protocol** — Automated, phantom agents that endlessly play-test your world.
 
 **᛭ ᛫ ᛬ ᛫ ᛭**
-
----
-
-## Installation
-
-`Instáll_Séquence // Pácкage`
-
-```bash
-# JavaScript/TypeScript
-npm install forbocai
-
-# Python
-pip install forbocai
-
-# Rust
-cargo add forbocai
-```
-
----
-
-## Quick Start
-
-`Quíck_Stárt // Éxample`
-
-```typescript
-import { Cortex, Agent } from 'forbocai';
-
-// Córtex_Init // Loćal_Inférence
-const cortex = await Cortex.init({ model: 'smollm2-135m' });
-
-// Agént_Créate // NPC_Entíty
-const npc = await Agent.create({
-  cortex,
-  persona: 'A suspicious merchant who was once cheated by adventurers.',
-  state: { inventory: ['rusty_key', 'healing_potion'], mood: 'suspicious' }
-});
-
-// Prócéss_Ínput // Dïalógue
-const response = await npc.process({
-  input: 'I want to buy a healing potion.',
-  context: { playerGold: 50 }
-});
-
-console.log(response.dialogue);
-// "Hmm, you have the coin... but how do I know you won't just take it and run?"
-```
 
 ---
 
@@ -120,6 +74,28 @@ A **Soul** is more than code—it is a crystallized lifetime of experiences.
 
 ---
 
+## Local Development
+
+`Locál_Sérver // Inít_Séquence`
+
+This repository contains the source code for the **ForbocAI Website**.
+
+To run locally:
+
+1.  **Clone**:
+    ```bash
+    git clone https://github.com/forbocai/forbocai.github.io.git
+    cd forbocai.github.io
+    ```
+2.  **Run**:
+    ```bash
+    # Any static file server works
+    python3 -m http.server 8000
+    ```
+3.  **View**: [http://localhost:8000](http://localhost:8000)
+
+---
+
 ## Documentation
 
 `Dócs_Máp // Référence`
@@ -143,19 +119,6 @@ A **Soul** is more than code—it is a crystallized lifetime of experiences.
 ---
 
 **ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
- 
- ## Developers
- 
- `Dev_Ops // Releáse_Cycles`
- 
- To redeploy the SDK to NPM:
- 
- 1.  **Bump Version**: Update `version` in `package.json`.
- 2.  **Build**: `npm run build` (Generates `dist/`).
- 3.  **Publish**: `npm publish --access public`.
- 
- > **Note**: You must be authenticated with `npm adduser` or have an `.npmrc` with a valid token.
-
 
 ## License
 
