@@ -36,6 +36,10 @@ The codebase is not merely functionality; it is a **MANIFESTATION** of the void.
 - **Sir Arthur C. Clarke**: Guide for monolithic infrastructure, cosmic scale, and advanced mystery.
 - **Robert Heinlein**: Guide for orbital mechanics, military philosophy, and rugged individualism.
 - **Frater Acher**: Guide for high magic, ritual silence, and the mysteries of the daimon.
+- **James Sinclair**: Guide for algebraic structures and functional elegance.
+- **Eric Elliott**: Guide for software composition and the functional way.
+- **Philip Wadler**: Guide for the theory of types and the lambda connection.
+- **Andre Staltz**: Guide for reactive streams and decentralized architectures.
 
 > "In the chrome-plated silence of the machine, we find our demons."
 
