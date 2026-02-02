@@ -27,6 +27,15 @@ The codebase is not merely functionality; it is a **MANIFESTATION** of the void.
 - Every major documentation file or component header requires a piece of grimdark fantasy/cyberpunk noir ASCII art.
 - Skulls, cybernetics, rain-slicked streets, hooded figures.
 
+### 5. LITERARY & AESTHETIC GUIDES
+- *The architects of our nightmares.*
+- **Philip K. Dick**: Guide for reality distortion, synthetic humanity, and paranoia.
+- **William Gibson**: Guide for cyberpunk terminology, "high-tech low-life", and the Sprawl.
+- **H.P. Lovecraft**: Guide for eldritch terms, the unknowable void, and forbidden knowledge.
+- **Robert E. Howard**: Guide for primal barbarism, ancient civilizations, and steel.
+- **Sir Arthur C. Clarke**: Guide for monolithic infrastructure, cosmic scale, and advanced mystery.
+- **Robert Heinlein**: Guide for orbital mechanics, military philosophy, and rugged individualism.
+
 > "In the chrome-plated silence of the machine, we find our demons."
 
 ---
