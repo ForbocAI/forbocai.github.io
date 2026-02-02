@@ -1474,7 +1474,7 @@ footer::before {
 
 .slide-title {
     font-size: 3rem;
-    color: var(--bg-accent);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1483,11 +1483,11 @@ footer::before {
 .slide-body {
     font-size: 1.5rem;
     max-width: 800px;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
 }
 
 .slide-body h3 {
-    color: var(--bg-accent);
+    color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
@@ -1604,13 +1604,13 @@ footer::before {
 
 .title-slide .tagline {
     font-size: 2rem;
-    color: var(--bg-accent);
+    color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
 .title-slide .subtitle {
     font-size: 1.2rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
@@ -1653,7 +1653,7 @@ footer::before {
 
 .problem-list li {
     font-size: 1rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 0.75rem;
     padding-left: 1rem;
     border-left: 2px solid rgba(255,255,255,0.1);
@@ -1661,7 +1661,7 @@ footer::before {
 
 .impact-statement {
     font-size: 1.5rem;
-    color: var(--bg-accent);
+    color: var(--text-primary);
     margin-top: 1rem;
     font-weight: 600;
 }
@@ -1669,7 +1669,7 @@ footer::before {
 /* Solution Slide */
 .solution-intro {
     font-size: 1.2rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
     max-width: 700px;
 }
@@ -1677,7 +1677,7 @@ footer::before {
 /* Tech Moat - 4 Column Grid */
 .moat-intro {
     font-size: 1.1rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
@@ -1711,7 +1711,7 @@ footer::before {
 
 .metric-label {
     font-size: 0.9rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -1742,14 +1742,14 @@ footer::before {
 }
 
 .business-item h4 {
-    color: var(--bg-accent);
+    color: var(--text-primary);
     font-size: 1.3rem;
     margin-bottom: 0.75rem;
 }
 
 .business-item p {
     font-size: 0.95rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 1rem;
 }
 
@@ -1792,7 +1792,7 @@ footer::before {
 
 .gtm-content p {
     font-size: 0.95rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin: 0;
 }
 
@@ -1827,7 +1827,7 @@ footer::before {
 
 .comp-name {
     text-align: left;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
@@ -1857,7 +1857,7 @@ footer::before {
 
 .comp-note {
     font-size: 0.95rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-top: 1.5rem;
 }
 
@@ -1892,14 +1892,14 @@ footer::before {
 }
 
 .team-member h4 {
-    color: var(--bg-accent);
+    color: var(--text-primary);
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
 .team-member p {
     font-size: 0.9rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin: 0;
 }
 
@@ -1916,7 +1916,7 @@ footer::before {
 
 .team-note {
     font-size: 1rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     text-align: center;
 }
 
@@ -1931,7 +1931,7 @@ footer::before {
 
 .traction-list li {
     font-size: 1rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 0.75rem;
     display: flex;
     align-items: flex-start;
@@ -1952,7 +1952,7 @@ footer::before {
 
 .milestone-list li {
     font-size: 1rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -1971,13 +1971,13 @@ footer::before {
 /* The Ask Slide */
 .ask-intro {
     font-size: 1.2rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
 .use-of-funds {
-    background: rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.5rem 2rem;
     margin: 1.5rem 0;
     text-align: left;
@@ -2000,7 +2000,7 @@ footer::before {
 
 .funds-list li {
     font-size: 1rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -2008,8 +2008,8 @@ footer::before {
 }
 
 .funds-list strong {
-    color: var(--bg-accent);
-    min-width: 3rem;
+    color: var(--text-primary);
+    min-width: 3.5rem;
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
