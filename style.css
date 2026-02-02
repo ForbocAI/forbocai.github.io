@@ -1852,7 +1852,7 @@ footer::before {
 }
 
 .highlight-row .comp-name {
-    color: var(--bg-accent);
+    color: var(--text-primary);
 }
 
 .comp-note {
