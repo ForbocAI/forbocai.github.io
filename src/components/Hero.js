@@ -15,8 +15,8 @@ export const Hero = () => {
             <!-- Sector Label -->
             <div class="sector-label sector-label-right">SECTOR 01 // CORE</div>
             
-            <span class="diagnostic-label diagnostic-flicker" style="top: 1.5rem; left: 1.5rem;">SYS.ONLINE // 2026.01</span>
-            <span class="diagnostic-label diagnostic-flicker" style="bottom: 1.5rem; right: 1.5rem;">MEM.ACTIVE // CORTEX.READY</span>
+            <span class="diagnostic-label diagnostic-flicker pos-tl">SYS.ONLINE // 2026.01</span>
+            <span class="diagnostic-label diagnostic-flicker pos-br">MEM.ACTIVE // CORTEX.READY</span>
             <div class="hero-content">
                 <div class="recessed-label" data-macro-scramble data-text="System_01 // Ready">System_01 // Ready</div>
                 <span class="runic encrypted-text" data-text="Architect_Init // Boot_Séquence">Architect_Init // Boot_Séquence</span>
