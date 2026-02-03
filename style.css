@@ -907,7 +907,7 @@ footer::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(247, 249, 252, 0.98);
+    background: rgba(19, 19, 19, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 99;
@@ -974,10 +974,11 @@ footer::before {
         display: flex;
         position: relative;
         z-index: 111;
+        margin-left: auto;
     }
     
     .status-led {
-        display: none !important;
+        display: block !important;
     }
     
     .hero {
@@ -1121,9 +1122,9 @@ footer::before {
 .status-led {
     width: 6px;
     height: 6px;
-    background: #ffffff; /* Status LED switched to White */
+    background: #00ff00;
     border-radius: 50%;
-    box-shadow: 0 0 4px #ffffff;
+    box-shadow: 0 0 4px #00ff00;
     margin-left: 1rem;
     position: relative;
     opacity: 0.8;
@@ -2136,12 +2137,12 @@ footer::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(247, 249, 252, 0.98);
+    background: rgba(19, 19, 19, 0.98);
 }
 
 @media (max-width: 768px) {
     .status-led {
-        display: none !important;
+        display: block !important;
     }
     
     .mobile-menu-toggle {
@@ -2158,7 +2159,7 @@ footer::before {
         display: block !important;
         width: 24px;
         height: 2px;
-        background-color: #000000 !important;
+        background-color: #666 !important;
         margin: 3px 0;
     }
 }
