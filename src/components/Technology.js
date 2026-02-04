@@ -14,7 +14,7 @@ export const Technology = () => {
         <div class="card">
             <span class="runic" data-macro-scramble data-text="Neurál_Substráte // V.02">Neurál_Substráte // V.02</span>
             <h3>Synthetic Cortex</h3>
-            <p>Every NPC runs a dedicated <strong>SLM (Small Language Model)</strong> locally on-device. This "Personal Cortex" handles improvisation, dialogue, and flavor text with zero latency and absolute privacy.</p>
+            <p>Every NPC runs a dedicated <strong>SLM (Small Language Model)</strong> locally on-device via <strong>WebLLM & WebGPU</strong>. This "Personal Cortex" handles improvisation, dialogue, and flavor text with zero latency and absolute privacy.</p>
         </div>
         <div class="card">
             <span class="runic" data-macro-scramble data-text="Cøgnitive_Cøre // The_Mínd">Cøgnitive_Cøre // The_Mínd</span>
