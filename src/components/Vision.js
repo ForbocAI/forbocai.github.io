@@ -10,18 +10,18 @@ export const Vision = () => {
         
         <div class="vision-grid">
             <div class="vision-card">
-                <h3>Built on Solana</h3>
-                <p>We leverage <strong>Solana's</strong> blazing speed and low costs to power a high-frequency economy. <strong>$FAI</strong> is the native currency of the Grid, used for every premium action from minting Souls to purchasing API inference credits.</p>
+                <h3>Speed of Thought</h3>
+                <p>We leverage <strong>Solana's</strong> blazing speed to power a high-frequency economy. <strong>$FAI</strong> is the native currency of the Grid, fueling the fire of synthetic creation and autonomous trade.</p>
             </div>
             
             <div class="vision-card">
-                <h3>Metaplex Core Souls</h3>
-                <p>We use the <strong>Metaplex Core</strong> standard to create "Souls"—dynamic assets that are cheap to update. Unlike static NFTs, a Soul's metadata (XP, Memories, Inventory) evolves on-chain as they live their lives.</p>
+                <h3>Digital DNA</h3>
+                <p>We utilize the <strong>Metaplex Core</strong> standard to forge "Souls"—dynamic assets that breathe. Unlike static NFTs, a Soul's essence (Memories, XP, Inventory) evolves on-chain as they live their lives.</p>
             </div>
             
             <div class="vision-card">
-                <h3>True Ownership</h3>
-                <p>You own the Mind, not just the Skin. Export your trained Soul from <em>Forboc</em> and view it in your Phantom wallet, or trade it on the decentralized marketplace. Your companion is eternal.</p>
+                <h3>Sovereign Minds</h3>
+                <p>You own the Mind, not just the Skin. Export your trained Soul from <em>Forboc</em> and view it in your Phantom wallet, or trade it on the open market. Your companion is eternal.</p>
             </div>
         </div>
 

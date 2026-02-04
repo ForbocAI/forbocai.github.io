@@ -20,8 +20,8 @@ export const Hero = () => {
             <div class="hero-content">
                 <div class="recessed-label" data-macro-scramble data-text="System_01 // Ready">System_01 // Ready</div>
                 <span class="runic encrypted-text" data-text="Architect_Init // Boot_Séquence">Architect_Init // Boot_Séquence</span>
-                <h1><span class="gradient-text glitch-text" data-macro-scramble data-text="Architected Agents.">Architected Agents.</span><br>Autonomous Worlds.</h1>
-                <p>We are bridging the gap between deterministic state and AGI. ForbocAI builds deterministic, neuro-symbolic protocols for the next generation of generative narrative experiences.</p>
+                <h1><span class="gradient-text glitch-text" data-macro-scramble data-text="Architected Agents.">Architected Agents.</span><br>Synthetic Souls.</h1>
+                <p>We are bridging the gap between Scripted Lore and Artificial Life. ForbocAI provides the neural architecture for the next generation of living, breathing digital worlds.</p>
                 <div class="runic-divider">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
                 <div class="hero-buttons">
                     <!-- Round action buttons simulation -->
