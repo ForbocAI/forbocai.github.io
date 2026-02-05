@@ -22,7 +22,7 @@ This document tracks the execution of the ForbocAI startup launch, focusing on p
     - [x] Update Navigation.
 - [ ] **Domain & Email**
     - [ ] (Future) Register `forboc.ai` domain.
-    - [x] Update temporary contact email to `forbocai@sdin.dev`.
+    - [x] Update contact email to `hello@forboc.ai`.
 
 ## Phase 2: Investor Readiness (Seed Round Prep)
 - [/] **Pitch Deck (10-12 Slides)**

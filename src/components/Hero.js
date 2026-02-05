@@ -26,7 +26,7 @@ export const Hero = () => {
                 <div class="hero-buttons">
                     <!-- Round action buttons simulation -->
                     <a href="#technology" class="btn btn-primary" data-link>Initialize</a>
-                    <a href="mailto:forbocai@sdin.dev" class="btn btn-secondary">Contact</a>
+                    <a href="mailto:hello@forboc.ai" class="btn btn-secondary">Contact</a>
                 </div>
             </div>
         </div>

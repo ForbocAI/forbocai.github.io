@@ -391,7 +391,7 @@ const slides = [
             <div class="runic-glyph">ᚷ ᛫ ᛟ ᛫ ᛖ ᛫ ᛏ ᛫ ᛖ ᛫ ᛁ ᛫ ᚨ ᛫ ᚾ</div>
             <div class="contact-box">
                 <span class="contact-runes">ᚲᛟᚾᛏᚨᚲᛏ</span>
-                <a href="mailto:forbocai@sdin.dev" class="btn btn-primary">forbocai@sdin.dev</a>
+                <a href="mailto:hello@forboc.ai" class="btn btn-primary">hello@forboc.ai</a>
             </div>
         `
     }

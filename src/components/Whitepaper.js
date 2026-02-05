@@ -114,7 +114,7 @@ export const Whitepaper = () => {
 
             <div class="whitepaper-footer-note">
                 <p><em>This document is a technical draft. Specifications are subject to change as we iterate towards the Singularity.</em></p>
-                <a href="mailto:contact@sdin.dev" class="btn btn-primary">Contact the Team</a>
+                <a href="mailto:hello@forboc.ai" class="btn btn-primary">Contact the Team</a>
             </div> <!-- end whitepaper-footer-note -->
             </div> <!-- end tech-panel -->
         </div>
