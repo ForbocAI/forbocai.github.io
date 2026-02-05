@@ -307,9 +307,6 @@ const slides = [
             <p class="team-note">We're building the founding team. Equity-first compensation (10-20%) for co-founders who believe in the vision.</p>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 10: Traction
-    // ═══════════════════════════════════════════════════════════
     {
         id: 10,
         runicLabel: "ᛏᚱᚨᚲᛏᛁᛟᚾ",
@@ -318,17 +315,20 @@ const slides = [
         content: `
             <span class="deck-runic-accent">ᚨᚲᚲᛟᛗᛈᛚᛁᛊᚺᛖᛞ</span>
             <ul class="traction-list">
-                <li><span class="runic-bullet">✓</span><strong>Technical Whitepaper:</strong> Published architecture for Neuro-Symbolic Bridge and Cortex.</li>
-                <li><span class="runic-bullet">✓</span><strong>Core Architecture:</strong> Deterministic state loop with Redux-style state management.</li>
-                <li><span class="runic-bullet">✓</span><strong>Forboc Protocol Spec:</strong> Soul serialization format and ERC-7007 integration design.</li>
-                <li><span class="runic-bullet">✓</span><strong>Community Launch:</strong> Discord, Telegram, and Wellfound presence established.</li>
+                <li><span class="runic-bullet">✓</span><strong>SDK v0.3.1 Complete:</strong> All 7 core modules shipped (Cortex, Agent, Memory, Bridge, Soul, Ghost, Vector).</li>
+                <li><span class="runic-bullet">✓</span><strong>API Service Live:</strong> Haskell Servant backend deployed to Render (25+ endpoints).</li>
+                <li><span class="runic-bullet">✓</span><strong>Local SLM Runtime:</strong> node-llama-cpp integration with GGUF model support (SmolLM2-135M).</li>
+                <li><span class="runic-bullet">✓</span><strong>Vector Memory:</strong> LanceDB integration with semantic recall and temporal decay.</li>
+                <li><span class="runic-bullet">✓</span><strong>Soul Portability:</strong> IPFS export/import via Helia complete.</li>
+                <li><span class="runic-bullet">✓</span><strong>Developer Docs:</strong> Fern documentation live at forbocai.docs.buildwithfern.com.</li>
+                <li><span class="runic-bullet">✓</span><strong>BDD Test Suite:</strong> Full Cucumber/Haskell test coverage for all API features.</li>
             </ul>
             <div class="runic-glyph">᛭ ᚾ ᛫ ᛖ ᛫ ᚲ ᛫ ᛊ ᛫ ᛏ ᛭</div>
             <h4>Next Milestones</h4>
             <ul class="milestone-list">
-                <li><span class="runic-bullet">ᚠ</span>Q1 2026: Local Inference Alpha & RAG Integration</li>
-                <li><span class="runic-bullet">ᚢ</span>Q2 2026: Ghost Agent QA Tooling & Developer Preview</li>
-                <li><span class="runic-bullet">ᚦ</span>Q3 2026: Interactive Tech Demo / Reference Implementation</li>
+                <li><span class="runic-bullet">ᚠ</span>Q1 2026: Metaplex Core integration for Soul NFTs</li>
+                <li><span class="runic-bullet">ᚢ</span>Q2 2026: Python & Rust SDK bindings</li>
+                <li><span class="runic-bullet">ᚦ</span>Q3 2026: Enterprise Self-Hosted Option & Unity/Unreal Plugins</li>
             </ul>
         `
     },
