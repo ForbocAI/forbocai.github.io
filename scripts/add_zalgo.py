@@ -72,7 +72,7 @@ def process_file(filepath):
 
 def main():
     target_dirs = [
-        "/Users/seandinwiddie/GitHub/forbocai.github.io",
+        "/Users/seandinwiddie/GitHub/forboc.ai",
         "/Users/seandinwiddie/GitHub/Forboc",
         "/Users/seandinwiddie/Documents/GitHub/forboc.github.io",
         "/Users/seandinwiddie/Documents/GitHub/qvht.github.io",

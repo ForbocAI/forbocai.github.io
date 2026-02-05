@@ -8,7 +8,7 @@
 ## 1. Company Page Setup
 **Name**: ForbocAI
 **Tagline**: Autonomous Worlds. Architected Agents.
-**Website**: https://forbocai.github.io
+**Website**: https://forboc.ai
 **Industry**: Software Development, Computer Games, Artificial Intelligence
 **Company Size**: 2-10 employees
 **Type**: Privately Held
@@ -65,6 +65,6 @@ And soon, you will **own** them. We are working on a decentralized framing that 
 
 We are opening our Seed Round for strategic partners who see the future of Autonomous Worlds.
 
-Check out our roadmap: https://forbocai.github.io
+Check out our roadmap: https://forboc.ai
 
 #ForbocAI #GenerativeAI #GameDev #Web3 #AutonomousAgents #Startup

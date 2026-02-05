@@ -8,7 +8,7 @@
 ## 1. Company Information
 **Company Name**: ForbocAI
 **One-Line Pitch**: Local-first Neuro-Symbolic AI engines for the next generation of autonomous gaming.
-**Website**: https://forbocai.github.io
+**Website**: https://forboc.ai
 **Location**: San Francisco Bay Area (Remote)
 **Markets**: Artificial Intelligence, Gaming, Web3, Generative AI, Developer Tools
 

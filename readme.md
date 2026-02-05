@@ -1,6 +1,6 @@
 <br/>
 <div align="center">
-  <img alt="ForbocAI logo" src="https://forbocai.github.io/logo.png" height="50" align="center">
+  <img alt="ForbocAI logo" src="https://forboc.ai/logo.png" height="50" align="center">
   
   <br/>
 
@@ -84,8 +84,8 @@ To run locally:
 
 1.  **Clone**:
     ```bash
-    git clone https://github.com/forbocai/forbocai.github.io.git
-    cd forbocai.github.io
+    git clone https://github.com/forbocai/forboc.ai.git
+    cd forboc.ai
     ```
 2.  **Run**:
     ```bash
@@ -111,7 +111,7 @@ To run locally:
 
 `Éxternal_Líns // Cónnect`
 
-- **Website:** [forbocai.github.io](https://forbocai.github.io)
+- **Website:** [forboc.ai](https://forboc.ai)
 - **Documentation:** [forbocai.docs.buildwithfern.com](https://forbocai.docs.buildwithfern.com)
 - **Discord:** [discord.gg/6hr2jHqnsG](https://discord.gg/6hr2jHqnsG)
 - **Telegram:** [t.me/forbocai](https://t.me/forbocai)

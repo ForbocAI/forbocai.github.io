@@ -22,6 +22,6 @@ For game developers, this means autonomous NPCs that remember, reason, and evolv
 
 The future of interactive storytelling is here.
 
-🔗 [forbocai.github.io](https://forbocai.github.io)
+🔗 [forboc.ai](https://forboc.ai)
 
 #AI #Gaming #Web3 #GameDev #LLM

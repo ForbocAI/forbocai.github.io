@@ -11,7 +11,7 @@ This document tracks the execution of the ForbocAI startup launch, focusing on p
 - [x] **LinkedIn Company Page**
     - [x] Strategy & Content Drafted (See `LinkedIn.md`).
     - [x] Define tagline: "Autonomous Worlds. Architected Agents."
-    - [x] Link website: `https://forbocai.github.io`
+    - [x] Link website: `https://forboc.ai`
     - [x] Draft first "Hello World" post.
 - [x] **Wellfound (AngelList) Profile**
     - [x] Strategy & Content Drafted (See `Wellfound.md`).

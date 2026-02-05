@@ -71,4 +71,4 @@ Apply through our [Wellfound profile](https://wellfound.com/company/forboc-ai) o
 
 **Company Size**: 1-10 employees  
 **Stage**: Pre-Seed / Seed  
-**Website**: https://forbocai.github.io
+**Website**: https://forboc.ai

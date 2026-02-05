@@ -16,7 +16,7 @@ The ForbocAI SDK **Documentation** is now live.
 
 **Explore the vision:**
 📖 <https://forbocai.docs.buildwithfern.com>
-🌐 <https://forbocai.github.io>
+🌐 <https://forboc.ai>
 🪙 $FAI on pump.fun
 
 SDK coming soon. Join us as we build the future of autonomous game AI.
