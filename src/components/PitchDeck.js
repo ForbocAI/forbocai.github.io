@@ -320,7 +320,7 @@ const slides = [
                 <li><span class="runic-bullet">✓</span><strong>Local SLM Runtime:</strong> node-llama-cpp integration with GGUF model support (SmolLM2-135M).</li>
                 <li><span class="runic-bullet">✓</span><strong>Vector Memory:</strong> LanceDB integration with semantic recall and temporal decay.</li>
                 <li><span class="runic-bullet">✓</span><strong>Soul Portability:</strong> IPFS export/import via Helia complete.</li>
-                <li><span class="runic-bullet">✓</span><strong>Developer Docs:</strong> Fern documentation live at forbocai.docs.buildwithfern.com.</li>
+                <li><span class="runic-bullet">✓</span><strong>Developer Docs:</strong> Fern documentation live at docs.forboc.ai.</li>
                 <li><span class="runic-bullet">✓</span><strong>BDD Test Suite:</strong> Full Cucumber/Haskell test coverage for all API features.</li>
             </ul>
             <div class="runic-glyph">᛭ ᚾ ᛫ ᛖ ᛫ ᚲ ᛫ ᛊ ᛫ ᛏ ᛭</div>

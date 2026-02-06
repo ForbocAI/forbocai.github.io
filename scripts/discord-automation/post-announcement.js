@@ -22,7 +22,7 @@ The ForbocAI SDK **Documentation** is now live.
 → Ghost Agents for automated QA at scale
 
 **Explore the vision:**
-📖 <https://forbocai.docs.buildwithfern.com>
+📖 <https://docs.forboc.ai>
 🌐 <https://forboc.ai>
 🪙 $FAI on pump.fun
 

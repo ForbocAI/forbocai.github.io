@@ -55,7 +55,7 @@ Web3 × AI × Gaming.
 We're building in public.
 
 📦 SDK: npm install @forbocai/sdk
-📖 Docs: forbocai.docs.buildwithfern.com
+📖 Docs: docs.forboc.ai
 💬 Discord: discord.gg/6hr2jHqnsG
 🪙 $FAI on pump.fun
 

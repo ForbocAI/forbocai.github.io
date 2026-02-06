@@ -16,7 +16,7 @@ We're changing that with a Neuro-Symbolic AI Engine:
 ▸ **Deterministic action validation**
 ▸ **Portable "Souls" via IPFS/Web3**
 
-Our SDK documentation is now live: [forbocai.docs.buildwithfern.com](https://forbocai.docs.buildwithfern.com)
+Our SDK documentation is now live: [docs.forboc.ai](https://docs.forboc.ai)
 
 For game developers, this means autonomous NPCs that remember, reason, and evolve—without cloud dependencies or per-token costs.
 

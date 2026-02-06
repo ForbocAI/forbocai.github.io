@@ -12,7 +12,7 @@
 
 Autonomous AI for game NPCs.
 
-[![Documentation](https://img.shields.io/badge/docs-forbocai.docs.buildwithfern.com-blue)](https://forbocai.docs.buildwithfern.com)
+[![Documentation](https://img.shields.io/badge/docs-docs.forboc.ai-blue)](https://docs.forboc.ai)
 [![Discord](https://img.shields.io/discord/your-discord-id?label=Discord)](https://discord.gg/6hr2jHqnsG)
 
 </div>
@@ -100,10 +100,10 @@ To run locally:
 
 `Dócs_Máp // Référence`
 
-- **[Introduction](https://forbocai.docs.buildwithfern.com)** — SDK overview and quick start
-- **[User Stories](https://forbocai.docs.buildwithfern.com/user-stories)** — BDD specifications for all features
-- **[Concepts](https://forbocai.docs.buildwithfern.com/concepts)** — Architecture and core abstractions
-- **[API Reference](https://forbocai.docs.buildwithfern.com/api-reference)** — Complete endpoint documentation
+- **[Introduction](https://docs.forboc.ai)** — SDK overview and quick start
+- **[User Stories](https://docs.forboc.ai/user-stories)** — BDD specifications for all features
+- **[Concepts](https://docs.forboc.ai/concepts)** — Architecture and core abstractions
+- **[API Reference](https://docs.forboc.ai/api-reference)** — Complete endpoint documentation
 
 ---
 
@@ -112,7 +112,7 @@ To run locally:
 `Éxternal_Líns // Cónnect`
 
 - **Website:** [forboc.ai](https://forboc.ai)
-- **Documentation:** [forbocai.docs.buildwithfern.com](https://forbocai.docs.buildwithfern.com)
+- **Documentation:** [docs.forboc.ai](https://docs.forboc.ai)
 - **Discord:** [discord.gg/6hr2jHqnsG](https://discord.gg/6hr2jHqnsG)
 - **Telegram:** [t.me/forbocai](https://t.me/forbocai)
 
