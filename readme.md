@@ -30,7 +30,7 @@ Your Game Engine serves as the **World's Brain** (Physical Laws, Reality). Forbo
 - **Synthetic Cortex** — A local reasoning engine that mimics human intuition.
 - **Holographic Memory** — Persistent, semantic recall that feels like true déjà vu.
 - **Living Persona** — Agents with deep, evolving psycho-social frameworks.
-- **Portable Souls** — Digital entities that can traverse the metaverse (IPFS).
+- **Portable Souls** — Digital entities that can traverse the metaverse (permanent storage).
 - **Ghost Protocol** — Automated, phantom agents that endlessly play-test your world.
 
 **᛭ ᛫ ᛬ ᛫ ᛭**
@@ -70,7 +70,7 @@ A **Soul** is more than code—it is a crystallized lifetime of experiences.
 
 *   **Memory as Value**: Every conversation, every trade, and every battle is encoded into the Soul's Holographic Memory.
 *   **True Ownership**: You do not just own the "Skin"; you own the *Mind*. A Soul you have trained for 100 hours is fundamentally different from a fresh spawn.
-*   **Inter-World Travel**: Export your Soul to the Ether (IPFS). Summon it into new worlds. Your companion is eternal, even if the game servers die.
+*   **Inter-World Travel**: Export your Soul to permanent storage. Summon it into new worlds. Your companion is eternal, even if the game servers die.
 
 ---
 

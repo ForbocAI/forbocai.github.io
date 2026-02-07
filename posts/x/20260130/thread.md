@@ -44,7 +44,7 @@ That form relationships.
 That can be minted and traded.
 
 Your merchant NPC who became a friend?
-Export their Soul to IPFS.
+Export their Soul to permanent storage.
 Take them to the next game.
 
 Web3 × AI × Gaming.
