@@ -22,6 +22,10 @@
 **Q: "What is 'Neuro-Symbolic AI,' and how does it solve the reliability problem that pure SLM-based agent AI has?"**
 *   *Look for:* Articulation of the **hybrid architecture**: SLMs generate *intent* ("I want to flee"), deterministic rules *validate* and *execute* ("Check HP < 15, then run pathfinding"). The "Bridge" module prevents hallucinated actions from breaking agent state.
 
+**Q: "We define the Game Engine as the 'World's Brain' and the SDK as its 'Characters' Brain.' If the World's Brain is the only authoritative source of truth for the physical environment, why must the Characters' Brain (the SDK) be 'dumb' infrastructure rather than building its own physics simulation?"**
+*   *Look for:* Understanding of **single source of truth** and **loose coupling**. They should explain that the SDK is a receiver of observations and an emitter of intent. If the SDK "thought" it knew where it was without the World Brain's verification, you'd get "De-sync" where the character thinks it's through a door that is actually locked.
+
+
 ---
 
 ## 2. The Bridge (Neuro-Symbolic Validation)
@@ -102,6 +106,13 @@
     *   Error handling for stream interruptions
     *   Backpressure considerations
 
+**Q: "The SDK is described as a 'Dumb Infrastructure Container'—like a tiny hard drive for the character. It does no reasoning of its own. Why is it better to put the 'Thinking' logic in a proprietary Cloud API rather than embedding it directly into the local SDK?"**
+*   *Look for:* Understanding of **IP Protection** (Gatekeeping), **Monetization** (API credits), and **Governance**. If the logic is local, it can be tampered with or stolen. By keeping the "Mind" in the API, we ensure the "Laws" of the character are absolute and the business model is secure.
+
+**Q: "Since the SDK is just a 'hard drive' storing memories (Vector DB), but the 'Thinking' happens in the API, how do you handle the bandwidth problem? We can't send 1,000 memories to the Cloud API for every decision."**
+*   *Look for:* Understanding of **Local Pre-filtering/Ranking**. They should mention that the SDK's role is to use local semantic search to find the *top 3-5 most pertinent* memories and send *only those* to the API Thinker.
+
+
 ---
 
 ## 5. Testing & QA Philosophy
@@ -134,6 +145,10 @@
     *   "Taking investor money that forces us to abandon open standards"
 *   This tests for **spine** and **alignment with core values**.
 
+**Q: "We use a '3-Layer Gatekeeping' strategy for documentation (Dream, Interface, Machine). As a founding engineer, how do you balance being 'Open Source' (to gain developer trust) with the need for Layer 3 'Classified' docs that protect our proprietary Neuro-Symbolic DNA?"**
+*   *Look for:* Strategic thinking about **developer relations**. They should realize that the *Interface* (SDK) should be open and easy to use, while the *Logic* (API) remains a black box. A good candidate will advocate for an SDK that "feels" open but "acts" as a gateway to our value.
+
+
 ---
 
 ## 7. Practical Evaluation: ForbocAI SDK Demo (30-45 min)
@@ -146,7 +161,9 @@
 "Build a strictly typed 'Guard Agent' using `AgentConfig`. It should:
 1.  Initialize with a `hostile` mood.
 2.  Have a custom validation rule: 'Cannot leave post' (rejects MOVE actions).
-3.  Process the input 'I am walking past you' and generate a valid reaction."
+3.  Implement a `pipeObservation` function that takes a Redux-style action from the 'World Brain' (e.g., `{ type: 'PLAYER_EQUIPPED_WEAPON', payload: { weapon: 'axe' } }`) and translates it into a human-readable observation for the 'Character Brain' to store.
+4.  Process the input 'I am walking past you' and generate a valid reaction."
+
 
 **Evaluation Criteria:**
 *   **Speed**: Do they struggle with basic TS config?
