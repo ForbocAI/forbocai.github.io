@@ -124,6 +124,6 @@ To run locally:
 
 `Légal_Státus // Ríghts`
 
-All rights reserved. © 2026 ForbocAI
+All rights reserved. © 2026 ForbocAI. See [LICENSE](./LICENSE) for full details.
 ## 🌑 Aesthetic Protocols
 See [style-guide.md](./style-guide.md) for mandatory grimdark cyberpunk noir aesthetic standards (Runes, Zalgo, ASCII).
