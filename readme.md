@@ -23,15 +23,15 @@ Autonomous AI for game NPCs.
 
 `Córe_Módules // SDK_Init`
 
-The **ForbocAI SDK** is the **Characters' Brain/Mind**. It acts as the "Ghost in the Machine"—a decentralized consciousness layer that instills your NPCs with **Synthetic Intuition**. 
+The **ForbocAI SDK** is the **Body**—the local execution layer (memory, inference, validation). The **API** is the **Mind**—the cloud orchestration layer that decides what the NPC should do. Together they form a Split-Brain architecture that instills your NPCs with **Synthetic Intuition**.
 
-Your Game Engine serves as the **World's Brain** (Physical Laws, Reality). ForbocAI serves as the **Soul** (Reasoning, Memory, Personality). It is a "Black Box" of intelligence that simply *knows* what to do.
+Your Game Engine serves as the **World** (Physical Laws, Reality). ForbocAI serves as the **Soul** (Reasoning, Memory, Personality). It is a "Black Box" of intelligence that simply *knows* what to do.
 
 - **Synthetic Cortex** — A local reasoning engine that mimics human intuition.
 - **Holographic Memory** — Persistent, semantic recall that feels like true déjà vu.
-- **Living Persona** — Agents with deep, evolving psycho-social frameworks.
+- **Living Persona** — NPCs with deep, evolving psycho-social frameworks.
 - **Portable Souls** — Digital entities that can traverse the metaverse (permanent storage).
-- **Ghost Protocol** — Automated, phantom agents that endlessly play-test your world.
+- **Ghost Protocol** — Automated, phantom NPCs that endlessly play-test your world.
 
 **᛭ ᛫ ᛬ ᛫ ᛭**
 
@@ -44,10 +44,10 @@ Your Game Engine serves as the **World's Brain** (Physical Laws, Reality). Forbo
 | Module | Description |
 |--------|-------------|
 | **Synthetic Cortex** | The local reasoning engine. It *feels* and *decides*. |
-| **Living Agent** | Entities with deep psycho-social state and evolving values. |
-| **Holographic Memory** | Persistent recall. Agents remember previous lives. |
+| **Living NPC** | Entities with deep psycho-social state and evolving values. |
+| **Holographic Memory** | Persistent recall. NPCs remember previous lives. |
 | **Neural Bridge** | The subconscious link between Thought (AI) and Reality (Game). |
-| **Soul** | The portable essence of an agent (inter-world traversal). |
+| **Soul** | The portable essence of an NPC (inter-world traversal). |
 | **Ghost** | A headless phantom that haunts your game for QA purposes. |
 
 ---
@@ -84,8 +84,8 @@ To run locally:
 
 1.  **Clone**:
     ```bash
-    git clone https://github.com/forbocai/forboc.ai.git
-    cd forboc.ai
+    git clone https://github.com/forbocai/forbocai.github.io.git
+    cd forbocai.github.io
     ```
 2.  **Run**:
     ```bash
@@ -101,9 +101,9 @@ To run locally:
 `Dócs_Máp // Référence`
 
 - **[Introduction](https://docs.forboc.ai)** — SDK overview and quick start
-- **[User Stories](https://docs.forboc.ai/user-stories)** — BDD specifications for all features
-- **[Concepts](https://docs.forboc.ai/concepts)** — Architecture and core abstractions
-- **[API Reference](https://docs.forboc.ai/api-reference)** — Complete endpoint documentation
+- **[User Stories](https://docs.forboc.ai/npm/user-stories)** — BDD specifications for all features
+- **[Concepts](https://docs.forboc.ai/npm/concepts)** — Architecture and core abstractions
+- **[API Reference](https://docs.forboc.ai)** — Complete endpoint documentation
 
 ---
 

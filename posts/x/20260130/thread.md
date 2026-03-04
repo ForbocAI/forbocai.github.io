@@ -30,7 +30,7 @@ Here's how it works ↓
 🧠 The Cortex — Local SLMs running on YOUR device
 📚 RAG Memory — Semantic recall across sessions
 🔗 Neuro-Symbolic Bridge — LLM meets determinism
-👻 Ghost Agents — Autonomous QA at scale
+👻 Ghost NPCs — Autonomous QA at scale
 
 All local. All private. All yours.
 

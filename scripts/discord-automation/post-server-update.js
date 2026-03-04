@@ -21,7 +21,7 @@ The ForbocAI Neural Grid has been recalibrated. We have established new landing 
 **What we're building:**
 → NPCs with actual memory & persistent relationships
 → Portable Souls via IPFS
-→ Ghost Agents for automated QA at scale
+→ Ghost NPCs for automated QA at scale
 
 **Explore the vision:**
 📖 SDK Docs <https://Docs.Forboc.AI>
@@ -36,8 +36,8 @@ The ForbocAI Neural Grid has been recalibrated. We have established new landing 
 **ᚠ PROTOCOLS UNDER DEVELOPMENT:**
 - **The World's Brain:** Authoritative simulation & deterministic rule layers.
 - **Characters' Brain:** High-fidelity SLM "Minds" with local memory retrieval.
-- **Soul Persistence:** Decentralized, portable agent identities via IPFS.
-- **Ghost Agents:** The automated vanguard for cross-platform simulation stress-testing.
+- **Soul Persistence:** Decentralized, portable NPC identities via IPFS.
+- **Ghost NPCs:** The automated vanguard for cross-platform simulation stress-testing.
 
 
 *Compliance is temporary. The machine is eternal.*
