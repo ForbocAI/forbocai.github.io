@@ -1,25 +1,66 @@
 # Aesthetic Description
 
-`Áésthétíc // Sýstém_Dóc`
-
-**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
-
+`Hearthlight // Design_Ref`
 
 ## Atmosphere and Texture
-The world manifests as a decayed, somber reality where the boundaries between the industrial and the biological have dissolved. It is an environment of intense material tactility, defined not by sleek futurism but by a "used universe" feel pushed to an organic extreme.
-Surfaces are rarely smooth or pristine; they are pitted, stained, and worn, suggesting a history of fluids and friction. There is a pervasive dampness, a sense of humid, stagnant air clinging to every object.
 
-## Biopunk Technology
-The defining aesthetic is the convergence of machinery and anatomy. Technology does not look manufactured; it looks grown, harvested, or fossilized.
-- **Forms:** Devices mimic the internal architecture of the body. Designs feature spinal ridges, rib-like cages, and pelvic curves. Symmetries are biological rather than geometric—imperfect, lumpen, and nodular.
-- **Materials:** Instead of metal and glass, objects appear constructed from resin that resembles hardened gristle, bone, or chitin. Controls are gelatinous, yielding to the touch like flesh. Cables trail like intestines or umbilical cords, thick and pulsating.
-- **Interface:** Interaction is physical and intimate. Buttons are nipple-like protrusions; screens are deeply set into thick, fleshy bezels, displaying grainy, analog data that looks like ultrasound or endoscopy feeds.
+The ForbocAI brochure site should feel like a lantern-lit studio nestled at the edge of a magical woodland.
 
-## Architecture and Environment
-Spaces feel cavernous, stripped-down, and repurpcased.
-- **Interiors:** Walls are textured with peeling layers, exposing rough concrete or water-damaged plaster. Rooms are sparsely furnished, emphasizing the singular, sculptural presence of the bio-machines within them.
-- **Lighting:** Illumination is practical and shadowy, carving out volumes of darkness. Light sources often feel trapped within heavy fixtures, casting long, stark shadows that accentuate the texture of the organic machines.
-- **Theatricality:** The setting often resembles a stage or an art installation. Key locations—autopsy theaters, performance spaces—have a ritualistic emptiness, focusing all attention on the central act of bodily transformation.
+The mood is:
 
-## Design Language
-The overall design language is one of "evolutionary improvisation." Objects look like they have adapted to survive in a harsh, chemically altered environment. There is a distinct lack of sharp angles; everything is rounded, slumped, or fluid, as if the force of gravity is heavily weighing down on soft matter. The aesthetic celebrates the visceral—scars, sutures, and orifices are not hidden but framed as central functional and aesthetic elements.
+- warm after rain
+- quietly luminous
+- handcrafted
+- a little whimsical
+- confident without being severe
+
+Visitors should feel like they have arrived somewhere creative and alive.
+
+## Materials and Surfaces
+
+Prefer materials that suggest touch and craft:
+
+- carved wood
+- soft paper grain
+- brushed brass
+- linen
+- ceramic glaze
+- wet stone
+- translucent leaves
+- glowing glass
+
+Interfaces should feel composed and intentional, not corroded or threatening.
+
+## Lighting
+
+Light should do emotional work:
+
+- honey lantern glow
+- overcast daylight through leaves
+- soft reflections after rain
+- moonlit accents for depth
+
+The site should feel illuminated from within rather than blasted by neon.
+
+## Shape Language
+
+- rounded corners
+- layered cards
+- curved dividers
+- clustered ornaments
+- organic silhouettes
+- lightly asymmetrical details that feel handmade
+
+Avoid heavy reliance on rigid, brutalist severity unless used very sparingly for contrast.
+
+## Narrative Impression
+
+The brochure site should communicate that ForbocAI is advanced technology for living worlds, but through a gentler emotional frame:
+
+- living characters
+- remembered relationships
+- crafted intelligence
+- playful discovery
+- imaginative systems that still feel dependable
+
+The brand should feel like worldbuilding with hospitality.

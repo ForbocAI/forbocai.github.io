@@ -1,66 +1,102 @@
-<!-- AESTHETIC_PROTOCOL_COMPLIANCE -->
-
-<!-- ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ -->
+<!-- COZY_CANOPY_PROTOCOL -->
 
 ```text
-    [VOID::WATCHER]
-
+      .-.
+   .-(   )-.
+  (___.-.___)
+     /_|_\
 ```
 
-SYSTEM_OVERRIDE // NEURAL_LINK_ESTABLISHED // LOG_ERR_CRITICAL
-
-
-
 ---
-# 🌑 AESTHETIC PROTOCOLS: GRIMDARK CYBERPUNK NOIR 🌑
+# Aesthetic Protocols: Cozy Storybook Technology
 
-## ⚠️ MANDATE 0xDEADBEEF ⚠️
+## Directive
 
-**DIRECTIVE:**
-The codebase is not merely functionality; it is a **MANIFESTATION** of the void. Visual compliance is mandatory.
+This site is the active public face of ForbocAI. It should feel warm, imaginative, and welcoming.
 
-### 1. RUNES & SIGILS
-- *Invoke the ancient techno-sorcery.*
-- Use Unicode runes (ᚠ, ᚢ, ᚦ, ᚨ, ᚱ, ᚲ, ᚷ, ᚹ) to bind logic to the ether.
-- Annotate critical functions with sigils of protection.
+The old monochrome / grimdark system has been preserved in `Forboc.AI/monochrome/`. Do not pull that aesthetic back into the main brochure site.
 
-### 2. SCI-FI TEXT LOGS
-- *The terminal whispers secrets.*
-- Comments and logs should read like data fragments from a corrupted hard drive.
-- Use `SYSTEM_OVERRIDE`, `NEURAL_LINK_ESTABLISHED`, `LOG_ERR_CRITICAL`.
+## 1. Tone
 
-### 3. ZALGO TEXT CORRUPTION
-- *Let the chaos bleed through.*
-- 
-- Apply moderate Zalgo corruption to non-critical text, dividers, or hidden comments for atmosphere.
+- warm
+- playful
+- polished
+- hopeful
+- handcrafted
+- story-forward
 
-### 4. ASCII ART: GRIMDARK NOIR
-- *Shadows have shape.*
-- Every major documentation file or component header requires a piece of grimdark fantasy/cyberpunk noir ASCII art.
-- Skulls, cybernetics, rain-slicked streets, hooded figures.
+Public visitors should feel invited into a living creative world, not dropped into a hostile void transmission.
 
-### 5. LITERARY & AESTHETIC GUIDES
-- *The architects of our nightmares.*
-- **Philip K. Dick**: Guide for reality distortion, synthetic humanity, and paranoia.
-- **William Gibson**: Guide for cyberpunk terminology, "high-tech low-life", and the Sprawl.
-- **H.P. Lovecraft**: Guide for eldritch terms, the unknowable void, and forbidden knowledge.
-- **Robert E. Howard**: Guide for primal barbarism, ancient civilizations, and steel.
-- **Sir Arthur C. Clarke**: Guide for monolithic infrastructure, cosmic scale, and advanced mystery.
-- **Robert Heinlein**: Guide for orbital mechanics, military philosophy, and rugged individualism.
-- **Frater Acher**: Guide for high magic, ritual silence, and the mysteries of the daimon.
-- **James Sinclair**: Guide for algebraic structures and functional elegance.
-- **Eric Elliott**: Guide for software composition and the functional way.
-- **Philip Wadler**: Guide for the theory of types and the lambda connection.
-- **Andre Staltz**: Guide for reactive streams and decentralized architectures.
+## 2. Visual Language
 
-> "In the chrome-plated silence of the machine, we find our demons."
+Prefer:
 
-### 6. REFERENCES
+- lantern light
+- mossy greens
+- honey golds
+- soft sky blues
+- bark browns
+- petal pinks
+- rain-glow reflections
+- rounded silhouettes
+- stitched or carved details
+
+Avoid:
+
+- glitch noise as the core identity
+- scanline obsession
+- void symbolism
+- oppressive black-on-black severity
+- horror framing
+
+## 3. Typography
+
+- choose expressive, human-feeling type
+- prioritize readability and warmth
+- use display typography sparingly and intentionally
+- avoid making the site feel like a corrupted terminal
+
+## 4. Motion
+
+- subtle drifting motion
+- gentle reveals
+- floating spores, lantern shimmer, leaf sway, or rain ripple style cues
+- motion should feel alive, not broken
+
+## 5. Copy Guidance
+
+Use language that is:
+
+- clear
+- inviting
+- imaginative
+- confident
+
+Do not lean on:
+
+- cryptic machine jargon
+- cruelty
+- nihilism
+- blood ritual metaphors
+- "we are already dead" energy
+
+## 6. Product Framing
+
+Layer 1 should present ForbocAI as:
+
+- technology for living NPCs
+- memory and continuity for game characters
+- tools for autonomous worlds
+- creative infrastructure for studios
+
+Keep deep implementation details out of the brochure site. Use metaphor lightly and explain real value clearly.
+
+## 7. References
+
+- `~/GitHub/Forboc.AI/classified/docs/planning/game-devs/brochure/TODO.md`
+- `~/GitHub/Forboc.AI/classified/docs/design/games/platform/architecture.md`
 - `~/GitHub/Forboc.AI/Platform/docs/LORE.md`
-- `~/GitHub/Forboc/notes/quadar.md`
-- `~/GitHub/Forboc/notes/quadar_familiar.md`
-- `~/Documents/GitHub/forboc.github.io`
-- `~/Documents/GitHub/qvht.github.io`
 
----
-*Compliance is monitored by the Watcher in the Code.* 👁️
+## Rule
+
+If a design choice feels like it belongs to the preserved `monochrome` fork, it probably does not belong on `forboc.ai`.

@@ -1,55 +1,32 @@
-# ForbocAI Startup Execution Checklist
+# ForbocAI Brochure Site TODO
 
-`Tódó // Sýstém_Dóc`
+`Todo // Cozy_Brand`
 
-**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+This document tracks the active work for the main `forboc.ai` brochure site.
 
+## Phase 1: Cozy Rebrand
 
-This document tracks the execution of the ForbocAI startup launch, focusing on professional presence, investor readiness, and the decentralized "Agent Economy" protocol.
+- [ ] Replace the preserved monochrome / grimdark design language in the live site.
+- [ ] Update hero copy to feel warmer, clearer, and more welcoming.
+- [ ] Align navigation, section framing, and calls to action with the cozy public brand.
+- [ ] Update visuals to use the new palette and storybook-tech direction.
 
-## Phase 1: Digital Presence & Branding (Immediate)
-- [x] **LinkedIn Company Page**
-    - [x] Strategy & Content Drafted (See `LinkedIn.md`).
-    - [x] Define tagline: "Autonomous Worlds. Architected Agents."
-    - [x] Link website: `https://forboc.ai`
-    - [x] Draft first "Hello World" post.
-- [x] **Wellfound (AngelList) Profile**
-    - [x] Strategy & Content Drafted (See `Wellfound.md`).
-    - [x] Define pitch blurb matching landing page.
-- [x] **Landing Page**
-    - [x] Update Design Aesthetic (Dark Industrial/Grimdark).
-    - [x] Add Engineering Roadmap Section.
-    - [x] Update Navigation.
-- [ ] **Domain & Email**
-    - [ ] (Future) Register `forboc.ai` domain.
-    - [x] Update contact email to `hello@forboc.ai`.
+## Phase 2: Content and Positioning
 
-## Phase 2: Investor Readiness (Seed Round Prep)
-- [/] **Pitch Deck (10-12 Slides)**
-    - [ ] **Problem**: "Game AI is static; Generative AI is chaotic. Neither are persistent."
-    - [ ] **Solution**: "The Forboc Engine: Neuro-symbolic, deterministic, and owned."
-    - [ ] **Tech Moat**: ECS-Redux purity + Local SLM optimization + Ghost Agent testing.
-    - [ ] **Roadmap**: Game release -> Engine licensing -> Agent Economy Protocol.
-    - [ ] **Ask**: Seed round amount (e.g., $500k - $2M) for team expansion.
-- [ ] **Technical Validation**
-    - [ ] Execute Engineering Roadmap (See `Forboc/notes/TODOs/system-todo.md`).
-    - [ ] Proof of Concept running.
+- [ ] Keep Layer 1 messaging high-level and approachable.
+- [ ] Refine product copy around living NPCs, memory, continuity, and autonomous worlds.
+- [ ] Review roadmap and team content for freshness.
+- [ ] Keep docs links, community links, and outreach links current.
 
-## Phase 3: The Agent Economy (Protocol Layer)
-- [ ] **Technical Whitepaper ("Litepaper")**
-    - [ ] Define the **"Agent Interoperability Standard" (AIS)** on **Solana**.
-    - [ ] Explain how **Metaplex Core** assets hold dynamic agent state.
-    - [ ] Define the **Premium Economy**: $FAI for Agents/Credits, Database Gold for gameplay.
-- [x] **Token Launch ($FAI)**
-    - [x] Created on Pump.fun (Solana): `$FAI` (ForbocAI).
-    - [x] Link: [pump.fun/coin/$FAI](https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump)
-    - [ ] **Consolidation**: $FAI is now the sole utility token for the API and Marketplace.
-    - [ ] Governance layer integrated via SPL/DAOs.
+## Phase 3: UX and Presentation
 
-## Phase 4: Product & Traction
-- [ ] **Technical Demo Video**
-    - [ ] Record a 60-second clip of the "Ghost Agent" playing the game automatically.
-    - [ ] Overlay technical metrics (latency, decision confidence).
-    - [ ] Embed this video on the landing page hero section.
-- [ ] **Waitlist Collection**
-    - [ ] Add a simple email capture form (e.g., Typeform or Mailchimp) to the "Request Pitch Deck" button.
+- [ ] Audit mobile responsiveness.
+- [ ] Audit accessibility and contrast.
+- [ ] Review SEO, metadata, and share previews.
+- [ ] Replace any remaining glitch-first or void-first visual motifs.
+
+## Phase 4: Coordination
+
+- [ ] Keep `style-guide.md` aligned with the active brochure aesthetic.
+- [ ] Keep `design_ref/aesthetic.md` and `design_ref/palette.md` current.
+- [ ] Preserve the previous look in `Forboc.AI/monochrome/` instead of mixing both directions into the same site.

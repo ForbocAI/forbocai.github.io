@@ -6,11 +6,9 @@
 
 # ForbocAI
 
-`Systém_Óverview // Prótocol_Init`
+`Hearthlight_Site // Public_Brand`
 
-**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
-
-Autonomous AI for game NPCs.
+Warm, imaginative AI for living game characters.
 
 [![Documentation](https://img.shields.io/badge/docs-docs.forboc.ai-blue)](https://docs.forboc.ai)
 [![Discord](https://img.shields.io/discord/your-discord-id?label=Discord)](https://discord.gg/6hr2jHqnsG)
@@ -21,109 +19,87 @@ Autonomous AI for game NPCs.
 
 ## Overview
 
-`Córe_Módules // SDK_Init`
+This repository contains the source for the main ForbocAI marketing site at `forboc.ai`.
 
-The **ForbocAI SDK** is the **Body**—the local execution layer (memory, inference, validation). The **API** is the **Mind**—the cloud orchestration layer that decides what the NPC should do. Together they form a Split-Brain architecture that instills your NPCs with **Synthetic Intuition**.
+It is the active Layer 1 public brand and should now follow the cozy direction:
 
-Your Game Engine serves as the **World** (Physical Laws, Reality). ForbocAI serves as the **Soul** (Reasoning, Memory, Personality). It is a "Black Box" of intelligence that simply *knows* what to do.
+- warm
+- welcoming
+- imaginative
+- crafted rather than severe
+- premium without feeling cold
 
-- **Synthetic Cortex** — A local reasoning engine that mimics human intuition.
-- **Holographic Memory** — Persistent, semantic recall that feels like true déjà vu.
-- **Living Persona** — NPCs with deep, evolving psycho-social frameworks.
-- **Portable Souls** — Digital entities that can traverse the metaverse (permanent storage).
-- **Ghost Protocol** — Automated, phantom NPCs that endlessly play-test your world.
+The old monochrome / grimdark version has been preserved separately in `Forboc.AI/monochrome/`.
 
-**᛭ ᛫ ᛬ ᛫ ᛭**
+## Product Positioning
 
----
+ForbocAI helps game developers build characters that feel alive:
 
-## Core Modules
+- autonomous NPC behavior
+- memory and continuity
+- local-plus-cloud split reasoning
+- tools for richer worlds and better playtesting
 
-`Módulátion_Máp // Sýstem_Óverview`
+Public messaging should stay clear and high-level. The brochure site is not the place for deep Layer 3 implementation detail.
 
-| Module | Description |
-|--------|-------------|
-| **Synthetic Cortex** | The local reasoning engine. It *feels* and *decides*. |
-| **Living NPC** | Entities with deep psycho-social state and evolving values. |
-| **Holographic Memory** | Persistent recall. NPCs remember previous lives. |
-| **Neural Bridge** | The subconscious link between Thought (AI) and Reality (Game). |
-| **Soul** | The portable essence of an NPC (inter-world traversal). |
-| **Ghost** | A headless phantom that haunts your game for QA purposes. |
+## Brand Direction
 
----
+The active brochure site should feel like a lantern-lit invitation into a magical workshop:
 
-## The Neural Grid
+- soft atmosphere
+- warm typography
+- handcrafted visual details
+- clear storytelling
+- approachable product language
 
-`The_Líta // The_Láw`
+Avoid framing the brand as:
 
-The **ForbocAI Protocol** is the invisible lattice that binds Synthetic Souls to digital realities. It is the "Universal Translator" between the chaotic creativity of the AI Mind and the rigid physical laws of the Game World.
-
-It allows a Soul to exist in *any* world, respecting the local physics while retaining its own memories and personality.
-
----
-
-## Encapsulated Souls (NFTs)
-
-`Digítal_Essénce // Immortálity`
-
-A **Soul** is more than code—it is a crystallized lifetime of experiences.
-
-*   **Memory as Value**: Every conversation, every trade, and every battle is encoded into the Soul's Holographic Memory.
-*   **True Ownership**: You do not just own the "Skin"; you own the *Mind*. A Soul you have trained for 100 hours is fundamentally different from a fresh spawn.
-*   **Inter-World Travel**: Export your Soul to permanent storage. Summon it into new worlds. Your companion is eternal, even if the game servers die.
-
----
+- ominous
+- void-centered
+- grimdark
+- coldly cyberpunk
+- intentionally hostile or cryptic
 
 ## Local Development
 
-`Locál_Sérver // Inít_Séquence`
-
-This repository contains the source code for the **ForbocAI Website**.
-
 To run locally:
 
-1.  **Clone**:
-    ```bash
-    git clone https://github.com/forbocai/forbocai.github.io.git
-    cd forbocai.github.io
-    ```
-2.  **Run**:
-    ```bash
-    # Any static file server works
-    python3 -m http.server 8000
-    ```
-3.  **View**: [http://localhost:8000](http://localhost:8000)
+1. Clone:
+   ```bash
+   git clone https://github.com/forbocai/forbocai.github.io.git
+   cd forbocai.github.io
+   ```
+2. Run:
+   ```bash
+   python3 -m http.server 8000
+   ```
+3. View:
+   [http://localhost:8000](http://localhost:8000)
 
----
+Any static file server is fine.
 
 ## Documentation
 
-`Dócs_Máp // Référence`
+- [docs.forboc.ai](https://docs.forboc.ai) — Developer docs and SDK guidance
+- [docs.forboc.ai/npm/user-stories](https://docs.forboc.ai/npm/user-stories) — User stories
+- [docs.forboc.ai/npm/concepts](https://docs.forboc.ai/npm/concepts) — Concepts and architecture
 
-- **[Introduction](https://docs.forboc.ai)** — SDK overview and quick start
-- **[User Stories](https://docs.forboc.ai/npm/user-stories)** — BDD specifications for all features
-- **[Concepts](https://docs.forboc.ai/npm/concepts)** — Architecture and core abstractions
-- **[API Reference](https://docs.forboc.ai)** — Complete endpoint documentation
+## Related Repos
 
----
+- `forbocai.github.io/` — active public marketing site
+- `Forboc.AI/monochrome/` — preserved previous brochure fork
 
 ## Links
 
-`Éxternal_Líns // Cónnect`
-
-- **Website:** [forboc.ai](https://forboc.ai)
-- **Documentation:** [docs.forboc.ai](https://docs.forboc.ai)
-- **Discord:** [discord.gg/6hr2jHqnsG](https://discord.gg/6hr2jHqnsG)
-- **Telegram:** [t.me/forbocai](https://t.me/forbocai)
-
----
-
-**ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**
+- Website: [forboc.ai](https://forboc.ai)
+- Documentation: [docs.forboc.ai](https://docs.forboc.ai)
+- Discord: [discord.gg/6hr2jHqnsG](https://discord.gg/6hr2jHqnsG)
+- Telegram: [t.me/forbocai](https://t.me/forbocai)
 
 ## License
 
-`Légal_Státus // Ríghts`
-
 All rights reserved. © 2026 ForbocAI. See [LICENSE](./LICENSE) for full details.
-## 🌑 Aesthetic Protocols
-See [style-guide.md](./style-guide.md) for mandatory grimdark cyberpunk noir aesthetic standards (Runes, Zalgo, ASCII).
+
+## Design Rule
+
+See [style-guide.md](./style-guide.md) for the active cozy brochure-site aesthetic standards.
