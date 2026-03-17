@@ -1,7 +1,6 @@
 /**
  * Pitch Deck Component
- * A comprehensive 12-slide investor presentation deck.
- * Structure inspired by Whitepaper.js patterns.
+ * Company deck copy inside the active cozy shell.
  */
 import { selectPitchSlide } from '../domains/navigationSlice.js';
 
@@ -9,9 +8,6 @@ import { selectPitchSlide } from '../domains/navigationSlice.js';
 // F U TH A R K G W H N I J EI P Z S T B E M L NG D O
 
 const slides = [
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 1: Title / Cover
-    // ═══════════════════════════════════════════════════════════
     {
         id: 1,
         runicLabel: "ᚠᛟᚱᛒᛟᚲ",
@@ -20,16 +16,13 @@ const slides = [
         content: `
             <div class="title-slide">
                 <div class="runic-glyph">᛭ ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ ᛭</div>
-                <h3 class="tagline">Autonomous AI Agents That <span class="gradient-text">Live</span>, <span class="gradient-text">Learn</span>, and <span class="gradient-text">Transcend</span></h3>
-                <p class="subtitle">A Neuro-Symbolic Engine for Persistent, Ownable Game Intelligence</p>
+                <h3 class="tagline">Lantern-Lit Worlds With <span class="gradient-text">Living</span>, <span class="gradient-text">Ownable</span>, and <span class="gradient-text">Portable</span> Souls</h3>
+                <p class="subtitle">ForbocAI, Inc. gives studios a living character layer, Soul-ready memory, Ghost Scout testing, and the <strong>$FAI</strong> market path for worlds that keep growing after the first session.</p>
                 <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
-                <p class="deck-meta">Seed Round // January 2026</p>
+                <p class="deck-meta">Seed Round • March 2026</p>
             </div>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 2: The Problem
-    // ═══════════════════════════════════════════════════════════
     {
         id: 2,
         runicLabel: "ᚦᚱᛖᚨᛏ",
@@ -42,83 +35,74 @@ const slides = [
                     <h3>Game AI is <span class="highlight-red">Static</span></h3>
                     <ul class="problem-list">
                         <li>Rigid behavior trees and state machines</li>
-                        <li>Cannot improvise or remember beyond pre-defined variables</li>
-                        <li>Creates "ludonarrative dissonance"—worlds that look real but feel dead</li>
+                        <li>Little continuity outside authored branches</li>
+                        <li>Worlds can look beautiful and still feel emotionally flat</li>
                     </ul>
                 </div>
                 <div class="problem-column">
                     <span class="deck-runic-accent">ᚷᛖᚾ ᚨᛁ</span>
                     <h3>Generative AI is <span class="highlight-red">Chaotic</span></h3>
                     <ul class="problem-list">
-                        <li><strong>500ms+</strong> latency breaks real-time immersion</li>
-                        <li>API costs are economically unviable for persistent worlds</li>
-                        <li>Hallucinations violate game logic (inventory, quests, rules)</li>
+                        <li>Slow response times break live interaction</li>
+                        <li>Constant hosted model calls become expensive at play cadence</li>
+                        <li>Freeform outputs can violate quests, inventory, and world rules</li>
                     </ul>
                 </div>
             </div>
             <div class="runic-glyph">᛭ ᚦ ᛫ ᚱ ᛫ ᛖ ᛫ ᚨ ᛫ ᛏ ᛭</div>
-            <p class="impact-statement">Neither are persistent. Neither are alive. <strong>Neither are owned.</strong></p>
+            <p class="impact-statement">Studios need characters that feel alive <strong>and</strong> stay playable.</p>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 3: The Solution
-    // ═══════════════════════════════════════════════════════════
     {
         id: 3,
         runicLabel: "ᛊᛟᛚᚢᛏᛁᛟᚾ",
         runicSubtitle: "ᛈᚱᛟᛏᛟᚲᛟᛚ",
         title: "The Solution",
         content: `
-            <span class="deck-runic-accent">ᚠᛟᚱᛒᛟᚲ ᛈᚱᛟᛏᛟᚲᛟᛚ</span>
-            <h3>The Forboc Intelligence Protocol</h3>
-            <p class="solution-intro">A <strong>Neuro-Symbolic Intelligence Layer</strong> that integrates into any game engine, giving NPCs persistent memory and true agency via <strong>local-first SLMs</strong>.</p>
+            <span class="deck-runic-accent">ᚠᛟᚱᛒᛟᚲ ᛈᛚᚨᛏᚠᛟᚱᛗ</span>
+            <h3>The ForbocAI Layer</h3>
+            <p class="solution-intro">A <strong>world-grounded character layer</strong> for companions, neighbors, and NPCs that blends responsive character thinking, persistent memory, studio guidance, and a Soul economy ready for player ownership.</p>
             <div class="runic-glyph">᛭ ᚠ ᛫ ᚨ ᛫ ᛁ ᛭</div>
             <ul class="feature-list">
-                <li><span class="runic-bullet">ᚠ</span><strong>Local Inference (Cortex):</strong> Zero latency, zero server costs, complete privacy. Runs on native or headless.</li>
-                <li><span class="runic-bullet">ᛟ</span><strong>State-Aware Inference Layer:</strong> AI outputs intent; the layer validates against app logic. Bug-free, deterministic execution.</li>
-                <li><span class="runic-bullet">ᚱ</span><strong>RAG Memory Pipeline:</strong> NPCs observe, embed, and recall experiences. Agents that remember <em>everything</em>.</li>
-                <li><span class="runic-bullet">ᛊ</span><strong>Tokenized Souls (ERC-7007):</strong> Export agents to IPFS. Own, trade, and port them across worlds.</li>
+                <li><span class="runic-bullet">ᚠ</span><strong>Character Layer:</strong> Responsive character thinking close to play, with room for local and shared launch paths.</li>
+                <li><span class="runic-bullet">ᛟ</span><strong>World-Grounded Actions:</strong> AI proposes intent; the character layer validates it against game logic and world state.</li>
+                <li><span class="runic-bullet">ᚱ</span><strong>Memory Pipeline:</strong> Characters recall events, relationships, and prior context instead of resetting every scene.</li>
+                <li><span class="runic-bullet">ᛊ</span><strong>Soul Garden:</strong> Characters can be minted, upgraded, and carried forward through the ForbocAI Soul economy.</li>
             </ul>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 4: Tech Moat
-    // ═══════════════════════════════════════════════════════════
     {
         id: 4,
         runicLabel: "ᛗᛟᚨᛏ",
         runicSubtitle: "ᛏᛖᚲᚺᚾᛟᛚᛟᚷᛁ",
-        title: "The Tech Moat",
+        title: "The Craft Moat",
         content: `
             <p class="moat-intro">Our defensible advantages compound over time:</p>
             <div class="moat-grid">
                 <div class="moat-item">
                     <span class="moat-rune">ᛖ</span>
-                    <h4>Neuro-Symbolic Bridge</h4>
-                    <p>Separation of Logic (App State) and Vibes (LLM). The AI thinks; the system enforces rules.</p>
+                    <h4>World Grounding</h4>
+                    <p>Character expression is separated from game-state mutation, so creative behavior stays bounded by authored rules.</p>
                 </div>
                 <div class="moat-item">
                     <span class="moat-rune">ᛊ</span>
-                    <h4>Edge-First SLMs</h4>
-                    <p>Quantized models (SmolLM2) optimized for consumer hardware. No cloud dependency.</p>
+                    <h4>Responsive Character Layer</h4>
+                    <p>Compact models and careful coordination aimed at keeping characters playable, not just impressive in a demo clip.</p>
                 </div>
                 <div class="moat-item">
                     <span class="moat-rune">ᚷ</span>
-                    <h4>Ghost Agent QA</h4>
-                    <p>Headless AI agents test content at 100x speed. Catch narrative dead-ends before players do.</p>
+                    <h4>Ghost Scout Testing</h4>
+                    <p>Ghost Scouts can wander content at scale, helping teams catch narrative dead ends and systemic failures earlier.</p>
                 </div>
                 <div class="moat-item">
                     <span class="moat-rune">ᛟ</span>
-                    <h4>Forboc Protocol</h4>
-                    <p>Open interoperability standard for AI Souls. Network effects grow with every adopter.</p>
+                    <h4>Soul Economy</h4>
+                    <p>The same company stack that makes characters feel alive also gives them a portable economic surface through Souls and the $FAI market path.</p>
                 </div>
             </div>
             <div class="runic-glyph">ᛊ ᛫ ᛟ ᛫ ᚢ ᛫ ᛚ ᛫ ᛊ</div>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 5: Market Opportunity
-    // ═══════════════════════════════════════════════════════════
     {
         id: 5,
         runicLabel: "ᛗᚨᚱᚲᛖᛏ",
@@ -143,15 +127,12 @@ const slides = [
             <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
             <h4>Why Now?</h4>
             <ul class="feature-list">
-                <li><span class="runic-bullet">ᚠ</span><strong>Consumer Hardware Ready:</strong> Apple M-series, NVIDIA RTX, and Snapdragon NPUs enable local LLM inference.</li>
-                <li><span class="runic-bullet">ᚢ</span><strong>Open Model Explosion:</strong> SmolLM2, Phi-3, Llama 3.2—quantized models are production-viable.</li>
-                <li><span class="runic-bullet">ᚦ</span><strong>Narrative Demand:</strong> Players crave worlds that respond—not just react.</li>
+                <li><span class="runic-bullet">ᚠ</span><strong>Home Devices Are Ready:</strong> Apple M-series, NVIDIA RTX, and Snapdragon NPUs now make local model support practical.</li>
+                <li><span class="runic-bullet">ᚢ</span><strong>Smaller Models Are Blooming:</strong> SmolLM2, Phi-3, Llama 3.2, and related compact models are becoming production-viable.</li>
+                <li><span class="runic-bullet">ᚦ</span><strong>Narrative Demand:</strong> Players crave worlds that respond, not just react.</li>
             </ul>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 6: Business Model
-    // ═══════════════════════════════════════════════════════════
     {
         id: 6,
         runicLabel: "ᛗᛟᛞᛖᛚ",
@@ -162,29 +143,26 @@ const slides = [
             <div class="business-grid">
                 <div class="business-item">
                     <span class="business-phase">Phase 1</span>
-                    <h4>SDK Licensing</h4>
-                    <p>SaaS for developers. Per-seat subscriptions for the <strong>Forboc SDK</strong> and local inference tools.</p>
-                    <span class="revenue-type">Recurring SaaS</span>
+                    <h4>Studio Licensing</h4>
+                    <p>Per-seat access to the character layer, memory support, and Ghost Scout testing tools for teams building living worlds.</p>
+                    <span class="revenue-type">Recurring Studio Access</span>
                 </div>
                 <div class="business-item">
                     <span class="business-phase">Phase 2</span>
-                    <h4>Enterprise Integration</h4>
-                    <p>Custom implementations for large studios and platforms requiring bespoke SLM fine-tuning.</p>
-                    <span class="revenue-type">High-Touch B2B</span>
+                    <h4>Studio Integration</h4>
+                    <p>Custom implementation and self-hosted options for larger studios that need deeper character-layer control.</p>
+                    <span class="revenue-type">Custom Studio Work</span>
                 </div>
                 <div class="business-item">
                     <span class="business-phase">Phase 3</span>
-                    <h4>Protocol Fees</h4>
-                    <p>Transaction fees on Soul marketplace. Royalties on cross-world agent imports.</p>
-                    <span class="revenue-type">Network Effects</span>
+                    <h4>Soul Economy</h4>
+                    <p>$FAI market-path activity extends monetization beyond software licensing as ownership and interoperability scale.</p>
+                    <span class="revenue-type">Ecosystem Flow</span>
                 </div>
             </div>
             <div class="runic-glyph">ᚠ ᛫ ᛚ ᛫ ᛟ ᛫ ᚹ</div>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 7: Go-to-Market
-    // ═══════════════════════════════════════════════════════════
     {
         id: 7,
         runicLabel: "ᚷᛟᛏᛗ",
@@ -196,37 +174,34 @@ const slides = [
                 <li>
                     <span class="phase-rune">ᚠ</span>
                     <div class="gtm-content">
-                        <strong>Proof of Intelligence (2026)</strong>
-                        <p>Launch <strong>Interactive Tech Demo</strong>. Showcase the Protocol in a rich narrative environment ("Goetéian Chthonica" lore).</p>
+                        <strong>Proof Through Play</strong>
+                        <p>Use playable demos and reference worlds to show memory, grounded behavior, and world continuity working in practice.</p>
                     </div>
                 </li>
                 <li>
                     <span class="phase-rune">ᚢ</span>
                     <div class="gtm-content">
-                        <strong>Developer Evangelism</strong>
-                        <p>Open-source SDK components. GDC talks. Empower modders to build the first "Smart Mods".</p>
+                        <strong>Developer Adoption</strong>
+                        <p>Docs, starter kits, and builder notes that help small teams experiment quickly with living character systems.</p>
                     </div>
                 </li>
                 <li>
                     <span class="phase-rune">ᚦ</span>
                     <div class="gtm-content">
                         <strong>Studio Partnerships</strong>
-                        <p>Target mid-tier studios seeking deep AI integration for their narrative RPGs.</p>
+                        <p>Target mid-tier studios looking for stronger companions, social NPC loops, and better systemic continuity.</p>
                     </div>
                 </li>
                 <li>
                     <span class="phase-rune">ᚨ</span>
                     <div class="gtm-content">
-                        <strong>Protocol Network Effects</strong>
-                        <p>Every module/campaign on the Protocol increases Soul interoperability value.</p>
+                        <strong>Soul Garden Expansion</strong>
+                        <p>Open the public market path with Souls, wallet connections, and $FAI-powered marketplace operations.</p>
                     </div>
                 </li>
             </ol>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 8: Competition
-    // ═══════════════════════════════════════════════════════════
     {
         id: 8,
         runicLabel: "ᚲᛟᛗᛈ",
@@ -237,30 +212,30 @@ const slides = [
             <div class="competition-table">
                 <div class="comp-header">
                     <span></span>
-                    <span>Local</span>
+                    <span>Grounded</span>
                     <span>Persistent</span>
                     <span>Ownable</span>
                     <span>Interop</span>
                 </div>
                 <div class="comp-row">
-                    <span class="comp-name">Cloud LLM APIs</span>
+                    <span class="comp-name">Cloud Chat APIs</span>
                     <span class="comp-no">✗</span>
                     <span class="comp-no">✗</span>
                     <span class="comp-no">✗</span>
                     <span class="comp-no">✗</span>
                 </div>
                 <div class="comp-row">
-                    <span class="comp-name">Inworld AI</span>
-                    <span class="comp-no">✗</span>
+                    <span class="comp-name">Character Chat Layers</span>
+                    <span class="comp-partial">~</span>
                     <span class="comp-partial">~</span>
                     <span class="comp-no">✗</span>
                     <span class="comp-no">✗</span>
                 </div>
                 <div class="comp-row">
-                    <span class="comp-name">Convai</span>
-                    <span class="comp-no">✗</span>
+                    <span class="comp-name">In-House Prototypes</span>
                     <span class="comp-partial">~</span>
-                    <span class="comp-no">✗</span>
+                    <span class="comp-partial">~</span>
+                    <span class="comp-partial">~</span>
                     <span class="comp-no">✗</span>
                 </div>
                 <div class="comp-row highlight-row">
@@ -271,12 +246,9 @@ const slides = [
                     <span class="comp-yes">✓</span>
                 </div>
             </div>
-            <p class="comp-note">Competitors are cloud-dependent, non-persistent, and siloed. We are the only solution enabling <strong>local, persistent, ownable, interoperable</strong> AI agents.</p>
+            <p class="comp-note">Most alternatives stop at chat or studio-only prototypes. ForbocAI extends into <strong>world-grounded character layers, persistent companions, ownable Souls, and interoperable ecosystem value.</strong></p>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 9: Team
-    // ═══════════════════════════════════════════════════════════
     {
         id: 9,
         runicLabel: "ᛏᛖᚨᛗ",
@@ -288,19 +260,19 @@ const slides = [
                 <div class="team-member">
                     <span class="team-rune">ᚠ</span>
                     <h4>Founder / CEO</h4>
-                    <p>Full-stack engineer with enterprise AI orchestration experience. Built generative AI pipelines at scale.</p>
+                    <p>Full-stack builder with deep AI systems experience and a focus on turning living-character ideas into real shipped products.</p>
                 </div>
                 <div class="team-member hiring">
                     <span class="team-rune">ᚢ</span>
                     <h4>Co-Founder / CTO</h4>
                     <p class="hiring-badge">HIRING</p>
-                    <p>Seeking: Systems engineer with game engine or LLM inference expertise.</p>
+                    <p>Seeking: engineer with game engine depth or strong local-model expertise.</p>
                 </div>
                 <div class="team-member hiring">
                     <span class="team-rune">ᚦ</span>
                     <h4>Co-Founder / CGO</h4>
                     <p class="hiring-badge">HIRING</p>
-                    <p>Seeking: Growth lead with gaming or web3 community building experience.</p>
+                    <p>Seeking: growth lead with gaming, studio partnerships, or developer community experience.</p>
                 </div>
             </div>
             <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
@@ -315,26 +287,24 @@ const slides = [
         content: `
             <span class="deck-runic-accent">ᚨᚲᚲᛟᛗᛈᛚᛁᛊᚺᛖᛞ</span>
             <ul class="traction-list">
-                <li><span class="runic-bullet">✓</span><strong>SDK v0.3.1 Complete:</strong> All 7 core modules shipped (Cortex, Agent, Memory, Bridge, Soul, Ghost, Vector).</li>
-                <li><span class="runic-bullet">✓</span><strong>API Service Live:</strong> Haskell Servant backend deployed to Render (25+ endpoints).</li>
-                <li><span class="runic-bullet">✓</span><strong>Local SLM Runtime:</strong> node-llama-cpp integration with GGUF model support (SmolLM2-135M).</li>
-                <li><span class="runic-bullet">✓</span><strong>Vector Memory:</strong> LanceDB integration with semantic recall and temporal decay.</li>
-                <li><span class="runic-bullet">✓</span><strong>Soul Portability:</strong> IPFS export/import via Helia complete.</li>
-                <li><span class="runic-bullet">✓</span><strong>Developer Docs:</strong> Fern documentation live at docs.forboc.ai.</li>
-                <li><span class="runic-bullet">✓</span><strong>BDD Test Suite:</strong> Full Cucumber/Haskell test coverage for all API features.</li>
+                <li><span class="runic-bullet">✓</span><strong>Core Toolkit v0.3.1 Complete:</strong> All 7 core pieces are shipped across memory, Souls, Ghost scouting, and world-bridge systems.</li>
+                <li><span class="runic-bullet">✓</span><strong>Core Service Live:</strong> The live backend is deployed and serving the ForbocAI stack.</li>
+                <li><span class="runic-bullet">✓</span><strong>Local Character Thinking:</strong> Local support is working with compact GGUF-backed models.</li>
+                <li><span class="runic-bullet">✓</span><strong>Living Memory:</strong> Semantic recall and temporal memory systems are already in place.</li>
+                <li><span class="runic-bullet">✓</span><strong>$FAI Live:</strong> The public market path is live for the ForbocAI Soul economy.</li>
+                <li><span class="runic-bullet">✓</span><strong>Playable Demos:</strong> Multiple ForbocAI-owned demos prove the character layer in different world styles.</li>
+                <li><span class="runic-bullet">✓</span><strong>Developer Guides:</strong> Public docs are live at docs.forboc.ai.</li>
+                <li><span class="runic-bullet">✓</span><strong>Behavior Coverage:</strong> End-to-end checks are in place across the live service surface.</li>
             </ul>
             <div class="runic-glyph">᛭ ᚾ ᛫ ᛖ ᛫ ᚲ ᛫ ᛊ ᛫ ᛏ ᛭</div>
             <h4>Next Milestones</h4>
             <ul class="milestone-list">
-                <li><span class="runic-bullet">ᚠ</span>Q1 2026: Metaplex Core integration for Soul NFTs</li>
-                <li><span class="runic-bullet">ᚢ</span>Q2 2026: Python & Rust SDK bindings</li>
-                <li><span class="runic-bullet">ᚦ</span>Q3 2026: Enterprise Self-Hosted Option & Unity/Unreal Plugins</li>
+                <li><span class="runic-bullet">ᚠ</span>Q1 2026: Character-layer hardening and memory polish</li>
+                <li><span class="runic-bullet">ᚢ</span>Q2 2026: Python &amp; Rust bindings plus Ghost Scout testing tools</li>
+                <li><span class="runic-bullet">ᚦ</span>Q3 2026: Soul minting flow, marketplace operations, and Unity/Unreal plugins</li>
             </ul>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 11: Roadmap
-    // ═══════════════════════════════════════════════════════════
     {
         id: 11,
         runicLabel: "ᛈᚨᚦ",
@@ -345,31 +315,28 @@ const slides = [
             <ol class="roadmap-steps detailed">
                 <li>
                     <span class="phase-rune">ᚠ</span>
-                    <strong>Q1 2026:</strong> Local Inference Alpha & RAG Integration
+                    <strong>Q1 2026:</strong> Character-layer foundation with local thinking and memory continuity
                 </li>
                 <li>
                     <span class="phase-rune">ᚢ</span>
-                    <strong>Q2 2026:</strong> Neuro-Symbolic Bridge & Ghost Agent QA Tooling
+                    <strong>Q2 2026:</strong> World-grounded actions and Ghost Scout testing tools
                 </li>
                 <li>
                     <span class="phase-rune">ᚦ</span>
-                    <strong>Q3 2026:</strong> Agent Economy Launch (Wallet Integration & IPFS Exports)
+                    <strong>Q3 2026:</strong> Soul economy launch with wallet connections and marketplace operations
                 </li>
                 <li>
                     <span class="phase-rune">ᚨ</span>
-                    <strong>Q4 2026:</strong> Forboc SDK for Module & Campaign Creators
+                    <strong>Q4 2026:</strong> Broader studio field guides, Soul upgrades, and long-session continuity
                 </li>
                 <li>
                     <span class="phase-rune">ᚱ</span>
-                    <strong>2027:</strong> Protocol V1.0 & Enterprise Studio Partnerships
+                    <strong>2027:</strong> Wider studio rollout, studio partnerships, and cross-world Soul interoperability
                 </li>
             </ol>
             <div class="runic-timeline">ᚠ ─── ᚢ ─── ᚦ ─── ᚨ ─── ᚱ</div>
         `
     },
-    // ═══════════════════════════════════════════════════════════
-    // SLIDE 12: The Ask
-    // ═══════════════════════════════════════════════════════════
     {
         id: 12,
         runicLabel: "ᚨᛊᚲ",
@@ -378,14 +345,14 @@ const slides = [
         content: `
             <span class="deck-runic-accent">ᛊᛖᛖᛞ ᚱᛟᚢᚾᛞ</span>
             <h3>Seed Round</h3>
-            <p class="ask-intro">We're raising to build the founding team or ship the first production-ready version of the Forboc Protocol.</p>
+            <p class="ask-intro">We're raising to build the founding team, ship partner pilots, and harden the first production-ready version of the ForbocAI character layer and Soul economy.</p>
             <div class="use-of-funds">
                 <h4>Use of Funds</h4>
                 <ul class="funds-list">
                     <li><span class="runic-bullet">ᚠ</span><strong>40%</strong> — Engineering (Co-founder hires, contractors)</li>
-                    <li><span class="runic-bullet">ᚢ</span><strong>20%</strong> — Infrastructure (Compute, tooling, legal)</li>
-                    <li><span class="runic-bullet">ᚦ</span><strong>30%</strong> — Community & Marketing (Events, content, evangelism)</li>
-                    <li><span class="runic-bullet">ᚨ</span><strong>10%</strong> — Legal & Compliance</li>
+                    <li><span class="runic-bullet">ᚢ</span><strong>20%</strong> — Infrastructure (compute, support, legal)</li>
+                    <li><span class="runic-bullet">ᚦ</span><strong>30%</strong> — Partner development, Soul economy rollout, and market validation</li>
+                    <li><span class="runic-bullet">ᚨ</span><strong>10%</strong> — Legal &amp; Compliance</li>
                 </ul>
             </div>
             <div class="runic-glyph">ᚷ ᛫ ᛟ ᛫ ᛖ ᛫ ᛏ ᛫ ᛖ ᛫ ᛁ ᛫ ᚨ ᛫ ᚾ</div>
@@ -400,17 +367,17 @@ const slides = [
 export const PitchDeck = (state) => {
     const currentSlide = selectPitchSlide(state);
     const totalSlides = slides.length;
-    
-    // Ensure slide index is valid
+
     const safeSlideIndex = Math.max(1, Math.min(currentSlide, totalSlides));
     const slide = slides.find(s => s.id === safeSlideIndex);
-    
+
     const prevLink = safeSlideIndex > 1 ? `#pitch/${safeSlideIndex - 1}` : '#';
     const nextLink = safeSlideIndex < totalSlides ? `#pitch/${safeSlideIndex + 1}` : '#';
 
     return `
     <section class="pitch-deck">
         <div class="pitch-runic-bg">ᚠᛟᚱᛒᛟᚲ</div>
+        <div class="pitch-rune-banner" aria-hidden="true">ᚠ ᛟ ᚱ ᛒ ᛟ ᚲ ᛫ ᛋ ᛖ ᛖ ᛞ ᛫ ᛞ ᛖ ᚲ ᚲ</div>
         <div class="pitch-corner-runes">
             <span class="corner-rune tl">ᚠ</span>
             <span class="corner-rune tr">ᚢ</span>
@@ -421,26 +388,56 @@ export const PitchDeck = (state) => {
             <div class="deck-frame">
 
                 <div class="deck-header">
-                    <div class="slide-runic-label">${slide.runicLabel}</div>
-                    <div class="slide-counter">SLIDE ${safeSlideIndex.toString().padStart(2, '0')} / ${totalSlides.toString().padStart(2, '0')}</div>
-                    <div class="deck-controls">
-                        <a href="${prevLink}" class="btn-control ${safeSlideIndex === 1 ? 'disabled' : ''}">ᚠ PREV</a>
-                        <a href="${nextLink}" class="btn-control ${safeSlideIndex === totalSlides ? 'disabled' : ''}">NEXT ᚱ</a>
+                    <div class="deck-brand">
+                        <span class="deck-runes">${slide?.runicLabel || 'ᚠᛟᚱᛒᛟᚲ'}</span>
+                        <span class="deck-subtitle">${slide?.runicSubtitle || 'ᛁᚾᛏᛖᛚᛚᛁᚷᛖᚾᚲᛖ'}</span>
                     </div>
-                </div>
-                
-                <div class="slide-content">
-                    <span class="slide-runic-subtitle" data-macro-scramble data-text="${slide.runicSubtitle}">${slide.runicSubtitle}</span>
-                    <h2 class="slide-title glitch-text" data-macro-scramble data-text="${slide.title}">${slide.title}</h2>
-                    <div class="slide-body">
-                        ${slide.content}
+                    <div class="deck-slide-indicator">
+                        <span class="indicator-current">${safeSlideIndex}</span>
+                        <span class="indicator-separator">/</span>
+                        <span class="indicator-total">${totalSlides}</span>
                     </div>
                 </div>
 
-                <div class="deck-footer">
-                    <div class="footer-runes">ᚠᛟᚱᛒᛟᚲ ᛁᚾᛏᛖᛚᛚᛁᚷᛖᚾᚲᛖ</div>
-                    <div class="confidential-mark">FORBOC INTELLIGENCE // CONFIDENTIAL</div>
+                <div class="slide-container">
+                    <div class="slide-content">
+                        <h2 class="slide-title">${slide?.title || 'Slide Not Found'}</h2>
+                        <div class="slide-body">
+                            ${slide?.content || '<p>Unable to load slide content.</p>'}
+                        </div>
+                    </div>
                 </div>
+
+                <div class="deck-controls">
+                    <a href="${prevLink}" class="btn-control ${safeSlideIndex <= 1 ? 'disabled' : ''}" ${safeSlideIndex <= 1 ? 'aria-disabled="true"' : ''}>
+                        ← Back
+                    </a>
+                    <div class="slide-dots">
+                        ${slides.map(s => `
+                            <a
+                                href="#pitch/${s.id}"
+                                class="slide-dot ${s.id === safeSlideIndex ? 'active' : ''}"
+                                aria-label="Go to slide ${s.id}"
+                            ></a>
+                        `).join('')}
+                    </div>
+                    <a href="${nextLink}" class="btn-control ${safeSlideIndex >= totalSlides ? 'disabled' : ''}" ${safeSlideIndex >= totalSlides ? 'aria-disabled="true"' : ''}>
+                        Next →
+                    </a>
+                </div>
+
+                <div class="deck-footer">
+                    <div class="footer-left">
+                        <span class="footer-runes">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</span>
+                    </div>
+                    <div class="footer-center">
+                        <span class="footer-title">ForbocAI, Inc. Seed Deck</span>
+                    </div>
+                    <div class="footer-right">
+                        <span class="footer-page">${String(safeSlideIndex).padStart(2, '0')}</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

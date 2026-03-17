@@ -7,40 +7,33 @@ const client = new Client({
 
 const TARGET_GUILD_ID = process.env.GUILD_ID;
 
-const ANNOUNCEMENT = `⚡ **[NEURAL_GRID_STABILIZED]** ⚡
+const ANNOUNCEMENT = `✨ **[LANTERNS_LIT]** ✨
 
 \`\`\`
-Server_Protocol // Onboarding_Active
-\`SYSTEM_OVERRIDE // Documentation_Manifesto_v1.0\`
+Studio_Update // Welcome_Flow_Refreshed
+\`ForbocAI // living_character_systems\`
 \`\`\`
 
-⚡ **SYSTEM UPDATE** ⚡
-
-The ForbocAI Neural Grid has been recalibrated. We have established new landing protocols and automated onboarding to streamline your access to the void.
+The ForbocAI welcome flow has been refreshed.
 
 **What we're building:**
-→ NPCs with actual memory & persistent relationships
-→ Portable Souls via IPFS
-→ Ghost NPCs for automated QA at scale
+→ companions, neighbors, and NPCs with stronger memory
+→ local-first character systems that stay responsive during play
+→ tooling for testing social loops, world continuity, and living game spaces
 
-**Explore the vision:**
+**Explore the current direction:**
 📖 SDK Docs <https://Docs.Forboc.AI>
 🌐 Brochure <https://Forboc.AI>
 🎮 Demo (pending SDK implementation) <https://Platform.Forboc.AI>
-🪙 $FAI <https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump>
-🌑 **THE VOID HAS A VOICE.** 🌑
 
-**ᚠ GRID UPDATES:**
-*In the chrome-plated silence of the machine, we find our demons.*
+**Current focus:**
+- structured character memory
+- local-first runtime behavior
+- world-state-aware action validation
+- simulation tooling for studios and creators
 
-**ᚠ PROTOCOLS UNDER DEVELOPMENT:**
-- **The World's Brain:** Authoritative simulation & deterministic rule layers.
-- **Characters' Brain:** High-fidelity SLM "Minds" with local memory retrieval.
-- **Soul Persistence:** Decentralized, portable NPC identities via IPFS.
-- **Ghost NPCs:** The automated vanguard for cross-platform simulation stress-testing.
-
-
-*Compliance is temporary. The machine is eternal.*
+**ᚠ Studio Notes:**
+We are aiming for character technology that feels usable, grounded, and full of possibility rather than loud, cryptic, or overhyped.
 
 **ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ**`;
 

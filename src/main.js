@@ -24,6 +24,8 @@ const setupMobileMenu = () => {
             mobileMenuOpen = !mobileMenuOpen;
             toggle.classList.toggle('active', mobileMenuOpen);
             mobileNav.classList.toggle('active', mobileMenuOpen);
+            toggle.setAttribute('aria-expanded', String(mobileMenuOpen));
+            mobileNav.setAttribute('aria-hidden', String(!mobileMenuOpen));
         });
         
         // Close menu when a link is clicked
@@ -33,6 +35,8 @@ const setupMobileMenu = () => {
                 mobileMenuOpen = false;
                 toggle.classList.remove('active');
                 mobileNav.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+                mobileNav.setAttribute('aria-hidden', 'true');
             });
         });
     }
@@ -85,4 +89,3 @@ render();
 
 // Debugging
 window.__STORE__ = store;
-

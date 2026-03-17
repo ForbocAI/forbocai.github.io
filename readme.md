@@ -31,6 +31,8 @@ It is the active Layer 1 public brand and should now follow the cozy direction:
 
 The old monochrome / grimdark version has been preserved separately in `Forboc.AI/monochrome/`.
 
+The aesthetic should diverge from `monochrome/`, and the active site should still clearly describe the same ForbocAI company and feature surface. Use `monochrome/` as a sibling reference for scope, not as a line-by-line copy source.
+
 ## Product Positioning
 
 ForbocAI helps game developers build characters that feel alive:
@@ -38,7 +40,7 @@ ForbocAI helps game developers build characters that feel alive:
 - autonomous NPC behavior
 - memory and continuity
 - local-plus-cloud split reasoning
-- tools for richer worlds and better playtesting
+- support for richer worlds and better Ghost Scout playtesting
 
 Public messaging should stay clear and high-level. The brochure site is not the place for deep Layer 3 implementation detail.
 
@@ -59,6 +61,10 @@ Avoid framing the brand as:
 - grimdark
 - coldly cyberpunk
 - intentionally hostile or cryptic
+
+## Messaging Rule
+
+The cozy site is not a second company narrative, and it is not a game site. It should present ForbocAI, Inc. as the company behind the demos, guidance, Souls, and `$FAI` market path while keeping the public copy warm, clear, and distinct from the preserved `monochrome/` wording.
 
 ## Local Development
 

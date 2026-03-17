@@ -6,37 +6,41 @@ export const Header = (props) => {
     return `
     <header>
         <div class="container">
-            <nav>
+            <nav aria-label="Primary">
                 <div class="logo">
                      <a href="#">
                         <div class="logo-icon"></div>
-                        <span class="badge glitch-text" data-macro-scramble data-text="Forboc">Forboc</span> AI
+                        <span class="badge">ForbocAI</span>
                      </a>
                 </div>
-                <!-- Desktop Navigation -->
-                <div class="nav-links hardware-controls">
-                    <a href="#technology" class="nav-btn holo-border" data-link data-macro-scramble data-text="Technólogy">Technólogy</a>
-                    <a href="#vision" class="nav-btn holo-border" data-link data-macro-scramble data-text="Visión">Visión</a>
-                    <a href="#roadmap" class="nav-btn holo-border" data-link data-macro-scramble data-text="Róadmap">Róadmap</a>
-                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="nav-btn holo-border" target="_blank" style="color: var(--accent-color);">$FAI</a>
-                    <a href="#investors" class="nav-btn holo-border" data-link data-macro-scramble data-text="Invéstors">Invéstors</a>
+                <div class="nav-links">
+                    <a href="#technology" class="nav-btn" data-link>Hearth</a>
+                    <a href="#vision" class="nav-btn" data-link>Soul Garden</a>
+                    <a href="#roadmap" class="nav-btn" data-link>Roadmap</a>
+                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="nav-btn" target="_blank" rel="noopener noreferrer">$FAI</a>
+                    <a href="#investors" class="nav-btn" data-link>Investors</a>
                 </div>
-                <!-- Mobile Menu Toggle -->
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <button
+                    class="mobile-menu-toggle"
+                    id="mobileMenuToggle"
+                    aria-label="Toggle mobile menu"
+                    aria-controls="mobileNav"
+                    aria-expanded="false"
+                >
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <div class="status-led"></div>
+                <span class="header-runes" aria-hidden="true">ᚠ ᛟ ᚱ ᛒ ᛟ ᚲ ᛫ ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᚹ ᛟ ᚱ ᛚ ᛞ</span>
+                <div class="lantern-mote" aria-hidden="true"></div>
             </nav>
         </div>
     </header>
-    <!-- Mobile Navigation Overlay -->
-    <nav class="mobile-nav" id="mobileNav">
-        <a href="#technology" class="mobile-nav-link" data-link>Technology</a>
-        <a href="#vision" class="mobile-nav-link" data-link>Vision</a>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" aria-hidden="true">
+        <a href="#technology" class="mobile-nav-link" data-link>Hearth</a>
+        <a href="#vision" class="mobile-nav-link" data-link>Soul Garden</a>
         <a href="#roadmap" class="mobile-nav-link" data-link>Roadmap</a>
-        <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="mobile-nav-link" target="_blank" style="color: var(--accent-blue);">$FAI</a>
+        <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">$FAI</a>
         <a href="#investors" class="mobile-nav-link" data-link>Investors</a>
     </nav>
     `;
