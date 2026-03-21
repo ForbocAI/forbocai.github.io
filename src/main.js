@@ -1,12 +1,17 @@
 /**
  * Main Entry Point
  * Bootstraps the functional application.
+ * 
+ *        .-.
+ *     .-(   )-.
+ *    (___.-.___)
+ *       /_|_\
  */
 import { createStore } from './domains/store.js';
 import { rootReducer } from './domains/rootReducer.js';
 import { navigate } from './domains/navigationSlice.js';
 import { App } from './components/App.js';
-import { initDecryptionEffect } from './utils/sneakers.js';
+
 
 // Initialize Store
 const store = createStore(rootReducer, undefined);
@@ -54,8 +59,7 @@ const render = () => {
         // Setup mobile menu after render
         setupMobileMenu();
         
-        // Init Sneakers Effect
-        initDecryptionEffect();
+
 
         // Post-render: Scroll to hash if present
         const hash = window.location.hash;

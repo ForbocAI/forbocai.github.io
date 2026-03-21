@@ -259,24 +259,22 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <span class="team-rune">ᚠ</span>
-                    <h4>Founder / CEO</h4>
-                    <p>Full-stack builder with deep AI systems experience and a focus on turning living-character ideas into real shipped products.</p>
+                    <h4>Sean Dinwiddie</h4>
+                    <p><strong>Lead Developer</strong><br/>Full-stack builder with deep AI systems experience and a focus on turning living-character ideas into real shipped products.</p>
                 </div>
-                <div class="team-member hiring">
+                <div class="team-member">
                     <span class="team-rune">ᚢ</span>
-                    <h4>Co-Founder / CTO</h4>
-                    <p class="hiring-badge">HIRING</p>
-                    <p>Seeking: engineer with game engine depth or strong local-model expertise.</p>
+                    <h4>Tiernan Omalley</h4>
+                    <p><strong>Business Developer</strong><br/>Leading business development, studio partnerships, and developer community growth.</p>
                 </div>
-                <div class="team-member hiring">
+                <div class="team-member">
                     <span class="team-rune">ᚦ</span>
-                    <h4>Co-Founder / CGO</h4>
-                    <p class="hiring-badge">HIRING</p>
-                    <p>Seeking: growth lead with gaming, studio partnerships, or developer community experience.</p>
+                    <h4>Antara Bhavsar</h4>
+                    <p><strong>Software Developer</strong><br/>Engineering lead focused on game engine integration and pushing local-model inference capabilities.</p>
                 </div>
             </div>
             <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
-            <p class="team-note">We're building the founding team. Equity-first compensation (10-20%) for co-founders who believe in the vision.</p>
+            <p class="team-note">The core founding team is complete and focused on delivering the ForbocAI character layer.</p>
         `
     },
     {

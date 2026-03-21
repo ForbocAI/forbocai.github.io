@@ -13,23 +13,32 @@ export const Footer = () => {
                     <div class="logo-icon"></div>
                     <span>ForbocAI</span>
                 </div>
+                <p class="footer-tagline">Living characters. Portable Souls. Local inference.</p>
                 <div class="runic-footer">ᚠ ᛟ ᚱ ᛒ ᛟ ᚲ ᛫ ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᛋ ᛟ ᚢ ᛚ</div>
                 <p class="footer-copy">&copy; 2026 ForbocAI, Inc. All rights reserved.</p>
-                <nav class="socials" aria-label="ForbocAI links">
-                    <a href="#whitepaper">Lantern Brief</a>
-                    <a href="https://docs.forboc.ai" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>
-                    <a href="#pitch/1">Seed Deck</a>
-                    <a href="mailto:hello@forboc.ai">Contact</a>
-                    <a href="https://x.com/ForbocAi" target="_blank" rel="noopener noreferrer">Twitter/X</a>
-                    <a href="https://t.me/forbocai" target="_blank" rel="noopener noreferrer">Telegram</a>
-                    <a href="https://discord.gg/6hr2jHqnsG" target="_blank" rel="noopener noreferrer">Discord</a>
-                    <a href="https://www.instagram.com/forbocai/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://www.facebook.com/61587319754032" target="_blank" rel="noopener noreferrer">Facebook</a>
-                    <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://www.linkedin.com/company/forbocai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Wellfound</a>
-                </nav>
+                <div class="footer-links-grid">
+                    <nav class="footer-link-group" aria-label="Primary links">
+                        <span class="footer-group-label">Product</span>
+                        <a href="#whitepaper">Lantern Brief</a>
+                        <a href="https://docs.forboc.ai" target="_blank" rel="noopener noreferrer">Docs</a>
+                        <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>
+                        <a href="#pitch/1">Seed Deck</a>
+                        <a href="mailto:hello@forboc.ai">Contact</a>
+                    </nav>
+                    <nav class="footer-link-group" aria-label="Social links">
+                        <span class="footer-group-label">Social</span>
+                        <a href="https://x.com/ForbocAi" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+                        <a href="https://discord.gg/6hr2jHqnsG" target="_blank" rel="noopener noreferrer">Discord</a>
+                        <a href="https://t.me/forbocai" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    </nav>
+                    <nav class="footer-link-group" aria-label="Community links">
+                        <span class="footer-group-label">Community</span>
+                        <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/company/forbocai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Wellfound</a>
+                        <a href="https://www.instagram.com/forbocai/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </footer>
