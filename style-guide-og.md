@@ -31,3 +31,5 @@
 - **J.R.R. Tolkien**: Guide for mythopoeia, deep linguistic lore, and ancient lineages. Refer to *The Book of Lost Tales* for raw, mythological fairy elements (Tavári/wood-sprites, Oarni/water-nymphs), the *Old Forest* chapters for sheer animism (sentient ancient trees, pure earth elementals like Bombadil), and "On Fairy-Stories" to treat the realm of Faërie with absolute peril and gravity.
 - **Margaret Weis**: Guide for high fantasy adventures, elemental magic, and dragon-lore.
 - **Sláine (Celtic RPG & Comics)**: Guide for muddy, visceral Celtic mythos, tribal mysticism, and the Horned God (Cernunnos) aesthetic. Channel the chaotic energy of *warp-spasms*, the worship of the Earth Goddess (Danu), and heavy, primal earth magic. The architecture should feel as though it was forged in a Cauldron of Blood and bound by unbreakable *Geis*.
+- **Shadowrun**: Guide for high-tech low-life, corporate dystopia, and cyberpunk aesthetics.
+- **Star Wars**: Ewok-level tech, but with magic.
