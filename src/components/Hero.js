@@ -20,7 +20,7 @@ export const Hero = () => {
                 <div class="recessed-label">A warm gate into living worlds</div>
                 <span class="runic">ᚠ ᛟ ᚱ ᛒ ᛟ ᚲ ᛫ ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᛋ ᛟ ᚢ ᛚ</span>
                 <h1><span class="gradient-text">Game AI NPC</span><br>Decision Making.</h1>
-                <p>ForbocAI, Inc. helps game studios raise NPCs that remember who they have met and who they are becoming. Beneath the lantern glow sits the whole garden: ghost scouts walking the roads ahead, portable Souls, and the <strong>$FAI</strong> coin market path that lets living characters keep growing beyond a single save file or world.</p>
+                <p>ForbocAI, Inc. helps game studios raise NPCs that make organic decisions, remember who they have met, and who they are becoming. Beneath the lantern glow sits the whole garden: ghost scouts walking the roads ahead, portable Souls, and the <strong>$FAI</strong> coin market path that lets living characters keep growing beyond a single save file or world.</p>
                 <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ ᛫ ᛚ ᛫ ᚨ ᛫ ᚾ ᛫ ᛏ ᛫ ᛖ ᛫ ᚱ ᛫ ᚾ</div>
                 <div class="hero-buttons">
                     <a href="#technology" class="btn btn-primary" data-link>Explore the Platform</a>
