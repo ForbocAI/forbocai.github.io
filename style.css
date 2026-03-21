@@ -13,11 +13,11 @@
     --cozy-label-text: #5c4a3b;
     --cozy-button-dark: #263127;
     --cozy-button-light: #fff3c2;
-    --accent-blue: #7aa7b3;
-    --accent-red: #d9896d;
+    --accent-blue: #4a5d23; /* Deep Olive */
+    --accent-red: #b35a42; /* Terracotta */
     --accent-neon: #e0c38a;
     --font-heading: 'Eagle Lake', serif;
-    --font-body: 'Macondo', cursive;
+    --font-body: 'Macondo', serif;
     --font-mono: 'IBM Plex Mono', monospace;
     --max-width: 1400px;
     --header-height: 84px;
@@ -34,8 +34,8 @@
     pointer-events: none;
     z-index: 9999;
 /* Soft Organic Noise replacing Digital Filter */
-    opacity: 0.15;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.12;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.7'/%3E%3C/svg%3E");
     mix-blend-mode: multiply;
 }
 
@@ -101,7 +101,7 @@ body {
     pointer-events: none;
 }
 
-/* Base Grid Pattern - Dark Mode */
+/* Base Grid Pattern - Organic Biomorphic Topography */
 .tech-grid {
     position: absolute;
     top: 0;
@@ -109,10 +109,10 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(rgba(44, 58, 41, 0.05) 1px, transparent 1px),
-        radial-gradient(rgba(44, 58, 41, 0.05) 1px, transparent 1px);
-    background-size: 80px 80px; /* Wider dot grid, Polkadot Web3 */
-    background-position: 0 0, 40px 40px;
+        radial-gradient(circle at 50% 50%, transparent 20%, rgba(74, 93, 35, 0.04) 21%, transparent 22%),
+        radial-gradient(circle at 20% 80%, transparent 30%, rgba(179, 90, 66, 0.03) 31%, transparent 32%),
+        radial-gradient(circle at 80% 20%, transparent 40%, rgba(92, 74, 59, 0.03) 41%, transparent 42%);
+    background-size: 200px 200px;
     opacity: 0.8;
     mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
@@ -148,9 +148,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: clamp(4rem, 9vw, 8rem); /* MASSIVE SCALING */
     font-weight: 400;
-    letter-spacing: -0.05em; /* Tight tracking */
+    letter-spacing: -0.03em; /* Tight tracking for editorial feel */
     margin-bottom: 2rem;
-    line-height: 0.9;
+    line-height: 0.95;
     text-transform: none; /* Keep natural case for the editorial feel */
 }
 
@@ -249,6 +249,32 @@ a {
     text-align: left;
 }
 
+/* Ogham Script - Deep Rigid Structures */
+.ogham-pillar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Apple SD Gothic Neo", "Segoe UI Historic", var(--font-mono);
+    font-size: 2rem;
+    color: var(--text-tertiary);
+    opacity: 0.08;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -0.2em; /* Brings Ogham stems closer together to form a solid line */
+    z-index: 10;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 0 0 10px rgba(92, 74, 59, 0.2);
+}
+
+.ogham-left {
+    left: 1.5rem;
+}
+
+.ogham-right {
+    right: 1.5rem;
+    transform: translateY(-50%) rotate(180deg); /* Flip it so the stem behaves correctly */
+}
 
 /* Layout */
 .container {
@@ -400,6 +426,15 @@ footer .logo-icon {
     box-shadow: 0 0 20px rgba(224, 195, 138, 0.4); /* Warm Lantern Glow */
     border-radius: 999px; /* Softened from sharp corners */
     text-shadow: none;
+}
+
+@keyframes btn-breathe {
+    0%, 100% { box-shadow: 0 0 20px rgba(224, 195, 138, 0.4); }
+    50% { box-shadow: 0 0 35px rgba(224, 195, 138, 0.7); }
+}
+
+.btn-primary:hover {
+    animation: btn-breathe 3s ease-in-out infinite;
 }
 
 .btn-primary:active {
@@ -646,11 +681,14 @@ footer .logo-icon {
     background: rgba(0,0,0,0.05);
 }
 
+@keyframes card-breathe {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 32px rgba(44, 58, 41, 0.05); }
+    50% { transform: scale(1.02); box-shadow: 0 16px 48px rgba(74, 93, 35, 0.08); }
+}
+
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 
-        inset 0 1px 0 rgba(255,255,255,1),
-        0 20px 40px -15px rgba(0,0,0,0.1);
+    animation: card-breathe 4s ease-in-out infinite;
+    z-index: 10;
 }
 
 .card h3 {
