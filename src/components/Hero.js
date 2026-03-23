@@ -14,7 +14,7 @@ export const Hero = () => {
             <span class="diagnostic-label pos-br">Memory in bloom</span>
             
             <div class="hero-illustration-wrapper">
-                <img src="hero-lantern.png" class="hero-illustration" alt="Hand-drawn watercolor illustration of a glowing antique lantern hanging in a mossy magical forest" />
+                <img src="Lanternbough.png" class="hero-illustration" alt="Hand-drawn watercolor illustration of a glowing antique lantern hanging in a mossy magical forest" />
             </div>
             <div class="hero-content">
                 <div class="recessed-label">A warm gate into living worlds</div>
