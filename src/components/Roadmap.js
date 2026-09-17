@@ -43,7 +43,7 @@ export const Roadmap = () => {
                             <li>Ghost playtesting with coverage reports a producer can read</li>
                             <li>Soul minting end to end: gather, verify, restore</li>
                             <li>The account portal — keys, usage, and billing in one place</li>
-                            <li>SDK 1.0 and marketplace listings for Unreal and Unity storefronts</li>
+                            <li>SDK 1.0 and a Fab listing for Unreal; Unity stays an integration scaffold until it meets the same contract</li>
                         </ul>
                     </div>
                 </li>

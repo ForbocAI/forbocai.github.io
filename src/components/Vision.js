@@ -18,7 +18,7 @@ export const Vision = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛋ</span>
                 <div>
                     <h2>Souls</h2>
-                    <p class="chapter-lead">A character who has been somewhere should be able to leave with what she learned. The Soul Garden is our name for where she goes. A Soul is that character gathered up — who she is, what she remembers, who she trusts — in a form that can be carried out of your game and set down in another.</p>
+                    <p class="chapter-lead">A character who has been somewhere should be able to leave with what she learned. A Soul is that character gathered up — who she is, what she remembers, who she trusts — in a form that can be carried out of your game and set down in another.</p>
                 </div>
             </header>
 

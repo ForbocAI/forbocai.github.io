@@ -29,6 +29,9 @@ SKIPPED = {".git", "node_modules", ".dream-loop", "design_ref", "posts", "script
 # Docs that name a banned claim in order to forbid it opt out with this marker.
 ALLOW = "claims-audit:allow"
 
+# A denial immediately before a banned phrase inverts it.
+NEGATION = re.compile(r"\b(no|not|never|without|nor)\b[^.]{0,24}$", re.I)
+
 # Each rule: (name, pattern, why it is wrong, what to say instead)
 RULES = [
     (
@@ -87,6 +90,10 @@ def main() -> int:
             for name, pattern, why, instead in RULES:
                 match = pattern.search(line)
                 if not match:
+                    continue
+                # "no free tier", "never runs locally" — the phrase is being
+                # denied, which is the claim we want, not the one we forbid.
+                if NEGATION.search(line[max(0, match.start() - 24):match.start()]):
                     continue
                 hits += 1
                 rel = path.relative_to(ROOT)

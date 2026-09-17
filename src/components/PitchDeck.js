@@ -72,7 +72,7 @@ const slides = [
                 </div>
                 <div class="moat-item">
                     <h4>Ghost is a second product</h4>
-                    <p>Automated playtesting solves a pain nobody else in AI NPCs is addressing, against a budget line worth 15–25% of development.</p>
+                    <p>Automated playtesting is a real category — modl.ai is the serious name in it — but it tests systems, not social content. Ghost's testers are the same characters your players will meet, so it surfaces dead conversation loops and unreachable quest states rather than collision bugs.</p>
                 </div>
                 <div class="moat-item">
                     <h4>Souls turn retention into an asset</h4>
@@ -95,13 +95,13 @@ const slides = [
                     <span class="metric-label">AI in gaming by 2033</span>
                 </div>
                 <div class="metric-box">
-                    <span class="metric-value">$28.6B</span>
-                    <span class="metric-label">Indie game development by 2033, from $9.9B in 2024</span>
+                    <span class="metric-value">31.2%</span>
+                    <span class="metric-label">Compound annual growth in that category, 2024 to 2029</span>
                 </div>
             </div>
             <h4>Why now</h4>
             <ul class="feature-list">
-                <li><strong>Small models got good enough.</strong> A quantized 4B model, fine-tuned for one job, now answers in-character at playable latency and at a serving cost that survives a shipped title.</li>
+                <li><strong>Small models got good enough.</strong> A compact model fine-tuned for one job now answers in-character at playable latency, at a serving cost that survives a shipped title — which a frontier API at gameplay cadence does not.</li>
                 <li><strong>The cost of the alternative is visible.</strong> Frontier APIs bill $0.125–$1.00 per million tokens; self-hosting a 7B model runs roughly $4,320 a month before anyone qualifies it.</li>
                 <li><strong>Players notice.</strong> Narrative-heavy and character-driven titles are where the growth is, and a world that resets every conversation is now the thing that reads as dated.</li>
             </ul>
@@ -111,11 +111,12 @@ const slides = [
         id: 6,
         title: 'Business model',
         content: `
+            <p class="moat-intro">Every layer below is rent on one asset. The subscription is not for an SDK — an SDK is a weekend of somebody's time. It is for the model the SDK is the only route to, which is why a studio that integrates has nothing to churn to.</p>
             <div class="business-grid">
                 <div class="business-item">
                     <span class="business-phase">Layer 1</span>
                     <h4>SDK and API access</h4>
-                    <p>Paid from day one — the SDK does not function without the API. Tiered subscriptions by studio size, title count, and volume, billed through Stripe and the engine marketplaces.</p>
+                    <p>No free tier by construction: the SDK is inert without the API, so a studio's first integration call is a billed call. Tiered subscriptions by studio size, title count, and volume, billed through Stripe and the engine marketplaces.</p>
                     <span class="revenue-type">Recurring, per studio</span>
                 </div>
                 <div class="business-item">
@@ -147,13 +148,13 @@ const slides = [
                 <li>
                     <div class="gtm-content">
                         <strong>Land developers directly</strong>
-                        <p>Docs, starter kits, and the account portal, so a small team can integrate in an afternoon and be billed properly from the first call.</p>
+                        <p>Docs, starter kits, and the account portal, so a small team can get a character answering from the CLI before committing engine work, and be billed properly from the first call.</p>
                     </div>
                 </li>
                 <li>
                     <div class="gtm-content">
                         <strong>Distribute through the engines</strong>
-                        <p>Fab for Unreal and the Unity Asset Store, where studios already look for middleware and already have a payment relationship.</p>
+                        <p>Fab for Unreal first, where studios already look for middleware and already have a payment relationship. Unity follows its SDK, not the other way round.</p>
                     </div>
                 </li>
                 <li>
@@ -238,9 +239,9 @@ const slides = [
                 <li><strong>The API is live.</strong> ForbocAI's proprietary NPC model Servitor is deployed and serving behaviour on our own infrastructure against a pinned, qualified release.</li>
                 <li><strong>Persistent memory works.</strong> Semantic recall and time-aware memory are shipped, writing to a store the studio owns.</li>
                 <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
-                <li><strong>Playable demos.</strong> Several ForbocAI-owned builds prove the layer in different world styles, engines, and genres.</li>
+                <li><strong>Playable demos.</strong> Three builds we own — an Unreal project, a browser title, and a text world — each running against the live API. No third-party title has shipped on it yet; the first pilots are what this round is for.</li>
                 <li><strong>Docs are public</strong> at docs.forboc.ai, covering both SDKs.</li>
-                <li><strong>$FAI is live</strong> and trading, with liquidity actively calibrated.</li>
+                <li><strong>$FAI is live</strong> and trading. It is a utility credit for Soul operations, not a financing instrument. It gets one line here on purpose: subscriptions and usage are the business today.</li>
                 <li><strong>End-to-end verification.</strong> A micro-game harness drives the whole path — CLI to SDK to API to Servitor and back — so coverage and model quality are proved separately and neither borrows the other's green mark.</li>
             </ul>
             <h4>Next</h4>

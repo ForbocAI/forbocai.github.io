@@ -22,8 +22,7 @@ export const Investors = () => {
             </header>
 
             <div class="investors-body">
-                <p>The character layer is shipping and paid from day one. The Soul economy is the second act: the same stack that makes a character feel alive gives her somewhere to go when the credits roll.</p>
-                <p>We are talking with people who build at the seam where games, AI, and ownership meet — and who would rather back infrastructure a studio depends on than a demo that only impresses in a clip.</p>
+                <p>There is no free tier by construction — the SDK is inert without the API, so a studio's first integration call is a billed call. We have not announced a studio integration yet; the demos running against the live API are ours. The first pilots are what this round buys.</p>
             </div>
 
             <div class="hero-buttons">

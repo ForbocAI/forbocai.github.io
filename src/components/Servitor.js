@@ -50,14 +50,15 @@ export const Servitor = () => {
                     <ul class="plate-grid">
                         ${TYPES.map((t) => `<li${t === 'ISTJ' ? ' class="is-default"' : ''}>${t}</li>`).join('\n                        ')}
                     </ul>
-                    <p class="plate-note">Four preferences compose sixteen minds. Name the four letters and the whole mind arrives — <strong>ISTJ</strong> answers when you name none.</p>
+                    <p class="plate-note">We needed a control surface small enough for a writer to hold in their head and orthogonal enough that the model could not quietly fold all of it back into one agreeable voice. Four axes, sixteen combinations, four letters in the persona file. <strong>ISTJ</strong> answers when you name none.</p>
                     <dl class="plate-legend">
                         ${DICHOTOMIES.map(([term, gloss]) => `<div><dt>${term}</dt><dd>${gloss}</dd></div>`).join('\n                        ')}
                     </dl>
                 </div>
 
                 <div class="servitor-prose">
-                    <p>The type is not a voice filter over one default character. It governs how the NPC takes a situation in, what she weighs, how she commits, and how settled or open she wants the outcome. Two innkeepers of the same type are still two people, because the name, the memory and the relationships come from your game — the type shapes the thinking, not the person.</p>
+                    <p>The letters are a dial, not a diagnosis. What matters is that an ESTJ and an INFP, handed the same scene, the same memory and the same world, <strong>propose different actions</strong> — not the same action in a different accent. The type governs how the character takes a situation in, what she weighs, and how settled or open she wants the outcome.</p>
+                    <p>Two innkeepers of the same type are still two people, because the name, the memory and the relationships come from your game. The type shapes the thinking, not the person.</p>
                     <p>And because a character's type is written into the memory your studio keeps, a soul summoned once is the same soul when you call her back.</p>
                 </div>
             </div>
@@ -69,9 +70,9 @@ export const Servitor = () => {
                         <li><strong>Reads consequence.</strong> What follows from what, before anything is committed.</li>
                         <li><strong>Weighs your values, not its own.</strong> It reasons from the moral frame your world supplies — a paladin's code, a guild's rules, a corrupt institution, or no explicit frame at all.</li>
                         <li><strong>Notices when duties conflict</strong> and chooses between them for a reason you can read back.</li>
-                        <li><strong>Holds a commitment</strong> across turns instead of re-deciding from nothing every time she is spoken to.</li>
+                        <li><strong>Holds a commitment</strong> across turns instead of re-deciding from nothing every time the character is spoken to.</li>
                         <li><strong>Changes its mind on evidence</strong> — and only on evidence, not on whoever pushed hardest.</li>
-                        <li><strong>Explains the choice.</strong> The line she says and the action she proposes come out of the same thought, so they cannot contradict each other.</li>
+                        <li><strong>Explains the choice.</strong> The line the character says and the action it proposes come out of the same thought, so the two cannot contradict each other.</li>
                     </ul>
                 </section>
 
@@ -89,9 +90,11 @@ export const Servitor = () => {
 
             <section class="servitor-proof">
                 <h3>Trained, proved, and grown</h3>
-                <p>Servitor is built against the published research on persona fidelity and model alignment, and it is qualified the way that research qualifies: behaviour scored claim by claim rather than a whole answer given one flattering number; many situations rather than one rehearsed recital; and long exchanges, which is exactly where a supplied personality usually collapses.</p>
-                <p>Every release is tried on worlds it has never seen. Coverage is measured, not asserted, and a release that cannot clear its trials does not ship — the previously qualified one keeps answering until a successor earns the seat. Growth is the same discipline repeated: each measured gain becomes the floor for the next round.</p>
+                <p>Servitor is scored claim by claim, not answer by answer: every sentence it produces is checked against what the supplied persona and world actually support, so one fluent paragraph cannot carry three invented facts. Three properties decide whether a release ships — how much of a persona survives a long exchange, how often a gap in context comes back as an honest unknown instead of an invention, and how far apart the sixteen types stay when handed the same scene.</p>
+                <p>Each is held to a floor on worlds the model has never seen, and a release that misses its floor does not ship: the previously qualified one keeps answering until a successor earns the seat. Growth is that same discipline repeated, each cleared floor becoming the next round's starting bar. The method stays ours; the floors are what we hold ourselves to.</p>
             </section>
+
+            <p class="servitor-moat">We hold no player data and no world state, so nothing compounds for us in a database — that is deliberate, and it is why a studio's legal review passes. What compounds is the bench: every world a release is qualified against stays in it, and the bar it cleared becomes the floor for the next one. A competitor starts that at zero no matter whose API they rent.</p>
 
             <p class="servitor-moat">Every other layer of an NPC stack is a quarter's work for a competent team. A model that can be sixteen different minds, hold a world it was never trained on, and refuse to invent its way out of a gap is not — it is curriculum, qualification and measured growth, accumulated. That is the part of ForbocAI that compounds, and it is the part a competitor cannot reach by wiring up somebody else's API.</p>
         </div>

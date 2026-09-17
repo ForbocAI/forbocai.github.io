@@ -37,8 +37,8 @@ export const Technology = () => {
 
                 <li class="ledger-row">
                     <div class="ledger-body">
-                        <h3>Ghost walks the content first</h3>
-                        <p>Ghost characters play your build headless, over and over, through the encounters and social loops a human tester would need a fortnight to reach.</p>
+                        <h3>Ghost will walk the content first</h3>
+                        <p>Ghost characters play your build headless, over and over, through the encounters and social loops a human tester would need a fortnight to reach. Coverage reporting lands in Q4 2026 — the harness that drives it is what we qualify Servitor releases against today.</p>
                     </div>
                     <p class="ledger-fact">Dead ends, unreachable quests, and broken loops surface as coverage you can read. QA is 15–25% of a game budget before anyone ships.</p>
                 </li>
@@ -48,7 +48,7 @@ export const Technology = () => {
                         <h3>No model to package or host</h3>
                         <p>ForbocAI's proprietary NPC model Servitor runs on our infrastructure. You do not ship a runtime, qualify a GPU path, or discover on launch day that a player's laptop cannot think.</p>
                     </div>
-                    <p class="ledger-fact">One SDK call, one predictable bill. Behaviour is identical on a gaming rig and a five-year-old laptop, because it is the same machine answering.</p>
+                    <p class="ledger-fact">Behaviour is identical on a gaming rig and a five-year-old laptop, because it is the same machine answering. You are billed per validated action, so the meter moves when the world does — not every time a player types.</p>
                 </li>
             </ul>
         </div>

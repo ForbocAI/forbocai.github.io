@@ -12,6 +12,7 @@ export const Hero = () => {
             <div class="hero-copy">
                 <p class="kicker">AI infrastructure for game NPCs</p>
                 <h1>Characters who remember.</h1>
+                <p class="hero-premise">Nobody finishes a game and tells a friend about the lighting. They tell them about a person — and right now that person forgets them every time they walk back through the door.</p>
                 <p class="hero-lead">We build the character layer game studios plug in. Your NPCs carry memory between sessions, act only inside the rules you wrote, and can be carried out of one world and into the next.</p>
                 <p class="hero-engines">Shipping today for <strong>TypeScript</strong>, in Node and the browser, and for <strong>Unreal&nbsp;Engine&nbsp;5</strong>.</p>
                 <div class="hero-buttons">
