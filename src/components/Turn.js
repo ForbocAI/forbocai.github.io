@@ -46,13 +46,13 @@ export const Turn = () => {
   action: { type: 'offer_item', item: 'brothers_letter' },
   metadata: { valid: true },
 }</code></pre>
-                    <p class="turn-note">Nothing has moved yet. The action is a proposal — you run it through <code>validateBridgeThunk</code> against your own rules, and only then does the letter change hands.</p>
+                    <p class="turn-note">Nothing has moved yet. The action is a proposal — your build runs it through the validation path against your own rules, and only then does the letter change hands. Same contract from Unreal; the engine plugin is not a port of the TypeScript one.</p>
                 </div>
             </div>
 
-            <p class="turn-refusal"><strong>And when it cannot answer honestly:</strong> <code>metadata.valid</code> comes back <code>false</code> and there is no action to run. A turn that could not be qualified fails where you can catch it, rather than arriving as plausible dialogue about a letter that does not exist.</p>
+            <p class="turn-refusal"><strong>Everyone sells you a speed number. We would rather sell you the failure contract.</strong> When it cannot answer honestly, <code>metadata.valid</code> comes back <code>false</code> and there is no action to run. A turn that could not be qualified fails where you can catch it, rather than arriving as plausible dialogue about a letter that does not exist. A fast wrong answer is worse than a slow one, and it is the failure that ends up in your bug tracker under "cannot reproduce".</p>
 
-            <p class="turn-cli">The same turn from a terminal, before you write a line of engine code: <code>forbocai npc chat maeve --text "her brother"</code></p>
+            <p class="turn-cli">There is exactly one integration surface — a schema of your action types, your state shape and your rules. Everything else is this call. Try it from a terminal before you write a line of engine code: <code>forbocai npc chat maeve --text "her brother"</code></p>
         </div>
     </section>
     `;

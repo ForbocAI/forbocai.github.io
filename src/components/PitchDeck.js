@@ -218,7 +218,7 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <h4>Sean Dinwiddie</h4>
-                    <p><strong>President, lead developer</strong><br/>Today he builds the API, both SDKs, and Servitor itself. That is one person holding the whole chain, and closing that gap is the first line item in this raise.</p>
+                    <p><strong>President, lead developer</strong><br/>Today he builds the API, both SDKs and Servitor itself. That is one person holding the whole chain, and closing that gap is the first line item in this raise — which is also why every SDK is a thin client over an API you could drive with curl. Nothing about a studio's integration depends on us staying three people.</p>
                 </div>
                 <div class="team-member">
                     <h4>Tiernan Omalley</h4>
