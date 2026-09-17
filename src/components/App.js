@@ -9,6 +9,7 @@
 import { Header } from './Header.js';
 import { Footer } from './Footer.js';
 import { Hero } from './Hero.js';
+import { Mission } from './Mission.js';
 import { Technology } from './Technology.js';
 import { Servitor } from './Servitor.js';
 import { Turn } from './Turn.js';
@@ -61,6 +62,7 @@ export const App = (state) => {
         return `
             <div class="daylight">
                 ${Hero()}
+                ${Mission()}
                 ${Technology()}
                 ${Servitor()}
                 ${Turn()}

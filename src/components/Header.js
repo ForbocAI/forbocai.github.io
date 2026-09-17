@@ -3,6 +3,7 @@
  * Pure function returning the header HTML string.
  */
 const LINKS = [
+    { href: '#mission', label: 'The mission', internal: true },
     { href: '#technology', label: 'Character layer', internal: true },
     { href: '#servitor', label: 'Servitor', internal: true },
     { href: '#souls', label: 'Souls', internal: true },
