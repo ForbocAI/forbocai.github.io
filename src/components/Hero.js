@@ -11,9 +11,9 @@ export const Hero = () => {
         <div class="container hero-grid">
             <div class="hero-copy">
                 <p class="kicker">AI infrastructure for game NPCs</p>
-                <h1>Characters who remember.</h1>
+                <h1>Characters who decide.</h1>
                 <p class="hero-premise">You can still name a character from a game you finished five years ago. She could not name you the second time you walked through her door.</p>
-                <p class="hero-lead">We build the character layer game studios plug in. Your NPCs carry memory between sessions, act only inside the rules you wrote, and can be carried out of one world and into the next.</p>
+                <p class="hero-lead">We build the character layer game studios plug in. Your NPCs weigh a situation, hold a position, change their minds on evidence and act — all of it inside the rules you wrote. Memory is the floor they reason from, not the product.</p>
                 <p class="hero-engines">Shipping today for <strong>TypeScript</strong>, in Node and the browser, and for <strong>Unreal&nbsp;Engine&nbsp;5</strong>.</p>
                 <div class="hero-buttons">
                     <a href="https://docs.forboc.ai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read the developer docs</a>
@@ -30,7 +30,7 @@ export const Hero = () => {
                     </span>
                     <span class="memory-mood">Warm toward you</span>
                 </figcaption>
-                <p class="memory-title">What she is still carrying</p>
+                <p class="memory-title">What she is weighing</p>
                 <ul class="memory-lines">
                     <li style="--i:0">
                         <span class="memory-when">Three sessions back</span>
@@ -45,7 +45,7 @@ export const Hero = () => {
                         <span class="memory-what">You left ahead of the storm. She kept the lamp burning anyway.</span>
                     </li>
                 </ul>
-                <p class="memory-foot" style="--i:3">Tonight she opens with the brother, not the weather.</p>
+                <p class="memory-foot" style="--i:3">So tonight she opens with the brother, not the weather. That is the judgment, not the recall.</p>
             </figure>
         </div>
     </section>

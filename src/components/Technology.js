@@ -21,8 +21,16 @@ export const Technology = () => {
             <ul class="ledger">
                 <li class="ledger-row">
                     <div class="ledger-body">
-                        <h3>Memory that outlives the session</h3>
-                        <p>Companions and neighbours keep their habits, their loyalties, and the things you did in front of them. A returning player gets picked up mid-conversation, not reintroduced.</p>
+                        <h3>She reasons, and you can read the reasoning</h3>
+                        <p>A character weighs what a situation will cost, compares it against the values your world gave her, notices when two duties pull against each other, and commits. Push back with something new and she revises — because the evidence changed, not because you pushed.</p>
+                    </div>
+                    <p class="ledger-fact">The line she speaks and the action she proposes are projections of one thought, so the two cannot disagree. Ask for the rationale and you get the reasoning behind that same decision, not a plausible story written after it.</p>
+                </li>
+
+                <li class="ledger-row">
+                    <div class="ledger-body">
+                        <h3>Memory is the floor she reasons from</h3>
+                        <p>Companions and neighbours keep their habits, their loyalties and the things you did in front of them — and a returning player is picked up mid-conversation rather than reintroduced. Recall on its own is a database; what makes it feel like a person is what she does with it.</p>
                     </div>
                     <p class="ledger-fact">Memory is written to a store your studio owns. ForbocAI issues the instruction; your build does the writing, and can read it back without us.</p>
                 </li>

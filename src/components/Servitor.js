@@ -58,7 +58,14 @@ export const Servitor = () => {
 
                 <div class="servitor-prose">
                     <p>The letters are a dial, not a diagnosis. What matters is that an ESTJ and an INFP, handed the same scene, the same memory and the same world, <strong>propose different actions</strong> — not the same action in a different accent. The type governs how the character takes a situation in, what she weighs, and how settled or open she wants the outcome.</p>
-                    <p class="servitor-try">Do not take that on our word. Hand the same scene to an ESTJ and an INFP from the CLI and read the two proposals side by side. It takes three minutes, and it is the test we would run if we were you.</p>
+                    <figure class="divergence">
+                        <figcaption>Same innkeeper, same memory, same world. A stranger asks her to hold a sealed letter overnight.</figcaption>
+                        <dl>
+                            <div><dt>ESTJ</dt><dd>Takes it, enters it in the ledger, names a price — and mentions that the constable reads the ledger.</dd></div>
+                            <div><dt>INFP</dt><dd>Takes it for nothing, tells no one, and moves it behind the barrel when the room fills up.</dd></div>
+                        </dl>
+                        <p class="divergence-note">Two different actions, not one action in two accents. Do not take it on our word either — hand the same scene to both from the CLI and read the proposals side by side. Three minutes, and it is the test we would run if we were you.</p>
+                    </figure>
                     <p>Two innkeepers of the same type are still two people, because the name, the memory and the relationships come from your game. The type shapes the thinking, not the person.</p>
                     <p>And because a character's type is written into the memory your studio keeps, a soul summoned once is the same soul when you call her back.</p>
                 </div>

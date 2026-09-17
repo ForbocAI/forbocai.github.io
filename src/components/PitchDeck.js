@@ -8,10 +8,10 @@ import { selectPitchSlide } from '../domains/navigationSlice.js';
 const slides = [
     {
         id: 1,
-        title: 'Game characters who remember the player, stay inside the rules, and can be carried into the next world.',
+        title: 'Game characters who weigh a situation, decide inside your rules, and can be carried into the next world.',
         content: `
             <div class="title-slide">
-                <p class="subtitle">ForbocAI, Inc. sells game studios a character layer: persistent memory, validated actions, automated playtesting with Ghost, and Souls — with the <strong>$FAI</strong> utility layer underneath the Soul economy.</p>
+                <p class="subtitle">ForbocAI, Inc. sells game studios a character layer: bounded reasoning and decision-making, the memory it reasons from, validated actions, automated playtesting with Ghost, and Souls — with <strong>$FAI</strong> underneath the Soul economy.</p>
                 <p class="deck-meta">Seed round — September 2026</p>
             </div>
             <img src="Lanternbough.png" class="title-slide-art" alt="" aria-hidden="true" width="640" height="640">
@@ -50,6 +50,7 @@ const slides = [
             <ul class="feature-list">
                 <li><strong>Hosted cognition.</strong> ForbocAI's proprietary NPC model Servitor runs on our infrastructure. No runtime to package, no GPU path to qualify, identical behaviour on every player's machine.</li>
                 <li><strong>Validated actions.</strong> A character proposes; the layer checks it against your state and rules before anything moves. An unqualified answer fails loudly instead of inventing something.</li>
+                <li><strong>Reasoning you can read.</strong> Consequence weighed, supplied values compared, conflicting duties resolved, commitments held across turns, positions revised on evidence — and a rationale that comes from the same thought as the action.</li>
                 <li><strong>Memory you own.</strong> We issue the instruction to remember; your build writes it to a store your studio controls and can read without us.</li>
                 <li><strong>Ghost.</strong> Headless characters play the build repeatedly and return coverage, dead ends, and regressions before players find them.</li>
                 <li><strong>Souls.</strong> A character gathered up — identity, memory, relationships — verified and restorable in another world.</li>
