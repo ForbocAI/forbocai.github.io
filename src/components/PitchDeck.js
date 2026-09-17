@@ -48,7 +48,7 @@ const slides = [
         content: `
             <p class="solution-intro">A character layer that sits between the game and the model. The game keeps world authority. We keep the character coherent — and hand back structured intent a build can act on.</p>
             <ul class="feature-list">
-                <li><strong>Hosted cognition.</strong> Servitor runs on our infrastructure. No runtime to package, no GPU path to qualify, identical behaviour on every player's machine.</li>
+                <li><strong>Hosted cognition.</strong> ForbocAI's proprietary NPC model Servitor runs on our infrastructure. No runtime to package, no GPU path to qualify, identical behaviour on every player's machine.</li>
                 <li><strong>Validated actions.</strong> A character proposes; the layer checks it against your state and rules before anything moves. An unqualified answer fails loudly instead of inventing something.</li>
                 <li><strong>Memory you own.</strong> We issue the instruction to remember; your build writes it to a store your studio controls and can read without us.</li>
                 <li><strong>Ghost.</strong> Headless characters play the build repeatedly and return coverage, dead ends, and regressions before players find them.</li>
@@ -235,7 +235,7 @@ const slides = [
         title: 'Traction',
         content: `
             <ul class="traction-list">
-                <li><strong>The API is live.</strong> Servitor is deployed and serving behaviour on ForbocAI infrastructure against a pinned, qualified release.</li>
+                <li><strong>The API is live.</strong> ForbocAI's proprietary NPC model Servitor is deployed and serving behaviour on our own infrastructure against a pinned, qualified release.</li>
                 <li><strong>Persistent memory works.</strong> Semantic recall and time-aware memory are shipped, writing to a store the studio owns.</li>
                 <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
                 <li><strong>Playable demos.</strong> Several ForbocAI-owned builds prove the layer in different world styles, engines, and genres.</li>
