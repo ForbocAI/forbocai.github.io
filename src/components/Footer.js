@@ -19,6 +19,7 @@ export const Footer = () => {
                     <p class="footer-group-label">Product</p>
                     <a href="https://docs.forboc.ai" target="_blank" rel="noopener noreferrer">Developer docs</a>
                     <a href="#technology" data-link>The character layer</a>
+                    <a href="#servitor" data-link>Servitor</a>
                     <a href="#turn" data-link>One turn, end to end</a>
                     <a href="#whitepaper">Whitepaper</a>
                     <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>

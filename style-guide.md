@@ -104,6 +104,7 @@ cipher, and adding a legend would put back the clutter this section removed.
 | Section | Mark | Why |
 | --- | --- | --- |
 | The character layer | `ᚠ` | fehu, cattle — the herd a studio keeps |
+| Servitor | `ᛗ` | mannaz, the mind |
 | One turn, end to end | `ᛒ` | berkanan, growth from a small thing |
 | Souls | `ᛋ` | sowilo, the sun a character carries out |
 | The Lantern Path | `ᛏ` | tiwaz, an arrow — the only mark that points |

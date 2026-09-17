@@ -4,6 +4,7 @@
  */
 const LINKS = [
     { href: '#technology', label: 'Character layer', internal: true },
+    { href: '#servitor', label: 'Servitor', internal: true },
     { href: '#souls', label: 'Souls', internal: true },
     { href: '#roadmap', label: 'Roadmap', internal: true },
     { href: 'https://docs.forboc.ai', label: 'Docs', internal: false },
