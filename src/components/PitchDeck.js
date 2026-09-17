@@ -116,13 +116,13 @@ const slides = [
                 <div class="business-item">
                     <span class="business-phase">Layer 1</span>
                     <h4>SDK and API access</h4>
-                    <p>No free tier by construction: the SDK is inert without the API, so a studio's first integration call is a billed call. Tiered subscriptions by studio size, title count, and volume, billed through Stripe and the engine marketplaces.</p>
+                    <p>The SDK is inert without the API, so access is the product. Tiered plans by request volume, billed through Stripe and the engine marketplaces.</p>
                     <span class="revenue-type">Recurring, per studio</span>
                 </div>
                 <div class="business-item">
                     <span class="business-phase">Layer 2</span>
                     <h4>Usage and operations</h4>
-                    <p>Validated actions are the natural meter: every time a character wants to change the world, it passes through the check. Ghost and its dashboards are a separate per-title subscription.</p>
+                    <p>Every time a character wants to change the world it passes through the check, which is the natural place to meter. Ghost and its dashboards are a separate per-title subscription.</p>
                     <span class="revenue-type">Consumption, per title</span>
                 </div>
                 <div class="business-item">
@@ -241,7 +241,7 @@ const slides = [
                 <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
                 <li><strong>Playable demos.</strong> Three builds we own — an Unreal project, a browser title, and a text world — each running against the live API. No third-party title has shipped on it yet; the first pilots are what this round is for.</li>
                 <li><strong>Docs are public</strong> at docs.forboc.ai, covering both SDKs.</li>
-                <li><strong>$FAI is live</strong> and trading. It is a utility credit for Soul operations, not a financing instrument. It gets one line here on purpose: subscriptions and usage are the business today.</li>
+                <li><strong>$FAI is live.</strong> Its stated product uses are Soul minting, upgrades, registration, and marketplace operations. It gets one line here on purpose: subscriptions and usage are the business today.</li>
                 <li><strong>End-to-end verification.</strong> A micro-game harness drives the whole path — CLI to SDK to API to Servitor and back — so coverage and model quality are proved separately and neither borrows the other's green mark.</li>
             </ul>
             <h4>Next</h4>
@@ -268,7 +268,7 @@ const slides = [
         id: 12,
         title: 'The ask',
         content: `
-            <p class="ask-intro">We are raising a seed round to complete the founding team, ship partner pilots, and take the character layer and the Soul economy to production readiness.</p>
+            <p class="ask-intro">We are raising a seed round to qualify the SDK, API and billing path, deliver partner integrations, and bring Soul and Ghost workflows to production readiness.</p>
             <div class="use-of-funds">
                 <h4>Use of funds</h4>
                 <ul class="funds-list">

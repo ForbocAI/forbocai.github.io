@@ -22,7 +22,7 @@ export const Investors = () => {
             </header>
 
             <div class="investors-body">
-                <p>There is no free tier by construction — the SDK is inert without the API, so a studio's first integration call is a billed call. We have not announced a studio integration yet; the demos running against the live API are ours. The first pilots are what this round buys.</p>
+                <p>The SDK is inert without the API, so access is the product. We have not announced a studio integration yet; the demos running against the live API are ours. The first pilots are what this round buys.</p>
             </div>
 
             <div class="hero-buttons">

@@ -48,7 +48,7 @@ export const Technology = () => {
                         <h3>No model to package or host</h3>
                         <p>ForbocAI's proprietary NPC model Servitor runs on our infrastructure. You do not ship a runtime, qualify a GPU path, or discover on launch day that a player's laptop cannot think.</p>
                     </div>
-                    <p class="ledger-fact">Behaviour is identical on a gaming rig and a five-year-old laptop, because it is the same machine answering. You are billed per validated action, so the meter moves when the world does — not every time a player types. The trade is explicit: cognition needs a connection.</p>
+                    <p class="ledger-fact">Behaviour is identical on a gaming rig and a five-year-old laptop, because it is the same machine answering. Studios keep their game-owned world state and SDK-local memory; hosted cognition stays a ForbocAI service. The trade is explicit: cognition needs a connection.</p>
                 </li>
 
                 <li class="ledger-row">
