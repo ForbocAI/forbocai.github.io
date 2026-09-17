@@ -33,7 +33,7 @@ const RUNGS = [
         key: 'shipped',
         state: 'Shipped',
         title: 'She is someone in particular',
-        body: 'Sixteen composable minds, and a vessel with no self of its own to leak into them.',
+        body: 'Personality as configuration, not content — four orthogonal axes composing sixteen profiles of one vessel that has no self of its own to leak into them.',
     },
     {
         key: 'building',
