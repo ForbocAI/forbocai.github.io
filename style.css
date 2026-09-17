@@ -875,21 +875,50 @@ main {
     color: #4a6b46;
 }
 
-.rung-in-progress .rung-state {
+.rung-building .rung-state {
     color: var(--copper-ink);
 }
 
 /* The destination rung: the reason the other five exist. */
-.rung-ahead {
+.rung-destination {
     border-bottom: none;
 }
 
-.rung-ahead .rung-state {
+.rung-destination .rung-state {
     color: var(--day-ink);
+    font-style: italic;
 }
 
-.rung-ahead .rung-body h3 {
+.rung-destination .rung-body h3 {
     font-style: italic;
+}
+
+/* The state also rides the heading, so a skimmer cannot read an unshipped rung
+   as shipped. It is redundant on wide screens, where the rail already shows it. */
+.rung-state-inline {
+    display: none;
+}
+
+@media (max-width: 620px) {
+    .rung-state-inline {
+        display: inline;
+        font-family: var(--font-body);
+        font-size: var(--step--1);
+        font-weight: 700;
+        color: var(--day-ink-faint);
+    }
+
+    .rung-state-inline::after {
+        content: ' · ';
+    }
+
+    .rung-shipped .rung-state-inline {
+        color: #4a6b46;
+    }
+
+    .rung-building .rung-state-inline {
+        color: var(--copper-ink);
+    }
 }
 
 .rung-body h3 {
@@ -908,13 +937,31 @@ main {
     margin-top: 1.2rem;
 }
 
-.servitor-caveat {
+.servitor-caveat,
+.servitor-try {
     font-style: italic;
+}
+
+.servitor-try {
+    margin-top: 1em;
+    color: var(--copper-ink) !important;
+}
+
+/* The resolve: the page opens on one sentence and closes by returning to it. */
+.mission-resolve {
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    padding-left: calc(var(--rail) + 1.5rem);
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    line-height: 1.35;
+    color: var(--day-ink);
+    max-width: 44ch;
 }
 
 @media (max-width: 620px) {
     .mission-statement,
-    .mission-ladder {
+    .mission-ladder,
+    .mission-resolve {
         padding-left: 0;
     }
 

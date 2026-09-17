@@ -18,34 +18,40 @@
 
 const RUNGS = [
     {
+        key: 'shipped',
         state: 'Shipped',
         title: 'She remembers',
         body: 'Memory that survives the session, written to a store your studio owns.',
     },
     {
+        key: 'shipped',
         state: 'Shipped',
         title: 'She cannot break your world',
         body: 'Every action is checked against your rules before anything moves. An unqualified turn fails where you can catch it.',
     },
     {
+        key: 'shipped',
         state: 'Shipped',
         title: 'She is someone in particular',
         body: 'Sixteen composable minds, and a vessel with no self of its own to leak into them.',
     },
     {
-        state: 'In progress',
-        title: 'She tests the world before players see it',
+        key: 'building',
+        state: 'Q4 2026',
+        title: 'She walks the content before players do',
         body: 'Ghost characters walk your content headless and hand back coverage. Reporting lands Q4 2026.',
     },
     {
-        state: 'In progress',
+        key: 'building',
+        state: 'Q4 2026',
         title: 'She can be carried out',
         body: 'A Soul gathers identity, memory and relationships into something that survives leaving your game.',
     },
     {
-        state: 'Ahead',
+        key: 'destination',
+        state: 'The reason for the other five',
         title: 'She walks into a world we never built',
-        body: 'A character a player met in your game, remembered years later, in somebody else\'s.',
+        body: 'A character a player met in your game, remembered years later, in somebody else\'s. The hard part of that is rights, not encryption — no publisher lets a stranger\'s character into their IP by accident. We are building the protocol; the licensing is a conversation the industry has not had yet.',
     },
 ];
 
@@ -76,17 +82,19 @@ export const Mission = () => {
             <div class="mission-ladder">
                 <p class="mission-ladder-label">The ladder, and where we actually are on it</p>
                 <ol>
-                    ${RUNGS.map(({ state, title, body }) => `
-                    <li class="rung rung-${state.toLowerCase().replace(' ', '-')}">
+                    ${RUNGS.map(({ key, state, title, body }) => `
+                    <li class="rung rung-${key}">
                         <span class="rung-state">${state}</span>
                         <div class="rung-body">
-                            <h3>${title}</h3>
+                            <h3><span class="rung-state-inline">${state}</span>${title}</h3>
                             <p>${body}</p>
                         </div>
                     </li>`).join('')}
                 </ol>
                 <p class="mission-ladder-note">Three of those are running today and you can call them from a terminal this afternoon. Two are being built. One is the reason the other five exist. We will tell you which is which every time you ask.</p>
             </div>
+
+            <p class="mission-resolve">Characters who remember. That is the whole of the intention, and everything above is only how far along it we are.</p>
         </div>
     </section>
     `;

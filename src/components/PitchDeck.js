@@ -88,7 +88,7 @@ const slides = [
             <div class="market-metrics">
                 <div class="metric-box">
                     <span class="metric-value">$5.51B</span>
-                    <span class="metric-label">AI NPC generation by 2029, from $1.41B in 2024 — a 31.2% CAGR</span>
+                    <span class="metric-label">Forecast AI NPC generation market by 2029, from $1.41B in 2024</span>
                 </div>
                 <div class="metric-box">
                     <span class="metric-value">$12.8B</span>
@@ -102,7 +102,7 @@ const slides = [
             <h4>Why now</h4>
             <ul class="feature-list">
                 <li><strong>Small models got good enough.</strong> A compact model fine-tuned for one job now answers in-character at playable latency, at a serving cost that survives a shipped title — which a frontier API at gameplay cadence does not.</li>
-                <li><strong>The cost of the alternative is visible.</strong> Frontier APIs bill $0.125–$1.00 per million tokens; self-hosting a 7B model runs roughly $4,320 a month before anyone qualifies it.</li>
+                <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. We meter the turns that actually changed the world — the only one of the three that tracks what the game did.</li>
                 <li><strong>Players notice.</strong> Narrative-heavy and character-driven titles are where the growth is, and a world that resets every conversation is now the thing that reads as dated.</li>
             </ul>
         `
@@ -207,7 +207,7 @@ const slides = [
                     <span class="comp-yes">yes</span>
                 </div>
             </div>
-            <p class="comp-note">The comparison set is Inworld, Convai, NPCx, Charisma.ai, and AI Dungeon. Most stop at conversation. The dimensions above are the ones that decide whether a studio can ship on it: who owns cognition, who owns game state, who holds the memory, and whether a character can leave.</p>
+            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. We are not on that axis. None of them puts a validation boundary between a character's intent and the game's state, and none of them owns the model the character thinks with: they rent it, and so does anyone who copies them. Those two facts decide whether a studio can ship on it and whether the thing compounds.</p>
         `
     },
     {
@@ -217,7 +217,7 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <h4>Sean Dinwiddie</h4>
-                    <p><strong>President, lead developer</strong><br/>Full-stack engineer building the API, the SDKs, and Servitor itself — the whole chain from the model to the engine plugin.</p>
+                    <p><strong>President, lead developer</strong><br/>Today he builds the API, both SDKs, and Servitor itself. That is one person holding the whole chain, and closing that gap is the first line item in this raise.</p>
                 </div>
                 <div class="team-member">
                     <h4>Tiernan Omalley</h4>

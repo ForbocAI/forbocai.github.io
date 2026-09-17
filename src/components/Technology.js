@@ -29,8 +29,8 @@ export const Technology = () => {
 
                 <li class="ledger-row">
                     <div class="ledger-body">
-                        <h3>Nothing reaches the world unchecked</h3>
-                        <p>A character proposes; she never mutates. Every intended action is measured against your inventory, your quest state, and your rules before a single thing moves on screen.</p>
+                        <h3>Nothing reaches the world unchecked — and the check is yours</h3>
+                        <p>A character proposes; she never mutates. We hand back structured intent and never touch your state. Your build measures it against your inventory, your quest state and your rules, and only a pass moves anything on screen. The SDK ships the validation path; the rules inside it are yours, because they are the part nobody outside your studio can know.</p>
                     </div>
                     <p class="ledger-fact">An answer that cannot be validated comes back as an explicit failure you can handle — never as invented dialogue or an action you never authored.</p>
                 </li>
@@ -40,7 +40,7 @@ export const Technology = () => {
                         <h3>Ghost will walk the content first</h3>
                         <p>Ghost characters play your build headless, over and over, through the encounters and social loops a human tester would need a fortnight to reach. Coverage reporting lands in Q4 2026 — the harness that drives it is what we qualify Servitor releases against today.</p>
                     </div>
-                    <p class="ledger-fact">Dead ends, unreachable quests, and broken loops surface as coverage you can read. QA is 15–25% of a game budget before anyone ships.</p>
+                    <p class="ledger-fact">Dead ends, unreachable quests and broken loops surface as coverage you can read. Ghost drives the same entry points your automated tests already use — if your build cannot run headless today, that is the work, and we will say so before you sign anything.</p>
                 </li>
 
                 <li class="ledger-row">
@@ -48,7 +48,7 @@ export const Technology = () => {
                         <h3>No model to package or host</h3>
                         <p>ForbocAI's proprietary NPC model Servitor runs on our infrastructure. You do not ship a runtime, qualify a GPU path, or discover on launch day that a player's laptop cannot think.</p>
                     </div>
-                    <p class="ledger-fact">Behaviour is identical on a gaming rig and a five-year-old laptop, because it is the same machine answering. Studios keep their game-owned world state and SDK-local memory; hosted cognition stays a ForbocAI service. The trade is explicit: cognition needs a connection.</p>
+                    <p class="ledger-fact">A five-year-old laptop gets the same character as a gaming rig, because it is the same machine thinking — the hardware in front of the player never decides how well she thinks. Studios keep their game-owned world state and SDK-local memory; hosted cognition stays a ForbocAI service. The trade is explicit: cognition needs a connection.</p>
                 </li>
 
                 <li class="ledger-row">
@@ -56,7 +56,7 @@ export const Technology = () => {
                         <h3>It fails closed, not quietly</h3>
                         <p>Cognition runs under a deadline. A turn that cannot make it comes back as a typed invalid result that authorizes no action, no memory write and no state change — your build chooses what the character does instead.</p>
                     </div>
-                    <p class="ledger-fact">We never manufacture substitute dialogue to cover a miss. We measure complete turns through the SDK, and we will publish regional figures when a release benchmark passes — not before.</p>
+                    <p class="ledger-fact">We never manufacture substitute dialogue to cover a miss. When the connection goes, the character does not improvise and does not stall: the turn returns invalid, your build falls through to whatever you authored, and nothing is written to memory. We have no offline model today and we will not imply one — if your title has to think on a plane or pass cert on a closed network, we are not your layer this year, and we would rather say that now than in month three of an integration. We measure complete turns through the SDK and will publish regional figures when a release benchmark passes, not before.</p>
                 </li>
             </ul>
         </div>
