@@ -1,56 +1,66 @@
+import { Lantern } from './Lantern.js';
+
 /**
- * Roadmap Component — Vertical Timeline
+ * Roadmap Component
+ *
+ * A genuine sequence, so it is the one place on the page that gets a numbered
+ * spine. Status is written as shipped / in progress / next rather than as fixed
+ * quarters, so a date passing does not quietly make the page a lie.
  */
 export const Roadmap = () => {
     return `
-    <div id="roadmap" class="roadmap-section">
-        <h2>The Lantern Path</h2>
-        <p>A storybook path from the first warm spark to the full Soul garden.</p>
-        <div class="runic-glyph">ᚠ ᛫ ᛒ ᛫ ᚨ</div>
-        
-        <div class="section-divider"><span>Path Markers</span></div>
-        
-        <div class="timeline">
-            <div class="timeline-item phase-active">
-                <div class="timeline-marker phase-1"></div>
-                <div class="timeline-content card">
-                    <span class="roadmap-phase-label phase-1">Phase 1 · Q1 2026</span>
-                    <span class="runic">ᚺ ᛖ ᚨ ᚱ ᛏ ᚺ ᛫ ᛋ ᛈ ᚨ ᚱ ᚲ</span>
-                    <h3>The Hearth</h3>
-                    <ul class="roadmap-list">
-                        <li><span>✓</span> Characters who remember</li>
-                        <li><span>✓</span> Conversations and actions that stay in step</li>
-                        <li><span>›</span> The first warm spark of play that feels close at hand</li>
-                    </ul>
+    <section id="roadmap" class="chapter chapter-night">
+        ${Lantern({ className: "lantern-path", size: 0.85 })}
+        <div class="container">
+            <header class="chapter-head">
+                <span class="chapter-mark" aria-hidden="true">ᛏ</span>
+                <div>
+                    <h2>The Lantern Path</h2>
+                    <p class="chapter-lead">Our roadmap, as of September 2026 — where the work actually stands, rather than where we would like it to be.</p>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker phase-2"></div>
-                <div class="timeline-content card">
-                    <span class="roadmap-phase-label phase-2">Phase 2 · Q2 2026</span>
-                    <span class="runic">ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᛒ ᚱ ᛁ ᛞ ᚷ ᛖ</span>
-                    <h3>Lantern Bridge</h3>
-                    <ul class="roadmap-list">
-                        <li><span>›</span> World rules that still hold</li>
-                        <li><span>›</span> Characters who can wander without drifting</li>
-                        <li><span>›</span> Ghost lanterns tending the paths</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker phase-3"></div>
-                <div class="timeline-content card">
-                    <span class="roadmap-phase-label phase-3">Phase 3 · Q3 2026</span>
-                    <span class="runic">ᛋ ᛟ ᚢ ᛚ ᛫ ᚷ ᚨ ᚱ ᛞ ᛖ ᚾ</span>
-                    <h3>Soul Garden</h3>
-                    <ul class="roadmap-list">
-                        <li><span>›</span> Wallets at the garden gate</li>
-                        <li><span>›</span> Soul minting and Soul tending</li>
-                        <li><span>›</span> Market stalls powered by $FAI</li>
-                    </ul>
-                </div>
-            </div>
+            </header>
+
+            <ol class="timeline">
+                <li class="timeline-item is-done">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <div class="timeline-content">
+                        <p class="timeline-status">Shipped</p>
+                        <h3>The hearth is lit</h3>
+                        <ul class="roadmap-list">
+                            <li>Characters that hold memory across sessions, with semantic and time-aware recall</li>
+                            <li>Rule checking between a character's intent and your world state</li>
+                            <li>Servitor answering on ForbocAI infrastructure, with the TypeScript and Unreal&nbsp;Engine&nbsp;5 SDKs against it</li>
+                            <li>Developer docs at docs.forboc.ai, playable demos, and $FAI live on the market</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item is-active">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <div class="timeline-content">
+                        <p class="timeline-status">In progress, through Q4 2026</p>
+                        <h3>Ghost on the road, gate on the garden</h3>
+                        <ul class="roadmap-list">
+                            <li>Ghost playtesting with coverage reports a producer can read</li>
+                            <li>Soul minting end to end: gather, verify, restore</li>
+                            <li>The account portal — keys, usage, and billing in one place</li>
+                            <li>SDK 1.0 and marketplace listings for Unreal and Unity storefronts</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-marker" aria-hidden="true"></span>
+                    <div class="timeline-content">
+                        <p class="timeline-status">Next, 2027</p>
+                        <h3>Characters that cross the fence</h3>
+                        <ul class="roadmap-list">
+                            <li>Marketplace operations for Soul trading and NPC template licensing</li>
+                            <li>Souls carried between titles with their continuity intact</li>
+                            <li>Further engine bindings, each held to the same contract the shipped ones meet</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
         </div>
-    </div>
+    </section>
     `;
 };

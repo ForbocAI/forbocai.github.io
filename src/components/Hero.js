@@ -1,32 +1,51 @@
 /**
  * Hero Component
- * 
- *        .-.
- *     .-(   )-.
- *    (___.-.___)
- *       /_|_\
+ *
+ * The hero shows the product rather than an emblem: one Lanternbough character
+ * and the record ForbocAI keeps for her. The lines write themselves once on
+ * load and then hold still — the page's only motion that nobody asked for.
  */
 export const Hero = () => {
     return `
-    <section class="hero-container">
-        <div class="hero">
-            <span class="diagnostic-label pos-tl">Lantern at the window</span>
-            <span class="diagnostic-label pos-br">Memory in bloom</span>
-            
-            <div class="hero-illustration-wrapper">
-                <img src="Lanternbough.png" class="hero-illustration" alt="Hand-drawn watercolor illustration of a glowing antique lantern hanging in a mossy magical forest" />
-            </div>
-            <div class="hero-content">
-                <div class="recessed-label">A warm gate into living worlds</div>
-                <span class="runic">ᚠ ᛟ ᚱ ᛒ ᛟ ᚲ ᛫ ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᛋ ᛟ ᚢ ᛚ</span>
-                <h1><span class="gradient-text">Game AI NPC</span><br>Decision Making.</h1>
-                <p>ForbocAI, Inc. helps game studios raise NPCs that make organic decisions, remember who they have met, and who they are becoming. Beneath the lantern glow sits the whole garden: ghost scouts walking the roads ahead, portable Souls, and the <strong>$FAI</strong> coin market path that lets living characters keep growing beyond a single save file or world.</p>
-                <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ ᛫ ᛚ ᛫ ᚨ ᛫ ᚾ ᛫ ᛏ ᛫ ᛖ ᛫ ᚱ ᛫ ᚾ</div>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <p class="kicker">AI infrastructure for game NPCs</p>
+                <h1>Characters who remember.</h1>
+                <p class="hero-lead">We build the character layer game studios plug in. Your NPCs carry memory between sessions, act only inside the rules you wrote, and can be carried out of one world and into the next.</p>
+                <p class="hero-engines">Shipping today for <strong>TypeScript</strong>, in Node and the browser, and for <strong>Unreal&nbsp;Engine&nbsp;5</strong>.</p>
                 <div class="hero-buttons">
-                    <a href="#technology" class="btn btn-primary" data-link>Explore the Platform</a>
-                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View $FAI</a>
+                    <a href="https://docs.forboc.ai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read the developer docs</a>
+                    <a href="#turn" class="text-link" data-link>See a turn, end to end</a>
                 </div>
             </div>
+
+            <figure class="memory-panel">
+                <img src="Lanternbough.png" class="memory-panel-art" alt="" aria-hidden="true" width="640" height="640">
+                <figcaption class="memory-panel-head">
+                    <span class="memory-who">
+                        <strong>Maeve Ashlin</strong>
+                        <span class="memory-role">Innkeeper, Lanternbough</span>
+                    </span>
+                    <span class="memory-mood">Warm toward you</span>
+                </figcaption>
+                <p class="memory-title">What she is still carrying</p>
+                <ul class="memory-lines">
+                    <li style="--i:0">
+                        <span class="memory-when">Three sessions back</span>
+                        <span class="memory-what">You covered the miner's room when he came up short.</span>
+                    </li>
+                    <li style="--i:1">
+                        <span class="memory-when">Two sessions back</span>
+                        <span class="memory-what">You asked after her brother. Nobody else in town had.</span>
+                    </li>
+                    <li style="--i:2">
+                        <span class="memory-when">Last session</span>
+                        <span class="memory-what">You left ahead of the storm. She kept the lamp burning anyway.</span>
+                    </li>
+                </ul>
+                <p class="memory-foot" style="--i:3">Tonight she opens with the brother, not the weather.</p>
+            </figure>
         </div>
     </section>
     `;

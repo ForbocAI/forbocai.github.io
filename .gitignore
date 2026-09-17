@@ -4,3 +4,4 @@
 node_modules/
 scripts/discord-automation/.env
 scripts/discord-automation/package-lock.json
+.dream-loop/

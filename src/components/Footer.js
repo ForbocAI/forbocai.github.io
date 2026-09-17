@@ -1,45 +1,47 @@
 /**
  * Footer Component
- * Pure function returning the existing footer HTML string.
+ * Deepest night. Four even columns so nothing floats.
  */
 export const Footer = () => {
     return `
-    <footer>
-        <div class="footer-rune-arc footer-rune-arc-left" aria-hidden="true">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
-        <div class="footer-rune-arc footer-rune-arc-right" aria-hidden="true">ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᛋ ᛟ ᚢ ᛚ</div>
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="logo">
-                    <div class="logo-icon"></div>
-                    <span>ForbocAI</span>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="#">
+                        <span class="logo-icon" aria-hidden="true"></span>
+                        <span class="logo-word">ForbocAI</span>
+                    </a>
+                    <p class="footer-tagline">Characters who remember, act inside your rules, and can be carried onward.</p>
                 </div>
-                <p class="footer-tagline">Living characters. Portable Souls. Local inference.</p>
-                <div class="runic-footer">ᚠ ᛟ ᚱ ᛒ ᛟ ᚲ ᛫ ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᛋ ᛟ ᚢ ᛚ</div>
-                <p class="footer-copy">&copy; 2026 ForbocAI, Inc. All rights reserved.</p>
-                <div class="footer-links-grid">
-                    <nav class="footer-link-group" aria-label="Primary links">
-                        <span class="footer-group-label">Product</span>
-                        <a href="#whitepaper">Lantern Brief</a>
-                        <a href="https://docs.forboc.ai" target="_blank" rel="noopener noreferrer">Docs</a>
-                        <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>
-                        <a href="#pitch/1">Seed Deck</a>
-                        <a href="mailto:hello@forboc.ai">Contact</a>
-                    </nav>
-                    <nav class="footer-link-group" aria-label="Social links">
-                        <span class="footer-group-label">Social</span>
-                        <a href="https://x.com/ForbocAi" target="_blank" rel="noopener noreferrer">Twitter / X</a>
-                        <a href="https://discord.gg/6hr2jHqnsG" target="_blank" rel="noopener noreferrer">Discord</a>
-                        <a href="https://t.me/forbocai" target="_blank" rel="noopener noreferrer">Telegram</a>
-                    </nav>
-                    <nav class="footer-link-group" aria-label="Community links">
-                        <span class="footer-group-label">Community</span>
-                        <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://www.linkedin.com/company/forbocai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Wellfound</a>
-                        <a href="https://www.instagram.com/forbocai/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    </nav>
-                </div>
+
+                <nav class="footer-link-group" aria-label="Product">
+                    <p class="footer-group-label">Product</p>
+                    <a href="https://docs.forboc.ai" target="_blank" rel="noopener noreferrer">Developer docs</a>
+                    <a href="#technology" data-link>The character layer</a>
+                    <a href="#turn" data-link>One turn, end to end</a>
+                    <a href="#whitepaper">Whitepaper</a>
+                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>
+                </nav>
+
+                <nav class="footer-link-group" aria-label="Company">
+                    <p class="footer-group-label">Company</p>
+                    <a href="#investors" data-link>Investors</a>
+                    <a href="#pitch/1">Seed deck</a>
+                    <a href="mailto:hello@forboc.ai">hello@forboc.ai</a>
+                    <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Careers</a>
+                </nav>
+
+                <nav class="footer-link-group" aria-label="Elsewhere">
+                    <p class="footer-group-label">Elsewhere</p>
+                    <a href="https://discord.gg/6hr2jHqnsG" target="_blank" rel="noopener noreferrer">Discord</a>
+                    <a href="https://x.com/ForbocAi" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+                    <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/company/forbocai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </nav>
             </div>
+
+            <p class="footer-copy">&copy; 2026 ForbocAI, Inc. All rights reserved.</p>
         </div>
     </footer>
     `;

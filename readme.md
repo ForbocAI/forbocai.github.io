@@ -38,11 +38,14 @@ The aesthetic should diverge from `monochrome/`, and the active site should stil
 ForbocAI helps game developers build characters that feel alive:
 
 - autonomous NPC behavior
-- memory and continuity
-- local-plus-cloud split reasoning
-- support for richer worlds and better Ghost Scout playtesting
+- memory and continuity, written to a store the studio owns
+- cognition hosted on ForbocAI infrastructure, so studios ship no model runtime
+- actions validated against the studio's own rules before the world changes
+- Ghost playtesting, portable Souls, and the public `$FAI` utility layer
 
 Public messaging should stay clear and high-level. The brochure site is not the place for deep Layer 3 implementation detail.
+
+Two claims are easy to get wrong and must not reappear: inference is **not** local or on-device, and the product is **not** free — it is paid from the first API call. Check `classified/docs/business/business-model.md` before writing a capability claim.
 
 ## Brand Direction
 
@@ -83,6 +86,19 @@ To run locally:
    [http://localhost:8000](http://localhost:8000)
 
 Any static file server is fine.
+
+## Checks
+
+```bash
+python3 scripts/audit-claims.py        # fail on any capability claim the product contradicts
+python3 scripts/audit-claims.py --list # show what it looks for and why
+```
+
+Three claims were live on this site and wrong: inference described as local, a
+per-token cost of zero, and a roadmap of quarters that had already passed. The
+audit exists so the next person cannot reintroduce them by accident. A doc that
+needs to quote a banned claim in order to forbid it marks the line
+`<!-- claims-audit:allow -->`.
 
 ## Documentation
 

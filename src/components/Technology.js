@@ -1,53 +1,57 @@
 /**
  * Technology Component
- * Represents the platform overview section.
+ *
+ * Four parallel entries on one ruled spine rather than four boxes: the
+ * structure says "these are the things you plug in", which is what they are.
+ * No icons — the rail already marks the section, and four abstract line glyphs
+ * were saying less than the rules do.
  */
 export const Technology = () => {
     return `
-    <h2>What We Build</h2>
-    <p>Think of ForbocAI as a well-tended hearth for living worlds. Beneath the moss and lamplight there is serious craft, but what people feel is simple: characters who remember, rules that hold, and paths that can be walked before anyone gets lost.</p>
-    <div class="runic-glyph">ᚠ ᛫ ᚢ ᛫ ᚦ ᛫ ᚨ ᛫ ᚱ ᛫ ᚲ</div>
-    
-    <div class="section-divider"><span>The Hearth</span></div>
-    
-    <div class="grid">
-        <div class="card">
-            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 9h8M7 9l1 10h8l1-10H7z"/>
-                <path d="M10 9V5h4v4"/>
-                <path d="M12 2v3"/>
-                <circle cx="12" cy="15" r="2"/>
-            </svg>
-            <span class="runic">ᛗ ᛖ ᛗ ᛟ ᚱ ᛁ ᛫ ᚲ ᛖ ᛏ ᛏ ᛚ ᛖ</span>
-            <h3>Characters Who Remember</h3>
-            <p>Companions, neighbors, and NPCs keep their little habits, loyalties, and shared stories, so they feel like someone you have traveled with instead of a line generator you rented for a minute.</p>
-            <span class="tech-note">Local-first inference · Zero per-token cost · Persistent memory</span>
+    <section id="technology" class="chapter chapter-day">
+        <div class="container">
+            <header class="chapter-head">
+                <span class="chapter-mark" aria-hidden="true">ᚠ</span>
+                <div>
+                    <h2>The character layer</h2>
+                    <p class="chapter-lead">This is what you plug in. ForbocAI sits between your game and the model: your game keeps the world, the rules, and the save file, and we keep the character thinking coherent.</p>
+                </div>
+            </header>
+
+            <ul class="ledger">
+                <li class="ledger-row">
+                    <div class="ledger-body">
+                        <h3>Memory that outlives the session</h3>
+                        <p>Companions and neighbours keep their habits, their loyalties, and the things you did in front of them. A returning player gets picked up mid-conversation, not reintroduced.</p>
+                    </div>
+                    <p class="ledger-fact">Memory is written to a store your studio owns. ForbocAI issues the instruction; your build does the writing, and can read it back without us.</p>
+                </li>
+
+                <li class="ledger-row">
+                    <div class="ledger-body">
+                        <h3>Nothing reaches the world unchecked</h3>
+                        <p>A character proposes; she never mutates. Every intended action is measured against your inventory, your quest state, and your rules before a single thing moves on screen.</p>
+                    </div>
+                    <p class="ledger-fact">An answer that cannot be validated comes back as an explicit failure you can handle — never as invented dialogue or an action you never authored.</p>
+                </li>
+
+                <li class="ledger-row">
+                    <div class="ledger-body">
+                        <h3>Ghost walks the content first</h3>
+                        <p>Ghost characters play your build headless, over and over, through the encounters and social loops a human tester would need a fortnight to reach.</p>
+                    </div>
+                    <p class="ledger-fact">Dead ends, unreachable quests, and broken loops surface as coverage you can read. QA is 15–25% of a game budget before anyone ships.</p>
+                </li>
+
+                <li class="ledger-row">
+                    <div class="ledger-body">
+                        <h3>No model to package or host</h3>
+                        <p>Servitor, the model behind ForbocAI characters, runs on our infrastructure. You do not ship a runtime, qualify a GPU path, or discover on launch day that a player's laptop cannot think.</p>
+                    </div>
+                    <p class="ledger-fact">One SDK call, one predictable bill. Behaviour is identical on a gaming rig and a five-year-old laptop, because it is the same machine answering.</p>
+                </li>
+            </ul>
         </div>
-        <div class="card">
-            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 16c4-4 12-4 16 0"/>
-                <path d="M4 16v4"/>
-                <path d="M20 16v4"/>
-                <path d="M9 13v7"/>
-                <path d="M15 13v7"/>
-            </svg>
-            <span class="runic">ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᚱ ᚢ ᛚ ᛖ ᛋ</span>
-            <h3>Rules That Still Hold</h3>
-            <p>ForbocAI gives characters room to surprise you without letting them tumble through the floorboards. The world stays authored, playable, and coherent even when the people inside it feel alive.</p>
-            <span class="tech-note">Neuro-symbolic validation · No hallucinated actions · Game-agnostic protocol</span>
-        </div>
-        <div class="card">
-            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 4a5 5 0 0 0-5 5v9l2-2 2 2 2-2 2 2 2-2V9a5 5 0 0 0-5-5z"/>
-                <path d="M9 10h.01"/>
-                <path d="M15 10h.01"/>
-            </svg>
-            <span class="runic">ᚷ ᚺ ᛟ ᛋ ᛏ ᛫ ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛋ</span>
-            <h3>Ghost Scouts On The Path</h3>
-            <p>Our ghost scouts wander ahead with a lantern in hand, checking paths, quests, and social loops before the village opens its gates to players.</p>
-            <span class="tech-note">Headless QA · Automated playtesting · Coverage metrics</span>
-        </div>
-    </div>
+    </section>
     `;
 };
-

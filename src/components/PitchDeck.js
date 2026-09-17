@@ -1,202 +1,165 @@
 /**
  * Pitch Deck Component
- * Company deck copy inside the active cozy shell.
+ * Company deck. Every figure here traces to the internal market research;
+ * nothing claims to be shipped that is not.
  */
 import { selectPitchSlide } from '../domains/navigationSlice.js';
-
-// Runic alphabet reference: ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ
-// F U TH A R K G W H N I J EI P Z S T B E M L NG D O
 
 const slides = [
     {
         id: 1,
-        runicLabel: "ᚠᛟᚱᛒᛟᚲ",
-        runicSubtitle: "ᛁᚾᛏᛖᛚᛚᛁᚷᛖᚾᚲᛖ",
-        title: "ForbocAI",
+        title: 'Game characters who remember the player, stay inside the rules, and can be carried into the next world.',
         content: `
             <div class="title-slide">
-                <div class="runic-glyph">᛭ ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ ᛭</div>
-                <h3 class="tagline">Lantern-Lit Worlds With <span class="gradient-text">Living</span>, <span class="gradient-text">Ownable</span>, and <span class="gradient-text">Portable</span> Souls</h3>
-                <p class="subtitle">ForbocAI, Inc. gives studios a living character layer, Soul-ready memory, Ghost Scout testing, and the <strong>$FAI</strong> market path for worlds that keep growing after the first session.</p>
-                <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
-                <p class="deck-meta">Seed Round • March 2026</p>
+                <p class="subtitle">ForbocAI, Inc. sells game studios a character layer: persistent memory, validated actions, automated playtesting with Ghost, and Souls — with the <strong>$FAI</strong> utility layer underneath the Soul economy.</p>
+                <p class="deck-meta">Seed round — September 2026</p>
             </div>
+            <img src="Lanternbough.png" class="title-slide-art" alt="" aria-hidden="true" width="640" height="640">
         `
     },
     {
         id: 2,
-        runicLabel: "ᚦᚱᛖᚨᛏ",
-        runicSubtitle: "ᛊᛏᚨᚷᚾᚨᛏᛁᛟᚾ",
-        title: "The Problem",
+        title: 'The problem',
         content: `
             <div class="problem-grid">
                 <div class="problem-column">
-                    <span class="deck-runic-accent">ᚷᚨᛗᛖ ᚨᛁ</span>
-                    <h3>Game AI is <span class="highlight-red">Static</span></h3>
+                    <h3>Scripted AI is finite</h3>
                     <ul class="problem-list">
-                        <li>Rigid behavior trees and state machines</li>
-                        <li>Little continuity outside authored branches</li>
-                        <li>Worlds can look beautiful and still feel emotionally flat</li>
+                        <li>Behaviour trees and state machines a player exhausts in an afternoon</li>
+                        <li>Nothing a character learns in hour three reaches hour forty</li>
+                        <li>Worlds that look extraordinary and still feel unpopulated</li>
                     </ul>
                 </div>
                 <div class="problem-column">
-                    <span class="deck-runic-accent">ᚷᛖᚾ ᚨᛁ</span>
-                    <h3>Generative AI is <span class="highlight-red">Chaotic</span></h3>
+                    <h3>Generative AI is ungoverned</h3>
                     <ul class="problem-list">
-                        <li>Slow response times break live interaction</li>
-                        <li>Constant hosted model calls become expensive at play cadence</li>
-                        <li>Freeform outputs can violate quests, inventory, and world rules</li>
+                        <li>Chat-window latency is a broken beat in live play</li>
+                        <li>Per-token billing at gameplay cadence does not survive a real player count</li>
+                        <li>A model that was not told about your inventory will give away an item the player never had</li>
                     </ul>
                 </div>
             </div>
-            <div class="runic-glyph">᛭ ᚦ ᛫ ᚱ ᛫ ᛖ ᛫ ᚨ ᛫ ᛏ ᛭</div>
-            <p class="impact-statement">Studios need characters that feel alive <strong>and</strong> stay playable.</p>
+            <p class="impact-statement">Neither is a model-quality problem. Both are architecture problems.</p>
         `
     },
     {
         id: 3,
-        runicLabel: "ᛊᛟᛚᚢᛏᛁᛟᚾ",
-        runicSubtitle: "ᛈᚱᛟᛏᛟᚲᛟᛚ",
-        title: "The Solution",
+        title: 'What we sell',
         content: `
-            <span class="deck-runic-accent">ᚠᛟᚱᛒᛟᚲ ᛈᛚᚨᛏᚠᛟᚱᛗ</span>
-            <h3>The ForbocAI Layer</h3>
-            <p class="solution-intro">A <strong>world-grounded character layer</strong> for companions, neighbors, and NPCs that blends responsive character thinking, persistent memory, studio guidance, and a Soul economy ready for player ownership.</p>
-            <div class="runic-glyph">᛭ ᚠ ᛫ ᚨ ᛫ ᛁ ᛭</div>
+            <p class="solution-intro">A character layer that sits between the game and the model. The game keeps world authority. We keep the character coherent — and hand back structured intent a build can act on.</p>
             <ul class="feature-list">
-                <li><span class="runic-bullet">ᚠ</span><strong>Character Layer:</strong> Responsive character thinking close to play, with room for local and shared launch paths.</li>
-                <li><span class="runic-bullet">ᛟ</span><strong>World-Grounded Actions:</strong> AI proposes intent; the character layer validates it against game logic and world state.</li>
-                <li><span class="runic-bullet">ᚱ</span><strong>Memory Pipeline:</strong> Characters recall events, relationships, and prior context instead of resetting every scene.</li>
-                <li><span class="runic-bullet">ᛊ</span><strong>Soul Garden:</strong> Characters can be minted, upgraded, and carried forward through the ForbocAI Soul economy.</li>
+                <li><strong>Hosted cognition.</strong> Servitor runs on our infrastructure. No runtime to package, no GPU path to qualify, identical behaviour on every player's machine.</li>
+                <li><strong>Validated actions.</strong> A character proposes; the layer checks it against your state and rules before anything moves. An unqualified answer fails loudly instead of inventing something.</li>
+                <li><strong>Memory you own.</strong> We issue the instruction to remember; your build writes it to a store your studio controls and can read without us.</li>
+                <li><strong>Ghost.</strong> Headless characters play the build repeatedly and return coverage, dead ends, and regressions before players find them.</li>
+                <li><strong>Souls.</strong> A character gathered up — identity, memory, relationships — verified and restorable in another world.</li>
             </ul>
         `
     },
     {
         id: 4,
-        runicLabel: "ᛗᛟᚨᛏ",
-        runicSubtitle: "ᛏᛖᚲᚺᚾᛟᛚᛟᚷᛁ",
-        title: "The Craft Moat",
+        title: 'Why it holds',
         content: `
-            <p class="moat-intro">Our defensible advantages compound over time:</p>
+            <p class="moat-intro">Four advantages that compound rather than expire:</p>
             <div class="moat-grid">
                 <div class="moat-item">
-                    <span class="moat-rune">ᛖ</span>
-                    <h4>World Grounding</h4>
-                    <p>Character expression is separated from game-state mutation, so creative behavior stays bounded by authored rules.</p>
+                    <h4>World authority stays with the studio</h4>
+                    <p>Character expression is structurally separated from game-state mutation. Creative behaviour is bounded by rules the studio wrote, not by prompt discipline.</p>
                 </div>
                 <div class="moat-item">
-                    <span class="moat-rune">ᛊ</span>
-                    <h4>Responsive Character Layer</h4>
-                    <p>Compact models and careful coordination aimed at keeping characters playable, not just impressive in a demo clip.</p>
+                    <h4>A game-agnostic protocol</h4>
+                    <p>Games supply state schemas, action types, and validation rules. We import none of their mechanics. The same boundary serves an RPG, a life-sim, and a roguelike.</p>
                 </div>
                 <div class="moat-item">
-                    <span class="moat-rune">ᚷ</span>
-                    <h4>Ghost Scout Testing</h4>
-                    <p>Ghost Scouts can wander content at scale, helping teams catch narrative dead ends and systemic failures earlier.</p>
+                    <h4>Ghost is a second product</h4>
+                    <p>Automated playtesting solves a pain nobody else in AI NPCs is addressing, against a budget line worth 15–25% of development.</p>
                 </div>
                 <div class="moat-item">
-                    <span class="moat-rune">ᛟ</span>
-                    <h4>Soul Economy</h4>
-                    <p>The same company stack that makes characters feel alive also gives them a portable economic surface through Souls and the $FAI market path.</p>
+                    <h4>Souls turn retention into an asset</h4>
+                    <p>The same stack that makes a character feel alive gives her a portable economic surface — and gives us a revenue line beyond licensing.</p>
                 </div>
             </div>
-            <div class="runic-glyph">ᛊ ᛫ ᛟ ᛫ ᚢ ᛫ ᛚ ᛫ ᛊ</div>
         `
     },
     {
         id: 5,
-        runicLabel: "ᛗᚨᚱᚲᛖᛏ",
-        runicSubtitle: "ᛟᛈᛈᛟᚱᛏᚢᚾᛁᛏᛁ",
-        title: "Market Opportunity",
+        title: 'Market',
         content: `
-            <span class="deck-runic-accent">ᛏᚨᛗ</span>
             <div class="market-metrics">
                 <div class="metric-box">
-                    <span class="metric-value">$220B+</span>
-                    <span class="metric-label">Global Gaming Market (2025)</span>
+                    <span class="metric-value">$5.51B</span>
+                    <span class="metric-label">AI NPC generation by 2029, from $1.41B in 2024 — a 31.2% CAGR</span>
                 </div>
                 <div class="metric-box">
-                    <span class="metric-value">$62B</span>
-                    <span class="metric-label">AI in Gaming by 2032</span>
+                    <span class="metric-value">$12.8B</span>
+                    <span class="metric-label">AI in gaming by 2033</span>
                 </div>
                 <div class="metric-box">
-                    <span class="metric-value">3.4B</span>
-                    <span class="metric-label">Gamers Worldwide</span>
+                    <span class="metric-value">$28.6B</span>
+                    <span class="metric-label">Indie game development by 2033, from $9.9B in 2024</span>
                 </div>
             </div>
-            <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
-            <h4>Why Now?</h4>
+            <h4>Why now</h4>
             <ul class="feature-list">
-                <li><span class="runic-bullet">ᚠ</span><strong>Home Devices Are Ready:</strong> Apple M-series, NVIDIA RTX, and Snapdragon NPUs now make local model support practical.</li>
-                <li><span class="runic-bullet">ᚢ</span><strong>Smaller Models Are Blooming:</strong> SmolLM2, Phi-3, Llama 3.2, and related compact models are becoming production-viable.</li>
-                <li><span class="runic-bullet">ᚦ</span><strong>Narrative Demand:</strong> Players crave worlds that respond, not just react.</li>
+                <li><strong>Small models got good enough.</strong> A quantized 4B model, fine-tuned for one job, now answers in-character at playable latency and at a serving cost that survives a shipped title.</li>
+                <li><strong>The cost of the alternative is visible.</strong> Frontier APIs bill $0.125–$1.00 per million tokens; self-hosting a 7B model runs roughly $4,320 a month before anyone qualifies it.</li>
+                <li><strong>Players notice.</strong> Narrative-heavy and character-driven titles are where the growth is, and a world that resets every conversation is now the thing that reads as dated.</li>
             </ul>
         `
     },
     {
         id: 6,
-        runicLabel: "ᛗᛟᛞᛖᛚ",
-        runicSubtitle: "ᚱᛖᚢᛖᚾᚢᛖ",
-        title: "Business Model",
+        title: 'Business model',
         content: `
-            <span class="deck-runic-accent">ᚦᚱᛖᛖ ᛈᛁᛚᛚᚨᚱᛊ</span>
             <div class="business-grid">
                 <div class="business-item">
-                    <span class="business-phase">Phase 1</span>
-                    <h4>Studio Licensing</h4>
-                    <p>Per-seat access to the character layer, memory support, and Ghost Scout testing tools for teams building living worlds.</p>
-                    <span class="revenue-type">Recurring Studio Access</span>
+                    <span class="business-phase">Layer 1</span>
+                    <h4>SDK and API access</h4>
+                    <p>Paid from day one — the SDK does not function without the API. Tiered subscriptions by studio size, title count, and volume, billed through Stripe and the engine marketplaces.</p>
+                    <span class="revenue-type">Recurring, per studio</span>
                 </div>
                 <div class="business-item">
-                    <span class="business-phase">Phase 2</span>
-                    <h4>Studio Integration</h4>
-                    <p>Custom implementation and self-hosted options for larger studios that need deeper character-layer control.</p>
-                    <span class="revenue-type">Custom Studio Work</span>
+                    <span class="business-phase">Layer 2</span>
+                    <h4>Usage and operations</h4>
+                    <p>Validated actions are the natural meter: every time a character wants to change the world, it passes through the check. Ghost and its dashboards are a separate per-title subscription.</p>
+                    <span class="revenue-type">Consumption, per title</span>
                 </div>
                 <div class="business-item">
-                    <span class="business-phase">Phase 3</span>
-                    <h4>Soul Economy</h4>
-                    <p>$FAI market-path activity extends monetization beyond software licensing as ownership and interoperability scale.</p>
-                    <span class="revenue-type">Ecosystem Flow</span>
+                    <span class="business-phase">Layer 3</span>
+                    <h4>Soul economy</h4>
+                    <p>A platform fee on Soul trading and NPC template licensing, settled in $FAI. Scales as titles ship with the SDK rather than as a launch bet.</p>
+                    <span class="revenue-type">Protocol rake</span>
                 </div>
             </div>
-            <div class="runic-glyph">ᚠ ᛫ ᛚ ᛫ ᛟ ᛫ ᚹ</div>
         `
     },
     {
         id: 7,
-        runicLabel: "ᚷᛟᛏᛗ",
-        runicSubtitle: "ᛊᛏᚱᚨᛏᛖᚷᛁ",
-        title: "Go-to-Market",
+        title: 'Go to market',
         content: `
-            <span class="deck-runic-accent">ᛈᚨᚦ ᛏᛟ ᛗᚨᚱᚲᛖᛏ</span>
             <ol class="gtm-steps">
                 <li>
-                    <span class="phase-rune">ᚠ</span>
                     <div class="gtm-content">
-                        <strong>Proof Through Play</strong>
-                        <p>Use playable demos and reference worlds to show memory, grounded behavior, and world continuity working in practice.</p>
+                        <strong>Prove it in a build</strong>
+                        <p>Playable demos across an Unreal project, a browser title, and a text world — showing memory, validated action, and continuity in something a developer can run.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="phase-rune">ᚢ</span>
                     <div class="gtm-content">
-                        <strong>Developer Adoption</strong>
-                        <p>Docs, starter kits, and builder notes that help small teams experiment quickly with living character systems.</p>
+                        <strong>Land developers directly</strong>
+                        <p>Docs, starter kits, and the account portal, so a small team can integrate in an afternoon and be billed properly from the first call.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="phase-rune">ᚦ</span>
                     <div class="gtm-content">
-                        <strong>Studio Partnerships</strong>
-                        <p>Target mid-tier studios looking for stronger companions, social NPC loops, and better systemic continuity.</p>
+                        <strong>Distribute through the engines</strong>
+                        <p>Fab for Unreal and the Unity Asset Store, where studios already look for middleware and already have a payment relationship.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="phase-rune">ᚨ</span>
                     <div class="gtm-content">
-                        <strong>Soul Garden Expansion</strong>
-                        <p>Open the public market path with Souls, wallet connections, and $FAI-powered marketplace operations.</p>
+                        <strong>Open the Soul marketplace</strong>
+                        <p>Once multiple titles ship with the SDK, Souls and $FAI turn an installed base into transaction flow.</p>
                     </div>
                 </li>
             </ol>
@@ -204,159 +167,119 @@ const slides = [
     },
     {
         id: 8,
-        runicLabel: "ᚲᛟᛗᛈ",
-        runicSubtitle: "ᛚᚨᚾᛞᛊᚲᚨᛈᛖ",
-        title: "Competitive Landscape",
+        title: 'Landscape',
         content: `
-            <span class="deck-runic-accent">ᚹᚺᛁ ᚠᛟᚱᛒᛟᚲ</span>
             <div class="competition-table">
                 <div class="comp-header">
-                    <span></span>
-                    <span>Grounded</span>
-                    <span>Persistent</span>
-                    <span>Ownable</span>
-                    <span>Interop</span>
+                    <span>Approach</span>
+                    <span>Rules enforced</span>
+                    <span>Memory you own</span>
+                    <span>Portable</span>
+                    <span>Engine-native</span>
                 </div>
                 <div class="comp-row">
-                    <span class="comp-name">Cloud Chat APIs</span>
-                    <span class="comp-no">✗</span>
-                    <span class="comp-no">✗</span>
-                    <span class="comp-no">✗</span>
-                    <span class="comp-no">✗</span>
+                    <span class="comp-name">Frontier chat APIs</span>
+                    <span class="comp-no">no</span>
+                    <span class="comp-no">no</span>
+                    <span class="comp-no">no</span>
+                    <span class="comp-no">no</span>
                 </div>
                 <div class="comp-row">
-                    <span class="comp-name">Character Chat Layers</span>
-                    <span class="comp-partial">~</span>
-                    <span class="comp-partial">~</span>
-                    <span class="comp-no">✗</span>
-                    <span class="comp-no">✗</span>
+                    <span class="comp-name">NPC dialogue platforms</span>
+                    <span class="comp-partial">partial</span>
+                    <span class="comp-no">no</span>
+                    <span class="comp-no">no</span>
+                    <span class="comp-partial">partial</span>
                 </div>
                 <div class="comp-row">
-                    <span class="comp-name">In-House Prototypes</span>
-                    <span class="comp-partial">~</span>
-                    <span class="comp-partial">~</span>
-                    <span class="comp-partial">~</span>
-                    <span class="comp-no">✗</span>
+                    <span class="comp-name">In-house prototypes</span>
+                    <span class="comp-partial">partial</span>
+                    <span class="comp-yes">yes</span>
+                    <span class="comp-no">no</span>
+                    <span class="comp-yes">yes</span>
                 </div>
                 <div class="comp-row highlight-row">
                     <span class="comp-name"><strong>ForbocAI</strong></span>
-                    <span class="comp-yes">✓</span>
-                    <span class="comp-yes">✓</span>
-                    <span class="comp-yes">✓</span>
-                    <span class="comp-yes">✓</span>
+                    <span class="comp-yes">yes</span>
+                    <span class="comp-yes">yes</span>
+                    <span class="comp-yes">yes</span>
+                    <span class="comp-yes">yes</span>
                 </div>
             </div>
-            <p class="comp-note">Most alternatives stop at chat or studio-only prototypes. ForbocAI extends into <strong>world-grounded character layers, persistent companions, ownable Souls, and interoperable ecosystem value.</strong></p>
+            <p class="comp-note">The comparison set is Inworld, Convai, NPCx, Charisma.ai, and AI Dungeon. Most stop at conversation. The dimensions above are the ones that decide whether a studio can ship on it: who owns cognition, who owns game state, who holds the memory, and whether a character can leave.</p>
         `
     },
     {
         id: 9,
-        runicLabel: "ᛏᛖᚨᛗ",
-        runicSubtitle: "ᚠᛟᚢᚾᛞᛖᚱᛊ",
-        title: "The Team",
+        title: 'Team',
         content: `
-            <span class="deck-runic-accent">ᛒᚢᛁᛚᛞᛖᚱᛊ</span>
             <div class="team-grid">
                 <div class="team-member">
-                    <span class="team-rune">ᚠ</span>
                     <h4>Sean Dinwiddie</h4>
-                    <p><strong>Lead Developer</strong><br/>Full-stack builder with deep AI systems experience and a focus on turning living-character ideas into real shipped products.</p>
+                    <p><strong>President, lead developer</strong><br/>Full-stack engineer building the API, the SDKs, and Servitor itself — the whole chain from the model to the engine plugin.</p>
                 </div>
                 <div class="team-member">
-                    <span class="team-rune">ᚢ</span>
                     <h4>Tiernan Omalley</h4>
-                    <p><strong>Business Developer</strong><br/>Leading business development, studio partnerships, and developer community growth.</p>
+                    <p><strong>Business development</strong><br/>Studio partnerships, publisher conversations, and developer community.</p>
                 </div>
                 <div class="team-member">
-                    <span class="team-rune">ᚦ</span>
                     <h4>Antara Bhavsar</h4>
-                    <p><strong>Software Developer</strong><br/>Engineering lead focused on game engine integration and pushing local-model inference capabilities.</p>
+                    <p><strong>Software developer</strong><br/>Engine integration, with a focus on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
                 </div>
             </div>
-            <div class="runic-divider">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</div>
-            <p class="team-note">The core founding team is complete and focused on delivering the ForbocAI character layer.</p>
+            <p class="team-note">Delaware C corporation, incorporated February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },
     {
         id: 10,
-        runicLabel: "ᛏᚱᚨᚲᛏᛁᛟᚾ",
-        runicSubtitle: "ᛈᚱᛟᚷᚱᛖᛊᛊ",
-        title: "Traction & Milestones",
+        title: 'Traction',
         content: `
-            <span class="deck-runic-accent">ᚨᚲᚲᛟᛗᛈᛚᛁᛊᚺᛖᛞ</span>
             <ul class="traction-list">
-                <li><span class="runic-bullet">✓</span><strong>Core Toolkit v0.3.1 Complete:</strong> All 7 core pieces are shipped across memory, Souls, Ghost scouting, and world-bridge systems.</li>
-                <li><span class="runic-bullet">✓</span><strong>Core Service Live:</strong> The live backend is deployed and serving the ForbocAI stack.</li>
-                <li><span class="runic-bullet">✓</span><strong>Local Character Thinking:</strong> Local support is working with compact GGUF-backed models.</li>
-                <li><span class="runic-bullet">✓</span><strong>Living Memory:</strong> Semantic recall and temporal memory systems are already in place.</li>
-                <li><span class="runic-bullet">✓</span><strong>$FAI Live:</strong> The public market path is live for the ForbocAI Soul economy.</li>
-                <li><span class="runic-bullet">✓</span><strong>Playable Demos:</strong> Multiple ForbocAI-owned demos prove the character layer in different world styles.</li>
-                <li><span class="runic-bullet">✓</span><strong>Developer Guides:</strong> Public docs are live at docs.forboc.ai.</li>
-                <li><span class="runic-bullet">✓</span><strong>Behavior Coverage:</strong> End-to-end checks are in place across the live service surface.</li>
+                <li><strong>The API is live.</strong> Servitor is deployed and serving behaviour on ForbocAI infrastructure against a pinned, qualified release.</li>
+                <li><strong>Persistent memory works.</strong> Semantic recall and time-aware memory are shipped, writing to a store the studio owns.</li>
+                <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
+                <li><strong>Playable demos.</strong> Several ForbocAI-owned builds prove the layer in different world styles, engines, and genres.</li>
+                <li><strong>Docs are public</strong> at docs.forboc.ai, covering both SDKs.</li>
+                <li><strong>$FAI is live</strong> and trading, with liquidity actively calibrated.</li>
+                <li><strong>End-to-end verification.</strong> A micro-game harness drives the whole path — CLI to SDK to API to Servitor and back — so coverage and model quality are proved separately and neither borrows the other's green mark.</li>
             </ul>
-            <div class="runic-glyph">᛭ ᚾ ᛫ ᛖ ᛫ ᚲ ᛫ ᛊ ᛫ ᛏ ᛭</div>
-            <h4>Next Milestones</h4>
+            <h4>Next</h4>
             <ul class="milestone-list">
-                <li><span class="runic-bullet">ᚠ</span>Q1 2026: Character-layer hardening and memory polish</li>
-                <li><span class="runic-bullet">ᚢ</span>Q2 2026: Python &amp; Rust bindings plus Ghost Scout testing tools</li>
-                <li><span class="runic-bullet">ᚦ</span>Q3 2026: Soul minting flow, marketplace operations, and Unity/Unreal plugins</li>
+                <li>Through Q4 2026 — Ghost coverage reporting, Soul minting end to end, the account portal, SDK 1.0</li>
+                <li>2027 — marketplace operations, cross-title Soul portability, further engine bindings</li>
             </ul>
         `
     },
     {
         id: 11,
-        runicLabel: "ᛈᚨᚦ",
-        runicSubtitle: "ᚱᛟᚨᛞᛗᚨᛈ",
-        title: "The Roadmap",
+        title: 'Roadmap',
         content: `
-            <span class="deck-runic-accent">2026 ᚨᚾᛞ ᛒᛖᛁᛟᚾᛞ</span>
-            <ol class="roadmap-steps detailed">
-                <li>
-                    <span class="phase-rune">ᚠ</span>
-                    <strong>Q1 2026:</strong> Character-layer foundation with local thinking and memory continuity
-                </li>
-                <li>
-                    <span class="phase-rune">ᚢ</span>
-                    <strong>Q2 2026:</strong> World-grounded actions and Ghost Scout testing tools
-                </li>
-                <li>
-                    <span class="phase-rune">ᚦ</span>
-                    <strong>Q3 2026:</strong> Soul economy launch with wallet connections and marketplace operations
-                </li>
-                <li>
-                    <span class="phase-rune">ᚨ</span>
-                    <strong>Q4 2026:</strong> Broader studio field guides, Soul upgrades, and long-session continuity
-                </li>
-                <li>
-                    <span class="phase-rune">ᚱ</span>
-                    <strong>2027:</strong> Wider studio rollout, studio partnerships, and cross-world Soul interoperability
-                </li>
+            <ol class="roadmap-steps">
+                <li><strong>Shipped —</strong> hosted cognition, persistent memory, validated actions, TypeScript and Unreal SDKs, public docs, $FAI live</li>
+                <li><strong>Q4 2026 —</strong> Ghost coverage reporting and the account portal, with billing and key management in one place</li>
+                <li><strong>Q4 2026 —</strong> Soul minting end to end: gather, encrypt, upload, verify, restore</li>
+                <li><strong>2027 —</strong> marketplace operations for Soul trading and NPC template licensing</li>
+                <li><strong>2027 and beyond —</strong> cross-title Soul portability and wider studio rollout</li>
             </ol>
-            <div class="runic-timeline">ᚠ ─── ᚢ ─── ᚦ ─── ᚨ ─── ᚱ</div>
         `
     },
     {
         id: 12,
-        runicLabel: "ᚨᛊᚲ",
-        runicSubtitle: "ᛊᛖᛖᛞ",
-        title: "The Ask",
+        title: 'The ask',
         content: `
-            <span class="deck-runic-accent">ᛊᛖᛖᛞ ᚱᛟᚢᚾᛞ</span>
-            <h3>Seed Round</h3>
-            <p class="ask-intro">We're raising to build the founding team, ship partner pilots, and harden the first production-ready version of the ForbocAI character layer and Soul economy.</p>
+            <p class="ask-intro">We are raising a seed round to complete the founding team, ship partner pilots, and take the character layer and the Soul economy to production readiness.</p>
             <div class="use-of-funds">
-                <h4>Use of Funds</h4>
+                <h4>Use of funds</h4>
                 <ul class="funds-list">
-                    <li><span class="runic-bullet">ᚠ</span><strong>40%</strong> — Engineering (Co-founder hires, contractors)</li>
-                    <li><span class="runic-bullet">ᚢ</span><strong>20%</strong> — Infrastructure (compute, support, legal)</li>
-                    <li><span class="runic-bullet">ᚦ</span><strong>30%</strong> — Partner development, Soul economy rollout, and market validation</li>
-                    <li><span class="runic-bullet">ᚨ</span><strong>10%</strong> — Legal &amp; Compliance</li>
+                    <li><strong>40%</strong> — Engineering: co-founder hires and contractors</li>
+                    <li><strong>30%</strong> — Partner development, Soul economy rollout, market validation</li>
+                    <li><strong>20%</strong> — Infrastructure: compute, support, operations</li>
+                    <li><strong>10%</strong> — Legal and compliance</li>
                 </ul>
             </div>
-            <div class="runic-glyph">ᚷ ᛫ ᛟ ᛫ ᛖ ᛫ ᛏ ᛫ ᛖ ᛫ ᛁ ᛫ ᚨ ᛫ ᚾ</div>
             <div class="contact-box">
-                <span class="contact-runes">ᚲᛟᚾᛏᚨᚲᛏ</span>
                 <a href="mailto:hello@forboc.ai" class="btn btn-primary">hello@forboc.ai</a>
+                <a href="#whitepaper" class="btn btn-secondary">Read the whitepaper</a>
             </div>
         `
     }
@@ -373,67 +296,39 @@ export const PitchDeck = (state) => {
     const nextLink = safeSlideIndex < totalSlides ? `#pitch/${safeSlideIndex + 1}` : '#';
 
     return `
-    <section class="pitch-deck">
-        <div class="pitch-runic-bg">ᚠᛟᚱᛒᛟᚲ</div>
-        <div class="pitch-rune-banner" aria-hidden="true">ᚠ ᛟ ᚱ ᛒ ᛟ ᚲ ᛫ ᛋ ᛖ ᛖ ᛞ ᛫ ᛞ ᛖ ᚲ ᚲ</div>
-        <div class="pitch-corner-runes">
-            <span class="corner-rune tl">ᚠ</span>
-            <span class="corner-rune tr">ᚢ</span>
-            <span class="corner-rune bl">ᚦ</span>
-            <span class="corner-rune br">ᚨ</span>
-        </div>
+    <section class="deck">
         <div class="container">
             <div class="deck-frame">
 
                 <div class="deck-header">
-                    <div class="deck-brand">
-                        <span class="deck-runes">${slide?.runicLabel || 'ᚠᛟᚱᛒᛟᚲ'}</span>
-                        <span class="deck-subtitle">${slide?.runicSubtitle || 'ᛁᚾᛏᛖᛚᛚᛁᚷᛖᚾᚲᛖ'}</span>
-                    </div>
-                    <div class="deck-slide-indicator">
+                    <span class="deck-brand">ForbocAI, Inc. — seed deck</span>
+                    <span class="deck-count">
                         <span class="indicator-current">${safeSlideIndex}</span>
                         <span class="indicator-separator">/</span>
                         <span class="indicator-total">${totalSlides}</span>
-                    </div>
+                    </span>
                 </div>
 
-                <div class="slide-container">
-                    <div class="slide-content">
-                        <h2 class="slide-title">${slide?.title || 'Slide Not Found'}</h2>
-                        <div class="slide-body">
-                            ${slide?.content || '<p>Unable to load slide content.</p>'}
-                        </div>
+                <div class="slide">
+                    <h1 class="slide-title">${slide?.title || 'Slide not found'}</h1>
+                    <div class="slide-body">
+                        ${slide?.content || '<p>This slide could not be loaded.</p>'}
                     </div>
                 </div>
 
                 <div class="deck-controls">
-                    <a href="${prevLink}" class="btn-control ${safeSlideIndex <= 1 ? 'disabled' : ''}" ${safeSlideIndex <= 1 ? 'aria-disabled="true"' : ''}>
-                        ← Back
-                    </a>
+                    <a href="${prevLink}" class="btn-control ${safeSlideIndex <= 1 ? 'disabled' : ''}" ${safeSlideIndex <= 1 ? 'aria-disabled="true" tabindex="-1"' : ''}>Back</a>
                     <div class="slide-dots">
                         ${slides.map(s => `
                             <a
                                 href="#pitch/${s.id}"
                                 class="slide-dot ${s.id === safeSlideIndex ? 'active' : ''}"
-                                aria-label="Go to slide ${s.id}"
+                                aria-label="Go to slide ${s.id} of ${totalSlides}"
+                                ${s.id === safeSlideIndex ? 'aria-current="true"' : ''}
                             ></a>
                         `).join('')}
                     </div>
-                    <a href="${nextLink}" class="btn-control ${safeSlideIndex >= totalSlides ? 'disabled' : ''}" ${safeSlideIndex >= totalSlides ? 'aria-disabled="true"' : ''}>
-                        Next →
-                    </a>
-                </div>
-
-                <div class="deck-footer">
-                    <div class="footer-left">
-                        <span class="footer-runes">ᚠ ᛫ ᛟ ᛫ ᚱ ᛫ ᛒ ᛫ ᛟ ᛫ ᚲ</span>
-                    </div>
-                    <div class="footer-center">
-                        <span class="footer-title">ForbocAI, Inc. Seed Deck</span>
-                    </div>
-                    <div class="footer-right">
-                        <span class="footer-page">${String(safeSlideIndex).padStart(2, '0')}</span>
-                    </div>
+                    <a href="${nextLink}" class="btn-control ${safeSlideIndex >= totalSlides ? 'disabled' : ''}" ${safeSlideIndex >= totalSlides ? 'aria-disabled="true" tabindex="-1"' : ''}>Next</a>
                 </div>
 
             </div>

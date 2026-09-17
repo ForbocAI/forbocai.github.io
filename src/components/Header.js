@@ -2,29 +2,35 @@
  * Header Component
  * Pure function returning the header HTML string.
  */
-export const Header = (props) => {
+const LINKS = [
+    { href: '#technology', label: 'Character layer', internal: true },
+    { href: '#souls', label: 'Souls', internal: true },
+    { href: '#roadmap', label: 'Roadmap', internal: true },
+    { href: 'https://docs.forboc.ai', label: 'Docs', internal: false },
+    { href: '#investors', label: 'Investors', internal: true },
+];
+
+const link = ({ href, label, internal }, className) => internal
+    ? `<a href="${href}" class="${className}" data-link>${label}</a>`
+    : `<a href="${href}" class="${className}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+
+export const Header = () => {
     return `
-    <header>
+    <header class="site-header">
         <div class="container">
             <nav aria-label="Primary">
-                <div class="logo">
-                     <a href="#">
-                        <div class="logo-icon"></div>
-                        <span class="badge">ForbocAI</span>
-                     </a>
-                </div>
+                <a class="logo" href="#">
+                    <span class="logo-icon" aria-hidden="true"></span>
+                    <span class="logo-word">ForbocAI</span>
+                </a>
                 <div class="nav-links">
-                    <a href="#technology" class="nav-btn" data-link>Technology</a>
-                    <a href="#vision" class="nav-btn" data-link>Souls & $FAI</a>
-                    <a href="#roadmap" class="nav-btn" data-link>Roadmap</a>
-                    <a href="https://docs.forboc.ai" class="nav-btn" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="nav-btn" target="_blank" rel="noopener noreferrer">$FAI</a>
-                    <a href="#investors" class="nav-btn" data-link>Investors</a>
+                    ${LINKS.map((l) => link(l, 'nav-btn')).join('')}
                 </div>
+                <a href="mailto:hello@forboc.ai" class="btn btn-small nav-cta">Talk to us</a>
                 <button
                     class="mobile-menu-toggle"
                     id="mobileMenuToggle"
-                    aria-label="Toggle mobile menu"
+                    aria-label="Open menu"
                     aria-controls="mobileNav"
                     aria-expanded="false"
                 >
@@ -32,18 +38,12 @@ export const Header = (props) => {
                     <span></span>
                     <span></span>
                 </button>
-                <span class="header-runes" aria-hidden="true">ᚠ ᛟ ᚱ ᛒ ᛟ ᚲ ᛫ ᛚ ᚨ ᚾ ᛏ ᛖ ᚱ ᚾ ᛫ ᚹ ᛟ ᚱ ᛚ ᛞ</span>
-                <div class="lantern-mote" aria-hidden="true"></div>
             </nav>
         </div>
     </header>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" aria-hidden="true">
-        <a href="#technology" class="mobile-nav-link" data-link>Technology</a>
-        <a href="#vision" class="mobile-nav-link" data-link>Souls & $FAI</a>
-        <a href="#roadmap" class="mobile-nav-link" data-link>Roadmap</a>
-        <a href="https://docs.forboc.ai" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">Docs</a>
-        <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">$FAI</a>
-        <a href="#investors" class="mobile-nav-link" data-link>Investors</a>
+        ${LINKS.map((l) => link(l, 'mobile-nav-link')).join('')}
+        <a href="mailto:hello@forboc.ai" class="mobile-nav-link">Talk to us</a>
     </nav>
     `;
 };
