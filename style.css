@@ -722,8 +722,16 @@ main {
     color: var(--day-ink);
 }
 
+/* The option she rejected, so the panel shows a decision rather than a log. */
+.memory-weigh {
+    margin-top: 1.1rem;
+    font-size: var(--step--1);
+    line-height: 1.5;
+    color: var(--day-ink-faint);
+}
+
 .memory-foot {
-    margin-top: 1.3rem;
+    margin-top: 0.9rem;
     padding-top: 0.95rem;
     border-top: 1px solid var(--day-rule-soft);
     font-size: var(--step-0);
@@ -739,12 +747,14 @@ main {
    them away, then writes them back. main.js adds the class immediately when
    IntersectionObserver is unavailable. */
 .memory-panel:not(.is-remembering) .memory-lines li,
+.memory-panel:not(.is-remembering) .memory-weigh,
 .memory-panel:not(.is-remembering) .memory-foot {
     opacity: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
     .memory-panel:not(.is-remembering) .memory-lines li,
+    .memory-panel:not(.is-remembering) .memory-weigh,
     .memory-panel:not(.is-remembering) .memory-foot {
         opacity: 1;
     }
@@ -753,6 +763,7 @@ main {
    screen — not on load, which played it to nobody on a phone. Nothing else on
    the page moves unless a person asks it to. */
 .is-remembering .memory-lines li,
+.is-remembering .memory-weigh,
 .is-remembering .memory-foot {
     animation: remember 0.62s cubic-bezier(0.32, 0.72, 0.3, 1) backwards;
     animation-delay: calc(0.15s + var(--i, 0) * 0.42s);
@@ -937,8 +948,17 @@ main {
     margin-top: 1.2rem;
 }
 
-.servitor-caveat {
+.servitor-caveat,
+.servitor-gate-note {
     font-style: italic;
+}
+
+.servitor-gate-note {
+    margin-top: 1.1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--day-rule-soft);
+    font-size: var(--step--1);
+    color: var(--day-ink-faint);
 }
 
 /* The claim that separates sixteen minds from sixteen system prompts, shown
@@ -3071,6 +3091,7 @@ main {
        opacity 0 through its stagger delay, so the ledger reads blank for the
        first 1.6s. Drop the entrance entirely instead. */
     .is-remembering .memory-lines li,
+    .is-remembering .memory-weigh,
     .is-remembering .memory-foot {
         animation: none !important;
     }

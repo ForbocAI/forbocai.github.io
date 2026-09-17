@@ -62,7 +62,7 @@ export const Technology = () => {
                 <li class="ledger-row">
                     <div class="ledger-body">
                         <h3>It fails closed, not quietly</h3>
-                        <p>Cognition runs under a deadline. A turn that cannot make it comes back as a typed invalid result that authorizes no action, no memory write and no state change — your build chooses what the character does instead.</p>
+                        <p>Cognition runs under a configured deadline, and the worst case is a failure rather than a wait. A turn that cannot make it comes back as a typed invalid result authorizing no action, no memory write and no state change — your build chooses what the character does instead, usually the barks it already has.</p>
                     </div>
                     <p class="ledger-fact">We never manufacture substitute dialogue to cover a miss. When the connection goes, the character does not improvise and does not stall: the turn returns invalid, your build falls through to whatever you authored, and nothing is written to memory. We have no offline model today and we will not imply one — if your title has to think on a plane or pass cert on a closed network, we are not your layer this year, and we would rather say that now than in month three of an integration. We measure complete turns through the SDK and will publish regional figures when a release benchmark passes, not before.</p>
                 </li>

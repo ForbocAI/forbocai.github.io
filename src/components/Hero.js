@@ -45,7 +45,8 @@ export const Hero = () => {
                         <span class="memory-what">You left ahead of the storm. She kept the lamp burning anyway.</span>
                     </li>
                 </ul>
-                <p class="memory-foot" style="--i:3">So tonight she opens with the brother, not the weather. That is the judgment, not the recall.</p>
+                <p class="memory-weigh" style="--i:3">She could open with the storm. It is the safer thing to say, and she has said it to everyone else tonight.</p>
+                <p class="memory-foot" style="--i:4">So tonight she opens with the brother. That is the judgment, not the recall.</p>
             </figure>
         </div>
     </section>

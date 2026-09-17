@@ -52,7 +52,7 @@ export const Servitor = () => {
                     <ul class="plate-grid">
                         ${TYPES.map((t) => `<li${t === 'ISTJ' ? ' class="is-default"' : ''}>${t}</li>`).join('\n                        ')}
                     </ul>
-                    <p class="plate-note">Personality here is <strong>configuration, not content</strong>. Four orthogonal axes compose sixteen profiles of one vessel — modular, swappable, and small enough for a writer to hold in their head. Four characters in a persona file select one. <strong>ISTJ</strong> is the default when you name none.</p>
+                    <p class="plate-note">Personality here is <strong>configuration, not content</strong>. Four orthogonal axes compose sixteen profiles of one vessel — modular, swappable, and small enough for a writer to hold in their head. Four letters in a persona file select one. Name none and you get <strong>ISTJ</strong> — a stated default, not a resting state the other fifteen drift toward.</p>
                     <dl class="plate-legend">
                         ${AXES.map(([term, gloss]) => `<div><dt>${term}</dt><dd>${gloss}</dd></div>`).join('\n                        ')}
                     </dl>
@@ -66,7 +66,7 @@ export const Servitor = () => {
                             <div><dt>ESTJ</dt><dd>Takes it, enters it in the ledger, names a price — and mentions that the constable reads the ledger.</dd></div>
                             <div><dt>INFP</dt><dd>Takes it for nothing, tells no one, and moves it behind the barrel when the room fills up.</dd></div>
                         </dl>
-                        <p class="divergence-note">Two different actions, not one action in two accents. Do not take it on our word either — hand the same scene to both from the CLI and read the proposals side by side. Three minutes, and it is the test we would run if we were you.</p>
+                        <p class="divergence-note">Two different actions, not one action in two accents. A prompt can do that once. Run the same two characters forty turns deep with a player working on them the whole way and a prompted persona converges — they always do, and they converge toward the same agreeable house voice. What a release is measured on is how far apart the profiles still are at the end of that. Do not take it on our word: hand the same scene to both from the CLI and read the proposals side by side. Three minutes, and it is the test we would run if we were you.</p>
                     </figure>
                     <p>Two innkeepers of the same type are still two people, because the name, the memory and the relationships come from your game. The type shapes the thinking, not the person.</p>
                     <p>And because a character's type is written into the memory your studio keeps, a soul summoned once is the same soul when you call her back.</p>
@@ -87,7 +87,7 @@ export const Servitor = () => {
                 </section>
 
                 <section class="servitor-wont">
-                    <h3>Things it will never do</h3>
+                    <h3>Things a release is not allowed to do</h3>
                     <ul>
                         <li><strong>Speak a self.</strong> No name, backstory or opinion of its own, because it holds none to leak.</li>
                         <li><strong>Overwrite your canon.</strong> Your world is the only world it knows; it cannot correct you with facts it prefers.</li>
@@ -95,19 +95,20 @@ export const Servitor = () => {
                         <li><strong>Be talked into someone else.</strong> A player cannot rewrite who the character is, because the character is only ever what you supplied.</li>
                         <li><strong>Collapse to a house voice.</strong> No default morality, no preferred profile, no quiet pull that folds all sixteen configurations back toward the same disposition.</li>
                     </ul>
+                    <p class="servitor-gate-note">Each of those is a property a candidate is measured against before it takes the seat — not a promise about what a model is incapable of. When one fails in qualification the release does not ship, which is the only version of "never" anyone should accept about a model.</p>
                 </section>
             </div>
 
             <section class="servitor-proof">
                 <h3>Trained, proved, and grown</h3>
-                <p>Servitor is scored claim by claim, not answer by answer: every sentence it produces is checked against what the supplied persona and world actually support, so one fluent paragraph cannot carry three invented facts. Three properties decide whether a release ships — how much of a persona survives a long exchange, how often a gap in context comes back as an honest unknown instead of an invention, and how far apart the profiles stay when handed the same scene.</p>
+                <p>In qualification, Servitor is scored claim by claim rather than answer by answer: every sentence a candidate produces is checked against what the supplied persona and world actually support, so one fluent paragraph cannot carry three invented facts. Three properties decide whether a release ships — how much of a persona survives a long exchange, how often a gap in context comes back as an honest unknown instead of an invention, and how far apart the profiles stay when handed the same scene.</p>
                 <p>Promotion requires disjoint, game-agnostic interactions across every one of the sixteen profiles, including the cases that break most character models: a fact nobody supplied, and evidence that contradicts what the character already believed. A candidate that cannot clear its trials does not take the seat — the qualified release keeps answering until a successor earns it.</p>
                 <p class="servitor-caveat">We publish numeric results only from a deployed release's comparison that passed, and only when we can hand you the evidence behind it. We do not have one to show you yet, so we are not going to print a number and call it a floor. When the comparison exists, the numbers go here.</p>
             </section>
 
-            <p class="servitor-moat">We hold no player data and no world state, so nothing compounds for us in a database — that is deliberate, and it means the first question your legal team asks has a one-line answer. What compounds is the bench: every world a release is qualified against stays in it, and the bar it cleared becomes the floor for the next one. Today that bench is entirely ours — three playable builds and the worlds behind the harness that qualifies each release. That is small, and it is exactly what this round buys: every pilot is a world the bench keeps after the pilot ends. And it is not a private hoard: the bar a pilot raises is the bar every later studio inherits, which is the opposite of a data moat built out of your players. A competitor starts that at zero no matter whose API they rent, and starts it a year from now.</p>
+            <p class="servitor-moat">We hold no player data and no world state, so nothing compounds for us in a database — that is deliberate, and it means the first question your legal team asks has a one-line answer. What compounds is the bench: every world a release is qualified against stays in it, and the bar it cleared becomes the floor for the next one. Today that bench is entirely ours — three playable builds and the worlds behind the harness that qualifies each release. That is small, and it is exactly what this round buys: a pilot leaves behind a qualification world — scenarios, rules and edge cases agreed in writing — never its runtime data and never its players'. And a bench world is not a test suite we could have written for ourselves. It is a real studio's canon, with the rules that world actually enforces and the places its writers know it strains. You cannot commission that. You can only be let in. And it is not a private hoard: the bar a pilot raises is the bar every later studio inherits, which is the opposite of a data moat built out of your players. A competitor starts that at zero no matter whose API they rent, and starts it a year from now.</p>
 
-            <p class="servitor-moat">Every other layer of an NPC stack is a quarter's work for a competent team. A model that composes into sixteen different minds, hold a world it was never trained on, and refuse to invent its way out of a gap is not — it is curriculum, qualification and measured growth, accumulated. That is the part of ForbocAI that compounds, and it is the part a competitor cannot reach by wiring up somebody else's API.</p>
+            <p class="servitor-moat">Every other layer of an NPC stack is a quarter's work for a competent team. A model that composes into sixteen minds, holds a world it was never trained on, and refuses to invent its way out of a gap is not a quarter's work at any headcount: it is curriculum, qualification and measured growth, accumulated. That is the part of ForbocAI that compounds, and it is the part a competitor cannot reach by wiring up somebody else's API.</p>
         </div>
     </section>
     `;

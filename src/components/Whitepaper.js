@@ -64,7 +64,7 @@ export const Whitepaper = () => {
                     <p>ForbocAI issues the instruction to remember. Your build performs the write, against a vector store your studio owns and can read without us. That keeps player data under your control and your continuity readable in your own tooling.</p>
 
                     <h3>3.4 Ghost</h3>
-                    <p>Procedural and adaptive systems outrun manual QA immediately. Ghost characters play the build headless and repeatedly, walking encounters, social loops, and content paths until dead ends and unreachable states surface as coverage a producer can read. QA runs 15–25% of a game budget; this is the part of it a machine should be doing.</p>
+                    <p>Procedural and adaptive systems outrun manual QA immediately. Ghost characters play the build headless and repeatedly, walking encounters, social loops, and content paths until dead ends and unreachable states surface as coverage a producer can read. QA is the line item every producer has already tried to cut twice; this is the part of it a machine should be doing.</p>
                 </section>
 
                 <section id="wp-souls">

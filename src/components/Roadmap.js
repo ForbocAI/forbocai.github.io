@@ -29,7 +29,7 @@ export const Roadmap = () => {
                         <ul class="roadmap-list">
                             <li>Characters that hold memory across sessions, with semantic and time-aware recall</li>
                             <li>Rule checking between a character's intent and your world state</li>
-                            <li>ForbocAI's proprietary NPC model Servitor answering on our own infrastructure, with the TypeScript and Unreal&nbsp;Engine&nbsp;5 SDKs against it</li>
+                            <li>Servitor answering on our own infrastructure, with the TypeScript and Unreal&nbsp;Engine&nbsp;5 SDKs against it</li>
                             <li>Developer docs at docs.forboc.ai, playable demos, and $FAI live on the market</li>
                         </ul>
                     </div>
@@ -38,7 +38,7 @@ export const Roadmap = () => {
                     <span class="timeline-marker" aria-hidden="true"></span>
                     <div class="timeline-content">
                         <p class="timeline-status">In progress, through Q4 2026</p>
-                        <h3>Ghost on the road, gate on the garden</h3>
+                        <h3>Ghost on the road, keys at the gate</h3>
                         <ul class="roadmap-list">
                             <li>Ghost playtesting with coverage reports a producer can read</li>
                             <li>Soul minting end to end: gather, verify, restore</li>

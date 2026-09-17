@@ -91,7 +91,7 @@ export const Mission = () => {
                         </div>
                     </li>`).join('')}
                 </ol>
-                <p class="mission-ladder-note">Three of those are running today and you can call them from a terminal this afternoon. Two are being built. One is the reason the other five exist. We will tell you which is which every time you ask.</p>
+                <p class="mission-ladder-note">Three of those are running today and you can call them from a terminal this afternoon — keys are cut by hand until the portal ships, so mail us and you will have one the same day. Two are being built. One is the reason the other five exist. We will tell you which is which every time you ask.</p>
             </div>
 
             <p class="mission-resolve">Characters who decide. That is the whole of the intention, and everything above is only how far along it we are.</p>

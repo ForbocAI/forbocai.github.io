@@ -77,7 +77,7 @@ const slides = [
                 </div>
                 <div class="moat-item">
                     <h4>Souls turn retention into an asset</h4>
-                    <p>The same stack that makes a character feel alive gives her a portable economic surface — and gives us a revenue line beyond licensing.</p>
+                    <p>The same stack that makes a character worth remembering makes her worth owning — and gives us a revenue line that grows with the installed base rather than with seat count.</p>
                 </div>
             </div>
         `
@@ -86,24 +86,11 @@ const slides = [
         id: 5,
         title: 'Market',
         content: `
-            <div class="market-metrics">
-                <div class="metric-box">
-                    <span class="metric-value">$5.51B</span>
-                    <span class="metric-label">Forecast AI NPC generation market by 2029, from $1.41B in 2024</span>
-                </div>
-                <div class="metric-box">
-                    <span class="metric-value">$12.8B</span>
-                    <span class="metric-label">AI in gaming by 2033</span>
-                </div>
-                <div class="metric-box">
-                    <span class="metric-value">31.2%</span>
-                    <span class="metric-label">Compound annual growth in that category, 2024 to 2029</span>
-                </div>
-            </div>
+            <p class="moat-intro">We are not going to print a market size we cannot source on a site that refuses to print its own unbacked numbers. The forecasts for AI NPCs are analyst guesses about a category that did not exist in 2022. Here is the argument that does not need them.</p>
             <h4>Why now</h4>
             <ul class="feature-list">
-                <li><strong>Small models got good enough.</strong> A compact model fine-tuned for one job now answers in-character at playable latency, at a serving cost that survives a shipped title — which a frontier API at gameplay cadence does not.</li>
-                <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. We meter the turns that actually changed the world — the only one of the three that tracks what the game did.</li>
+                <li><strong>Small models got good enough.</strong> A compact model fine-tuned for one job holds character at a serving cost that survives a shipped title, which a frontier API at gameplay cadence does not. We run it under a deadline and fail closed when it misses — the latency distribution publishes the same way everything else here does, from a passing release comparison we do not have yet.</li>
+                <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Plans here are tiered by request volume, so a quiet hour of your game is a quiet hour on the bill.</li>
                 <li><strong>Players notice.</strong> Narrative-heavy and character-driven titles are where the growth is, and a world that resets every conversation is now the thing that reads as dated.</li>
             </ul>
         `
@@ -112,7 +99,7 @@ const slides = [
         id: 6,
         title: 'Business model',
         content: `
-            <p class="moat-intro">Every layer below is rent on one asset. The subscription is not for an SDK — an SDK is a weekend of somebody's time. It is for the model the SDK is the only route to, which is why a studio that integrates has nothing to churn to.</p>
+            <p class="moat-intro">Every layer below is rent on one asset. The subscription is not for the SDK: the SDK is the door, the model is the room, and there is no second door into it — which is why a studio that integrates has nothing to churn to.</p>
             <div class="business-grid">
                 <div class="business-item">
                     <span class="business-phase">Layer 1</span>
@@ -155,7 +142,7 @@ const slides = [
                 <li>
                     <div class="gtm-content">
                         <strong>Distribute through the engines</strong>
-                        <p>Fab for Unreal first, where studios already look for middleware and already have a payment relationship. Unity follows its SDK, not the other way round.</p>
+                        <p>Fab for Unreal first, where studios already look for middleware and already have a payment relationship. Unity is the bigger install base and it is the second thing this round pays for — not the thing we pretend is already done.</p>
                     </div>
                 </li>
                 <li>
@@ -208,7 +195,7 @@ const slides = [
                     <span class="comp-yes">yes</span>
                 </div>
             </div>
-            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. We are not on that axis. None of them puts a validation boundary between a character's intent and the game's state, and none of them owns the model the character thinks with: they rent it, and so does anyone who copies them. Those two facts decide whether a studio can ship on it and whether the thing compounds.</p>
+            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time. What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds.</p>
         `
     },
     {
@@ -237,7 +224,7 @@ const slides = [
         title: 'Traction',
         content: `
             <ul class="traction-list">
-                <li><strong>The API is live.</strong> ForbocAI's proprietary NPC model Servitor is deployed and serving behaviour on our own infrastructure against a pinned, qualified release.</li>
+                <li><strong>The API is live.</strong> Servitor is deployed and serving behaviour on our own infrastructure against a pinned, qualified release.</li>
                 <li><strong>Persistent memory works.</strong> Semantic recall and time-aware memory are shipped, writing to a store the studio owns.</li>
                 <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
                 <li><strong>Playable demos.</strong> Three builds we own — an Unreal project, a browser title, and a text world — each running against the live API. No third-party title has shipped on it yet; the first pilots are what this round is for.</li>
