@@ -46,7 +46,9 @@ export const Vision = () => {
 
             <p class="soul-market">The appetite is not hypothetical, and it is one of the few numbers on this site we can source. Trading card games were an <a href="https://www.gminsights.com/industry-analysis/trading-card-games-market" target="_blank" rel="noopener noreferrer">$8.4&nbsp;billion market in 2025</a>, with a further <a href="https://straitsresearch.com/report/collectible-card-games-market" target="_blank" rel="noopener noreferrer">$2.1&nbsp;billion a year</a> moving on the secondary market in graded and sealed product. The sharper signal is digital: Pokémon's TCG Pocket took roughly <a href="https://vtmvending.com/pages/pokemon-trading-card-market-usa" target="_blank" rel="noopener noreferrer">$1.25&nbsp;billion in player spending in its first year</a> on cards that are identical in every collection holding them.</p>
 
-            <p class="soul-market">Whether a character who is <em>not</em> identical is worth more than one who is — that is the question, and only a shipped marketplace answers it. We do not have one yet. We are pointing at the number because it sizes the appetite, not because we are claiming a share of it.</p>
+            <p class="soul-market">There is already a market for characters that own themselves — autonomous agents with their own tokens, making their own calls. No studio can ship one, because a character who can act outside your canon breaks the world she is standing in. Souls are the other shape: ownership for the player, authority for the studio, and a character who is only ever what your game made her.</p>
+
+                <p class="soul-market">Whether a character who is <em>not</em> identical is worth more than one who is — that is the question, and only a shipped marketplace answers it. We do not have one yet. We are pointing at the number because it sizes the appetite, not because we are claiming a share of it.</p>
 
             <aside class="soul-economy">
                 ${Lantern({ className: "lantern-gate", size: 0.75, tone: "bright" })}
