@@ -19,6 +19,7 @@ export const Hero = () => {
                     <a href="https://docs.forboc.ai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read the developer docs</a>
                     <a href="#turn" class="text-link" data-link>See a turn, end to end</a>
                 </div>
+                <p class="hero-try">Or skip them. Three minutes, no engine code: <code>forbocai npc chat maeve --text "her brother"</code></p>
             </div>
 
             <figure class="memory-panel">

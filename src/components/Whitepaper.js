@@ -33,7 +33,7 @@ export const Whitepaper = () => {
                         <li><strong>Cost.</strong> Per-token billing at gameplay cadence does not survive contact with a shipped title's player count.</li>
                         <li><strong>Incoherence.</strong> A model that has not been told about your inventory will cheerfully give away an item the player never had.</li>
                     </ul>
-                    <p>Neither trap is a model-quality problem. Both are architecture problems.</p>
+                    <p>None of the three is a model-quality problem. All three are architecture problems, and §3 answers them in order.</p>
                 </section>
 
                 <section id="wp-layer">
@@ -43,11 +43,12 @@ export const Whitepaper = () => {
                     <h3>3.1 Where the thinking happens</h3>
                     <p>ForbocAI's proprietary NPC model Servitor runs on our own infrastructure. Studios do not package a runtime, qualify a GPU path, or ship a title that thinks well on one player's machine and badly on another's. Your build makes a call, and the same machine does the thinking whichever hardware the player is sitting at — that hardware never decides how well she thinks.</p>
                     <p>The split is deliberate: the SDK in your game is the body, the API is the mind. The body never guesses at behaviour, and the mind never touches your world directly.</p>
+                    <p>Latency is the trap we inherit rather than escape, because hosted cognition is a round trip. What we change is the failure. Cognition runs under a deadline you configure, and a turn that misses it comes back as a typed invalid result authorizing no action and no memory write — your build falls through to the lines you already wrote. The distribution publishes the way everything else here does: from a release comparison that passed, which we do not have yet. A missed beat you can plan around is a design problem. A late answer that still arrives is a bug you cannot reproduce.</p>
 
                     <h3>3.2 Actions are proposed, not performed</h3>
                     <p>A character never mutates the game. She proposes structured intent, and that intent is measured against world state, content rules, and your own constraints before anything moves on screen.</p>
                     <p class="doc-aside">A character can improvise the performance. She cannot improvise the world.</p>
-                    <p>When a response cannot be validated, it comes back as an explicit failure your game can handle — a retry, a fallback line, a shrug. It is never silently replaced with invented dialogue or an action you never authored, because a quiet substitution is the one failure a studio cannot debug.</p>
+                    <p>When a response cannot be validated, it comes back as an explicit failure your game can handle — the fallback line, the shrug, whatever you authored for the moment. It is never silently replaced with invented dialogue or an action you never authored, because a quiet substitution is the one failure a studio cannot debug.</p>
 
                     <h4>Entities, state, and world rules</h4>
                     <p>ECS, object graph, or a bespoke simulation — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world, and the validation step is where that grounding is enforced.</p>
@@ -57,7 +58,7 @@ export const Whitepaper = () => {
                     <ul>
                         <li><strong>Decisions.</strong> Moves, trades, follow-ups, and social actions arrive as structured intent, not prose to be parsed.</li>
                         <li><strong>Recall.</strong> Retrieval lets a character reference prior events, relationships, and local context instead of resetting at every scene boundary.</li>
-                        <li><strong>Continuity of feeling.</strong> Mood, trust, and whatever other signals you author shape what she does next, not just how she says it.</li>
+                        <li><strong>Continuity of feeling.</strong> Mood, trust, and whatever other signals you author shape what she does next, and only then how she says it.</li>
                     </ul>
 
                     <h3>3.3 Memory stays with your studio</h3>
@@ -88,15 +89,16 @@ export const Whitepaper = () => {
                     <p>The verification chain is not optional and does not bend for the market: a listing never stands in for a valid receipt, an API signature, and a locally restored payload.</p>
 
                     <h3>4.3 Where it stands</h3>
-                    <p>$FAI is live and trading. Soul minting and the marketplace are in active development. We would rather say that plainly than imply a shipped economy.</p>
+                    <p>$FAI is live and trading. Soul minting and the marketplace are in active development. Those are two different tenses, and this paper keeps them apart.</p>
                 </section>
 
                 <section id="wp-roadmap">
                     <h2>5. Roadmap</h2>
                     <ul>
                         <li><strong>Shipped.</strong> Persistent memory with semantic and time-aware recall, validated actions, Servitor on ForbocAI infrastructure, TypeScript and Unreal Engine 5 SDKs, public docs, and $FAI live.</li>
-                        <li><strong>Through Q4 2026.</strong> Ghost coverage reporting, Soul minting end to end, the account portal, SDK 1.0, and engine marketplace listings.</li>
-                        <li><strong>2027.</strong> Marketplace operations, cross-title Soul portability, and further engine bindings held to the same contract as the shipped ones.</li>
+                        <li><strong>Q4 2026.</strong> Ghost coverage reporting. It is the only item in this paper carrying a date, deliberately.</li>
+                        <li><strong>Queued behind it, in order and undated.</strong> The account portal, Soul minting end to end, SDK 1.0, engine marketplace listings, then marketplace operations and further engine bindings held to the same contract as the shipped ones.</li>
+                        <li><strong>As the rights conversation allows.</strong> Cross-title Soul portability. The protocol is ours to schedule; the licensing is not, and we will not put a year on somebody else's signature.</li>
                     </ul>
                 </section>
             </div>

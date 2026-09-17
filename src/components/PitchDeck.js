@@ -52,8 +52,8 @@ const slides = [
                 <li><strong>Validated actions.</strong> A character proposes; the layer checks it against your state and rules before anything moves. An unqualified answer fails loudly instead of inventing something.</li>
                 <li><strong>Reasoning you can read.</strong> Consequence weighed, supplied values compared, conflicting duties resolved, commitments held across turns, positions revised on evidence — and a rationale that comes from the same thought as the action.</li>
                 <li><strong>Memory you own.</strong> We issue the instruction to remember; your build writes it to a store your studio controls and can read without us.</li>
-                <li><strong>Ghost.</strong> Headless characters play the build repeatedly and return coverage, dead ends, and regressions before players find them.</li>
-                <li><strong>Souls.</strong> A character gathered up — identity, memory, relationships — verified and restorable in another world.</li>
+                <li><strong>Ghost (coverage reporting, Q4 2026).</strong> Headless characters that will play the build repeatedly and return coverage, dead ends and regressions before players find them. The harness behind it qualifies Servitor releases today.</li>
+                <li><strong>Souls (in build, undated).</strong> A character gathered up — identity, memory, relationships — verified and restored in another world. Queued behind Ghost.</li>
             </ul>
         `
     },
@@ -61,11 +61,11 @@ const slides = [
         id: 4,
         title: 'Why it holds',
         content: `
-            <p class="moat-intro">One thing compounds. The other three raise the cost of leaving, and we are not going to call those a moat.</p>
+            <p class="moat-intro">One thing compounds. Two of the others raise the cost of leaving, and the fourth is a second product. We are not going to call any of the three something it is not.</p>
             <div class="moat-grid">
                 <div class="moat-item moat-item-primary">
                     <h4>The model, and the bench that qualifies it</h4>
-                    <p>Every other layer here is a quarter's work for a competent team. A model that composes into sixteen minds, holds a world it was never trained on and refuses to invent its way out of a gap is not, because the work is sequential: each release is qualified against the bar the last one cleared. You cannot hire past a gate you have not built.</p>
+                    <p>Every other layer here is a quarter's work for a competent team. A model that composes into sixteen minds, holds a world it was never trained on and refuses to invent its way out of a gap is not, because the work is sequential: each release is qualified against the bar the last one cleared, and every bar is built from a world a studio agreed to let us inside. Canon is granted, never bought. You cannot hire past a gate you have not built, and you cannot commission the world that builds it.</p>
                 </div>
 
                 <div class="moat-item">
@@ -78,7 +78,7 @@ const slides = [
                 </div>
                 <div class="moat-item">
                     <h4>Ghost is a second product, not a second moat</h4>
-                    <p>Automated playtesting is a real category — modl.ai is the serious name in it — but it tests systems, not social content. Ghost's testers are the same characters your players will meet, so it surfaces dead conversation loops and unreachable quest states rather than collision bugs.</p>
+                    <p>Automated playtesting is a real category — modl.ai is the serious name in it — but what it tests is systems. Conversation is where its coverage runs out. Ghost's testers are the same characters your players will meet, so it surfaces dead conversation loops and unreachable quest states rather than collision bugs.</p>
                 </div>
 
             </div>
@@ -90,11 +90,12 @@ const slides = [
         content: `
             <p class="moat-intro">We are not going to print a market size we cannot source on a site that refuses to print its own unbacked numbers. The forecasts for AI NPCs are analyst guesses about a category that did not exist in 2022. Here is the argument that does not need them.</p>
             <h4>Why now</h4>
-            <p class="moat-intro">Tokenised AI agents became a real category in 2025 and a richly capitalised one in 2026 — <a href="https://bingx.com/en/learn/article/top-ai-agent-crypto-projects-to-watch" target="_blank" rel="noopener noreferrer">one launchpad alone carries a ~$5B market cap across roughly 14,000 agent tokens</a>. That market has proved the appetite and then built the one thing a studio cannot ship: an agent that answers to nobody. A character who can act outside your canon is unshippable at any price, which is why none of that capital has reached a shipped title. We are the bounded version — the one a studio can actually put in a game — and the ownership layer sits on top of that, not instead of it.</p>
+            <p class="moat-intro">Tokenised AI agents became a real category in 2025 and a loud one in 2026. We are not going to quote you a market cap for it: a thin-float valuation is exactly the kind of number this page refuses everywhere else, and a count of launched tokens measures supply, not appetite. Here is the part that is signal. Thousands of teams set out to ship an agent that owns itself, and not one of them has shipped inside a published title, because a character who can act outside your canon breaks the world she is standing in. We are the bounded version — the one a studio can actually put in a game — and the ownership layer sits on top of that, not instead of it.</p>
             <ul class="feature-list">
                 <li><strong>Small models got good enough.</strong> A compact model built for one job holds character at a serving cost that survives a shipped title, which a frontier API at gameplay cadence does not. We run it under a deadline and fail closed when it misses — the latency distribution publishes the same way everything else here does, from a passing release comparison we do not have yet.</li>
                 <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Hosting it ourselves means we carry that utilisation risk instead of the studio — that is the trade, not an oversight, and plans here are tiered by request volume rather than by tokens spoken or GPUs idling.</li>
                 <li><strong>Players notice.</strong> We cannot source a growth curve for a category this young, so here is the part we can stand behind: a world that resets every conversation is the last place in a modern game where a player can still catch it lying.</li>
+                <li><strong>They already pay to own characters.</strong> Pokémon's TCG Pocket reportedly took <a href="https://vtmvending.com/pages/pokemon-trading-card-market-usa" target="_blank" rel="noopener noreferrer">around $1.25&nbsp;billion in first-year player spending</a> on cards identical in every collection holding them. That sizes the wanting, not our share of it — and it cuts both ways, because a card market clears on interchangeable objects and known print runs, which a Soul is the opposite of on both counts. The scarcity that would let such a market clear is ours to design into the mint rules, and it is unbuilt. We put this here rather than in front of developers, because it is an argument about a market and they are buying a character layer.</li>
             </ul>
         `
     },
@@ -119,8 +120,8 @@ const slides = [
                 <div class="business-item">
                     <span class="business-phase">Layer 3</span>
                     <h4>Soul economy</h4>
-                    <p>A platform fee on Soul trading and NPC template licensing, settled in $FAI. Scales as titles ship with the SDK rather than as a launch bet.</p>
-                    <span class="revenue-type">Protocol rake</span>
+                    <p>A platform fee on Soul trading, settled in $FAI. Template licensing, if it ever reaches a studio's invoice, is priced in ordinary money like everything in Layers 1 and 2 — a studio is never asked to hold a token to buy something from us. Scales as titles ship with the SDK rather than as a launch bet.</p>
+                    <span class="revenue-type">Platform fee, per transaction</span>
                 </div>
             </div>
         `
@@ -198,7 +199,7 @@ const slides = [
                     <span class="comp-yes">yes</span>
                 </div>
             </div>
-            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a release has to clear, not a scoreboard we are climbing. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time. What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds. The fair question is why a company with integrations we do not have could not build the same bench faster. What nobody can commission is the part that makes a bench worth anything — a real studio's canon, with the rules that world enforces and the places its writers know it strains. That is granted, not bought, and everyone in this comparison starts it at zero with the studio in front of them. Where we differ is what a result binds: we train and serve the thing being measured, so a bar it clears is a floor we control and keep. Qualify a model you rent and the bar moves whenever somebody else's release notes say it does.</p>
+            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a release has to clear, not a scoreboard we are climbing. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time. What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds. The fair question is why a company with integrations we do not have could not build the same bench faster. They could. A shipped integration is a relationship, canon is granted through relationships, and that is a head start we do not have and will not pretend away. What it does not buy them is durability. What makes a bench worth anything is a real studio's canon — the rules that world enforces and the places its writers know it strains — and that is granted, never commissioned. Where we differ is what a result binds: we train and serve the thing being measured, so a bar we clear is a floor we keep. Qualify a model you rent and the bar moves whenever somebody else's release notes say it does. Being second into a bench is survivable. Renting the thing the bench measures is not.</p>
         `
     },
     {
@@ -208,7 +209,7 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <h4>Sean Dinwiddie</h4>
-                    <p><strong>President, lead developer</strong><br/>Today he builds the API, both SDKs and Servitor itself. That is one person holding the whole chain, and closing that gap is the first line item in this raise — which is also why every SDK is a thin client over an HTTP API you could drive with curl — small enough to be worth writing, small enough to repoint. What happens to that API if we are not here is a continuity commitment we cannot make credibly at three people, and we are not going to pretend otherwise.</p>
+                    <p><strong>President, lead developer</strong><br/>Today he builds the API, both SDKs and Servitor itself. That is one person holding the whole chain, and closing that gap is the first line item in this raise — which is also why every SDK is a thin client over an HTTP API you could drive with curl — small enough to be worth writing, small enough to repoint. What happens to that API if we are not here is a continuity commitment we cannot make credibly at three people, and we are not going to pretend otherwise. One person built the model, which is the fairest shot anyone can take at the slide before this one: if a gate takes one engineer a few months, it is not a gate. The answer is the qualification history — how many candidates never took the seat, and what each successor had to clear before it did. We will put that sequence in front of you on the first call and let you decide whether it is a gate or a sprint.</p>
                 </div>
                 <div class="team-member">
                     <h4>Tiernan Omalley</h4>
@@ -229,6 +230,7 @@ const slides = [
             <ul class="traction-list">
                 <li><strong>The API is live.</strong> Servitor is deployed and serving behaviour on our own infrastructure against a pinned, qualified release.</li>
                 <li><strong>Persistent memory works.</strong> Semantic recall and time-aware memory are shipped, writing to a store the studio owns.</li>
+                <li><strong>Sixteen profiles ship today.</strong> Four letters in a persona file select one, and the profile governs the action a character proposes rather than the accent she says it in. This is the asset slide 4 calls the compounding one, and it is deployed.</li>
                 <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
                 <li><strong>Playable demos.</strong> Three builds we own — an Unreal project, a browser title, and a text world — each running against the live API. No third-party title has shipped on it yet; the first pilots are what this round is for.</li>
                 <li><strong>Docs are public</strong> at docs.forboc.ai, covering both SDKs.</li>
@@ -237,8 +239,9 @@ const slides = [
             </ul>
             <h4>Next</h4>
             <ul class="milestone-list">
-                <li>Through Q4 2026 — Ghost coverage reporting, Soul minting end to end, the account portal, SDK 1.0</li>
-                <li>2027 — marketplace operations, cross-title Soul portability, further engine bindings</li>
+                <li>Q4 2026 — Ghost coverage reporting. It is the only thing we are dating.</li>
+                <li>Queued behind it, in this order and deliberately undated — the account portal, Soul minting end to end, SDK 1.0, engine marketplace listings, then marketplace operations and further engine bindings</li>
+                <li>Cross-title Soul portability — as fast as the rights conversation allows. The protocol is ours to date; somebody else's signature is not.</li>
             </ul>
         `
     },
@@ -247,11 +250,12 @@ const slides = [
         title: 'Roadmap',
         content: `
             <ol class="roadmap-steps">
-                <li><strong>Shipped —</strong> hosted cognition, persistent memory, validated actions, TypeScript and Unreal SDKs, public docs, $FAI live</li>
-                <li><strong>Q4 2026 —</strong> Ghost coverage reporting and the account portal, with billing and key management in one place</li>
-                <li><strong>Q4 2026 —</strong> Soul minting end to end: gather, encrypt, upload, verify, restore</li>
-                <li><strong>2027 —</strong> marketplace operations for Soul trading and NPC template licensing</li>
-                <li><strong>2027 and beyond —</strong> cross-title Soul portability and wider studio rollout</li>
+                <li><strong>Shipped —</strong> hosted cognition, persistent memory, validated actions, sixteen personality profiles, TypeScript and Unreal SDKs, public docs, $FAI live</li>
+                <li><strong>Q4 2026 —</strong> Ghost coverage reporting. The only date on this deck, and it stays the only one.</li>
+                <li><strong>Then —</strong> the account portal, with billing and key management in one place</li>
+                <li><strong>Then —</strong> Soul minting end to end: gather, encrypt, upload, verify, restore</li>
+                <li><strong>Then —</strong> marketplace operations for Soul trading and NPC template licensing</li>
+                <li><strong>When the rights conversation allows —</strong> cross-title Soul portability and wider studio rollout. We will not put a year on somebody else's signature.</li>
             </ol>
         `
     },
@@ -269,7 +273,7 @@ const slides = [
                     <li><strong>10%</strong> — Legal and compliance</li>
                 </ul>
             </div>
-            <p class="ask-note">The amount, the terms, and the relationship between $FAI and the equity cap table are in the data room rather than on a public page. Ask, and you will have them the same day you would have an API key.</p>
+            <p class="ask-note">The amount and the terms are in the data room. So is the relationship between $FAI and the equity cap table, which we expect to be your first question and would sooner answer with the documents open in front of you than in one sentence on a public page — a live, trading token beside an equity raise is a structural question, and it deserves the structure rather than a reassurance. Ask, and you will have all of it the same day you would have an API key.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai" class="btn btn-primary">hello@forboc.ai</a>
                 <a href="#whitepaper" class="btn btn-secondary">Read the whitepaper</a>
