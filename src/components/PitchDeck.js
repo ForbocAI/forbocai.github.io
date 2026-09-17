@@ -33,7 +33,7 @@ const slides = [
                 <div class="problem-column">
                     <h3>Generative AI is ungoverned</h3>
                     <ul class="problem-list">
-                        <li>Chat-window latency is a broken beat in live play</li>
+                        <li>Nothing in a chat-shaped stack is built to miss a deadline gracefully — it arrives late, or it arrives wrong, and wrong is the one that reaches the player</li>
                         <li>Per-token billing at gameplay cadence does not survive a real player count</li>
                         <li>A model that was not told about your inventory will give away an item the player never had</li>
                     </ul>
@@ -48,7 +48,7 @@ const slides = [
         content: `
             <p class="solution-intro">A character layer that sits between the game and the model. The game keeps world authority. We keep the character coherent — and hand back structured intent a build can act on.</p>
             <ul class="feature-list">
-                <li><strong>Hosted cognition.</strong> ForbocAI's proprietary NPC model Servitor runs on our infrastructure. No runtime to package, no GPU path to qualify, identical behaviour on every player's machine.</li>
+                <li><strong>Hosted cognition.</strong> ForbocAI's proprietary NPC model Servitor runs on our infrastructure. No runtime to package, no GPU path to qualify, and the player's hardware never decides how well a character thinks.</li>
                 <li><strong>Validated actions.</strong> A character proposes; the layer checks it against your state and rules before anything moves. An unqualified answer fails loudly instead of inventing something.</li>
                 <li><strong>Reasoning you can read.</strong> Consequence weighed, supplied values compared, conflicting duties resolved, commitments held across turns, positions revised on evidence — and a rationale that comes from the same thought as the action.</li>
                 <li><strong>Memory you own.</strong> We issue the instruction to remember; your build writes it to a store your studio controls and can read without us.</li>
@@ -77,7 +77,7 @@ const slides = [
                 </div>
                 <div class="moat-item">
                     <h4>Souls turn retention into an asset</h4>
-                    <p>The same stack that makes a character worth remembering makes her worth owning — and gives us a revenue line that grows with the installed base rather than with seat count.</p>
+                    <p>Souls give us a third revenue line that scales with titles shipped rather than seats sold. Whether a character is worth paying to carry is a question only a shipped marketplace answers, and we do not have one yet — we would rather show you the fee mechanics than assert the demand.</p>
                 </div>
             </div>
         `
@@ -90,8 +90,8 @@ const slides = [
             <h4>Why now</h4>
             <ul class="feature-list">
                 <li><strong>Small models got good enough.</strong> A compact model fine-tuned for one job holds character at a serving cost that survives a shipped title, which a frontier API at gameplay cadence does not. We run it under a deadline and fail closed when it misses — the latency distribution publishes the same way everything else here does, from a passing release comparison we do not have yet.</li>
-                <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Plans here are tiered by request volume, so a quiet hour of your game is a quiet hour on the bill.</li>
-                <li><strong>Players notice.</strong> Narrative-heavy and character-driven titles are where the growth is, and a world that resets every conversation is now the thing that reads as dated.</li>
+                <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Plans here are tiered by request volume rather than by tokens spoken or GPUs idling.</li>
+                <li><strong>Players notice.</strong> We cannot source a growth curve for a category this young, so here is the part we can stand behind: a world that resets every conversation is the last place in a modern game where a player can still catch it lying.</li>
             </ul>
         `
     },
@@ -99,7 +99,7 @@ const slides = [
         id: 6,
         title: 'Business model',
         content: `
-            <p class="moat-intro">Every layer below is rent on one asset. The subscription is not for the SDK: the SDK is the door, the model is the room, and there is no second door into it — which is why a studio that integrates has nothing to churn to.</p>
+            <p class="moat-intro">Every layer below is rent on one asset. The subscription is not for the SDK: the SDK is the door, the model is the room, and there is no second door into it. A studio can leave for a competitor. It cannot keep the integration and stop paying.</p>
             <div class="business-grid">
                 <div class="business-item">
                     <span class="business-phase">Layer 1</span>
@@ -136,7 +136,7 @@ const slides = [
                 <li>
                     <div class="gtm-content">
                         <strong>Land developers directly</strong>
-                        <p>Docs, starter kits, and the account portal, so a small team can get a character answering from the CLI before committing engine work, and be billed properly from the first call.</p>
+                        <p>Docs and starter kits today, so a small team can get a character answering from the CLI before committing engine work. The account portal — keys, usage and billing in one place — is Q4; until it lands we cut keys by hand, same day.</p>
                     </div>
                 </li>
                 <li>
@@ -195,7 +195,7 @@ const slides = [
                     <span class="comp-yes">yes</span>
                 </div>
             </div>
-            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time. What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds.</p>
+            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a release has to clear, not a scoreboard we are climbing. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time. What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds. The fair question is why a company with integrations we do not have could not build the same bench faster. They could start it faster. What they cannot do is start it without a model of their own to qualify against it — a bench is only worth as much as the thing being measured on it, and renting the model means the bar moves whenever somebody else's release notes say it does.</p>
         `
     },
     {
@@ -205,7 +205,7 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <h4>Sean Dinwiddie</h4>
-                    <p><strong>President, lead developer</strong><br/>Today he builds the API, both SDKs and Servitor itself. That is one person holding the whole chain, and closing that gap is the first line item in this raise — which is also why every SDK is a thin client over an API you could drive with curl. Nothing about a studio's integration depends on us staying three people.</p>
+                    <p><strong>President, lead developer</strong><br/>Today he builds the API, both SDKs and Servitor itself. That is one person holding the whole chain, and closing that gap is the first line item in this raise — which is also why every SDK is a thin client over an HTTP API you could drive with curl — small enough to be worth writing, small enough to repoint. What happens to that API if we are not here is a continuity commitment we cannot make credibly at three people, and we are not going to pretend otherwise.</p>
                 </div>
                 <div class="team-member">
                     <h4>Tiernan Omalley</h4>
@@ -229,7 +229,7 @@ const slides = [
                 <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
                 <li><strong>Playable demos.</strong> Three builds we own — an Unreal project, a browser title, and a text world — each running against the live API. No third-party title has shipped on it yet; the first pilots are what this round is for.</li>
                 <li><strong>Docs are public</strong> at docs.forboc.ai, covering both SDKs.</li>
-                <li><strong>$FAI is live.</strong> Its stated product uses are Soul minting, upgrades, registration, and marketplace operations. It gets one line here on purpose: subscriptions and usage are the business today.</li>
+                <li><strong>$FAI is live.</strong> Its stated product uses are Soul minting, Soul upgrades and marketplace operations. It gets one line here on purpose: subscriptions and usage are the business today.</li>
                 <li><strong>End-to-end verification.</strong> A micro-game harness drives the whole path — CLI to SDK to API to Servitor and back — so coverage and model quality are proved separately and neither borrows the other's green mark.</li>
             </ul>
             <h4>Next</h4>
@@ -266,6 +266,7 @@ const slides = [
                     <li><strong>10%</strong> — Legal and compliance</li>
                 </ul>
             </div>
+            <p class="ask-note">The amount and the terms are in the data room rather than on a public page. Ask, and you will have them the same day you would have an API key.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai" class="btn btn-primary">hello@forboc.ai</a>
                 <a href="#whitepaper" class="btn btn-secondary">Read the whitepaper</a>

@@ -36,7 +36,7 @@ export const Turn = () => {
     memory,
   }),
 ).unwrap()</code></pre>
-                    <p class="turn-note">Memory is a store your studio created and can read without us. World context is yours; we never hold it.</p>
+                    <p class="turn-note">Memory is a store your studio created and can read without us. World context is yours: nothing you send at runtime is retained, and a bench world exists only where a pilot agreement put it.</p>
                 </div>
 
                 <div class="turn-col">

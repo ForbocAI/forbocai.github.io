@@ -13,7 +13,7 @@ export const Hero = () => {
                 <p class="kicker">AI infrastructure for game NPCs</p>
                 <h1>Characters who decide.</h1>
                 <p class="hero-premise">You can still name a character from a game you finished five years ago. She could not name you the second time you walked through her door.</p>
-                <p class="hero-lead">We build the character layer game studios plug in. Your NPCs weigh a situation, hold a position, change their minds on evidence and act — all of it inside the rules you wrote. Memory is the floor they reason from, not the product.</p>
+                <p class="hero-lead">We build the character layer game studios plug in. Your NPCs weigh a situation, hold a position, change their minds on evidence and act — all of it inside the rules you wrote. Memory is the floor they reason from. The product is what they do with it.</p>
                 <p class="hero-engines">Shipping today for <strong>TypeScript</strong>, in Node and the browser, and for <strong>Unreal&nbsp;Engine&nbsp;5</strong>.</p>
                 <div class="hero-buttons">
                     <a href="https://docs.forboc.ai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read the developer docs</a>

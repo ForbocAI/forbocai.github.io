@@ -69,7 +69,7 @@ export const Mission = () => {
             <div class="mission-statement">
                 <p class="mission-lead">Games are the only medium where the audience stands <em>inside</em> the story. Everything in there got real — the light, the weather, the faces, the way cloth falls. Everything except the people.</p>
                 <p>They still forget you between visits. They still say the line they said last time. They still cannot be surprised, and they cannot be persuaded, and nothing you do to them lasts past the loading screen. We have built worlds worth living in and filled them with nobody.</p>
-                <p class="mission-destination">So here is what we are actually building: <strong>a character who is genuinely someone.</strong> Who remembers what you did to her a year ago. Who decides — and gets it wrong sometimes, for reasons you could argue with. Who is still herself when the credits roll, and can walk out of our world and into yours carrying everything she learned.</p>
+                <p class="mission-destination">So here is what we are actually building: <strong>a character who is genuinely someone.</strong> Who remembers what you did to her a year ago. Who decides — and gets it wrong sometimes, for reasons you could argue with. Who is still herself when the credits roll, and can walk out of one world and into the next carrying everything she learned.</p>
             </div>
 
             <div class="mission-turn">
@@ -93,6 +93,8 @@ export const Mission = () => {
                 </ol>
                 <p class="mission-ladder-note">Three of those are running today and you can call them from a terminal this afternoon — keys are cut by hand until the portal ships, so mail us and you will have one the same day. Two are being built. One is the reason the other five exist. We will tell you which is which every time you ask.</p>
             </div>
+
+            <p class="mission-felt">Picture the playtest where someone stops mid-session because a character brought up a thing they did four hours ago, and they were not ready for it. The forum thread that argues about your innkeeper instead of your dialogue tree. The patch notes you never have to write. That afternoon is the whole of what this is for, and three rungs of it are running now.</p>
 
             <p class="mission-resolve">Characters who decide. That is the whole of the intention, and everything above is only how far along it we are.</p>
         </div>

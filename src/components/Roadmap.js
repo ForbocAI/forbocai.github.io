@@ -40,10 +40,11 @@ export const Roadmap = () => {
                         <p class="timeline-status">In progress, through Q4 2026</p>
                         <h3>Ghost on the road, keys at the gate</h3>
                         <ul class="roadmap-list">
+                            <li>In this order, because three people do not ship four things at once</li>
                             <li>Ghost playtesting with coverage reports a producer can read</li>
-                            <li>Soul minting end to end: gather, verify, restore</li>
-                            <li>The account portal — keys, usage, and billing in one place</li>
-                            <li>SDK 1.0 and a Fab listing for Unreal; Unity stays an integration scaffold until it meets the same contract</li>
+                            <li>Then the account portal — keys, usage and billing in one place</li>
+                            <li>Then Soul minting end to end: gather, verify, restore</li>
+                            <li>SDK 1.0 and a Fab listing for Unreal follow the portal; Unity stays an integration scaffold until it meets the same contract</li>
                         </ul>
                     </div>
                 </li>

@@ -24,13 +24,13 @@ export const Technology = () => {
                         <h3>She reasons, and you can read the reasoning</h3>
                         <p>A character weighs what a situation will cost, compares it against the values your world gave her, notices when two duties pull against each other, and commits. Push back with something new and she revises — because the evidence changed, not because you pushed.</p>
                     </div>
-                    <p class="ledger-fact">The line she speaks and the action she proposes are projections of one thought, so the two cannot disagree. Ask for the rationale and you get the reasoning behind that same decision, not a plausible story written after it.</p>
+                    <p class="ledger-fact">The line she speaks and the action she proposes are projections of one thought, so the two cannot disagree. Ask for the rationale and you get the reasoning behind that same decision — the same thought, read out.</p>
                 </li>
 
                 <li class="ledger-row">
                     <div class="ledger-body">
                         <h3>Memory is the floor she reasons from</h3>
-                        <p>Companions and neighbours keep their habits, their loyalties and the things you did in front of them — and a returning player is picked up mid-conversation rather than reintroduced. Recall on its own is a database; what makes it feel like a person is what she does with it.</p>
+                        <p>Companions and neighbours keep their habits, their loyalties and the things you did in front of them — and a returning player is picked up mid-conversation rather than reintroduced. Recall on its own is a database. A person is what happens next.</p>
                     </div>
                     <p class="ledger-fact">Memory is written to a store your studio owns. ForbocAI issues the instruction; your build does the writing, and can read it back without us.</p>
                 </li>
@@ -67,6 +67,8 @@ export const Technology = () => {
                     <p class="ledger-fact">We never manufacture substitute dialogue to cover a miss. When the connection goes, the character does not improvise and does not stall: the turn returns invalid, your build falls through to whatever you authored, and nothing is written to memory. We have no offline model today and we will not imply one — if your title has to think on a plane or pass cert on a closed network, we are not your layer this year, and we would rather say that now than in month three of an integration. We measure complete turns through the SDK and will publish regional figures when a release benchmark passes, not before.</p>
                 </li>
             </ul>
+
+            <p class="ledger-note"><strong>And if we are not here in three years?</strong> It is the right question to ask a seed-stage company selling hosted cognition, and we are not going to answer it with a slogan. What is already true: your memory store is yours and readable without us, your validation rules never left your build, and nothing in your save file depends on us having answered. What stops is the thinking. Continuity beyond that is contractual rather than technical — it belongs in a pilot agreement in front of your legal team on the first call, not in a promise on a marketing page. We will not claim an offline fallback we have not built.</p>
         </div>
     </section>
     `;
