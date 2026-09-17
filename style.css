@@ -1682,6 +1682,70 @@ main {
     border-left-color: color-mix(in srgb, var(--honey) 50%, transparent);
 }
 
+/* A technical director should not have to wonder whether buying the character
+   layer means touching a token. */
+.soul-decouple {
+    margin-top: clamp(1.75rem, 3vw, 2.25rem);
+    margin-left: calc(var(--rail) + 1.5rem);
+    padding-left: 1.2rem;
+    border-left: 2px solid color-mix(in srgb, var(--creek) 60%, transparent);
+    font-size: var(--step-0);
+    line-height: 1.6;
+    color: var(--night-ink-soft);
+    max-width: 68ch;
+}
+
+.soul-decouple strong {
+    color: var(--night-ink);
+}
+
+/* The familiar handle, and the point where it breaks. */
+.soul-card {
+    margin-top: clamp(1.5rem, 3vw, 2rem);
+    margin-left: calc(var(--rail) + 1.5rem);
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--night-ink-soft);
+    max-width: 64ch;
+}
+
+.soul-market {
+    margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+    margin-left: calc(var(--rail) + 1.5rem);
+    font-size: var(--step-0);
+    line-height: 1.6;
+    color: var(--night-ink-soft);
+    max-width: 66ch;
+}
+
+.soul-market a {
+    color: var(--honey);
+    text-decoration-color: color-mix(in srgb, var(--honey) 45%, transparent);
+}
+
+.soul-market a:hover {
+    color: var(--lantern);
+}
+
+.soul-market em {
+    color: var(--night-ink);
+    font-style: italic;
+}
+
+/* The claim the whole Souls section rests on, so it is set like one. */
+.soul-card em,
+.soul-card strong {
+    color: var(--night-ink);
+}
+
+@media (max-width: 620px) {
+    .soul-decouple,
+    .soul-card,
+    .soul-market {
+        margin-left: 0;
+    }
+}
+
 /* $FAI is economics, not protocol, so it does not get a third equal cell. */
 .soul-economy {
     position: relative;

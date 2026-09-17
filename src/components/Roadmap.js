@@ -40,7 +40,7 @@ export const Roadmap = () => {
                         <p class="timeline-status">In progress, through Q4 2026</p>
                         <h3>Ghost on the road, keys at the gate</h3>
                         <ul class="roadmap-list">
-                            <li>In this order, because three people do not ship four things at once</li>
+                            <li>In this order, because three people do not ship four things at once — Ghost coverage is the only one we are dating, and the rest queue behind it</li>
                             <li>Ghost playtesting with coverage reports a producer can read</li>
                             <li>Then the account portal — keys, usage and billing in one place</li>
                             <li>Then Soul minting end to end: gather, verify, restore</li>

@@ -61,24 +61,26 @@ const slides = [
         id: 4,
         title: 'Why it holds',
         content: `
-            <p class="moat-intro">Four advantages that compound rather than expire:</p>
+            <p class="moat-intro">One thing compounds. The other three raise the cost of leaving, and we are not going to call those a moat.</p>
             <div class="moat-grid">
+                <div class="moat-item moat-item-primary">
+                    <h4>The model, and the bench that qualifies it</h4>
+                    <p>Every other layer here is a quarter's work for a competent team. A model that composes into sixteen minds, holds a world it was never trained on and refuses to invent its way out of a gap is not, because the work is sequential: each release is qualified against the bar the last one cleared. You cannot hire past a gate you have not built.</p>
+                </div>
+
                 <div class="moat-item">
                     <h4>World authority stays with the studio</h4>
-                    <p>Character expression is structurally separated from game-state mutation. Creative behaviour is bounded by rules the studio wrote, not by prompt discipline.</p>
+                    <p>Character expression is structurally separated from game-state mutation. Copyable, and it makes leaving expensive once a title ships on it.</p>
                 </div>
                 <div class="moat-item">
                     <h4>A game-agnostic protocol</h4>
                     <p>Games supply state schemas, action types, and validation rules. We import none of their mechanics. The same boundary serves an RPG, a life-sim, and a roguelike.</p>
                 </div>
                 <div class="moat-item">
-                    <h4>Ghost is a second product</h4>
+                    <h4>Ghost is a second product, not a second moat</h4>
                     <p>Automated playtesting is a real category — modl.ai is the serious name in it — but it tests systems, not social content. Ghost's testers are the same characters your players will meet, so it surfaces dead conversation loops and unreachable quest states rather than collision bugs.</p>
                 </div>
-                <div class="moat-item">
-                    <h4>Souls turn retention into an asset</h4>
-                    <p>Souls give us a third revenue line that scales with titles shipped rather than seats sold. Whether a character is worth paying to carry is a question only a shipped marketplace answers, and we do not have one yet — we would rather show you the fee mechanics than assert the demand.</p>
-                </div>
+
             </div>
         `
     },
@@ -89,8 +91,8 @@ const slides = [
             <p class="moat-intro">We are not going to print a market size we cannot source on a site that refuses to print its own unbacked numbers. The forecasts for AI NPCs are analyst guesses about a category that did not exist in 2022. Here is the argument that does not need them.</p>
             <h4>Why now</h4>
             <ul class="feature-list">
-                <li><strong>Small models got good enough.</strong> A compact model fine-tuned for one job holds character at a serving cost that survives a shipped title, which a frontier API at gameplay cadence does not. We run it under a deadline and fail closed when it misses — the latency distribution publishes the same way everything else here does, from a passing release comparison we do not have yet.</li>
-                <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Plans here are tiered by request volume rather than by tokens spoken or GPUs idling.</li>
+                <li><strong>Small models got good enough.</strong> A compact model built for one job holds character at a serving cost that survives a shipped title, which a frontier API at gameplay cadence does not. We run it under a deadline and fail closed when it misses — the latency distribution publishes the same way everything else here does, from a passing release comparison we do not have yet.</li>
+                <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Hosting it ourselves means we carry that utilisation risk instead of the studio — that is the trade, not an oversight, and plans here are tiered by request volume rather than by tokens spoken or GPUs idling.</li>
                 <li><strong>Players notice.</strong> We cannot source a growth curve for a category this young, so here is the part we can stand behind: a world that resets every conversation is the last place in a modern game where a player can still catch it lying.</li>
             </ul>
         `
@@ -195,7 +197,7 @@ const slides = [
                     <span class="comp-yes">yes</span>
                 </div>
             </div>
-            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a release has to clear, not a scoreboard we are climbing. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time. What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds. The fair question is why a company with integrations we do not have could not build the same bench faster. They could start it faster. What they cannot do is start it without a model of their own to qualify against it — a bench is only worth as much as the thing being measured on it, and renting the model means the bar moves whenever somebody else's release notes say it does.</p>
+            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a release has to clear, not a scoreboard we are climbing. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time. What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds. The fair question is why a company with integrations we do not have could not build the same bench faster. What nobody can commission is the part that makes a bench worth anything — a real studio's canon, with the rules that world enforces and the places its writers know it strains. That is granted, not bought, and everyone in this comparison starts it at zero with the studio in front of them. Where we differ is what a result binds: we train and serve the thing being measured, so a bar it clears is a floor we control and keep. Qualify a model you rent and the bar moves whenever somebody else's release notes say it does.</p>
         `
     },
     {
@@ -266,7 +268,7 @@ const slides = [
                     <li><strong>10%</strong> — Legal and compliance</li>
                 </ul>
             </div>
-            <p class="ask-note">The amount and the terms are in the data room rather than on a public page. Ask, and you will have them the same day you would have an API key.</p>
+            <p class="ask-note">The amount, the terms, and the relationship between $FAI and the equity cap table are in the data room rather than on a public page. Ask, and you will have them the same day you would have an API key.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai" class="btn btn-primary">hello@forboc.ai</a>
                 <a href="#whitepaper" class="btn btn-secondary">Read the whitepaper</a>

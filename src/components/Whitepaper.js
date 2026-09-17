@@ -41,7 +41,7 @@ export const Whitepaper = () => {
                     <p>We separate what a character expresses from what the game permits, then reconnect the two through an explicit validation step. Your game keeps world authority. We keep the character coherent.</p>
 
                     <h3>3.1 Where the thinking happens</h3>
-                    <p>ForbocAI's proprietary NPC model Servitor runs on our own infrastructure. Studios do not package a runtime, qualify a GPU path, or ship a title that thinks well on one player's machine and badly on another's. Your build makes a call; the answer comes back the same everywhere.</p>
+                    <p>ForbocAI's proprietary NPC model Servitor runs on our own infrastructure. Studios do not package a runtime, qualify a GPU path, or ship a title that thinks well on one player's machine and badly on another's. Your build makes a call, and the same machine does the thinking whichever hardware the player is sitting at — that hardware never decides how well she thinks.</p>
                     <p>The split is deliberate: the SDK in your game is the body, the API is the mind. The body never guesses at behaviour, and the mind never touches your world directly.</p>
 
                     <h3>3.2 Actions are proposed, not performed</h3>
@@ -64,7 +64,7 @@ export const Whitepaper = () => {
                     <p>ForbocAI issues the instruction to remember. Your build performs the write, against a vector store your studio owns and can read without us. That keeps player data under your control and your continuity readable in your own tooling.</p>
 
                     <h3>3.4 Ghost</h3>
-                    <p>Procedural and adaptive systems outrun manual QA immediately. Ghost characters play the build headless and repeatedly, walking encounters, social loops, and content paths until dead ends and unreachable states surface as coverage a producer can read. QA is the line item every producer has already tried to cut twice; this is the part of it a machine should be doing.</p>
+                    <p>Procedural and adaptive systems outrun manual QA immediately. Ghost characters will play the build headless and repeatedly, walking encounters, social loops and content paths until dead ends and unreachable states surface as coverage a producer can read — coverage reporting lands Q4 2026, and the harness that drives it is what qualifies Servitor releases today. QA is the line item every producer has already tried to cut twice; this is the part of it a machine should be doing.</p>
                 </section>
 
                 <section id="wp-souls">

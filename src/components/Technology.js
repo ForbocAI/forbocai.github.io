@@ -48,7 +48,7 @@ export const Technology = () => {
                         <h3>Ghost will walk the content first</h3>
                         <p>Ghost characters play your build headless, over and over, through the encounters and social loops a human tester would need a fortnight to reach. Coverage reporting lands in Q4 2026 — the harness that drives it is what we qualify Servitor releases against today.</p>
                     </div>
-                    <p class="ledger-fact">Dead ends, unreachable quests and broken loops surface as coverage you can read. Ghost drives the same entry points your automated tests already use — if your build cannot run headless today, that is the work, and we will say so before you sign anything.</p>
+                    <p class="ledger-fact">Dead ends, unreachable quests and broken loops surface as coverage you can read. QA is the line item every producer has already tried to cut twice, and this is the part of it a machine should be doing. Ghost drives the same entry points your automated tests already use — if your build cannot run headless today, that is the work, and we will say so before you sign anything.</p>
                 </li>
 
                 <li class="ledger-row">
@@ -56,7 +56,7 @@ export const Technology = () => {
                         <h3>No model to package or host</h3>
                         <p>ForbocAI's proprietary NPC model Servitor runs on our infrastructure. You do not ship a runtime, qualify a GPU path, or discover on launch day that a player's laptop cannot think.</p>
                     </div>
-                    <p class="ledger-fact">A five-year-old laptop gets the same character as a gaming rig, because it is the same machine thinking — the hardware in front of the player never decides how well she thinks. Studios keep their game-owned world state and SDK-local memory; hosted cognition stays a ForbocAI service. The trade is explicit: cognition needs a connection.</p>
+                    <p class="ledger-fact">A five-year-old laptop gets the same character as a gaming rig, because it is the same machine thinking — the hardware in front of the player never decides how well she thinks. Studios keep their game-owned world state and SDK-local memory; hosted cognition stays a ForbocAI service. You are pinned to a release, not to whatever we deployed this morning — a qualified release keeps answering until you choose to move, so hosted does not mean your characters change under a shipped title. The trade is explicit: cognition needs a connection.</p>
                 </li>
 
                 <li class="ledger-row">
@@ -68,7 +68,7 @@ export const Technology = () => {
                 </li>
             </ul>
 
-            <p class="ledger-note"><strong>And if we are not here in three years?</strong> It is the right question to ask a seed-stage company selling hosted cognition, and we are not going to answer it with a slogan. What is already true: your memory store is yours and readable without us, your validation rules never left your build, and nothing in your save file depends on us having answered. What stops is the thinking. Continuity beyond that is contractual rather than technical — it belongs in a pilot agreement in front of your legal team on the first call, not in a promise on a marketing page. We will not claim an offline fallback we have not built.</p>
+            <p class="ledger-note"><strong>And if we are not here in three years?</strong> It is the right question to ask a seed-stage company selling hosted cognition, and we are not going to answer it with a slogan. What is already true: your memory store is yours and readable without us, your validation rules never left your build, and nothing in your save file depends on us having answered. What stops is the thinking. In a shipped title that looks like the fallback you already wrote: the turn returns invalid, the character speaks the barks you authored, and the game keeps running with worse characters in it. That is the honest worst case, and it is the one to put in front of a producer — not a service that vanished, a title that degraded to the dialogue you shipped anyway. Continuity beyond that is contractual rather than technical, and we will not promise on a marketing page what only a signature can bind: ask on the first call, not in month three. We will not claim an offline fallback we have not built either.</p>
         </div>
     </section>
     `;
