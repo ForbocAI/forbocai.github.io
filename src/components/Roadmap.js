@@ -41,9 +41,9 @@ export const Roadmap = () => {
                         <p class="timeline-status">In progress</p>
                         <h3>Ghost on the road, keys at the gate</h3>
                         <ul class="roadmap-list">
-                            <li>Ghost playtesting with coverage reports a producer can read — <strong>Q4 2026</strong>, and it is the only date on this page</li>
+                            <li>Ghost playtesting with coverage reports a producer can read — <strong>Q4 2026</strong>, and it is the only date we are committing to on this page</li>
                             <li>Then the account portal — keys, usage and billing in one place</li>
-                            <li>Then Soul minting end to end: gather, verify, restore</li>
+                            <li>Then Soul minting end to end: gather, encrypt, upload, verify, restore</li>
                             <li>Then SDK 1.0 and a Fab listing for Unreal; Unity stays an integration scaffold until it meets the same contract</li>
                             <li>Those four are deliberately undated and strictly ordered, because three people do not ship four things at once. Dating them would be a guess dressed as a commitment, and you would find out which in month three.</li>
                         </ul>

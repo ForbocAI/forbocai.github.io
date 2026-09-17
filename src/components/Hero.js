@@ -19,7 +19,7 @@ export const Hero = () => {
                     <a href="https://docs.forboc.ai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read the developer docs</a>
                     <a href="#turn" class="text-link" data-link>See a turn, end to end</a>
                 </div>
-                <p class="hero-try">Or skip the docs for now. Three minutes, no engine code: <code>forbocai npc chat maeve --text "her brother"</code></p>
+                <p class="hero-try">Or skip the docs for now. No engine code, one command, three minutes once your key lands — we cut them by hand, same day, until the portal ships: <code>forbocai npc chat maeve --text "her brother"</code></p>
             </div>
 
             <figure class="memory-panel">

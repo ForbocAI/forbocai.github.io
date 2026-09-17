@@ -52,6 +52,8 @@ export const Turn = () => {
 
             <p class="turn-refusal"><strong>Everyone sells you a speed number. We would rather sell you the failure contract.</strong> When it cannot answer honestly, <code>metadata.valid</code> comes back <code>false</code> and there is no action to run. A turn that could not be qualified fails where you can catch it, rather than arriving as plausible dialogue about a letter that does not exist. A fast wrong answer is worse than a slow one, and it is the failure that ends up in your bug tracker under "cannot reproduce".</p>
 
+            <p class="turn-refusal"><strong>One thing we have not solved for you.</strong> A generated line is a line nobody localised and nobody recorded. We hand back text and structured intent; what your loc vendor and your audio pipeline do with a line that did not exist at ship is your cost and your schedule, and for a global title it is a bigger one than integrating us. Ask what it does to your budget on the first call — we would sooner lose the deal there than in month three.</p>
+
             <p class="turn-cli">There is exactly one integration surface — a schema of your action types, your state shape and your rules. Everything else is this call. Try it from a terminal before you write a line of engine code: <code>forbocai npc chat maeve --text "her brother"</code></p>
         </div>
     </section>

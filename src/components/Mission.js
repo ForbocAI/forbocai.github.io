@@ -94,7 +94,7 @@ export const Mission = () => {
                 <p class="mission-ladder-note">Three of those are running today and you can call them from a terminal this afternoon — keys are cut by hand until the portal ships, so mail us and you will have one the same day. Two are being built. One is the reason the other five exist. We will tell you which is which every time you ask.</p>
             </div>
 
-            <p class="mission-felt">Picture the playtest where someone stops mid-session because a character brought up a thing they did four hours ago, and they were not ready for it. The forum thread that argues about your innkeeper instead of your dialogue tree. The dialogue pass you do not have to schedule, because the fortieth conversation was not written by hand. That afternoon is what we are building toward, and three rungs of it are running now.</p>
+            <p class="mission-felt">Picture the playtest where someone stops mid-session because a character brought up a thing they did four hours ago, and they were not ready for it. The forum thread that argues about your innkeeper instead of your dialogue tree. The dialogue pass that stops at the floor, because the fortieth conversation was not written by hand. That afternoon is what we are building toward, and three rungs of it are running now.</p>
 
             <p class="mission-resolve">Characters who decide. That is the whole of the intention, and everything above is only how far along it we are.</p>
         </div>

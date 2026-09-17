@@ -61,7 +61,7 @@ const slides = [
         id: 4,
         title: 'Why it holds',
         content: `
-            <p class="moat-intro">One thing compounds. Two of the others raise the cost of leaving, and the fourth is a second product. We are not going to call any of the three something it is not.</p>
+            <p class="moat-intro">One thing compounds. Two of the others raise the cost of leaving, and the fourth is a second product. None of the three is dressed up as the first.</p>
             <div class="moat-grid">
                 <div class="moat-item moat-item-primary">
                     <h4>The model, and the bench that qualifies it</h4>
@@ -90,12 +90,12 @@ const slides = [
         content: `
             <p class="moat-intro">We are not going to print a market size we cannot source on a site that refuses to print its own unbacked numbers. The forecasts for AI NPCs are analyst guesses about a category that did not exist in 2022. Here is the argument that does not need them.</p>
             <h4>Why now</h4>
-            <p class="moat-intro">Tokenised AI agents became a real category in 2025 and a loud one in 2026. We are not going to quote you a market cap for it: a thin-float valuation is exactly the kind of number this page refuses everywhere else, and a count of launched tokens measures supply, not appetite. Here is the part that is signal, and you can check it against your own portfolio: for all the teams building agents that own themselves, we have not found one shipped inside a published title. Name us one. The reason is structural — a character who can act outside your canon breaks the world she is standing in. We are the bounded version — the one a studio can actually put in a game — and the ownership layer sits on top of that, not instead of it.</p>
+            <p class="moat-intro">Tokenised AI agents became a real category in 2025 and a loud one in 2026. A market cap for it would tell you nothing: a thin-float valuation is exactly the kind of number this page refuses everywhere else, and a count of launched tokens measures supply, not appetite. Here is the part that is signal, and you can check it against your own portfolio: for all the teams building agents that own themselves, we have not found one shipped inside a published title. Name us one. The reason is structural — a character who can act outside your canon breaks the world she is standing in. We are the bounded version — the one a studio can actually put in a game — and the ownership layer sits on top of that, not instead of it.</p>
             <ul class="feature-list">
                 <li><strong>Small models got good enough.</strong> A compact model built for one job holds character at a serving cost that survives a shipped title, which a frontier API at gameplay cadence does not. We run it under a deadline and fail closed when it misses — the latency distribution publishes the same way everything else here does, from a passing release comparison we do not have yet.</li>
                 <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Hosting it ourselves means we carry that utilisation risk instead of the studio — that is the trade, not an oversight, and plans here are tiered by request volume rather than by tokens spoken or GPUs idling.</li>
                 <li><strong>Players notice.</strong> We cannot source a growth curve for a category this young, so here is the part we can stand behind: a world that resets every conversation is the last place in a modern game where a player can still catch it lying.</li>
-                <li><strong>They already pay to own characters.</strong> Pokémon's TCG Pocket reportedly took <a href="https://vtmvending.com/pages/pokemon-trading-card-market-usa" target="_blank" rel="noopener noreferrer">around $1.25&nbsp;billion in first-year player spending</a> on cards identical in every collection holding them. That sizes the wanting, not our share of it — and it cuts both ways, because a card market clears on interchangeable objects and known print runs, which a Soul is the opposite of on both counts. The scarcity that would let such a market clear is ours to design into the mint rules, and it is unbuilt. We put this here rather than in front of developers, because it is an argument about a market and they are buying a character layer.</li>
+                <li><strong>They already pay to own characters.</strong> Pokémon's TCG Pocket took <a href="https://vtmvending.com/pages/pokemon-trading-card-market-usa" target="_blank" rel="noopener noreferrer">around $1.25&nbsp;billion in first-year player spending</a> on cards identical in every collection holding them. That figure is the app-analytics firms', not ours — it is the only third-party number on this deck, and you can check it in an afternoon. It sizes the wanting, not our share of it — and it cuts both ways, because a card market clears on interchangeable objects and known print runs, which a Soul is the opposite of on both counts. The scarcity that would let such a market clear is ours to design into the mint rules, and it is unbuilt. We put this here rather than in front of developers, because it is an argument about a market and they are buying a character layer.</li>
             </ul>
         `
     },
@@ -114,7 +114,7 @@ const slides = [
                 <div class="business-item">
                     <span class="business-phase">Layer 2</span>
                     <h4>Usage and operations</h4>
-                    <p>Every time a character wants to change the world it passes through the check, which is the natural place to meter. Ghost and its dashboards are a separate per-title subscription.</p>
+                    <p>Every turn the API answers is a turn it counts, on our side of the boundary — nothing in a studio's build reports usage back to us, so the meter is ours to run and theirs to audit against their own call volume. Ghost and its dashboards are a separate per-title subscription.</p>
                     <span class="revenue-type">Consumption, per title</span>
                 </div>
                 <div class="business-item">
@@ -199,7 +199,7 @@ const slides = [
                     <span class="comp-yes">yes</span>
                 </div>
             </div>
-            <div class="comp-note"><p>The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a candidate clears before the three properties are scored at all, not a scoreboard we are climbing. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time.</p>
+            <div class="comp-note"><p>The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a candidate clears before the three properties are scored at all, not a scoreboard we are climbing. What we score is decision quality under constraint: how much of a persona survives a long exchange, how often a gap comes back as an honest unknown rather than an invention, and how far apart two profiles stay when handed the same scene. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time.</p>
 
             <p>What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds.</p>
 
@@ -260,6 +260,7 @@ const slides = [
                 <li><strong>Q4 2026 —</strong> Ghost coverage reporting. The only date on this deck, and it stays the only one.</li>
                 <li><strong>Then —</strong> the account portal, with billing and key management in one place</li>
                 <li><strong>Then —</strong> Soul minting end to end: gather, encrypt, upload, verify, restore</li>
+                <li><strong>Then —</strong> SDK 1.0 and the engine marketplace listings, including the Fab listing for Unreal</li>
                 <li><strong>Then —</strong> marketplace operations for Soul trading and NPC template licensing</li>
                 <li><strong>When the rights conversation allows —</strong> cross-title Soul portability and wider studio rollout. Undated, because it needs a signature that is not ours.</li>
             </ol>
@@ -269,17 +270,17 @@ const slides = [
         id: 12,
         title: 'The ask',
         content: `
-            <p class="ask-intro">We are raising a seed round to qualify the SDK, API and billing path, deliver partner integrations, and bring Soul and Ghost workflows to production readiness.</p>
+            <p class="ask-intro">We are raising a seed round to qualify the SDK, API and billing path, deliver the first studio integrations, and take Ghost to production readiness — with Soul minting queued behind it, where the roadmap has had it all along.</p>
             <div class="use-of-funds">
                 <h4>Use of funds</h4>
                 <ul class="funds-list">
                     <li><strong>40%</strong> — Engineering: co-founder hires and contractors</li>
-                    <li><strong>30%</strong> — Partner development, Soul economy rollout, market validation</li>
+                    <li><strong>30%</strong> — Studio partner development, pilot support, market validation</li>
                     <li><strong>20%</strong> — Infrastructure: compute, support, operations</li>
                     <li><strong>10%</strong> — Legal and compliance</li>
                 </ul>
             </div>
-            <p class="ask-note">The amount and the terms are in the data room. So is the relationship between $FAI and the equity cap table, which we expect to be your first question and would sooner answer with the documents open in front of you than in one sentence on a public page — a live, trading token beside an equity raise is a structural question, and it deserves the structure rather than a reassurance. Ask, and you will have all of it the same day you would have an API key.</p>
+            <p class="ask-note">The amount is not on this slide. A seed number printed on a public page prices the round before the conversation that should set it, and this deck does not print figures it would have to defend later. The amount and the terms are in the data room. So is the relationship between $FAI and the equity cap table, which we expect to be your first question and would sooner answer with the documents open in front of you than in one sentence on a public page — a live, trading token beside an equity raise is a structural question, and it deserves the structure rather than a reassurance. Ask, and you will have all of it the same day you would have an API key.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai" class="btn btn-primary">hello@forboc.ai</a>
                 <a href="#whitepaper" class="btn btn-secondary">Read the whitepaper</a>

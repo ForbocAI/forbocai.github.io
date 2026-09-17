@@ -28,7 +28,7 @@ export const Vision = () => {
                         <h3>She leaves whole, or not at all</h3>
                         <p>Identity, memory, relationships, and temperament are collected together. A Soul that arrives half-remembered is not a Soul, so the protocol moves all of it or none of it.</p>
                     </div>
-                    <p class="ledger-fact">Collected locally, encrypted, uploaded, and proved retrievable before the export is called done.</p>
+                    <p class="ledger-fact">Gathered, encrypted, uploaded, verified, and only then called done — the same five steps every time she moves.</p>
                 </li>
 
                 <li class="ledger-row">
@@ -40,7 +40,7 @@ export const Vision = () => {
                 </li>
             </ol>
 
-            <p class="soul-decouple"><strong>None of this touches the character layer.</strong> $FAI settles the Soul economy and nothing else: minting, upgrades, marketplace. If template licensing ever reaches a studio's invoice, it is priced in ordinary money like the rest — a studio is never asked to hold a token to buy something from us. Souls are opt-in, and a title ships perfectly well having touched none of it.</p>
+            <p class="soul-decouple"><strong>None of this touches the character layer</strong>, as the end of that section said: $FAI settles the Soul economy and nothing else — minting, upgrades, marketplace. Souls are opt-in, and a title ships perfectly well having touched none of it.</p>
 
             <p class="soul-card">The nearest familiar thing is a trading card, and the comparison earns its keep by where it breaks. A card market clears because the objects are interchangeable and the print run is known — that is what makes a price. A Soul is the opposite on both counts. She arrives carrying what she did in the world she came from: who she trusted there, what she refused, the argument she is still having. Two players holding the same character are not holding the same character, and nothing about her is scarce unless a studio chooses to make her so.</p>
 
