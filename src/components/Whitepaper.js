@@ -33,7 +33,7 @@ export const Whitepaper = () => {
                         <li><strong>Cost.</strong> Per-token billing at gameplay cadence does not survive contact with a shipped title's player count.</li>
                         <li><strong>Incoherence.</strong> A model that has not been told about your inventory will cheerfully give away an item the player never had.</li>
                     </ul>
-                    <p>None of the three is a model-quality problem. All three are architecture problems, and §3 answers them in order.</p>
+                    <p>None of the three is a model-quality problem. All three are architecture problems, and §3 takes each in turn.</p>
                 </section>
 
                 <section id="wp-layer">
@@ -44,6 +44,7 @@ export const Whitepaper = () => {
                     <p>ForbocAI's proprietary NPC model Servitor runs on our own infrastructure. Studios do not package a runtime, qualify a GPU path, or ship a title that thinks well on one player's machine and badly on another's. Your build makes a call, and the same machine does the thinking whichever hardware the player is sitting at — that hardware never decides how well she thinks.</p>
                     <p>The split is deliberate: the SDK in your game is the body, the API is the mind. The body never guesses at behaviour, and the mind never touches your world directly.</p>
                     <p>Latency is the trap we inherit rather than escape, because hosted cognition is a round trip. What we change is the failure. Cognition runs under a deadline you configure, and a turn that misses it comes back as a typed invalid result authorizing no action and no memory write — your build falls through to the lines you already wrote. The distribution publishes the way everything else here does: from a release comparison that passed, which we do not have yet. A missed beat you can plan around is a design problem. A late answer that still arrives is a bug you cannot reproduce.</p>
+                    <p>Cost follows from the same split. A compact model built for one job serves at a price a shipped title can carry, and plans meter requests at the validation check rather than tokens spoken — the bill counts the moments a character asks to change your world, not how much she says while asking. The figures come on the call.</p>
 
                     <h3>3.2 Actions are proposed, not performed</h3>
                     <p>A character never mutates the game. She proposes structured intent, and that intent is measured against world state, content rules, and your own constraints before anything moves on screen.</p>
@@ -98,7 +99,7 @@ export const Whitepaper = () => {
                         <li><strong>Shipped.</strong> Persistent memory with semantic and time-aware recall, validated actions, Servitor on ForbocAI infrastructure, TypeScript and Unreal Engine 5 SDKs, public docs, and $FAI live.</li>
                         <li><strong>Q4 2026.</strong> Ghost coverage reporting. It is the only item in this paper carrying a date, deliberately.</li>
                         <li><strong>Queued behind it, in order and undated.</strong> The account portal, Soul minting end to end, SDK 1.0, engine marketplace listings, then marketplace operations and further engine bindings held to the same contract as the shipped ones.</li>
-                        <li><strong>As the rights conversation allows.</strong> Cross-title Soul portability. The protocol is ours to schedule; the licensing is not, and we will not put a year on somebody else's signature.</li>
+                        <li><strong>As the rights conversation allows.</strong> Cross-title Soul portability. The protocol is ours to schedule; the licensing is not. Undated, because it needs a signature that is not ours.</li>
                     </ul>
                 </section>
             </div>

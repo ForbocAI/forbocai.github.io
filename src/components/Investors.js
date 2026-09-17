@@ -25,7 +25,7 @@ export const Investors = () => {
                 <p>The SDK is inert without the API, so access is the product. We have not announced a studio integration yet; the demos running against the live API are ours. The first pilots are what this round buys.</p>
             </div>
 
-            <p class="investors-takeaway">If you take one sentence from this page, take the one we would have to defend in your partner meeting: every layer of an NPC stack except the model is a quarter's work for a competent team, and the model is the part that cannot be rented, hired past, or started early.</p>
+            <p class="investors-takeaway">If you take one sentence from this page, take the one we would have to defend in your partner meeting: every layer of an NPC stack except the model is a quarter's work for a competent team, and the model is the part you cannot rent, cannot hire past, and cannot start without a studio letting you inside its canon.</p>
 
             <div class="hero-buttons">
                 <a href="#pitch/1" class="btn btn-primary" data-link>Open the seed deck</a>

@@ -31,7 +31,7 @@ const AXES = [
     ['Attention', 'reaches outward, or turns inward'],
     ['Evidence', 'trusts the concrete, or reads the pattern'],
     ['Judgment', 'decides on reasons, or on relationships'],
-    ['Closure', 'wants it settled, or keeps it open'],
+    ['Closure', 'settles quickly, or holds it open'],
 ];
 
 export const Servitor = () => {

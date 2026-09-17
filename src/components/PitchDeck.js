@@ -74,7 +74,7 @@ const slides = [
                 </div>
                 <div class="moat-item">
                     <h4>A game-agnostic protocol</h4>
-                    <p>Games supply state schemas, action types, and validation rules. We import none of their mechanics. The same boundary serves an RPG, a life-sim, and a roguelike.</p>
+                    <p>Games supply state schemas, action types, and validation rules. We import none of their mechanics — the same boundary serves an RPG, a life-sim, and a roguelike. Copyable, and once your schemas are written to it, leaving means writing them again.</p>
                 </div>
                 <div class="moat-item">
                     <h4>Ghost is a second product, not a second moat</h4>
@@ -90,7 +90,7 @@ const slides = [
         content: `
             <p class="moat-intro">We are not going to print a market size we cannot source on a site that refuses to print its own unbacked numbers. The forecasts for AI NPCs are analyst guesses about a category that did not exist in 2022. Here is the argument that does not need them.</p>
             <h4>Why now</h4>
-            <p class="moat-intro">Tokenised AI agents became a real category in 2025 and a loud one in 2026. We are not going to quote you a market cap for it: a thin-float valuation is exactly the kind of number this page refuses everywhere else, and a count of launched tokens measures supply, not appetite. Here is the part that is signal. Thousands of teams set out to ship an agent that owns itself, and not one of them has shipped inside a published title, because a character who can act outside your canon breaks the world she is standing in. We are the bounded version — the one a studio can actually put in a game — and the ownership layer sits on top of that, not instead of it.</p>
+            <p class="moat-intro">Tokenised AI agents became a real category in 2025 and a loud one in 2026. We are not going to quote you a market cap for it: a thin-float valuation is exactly the kind of number this page refuses everywhere else, and a count of launched tokens measures supply, not appetite. Here is the part that is signal, and you can check it against your own portfolio: for all the teams building agents that own themselves, we have not found one shipped inside a published title. Name us one. The reason is structural — a character who can act outside your canon breaks the world she is standing in. We are the bounded version — the one a studio can actually put in a game — and the ownership layer sits on top of that, not instead of it.</p>
             <ul class="feature-list">
                 <li><strong>Small models got good enough.</strong> A compact model built for one job holds character at a serving cost that survives a shipped title, which a frontier API at gameplay cadence does not. We run it under a deadline and fail closed when it misses — the latency distribution publishes the same way everything else here does, from a passing release comparison we do not have yet.</li>
                 <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Hosting it ourselves means we carry that utilisation risk instead of the studio — that is the trade, not an oversight, and plans here are tiered by request volume rather than by tokens spoken or GPUs idling.</li>
@@ -140,7 +140,7 @@ const slides = [
                 <li>
                     <div class="gtm-content">
                         <strong>Land developers directly</strong>
-                        <p>Docs and starter kits today, so a small team can get a character answering from the CLI before committing engine work. The account portal — keys, usage and billing in one place — is Q4; until it lands we cut keys by hand, same day.</p>
+                        <p>Docs and starter kits today, so a small team can get a character answering from the CLI before committing engine work. The account portal — keys, usage and billing in one place — is queued behind Ghost and deliberately undated. Until it lands we cut keys by hand, same day, which is not a bottleneck at the number of studios we can support this year.</p>
                     </div>
                 </li>
                 <li>
@@ -199,7 +199,11 @@ const slides = [
                     <span class="comp-yes">yes</span>
                 </div>
             </div>
-            <p class="comp-note">The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a release has to clear, not a scoreboard we are climbing. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time. What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds. The fair question is why a company with integrations we do not have could not build the same bench faster. They could. A shipped integration is a relationship, canon is granted through relationships, and that is a head start we do not have and will not pretend away. What it does not buy them is durability. What makes a bench worth anything is a real studio's canon — the rules that world enforces and the places its writers know it strains — and that is granted, never commissioned. Where we differ is what a result binds: we train and serve the thing being measured, so a bar we clear is a floor we keep. Qualify a model you rent and the bar moves whenever somebody else's release notes say it does. Being second into a bench is survivable. Renting the thing the bench measures is not.</p>
+            <div class="comp-note"><p>The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a candidate clears before the three properties are scored at all, not a scoreboard we are climbing. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time.</p>
+
+            <p>What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds.</p>
+
+            <p>The fair question is why a company with integrations we do not have could not build the same bench faster. They could. A shipped integration is a relationship, canon is granted through relationships, and that is a head start we do not have and will not pretend away. What it does not buy them is durability. What makes a bench worth anything is a real studio's canon — the rules that world enforces and the places its writers know it strains — and that is granted, never commissioned. Where we differ is what a result binds: we train and serve the thing being measured, so a bar we clear is a floor we keep. Qualify a model you rent and the bar moves whenever somebody else's release notes say it does. Being second into a bench is survivable. Renting the thing the bench measures is not.</p></div>
         `
     },
     {
@@ -209,7 +213,8 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <h4>Sean Dinwiddie</h4>
-                    <p><strong>President, lead developer</strong><br/>Today he builds the API, both SDKs and Servitor itself. That is one person holding the whole chain, and closing that gap is the first line item in this raise — which is also why every SDK is a thin client over an HTTP API you could drive with curl — small enough to be worth writing, small enough to repoint. What happens to that API if we are not here is a continuity commitment we cannot make credibly at three people, and we are not going to pretend otherwise. One person built the model, which is the fairest shot anyone can take at the slide before this one: if a gate takes one engineer a few months, it is not a gate. The answer is the qualification history — how many candidates never took the seat, and what each successor had to clear before it did. We will put that sequence in front of you on the first call and let you decide whether it is a gate or a sprint.</p>
+                    <p><strong>President, lead developer</strong><br/>Today he builds the API, Servitor itself and the TypeScript SDK. That is one person holding the whole chain, and closing that gap is the first line item in this raise — which is also why every SDK is a thin client over an HTTP API you could drive with curl, small enough to be worth writing and small enough to repoint. What happens to that API if we are not here is a continuity commitment we cannot make credibly at three people, and we are not going to pretend otherwise.</p>
+                    <p>One person built the model, which is the fairest shot anyone can take at the moat slide: if a gate takes one engineer a few months, it is not a gate. The answer is the qualification history — how many candidates never took the seat, and what each successor had to clear before it did. We will put that sequence in front of you on the first call and let you decide whether it is a gate or a sprint.</p>
                 </div>
                 <div class="team-member">
                     <h4>Tiernan Omalley</h4>
@@ -230,9 +235,10 @@ const slides = [
             <ul class="traction-list">
                 <li><strong>The API is live.</strong> Servitor is deployed and serving behaviour on our own infrastructure against a pinned, qualified release.</li>
                 <li><strong>Persistent memory works.</strong> Semantic recall and time-aware memory are shipped, writing to a store the studio owns.</li>
-                <li><strong>Sixteen profiles ship today.</strong> Four letters in a persona file select one, and the profile governs the action a character proposes rather than the accent she says it in. This is the asset slide 4 calls the compounding one, and it is deployed.</li>
+                <li><strong>Sixteen profiles ship today.</strong> Four letters in a persona file select one, and two profiles handed the same scene propose two different actions. This is the asset the moat slide calls the compounding one, and it is deployed.</li>
                 <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
                 <li><strong>Playable demos.</strong> Three builds we own — an Unreal project, a browser title, and a text world — each running against the live API. No third-party title has shipped on it yet; the first pilots are what this round is for.</li>
+                <li><strong>No pilot is signed, and we would rather count it than imply it.</strong> What we can put in front of you is the pipeline as it stands and what each conversation is waiting on. That is a data-room page rather than a slide, and it is the first one we would open.</li>
                 <li><strong>Docs are public</strong> at docs.forboc.ai, covering both SDKs.</li>
                 <li><strong>$FAI is live.</strong> Its stated product uses are Soul minting, Soul upgrades and marketplace operations. It gets one line here on purpose: subscriptions and usage are the business today.</li>
                 <li><strong>End-to-end verification.</strong> A micro-game harness drives the whole path — CLI to SDK to API to Servitor and back — so coverage and model quality are proved separately and neither borrows the other's green mark.</li>
@@ -255,7 +261,7 @@ const slides = [
                 <li><strong>Then —</strong> the account portal, with billing and key management in one place</li>
                 <li><strong>Then —</strong> Soul minting end to end: gather, encrypt, upload, verify, restore</li>
                 <li><strong>Then —</strong> marketplace operations for Soul trading and NPC template licensing</li>
-                <li><strong>When the rights conversation allows —</strong> cross-title Soul portability and wider studio rollout. We will not put a year on somebody else's signature.</li>
+                <li><strong>When the rights conversation allows —</strong> cross-title Soul portability and wider studio rollout. Undated, because it needs a signature that is not ours.</li>
             </ol>
         `
     },

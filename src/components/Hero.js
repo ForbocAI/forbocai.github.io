@@ -14,12 +14,12 @@ export const Hero = () => {
                 <h1>Characters who decide.</h1>
                 <p class="hero-premise">You can still name a character from a game you finished five years ago. She could not name you the second time you walked through her door.</p>
                 <p class="hero-lead">We build the character layer game studios plug in. Your NPCs weigh a situation, hold a position, change their minds on evidence and act — all of it inside the rules you wrote. Memory is the floor they reason from. The product is what they do with it.</p>
-                <p class="hero-engines">Shipping today for <strong>TypeScript</strong>, in Node and the browser, and for <strong>Unreal&nbsp;Engine&nbsp;5</strong>.</p>
+                <p class="hero-engines">Shipping today for <strong>TypeScript</strong>, in Node and the browser, and for <strong>Unreal&nbsp;Engine&nbsp;5</strong>. Unity is an integration scaffold rather than a shipped binding — if that is your engine, the honest answer is not yet.</p>
                 <div class="hero-buttons">
                     <a href="https://docs.forboc.ai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read the developer docs</a>
                     <a href="#turn" class="text-link" data-link>See a turn, end to end</a>
                 </div>
-                <p class="hero-try">Or skip them. Three minutes, no engine code: <code>forbocai npc chat maeve --text "her brother"</code></p>
+                <p class="hero-try">Or skip the docs for now. Three minutes, no engine code: <code>forbocai npc chat maeve --text "her brother"</code></p>
             </div>
 
             <figure class="memory-panel">
