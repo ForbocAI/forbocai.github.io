@@ -2227,26 +2227,45 @@ main {
 
 .roadmap-steps {
     display: grid;
-    gap: 0.85rem;
+    gap: 1.35rem;
     counter-reset: stage2;
 }
 
+/* Not a grid. As one, the ::before counter, the <strong> and the trailing text
+   node were three items in a two-column track, so the text landed in row 2 of
+   the 2.2rem column and set one word per line. Absolute marker, flowing text —
+   the same shape every other list on the deck uses. */
 .roadmap-steps li {
-    display: grid;
-    grid-template-columns: 2.2rem minmax(0, 1fr);
-    gap: 0 1rem;
-    align-items: baseline;
+    position: relative;
+    /* 115 characters on one line at this width; capped so the entries wrap at a
+       readable measure and the five of them fill the frame. */
+    max-width: 74ch;
+    padding-left: 3.2rem;
+    padding-bottom: 1.35rem;
     color: var(--day-ink-soft);
+    line-height: 1.55;
     counter-increment: stage2;
-    padding-bottom: 0.85rem;
     border-bottom: 1px solid var(--day-rule-soft);
+}
+
+.roadmap-steps li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .roadmap-steps li::before {
     content: counter(stage2, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
     font-family: var(--font-display);
     font-weight: 700;
+    line-height: 1.55;
     color: var(--copper-ink);
+}
+
+.roadmap-steps strong {
+    color: var(--day-ink);
 }
 
 .use-of-funds {
