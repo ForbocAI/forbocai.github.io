@@ -137,11 +137,83 @@ def check_verbatim_repeats(text: str) -> list[str]:
     ]
 
 
+def check_canonical_claims(text: str) -> list[str]:
+    """Load-bearing claims get one wording, quoted by every route that makes them.
+
+    Round eight lost points to five claims that were each true somewhere and
+    contradicted somewhere else. The fix is not proofreading — it is writing the
+    claim once and making every route quote that form.
+    """
+    flat = re.sub(r"\s+", " ", strip_markup(text))
+    bad = []
+
+    # The billable unit. "Metered at the check" put the meter inside the studio's
+    # build, which the privacy claims elsewhere forbid.
+    if re.search(r"metered at the (?:validation )?check", flat, re.I):
+        bad.append("billing: 'metered at the check' puts the meter in the studio's build")
+    if re.search(r"only talks and proposes nothing still passes the check", flat, re.I):
+        bad.append("billing: talk-only turns described as billable by passing the check")
+
+    # Ghost is unshipped, so it takes the future everywhere. The harness clause
+    # is what carries present-tense credit.
+    # "characters that will play" is the same future, one relative clause deeper.
+    for m in re.finditer(r"Ghost characters (?:that )?(\w+)", flat):
+        if m.group(1) != "will":
+            bad.append(f"Ghost tense: 'Ghost characters {m.group(1)}' — unshipped, so use 'will'")
+
+    # One five-step Soul chain, not four descriptions of it. Any clause naming
+    # three or more of the steps is claiming to be the chain, whichever verbs it
+    # reaches for, so they are compared on the step sequence rather than wording.
+    STEPS = {
+        "gather": "gather", "gathered": "gather", "collect": "gather", "collected": "gather",
+        "encrypt": "encrypt", "encrypted": "encrypt",
+        "upload": "upload", "uploaded": "upload",
+        "verify": "verify", "verified": "verify", "confirmed": "verify",
+        "restore": "restore", "restored": "restore", "retrievable": "restore",
+    }
+    chains = set()
+    for clause in re.split(r"[.;]", flat):
+        found = [(m.start(), STEPS[m.group(0).lower()])
+                 for m in re.finditer(r"\w+", clause) if m.group(0).lower() in STEPS]
+        if len(found) < 3:
+            continue
+        # An enumeration packs its steps together; prose that happens to mention
+        # gathering and restoring spreads them across a sentence and is not
+        # claiming to be the protocol.
+        if found[-1][0] - found[0][0] > 60:
+            continue
+        seq = [s for _, s in found]
+        ordered = [s for i, s in enumerate(seq) if i == 0 or s != seq[i - 1]]
+        if len(set(ordered)) >= 3:
+            chains.add(" ".join(ordered))
+    if len(chains) > 1:
+        bad.append(
+            f"Soul chain enumerated {len(chains)} different ways: "
+            + "; ".join(sorted(chains))
+        )
+
+    # "Candidate" means a Servitor release in qualification everywhere else, so
+    # saying every candidate drifts says the shipped release failed its own gate.
+    if re.search(r"[Ee]very candidate we have run", flat):
+        bad.append("'every candidate we have run' collides with candidate = Servitor release")
+
+    return bad
+
+
+def check_refusal_density(text: str) -> list[str]:
+    """Refusal is the house register; past a density it reads as a beat, not a stance."""
+    flat = re.sub(r"\s+", " ", strip_markup(text))
+    n = len(re.findall(r"we are not going to|we will not|we would rather", flat, re.I))
+    return [f"{n} refusal constructions — sincerity on a beat reads as technique"] if n > 12 else []
+
+
 CHECKS = [
     ("single dated deliverable", check_single_date),
     ("placement promise", check_placement_promise),
     ("one name per mechanism", check_vocabulary),
     ("promised answers delivered", check_answered_promises),
+    ("canonical claims", check_canonical_claims),
+    ("refusal density", check_refusal_density),
     ("verbatim repeats", check_verbatim_repeats),
 ]
 

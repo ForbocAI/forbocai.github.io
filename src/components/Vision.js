@@ -28,7 +28,7 @@ export const Vision = () => {
                         <h3>She leaves whole, or not at all</h3>
                         <p>Identity, memory, relationships, and temperament are collected together. A Soul that arrives half-remembered is not a Soul, so the protocol moves all of it or none of it.</p>
                     </div>
-                    <p class="ledger-fact">Gathered, encrypted, uploaded, verified, and only then called done — the same five steps every time she moves.</p>
+                    <p class="ledger-fact">Gather, encrypt, upload, verify, restore — the same five steps every time she moves, and the export is not done until the last one proves out.</p>
                 </li>
 
                 <li class="ledger-row">

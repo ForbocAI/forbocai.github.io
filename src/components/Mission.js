@@ -39,7 +39,7 @@ const RUNGS = [
         key: 'building',
         state: 'Q4 2026',
         title: 'She walks the content before players do',
-        body: 'Ghost characters walk your content headless and hand back coverage. Reporting lands Q4 2026.',
+        body: 'Ghost characters will walk your content headless and hand back coverage. Reporting lands Q4 2026.',
     },
     {
         key: 'building',

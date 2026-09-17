@@ -17,7 +17,7 @@ export const Whitepaper = () => {
                 <section id="wp-summary">
                     <h2>1. Summary</h2>
                     <p>Games look extraordinary now. Their characters mostly do not keep up. Behaviour still falls into one of two traps: authored branches that repeat until a player can recite them, or generative systems that improvise straight through the rules of the world.</p>
-                    <p><strong>ForbocAI, Inc.</strong> builds the layer in between. A character layer with persistent memory, a validation step that stands between a character's intent and your game state, Ghost characters that play your build before your players do, and Souls — a way for a character to leave one world with her continuity intact. This brief explains the approach at the level a studio needs to evaluate it.</p>
+                    <p><strong>ForbocAI, Inc.</strong> builds the layer in between. A character layer with persistent memory, a validation step that stands between a character's intent and your game state, Ghost characters that will play your build before your players do, and Souls — a way for a character to leave one world with her continuity intact. This brief explains the approach at the level a studio needs to evaluate it.</p>
                 </section>
 
                 <section id="wp-problem">
@@ -76,7 +76,7 @@ export const Whitepaper = () => {
                     <h3>4.1 What a Soul carries</h3>
                     <ul>
                         <li><strong>One identity.</strong> Memory, gear, and temperament move together, or not at all.</li>
-                        <li><strong>Verified restoration.</strong> A Soul is gathered, encrypted, uploaded, verified, and only then restored under a name that checks out.</li>
+                        <li><strong>Verified restoration.</strong> Gather, encrypt, upload, verify, restore — and the restore happens only under a name that checks out.</li>
                         <li><strong>Continuity past the save file.</strong> A character no longer has to end where one title's story ends.</li>
                     </ul>
 
