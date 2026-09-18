@@ -51,7 +51,9 @@ export const Vision = () => {
                 <p class="turn-label sigil-pair">${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 46, tone: 'honey' })} The night she arrives somewhere else</p>
                 <h3>A different studio's world reads her, and keeps its own counsel</h3>
                 <p class="soul-market">Two years later, a different studio, a different engine, a harbour town that has never heard of Lanternbough. The player brings her. The receiving world opens the record and decides what it is willing to know.</p>
-                <pre class="turn-code"><code>// the receiving title inspects, verifies, and rules
+                ${Deeper({
+                    summary: 'What the harbour town admitted, and what it refused',
+                    body: `<pre class="turn-code"><code>// the receiving title inspects, verifies, and rules
 {
   admitted: [
     'She keeps a confidence past the point it costs her',
@@ -63,7 +65,8 @@ export const Vision = () => {
     'the corner room, the inn',   // she owns nothing here
   ],
   verified: 'registry',
-}</code></pre>
+}</code></pre>`,
+                })}
                 <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> It refused her brother — there is no such man in this canon — and it kept his request, because that had become hers. She is still not opening what was asked to stay shut, for a man this world has never heard of. She has no inn on this coast, and she went north for this player once.</p>
                 <p class="soul-market">Then a stranger on the harbour road asks her to pass something along, and the world that refused her brother finds out what it admitted.</p>
                 <pre class="turn-code"><code>// a studio that never heard of Lanternbough

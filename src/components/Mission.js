@@ -20,7 +20,7 @@ import { ChapterMark } from './Sigil.js';
 
 export const Mission = () => {
     return `
-    <section id="mission" class="chapter chapter-day mission is-event">
+    <section id="mission" class="chapter chapter-day mission">
         <div class="container">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛟ' })}
@@ -28,6 +28,16 @@ export const Mission = () => {
                     <h2>Someone is home in the world you built</h2>
                 </div>
             </header>
+
+                <p class="mission-opening"><strong>Every other surface of a game came alive. The people did not.</strong> They still run out of script the moment a player asks something nobody wrote, which is why a whole cast sounds like one actor doing accents.</p>
+                <p class="mission-turn-line"><strong>That ended.</strong></p>
+                <p class="mission-opening">Tonight, in our worlds, a language model with no self of its own is answering as someone a writer authored — holding what a player earned, weighing what it costs her, and deciding. The only thing still open is whose cast it holds next.</p>
+                <figure class="maeve-scene hero-maeve-glimpse">
+                    <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
+                    <figcaption>The weather is the safe opening. Her brother's letter is the judgment.</figcaption>
+                </figure>
+                <p class="mission-opening"><strong>Everyone else is making the model more itself. We took the self out.</strong> The ForbocAI NPC LM Servitor™ has no self to defend, so the person your writers authored is the one who answers — reasoning past the end of your script and deciding as her. Not a line retrieved. A judgment made, in the moment, by someone.</p>
+                <p class="mission-opening"><strong>The ForbocAI NPC Protocol is how she enters your world without being able to change it.</strong> She decides like a person and she cannot move your state. The model is the invention. The Protocol is why it can be handed to anyone at all.</p>
 
             <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it — everybody in it dev born, player grown, and somebody's to carry.</strong> Not better dialogue. Not more lines. The end of a phrase that names a person by what they are not — and on the far side of it, everybody in the scene is somebody. The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The child who remembers which side you took, and is still deciding what that makes you.</p>
 

@@ -449,3 +449,44 @@
     line-height: 1.55;
     color: var(--night-ink-soft);
 }
+
+/* The one peak. It is the only composed frame on the site — centred, on the
+   darkest ground, two objects and one statement — and the only screen that
+   makes the argument in a picture rather than a paragraph. It was set at the
+   same weight as the prose around it and buried as an unmarked sub-block, so
+   the page had four co-equal maxima and therefore none. */
+.turn-counterfactual .turn-counterfactual-head h3 {
+    font-size: var(--step-4);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    max-width: 20ch;
+    margin-inline: auto;
+}
+
+.turn-counterfactual {
+    padding-block: clamp(4rem, 9vw, 7rem);
+}
+
+/* A ramp into it, so it arrives rather than appears. */
+.turn-counterfactual::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: clamp(2rem, 5vw, 3.5rem);
+    background: linear-gradient(var(--honey), transparent);
+    opacity: 0.5;
+}
+
+/* Seven of twenty-two screens were monospace. The exhibits earn their place —
+   two reviewers scored the argument on them — but they were set at prose
+   leading, which is what made them cost a third of the page. Denser, the way
+   a payload actually reads. */
+.turn-code {
+    line-height: 1.5;
+}
+
+.turn-code code {
+    font-size: 0.8125rem;
+}
