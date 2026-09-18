@@ -73,7 +73,7 @@ const slides = [
                     </article>
                     <article>
                         <span>The character judgment</span>
-                        <strong>Her brother's letter. Sealed at his asking, and opened now against it.</strong>
+                        <strong>Her brother's confidence. Kept, against a player who had earned almost enough.</strong>
                     </article>
                 </div>
                 <figure class="maeve-scene maeve-choice-scene">
@@ -148,9 +148,9 @@ const slides = [
         title: 'The character chooses. The game remains sovereign.',
         content: `
             <ol class="arrival-contract" aria-label="Maeve's choice enters canon">
-                <li><span>Judgment</span><strong>Maeve trusts this player.</strong><p>Identity, memory and motive make her brother's letter the character choice.</p></li>
-                <li><span>Proposal</span><strong>Servitor™ offers the letter.</strong><p>Dialogue, rationale and <code>offer_item</code> arrive together for inspection.</p></li>
-                <li><span>Canon</span><strong>Your game accepts—or refuses.</strong><p>If accepted, the letter changes hands and that consequence can become evidence next time.</p></li>
+                <li><span>Judgment</span><strong>Maeve keeps the confidence.</strong><p>Identity, memory and motive weigh a promise to her brother against a debt to a stranger.</p></li>
+                <li><span>Proposal</span><strong>Servitor™ returns the refusal.</strong><p>Dialogue, rationale and <code>refuse</code> arrive together for inspection.</p></li>
+                <li><span>Canon</span><strong>Your game accepts—or overrides.</strong><p>The letter stays sealed, and that consequence can become evidence next time.</p></li>
             </ol>
             <p class="arrival-answer"><strong>She can choose her next move.</strong> Only the game can make it history.</p>
         `
@@ -193,7 +193,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
             </div>
-            <p class="impact-statement">The model compounds across characters. The Protocol compounds across studios. The category compounds across worlds.</p>
+            <p class="impact-statement">Nothing here compounds on your data—we never receive it. What compounds is the range of worlds one decision contract has already held in: every genre it survives makes the next integration a smaller question than the last.</p>
         `
     },
     {

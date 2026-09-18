@@ -32,18 +32,18 @@ export const Turn = () => {
                 <div class="turn-col">
                     <p class="turn-label">Servitor™ returns one complete character judgment</p>
                     <pre class="turn-code"><code>{
-  dialogue: "He took the north road in spring.",
+  dialogue: "He went north. That is all I can give you tonight.",
   reasoningResult: {
-    reasoningText: "They noticed him when others did not.",
-    responseText: "He took the north road in spring.",
+    reasoningText: "He asked me to keep it sealed. This one asked after him — that earns the road, not the letter.",
+    responseText: "He went north. That is all I can give you tonight.",
   },
   action: {
-    type: 'offer_item',
+    type: 'refuse',
     payload: { item: 'brothers_letter' },
   },
   metadata: { valid: true },
 }</code></pre>
-                    <p class="turn-note"><code>offer_item</code> is a proposal, not a mutation. Your validation rules check it against the contracts your game supplied; only then may the letter change hands.</p>
+                    <p class="turn-note">She had <code>offer_item</code> available and did not take it. A refusal is a judgment your game can inspect, not a failed response: the rationale names the reason, so when a player is told no, your QA lead can find out why.</p>
                 </div>
             </div>
 
@@ -65,7 +65,7 @@ export const Turn = () => {
                 </div>
             </section>
 
-            <p class="turn-consequence"><strong>One accepted choice becomes the next piece of evidence.</strong> The letter changes hands, the world remembers, and Maeve enters the next encounter as the person who chose to trust this player.</p>
+            <p class="turn-consequence"><strong>A refusal becomes the next piece of evidence too.</strong> The letter stays sealed, the world remembers that it was asked for, and Maeve enters the next encounter as the person who kept her brother's confidence—and who knows this player asked after him anyway.</p>
 
             <p class="turn-refusal"><strong>The magic remains authored.</strong> Servitor™ creates the possibility; the Protocol makes it legible to the world; your game turns it into history. This is the moment an NPC stops filling space and starts becoming someone the player can never forget.</p>
         </div>

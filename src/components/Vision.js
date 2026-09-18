@@ -26,8 +26,8 @@ export const Vision = () => {
 
             <aside class="soul-economy">
                 ${Lantern({ className: "lantern-gate", size: 0.75, tone: "bright" })}
-                <h3>$FAI is the product utility layer around the Soul economy</h3>
-                <p>Access to The ForbocAI NPC LM Servitor™ uses ordinary money and requires no wallet. $FAI is live, with stated product uses across Soul minting, upgrades, registration and marketplace participation as that layer advances through active development.</p>
+                <h3>Paid access to Servitor™ is the business</h3>
+                <p>Studios buy character judgments with ordinary money and need no wallet for any of it. $FAI is a separate, opt-in layer around Soul continuity—live now, advancing as that continuity does, and required for none of the above.</p>
                 <div class="hero-buttons">
                     <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Enter $FAI</a>
                     <a href="#whitepaper" class="text-link" data-link>Read the architecture</a>

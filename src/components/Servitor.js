@@ -50,7 +50,7 @@ export const Servitor = () => `
                 <article>
                     <span>Evidence</span>
                     <h3>Changes for a reason</h3>
-                    <p>New facts can change the judgment; pressure alone should not erase the character.</p>
+                    <p>New facts can change the judgment. Goodwill alone does not: she can refuse a player who earned a yes, when a loyalty she was authored with outweighs the debt in front of her.</p>
                 </article>
                 <article>
                     <span>Intent</span>
