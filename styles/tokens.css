@@ -61,16 +61,28 @@
     --font-code: ui-monospace, 'SF Mono', SFMono-Regular, 'Cascadia Mono',
         Menlo, Consolas, 'Liberation Mono', monospace;
 
-    --step--1: 0.9375rem;
-    --step-0: 1.1875rem;
-    --step-1: 1.3125rem;
-    --step-2: clamp(1.5rem, 1.25rem + 1vw, 1.9rem);
+    /* The bottom of the ladder used to be three fixed rem values, frozen from
+       768 all the way to 2560 while h1 and h2 grew — five of seven steps rigid
+       on a page whose brief is that nothing should be. Each is solved to land
+       on its current value at 1440 so the composed width does not move, with a
+       floor for phones and room to grow on a large monitor. */
+    --step--1: clamp(0.875rem, 0.777rem + 0.179vw, 1.0625rem);
+    --step-0: clamp(1.0625rem, 0.979rem + 0.232vw, 1.35rem);
+    --step-1: clamp(1.1875rem, 0.991rem + 0.357vw, 1.5625rem);
+    /* h3. Capped against h2 so the two can never cross: h2 is a ratio of h1 and
+       shrinks on a phone, while this had a fixed 1.5rem floor that did not — so
+       at 390px h2 measured 22px against h3's 24px, an inverted ladder. Tying
+       the ceiling to h2 makes that arithmetically impossible at any size, and
+       the higher max lets it keep growing past 1440 instead of freezing. */
+    --step-2: min(clamp(1.35rem, 1.05rem + 1.05vw, 2.6rem), calc(var(--step-3) * 0.82));
     /* Derived too. A scale where one step is height-aware and the next is a
        fixed clamp is not a scale — it inverts the moment a window gets short,
        which is exactly what the hierarchy probe caught at 1366x768, 1440x700,
        1024x768 and on a phone. Everything above body now descends from the
        same source, so the ranks hold at every size by construction. */
-    --step-3: calc(var(--step-5) * 0.60);
+    /* h2 keeps a floor of its own. As a pure ratio of h1 it collapsed to 22px on a
+   phone — 1.29x the body text, which is not a heading, it is bold prose. */
+--step-3: max(1.75rem, calc(var(--step-5) * 0.60));
     /* Derived from step-5, not tuned beside it. When the headline shrinks on a
        short screen the second rank has to shrink with it, or the mid-page peak
        out-ranks the opening — which is exactly what happened the moment the
@@ -92,33 +104,29 @@
     --measure: 66ch;
     --measure-tight: 46ch;
 
-    /* The shell grows with the screen, sub-linearly, the way a thing that
-       grows toward light widens fast at first and then slows.
+    /* Two shells, because only one thing on the page needed the width.
 
-       It was a flat 1180px, and that single number was the whole rigidity
-       problem: the type scale has a viewport term and the container did not,
-       so from 1024 to 2560 the headline grew 54px -> 83px inside a column
-       frozen at 486px and broke into seven lines with a one-word orphan. Type
-       outgrowing its measure is the exact opposite of the intent, and at 2560
-       the page was using 43% of the screen.
+       Growing ONE shell fixed the headline and broke everything downstream:
+       prose chapters sit at a readable ~660px measure, so a wider container is
+       just more empty right-hand margin. Measured against ink a reader can
+       actually see, page emptiness climbed 44% at 1024 to 62% at 2560 — the
+       biggest screen was the worst-composed one, which is backwards.
 
-       The curve is solved for a floor, not opened as far as it will go. Every
-       pixel of shell beyond what the headline needs becomes empty right-hand
-       margin in the prose chapters, which are single-column and measure-capped
-       — so widening this token trades a broken headline for a bigger void, and
-       an early attempt at 76vw+86px (1720px at 2560) put #mission at 100% of
-       its bands more than 40% empty.
+       So the prose shell stays put and the hero alone opens up. The hero is
+       the page's peak and is genuinely two-column; a chapter is one column of
+       text and gains nothing from room it cannot fill. */
+    --shell: 1180px;
 
-       So: 62.5vw + 280px is the gentlest curve that still holds the headline
-       at four lines everywhere. It lands exactly on 1180px at 1440, so nothing
-       already composed moves, clears the 1330px that 1680x1050 needs, and caps
-       at 1600px — the least width that keeps 2560 at four lines.
+    /* The hero's own shell. Solved rather than picked: it lands exactly on
+       1180px at 1440 so nothing already composed moves, clears the 1330px that
+       1680x1050 needs, and caps at 1600px — the least width that still holds
+       the headline to four lines at 2560.
 
-       1680x1050 sets the floor because the type there is HEIGHT-driven (the
-       6.4vh term wins) while the shell is width-driven: a tall, narrow window
-       gets large type in a narrow column, and a gentler curve left five lines
-       there while every other width had four. */
-    --shell: min(1600px, max(1180px, 62.5vw + 280px));
+       1680x1050 sets that floor, and it is worth writing down why: --step-5
+       takes min(width-term, height-term), so in a tall narrow window the 6.4vh
+       term wins and the type is HEIGHT-driven while the shell is width-driven.
+       A gentler curve left five lines there while every other width had four. */
+    --shell-hero: min(1600px, max(1180px, 62.5vw + 280px));
     --gutter: clamp(1.25rem, 4vw, 2.5rem);
     --header-height: 76px;
     --rail: 3.25rem;

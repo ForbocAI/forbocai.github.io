@@ -206,8 +206,13 @@ main {
     font-size: var(--step-1);
 }
 
+/* A quiet chapter is still a chapter. Borrowing --step-2 outright made its
+   title exactly the size of the h3s inside it — 22px against 22px at 390 —
+   so the section head and its own subheads tied and the tier vanished. Its own
+   step sits between the two: still plainly quieter than an ordinary h2, still
+   unmistakably above what it contains. */
 .chapter.is-quiet .chapter-head h2 {
-    font-size: var(--step-2);
+    font-size: calc(var(--step-3) * 0.88);
     max-width: 26ch;
 }
 
