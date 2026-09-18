@@ -100,10 +100,18 @@
         transparent 92%) 1;
 }
 
+/* --night-ink-faint measured 4.36:1 against the night panel — under AA for
+   19px/400 before the colonies existed, and 3.6:1 once they lit the ground
+   behind it. A disclosure label is the one piece of interface on this page a
+   reader has to find in order to get the proof, so it does not get to be the
+   faintest thing on the screen. --night-ink-soft clears AA with room to spare
+   even where a colony is brightest. Gated by .dream-loop/nightcontrast.mjs,
+   which measures rendered pixels — computed backgroundColor is transparent
+   over a gradient and reports a false ratio. */
 .chapter-night .deeper summary,
 .turn-band .deeper summary,
 .deeper-night summary {
-    color: var(--night-ink-faint);
+    color: var(--night-ink);
 }
 
 .chapter-night .deeper summary:hover,

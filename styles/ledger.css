@@ -124,13 +124,73 @@
 
 .nightfall {
     position: relative;
-    background: var(--night-bg);
+
+    /* The night was a single flat fill, and that is the whole reason it
+       measured 86-96% one hue: the cold half of the lighting model existed
+       only on sigils and chapter marks, which are 2.6rem glyphs — a decoration,
+       not a source. A second source needs AREA, which means it has to light
+       ground. See the colonies on .nightfall .chapter below. */
+    background-color: var(--night-bg);
     color: var(--night-ink);
     margin-top: 14rem;
     /* The lantern halos are wider than the page on purpose. Clip only the
        horizontal axis, so light still spills up into the sunset and down into
        the footer without the halos widening the document. */
     overflow-x: clip;
+}
+
+/* The colonies.
+
+   A colony belongs to a SECTION, not to the page. Laying the field on
+   .nightfall with repeating vertical periods could not cover it: sections here
+   run from 572px to 3962px tall, so any period long enough to be atmospheric
+   left short sections sitting in the gaps. Two attempts proved it — at
+   2600/3390/2130 #roadmap fell in a hole at 93% single-hue, and tightening to
+   1870/2330/1610 fixed #roadmap and dropped #investors to 0.16%. Chasing the
+   numbers was moving the hole around, not closing it.
+
+   Tiled inside the section rather than placed once in it: sections run 572px
+   to 3962px tall, so a single placement at a percentage of the section put the
+   colony 1,865px down a tall one — below the fold of the screen a reader
+   arrives on. A tile gives a short section one and a tall section several,
+   with no number to tune per section.
+
+   Variation is in the tile's own height and the position WITHIN it, never in a
+   negative offset. An offset shifts the whole sequence out of the section: at
+   -520px with a 1180px tile, #roadmap — 841px tall — had its colony land at
+   y=-1 and the next one at 1179, so an 841px section sat between two pools and
+   measured 97% single-hue. Every placement here lands inside 560px of a
+   section's top, which is inside the shortest section on the page. They sit toward the margins — where overgrowth
+   would be, and where prose does not reach — so warm light is still MADE in
+   the middle where the reading is, and cold light is GROWN from the edges in.
+
+   Three placements on a 3-cycle against nine sections, so the pattern does not
+   line up with the chapter rhythm and no two neighbours share a side. */
+.nightfall .chapter {
+    background-repeat: repeat-y;
+    background-size: 100% var(--colony-span, 1400px);
+    background-image: radial-gradient(760px 640px at var(--colony-x) var(--colony-ty),
+        color-mix(in srgb, var(--colony-hue) 16%, transparent) 0%,
+        color-mix(in srgb, var(--colony-hue) 6%, transparent) 42%,
+        transparent 70%);
+    --colony-hue: var(--biolume-core);
+    --colony-x: 1%;
+    --colony-span: 1400px;
+    --colony-ty: 40%;
+}
+
+.nightfall .chapter:nth-of-type(3n+2) {
+    --colony-hue: var(--spore);
+    --colony-x: 99%;
+    --colony-span: 1750px;
+    --colony-ty: 30%;
+}
+
+.nightfall .chapter:nth-of-type(3n) {
+    --colony-x: 5%;
+    --colony-span: 1180px;
+    --colony-ty: 34%;
+}
 }
 
 /* Dusk: the parchment above dissolving into moss. */
