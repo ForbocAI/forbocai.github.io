@@ -79,7 +79,7 @@
        the fold by construction rather than by a number I measured once. The
        min() is what makes it a guarantee: whichever of width or height is
        scarcer wins. */
-    --step-5: clamp(2.05rem, min(1.6rem + 3.4vw, 0.4rem + 6.6vh), 5.2rem);
+    --step-5: clamp(1.8rem, min(1.5rem + 3.2vw, 0.3rem + 6.4vh), 5.2rem);
 
     --measure: 66ch;
     --measure-tight: 46ch;

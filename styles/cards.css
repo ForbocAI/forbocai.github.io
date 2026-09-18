@@ -23,7 +23,7 @@
    reads as one motion at a glance instead of six stacked rows. */
 .servitor-cognition {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
     gap: 0.9rem;
     margin: 1.6rem 0 0;
     padding: 0;
@@ -33,7 +33,7 @@
 
 .character-intelligence-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
     gap: 1rem;
     margin-top: 2.4rem;
 }
@@ -94,7 +94,7 @@
    who owns what, divided rather than boxed. */
 .model-hierarchy {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
     margin: 1.6rem 0 2rem;
     border-radius: var(--radius-sm);
     background: var(--surface-day);
@@ -162,7 +162,7 @@
    Reconstructed against .dream-loop/r26-deck/slide-07.png. */
 .command-boundary {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
     gap: 2.1rem;
     margin: 1.5rem 0 0;
     padding: 0;
@@ -250,7 +250,7 @@
    Reconstructed against .dream-loop/r26-deck/slide-04.png. */
 .decision-pair {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
     gap: 1rem;
     margin: 1.2rem 0 0;
 }

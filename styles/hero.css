@@ -278,3 +278,27 @@
 .hero-buttons-lead {
     margin: 0 0 clamp(1.1rem, 2vw, 1.5rem);
 }
+
+
+/* The smallest phone still in common use. Everything above already scales, so
+   this only has to stop the deck and the ask spending lines they do not have. */
+/* The smallest screens still in common use — a 320x568 phone, or any window
+   shorter than 600px. Measured there, the promise line was fine and its gloss
+   was seven lines and 228px, which is what pushed the ask off the fold. The
+   three beats ARE the promise; the sentence explaining them is the first thing
+   that can go when there is no room, and it is still one scroll away. */
+@media (max-height: 600px), (max-width: 360px) {
+    .hero-gloss { display: none; }
+
+    .kicker { font-size: 0.8125rem; }
+
+    .hero-potion {
+        font-size: var(--step-1);
+        margin-bottom: 0.7rem;
+    }
+
+    .hero-buttons-lead {
+        gap: 0.5rem 1rem;
+        margin-bottom: 0.9rem;
+    }
+}

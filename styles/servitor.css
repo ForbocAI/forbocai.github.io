@@ -25,7 +25,7 @@
 
 .plate-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
     gap: 1px;
     background: var(--day-rule);
     border: 1px solid var(--day-rule);
@@ -88,7 +88,7 @@
 /* Can and cannot are a real opposition, so they are set as one, divided. */
 .servitor-pair {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
     gap: clamp(2rem, 5vw, 3.5rem);
     margin-top: clamp(2.5rem, 5vw, 3.5rem);
     padding-top: clamp(1.75rem, 3vw, 2.5rem);
