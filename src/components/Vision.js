@@ -22,11 +22,11 @@ export const Vision = () => {
                 </div>
             </header>
 
-            <p class="soul-market"><strong>That habit is <a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">$188&nbsp;billion</a> wide.</strong> The people are the one surface of a game nobody has finished, and they are the one studios pay the most to fake.</p>
+            <p class="soul-market"><strong>The people are the one surface of a game nobody has finished, and the one studios pay the most to fake.</strong> That spend is already in the building, already annual, and it buys branches that a player walks one path through. It has nowhere else to go.</p>
 
             ${Deeper({
-                summary: 'How we are reading that number',
-                body: `<p class="soul-market">As the whole medium, not an addressable slice, and we will not pretend a share of it. <a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo</a> puts it at roughly $188&nbsp;billion in 2025 heading toward $205&nbsp;billion in 2026; what it evidences is the size of the room, not our position in it. What counts as a billable judgment gets bound in the release contract, and that contract is gate four — it goes live with a public price attached, not before.</p>`,
+                summary: 'The size of that room, and how we read it',
+                body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium, not an addressable slice, and we will not pretend a share of it — it evidences the size of the room, not our position in it. What counts as a billable judgment gets bound in the release contract, and that contract is gate four: it goes live with a public price attached, not before.</p>`,
             })}
         </div>
     </section>

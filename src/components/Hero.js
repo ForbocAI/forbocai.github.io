@@ -12,7 +12,9 @@ export const Hero = () => {
             <div class="hero-copy">
                 <p class="kicker">ForbocAI — the NPC language model company</p>
                 <h1>The next great language model is a person in your game.</h1>
-                <p class="hero-premise"><strong>Every other surface of a game came alive. The people did not.</strong> They still run out of script the moment a player asks something nobody wrote, which is why a cast of a hundred sounds like one actor doing accents. That is ending with or without you. The only thing still open is what arrives — an ungoverned voice wearing your character's name, or someone who belongs to your world.</p>
+                <p class="hero-premise"><strong>Every other surface of a game came alive. The people did not.</strong> They still run out of script the moment a player asks something nobody wrote, which is why a whole cast sounds like one actor doing accents.</p>
+                <p class="hero-turn"><strong>That ended.</strong></p>
+                <p class="hero-premise">Tonight, in our worlds, a language model with no self of its own is answering as someone a writer authored — holding what a player earned, weighing what it costs her, and deciding. The only thing still open is whose cast it holds next.</p>
                 <figure class="maeve-scene hero-maeve-glimpse">
                     <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
                     <figcaption>The storm is the safe opening. Her brother's letter is the judgment.</figcaption>
@@ -20,7 +22,7 @@ export const Hero = () => {
                 <p class="hero-lead"><strong>Everyone else is making the model more itself. We took the self out.</strong> The ForbocAI NPC LM Servitor™ has no self to defend, so the person your writers authored is the one who answers — reasoning past the end of your script and deciding as her. Not a line retrieved. A judgment made, in the moment, by someone.</p>
                 <p class="hero-engines"><strong>The ForbocAI NPC Protocol is how she enters your world without being able to change it.</strong> She decides like a person and she cannot move your state. The model is the invention; the Protocol is what makes it safe to ship.</p>
                 <div class="hero-buttons">
-                    <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
+                    <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Send her tonight</a>
                     <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
                 </div>
             </div>

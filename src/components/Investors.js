@@ -11,15 +11,16 @@ export const Investors = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛞ</span>
                 <div>
                     <h2>Someone has to build the layer they think with</h2>
-                    <p class="chapter-lead"><strong>Games are going to be full of people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earned a yes. Nobody is deciding whether that happens; it is a spring already running. The only open question is who builds the layer they think with.</p>
+                    <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earned a yes. Nobody voted on this and nobody scheduled it, and it is not waiting for anyone's roadmap. The only open question is who builds the layer they think with.</p>
                 </div>
             </header>
 
             <div class="investors-body">
                 <p><strong>You ran the experiment yourself, on your own titles, without meaning to.</strong> The characters players quote back to you were never the ones with the most lines. You proved the thesis before anyone pitched it to you.</p>
                 <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built and you can read it today. The model answers today. What it costs and what it proves are on the list, numbered, in the open.</p>
-                <p><strong>Be exact about what is hard to copy.</strong> Not the Protocol — a typed action boundary is a fortnight for a good team. The model. A general model arrives with a homeland it will defend, and no prompt takes that back out. <strong>Selflessness is weights, not a prompt.</strong></p>
-                <p>A rival can start next quarter. What they will be measured by is our instrument — published before the results, open to their model on the same terms, on purpose. Whoever writes a category's measurement writes its purchasing criteria.</p>
+                <p><strong>The Protocol is a fortnight of work for a good team, and we are not charging for it.</strong> Copy it. Ship it. Name it after yourself. We would rather every character in the industry were unable to touch game state than be the only ones who are.</p>
+                <p><strong>The moat was never the boundary.</strong> A general model arrives with a homeland it will defend, and no prompt takes that back out. <strong>Selflessness is weights, not a prompt.</strong> Every improvement our competitors ship makes their problem worse: a better general model is a stronger self to talk over, and there is no version of their roadmap that arrives where we are standing.</p>
+                <p>What they will be measured by is our instrument — published before the results, handed to their model on identical terms, on purpose. Whoever writes a category's measurement writes its purchasing criteria.</p>
                 <figure class="investor-portal">
                     <span class="portal-window" aria-hidden="true">
                         <img src="Lanternbough.png" alt="" width="640" height="640">
@@ -29,7 +30,8 @@ export const Investors = () => {
             </div>
 
             <p class="investors-takeaway"><strong>You have been paying for this by accident.</strong> The one your players quote made a decision nobody wrote, and no budget line can order another.</p>
-            <p class="investors-takeaway">The first three studios through this door are not customers. They are the casts the measurement is written on. Bring us one character; we will take her to the moment your tree ends. Eighteen months later a player will get every detail of that scene wrong, and still get her right.</p>
+            <p class="investors-takeaway">A handful of studios come through this door, and then it is a hallway like any other. In here, a character refuses a player tonight for a reason she can name and hands you the reason she had. Out there, it is still a tree you pay to build whole so one player can walk one path through it. You are reading this from one side of that.</p>
+            <p class="investors-takeaway">Send us one character. We will take her to the moment your tree ends. Eighteen months later a player gets every detail of that scene wrong, and still gets her right.</p>
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20will%20remember" class="btn btn-primary">Bring the character players will remember</a>

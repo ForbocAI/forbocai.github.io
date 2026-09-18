@@ -37,8 +37,8 @@ export const Mission = () => {
                 <p class="mission-turn-punch">A character may reason beyond the script. Only her world can make the consequence real.</p>
             </div>
 
-            <p class="mission-felt"><strong>Picture it at full strength:</strong> a cast of four hundred and not one of them repeating; a captain who disobeys because the loyalty she was authored with outweighed the order in front of her; a town that receives a player differently in the spring because of the winter they walked away from. Servitor™ supplies the decision; your faction system still rules what it costs. That world is not a forecast — the model at the centre of it is reasoning tonight.</p>
-            <p class="mission-felt">Some studio is going to ship the first cast that answers the question nobody wrote. That game becomes the reference for a decade, and every trailer after it gets measured against the scene where a character said no for a reason the player could name. You have the writers for that. What you have never had is a way to get it on purpose.</p>
+            <p class="mission-felt"><strong>Full strength is a whole town and no two of them alike:</strong> a captain who disobeys because the loyalty she was authored with outweighed the order in front of her; a town that receives a player differently in the spring because of the winter they walked away from. Servitor™ supplies the decision; your faction system still rules what it costs. That world is not a forecast — the model at the centre of it is reasoning tonight.</p>
+            <p class="mission-felt">The first cast that answers the question nobody wrote is being chosen now. That game becomes the reference for a decade, and every trailer after it gets measured against the scene where a character said no for a reason the player could name — yours included, whether or not you are in it. You have the writers for that. What you have never had is a way to get it on purpose.</p>
         </div>
     </section>
     `;

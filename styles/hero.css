@@ -232,3 +232,15 @@
     }
 }
 
+
+/* The turn. One line, alone, between the diagnosis and the arrival — the
+   sentence the whole page pivots on, which was previously the third clause of
+   a body paragraph. It is set as a statement because it is one. */
+.hero-turn {
+    margin: 1.4rem 0;
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--day-ink);
+}
