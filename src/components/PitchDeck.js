@@ -13,8 +13,7 @@ const slides = [
         title: 'The next great language model is a person in your game.',
         content: `
             <div class="title-slide">
-                <p class="proof-label">The ForbocAI NPC LM Servitor™</p>
-                <p class="subtitle">The intelligence behind the living cast.</p>
+                <p class="subtitle">The ForbocAI NPC LM Servitor™ — the intelligence behind the living cast.</p>
                 <p>Built for the moment a character must remember the evidence, reason through motive, decide as herself and propose what happens next.</p>
                 <p class="impact-statement"><strong>One character who decides. That is where a living cast starts.</strong></p>
                 <p class="deck-meta">The category window — September 2026</p>
@@ -28,12 +27,12 @@ const slides = [
         content: `
             <div class="problem-grid">
                 <div class="problem-column">
-                    <p class="proof-label">The authored edge</p>
+                    <p class="proof-label">Where the script ends</p>
                     <h3>The branch stops. The player does not.</h3>
                     <p>Players ask what no writer anticipated, arrive in the wrong order and care about the character the script treated as scenery.</p>
                 </div>
                 <div class="problem-column">
-                    <p class="proof-label">The living edge</p>
+                    <p class="proof-label">Where she begins</p>
                     <h3>The character meets them there.</h3>
                     <p>Identity survives the unscripted moment. Memory supplies evidence. Motive gives it weight. Judgment creates the next possibility.</p>
                 </div>
@@ -66,7 +65,7 @@ const slides = [
         title: 'Meet The ForbocAI NPC LM Servitor™.',
         content: `
             <div class="paired-proof model-reveal">
-                <p class="proof-label">Maeve faces the choice nobody wrote</p>
+                <p class="proof-label">The choice nobody wrote</p>
                 <p>A player asks a question no writer anticipated. Servitor™ gathers who she is, what this player made matter and what her world permits — then returns one judgment: the line, the reasoning behind it, and a structured action the game is free to refuse. One call. Not a branch that was waiting.</p>
                 <div class="decision-pair">
                     <article>
@@ -226,7 +225,7 @@ const slides = [
         title: 'The first three worlds are the whole thesis.',
         content: `
             <div class="threshold-call">
-                <p class="proof-label">The category window is open</p>
+                <p class="proof-label">The window</p>
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships the first one decides what this category means. Every future character deserves a world that remembers it, and the veil has opened on a future too radiant to forget.</p>
                 <p class="threshold-line">Those three settle it — and to be plain about what that means, they are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against. That is the conversation, and it starts now.</p>
             </div>
