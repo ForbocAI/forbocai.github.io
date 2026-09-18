@@ -342,6 +342,18 @@
     border-top: 1px solid color-mix(in srgb, var(--honey) 26%, transparent);
 }
 
+/* The answer block is a returned judgment like the two above it, so it sits in
+   the same recessed pocket rather than running bare across the section. */
+.turn-answer .turn-code {
+    max-width: 78ch;
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
+    background: color-mix(in srgb, #12180f 58%, transparent);
+    font-size: 0.78125rem;
+}
+
 .turn-answer .turn-note {
     max-width: 62ch;
     margin-top: 0.9rem;
