@@ -164,7 +164,7 @@ const slides = [
         content: `
             <div class="world-expansion" aria-label="Expansion through a game world">
                 <article><span>01</span><strong>One character</strong><p>An innkeeper decides what a latecomer is owed.</p></article>
-                <article><span>02</span><strong>A living cast</strong><p>Her brother, the miner she covered for, the captain who owes her nothing.</p></article>
+                <article><span>02</span><strong>A living cast</strong><p>Her brother, the miner she covered for, the neighbour who wants the room she just gave away.</p></article>
                 <article><span>03</span><strong>Systems answer back</strong><p>A refusal reaches your faction system as a decision, not a flag.</p></article>
                 <article><span>04</span><strong>An inhabited world</strong><p>The player goes somewhere you never wrote. The cast is already there.</p></article>
             </div>
@@ -217,7 +217,7 @@ const slides = [
                     <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
                 </div>
             </div>
-            <p class="team-note">Four proofs carry this company. Two are working today in our own evaluation worlds — the same contract in TypeScript and in Unreal, and a protocol that fails closed end to end. Two are owed: a character who stays herself under held-out evaluation and live play; a protocol that fails closed from the CLI through to the model; the same contract in TypeScript and in Unreal; and a harness that explores a level and returns findings a team can act on.</p>
+            <p class="team-note">Four proofs carry this company. Two work today in our own evaluation worlds: a protocol that fails closed end to end, and the same contract in TypeScript and in Unreal. Two are owed: a character who stays herself under held-out evaluation and live play, which is gate thirteen; and a harness that explores a level and returns findings an outside team can act on, which is gate ten.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },
@@ -230,7 +230,7 @@ const slides = [
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships the first one decides what this category means.</p>
                 <p class="threshold-line">Those three settle it — and to be plain about what that means, they are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against. That is the conversation, and it starts now.</p>
             </div>
-            <p class="ask-note">Twenty-three gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
+            <p class="ask-note">Twenty-four gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Be one of the first three integrations</a>
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-ghost">Investors: come inside</a>
