@@ -1,3 +1,4 @@
+import { Deeper } from './Deeper.js';
 import { Sigil, ChapterMark } from './Sigil.js';
 
 /**
@@ -27,7 +28,9 @@ export const Room = () => {
                     <h3 id="turn-room-title">Nobody wrote a branch for what the miner does while she refuses.</h3>
                     <p>Brannoc is at the end of the counter. The player covered his room in the autumn when he came up short, and he has never mentioned it. He is close enough to hear Maeve say no.</p>
                 </div>
-                <div class="turn-counterfactual-pair">
+                ${Deeper({
+                    summary: 'The document your writer handed us, and what he did about it',
+                    body: `<div class="turn-counterfactual-pair">
                     <article>
                         <span class="sigil-pair">${Sigil({ name: 'Brannoc, miner, Lanternbough', size: 40, tone: 'creek' })} What your writer handed us</span>
                         <pre class="turn-code"><code>const brannoc = {
@@ -51,15 +54,20 @@ export const Room = () => {
   action: { type: 'speak_to', payload: { target: 'maeve' } },
 }</code></pre>
                     </article>
-                </div>
+                </div>`,
+                })}
+
                 <div class="turn-answer">
                     <p class="turn-label">And then she answers her own lodger</p>
-                    <pre class="turn-code"><code>// legalActions: ['offer_item', 'refuse'] — the same two, again
+                    ${Deeper({
+                        summary: 'The call she answered with',
+                        body: `<pre class="turn-code"><code>// legalActions: ['offer_item', 'refuse'] — the same two, again
 {
   dialogue: "Then I owe them a bed, not a letter. The corner room is yours tonight. Do not ask me for the drawer again.",
   reasoningText: "Brannoc would not say that in my house unless it were true, and he would not say it at all unless he thought I was being hard. I am not. The letter is still my brother's and that has not moved. But what this one is owed just got larger than I knew, and I have a room.",
   action: { type: 'offer_item', payload: { item: 'corner_room_key' } },
-}</code></pre>
+}</code></pre>`,
+                    })}
                     <p class="turn-note"><strong>Nothing in that call established that the corner room exists, is empty, or is hers to give.</strong> She reasons from the evidence you send, and evidence you do not send is evidence she can reach past. Your validation rules refuse the key or they do not. Clause twelve, again.</p>
                     <p class="turn-note"><strong>She held.</strong> Leaned on publicly, in her own house, by a lodger whose word carries — and the letter is still sealed, because her writer typed <em>the letter does not open on a debt</em> and that is not a thing the room can talk her out of. What moved is what she paid instead. She found the debt somewhere else and settled it out of the inn.</p>
                 </div>
