@@ -13,7 +13,7 @@ export const Technology = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᚠ</span>
                 <div>
-                    <h2>Every game system becomes alive through the people inside it</h2>
+                    <h2>Every game system comes alive through the people inside it</h2>
                     <p class="chapter-lead">Combat creates danger. Quests create direction. Economies create pressure. Character Intelligence turns each one into motive, loyalty, betrayal and choice.</p>
                 </div>
             </header>

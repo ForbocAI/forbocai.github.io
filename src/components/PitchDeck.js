@@ -135,7 +135,7 @@ const slides = [
                 <li class="boundary-stage is-contract">
                     <span>Protocol law</span>
                     <h2>Separate rules hold</h2>
-                    <p>The reply meets its contract. The action meets studio-authored policy.</p>
+                    <p>The reply meets its contract; that check is mechanical, and it is not a lore check — gate twelve. The action meets studio-authored policy.</p>
                 </li>
                 <li class="boundary-stage is-studio">
                     <span>Game truth</span>
@@ -152,7 +152,7 @@ const slides = [
         content: `
             <ol class="arrival-contract" aria-label="Maeve's choice enters canon">
                 <li><span>Judgment</span><strong>Maeve keeps the confidence.</strong><p>Identity, memory and motive weigh a promise to her brother against a debt to a stranger.</p></li>
-                <li><span>Proposal</span><strong>Servitor™ returns the refusal.</strong><p>Dialogue, rationale and <code>refuse</code> arrive together for inspection.</p></li>
+                <li><span>Proposal</span><strong>Servitor™ returns the refusal.</strong><p>Dialogue, the reasoning behind it and the <code>refuse</code> action arrive together, for the game to inspect. That the stated reason is the deciding one is gate fifteen.</p></li>
                 <li><span>Canon</span><strong>Your game accepts—or overrides.</strong><p>The letter stays sealed, and that consequence can become evidence next time.</p></li>
             </ol>
             <p class="arrival-answer"><strong>She can choose her next move.</strong> Only the game can make it history.</p>
@@ -217,7 +217,7 @@ const slides = [
                     <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
                 </div>
             </div>
-            <p class="team-note">Four proofs carry this company, and each belongs to someone here: a character who stays herself under held-out evaluation and live play; a protocol that fails closed from the CLI through to the model; the same contract in TypeScript and in Unreal; and a harness that explores a level and returns findings a team can act on.</p>
+            <p class="team-note">Four proofs carry this company, and this is the bench that owes them: a character who stays herself under held-out evaluation and live play; a protocol that fails closed from the CLI through to the model; the same contract in TypeScript and in Unreal; and a harness that explores a level and returns findings a team can act on.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },

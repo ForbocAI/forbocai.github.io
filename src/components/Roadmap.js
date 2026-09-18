@@ -24,7 +24,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">In evaluation now</p>
                         <h3>Receive one bounded judgment</h3>
-                        <p>Servitor™ Character Intelligence through TypeScript and native Unreal Engine 5 paths, with studio-controlled memory, structured action proposals and rules that keep every consequence inside the game.</p>
+                        <p>Servitor™ Character Intelligence through TypeScript and native Unreal Engine 5 paths, with studio-controlled memory, structured action proposals and rules that keep every state change inside the game.</p>
                     </div>
                 </li>
                 <li class="timeline-item is-active">
@@ -32,7 +32,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Ghost reports in development</p>
                         <h3>See the world before players do</h3>
-                        <p>Ghost is the harness that already drives our own test worlds; the producer-facing reports on dead ends, unreachable content and social-loop coverage are the part in development. No studio outside ForbocAI has run it at all, so the only producers reading anything today are ours. Production qualification controls release.</p>
+                        <p>Ghost is the harness that already drives our own test worlds; the producer-facing reports on dead ends, unreachable content and social-loop coverage are the part in development — gate ten. No studio outside ForbocAI has run it at all, so the only producers reading anything today are ours. Production qualification controls release.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
