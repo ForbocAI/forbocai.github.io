@@ -26,9 +26,9 @@ export const Investors = () => {
                 <p><strong>The moat was never the boundary.</strong> It is the model, and what is in it cannot be prompted back out. <strong>Selflessness is weights, not a prompt.</strong></p>
                 ${Deeper({
                     summary: 'What a studio gets if it trains its own instead',
-                    body: `<p>A studio with a budget can fine-tune an open model on its own character documents, and some will. What they get is that studio's cast, on that studio's data, frozen at that studio's last training run — a house voice of their own making, and a machine-learning team to staff forever. A cast trained on one studio's documents overfits to that studio's house voice, which is the same defect as a general model's homeland, only smaller and harder to see from inside. We are the layer underneath every cast, improving for all of them at once, measured against a standard their own competitors are graded on.</p>`,
+                    body: `<p>A studio with a budget can fine-tune an open model on its own documents, and some will. What they get is that studio's cast, frozen at that studio's last training run, with a machine-learning team to staff forever — and a house voice that overfits to itself, which is a general model's homeland made smaller and harder to see from inside. We are the layer underneath every cast, improving for all of them at once.</p>`,
                 })}
-                <p>What they will be measured by is our instrument — published before the results, handed to their model on identical terms, on purpose. Whoever writes a category's measurement writes its purchasing criteria.</p>
+                <p>Measured against our instrument — published before the results, handed to their model on identical terms, on purpose. Whoever writes a category's measurement writes its purchasing criteria.</p>
                 <figure class="investor-portal">
                     <span class="portal-window" aria-hidden="true">
                         <img src="Lanternbough.png" alt="" width="640" height="640">

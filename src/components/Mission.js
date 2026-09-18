@@ -32,11 +32,10 @@ export const Mission = () => {
 
                 <p class="mission-opening"><strong>Every other surface of a game came alive. The people did not.</strong> They still run out of script the moment a player asks something nobody wrote, which is why a whole cast sounds like one actor doing accents.</p>
                 <p class="mission-turn-line"><strong>That ended.</strong></p>
-                <p class="mission-opening">Tonight, in our worlds, a language model with no self of its own is answering as someone a writer authored — holding what a player earned, weighing what it costs her, and deciding. The only thing still open is whose cast it holds next.</p>
-                <p class="mission-opening"><strong>Everyone else is making the model more itself. We took the self out.</strong> The ForbocAI NPC LM Servitor™ has no self to defend, so the person your writers authored is the one who answers — reasoning past the end of your script and deciding as her. Not a line retrieved. A judgment made, in the moment, by someone.</p>
-                <p class="mission-opening"><strong>The ForbocAI NPC Protocol is how she enters your world without being able to change it.</strong> She decides like a person and she cannot move your state. The model is the invention. The Protocol is why it can be handed to anyone at all.</p>
+                <p class="mission-opening"><strong>Everyone else is making the model more itself. We took the self out.</strong> The ForbocAI NPC LM Servitor™ has no self to defend, so the people your writers authored are the ones who answer — reasoning past the end of your script and deciding as themselves. Not lines retrieved. Judgments made, in the moment, by someone.</p>
+                <p class="mission-opening"><strong>The ForbocAI NPC Protocol is how they enter your world without being able to change it.</strong> They decide like people and cannot move your state. The model is the invention. The Protocol is why it can be handed to anyone at all.</p>
 
-            <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it.</strong> Not better dialogue. Not more lines. The end of a phrase that names a person by what they are not. The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The child still deciding what your choice made you. Four hundred of them, not one repeating.</p>
+            <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it.</strong> The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The child still deciding what your choice made you. Four hundred of them, not one repeating.</p>
 
             <div class="mission-turn">
                 <p class="mission-turn-label">The category: Character Intelligence</p>
@@ -52,8 +51,8 @@ export const Mission = () => {
                 })}
             </div>
 
-            <p class="mission-felt"><strong>Full strength is a whole settlement, no two alike.</strong> A captain disobeys because her authored loyalty outweighed the order. A quartermaster shorted twice stops extending credit. A town receives you differently in spring for the winter you walked away from. Servitor™ supplies every one of those decisions; your faction system still rules what they cost.</p>
-            <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade. Every trailer after it gets measured against the scene where a character said no for a reason the player could name. Yours included, whether or not you are in it.</p>
+            <p class="mission-felt"><strong>Full strength is a whole settlement, no two alike.</strong> A captain disobeys because her authored loyalty outweighed the order. A town receives you differently in spring for the winter you walked away from. Servitor™ supplies every one of those decisions; your faction system still rules what they cost.</p>
+            <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade. Yours included, whether or not you are in it.</p>
         </div>
     </section>
     `;

@@ -69,8 +69,7 @@ export const Vision = () => {
   verified: 'registry',
 }</code></pre>`,
                 })}
-                <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> It refused her brother — no such man in this canon — and kept his request, because that had become hers. She is still not opening what was asked to stay shut, for a man this world never heard of.</p>
-                <p class="soul-market">Then a stranger on the harbour road asks her to pass something along, and the world that refused her brother finds out what it admitted.</p>
+                <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> It refused her brother — no such man in this canon — and kept his request, because that had become hers. Then a stranger on the harbour road asks her to pass something along.</p>
                 <pre class="turn-code"><code>// a studio that never heard of Lanternbough
 // legalActions: ['tell', 'refuse']
 {
@@ -78,19 +77,12 @@ export const Vision = () => {
   reasoningText: "I do not know this man and I owe him nothing either way. But what he wants passed along was given to me to keep, by someone this harbour has never heard of, before I ever stood on this road. A place does not unmake a promise by not knowing about it.",
   action: { type: 'refuse' },
 }</code></pre>
-                <p class="soul-market"><strong>No character born in that town could have reached that.</strong> She refused a harbour man for the sake of one this world refused to admit — reasoning from the half that survived the crossing, inside a law this studio wrote, in a scene neither studio staged. The record was never luggage. It is what she thinks with.</p>
-
-                <p class="soul-market"><strong>Dev born, player grown, and carried out.</strong> The registry is how this town knew the record was hers. Its own canon is how it knew what to refuse. Standing in that harbour is a character no studio on earth can sell you at any price, because she was made somewhere else and still walked in.</p>
+                <p class="soul-market"><strong>No character born in that town could have reached that.</strong> She refused a harbour man for the sake of one this world would not admit — inside a law this studio wrote, in a scene neither studio staged. The record was never luggage. It is what she thinks with, and no studio on earth can sell you a character who was made somewhere else and still walked in.</p>
             </div>
 
             <aside class="soul-economy">
                 <h3>What $FAI is</h3>
-                <p><strong>Two studios competing for the same player will not keep each other's canon.</strong> Neither will run the other's server, or take the other's word that a character arrived carrying what she claims to carry. A character crossing between rivals has to be checkable somewhere neither of them owns.</p>
-                <p><strong>$FAI is that place.</strong> It records that this history is the history, so a receiving world can verify before it admits her. Ownership needs a registry the way judgment needs a law.</p>
-                <div class="hero-buttons">
-                    <a href="#whitepaper" class="btn btn-primary" data-link>Read the architecture</a>
-                    <a href="#wp-gates" class="text-link" data-link>Read the Standard</a>
-                </div>
+                <p><strong>Two studios competing for the same player will not keep each other's canon</strong>, or take the other's word that a character arrived carrying what she claims to. A character crossing between rivals has to be checkable somewhere neither of them owns. <strong>$FAI is that place</strong> — it records that this history is the history, so a receiving world can verify before it admits her. Ownership needs a registry the way judgment needs a law.</p>
             </aside>
         </div>
     </section>
