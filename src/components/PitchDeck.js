@@ -37,7 +37,7 @@ const slides = [
                     <p>Identity survives the unscripted moment. Memory supplies evidence. Motive gives it weight. Judgment creates the next possibility.</p>
                 </div>
             </div>
-            <p class="impact-statement">The defining game worlds contain casts capable of judgment—not merely more lines.</p>
+            <p class="impact-statement">The worlds that define the next decade will be the ones whose people can judge — not the ones with more lines.</p>
         `
     },
     {
@@ -48,12 +48,12 @@ const slides = [
                 <article class="problem-column">
                     <p class="proof-label">Conversation</p>
                     <h3>What words come next?</h3>
-                    <p>Generation extends the exchange. Memory can extend what the system mentions.</p>
+                    <p>Generation continues the exchange. Memory only widens what the system can mention.</p>
                 </article>
                 <article class="problem-column is-character-intelligence">
                     <p class="proof-label">Character Intelligence</p>
                     <h3>What would this person choose?</h3>
-                    <p>Servitor™ is trained around the unit games actually need: one judgment carrying identity, evidence, motive, reasoning, dialogue and structured intent through the same decision.</p>
+                    <p>A general model reads a persona as instructions to perform, and performs itself through them. Servitor™ has no self to perform: one judgment carrying identity, evidence, motive, reasoning, dialogue and structured intent through the same decision.</p>
                 </article>
             </div>
             <p class="impact-statement"><strong>General conversation ends with words.</strong> Character Intelligence begins where identity, consequence and action meet.</p>
@@ -107,7 +107,7 @@ const slides = [
         title: 'One model. A cast of distinct minds.',
         content: `
             <div class="creative-value-grid cast-minds">
-                <article><span>Identity</span><h3>Someone—not anyone</h3><p>Name, history, values and commitments establish who is choosing.</p></article>
+                <article><span>Identity</span><h3>Someone — not anyone</h3><p>Name, history, values and commitments establish who is choosing.</p></article>
                 <article><span>Relationship</span><h3>This player matters differently</h3><p>Shared history changes the weight of the same world evidence.</p></article>
                 <article><span>Motive</span><h3>Conflict takes sides</h3><p>Loyalties and duties remain active when there is no clean answer.</p></article>
                 <article><span>Decision</span><h3>Authorship stays alive</h3><p>Servitor™ carries the person into the unforeseen instead of replacing her.</p></article>
@@ -152,7 +152,7 @@ const slides = [
             <ol class="arrival-contract" aria-label="Maeve's choice enters canon">
                 <li><span>Judgment</span><strong>Maeve keeps the confidence.</strong><p>Identity, memory and motive weigh a promise to her brother against a debt to a stranger.</p></li>
                 <li><span>Proposal</span><strong>Servitor™ returns the refusal.</strong><p>Dialogue, the reasoning behind it and the <code>refuse</code> action arrive together, for the game to inspect. That the stated reason is the deciding one is gate fifteen.</p></li>
-                <li><span>Canon</span><strong>Your game accepts—or overrides.</strong><p>The letter stays sealed, and that consequence can become evidence next time.</p></li>
+                <li><span>Canon</span><strong>Your game accepts — or overrides.</strong><p>The letter stays sealed, and that consequence can become evidence next time.</p></li>
             </ol>
             <p class="arrival-answer"><strong>She can choose her next move.</strong> Only the game can make it history.</p>
         `
@@ -163,7 +163,7 @@ const slides = [
         content: `
             <div class="world-expansion" aria-label="Expansion through a game world">
                 <article><span>01</span><strong>One character</strong><p>An innkeeper decides what a latecomer is owed.</p></article>
-                <article><span>02</span><strong>A living cast</strong><p>Her brother, the miner the player covered for, the neighbour who wants the room she just gave away.</p></article>
+                <article><span>02</span><strong>A living cast</strong><p>Her brother, the miner the player covered for, the neighbor who wants the room she just gave away.</p></article>
                 <article><span>03</span><strong>Systems answer back</strong><p>A refusal reaches your faction system as a decision, not a flag.</p></article>
                 <article><span>04</span><strong>An inhabited world</strong><p>The player goes somewhere you never wrote. The cast is already there.</p></article>
             </div>
@@ -193,9 +193,9 @@ const slides = [
             <div class="business-grid model-economy">
                 <div class="business-item"><span class="business-phase">Enter</span><h4>One impossible choice</h4><p>A single scene reveals the new unit: a judgment no branch contained.</p></div>
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
-                <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
+                <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>One model holding a thousand casts with nothing in common — a Lanternbough innkeeper, a fleet commander, a child in a besieged city — and no two of them sounding like the same mind.</p></div>
             </div>
-            <p class="impact-statement">Your store never leaves you. What moves is the turn — a memory excerpt drawn from it, the persona, the world context — and excluding that from training is gate four. Until that contract is signed you have our word and not an instrument. That is a contract, not architecture. Nothing stops a company training on what crosses its own service except the contract that says it will not, which is why this is gate four and not a paragraph. What compounds is the range of worlds one decision contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. Today our range stands at our own evaluation worlds and no external studio: gate one, listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
+            <p class="impact-statement">Your store never leaves you; what moves is the turn, and keeping it out of training is gate four. What compounds is the range of worlds one contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. Today that range is our own evaluation worlds and no external studio: gate one, listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
         `
     },
     {
@@ -226,8 +226,9 @@ const slides = [
         content: `
             <div class="threshold-call">
                 <p class="proof-label">The window</p>
-                <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships first decides what this category means. Every future character deserves a world that remembers it.</p>
-                <p class="threshold-line">Those three settle it — and to be plain about what that means, they are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against. That is the conversation, and it starts now.</p>
+                <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships first decides what this category means for everyone who follows it.</p>
+                <p class="threshold-line">Those three settle it — and to be plain, they are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against.</p>
+                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> Gate one is a studio. Gates thirteen to fifteen are a character who stays herself under an evaluation someone else designed. Gate twenty-one is that evaluation published and handed to our rivals, because the party who authors a category's test authors what the category is worth. None of it asks you to believe a forecast — the model is reasoning tonight, in our own worlds. It asks whether you would rather be in the room while the law is written, or reading it afterwards.</p>
             </div>
             <p class="ask-note">Twenty-four gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
             <div class="contact-box">

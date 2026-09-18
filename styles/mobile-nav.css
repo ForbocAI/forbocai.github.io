@@ -131,7 +131,14 @@
     align-items: start;
 }
 
+/* The nav sits before .doc-body in the DOM so a screen reader and a plain-text
+   read of this brief both get the contents first; the grid puts it back on the
+   right where a reader of a long document expects the rail. */
+.doc-body { grid-column: 1; grid-row: 1; }
+
 .doc-contents {
+    grid-column: 2;
+    grid-row: 1;
     position: sticky;
     top: calc(var(--header-height) + 2rem);
     padding-left: 1.5rem;

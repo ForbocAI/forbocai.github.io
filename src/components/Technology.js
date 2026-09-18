@@ -30,7 +30,7 @@ export const Technology = () => {
                 <li class="ledger-row">
                     <div class="ledger-body">
                         <h3>Strategy with a point of view</h3>
-                        <p>A captain may disobey, a faction may fracture, and an ally may choose the costly plan because identity—not a random branch—made that decision inevitable.</p>
+                        <p>A captain may disobey, a faction may fracture, and an ally may choose the costly plan because identity — not a random branch — made that decision inevitable.</p>
                     </div>
                     <p class="ledger-fact">Tactics become personal when every decision belongs to someone.</p>
                 </li>

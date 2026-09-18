@@ -13,11 +13,21 @@ export const Whitepaper = () => {
             </header>
 
             <div class="doc-shell">
+            <nav class="doc-contents" aria-label="Contents">
+                <p class="doc-contents-label">Contents</p>
+                <ol>
+                    <li><a href="#wp-summary">Summary</a></li>
+                    <li><a href="#wp-problem">The problem</a></li>
+                    <li><a href="#wp-layer">Character Intelligence</a></li>
+                    <li><a href="#wp-souls">The Soul economy</a></li>
+                    <li><a href="#wp-roadmap">The arrival sequence</a></li>
+                </ol>
+            </nav>
             <div class="doc-body">
                 <section id="wp-summary">
                     <h2>1. Summary</h2>
                     <p>Games taught worlds to look alive. Open-ended intelligence is already inside them. The strategic question is no longer whether it arrives, but whether it lives there as an ungoverned voice or as people who can meet the unforeseen and still belong.</p>
-                    <p><strong>ForbocAI, Inc. creates Character Intelligence—the intelligence of people who belong to a world.</strong> The ForbocAI NPC LM Servitor™ interprets identity, memory, motive, relationships and world evidence to make the character judgment. The ForbocAI NPC Protocol gives Servitor™ a lawful place inside the game while the world keeps authority over every consequence. Memory is the evidence. Judgment is the intelligence. The living cast begins inside that boundary.</p>
+                    <p><strong>ForbocAI, Inc. creates Character Intelligence — the intelligence of people who belong to a world.</strong> The ForbocAI NPC LM Servitor™ interprets identity, memory, motive, relationships and world evidence to make the character judgment. The ForbocAI NPC Protocol gives Servitor™ a lawful place inside the game while the world keeps authority over every consequence. Memory is the evidence. Judgment is the intelligence. The living cast begins inside that boundary.</p>
                 </section>
 
                 <section id="wp-problem">
@@ -30,7 +40,7 @@ export const Whitepaper = () => {
                     <p>Dropping a general model into a playable system trades one failure for three:</p>
                     <ul>
                         <li><strong>Latency.</strong> A round trip that reads fine in a chat window is a broken beat in live play.</li>
-                        <li><strong>Cost.</strong> A model demo says nothing about unit economics at a shipped title's concurrency. What we can state is the shape: one character judgment is one call. The dialogue, the reasoning behind it and the structured action come back from the same attempt—not a chain of calls per line, not a re-roll to get a parseable action, not a second request to explain the first. Concurrency and unit economics are gate four; the call count per decision is not.</li>
+                        <li><strong>Cost.</strong> A model demo says nothing about unit economics at a shipped title's concurrency. What we can state is the shape: one character judgment is one call. The dialogue, the reasoning behind it and the structured action come back from the same attempt — not a chain of calls per line, not a re-roll to get a parseable action, not a second request to explain the first. Concurrency and unit economics are gate four; the call count per decision is not.</li>
                         <li><strong>Incoherence.</strong> A model that lacks inventory evidence can propose an item the player never had.</li>
                     </ul>
                     <p>These are production questions, not prompts to polish. The protocol makes the decision boundary inspectable while the commercial and performance proofs are qualified in the open.</p>
@@ -52,7 +62,7 @@ export const Whitepaper = () => {
                     <p>The reply and any proposed action are checked separately. Transport failures reject the request. A server deadline miss or a reply that fails its required rules returns a typed invalid result. Proposed actions that fail the studio's rules are not applied. None can authorize a memory write or state change, and the game owns the fallback. These checks alone do not guarantee factual accuracy — gate twelve — nor moderation or console certification, which is gate six.</p>
 
                     <h4>Entities, state, and world rules</h4>
-                    <p>An entity-component system, an object graph, or a simulation you built yourself — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world. The validation step enforces that for actions, which is why a proposal your rules reject never touches state. The reply check is mechanical and narrow: the reply must name the action she proposed, must not argue for the one refused, and must not claim a comparison the supplied evidence does not carry. It is not a lore check. A character can still state something about your world that is untrue — she reasons from the evidence you supply, which bounds what she reaches for without preventing her reaching past it — and we do not claim otherwise. That is gate twelve.</p>
+                    <p>An entity-component system, an object graph, or a simulation you built yourself — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world. The validation step enforces that for actions, which is why a proposal your rules reject never touches state. The reply check is mechanical and narrow: the reply must name the action she proposed, must not argue for an action it did not take, and must not claim a comparison the supplied evidence does not carry. It is not a lore check. A character can still state something about your world that is untrue — she reasons from the evidence you supply, which bounds what she reaches for without preventing her reaching past it — and we do not claim otherwise. That is gate twelve.</p>
 
                     <h4>Beyond dialogue</h4>
                     <p>Speech is the visible part. The same layer carries the rest of a character's cognitive surface:</p>
@@ -103,7 +113,7 @@ export const Whitepaper = () => {
                 <section id="wp-souls">
                     <h2>4. The Soul economy</h2>
                     <p class="doc-aside"><strong>$FAI is live on Solana, and the contract behind every $FAI link on this site is the one to check. Soul continuity is opt-in and in active development; neither is required for paid access to Servitor™.</strong></p>
-                    <p>A card preserves who a character is. The Soul layer is designed to carry the history a player and character made together. We are assembling the opt-in record — identity, memory, relationships and temperament — while every receiving title decides what enters. Accumulated specificity, not artificial scarcity, is the value being built.</p>
+                    <p>The Soul layer is designed to carry the history a player and character made together. We are assembling the opt-in record — identity, memory, relationships and temperament — while every receiving title decides what enters. Accumulated specificity, not artificial scarcity, is the value being built.</p>
                     <ul>
                         <li><strong>Player value.</strong> A character can retain earned specificity instead of resetting to a template at every title boundary.</li>
                         <li><strong>Studio authority.</strong> Gather, encrypt, upload, verify, restore — every participating title still chooses what its technical, moderation and rights rules admit.</li>
@@ -126,17 +136,6 @@ export const Whitepaper = () => {
                     </ul>
                 </section>
             </div>
-
-            <nav class="doc-contents" aria-label="Contents">
-                <p class="doc-contents-label">Contents</p>
-                <ol>
-                    <li><a href="#wp-summary">Summary</a></li>
-                    <li><a href="#wp-problem">The problem</a></li>
-                    <li><a href="#wp-layer">Character Intelligence</a></li>
-                    <li><a href="#wp-souls">The Soul economy</a></li>
-                    <li><a href="#wp-roadmap">The arrival sequence</a></li>
-                </ol>
-            </nav>
             </div>
 
             <footer class="doc-foot">

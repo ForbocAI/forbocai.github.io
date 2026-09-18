@@ -26,7 +26,7 @@ export const Turn = () => {
     legalActions: ['offer_item', 'refuse'],
   }),
 ).unwrap()</code></pre>
-                    <p class="turn-note"><strong>You wrote the verbs. She gave neither.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions you allowed, and what came back was the road — smaller than the letter, larger than the weather, and nowhere in your tree. The vocabulary is yours and stays yours; that is the only reason she is safe to ship. The judgment inside it was never yours to write.</p>
+                    <p class="turn-note"><strong>You wrote the verbs. You did not write what she did inside one.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions you allowed. She took the refusal — and then gave him the road anyway, a thing smaller than the letter and larger than the weather that is nowhere in your tree. The vocabulary is yours and stays yours; that is the only reason she is safe to ship. The judgment inside it was never yours to write.</p>
                     <p class="turn-note">Memory is a store your studio created and can read without us. World context and the legal action set belong to this turn. In Unreal, the equivalent entry is <code>UForbocAISubsystem::ProcessNPC</code>; Blueprint exposes <code>Process NPC</code>.</p>
                 </div>
 
@@ -60,18 +60,29 @@ export const Turn = () => {
                 <div class="turn-counterfactual-pair">
                     <article>
                         <span>Tonight</span>
-                        <strong><code>refuse</code> — the asking earned the road, not the letter. A broken promise about the thaw is still sitting between them.</strong>
+                        <p class="turn-note">One line of memory: <em>You said you would come back before the thaw. You did not.</em></p>
+                        <pre class="turn-code"><code>{
+  dialogue: "He went north. That is all I can give you tonight.",
+  reasoningText: "That earns the road. It does not earn the letter.",
+  action: { type: 'refuse', payload: { item: 'brothers_letter' } },
+}</code></pre>
                     </article>
                     <article>
-                        <span>After the player brings her brother's ring back from the north road</span>
-                        <strong><code>offer_item</code> — the evidence changed, so the judgment did. Same character, same values, different verdict.</strong>
+                        <span>Same persona. Same question. One memory changed.</span>
+                        <p class="turn-note">The player came back from the north road with her brother's ring: <em>You kept the promise, and you brought her the worst news in town.</em></p>
+                        <pre class="turn-code"><code>{
+  dialogue: "Then you already know what is in it. Sit down first.",
+  reasoningText: "He is not coming back, and this one went to find that out for me. The confidence was his to keep. It is not a wall I hold against the only person who went looking.",
+  action: { type: 'offer_item', payload: { item: 'brothers_letter' } },
+}</code></pre>
                     </article>
                 </div>
+                <p class="turn-note turn-counterfactual-foot">Nothing about Maeve changed. Her brother's request still stands, and she still weighs it the same way. What changed is what the player made true, and that is the whole difference between a character and a generator.</p>
             </section>
 
-            <p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localisation lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what would you have put back in?</p>
+            <p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localization lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what would you have put back in?</p>
 
-            <p class="turn-consequence"><strong>A refusal becomes the next piece of evidence too.</strong> The letter stays sealed, the world remembers that it was asked for, and Maeve enters the next encounter as the person who kept her brother's confidence—and who knows this player asked after him anyway.</p>
+            <p class="turn-consequence"><strong>A refusal becomes the next piece of evidence too.</strong> The letter stays sealed, the world remembers that it was asked for, and Maeve enters the next encounter as the person who kept her brother's confidence — and who knows this player asked after him anyway.</p>
 
             <p class="turn-refusal"><strong>The magic remains authored.</strong> Servitor™ creates the possibility; the Protocol makes it legible to the world; your game turns it into history. Eighteen months from now a player will describe this scene to a friend and get the details wrong. They will still get Maeve right.</p>
         </div>

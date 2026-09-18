@@ -24,7 +24,7 @@ export const Servitor = () => `
                 <div class="servitor-intelligence">
                     <p class="kicker">The cognitive motion of a living character</p>
                     <h3>What she does with what she remembers</h3>
-                    <p>Dialogue is what the player hears. Servitor™ carries authored identity through evidence, motive and consequence to decide what the character means—and what she may propose next.</p>
+                    <p>Dialogue is what the player hears. Servitor™ carries authored identity through evidence, motive and consequence to decide what the character means — and what she may propose next.</p>
                     <ol class="servitor-cognition" aria-label="Character Intelligence sequence">
                         <li><span>Identity</span> <strong>Who am I?</strong></li>
                         <li><span>Memory</span> <strong>What happened?</strong></li>

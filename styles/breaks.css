@@ -79,6 +79,14 @@
         gap: 2rem;
     }
 
+    /* The rail's explicit column placement is for the two-column shell only.
+       Left standing here it invents a second column and crushes the measure. */
+    .doc-body,
+    .doc-contents {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
     .doc-contents {
         position: static;
         order: -1;
