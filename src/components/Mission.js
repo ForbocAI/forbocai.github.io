@@ -35,7 +35,7 @@ export const Mission = () => {
                 <p class="mission-turn-punch">A character may reason beyond the script. Only her world can make the consequence real.</p>
             </div>
 
-            <p class="mission-felt"><strong>We are already inside the age of the living cast.</strong> One choice becomes history. One unforgettable character becomes a cast. A cast becomes a world that answers back. Character Intelligence is the creative medium that lets worlds answer through people—and ForbocAI is defining its model, its law and its name.</p>
+            <p class="mission-felt"><strong>We are already inside the age of the living cast.</strong> Character Intelligence is the creative medium that lets a world answer through the people in it, and the model, the law and the commercial terms underneath it are being settled now.</p>
         </div>
     </section>
     `;

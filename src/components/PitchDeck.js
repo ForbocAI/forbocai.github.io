@@ -140,7 +140,7 @@ const slides = [
                     <p>Accept or reject. Only game code can change state or write local memory.</p>
                 </li>
             </ol>
-            <p class="boundary-mantra">Servitor™ is the intelligence. The Protocol is the law. The game alone makes the choice real.</p>
+            <p class="boundary-mantra">The model decides. The game disposes.</p>
         `
     },
     {
@@ -193,7 +193,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
             </div>
-            <p class="impact-statement">Nothing here compounds on your data—we never receive it. What compounds is the range of worlds one decision contract holds in. Today that range is our own evaluation worlds and no external studio—that gate is listed and unclaimed—which is exactly why the first three integrations are the whole thesis: every genre the contract survives makes the next one a smaller question than the last.</p>
+            <p class="impact-statement">Nothing here compounds on your data—it arrives with the turn and we keep none of it. What compounds is the range of worlds one decision contract holds in. Today that range is our own evaluation worlds and no external studio—that gate is listed and unclaimed—which is exactly why the first three integrations are the whole thesis: every genre the contract survives makes the next one a smaller question than the last. The self is the hard part to copy: everything else about training a capable general model pushes it toward having one, and the boundary that keeps a character's judgment separable from the game's authority is not a layer you fit over a model that already has opinions.</p>
         `
     },
     {
@@ -203,7 +203,7 @@ const slides = [
             <div class="threshold-call">
                 <p class="proof-label">The category window is open</p>
                 <p class="threshold-lead">Outside, it still looks early. Inside, Character Intelligence already has its model and its laws, and the commercial standard is being bound gate by gate in public.</p>
-                <p class="threshold-line">NPC language models are already obvious from inside the game. The right to define them is being claimed now.</p>
+                <p class="threshold-line">NPC language models are already obvious from inside the game. Whoever ships the first cast a player argues with defines what they are.</p>
             </div>
             <p class="ask-note">Twelve gates are listed. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
             <div class="contact-box">

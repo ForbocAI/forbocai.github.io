@@ -66,7 +66,7 @@ export const Whitepaper = () => {
                     <p>ForbocAI returns a memory-write instruction. Your build applies it to a local store your studio controls and can read without us. Neither game-owned world state nor that studio-controlled memory becomes ForbocAI training data. The separate, opt-in Soul path described below would send locally encrypted character ciphertext to a configured storage provider; it is not part of a title that never invokes it.</p>
 
                     <h3>3.4 Ghost</h3>
-                    <p>Procedural and adaptive systems can outrun manually authored test paths. The internal harness already drives test worlds during Servitor™ qualification. Turning those runs into producer-facing reports on dead ends, unreachable states and social-loop coverage is in development, and the producers are ours until an external studio clears its gate. Production-value qualification controls release.</p>
+                    <p>Procedural and adaptive systems can outrun manually authored test paths. The internal harness already drives test worlds during Servitor™ qualification. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is in development, and those producers work here until an external studio clears its gate. Production qualification controls release.</p>
 
                     <h3>3.5 The production ledger</h3>
                     <p><strong>Working now in ForbocAI evaluation environments:</strong> Servitor™ through the ForbocAI NPC Protocol; TypeScript and native Unreal Engine 5 interfaces; memory writes to studio-controlled local storage; structured action proposals; reply checks; action checks; internal test worlds; and an exact model and runtime build recorded internally.</p>
@@ -86,13 +86,13 @@ export const Whitepaper = () => {
                     <h3>4.1 Why durable identity matters</h3>
                     <p><strong>A card preserves who a character is. A Soul carries who she became with you.</strong> Trading cards demonstrate a durable appetite for identity, strategy, collecting and a cast that grows across releases. <a href="https://investor.hasbro.com/node/35596" target="_blank" rel="noopener noreferrer">Hasbro reports $1.72&nbsp;billion of 2025 Magic revenue across tabletop and digital and 17% CAGR since 2009.</a> That is evidence of the habit, not a forecast of Soul revenue.</p>
                     <p><a href="https://www.npc.com/" target="_blank" rel="noopener noreferrer">Non-Playable Coin packages collectible identity as a memecoin–NFT hybrid</a>, while <a href="https://whitepaper.virtuals.io/about-virtuals/about-virtuals-protocol.md" target="_blank" rel="noopener noreferrer">Virtuals frames agents as autonomous economic actors</a>. <a href="https://www.coingecko.com/learn/crypto-narratives" target="_blank" rel="noopener noreferrer">The AI-agent token sector roughly tripled between early 2025 and mid-2026, to somewhere in the low-to-mid twenties of billions depending on which tracker you read and which week you read it</a>, and the category has moved past the novelty of an agent holding a wallet toward payments, verifiable inference and compute. We cite the trend rather than a peak print because a peak proves a moment and a trend proves a habit. Either way it is category heat and attention, not studio demand, product evidence or TAM.</p>
-                    <p>Together these signals reveal active appetite for identity, agents, collecting and digital ownership. ForbocAI directs that appetite toward continuity for the player, authority for every receiving studio, and no game-state action unless that world's validation rules accept it. Paid access to Servitor™ remains the core business. This paper asserts no equity, revenue, governance or asset right for $FAI; legal and cap-table claims require governing documents and counsel-approved disclosure.</p>
+                    <p>ForbocAI directs that appetite toward continuity for the player, authority for every receiving studio, and no game-state action unless that world's validation rules accept it. Paid access to Servitor™ remains the core business. This paper asserts no equity, revenue, governance or asset right for $FAI; legal and cap-table claims require governing documents and counsel-approved disclosure.</p>
                 </section>
 
                 <section id="wp-roadmap">
                     <h2>5. The arrival sequence</h2>
                     <ul>
-                        <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, composable decision settings exercised in internal tests, TypeScript and Unreal Engine 5 interfaces, public docs, and $FAI live as a token. Soul continuity is a separate development track.</li>
+                        <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, decision rules a studio can mix and match per scene, exercised in internal tests, TypeScript and Unreal Engine 5 interfaces, public docs, and $FAI live as a token. Soul continuity is a separate development track.</li>
                         <li><strong>In development.</strong> Producer-facing Ghost coverage reporting.</li>
                         <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. Opt-in Soul continuity advances separately behind core distribution. Release planning binds owners, gates, order and dates before a track enters qualification.</li>
                         <li><strong>Governed continuity.</strong> Opted-in history crosses between participating titles only when their technical, moderation and rights gates admit it. No portability right is assumed.</li>
@@ -114,7 +114,7 @@ export const Whitepaper = () => {
 
             <footer class="doc-foot">
                 <p>The production ledger distinguishes working capability, active development and the evidence required for release. A diligence review should test those boundaries directly.</p>
-                <a href="mailto:hello@forboc.ai" class="btn btn-primary">Bring us one hard scene</a>
+                <a href="#wp-roadmap" class="btn btn-primary">Read the twelve gates</a>
             </footer>
         </div>
     </article>

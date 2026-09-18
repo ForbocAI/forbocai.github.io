@@ -12,7 +12,7 @@ export const Hero = () => {
             <div class="hero-copy">
                 <p class="kicker">ForbocAI — the NPC language model company</p>
                 <h1>The next great language model is already inside the game.</h1>
-                <p class="hero-premise"><strong>Every other surface of a game came alive. The people did not.</strong> Worlds render weather you can feel and physics you can trust, and then the person standing in them runs out of script the moment a player asks something nobody wrote. That is the last unfinished surface in the most consequential creative medium there is—and it is the one players actually remember. Right now, in this scene, Maeve weighs what happened and decides as herself.</p>
+                <p class="hero-premise"><strong>Every other surface of a game came alive. The people did not.</strong> Worlds render weather you can feel and physics you can trust, and then the person standing in them runs out of script the moment a player asks something nobody wrote. That is the last unfinished surface in the medium—and it is the one that decides what players carry out. You already know which of your NPCs players quote back to you, and you already know it is not the one with the most lines. Right now, in this scene, Maeve weighs what happened and decides as herself.</p>
                 <figure class="maeve-scene hero-maeve-glimpse">
                     <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
                     <figcaption>The storm is the safe opening. Her brother's letter is the judgment.</figcaption>

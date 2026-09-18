@@ -16,7 +16,7 @@ export const Investors = () => {
             </header>
 
             <div class="investors-body">
-                <p>You already know which of your NPCs players quote back to you, and you already know it is not the one with the most lines. That is the whole argument for this category and you ran the experiment yourself, on your own titles, without meaning to. The model underneath it, the law it enters through and the terms it is sold on all exist and are being bound in public, gate by gate.</p>
+                <p>You ran the experiment for this category yourself, on your own titles, without meaning to: the characters players quote back to you were never the ones with the most lines. The model underneath that, the law it enters through and the terms it is sold on all exist, and every gate still owed is published rather than implied.</p>
                 <figure class="investor-portal">
                     <span class="portal-window" aria-hidden="true">
                         <img src="Lanternbough.png" alt="" width="640" height="640">
@@ -29,7 +29,7 @@ export const Investors = () => {
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20will%20remember" class="btn btn-primary">Bring the character players will remember</a>
-                <a href="#pitch/1" class="btn btn-ghost" data-link>Enter the category</a>
+                <a href="#pitch/1" class="btn btn-ghost" data-link>See the vision deck</a>
             </div>
         </div>
     </section>

@@ -67,7 +67,7 @@ export const Servitor = () => `
 
             <div class="hero-buttons">
                 <a href="#turn" class="btn btn-primary" data-link>Watch one judgment</a>
-                <a href="mailto:hello@forboc.ai?subject=Bring%20us%20your%20hardest%20character" class="text-link">Bring us your hardest character</a>
+                <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">See what comes back</a>
             </div>
         </div>
     </section>
