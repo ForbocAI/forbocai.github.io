@@ -11,7 +11,7 @@ export const Investors = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛞ</span>
                 <div>
                     <h2>The category is already inhabited</h2>
-                    <p class="chapter-lead"><strong>This is not a proposal for a world that might exist.</strong> Servitor™ is reasoning inside one right now. The Protocol is the law she enters it through. The thirteen gates between here and production authority are numbered and public, because a category being settled from the inside can afford to publish its own itinerary. You are reading it from the outside.</p>
+                    <p class="chapter-lead"><strong>This is not a proposal for a world that might exist.</strong> Servitor™ is reasoning inside one right now. The Protocol is the law she enters it through. The fifteen gates between here and production authority are numbered and public, because a category being settled from the inside can afford to publish its own itinerary. You are reading it from the outside.</p>
                 </div>
             </header>
 
@@ -26,7 +26,7 @@ export const Investors = () => {
                 </figure>
             </div>
 
-            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law she enters through. Together they are the medium, and the first casts are being authored in it now. The only question left on this page is whose.</p>
+            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law she enters through. Together they are the medium, and the first casts are being authored in it now. Fifteen questions are open and numbered on this page. The one it cannot answer for you is whose.</p>
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20will%20remember" class="btn btn-primary">Bring the character players will remember</a>

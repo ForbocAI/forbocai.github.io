@@ -111,3 +111,18 @@
     margin-top: 2rem;
 }
 
+
+/* The deck's closing contact box sits on parchment. .btn-ghost is tuned for the
+   night chapters, and its honey outline measures 1.43:1 against cream — the
+   investor CTA was effectively invisible there. This is the one light-background
+   ghost on the site, so it takes the copper the parchment sections use for ink. */
+.contact-box .btn-ghost {
+    border-color: color-mix(in srgb, var(--copper) 55%, transparent);
+    color: var(--copper-ink);
+}
+
+.contact-box .btn-ghost:hover {
+    background: color-mix(in srgb, var(--copper) 12%, transparent);
+    color: var(--day-ink);
+    border-color: var(--copper);
+}
