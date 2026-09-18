@@ -41,9 +41,16 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    z-index: 1;
+    /* This sat at z-index 1 and rendered nothing: section backgrounds paint at
+       3 and above, so the paper tooth was covered by the very paper it was
+       meant to bite into. Measured — removing its texture produced a
+       byte-identical screenshot until the layer was raised. It sits above the
+       chapters now and below the lanterns (2-3 within their sections), the
+       footer, the header (100) and the skip link (200), and it has never taken
+       pointer events. */
+    z-index: 4;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.28;
     mix-blend-mode: multiply;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(../%23n)' opacity='0.34'/%3E%3C/svg%3E");
 }
