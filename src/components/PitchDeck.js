@@ -67,6 +67,7 @@ const slides = [
         content: `
             <div class="paired-proof model-reveal">
                 <p class="proof-label">Maeve faces the choice nobody wrote</p>
+                <p>A player asks a question no writer anticipated. Servitor™ gathers who she is, what this player made matter and what her world permits — then returns one judgment: the line, the reasoning behind it, and a structured action the game is free to refuse. One call. Not a branch that was waiting.</p>
                 <div class="decision-pair">
                     <article>
                         <span>The safe answer</span>
@@ -195,7 +196,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
             </div>
-            <p class="impact-statement">Your world state and your memory store stay yours, and neither becomes ForbocAI training data. The turn itself crosses our service, because hosted cognition is the thing you are buying; what is kept of it, and for how long, is bound in the release contract rather than promised in a sentence on a website. So nothing here compounds on your data. What compounds is the range of worlds one decision contract holds in. What compounds is the range of worlds one decision contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. Today our range stands at our own evaluation worlds and no external studio: gate one, listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
+            <p class="impact-statement">Your world state and your memory store stay yours, and neither becomes ForbocAI training data. The part that moves is the turn — a memory excerpt, the persona, the world context — and excluding it from training is gate four. Until that contract is signed you have our word and not an instrument, and we would rather you had the instrument. So nothing here compounds on your data. What compounds is the range of worlds one decision contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. Today our range stands at our own evaluation worlds and no external studio: gate one, listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
         `
     },
     {
@@ -216,7 +217,7 @@ const slides = [
                     <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
                 </div>
             </div>
-            <p class="team-note">One person built the model, and that is the sharpest question anyone can put to the moat slide: if a gate takes one engineer a few months, it is not a gate. Ask it here rather than finding it later, and take the real answer: the model is the part one engineer can rebuild, which is why the moat slide says a well-funded competitor can begin it next quarter. What one engineer cannot rebuild in a few months is twenty-one gates' worth of definitions and the harness that measures them, run against casts nobody else has authored. Widening this bench is the first thing new capital buys.</p>
+            <p class="team-note">One person built the model, and and that invites the sharpest question anyone can put to the moat slide: if a gate takes one engineer a few months, it is not a gate. Ask it here rather than finding it later, and take the real answer: the model is the part one engineer can rebuild, which is why the moat slide says a well-funded competitor can begin it next quarter. What one engineer cannot rebuild in a few months is twenty-two gates' worth of definitions and the harness that measures them, run against casts nobody else has authored. Widening this bench is the first thing new capital buys.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },
@@ -227,9 +228,9 @@ const slides = [
             <div class="threshold-call">
                 <p class="proof-label">The category window is open</p>
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships the first one decides what this category means.</p>
-                <p class="threshold-line">Three integrations settle it. We would rather walk in with you than hand you a list of reasons to wait.</p>
+                <p class="threshold-line">Three integrations settle it — and to be plain about what that means, the first three are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against. That is the conversation, and it starts now.</p>
             </div>
-            <p class="ask-note">Twenty-one gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
+            <p class="ask-note">Twenty-two gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Be one of the first three integrations</a>
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-ghost">Investors: come inside</a>
