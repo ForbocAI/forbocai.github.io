@@ -58,7 +58,7 @@
     margin: 0;
     padding: clamp(1.5rem, 3vw, 2.1rem);
     border-radius: var(--radius-lg);
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
     overflow: hidden;
     isolation: isolate;

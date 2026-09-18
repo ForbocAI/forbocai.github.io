@@ -59,6 +59,7 @@
     --step-2: clamp(1.5rem, 1.25rem + 1vw, 1.9rem);
     --step-3: clamp(2.05rem, 1.5rem + 2.4vw, 2.95rem);
     --step-4: clamp(2.8rem, 1.8rem + 4.6vw, 4.9rem);
+    --step-5: clamp(3.4rem, 2.1rem + 5.6vw, 6.2rem);
 
     --measure: 66ch;
     --measure-tight: 46ch;
@@ -153,6 +154,63 @@
     /* One inset for every panel, so the page has one panel edge rather than
        one per component stylesheet. */
     --panel-inset: clamp(1.4rem, 2.6vw, 2.1rem);
+
+/* ------------------------------------------------- biomorphic colour ----- */
+
+/* Colour in nature is never flat, and it shifts HUE with light — a lit surface
+   runs warm where the light falls and cool where it does not. Every generated
+   page reaches for a LIGHTNESS gradient instead, which is why those surfaces
+   read as printed paper rather than as material.
+
+   The membranes went phototropic last pass but the surfaces they wrap did not
+   respond, so the light had a direction and the colour did not know about it.
+   These two run warm at the lit corner and cool at the shadowed one, along the
+   same axis the membrane already uses. The shift is about four points of hue —
+   nobody will name it, and a flat fill beside one of these looks dead.
+
+   This also replaces a tint cycle that was measured at 0.0009 apart in green,
+   which is below the threshold at which a difference is a difference. Surfaces
+   now vary as material rather than as three swatches. */
+--surface-day: linear-gradient(148deg,
+    color-mix(in srgb, var(--honey) 13%, #fffdf4) 0%,
+    color-mix(in srgb, var(--day-bg) 94%, #fff) 46%,
+    color-mix(in srgb, var(--creek) 7%, var(--day-bg)) 100%);
+
+--surface-night: linear-gradient(148deg,
+    color-mix(in srgb, var(--honey) 18%, var(--night-surface)) 0%,
+    var(--night-surface) 44%,
+    color-mix(in srgb, var(--creek) 16%, var(--night-bg)) 78%,
+    color-mix(in srgb, var(--sage) 13%, var(--night-bg)) 100%);
+
+/* Neon, two sources, the way a street actually looks.
+   Hong Kong retro signage is never one colour: warm sodium and amber stacked
+   against cold cyan and jade, bleeding into humid air. And this world's night
+   is overgrown — bioluminescent plants and fungal light colonising the built
+   thing — which means the cold half does not come from a lamp at all. It comes
+   from something alive.
+
+   That also answers the flattest measurement anyone has taken of this site:
+   the palette runs a hundred warm uses against twelve cool, with --creek at
+   seven and --sage at five, which is a monochrome wearing five tokens. A
+   living cold light is not a decorative accent here, it is the other half of
+   the lighting model, and it is the half that stops the night reading as brown
+   paper in the dark.
+
+   Warm is made: lanterns, signage, the lamp on Maeve's counter. Cold is grown:
+   sigils, spores, whatever is eating the sign. */
+--neon-warm: 0 0 12px color-mix(in srgb, var(--lantern) 62%, transparent),
+             0 0 34px color-mix(in srgb, var(--honey) 38%, transparent),
+             0 0 72px color-mix(in srgb, var(--honey) 16%, transparent);
+
+--neon-ink: 0 0 18px color-mix(in srgb, var(--lantern) 34%, transparent);
+
+/* The living half. Cooler, dimmer and further out than the made light — a
+   fungus does not out-shine a sign, it seeps around it. */
+--biolume: 0 0 10px color-mix(in srgb, var(--creek) 58%, transparent),
+           0 0 30px color-mix(in srgb, var(--sage) 34%, transparent),
+           0 0 66px color-mix(in srgb, var(--creek) 14%, transparent);
+
+--biolume-ink: 0 0 16px color-mix(in srgb, var(--creek) 42%, transparent);
 
     --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 

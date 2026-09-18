@@ -19,7 +19,7 @@
     position: relative;
     padding: 0.85rem 1rem 1rem;
     border-radius: var(--radius-sm);
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
 }
 

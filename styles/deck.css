@@ -10,7 +10,7 @@
     flex-direction: column;
     min-height: min(74vh, 640px);
     border-radius: var(--radius-lg);
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
     overflow: hidden;
 }
@@ -83,7 +83,7 @@
     font-weight: 700;
     color: var(--day-ink);
     text-decoration: none;
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
     white-space: nowrap;
     transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);

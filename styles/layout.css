@@ -193,9 +193,8 @@ main {
    way; everything else is the ordinary chapter. Nothing here is local — a
    chapter changes weight by changing a class. */
 .chapter.is-event .chapter-head h2 {
-    font-size: var(--step-4);
-    line-height: 1.02;
-    letter-spacing: -0.015em;
+    line-height: 1.04;
+    letter-spacing: -0.012em;
     max-width: 18ch;
 }
 

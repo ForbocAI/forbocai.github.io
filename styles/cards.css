@@ -42,7 +42,7 @@
 .character-intelligence-grid article {
     padding: 1.15rem 1.2rem 1.3rem;
     border-radius: var(--radius-sm);
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
 }
 
@@ -97,7 +97,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin: 1.6rem 0 2rem;
     border-radius: var(--radius-sm);
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
     overflow: hidden;
 }
@@ -174,7 +174,7 @@
     padding: 0.95rem 1rem 1.05rem;
     border-top: 2px solid var(--day-rule);
     border-radius: var(--radius-sm);
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
 }
 
@@ -258,7 +258,7 @@
 .decision-pair article {
     padding: 0.85rem 1rem 0.95rem;
     border-radius: var(--radius-sm);
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
 }
 

@@ -35,7 +35,7 @@
 
 .plate-grid li {
     padding: 0.7rem 0.4rem;
-    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    background: var(--surface-day);
     box-shadow: var(--membrane-day);
     font-family: var(--font-code);
     font-size: 0.8125rem;

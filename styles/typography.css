@@ -12,10 +12,13 @@ h4 {
     text-wrap: balance;
 }
 
+/* The page opens at a size nothing else reaches. It had shared step-4 with two
+   mid-page headings, so there were three co-equal maxima and the hero did not
+   out-rank the body. */
 h1 {
-    font-size: var(--step-4);
-    line-height: 1.02;
-    letter-spacing: -0.028em;
+    font-size: var(--step-5);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
 }
 
 h2 {
@@ -115,12 +118,12 @@ a:hover {
 .investors-body p > strong:first-child,
 .doc-body p > strong:first-child {
     display: block;
-    margin-bottom: 0.3rem;
-    font-family: var(--font-display);
-    font-size: var(--step-1);
-    font-weight: 600;
-    line-height: 1.25;
-    letter-spacing: -0.005em;
+    margin-bottom: 0.25rem;
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
     color: var(--day-ink);
 }
 
@@ -141,4 +144,14 @@ a:hover {
     font-size: inherit;
     line-height: inherit;
     letter-spacing: inherit;
+}
+
+
+/* Five tiers with air between them. The promoted scan lines moved off --step-1
+   and onto body size, which freed that step for the headings that are actually
+   headings; they had been sharing 21px with sixty paragraph openers. */
+.chapter h3,
+.doc-body h3 {
+    font-size: var(--step-2);
+    line-height: 1.2;
 }

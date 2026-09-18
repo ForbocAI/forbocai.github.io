@@ -13,7 +13,7 @@ import { Deeper } from './Deeper.js';
  */
 export const Turn = () => {
     return `
-    <section id="turn" class="chapter turn-band is-event">
+    <section id="turn" class="chapter turn-band">
         <div class="container">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛒ' })}
