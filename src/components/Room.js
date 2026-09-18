@@ -1,4 +1,4 @@
-import { Sigil } from './Sigil.js';
+import { Sigil, ChapterMark } from './Sigil.js';
 
 /**
  * The room.
@@ -14,7 +14,7 @@ export const Room = () => {
     <section id="room" class="chapter turn-band">
         <div class="container">
             <header class="chapter-head">
-                <span class="chapter-mark" aria-hidden="true">ᛖ</span>
+                ${ChapterMark({ rune: 'ᛖ' })}
                 <div>
                     <h2>The rest of the room was listening</h2>
                     <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>

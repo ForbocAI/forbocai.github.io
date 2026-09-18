@@ -64,9 +64,7 @@ main {
     width: 2.6rem;
     height: 2.6rem;
     margin-top: 0.15rem;
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--copper) 45%, transparent);
-    background: color-mix(in srgb, var(--honey) 22%, transparent);
+    /* The membrane is drawn, not bordered — see styles/sigil.css. */
     font-family: var(--font-rune);
     font-size: 1.15rem;
     line-height: 1;

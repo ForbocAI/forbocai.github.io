@@ -23,20 +23,20 @@
 
 .sigil-ring {
     stroke: currentColor;
-    stroke-width: 1.15;
-    opacity: calc(0.62 - var(--i, 0) * 0.13);
+    stroke-width: 1.7;
+    opacity: calc(0.78 - var(--i, 0) * 0.14);
 }
 
 .sigil-core {
     stroke: currentColor;
-    stroke-width: 1.6;
-    opacity: 0.95;
+    stroke-width: 2.1;
+    opacity: 1;
 }
 
 .sigil-strand {
     stroke: currentColor;
-    stroke-width: 0.9;
-    opacity: 0.3;
+    stroke-width: 1.1;
+    opacity: 0.42;
 }
 
 .sigil-honey { color: var(--honey); }
@@ -77,4 +77,26 @@
         stroke-dashoffset: 0;
         animation: none;
     }
+}
+
+/* The chapter mark, in the same system as a character's seal: a grown membrane
+   rather than a circle with a hairline around it. The rune rides in the
+   nucleus position, so a chapter and a character are the same kind of object
+   carrying different contents. */
+.chapter-mark-cell {
+    position: absolute;
+    inset: -12%;
+    width: 124%;
+    height: 124%;
+    color: var(--copper);
+}
+
+.chapter-mark-rune {
+    position: relative;
+    z-index: 1;
+}
+
+.chapter-night .chapter-mark-cell,
+.turn-band .chapter-mark-cell {
+    color: var(--honey);
 }

@@ -1,3 +1,5 @@
+import { ChapterMark } from './Sigil.js';
+
 import { Deeper } from './Deeper.js';
 
 /**
@@ -14,7 +16,7 @@ export const Turn = () => {
     <section id="turn" class="chapter turn-band is-event">
         <div class="container">
             <header class="chapter-head">
-                <span class="chapter-mark" aria-hidden="true">ᛒ</span>
+                ${ChapterMark({ rune: 'ᛒ' })}
                 <div>
                     <h2>The moment an NPC becomes someone</h2>
                     <p class="chapter-lead">Late, at the counter of the Lanternbough inn, with the thaw coming and her brother's letter in the drawer behind her. A player asks the question nobody wrote. Servitor™ gathers who Maeve has been, what now matters and what her world permits — then makes the choice only she could make.</p>

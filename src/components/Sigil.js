@@ -19,7 +19,24 @@
  * from a template.
  */
 
-/** A small deterministic hash so a name always grows the same seal. */
+/**
+ * Two sources of randomness, on purpose.
+ *
+ * Identity seeds the STRUCTURE — how many membranes, how many lobes on each,
+ * how far off-centre the nucleus sits, how many filaments reach out. That part
+ * is derived from the persona document and never changes, so a character is
+ * recognisably the same organism wherever she appears, including after she has
+ * crossed into a world that never made her.
+ *
+ * The GROWTH is fresh every render. A living thing is never the same shape
+ * twice — a cell photographed an hour apart is the same cell and a different
+ * picture — so the wander that fleshes out each membrane is drawn from an
+ * unseeded source. No two sigils on this site are ever identical, including
+ * two of the same character, and that is the biologically honest version of
+ * what an identity mark is.
+ */
+
+/** A small deterministic hash, so a name always seeds the same structure. */
 const seedOf = (text) => {
     let h = 2166136261;
     for (let i = 0; i < text.length; i += 1) {
@@ -63,27 +80,49 @@ const cell = (rand, cx, cy, radius, lobes) => {
     return `${d}Z`;
 };
 
+/**
+ * A chapter's mark, in the same system.
+ *
+ * The rune was sitting in a perfect circle with a hairline border — the
+ * constructed version of the exact form the sigil grows. One mark system now,
+ * two contents: a chapter's membrane holds its rune, a character's holds her
+ * own nucleus. Each chapter's membrane is seeded by its own rune, so no two
+ * chapters carry the same shape, the way no two characters do.
+ */
+export const ChapterMark = ({ rune }) => {
+    const form = rngOf(seedOf(`chapter:${rune}`));
+    const grow = Math.random;
+    const outer = cell(grow, 50, 50, 44, 7 + Math.floor(form() * 3));
+    const inner = cell(grow, 50, 50, 33, 6 + Math.floor(form() * 3));
+    return `<span class="chapter-mark" aria-hidden="true">
+        <svg class="sigil chapter-mark-cell" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="${outer}" class="sigil-ring" style="--i:0"/><path d="${inner}" class="sigil-ring" style="--i:1"/></svg>
+        <span class="chapter-mark-rune">${rune}</span>
+    </span>`;
+};
+
 export const Sigil = ({ name, size = 56, tone = 'honey' }) => {
-    const rand = rngOf(seedOf(name));
-    const rings = 2 + Math.floor(rand() * 2);
+    const form = rngOf(seedOf(name));   // who she is
+    const grow = Math.random;           // this particular growth of her
+    const rings = 2 + Math.floor(form() * 2);
     const paths = [];
 
     for (let i = 0; i < rings; i += 1) {
-        const radius = 42 - i * (9 + rand() * 5);
-        paths.push(`<path d="${cell(rand, 50, 50, radius, 6 + Math.floor(rand() * 4))}" class="sigil-ring" style="--i:${i}"/>`);
+        const radius = 42 - i * (9 + form() * 5);
+        paths.push(`<path d="${cell(grow, 50, 50, radius, 6 + Math.floor(form() * 4))}" class="sigil-ring" style="--i:${i}"/>`);
     }
 
-    // The nucleus: off-centre, because a grown thing is not concentric.
-    const nx = 50 + (rand() - 0.5) * 14;
-    const ny = 50 + (rand() - 0.5) * 14;
-    paths.push(`<path d="${cell(rand, nx, ny, 9 + rand() * 5, 5 + Math.floor(rand() * 3))}" class="sigil-core"/>`);
+    // The nucleus: off-centre, because a grown thing is not concentric. Where
+    // it sits is hers; the shape it takes is this morning's.
+    const nx = 50 + (form() - 0.5) * 14;
+    const ny = 50 + (form() - 0.5) * 14;
+    paths.push(`<path d="${cell(grow, nx, ny, 9 + form() * 5, 5 + Math.floor(form() * 3))}" class="sigil-core"/>`);
 
     // Filaments reaching out of the membrane — what the character is bound to.
-    const strands = 2 + Math.floor(rand() * 3);
+    const strands = 2 + Math.floor(form() * 3);
     for (let i = 0; i < strands; i += 1) {
-        const a = rand() * Math.PI * 2;
-        const r1 = 18 + rand() * 10;
-        const r2 = 44 + rand() * 6;
+        const a = form() * Math.PI * 2;
+        const r1 = 18 + grow() * 10;
+        const r2 = 44 + grow() * 6;
         paths.push(`<path d="M${(50 + Math.cos(a) * r1).toFixed(1)} ${(50 + Math.sin(a) * r1).toFixed(1)}L${(50 + Math.cos(a) * r2).toFixed(1)} ${(50 + Math.sin(a) * r2).toFixed(1)}" class="sigil-strand"/>`);
     }
 

@@ -1,3 +1,5 @@
+import { ChapterMark } from './Sigil.js';
+
 import { Deeper } from './Deeper.js';
 
 /**
@@ -10,7 +12,7 @@ export const Servitor = () => `
     <section id="servitor" class="chapter chapter-day servitor">
         <div class="container">
             <header class="chapter-head">
-                <span class="chapter-mark" aria-hidden="true">ᛗ</span>
+                ${ChapterMark({ rune: 'ᛗ' })}
                 <div>
                     <h2>Meet The ForbocAI NPC LM Servitor™</h2>
                     <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> A general model reads a persona as instructions to perform, and performs itself through them. Servitor™ was trained with the character as the unit of the decision, so there is no house voice underneath waiting to come through.</p>

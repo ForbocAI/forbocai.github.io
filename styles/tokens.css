@@ -153,3 +153,42 @@
     --dusk-6: #263127;
 }
 
+
+/* ------------------------------------------------- continuous curvature -- */
+
+/* The deepest biomorphic property, and the one this site did not have.
+   A border-radius corner is a quarter of a circle: the edge runs straight,
+   curvature is zero, and then at a single point it jumps to its maximum. That
+   join is a construction seam. Nothing that grew has one — in a living
+   boundary the curvature builds gradually into the corner, peaks, and eases
+   off again, so the whole perimeter is one continuous curve (G2 continuity,
+   which a superellipse gives by construction because it is a single
+   differentiable equation).
+
+   It is also the form-level answer to looking generated. Every page a machine
+   lays out uses a circular border-radius, because that is what the property
+   does by default. Nobody reads a corner and thinks "superellipse"; they read
+   the surface as softer and less machined and cannot say why, which is exactly
+   what a subtle systemic move should do.
+
+   Progressive enhancement: where corner-shape is unsupported the asymmetric
+   radii already in place stand on their own. Applied to everything that has a
+   radius rather than to a chosen few, because a rule that holds for some
+   surfaces is a decoration and a rule that holds for all of them is a world. */
+@supports (corner-shape: superellipse(2)) {
+    [class] {
+        corner-shape: superellipse(2.4);
+    }
+
+    /* A pill and a disc are already continuous; a superellipse would square
+       them off. */
+    .btn,
+    .sigil,
+    .lantern,
+    .portal-window,
+    .slide-dot,
+    .firefly,
+    .memory-mood {
+        corner-shape: round;
+    }
+}

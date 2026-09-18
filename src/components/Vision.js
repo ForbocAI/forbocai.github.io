@@ -1,6 +1,6 @@
 import { Lantern } from './Lantern.js';
 import { Deeper } from './Deeper.js';
-import { Sigil } from './Sigil.js';
+import { Sigil, ChapterMark } from './Sigil.js';
 
 /**
  * Vision Component
@@ -16,7 +16,7 @@ export const Vision = () => {
         ${Lantern({ className: "lantern-gate", size: 0.75, tone: "bright" })}
         <div class="container">
             <header class="chapter-head">
-                <span class="chapter-mark" aria-hidden="true">ᛃ</span>
+                ${ChapterMark({ rune: 'ᛃ' })}
                 <div>
                     <h2>Paid access to all three is the business</h2>
                     <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
@@ -36,7 +36,7 @@ export const Vision = () => {
         ${Lantern({ className: "lantern-souls", size: 1 })}
         <div class="container">
             <header class="chapter-head">
-                <span class="chapter-mark" aria-hidden="true">ᛋ</span>
+                ${ChapterMark({ rune: 'ᛋ' })}
                 <div>
                     <h2>Dev born. Player grown. Yours to carry.</h2>
                     <p class="chapter-lead"><strong>That is the whole of it, and no company on earth can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>

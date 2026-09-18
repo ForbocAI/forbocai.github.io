@@ -1,3 +1,5 @@
+import { ChapterMark } from './Sigil.js';
+
 /**
  * Mission Component
  *
@@ -21,7 +23,7 @@ export const Mission = () => {
     <section id="mission" class="chapter chapter-day mission is-event">
         <div class="container">
             <header class="chapter-head">
-                <span class="chapter-mark" aria-hidden="true">ᛟ</span>
+                ${ChapterMark({ rune: 'ᛟ' })}
                 <div>
                     <h2>Someone is home in the world you built</h2>
                 </div>

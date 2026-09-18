@@ -1,3 +1,5 @@
+import { ChapterMark } from './Sigil.js';
+
 /**
  * Technology Component
  *
@@ -11,7 +13,7 @@ export const Technology = () => {
     <section id="technology" class="chapter is-quiet chapter-day">
         <div class="container">
             <header class="chapter-head">
-                <span class="chapter-mark" aria-hidden="true">ᚠ</span>
+                ${ChapterMark({ rune: 'ᚠ' })}
                 <div>
                     <h2>Every game system comes alive through the people inside it</h2>
                     <p class="chapter-lead">Combat creates danger. Quests create direction. Economies create pressure. Character Intelligence turns each one into motive, loyalty, betrayal and choice.</p>

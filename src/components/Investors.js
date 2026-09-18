@@ -1,3 +1,5 @@
+import { ChapterMark } from './Sigil.js';
+
 import { Lantern } from './Lantern.js';
 
 /** The final choice: test the character or fund the proof path. */
@@ -8,7 +10,7 @@ export const Investors = () => {
         ${Lantern({ className: "lantern-investors", size: 1.5, tone: "bright" })}
         <div class="container">
             <header class="chapter-head">
-                <span class="chapter-mark" aria-hidden="true">ᛞ</span>
+                ${ChapterMark({ rune: 'ᛞ' })}
                 <div>
                     <h2>Someone has to build the layer they think with</h2>
                     <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earned a yes. Nobody voted on this and nobody scheduled it, and it is not waiting for anyone's roadmap. The only open question is who builds the layer they think with.</p>
