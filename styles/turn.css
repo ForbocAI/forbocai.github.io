@@ -156,7 +156,7 @@
     padding: clamp(1.75rem, 3.5vw, 2.75rem);
     border-radius: var(--radius-lg);
     border: 1px solid var(--night-rule);
-    background: color-mix(in srgb, var(--night-surface) 55%, transparent);
+    background: var(--surface-night);
 }
 
 .turn-counterfactual-head {
@@ -290,7 +290,7 @@
     padding: clamp(1.4rem, 3vw, 2.2rem);
     border-radius: var(--radius-lg);
     border: 1px solid color-mix(in srgb, var(--honey) 24%, transparent);
-    background: color-mix(in srgb, var(--night-surface) 45%, transparent);
+    background: var(--surface-night);
     box-shadow: var(--membrane-night);
 }
 
@@ -325,7 +325,7 @@
     padding: clamp(1.75rem, 3.5vw, 2.75rem);
     border-radius: var(--radius-lg);
     border: 1px solid var(--night-rule);
-    background: color-mix(in srgb, var(--night-surface) 55%, transparent);
+    background: var(--surface-night);
 }
 
 /* This paragraph is the argument, not a caption, so it gets a reading measure

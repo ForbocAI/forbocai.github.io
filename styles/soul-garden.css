@@ -141,7 +141,7 @@
     padding: clamp(1.5rem, 3vw, 2.25rem);
     border-radius: var(--radius-lg);
     border: 1px solid color-mix(in srgb, var(--creek) 26%, transparent);
-    background: color-mix(in srgb, var(--night-surface) 48%, transparent);
+    background: var(--surface-night);
     box-shadow: var(--membrane-night);
 }
 

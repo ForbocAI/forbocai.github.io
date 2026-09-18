@@ -174,16 +174,43 @@
    This also replaces a tint cycle that was measured at 0.0009 apart in green,
    which is below the threshold at which a difference is a difference. Surfaces
    now vary as material rather than as three swatches. */
---surface-day: linear-gradient(148deg,
-    color-mix(in srgb, var(--honey) 13%, #fffdf4) 0%,
-    color-mix(in srgb, var(--day-bg) 94%, #fff) 46%,
-    color-mix(in srgb, var(--creek) 7%, var(--day-bg)) 100%);
+/* Turgor — the last structural property in the audit, and the one that costs
+   no words.
+   Living tissue is pressurised from the inside. A leaf, a berry, a fungal cap
+   is not a flat face with a soft edge; it presses OUTWARD against its membrane
+   and reads slightly convex, brightest where the surface turns toward you and
+   falling off as it curves away. Every surface here has had edge light since
+   the membrane pass and no face light at all, which is why they read as
+   panels rather than as things.
 
---surface-night: linear-gradient(148deg,
-    color-mix(in srgb, var(--honey) 18%, var(--night-surface)) 0%,
-    var(--night-surface) 44%,
-    color-mix(in srgb, var(--creek) 16%, var(--night-bg)) 78%,
-    color-mix(in srgb, var(--sage) 13%, var(--night-bg)) 100%);
+   It is also the neon property. A tube is pressurised glass: a hot core with
+   the glow falling off toward its walls. Warm made light and cold grown light
+   both behave this way, so one gradient serves the whole two-source model.
+
+   A radial laid over the directional one — the tropic shift still says where
+   the light comes from, and this says the surface is full. Deliberately weak:
+   about six points of lift at the crown. Nobody should see a dome; they should
+   see a surface that is not flat and not be able to say why. */
+--surface-day:
+    radial-gradient(120% 96% at 34% 22%,
+        color-mix(in srgb, #fffdf4 62%, transparent) 0%,
+        color-mix(in srgb, #fffdf4 22%, transparent) 38%,
+        transparent 74%),
+    linear-gradient(148deg,
+        color-mix(in srgb, var(--honey) 13%, #fffdf4) 0%,
+        color-mix(in srgb, var(--day-bg) 94%, #fff) 46%,
+        color-mix(in srgb, var(--creek) 7%, var(--day-bg)) 100%);
+
+--surface-night:
+    radial-gradient(120% 96% at 34% 22%,
+        color-mix(in srgb, var(--lantern) 13%, transparent) 0%,
+        color-mix(in srgb, var(--lantern) 5%, transparent) 40%,
+        transparent 76%),
+    linear-gradient(148deg,
+        color-mix(in srgb, var(--honey) 18%, var(--night-surface)) 0%,
+        var(--night-surface) 44%,
+        color-mix(in srgb, var(--creek) 16%, var(--night-bg)) 78%,
+        color-mix(in srgb, var(--sage) 13%, var(--night-bg)) 100%);
 
 /* Neon, two sources, the way a street actually looks.
    Hong Kong retro signage is never one colour: warm sodium and amber stacked
