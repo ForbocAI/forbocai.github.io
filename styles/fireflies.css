@@ -72,14 +72,14 @@
    third one is fungal now, dimmer and slower than a spark and further out,
    the way a living light behaves next to a burning one. */
 .firefly:nth-child(3n) {
-    background: var(--creek);
-    box-shadow: 0 0 calc(var(--glow) * 1.4) color-mix(in srgb, var(--creek) 62%, transparent);
+    background: var(--biolume-core);
+    box-shadow: 0 0 calc(var(--glow) * 1.4) color-mix(in srgb, var(--biolume-core) 62%, transparent);
     animation-duration: calc(var(--dur) * 1.6);
 }
 
 .firefly:nth-child(3n + 2) {
-    background: var(--sage);
-    box-shadow: 0 0 calc(var(--glow) * 1.25) color-mix(in srgb, var(--sage) 52%, transparent);
+    background: var(--spore);
+    box-shadow: 0 0 calc(var(--glow) * 1.25) color-mix(in srgb, var(--spore) 52%, transparent);
     animation-duration: calc(var(--dur) * 1.35);
 }
 

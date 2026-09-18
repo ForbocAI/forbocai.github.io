@@ -25,7 +25,7 @@
     --night-bg: #263127;
     --night-surface: #2e3a2f;
     --night-surface-high: #374534;
-    --night-rule: #41513f;
+    --night-rule: #3f5248;
     --night-ink: #f1e8d6;
     --night-ink-soft: #c2cbb4;
     --night-ink-faint: #93a18b;
@@ -40,6 +40,14 @@
     --ember: #d9896d;
     --creek: #7aa7b3;
     --sage: #9dbb8b;
+
+    /* The grown light's own hues. --creek and --sage are surface colours —
+       muted, low-saturation, correct for a wall in the dark and useless as a
+       light source, which is why a two-source model built on them still read as
+       one source. Bioluminescence is saturated; that is the whole visual fact
+       of it. These two are for EMISSION only and never for a surface or ink. */
+    --biolume-core: #5fe3cd;   /* fungal cyan — the colony on the shaded side */
+    --spore: #a98cf5;          /* spore violet — rarer, deepest night only */
     --mint: #cfe9dc;
     --lavender: #bda6cf;
 
@@ -167,7 +175,13 @@
     inset 2px 2px 0 -1px rgba(241, 232, 214, 0.14),
     inset -12px -14px 26px -22px rgba(5, 9, 6, 0.45),
     inset 0 0 80px -24px rgba(255, 243, 194, 0.34),
+    /* Grown light, on the side the lamp does not reach. The warm source sits
+       up and left (--light-x/--light-y), so the colony seeps in from down and
+       right. Dimmer and further out than the made light: a fungus does not
+       out-shine a sign, it creeps around it. */
+    inset -20px -24px 58px -42px rgba(95, 227, 205, 0.34),
     -6px -4px 52px -10px rgba(255, 243, 194, 0.24),
+    18px 22px 92px -18px rgba(95, 227, 205, 0.14),
     14px 18px 130px 6px rgba(255, 243, 194, 0.07),
     10px 16px 30px -22px rgba(5, 9, 6, 0.9);
 
@@ -223,6 +237,10 @@
         color-mix(in srgb, var(--lantern) 13%, transparent) 0%,
         color-mix(in srgb, var(--lantern) 5%, transparent) 40%,
         transparent 76%),
+    radial-gradient(112% 90% at 84% 86%,
+        color-mix(in srgb, var(--biolume-core) 10%, transparent) 0%,
+        color-mix(in srgb, var(--biolume-core) 4%, transparent) 38%,
+        transparent 72%),
     linear-gradient(148deg,
         color-mix(in srgb, var(--honey) 18%, var(--night-surface)) 0%,
         var(--night-surface) 44%,
@@ -253,11 +271,11 @@
 
 /* The living half. Cooler, dimmer and further out than the made light — a
    fungus does not out-shine a sign, it seeps around it. */
---biolume: 0 0 10px color-mix(in srgb, var(--creek) 58%, transparent),
-           0 0 30px color-mix(in srgb, var(--sage) 34%, transparent),
-           0 0 66px color-mix(in srgb, var(--creek) 14%, transparent);
+--biolume: 0 0 10px color-mix(in srgb, var(--biolume-core) 52%, transparent),
+           0 0 30px color-mix(in srgb, var(--biolume-core) 28%, transparent),
+           0 0 66px color-mix(in srgb, var(--spore) 15%, transparent);
 
---biolume-ink: 0 0 16px color-mix(in srgb, var(--creek) 42%, transparent);
+--biolume-ink: 0 0 16px color-mix(in srgb, var(--biolume-core) 38%, transparent);
 
     --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 

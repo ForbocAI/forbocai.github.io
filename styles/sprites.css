@@ -1,10 +1,13 @@
 /* --------------------------------------------------------------- sprites -- */
 
-/* See src/components/Sprites.js. Short version: three earlier attempts put
-   these in the page margins, and empty margin is not a habitat — a light with
-   nothing around it is a dead pixel, which is what they looked like every
-   time. Fairies live in shrubs; here the shrubs are the typography, so these
-   ride the rendered line boxes of the text itself. */
+/* Fairies and salamanders playing in the shrubs — see src/components/Sprites.js.
+   The shrubs are the typography, so these ride real word boxes: perching on a
+   word, ringing it, ducking behind it, chasing one another between lines.
+
+   They EMIT. An earlier version blended day sprites with multiply, which
+   darkens — so on parchment they were literally dark specks, and dark specks
+   crawling on a page are flies. Light is the entire brief: hot core, saturated
+   bloom, and a star glint on the flares. */
 
 .sprites {
     position: fixed;
@@ -23,45 +26,88 @@
     will-change: transform, opacity;
 }
 
-/* Soft enough to be light rather than an object. The blur is the single most
-   load-bearing property here: a crisp dot on top of a word is an artifact and
-   the eye files it as a defect, while a blurred one is a small light sitting
-   somewhere behind the leaves. */
-.sprite-core {
+.sprite > * {
     position: absolute;
-    left: -4px;
-    top: -4px;
-    width: 8px;
-    height: 8px;
-    border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
-    background: currentColor;
-    filter: blur(3px);
-    box-shadow: 0 0 10px color-mix(in srgb, currentColor 34%, transparent);
-    transform: scale(var(--sprite-scale, 1));
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(var(--sprite-scale, 1));
+    border-radius: 50%;
+    pointer-events: none;
 }
 
-/* The flicker used to be a CSS keyframe, which gave all three sprites the same
-   3.1s metronome and made the whole system read as a pattern. Brightness and
-   scale now come from per-sprite value noise in the component, sampled at rates
-   that share no common period — so no two are ever in step and none of them
-   comes back around. */
+/* The bloom: wide, soft, saturated. This is the colour you read. */
+.sprite-halo {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, currentColor 0%, color-mix(in srgb, currentColor 45%, transparent) 38%, transparent 70%);
+    filter: blur(5px);
+    opacity: calc(0.34 + var(--flare, 0) * 0.46);
+}
 
-/* Night: it glows, adding light to the glyphs instead of covering them. */
-.nightfall .sprite-core,
-.sprite-core { mix-blend-mode: plus-lighter; }
+/* The filament: small and hotter than anything behind it. A light source has a
+   white centre — that is what separates "emitting" from "coloured dot". */
+.sprite-core {
+    width: 7px;
+    height: 7px;
+    background: radial-gradient(circle,
+        #fffdf2 0%,
+        color-mix(in srgb, currentColor 88%, #fffdf2) 46%,
+        transparent 74%);
+    filter: blur(1.1px);
+    opacity: calc(0.7 + var(--flare, 0) * 0.3);
+}
 
-.sprite-creek { color: var(--creek); }
-.sprite-sage { color: var(--sage); }
+/* The twinkle. A four-point glint is what makes the eye call something a
+   sparkle rather than a pulse, so it rides the flare and is absent otherwise. */
+.sprite-glint {
+    width: 46px;
+    height: 46px;
+    opacity: calc(var(--flare, 0) * 0.85);
+    background:
+        linear-gradient(90deg, transparent 12%, color-mix(in srgb, currentColor 80%, transparent) 50%, transparent 88%),
+        linear-gradient(0deg, transparent 18%, color-mix(in srgb, currentColor 62%, transparent) 50%, transparent 82%);
+    background-size: 100% 1.5px, 1.5px 100%;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    filter: blur(0.7px);
+    border-radius: 0;
+}
+
+/* No blend modes anywhere in here, and that is not a preference.
+   .sprites is position:fixed with a z-index, which makes it an isolated
+   stacking context, so its children blend against THAT transparent layer and
+   never against the page behind it. plus-lighter therefore produced the raw
+   colour composited normally — which is how a dim amber meant to ADD light
+   ended up subtracting 96 luminance from parchment.
+
+   So a sprite brightens the page the only way that survives isolation: by
+   being brighter than what is behind it. Which half it is over decides the
+   palette, carried per sprite as a class because the layer sits outside both
+   wrappers and they cross the boundary independently. */
+
+.sprite-creek { color: var(--biolume-core); }
+.sprite-sage { color: var(--spore); }
 .sprite-lantern { color: var(--lantern); }
 
-/* Day: on parchment a cold glow washes out to nothing, so a day sprite is a
-   warm mote that darkens the page very slightly instead — pollen in a sunbeam
-   rather than a firefly. */
-.daylight .sprite-core {
-    mix-blend-mode: multiply;
-    color: var(--copper);
+/* Day. Parchment sits at luminance ~213, so a day sprite has to clear that to
+   register as light at all — saturated amber is ~187 and reads as a speck of
+   dirt on the paper. These are gold at the top of the range: brighter than the
+   page, still warm. Verified by .dream-loop/spritelight.mjs, which fails if a
+   sprite does not raise the luminance under it on BOTH halves. */
+.sprite.is-day.sprite-creek { color: #fff0bf; }
+.sprite.is-day.sprite-sage { color: #ffeaad; }
+.sprite.is-day.sprite-lantern { color: #fff8dc; }
+
+.sprite.is-day .sprite-halo {
     filter: blur(3.4px);
-    box-shadow: none;
+    opacity: calc(0.8 + var(--flare, 0) * 0.2);
+    background: radial-gradient(circle, currentColor 0%, color-mix(in srgb, currentColor 72%, transparent) 50%, transparent 76%);
+}
+.sprite.is-day .sprite-core {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #ffffff 0%, #fffbe8 52%, color-mix(in srgb, currentColor 70%, transparent) 78%, transparent 92%);
+    opacity: calc(0.9 + var(--flare, 0) * 0.1);
 }
 
 @media (max-width: 900px) { .sprites { display: none; } }
