@@ -31,7 +31,7 @@ export const Turn = () => {
 
                 <div class="turn-col">
                     <p class="turn-label">Servitor™ returns one complete character judgment</p>
-                    <p class="turn-note">This block is an authored illustration of the contract — the shape of a turn, not a capture from a run. We say so because the fault printed below it is real and we would rather you weighed it as a disclosed limit than wondered whether it was staged.
+                    <p class="turn-note">This block is an authored illustration of the contract — the shape of a turn, not a capture from a run. We say so because the fault printed below it is real, and a disclosed limit is worth more than a reader wondering whether it was staged.
                     <pre class="turn-code"><code>{
   dialogue: "He went north. That is all I can give you tonight.",
   reasoningResult: {
