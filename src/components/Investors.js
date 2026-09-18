@@ -26,7 +26,7 @@ export const Investors = () => {
                 </figure>
             </div>
 
-            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law its judgment enters through. Together they are the medium. Twenty-four gates are open and numbered in the whitepaper, and not one of them has cleared — that is the honest scoreboard, and we publish it because the first three studios through this door will have read it. They should walk in with their eyes open.</p>
+            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law its judgment enters through. Together they are the medium. What was mute is being given a faithful voice, and the world is learning to keep faith with the people who live in it. Twenty-four gates stand open and numbered in the whitepaper, none of them cleared. We publish that because the first three studios through this door will have read it, and because a door worth walking through is one you can see the shape of.</p>
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20will%20remember" class="btn btn-primary">Bring the character players will remember</a>
