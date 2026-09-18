@@ -227,7 +227,7 @@ const slides = [
         content: `
             <div class="threshold-call">
                 <p class="proof-label">The category window is open</p>
-                <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships the first one decides what this category means.</p>
+                <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships the first one decides what this category means. Every future character deserves a world that remembers it, and the veil has opened on a future too radiant to forget.</p>
                 <p class="threshold-line">Those three settle it — and to be plain about what that means, they are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against. That is the conversation, and it starts now.</p>
             </div>
             <p class="ask-note">Twenty-four gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
