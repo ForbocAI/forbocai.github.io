@@ -356,16 +356,28 @@
         grid-column: 1 / -1;
     }
 
-    /* The apparatus packs right and stays there. */
-    #business > .container > .deeper,
-    #business > .container > .hero-buttons,
-    #room > .container > .turn-consequence:last-of-type {
-        grid-column: 2;
-        margin-left: 0;
-    }
-
+    /* The apparatus packs right and stays there. Rows are explicit: auto
+       placement put the disclosure in a row of its own and opened a hole
+       beside the paragraph it belongs to, which is the same fault the
+       investors grid had. A cell packs against its neighbour or it is not
+       packing. */
     #business > .container > .soul-market,
     #room > .container > .turn-room {
         grid-column: 1;
+        grid-row: 2;
+    }
+
+    #business > .container > .deeper,
+    #room > .container > .turn-consequence:last-of-type {
+        grid-column: 2;
+        grid-row: 2;
+        margin-left: 0;
+        align-self: end;
+    }
+
+    #business > .container > .hero-buttons {
+        grid-column: 2;
+        grid-row: 3;
+        margin-left: 0;
     }
 }

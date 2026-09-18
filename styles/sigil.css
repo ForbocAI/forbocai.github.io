@@ -96,7 +96,4 @@
     z-index: 1;
 }
 
-.chapter-night .chapter-mark-cell,
-.turn-band .chapter-mark-cell {
-    color: var(--honey);
-}
+

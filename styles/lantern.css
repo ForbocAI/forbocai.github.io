@@ -149,14 +149,29 @@
 .turn-band .sigil-core,
 .chapter-night .chapter-mark-cell,
 .turn-band .chapter-mark-cell {
-    color: color-mix(in srgb, var(--creek) 62%, var(--honey));
-    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--creek) 58%, transparent));
+    color: color-mix(in srgb, var(--creek) 72%, var(--honey));
+    filter:
+        drop-shadow(0 0 9px color-mix(in srgb, var(--creek) 70%, transparent))
+        drop-shadow(0 0 26px color-mix(in srgb, var(--sage) 46%, transparent));
+}
+
+/* The cold light, finally emitted rather than described. */
+.chapter-night .chapter-mark,
+.turn-band .chapter-mark {
+    box-shadow: var(--biolume);
+    border-radius: 50%;
+}
+
+.chapter-night .turn-label,
+.turn-band .turn-label {
+    text-shadow: var(--biolume-ink);
 }
 
 .chapter-night .sigil-strand,
 .turn-band .sigil-strand {
     stroke: var(--sage);
-    opacity: 0.55;
+    opacity: 0.72;
+    filter: drop-shadow(0 0 7px color-mix(in srgb, var(--sage) 60%, transparent));
 }
 
 /* Spore drift: the cold light does not sit still, it seeps. Slow enough to be

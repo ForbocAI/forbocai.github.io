@@ -17,8 +17,9 @@ h4 {
    out-rank the body. */
 h1 {
     font-size: var(--step-5);
-    line-height: 1.0;
-    letter-spacing: -0.03em;
+    line-height: 0.96;
+    letter-spacing: -0.032em;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
@@ -87,6 +88,7 @@ a:hover {
 }
 
 .kicker {
+    margin-bottom: 0.45rem;
     font-family: var(--font-body);
     font-size: var(--step--1);
     font-weight: 700;
