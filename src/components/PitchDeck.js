@@ -87,7 +87,7 @@ const slides = [
     },
     {
         id: 5,
-        title: 'Memory is evidence. Judgment is intelligence.',
+        title: 'Memory is the evidence. Judgment is the intelligence.',
         content: `
             <ol class="cognition-chain cognition-chain-six" aria-label="Character Intelligence">
                 <li><strong>Identity</strong><p>Who am I?</p></li>
@@ -163,9 +163,9 @@ const slides = [
         title: 'The living cast is the new creative medium.',
         content: `
             <div class="world-expansion" aria-label="Expansion through a game world">
-                <article><span>01</span><strong>One character</strong><p>Enter through one impossible scene.</p></article>
-                <article><span>02</span><strong>A living cast</strong><p>Distinct motives meet the unforeseen.</p></article>
-                <article><span>03</span><strong>Systems answer back</strong><p>Factions and quests react through judgment.</p></article>
+                <article><span>01</span><strong>One character</strong><p>An innkeeper decides what a latecomer is owed.</p></article>
+                <article><span>02</span><strong>A living cast</strong><p>Her brother, the miner she covered for, the captain who owes her nothing.</p></article>
+                <article><span>03</span><strong>Systems answer back</strong><p>A refusal reaches your faction system as a decision, not a flag.</p></article>
                 <article><span>04</span><strong>An inhabited world</strong><p>The player goes somewhere you never wrote. The cast is already there.</p></article>
             </div>
             <figure class="maeve-scene living-world-scene">

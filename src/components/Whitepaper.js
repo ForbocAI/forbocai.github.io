@@ -17,7 +17,7 @@ export const Whitepaper = () => {
                 <section id="wp-summary">
                     <h2>1. Summary</h2>
                     <p>Games taught worlds to look alive. Open-ended intelligence is already inside them. The strategic question is no longer whether it arrives, but whether it lives there as an ungoverned voice or as people who can meet the unforeseen and still belong.</p>
-                    <p><strong>ForbocAI, Inc. creates Character Intelligence—the intelligence of people who belong to a world.</strong> The ForbocAI NPC LM Servitor™ interprets identity, memory, motive, relationships and world evidence to make the character judgment. The ForbocAI NPC Protocol gives Servitor™ a lawful place inside the game while the world keeps authority over every consequence. Memory is evidence. Judgment is intelligence. The living cast begins inside that boundary.</p>
+                    <p><strong>ForbocAI, Inc. creates Character Intelligence—the intelligence of people who belong to a world.</strong> The ForbocAI NPC LM Servitor™ interprets identity, memory, motive, relationships and world evidence to make the character judgment. The ForbocAI NPC Protocol gives Servitor™ a lawful place inside the game while the world keeps authority over every consequence. Memory is the evidence. Judgment is the intelligence. The living cast begins inside that boundary.</p>
                 </section>
 
                 <section id="wp-problem">
@@ -119,8 +119,8 @@ export const Whitepaper = () => {
                     <h2>5. The arrival sequence</h2>
                     <ul>
                         <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, TypeScript and Unreal Engine 5 interfaces, itemized in 3.5. Soul continuity is a separate development track, and $FAI is described in section 4.</li>
-                        <li><strong>In development.</strong> Producer-facing Ghost coverage reporting.</li>
-                        <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. Opt-in Soul continuity advances separately behind core distribution. Release planning binds owners, gates, order and dates before a track enters qualification.</li>
+                        <li><strong>In development.</strong> Producer-facing Ghost coverage reporting — gate ten.</li>
+                        <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. Opt-in Soul continuity advances separately behind core distribution — gate eleven. Release planning binds owners, gates, order and dates before a track enters qualification.</li>
                         <li><strong>Governed continuity.</strong> Opted-in history crosses between participating titles only when their technical, moderation and rights gates admit it. No portability right is assumed.</li>
                     </ul>
                 </section>
