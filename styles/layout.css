@@ -127,16 +127,22 @@ main {
    chapter sits a little lower than the one above it, so the parchment run is a
    descent rather than a flat field, and the lantern-lit turn reads as an inset
    in a page that was already on its way down. */
+/* background-COLOR, not the shorthand. These are ID selectors, so `background`
+   here beat everything and silently reset background-image, -size and -repeat
+   along with it — which is why the day chapters could not carry the overgrowth
+   the night ones do. A shorthand at specificity 1,0,0 is a quiet veto over
+   longhands set anywhere else, and nothing about the descent needs it: each of
+   these only ever sets a colour. */
 #mission {
-    background: var(--day-bg-deep);
+    background-color: var(--day-bg-deep);
 }
 
 #servitor {
-    background: color-mix(in srgb, var(--dusk-0) 55%, var(--day-bg-deep));
+    background-color: color-mix(in srgb, var(--dusk-0) 55%, var(--day-bg-deep));
 }
 
 #technology {
-    background: var(--dusk-0);
+    background-color: var(--dusk-0);
 }
 
 /* ------------------------------------------------------ grown surfaces -- */

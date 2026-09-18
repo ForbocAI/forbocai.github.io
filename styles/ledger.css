@@ -196,6 +196,51 @@
     --colony-span: 1180px;
     --colony-ty: 34%;
 }
+
+/* The day has colonies too, and it needed them more.
+
+   --creek leads and --sage varies, not the other way round: sage (#9dbb8b) sits
+   so close to parchment's own hue that at any strength which still looks like
+   shade it reads as the SAME tone — #servitor and #technology stayed at 96-98%
+   single-hue while #mission, the one creek section, came down to 94.7%.
+
+   Lighting the night fixed its monoculture and left the DAY as the flattest
+   surface on the page: #technology measured 98.3% single-hue and #mission
+   97.7%, against a night that had come down to 77-85%. Those are the first two
+   chapters a reader meets after the hero, so the page opened on its most
+   uniform ground and got more varied as it went — backwards.
+
+   On parchment overgrowth is not light, it is SHADE. A cold glow on a bright
+   ground either disappears or looks like a screen defect; moss on a warm wall
+   is a cool tint that darkens. So the day colonies subtract rather than add,
+   which also means they can only help the dark-on-light text they pass under.
+
+   Same tiling as the night: inside the section, never a negative offset, on
+   periods that do not divide into each other. */
+.daylight .chapter {
+    background-repeat: repeat-y;
+    background-size: 100% var(--moss-span, 1500px);
+    background-image: radial-gradient(720px 600px at var(--moss-x) var(--moss-ty),
+        color-mix(in srgb, var(--moss-hue) 46%, transparent) 0%,
+        color-mix(in srgb, var(--moss-hue) 17%, transparent) 44%,
+        transparent 72%);
+    --moss-hue: var(--creek);
+    --moss-x: 2%;
+    --moss-span: 1500px;
+    --moss-ty: 38%;
+}
+
+.daylight .chapter:nth-of-type(3n+2) {
+    --moss-hue: var(--sage);
+    --moss-x: 98%;
+    --moss-span: 1840px;
+    --moss-ty: 28%;
+}
+
+.daylight .chapter:nth-of-type(3n) {
+    --moss-x: 6%;
+    --moss-span: 1270px;
+    --moss-ty: 46%;
 }
 
 /* Dusk: the parchment above dissolving into moss. */
