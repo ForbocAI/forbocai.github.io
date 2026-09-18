@@ -346,7 +346,14 @@
     #business > .container,
     #room > .container {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(16rem, 21rem);
+        /* The apparatus column was capped at 21rem, so once --shell stopped
+           freezing at 1180px the first column grew with the screen and this one
+           did not: at 2560 it was 1128px against a frozen 336px, which is how
+           the scene in #room ended up rendering at thumbnail size — the same
+           file the page hands out as its og:image. It breathes now, and 22vw
+           keeps 1440 on exactly the old 336px so nothing already composed
+           moves. */
+        grid-template-columns: minmax(0, 1fr) minmax(16rem, clamp(21rem, 22vw, 32rem));
         gap: clamp(2rem, 4vw, 3.5rem);
         align-items: start;
     }
