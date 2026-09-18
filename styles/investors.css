@@ -50,28 +50,19 @@
 .portal-window {
     position: relative;
     display: block;
-    width: min(100%, 480px);
+    width: min(100%, 460px);
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
     isolation: isolate;
-    /* Glass, read from the outside in: a bright fresnel edge where the sphere
-       turns away from you, the lantern's light spilling onto the moss around
-       it, real weight sitting under it, and a warm bloom caught inside the
-       curve. Four shadows because glass is four things at once. */
     box-shadow:
-        0 0 0 1px color-mix(in srgb, var(--lantern) 58%, transparent),
-        0 0 140px -22px color-mix(in srgb, var(--lantern) 40%, transparent),
-        0 44px 72px -48px rgba(6, 10, 7, 0.95),
-        inset 0 0 64px -20px color-mix(in srgb, var(--lantern) 34%, transparent),
-        /* The wall of the glass has thickness: a dark ring just inside the
-           bright rim, which is the only cue that separates a sphere from a
-           hole cut in the page. */
-        inset 0 0 0 3px rgba(18, 27, 20, 0.5),
-        inset 0 0 0 4px color-mix(in srgb, var(--lantern) 22%, transparent),
-        /* Light that went through the glass, hit the moss and came back up
-           into the underside of the curve. */
-        inset 0 -26px 40px -30px color-mix(in srgb, var(--lantern) 46%, transparent);
+        /* The rim, catching the lantern. */
+        0 0 0 1px color-mix(in srgb, var(--lantern) 62%, transparent),
+        /* Light leaving the glass and landing on the moss around it. */
+        0 0 150px -20px color-mix(in srgb, var(--lantern) 44%, transparent),
+        /* Weight. A sphere resting in the scene casts down and close. */
+        0 54px 60px -44px rgba(5, 9, 6, 0.98),
+        0 22px 28px -24px rgba(5, 9, 6, 0.7);
 }
 
 .portal-window img {
@@ -79,11 +70,18 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(0.96) brightness(0.96);
+    /* Scaled past the frame so the content reads as bulging toward you rather
+       than lying flat behind a circular crop — the cheapest honest stand-in
+       for refraction through a thick lens. */
+    transform: scale(1.14);
+    transform-origin: 50% 56%;
+    filter: saturate(1.02) brightness(0.98);
 }
 
-/* The world is behind the glass, so it falls away toward the rim. Painted
-   under the highlight, which is why it takes the lower layer. */
+/* The body of the sphere. A real glass ball on a dark ground goes almost black
+   where it turns away from you, and that falloff is the whole illusion — the
+   previous pass was far too gentle, so it read as a picture with a ring drawn
+   round it. */
 .portal-window::after {
     content: "";
     position: absolute;
@@ -92,24 +90,24 @@
     border-radius: 50%;
     background:
         radial-gradient(
-            circle at 50% 60%,
-            rgba(255, 243, 194, 0.2) 0%,
-            transparent 30%
+            circle at 38% 34%,
+            rgba(255, 243, 194, 0.24) 0%,
+            transparent 26%
         ),
         radial-gradient(
-            circle at 50% 60%,
-            transparent 24%,
-            rgba(36, 52, 38, 0.5) 62%,
-            rgba(15, 23, 17, 0.96) 100%
+            circle at 42% 38%,
+            transparent 30%,
+            rgba(30, 44, 32, 0.34) 56%,
+            rgba(14, 21, 15, 0.82) 78%,
+            rgba(6, 10, 7, 0.97) 100%
         );
     mix-blend-mode: multiply;
     pointer-events: none;
 }
 
-/* The glass itself. A curved specular where the light source strikes, a hard
-   little catchlight inside it, and the rim light wrapping the opposite
-   shoulder — the three marks that make a sphere read as glass rather than as
-   a hole. Screened, because a highlight adds light and never removes it. */
+/* The surface of the glass: the hard gleam where the light strikes, a small
+   hot catchlight inside it, the environment wrapping the opposite shoulder,
+   and the bounce coming back up off the moss underneath. */
 .portal-window::before {
     content: "";
     position: absolute;
@@ -118,21 +116,26 @@
     border-radius: 50%;
     background:
         radial-gradient(
-            ellipse 46% 30% at 30% 14%,
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.14) 46%,
-            transparent 74%
+            ellipse 30% 20% at 30% 20%,
+            rgba(255, 255, 255, 0.72),
+            rgba(255, 255, 255, 0.2) 52%,
+            transparent 76%
         ),
         radial-gradient(
-            ellipse 9% 5% at 26% 25%,
-            rgba(255, 255, 255, 0.6),
+            ellipse 7% 4% at 25% 27%,
+            rgba(255, 255, 255, 0.92),
+            transparent 66%
+        ),
+        radial-gradient(
+            ellipse 54% 22% at 66% 88%,
+            color-mix(in srgb, var(--lantern) 52%, transparent),
             transparent 70%
         ),
         linear-gradient(
-            118deg,
-            transparent 56%,
-            color-mix(in srgb, var(--lantern) 26%, transparent) 79%,
-            transparent 93%
+            116deg,
+            transparent 58%,
+            color-mix(in srgb, var(--lantern) 34%, transparent) 80%,
+            transparent 94%
         );
     mix-blend-mode: screen;
     pointer-events: none;
