@@ -36,7 +36,7 @@ export const Mission = () => {
                 <p class="mission-opening"><strong>Everyone else is making the model more itself. We took the self out.</strong> The ForbocAI NPC LM Servitor™ has no self to defend, so the person your writers authored is the one who answers — reasoning past the end of your script and deciding as her. Not a line retrieved. A judgment made, in the moment, by someone.</p>
                 <p class="mission-opening"><strong>The ForbocAI NPC Protocol is how she enters your world without being able to change it.</strong> She decides like a person and she cannot move your state. The model is the invention. The Protocol is why it can be handed to anyone at all.</p>
 
-            <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it — everybody in it dev born, player grown, and somebody's to carry.</strong> Not better dialogue. Not more lines. The end of a phrase that names a person by what they are not — and on the far side of it, everybody in the scene is somebody. The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The dockhand who will not look at you since the vote. The child who remembers which side you took, and is still deciding what that makes you. Four hundred of them, and not one repeating.</p>
+            <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it.</strong> Not better dialogue. Not more lines. The end of a phrase that names a person by what they are not. The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The child still deciding what your choice made you. Four hundred of them, not one repeating.</p>
 
             <div class="mission-turn">
                 <p class="mission-turn-label">The category: Character Intelligence</p>
@@ -52,7 +52,7 @@ export const Mission = () => {
                 })}
             </div>
 
-            <p class="mission-felt"><strong>Full strength is a whole settlement, and no two of them alike.</strong> A captain disobeys because the loyalty her writers gave her outweighed the order in front of her. A quartermaster who has been shorted twice stops extending credit. A child repeats what she overheard to the wrong person, for her own reasons. A town receives a player differently in the spring because of the winter they walked away from. Servitor™ supplies every one of those decisions. Your faction system still rules what they cost.</p>
+            <p class="mission-felt"><strong>Full strength is a whole settlement, no two alike.</strong> A captain disobeys because her authored loyalty outweighed the order. A quartermaster shorted twice stops extending credit. A town receives you differently in spring for the winter you walked away from. Servitor™ supplies every one of those decisions; your faction system still rules what they cost.</p>
             <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade. Every trailer after it gets measured against the scene where a character said no for a reason the player could name. Yours included, whether or not you are in it.</p>
         </div>
     </section>

@@ -69,7 +69,7 @@ export const Vision = () => {
   verified: 'registry',
 }</code></pre>`,
                 })}
-                <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> It refused her brother — there is no such man in this canon — and it kept his request, because that had become hers. She is still not opening what was asked to stay shut, for a man this world has never heard of. She has no inn on this coast, and she went north for this player once.</p>
+                <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> It refused her brother — no such man in this canon — and kept his request, because that had become hers. She is still not opening what was asked to stay shut, for a man this world never heard of.</p>
                 <p class="soul-market">Then a stranger on the harbour road asks her to pass something along, and the world that refused her brother finds out what it admitted.</p>
                 <pre class="turn-code"><code>// a studio that never heard of Lanternbough
 // legalActions: ['tell', 'refuse']
@@ -80,7 +80,7 @@ export const Vision = () => {
 }</code></pre>
                 <p class="soul-market"><strong>No character born in that town could have reached that.</strong> She refused a harbour man for the sake of one this world refused to admit — reasoning from the half that survived the crossing, inside a law this studio wrote, in a scene neither studio staged. The record was never luggage. It is what she thinks with.</p>
 
-                <p class="soul-market"><strong>Dev born, player grown, and carried out.</strong> The registry is how this town knew the record was hers and not a story the player typed. Its own canon is how it knew what to refuse. Take any one away and the other two are a demo — and standing in the harbour is a character no studio on earth can sell you today, at any price, because she was made somewhere else and she still walked in.</p>
+                <p class="soul-market"><strong>Dev born, player grown, and carried out.</strong> The registry is how this town knew the record was hers. Its own canon is how it knew what to refuse. Standing in that harbour is a character no studio on earth can sell you at any price, because she was made somewhere else and still walked in.</p>
             </div>
 
             <aside class="soul-economy">
