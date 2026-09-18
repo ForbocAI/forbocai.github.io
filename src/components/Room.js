@@ -1,3 +1,5 @@
+import { Sigil } from './Sigil.js';
+
 /**
  * The room.
  *
@@ -27,7 +29,7 @@ export const Room = () => {
                 </div>
                 <div class="turn-counterfactual-pair">
                     <article>
-                        <span>What your writer handed us</span>
+                        <span class="sigil-pair">${Sigil({ name: 'Brannoc, miner, Lanternbough', size: 40, tone: 'creek' })} What your writer handed us</span>
                         <pre class="turn-code"><code>const brannoc = {
   traits: ['Owes more than he can say out loud',
            'Slow to speak in a room he does not own'],

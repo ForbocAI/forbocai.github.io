@@ -287,3 +287,11 @@
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
+
+
+/* The card was the full shell while its text was capped at a reading measure,
+   so a third of the bordered box was empty parchment — a container that looks
+   broken, one screen after the hero. It shrinks to its content now. */
+.mission-turn {
+    max-width: 76ch;
+}

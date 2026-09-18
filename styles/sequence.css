@@ -18,9 +18,9 @@
 .world-expansion article {
     position: relative;
     padding: 0.85rem 1rem 1rem;
-    border: 1px solid var(--day-rule-soft);
     border-radius: var(--radius-sm);
-    background: var(--day-surface);
+    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    box-shadow: var(--membrane-day);
 }
 
 /* Each step sits a little higher than the last, so the row itself climbs. */

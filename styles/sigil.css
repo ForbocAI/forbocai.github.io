@@ -1,0 +1,80 @@
+/* ----------------------------------------------------------------- sigil -- */
+
+/* See src/components/Sigil.js for why this exists. In short: a procedural
+   identity mark is the one element on a page that cannot have been chosen from
+   a template, and on this site it is not decoration — a character's seal is
+   grown from her own persona document, so it says what the product says.
+
+   Drawn as line, not fill. A filled blob would join the soft warm world the
+   rest of the page already lives in; a hairline membrane cuts against it, and
+   that edge is the Urbit half of the reference doing its job. */
+
+.sigil {
+    display: block;
+    overflow: visible;
+    flex: none;
+}
+
+.sigil path {
+    fill: none;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.sigil-ring {
+    stroke: currentColor;
+    stroke-width: 1.15;
+    opacity: calc(0.62 - var(--i, 0) * 0.13);
+}
+
+.sigil-core {
+    stroke: currentColor;
+    stroke-width: 1.6;
+    opacity: 0.95;
+}
+
+.sigil-strand {
+    stroke: currentColor;
+    stroke-width: 0.9;
+    opacity: 0.3;
+}
+
+.sigil-honey { color: var(--honey); }
+.sigil-copper { color: var(--copper); }
+.sigil-creek { color: var(--creek); }
+
+/* The one orchestrated moment on the page: a seal draws itself once, when the
+   character it belongs to arrives. Not a fade-and-slide — the mark is being
+   struck, which is the thing the page is claiming happens to a character. */
+.sigil-draw .sigil-ring,
+.sigil-draw .sigil-core,
+.sigil-draw .sigil-strand {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: sigil-strike 1.5s var(--ease) forwards;
+    animation-delay: calc(var(--i, 0) * 0.16s + 0.2s);
+}
+
+.sigil-draw .sigil-core { animation-delay: 0.62s; }
+.sigil-draw .sigil-strand { animation-delay: 0.86s; }
+
+@keyframes sigil-strike {
+    to { stroke-dashoffset: 0; }
+}
+
+/* A name and its seal, side by side, wherever a character is introduced. */
+.sigil-pair {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sigil-draw .sigil-ring,
+    .sigil-draw .sigil-core,
+    .sigil-draw .sigil-strand {
+        stroke-dasharray: none;
+        stroke-dashoffset: 0;
+        animation: none;
+    }
+}

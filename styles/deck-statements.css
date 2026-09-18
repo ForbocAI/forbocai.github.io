@@ -42,7 +42,7 @@
 }
 
 /* The label above a slide's opening line. Set as a rubric, not a sentence:
-   uppercase, tracked and in the sage that marks every other proof mark on the
+   sentence case and in the sage that marks every other proof mark on the
    site, so it reads as a heading for what follows rather than more body copy.
    Reconstructed against .dream-loop/r26-deck-target/slide-01.png. */
 .proof-label {

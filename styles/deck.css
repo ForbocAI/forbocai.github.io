@@ -84,7 +84,8 @@
     font-weight: 700;
     color: var(--day-ink);
     text-decoration: none;
-    background: var(--day-surface);
+    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
+    box-shadow: var(--membrane-day);
     white-space: nowrap;
     transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
 }

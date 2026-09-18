@@ -1,3 +1,5 @@
+import { Sigil } from './Sigil.js';
+
 /**
  * Hero Component
  *
@@ -34,9 +36,12 @@ export const Hero = () => {
             <figure class="memory-panel">
                 <img src="Lanternbough.png" class="memory-panel-art" alt="" aria-hidden="true" width="640" height="640">
                 <figcaption class="memory-panel-head">
-                    <span class="memory-who">
-                        <strong>Maeve Ashlin</strong>
-                        <span class="memory-role">Innkeeper, Lanternbough</span>
+                    <span class="memory-who sigil-pair">
+                        ${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 54, tone: 'honey' })}
+                        <span>
+                            <strong>Maeve Ashlin</strong>
+                            <span class="memory-role">Innkeeper, Lanternbough</span>
+                        </span>
                     </span>
                     <span class="memory-mood">Warm toward you</span>
                 </figcaption>

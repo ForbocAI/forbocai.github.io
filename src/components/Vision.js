@@ -1,5 +1,6 @@
 import { Lantern } from './Lantern.js';
 import { Deeper } from './Deeper.js';
+import { Sigil } from './Sigil.js';
 
 /**
  * Vision Component
@@ -47,7 +48,7 @@ export const Vision = () => {
             <p class="soul-card"><strong>People have spent decades paying for characters they can keep, and every one of them was a picture.</strong> A card preserves who a character is. A tradable NPC carries who she became with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>
 
             <div class="soul-crossing">
-                <p class="turn-label">The night she arrives somewhere else</p>
+                <p class="turn-label sigil-pair">${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 46, tone: 'honey' })} The night she arrives somewhere else</p>
                 <h3>A different studio's world reads her, and keeps its own counsel</h3>
                 <p class="soul-market">Two years later, a different studio, a different engine, a harbour town that has never heard of Lanternbough. The player brings her. The receiving world opens the record and decides what it is willing to know.</p>
                 <pre class="turn-code"><code>// the receiving title inspects, verifies, and rules
