@@ -217,6 +217,26 @@ const setupHeaderTone = () => {
 // the first screen. Fire it the first time the panel is actually seen.
 let panelWatcher = null;
 
+/* The scroll tease wakes a beat after the page settles and dies the moment the
+   reader answers it. An affordance that keeps asking after you have already
+   done the thing is nagging, and this one is meant to be noticed at the edge
+   of attention rather than to wave. */
+const setupDriftTease = () => {
+    const drift = document.querySelector('.drift');
+    if (!drift) return;
+
+    const sleep = () => {
+        drift.classList.remove('is-awake');
+        window.removeEventListener('scroll', sleep);
+    };
+
+    if (window.scrollY > 40) return;
+    window.setTimeout(() => {
+        if (window.scrollY <= 40) drift.classList.add('is-awake');
+    }, 1400);
+    window.addEventListener('scroll', sleep, { once: true, passive: true });
+};
+
 const setupMemoryEntrance = () => {
     panelWatcher?.disconnect();
 
@@ -298,6 +318,7 @@ const render = () => {
         setupMobileMenu();
         setupHeaderTone();
         setupMemoryEntrance();
+    setupDriftTease();
         setupDocContents();
 
 

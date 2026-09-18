@@ -64,3 +64,32 @@
     }
 }
 
+
+/* Two populations, because there are two kinds of light in this world.
+   Every mote was the lantern's colour, which made them sparks from a made
+   light and nothing else. The night here is overgrown, so most of what drifts
+   through it is not a spark at all — it is spore, and spores are cold. Every
+   third one is fungal now, dimmer and slower than a spark and further out,
+   the way a living light behaves next to a burning one. */
+.firefly:nth-child(3n) {
+    background: var(--creek);
+    box-shadow: 0 0 calc(var(--glow) * 1.4) color-mix(in srgb, var(--creek) 62%, transparent);
+    animation-duration: calc(var(--dur) * 1.6);
+}
+
+.firefly:nth-child(3n + 2) {
+    background: var(--sage);
+    box-shadow: 0 0 calc(var(--glow) * 1.25) color-mix(in srgb, var(--sage) 52%, transparent);
+    animation-duration: calc(var(--dur) * 1.35);
+}
+
+/* They were drifting at half opacity behind a page that had since gone
+   darker, so eight of ten were never seen. A spore drift nobody can see is
+   dead weight in the DOM. */
+@keyframes drift {
+    0%,
+    100% { opacity: 0; transform: translate(0, 0); }
+    18%,
+    72% { opacity: 0.82; }
+    50% { transform: translate(var(--dx), calc(var(--dy) / 2)); }
+}
