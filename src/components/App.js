@@ -8,6 +8,7 @@
  */
 import { Header } from './Header.js';
 import { Footer } from './Footer.js';
+import { Sprites } from './Sprites.js';
 import { Hero } from './Hero.js';
 import { Mission } from './Mission.js';
 import { Servitor } from './Servitor.js';
@@ -89,5 +90,6 @@ export const App = (state) => {
     </main>
 
     ${Footer()}
+            ${Sprites()}
     `;
 };

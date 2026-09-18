@@ -1,0 +1,77 @@
+/* --------------------------------------------------------------- sprites -- */
+
+/* See src/components/Sprites.js for the research these numbers come from. The
+   short version: adult silent reading is 238 words per minute, AAA ambient
+   layers run 100-400 second durations, and those are the same speed. A sprite
+   that falls beside the line you are reading at the pace you read it is, by
+   arithmetic, a two-minute drift.
+
+   They are LIGHT, not objects. Blurred and dim on purpose — at nine pixels a
+   crisp dot is a rendering artifact and a soft one is a firefly seen across a
+   room. That single difference is why the first attempt read as a dead pixel.
+
+   Pure CSS, no JavaScript, nothing listening to scroll. Ambient means
+   indifferent to the reader; the moment it reacts, it is asking for attention
+   instead of keeping company. */
+
+.sprites {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.sprite {
+    position: absolute;
+    left: var(--x);
+    top: 0;
+    width: var(--sprite-size);
+    height: var(--sprite-size);
+    border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
+    background: currentColor;
+    /* The whole trick. Without the blur these are squares with a glow; with it
+       they are a light source too far away to resolve. */
+    filter: blur(2.5px);
+    box-shadow:
+        0 0 10px color-mix(in srgb, currentColor 55%, transparent),
+        0 0 28px color-mix(in srgb, currentColor 24%, transparent);
+    opacity: 0;
+    animation:
+        sprite-fall var(--fall) linear var(--delay) infinite,
+        sprite-sway calc(var(--fall) / 4) ease-in-out var(--delay) infinite alternate;
+}
+
+/* Down the page at reading pace. Fading in and out at the ends so nothing ever
+   pops into or out of existence at a screen edge. */
+@keyframes sprite-fall {
+    0%   { transform: translateY(-8vh); opacity: 0; }
+    12%  { opacity: 0.5; }
+    88%  { opacity: 0.5; }
+    100% { transform: translateY(108vh); opacity: 0; }
+}
+
+/* A slow sideways wander so the descent is never a straight line. Quarter the
+   fall duration, so it never syncs into a visible pattern. */
+@keyframes sprite-sway {
+    from { margin-left: calc(var(--drift) * -1); }
+    to   { margin-left: var(--drift); }
+}
+
+.sprite-creek { color: var(--creek); }
+.sprite-sage { color: var(--sage); }
+.sprite-lantern { color: var(--lantern); }
+
+/* On the parchment half they have to survive a light ground, so they carry a
+   little more body and a little less bloom. */
+.sprite-lantern { filter: blur(2.2px); }
+
+/* A phone has no margins to drift in, and a mote crossing body copy at 390px
+   is in the way rather than beside it. */
+@media (max-width: 620px) {
+    .sprites { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sprites { display: none; }
+}
