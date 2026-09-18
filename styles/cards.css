@@ -237,3 +237,60 @@
         grid-template-columns: minmax(0, 1fr);
     }
 }
+
+/* The two answers available in one moment, set side by side so the reader
+   compares them rather than reading a list. The second carries the accent:
+   it is the one the model is for.
+   Reconstructed against .dream-loop/r26-deck/slide-04.png. */
+.decision-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0 0;
+}
+
+.decision-pair article {
+    padding: 0.85rem 1rem 0.95rem;
+    border: 1px solid var(--day-rule-soft);
+    border-radius: 8px;
+    background: var(--day-surface);
+}
+
+.decision-pair article:last-child {
+    border-left: 3px solid var(--copper-ink, var(--day-rule));
+}
+
+.decision-pair span {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--day-ink-soft);
+}
+
+.decision-pair strong {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--day-ink);
+}
+
+/* A slide is a fixed canvas, so a full-height plate pushes everything else off
+   it. Inside the deck these scenes are a band across the composition, cropped
+   to the part that carries the moment. */
+.slide .maeve-scene img {
+    max-height: 215px;
+    object-fit: cover;
+    object-position: center 38%;
+}
+
+@media (max-width: 720px) {
+    .decision-pair {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .slide .maeve-scene img {
+        max-height: 170px;
+    }
+}

@@ -1,0 +1,81 @@
+/* -------------------------------------------------------------- sequence -- */
+
+/* The expansion: one character, then a cast, then systems, then a world. It is
+   an escalation, so it is set as four rising steps with the climb marked
+   between them rather than four equal tiles. Unstyled, the numeral ran into
+   the heading — "01One character" — and the four steps stacked as eight loose
+   lines with no sense of sequence at all.
+   Reconstructed against .dream-loop/r26-deck/slide-09.png. */
+
+.world-expansion {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+    margin: 1.3rem 0 0;
+}
+
+.world-expansion article {
+    position: relative;
+    padding: 0.85rem 1rem 1rem;
+    border: 1px solid var(--day-rule-soft);
+    border-radius: 8px;
+    background: var(--day-surface);
+}
+
+/* Each step sits a little higher than the last, so the row itself climbs. */
+.world-expansion article:nth-child(2) { background: #eaf1ea; }
+.world-expansion article:nth-child(3) { background: #e8eee9; }
+.world-expansion article:nth-child(4) { background: #f4ecf2; }
+
+.world-expansion article > span {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--copper-ink, var(--day-ink-soft));
+}
+
+.world-expansion article > strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--day-ink);
+}
+
+.world-expansion article > p {
+    margin: 0.4rem 0 0;
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    color: var(--day-ink-soft);
+}
+
+/* The climb, marked in the gap. It rises because the sequence does. */
+.world-expansion article + article::before {
+    content: "↗";
+    position: absolute;
+    left: -1.4rem;
+    top: 3.1rem;
+    color: var(--day-ink-faint);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 860px) {
+    .world-expansion {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .world-expansion article + article::before {
+        content: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .world-expansion {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
