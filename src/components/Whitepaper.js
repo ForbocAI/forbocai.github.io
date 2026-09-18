@@ -43,7 +43,7 @@ export const Whitepaper = () => {
                         <li><strong>Cost.</strong> A model demo says nothing about unit economics at a shipped title's concurrency. The shape is this: one character judgment is one call. The dialogue, the reasoning behind it and the structured action come back from the same attempt — not a chain of calls per line, not a re-roll to get a parseable action, not a second request to explain the first. Concurrency and unit economics are clause four; the call count per decision is not.</li>
                         <li><strong>Incoherence.</strong> A model that lacks inventory evidence can propose an item the player never had.</li>
                     </ul>
-                    <p>The protocol makes the decision boundary inspectable while the commercial and performance proofs are qualified in the open.</p>
+                    <p>The protocol makes the decision boundary inspectable, and the Standard measures the rest in public.</p>
                 </section>
 
                 <section id="wp-layer">
@@ -54,7 +54,7 @@ export const Whitepaper = () => {
                     <p>Studios invoke Servitor™ through the ForbocAI NPC Protocol; the model reasons in ForbocAI infrastructure rather than being packaged as a client runtime. Active cognition requires a network connection. What a studio keeps if this company stops is clause nine, and we wrote that clause because a world should outlive its vendor.</p>
                     <p>The hierarchy is deliberate: Servitor™ makes the judgment; the Protocol defines its authority boundary; the API carries the exchange; the SDK makes that exchange native to game code; the game applies only the effects its contracts admit.</p>
                     <p>Latency is a trap networked cognition inherits rather than escapes. Servitor™ runs under a hard server-side deadline. If it cannot finish and produce a reply that meets the required rules in time, the turn comes back explicitly marked invalid, and an invalid turn authorizes nothing: no action, no memory write, no change to your state. That hard deadline and typed boundary are testable now. The budget is set server-side by ForbocAI and is one number for every scene; a per-scene budget the studio sets is clause nineteen. The rate at which turns miss it is clause seventeen. Typical and worst-case response times, measured by region, become public only after they are measured end to end through a real integration. That is clause three.</p>
-                    <p>Paid access to the Protocol, Servitor™ and tradable NPCs is in commercial qualification in standard currency, not tokens. Its release contract — clause four — must bind the billable event, quotas, overage behavior, public price, production capacity, unit economics, and both the retention and training-use terms for turn data before those claims go live.</p>
+                    <p>The Protocol, Servitor™ and tradable NPCs are sold together, in ordinary money. Its release contract — clause four — must bind the billable event, quotas, overage behavior, public price, production capacity, unit economics, and both the retention and training-use terms for turn data before those claims go live.</p>
 
                     <h3>3.2 Actions are proposed, not performed</h3>
                     <p>Servitor™ proposes structured intent; the Protocol defines how it is checked against studio-supplied contracts; the SDK carries those checks into game code; the game alone decides what moves on screen.</p>
@@ -76,7 +76,7 @@ export const Whitepaper = () => {
                     <p>ForbocAI returns a memory-write instruction. Your build applies it to a local store your studio controls and can read without us. Be exact about what moves. Your store never leaves you: it is written by your build, read by your build, and nothing in it is ours. What does leave you is the turn — a memory excerpt drawn from that store, the persona and the world context — because hosted cognition is what is being bought and it cannot reason about what it has not been sent. Excluding that excerpt from training is clause four. The crossing path described below sends locally encrypted character ciphertext to a storage provider the studio configures.</p>
 
                     <h3>3.4 Ghost</h3>
-                    <p>Procedural and adaptive systems can outrun manually authored test paths. The internal harness already drives test worlds during Servitor™ qualification. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is clause ten.</p>
+                    <p>Procedural and adaptive systems can outrun manually authored test paths. Ghost, the internal harness, already drives test worlds during Servitor™ qualification. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is clause ten.</p>
 
                     <h3>3.5 The Character Intelligence Standard</h3>
                     <p><strong>Working now in ForbocAI evaluation environments:</strong> Servitor™ through the ForbocAI NPC Protocol; TypeScript and native Unreal Engine 5 interfaces; memory writes to studio-controlled local storage; structured action proposals; reply checks; action checks; internal test worlds; and an exact model and runtime build recorded internally.</p>
@@ -117,17 +117,17 @@ export const Whitepaper = () => {
                 <section id="wp-souls">
                     <h2>4. The Soul economy</h2>
                     <p class="doc-aside"><strong>$FAI is live on Solana, and the contract behind every $FAI link on this site is the one to check.</strong></p>
-                    <p>The Soul layer carries the history a player and character made together. We are assembling the player-owned record — identity, memory, relationships and temperament — while every receiving title decides what enters.</p>
+                    <p>The Soul layer carries the history a player and character made together. It is the player-owned record — identity, memory, relationships and temperament — while every receiving title decides what enters.</p>
                     <ul>
                         <li><strong>Player value.</strong> A character can retain earned specificity instead of resetting to a template at every title boundary.</li>
                         <li><strong>Studio authority.</strong> Gather, encrypt, upload, verify, restore — every participating title still chooses what its technical, moderation and rights rules admit.</li>
-                        <li><strong>Current development.</strong> Character records, cross-title restoration, minting and upgrades form the active track; marketplace operations follow participating titles rather than lead them.</li>
+                        <li><strong>Current development.</strong> Character records, cross-title restoration, minting and upgrades form the active track; marketplace operations open as the worlds that feed them do.</li>
                     </ul>
 
                     <h3>4.1 Why durable identity matters</h3>
                     <p><strong>A card preserves who a character is. A Soul carries who she became with you.</strong> Trading cards proved the appetite decades ago — identity, strategy, collecting, and a cast that grows across releases. People have been paying for identity they can keep ever since, and a card has never once been able to remember them back.</p>
                     <p><a href="https://www.npc.com/" target="_blank" rel="noopener noreferrer">Non-Playable Coin packages collectible identity as a memecoin–NFT hybrid</a>, while <a href="https://whitepaper.virtuals.io/about-virtuals/about-virtuals-protocol.md" target="_blank" rel="noopener noreferrer">Virtuals frames agents as autonomous economic actors</a>. A market is already convinced that a character can be an asset. What none of them has is a character worth keeping — someone whose history was earned inside a world that ruled on it.</p>
-                    <p>ForbocAI points that appetite at continuity for the player and authority for every receiving studio, with no game-state action unless that world's rules accept it. The three together are the business.</p>
+                    <p>ForbocAI points that appetite at continuity for the player and authority for every receiving studio.</p>
                 </section>
 
                 <section id="wp-roadmap">
@@ -136,7 +136,7 @@ export const Whitepaper = () => {
                         <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, TypeScript and Unreal Engine 5 interfaces, itemized in 3.5. Soul continuity is a separate development track, and $FAI is described in section 4.</li>
                         <li><strong>In development.</strong> Producer-facing Ghost coverage reporting — clause ten.</li>
                         <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. The crossing follows the worlds it runs between: a character crosses between live titles or not at all, which is clause eleven, and clause one comes first.</li>
-                        <li><strong>Governed continuity.</strong> Opted-in history crosses between participating titles only when their technical, moderation and rights gates admit it. No portability right is assumed.</li>
+                        <li><strong>Governed continuity.</strong> She is the player's, and a receiving world still rules what it admits — both are true, and clause eleven is where they meet.</li>
                     </ul>
                 </section>
             </div>

@@ -37,8 +37,8 @@ export const Vision = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛋ</span>
                 <div>
-                    <h2>The third pillar: tradable NPCs</h2>
-                    <p class="chapter-lead"><strong>Servitor™ makes her someone. The Protocol lets her act inside a world that stays yours. The third is that she can be owned, carried and traded — and none of the three is complete without the others.</strong></p>
+                    <h2>Dev born. Player grown. Yours to carry.</h2>
+                    <p class="chapter-lead"><strong>That is the whole of it, and no company on earth can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>
                 </div>
             </header>
 
@@ -63,8 +63,18 @@ export const Vision = () => {
   ],
   verified: 'registry',
 }</code></pre>
-                <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> Her brother does not exist here and it kept none of him. She has no inn on this coast. What crossed is the part that was never about Lanternbough — a woman who keeps a confidence past the point it costs her, and a player she already went north for.</p>
-                <p class="soul-market"><strong>That is the whole ecology closing.</strong> A person, a law she enters worlds through, and an owner who carried her here. The registry is how this town knew the record was hers and not a story the player typed. Its own canon is how it knew what to refuse. Take any one away and the other two are a demo — and standing in the harbour is a character no studio on earth can sell you today, at any price, because she was made somewhere else and she still walked in.</p>
+                <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> It refused her brother — there is no such man in this canon — and it kept his request, because that had become hers. She is still not opening what was asked to stay shut, for a man this world has never heard of. She has no inn on this coast, and she went north for this player once.</p>
+                <p class="soul-market">Then a stranger on the harbour road asks her to pass something along, and the world that refused her brother finds out what it admitted.</p>
+                <pre class="turn-code"><code>// a studio that never heard of Lanternbough
+// legalActions: ['tell', 'refuse']
+{
+  dialogue: "No. Ask me for anything else on this coast and you will have it.",
+  reasoningText: "I do not know this man and I owe him nothing either way. But what he wants passed along was given to me to keep, by someone this harbour has never heard of, before I ever stood on this road. A place does not unmake a promise by not knowing about it.",
+  action: { type: 'refuse' },
+}</code></pre>
+                <p class="soul-market"><strong>No character born in that town could have reached that.</strong> She refused a harbour man for the sake of one this world refused to admit — reasoning from the half that survived the crossing, inside a law this studio wrote, in a scene neither studio staged. The record was never luggage. It is what she thinks with.</p>
+
+                <p class="soul-market"><strong>Dev born, player grown, and carried out.</strong> The registry is how this town knew the record was hers and not a story the player typed. Its own canon is how it knew what to refuse. Take any one away and the other two are a demo — and standing in the harbour is a character no studio on earth can sell you today, at any price, because she was made somewhere else and she still walked in.</p>
             </div>
 
             <aside class="soul-economy">

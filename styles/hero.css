@@ -244,3 +244,21 @@
     line-height: 1.15;
     color: var(--day-ink);
 }
+
+/* The potion, named directly under the turn. Three short sentences that are
+   the whole product, set between the pivot and the explanation. */
+.hero-potion {
+    margin: 0 0 1.6rem;
+    max-width: var(--measure-tight);
+    font-size: var(--step-1);
+    line-height: 1.45;
+    color: var(--day-ink);
+}
+
+.hero-potion strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    line-height: 1.2;
+}

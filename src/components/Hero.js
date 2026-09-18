@@ -14,6 +14,7 @@ export const Hero = () => {
                 <h1>The next great language model is a person in your game.</h1>
                 <p class="hero-premise"><strong>Every other surface of a game came alive. The people did not.</strong> They still run out of script the moment a player asks something nobody wrote, which is why a whole cast sounds like one actor doing accents.</p>
                 <p class="hero-turn"><strong>That ended.</strong></p>
+                <p class="hero-potion"><strong>Dev born. Player grown. Yours to carry.</strong> Your writers author her. A player makes her specific — what she forgave, who she refused, the promise she kept when it cost her. Then she belongs to them, and she can leave with them.</p>
                 <p class="hero-premise">Tonight, in our worlds, a language model with no self of its own is answering as someone a writer authored — holding what a player earned, weighing what it costs her, and deciding. The only thing still open is whose cast it holds next.</p>
                 <figure class="maeve-scene hero-maeve-glimpse">
                     <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">

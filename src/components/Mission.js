@@ -27,7 +27,7 @@ export const Mission = () => {
                 </div>
             </header>
 
-            <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it.</strong> Not better dialogue. Not more lines. The end of a phrase that names a person by what they are not — and on the far side of it, everybody in the scene is somebody. The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The child who remembers which side you took, and is still deciding what that makes you.</p>
+            <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it — everybody in it dev born, player grown, and somebody's to carry.</strong> Not better dialogue. Not more lines. The end of a phrase that names a person by what they are not — and on the far side of it, everybody in the scene is somebody. The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The child who remembers which side you took, and is still deciding what that makes you.</p>
 
             <div class="mission-turn">
                 <p class="mission-turn-label">The category: Character Intelligence</p>
