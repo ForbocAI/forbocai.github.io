@@ -35,7 +35,7 @@ export const Mission = () => {
                 <p class="mission-turn-punch">A character may reason beyond the script. Only her world can make the consequence real.</p>
             </div>
 
-            <p class="mission-felt"><strong>We are already inside the age of the living cast.</strong> Character Intelligence is the creative medium that lets a world answer through the people in it. We are building the model. We wrote the law it enters through. We are negotiating the commercial terms now, and we publish what is not settled yet.</p>
+            <p class="mission-felt"><strong>We are already inside the age of the living cast.</strong> Character Intelligence is the creative medium that lets a world answer through the people in it. Picture it at full strength: a cast of four hundred and not one of them repeating; a captain who disobeys because the loyalty she was authored with outweighed the order in front of her; a faction that splits over it; a town that remembers the winter a player walked away from and receives them differently in the spring. None of that is a branch someone wrote and forgot. Every piece of it is a person who decided. That is the world Servitor™ is being built to fill, and the model at the centre of it is reasoning today.</p>
         </div>
     </section>
     `;
