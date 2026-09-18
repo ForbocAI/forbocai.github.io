@@ -13,6 +13,7 @@ import { Mission } from './Mission.js';
 import { Servitor } from './Servitor.js';
 import { Technology } from './Technology.js';
 import { Turn } from './Turn.js';
+import { Room } from './Room.js';
 import { Roadmap } from './Roadmap.js';
 import { Vision } from './Vision.js';
 import { Investors } from './Investors.js';
@@ -65,6 +66,7 @@ export const App = (state) => {
                 ${Mission()}
                 ${Servitor()}
                 ${Turn()}
+                ${Room()}
                 ${Technology()}
             </div>
             <div class="nightfall">
