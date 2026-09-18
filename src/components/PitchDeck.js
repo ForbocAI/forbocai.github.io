@@ -10,7 +10,7 @@ import { selectPitchSlide } from '../domains/navigationSlice.js';
 const slides = [
     {
         id: 1,
-        title: 'The next great language model is a person in your game.',
+        title: 'The next great language model are the characters in your game.',
         content: `
             <div class="title-slide">
                 <p class="subtitle">The ForbocAI NPC LM Servitor™ — the intelligence behind the living cast.</p>

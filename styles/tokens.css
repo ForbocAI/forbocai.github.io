@@ -62,7 +62,7 @@
     /* Tuned against the fold rather than picked. At 6.2rem the headline ran
        five lines and pushed every call to action 102px below a 900px fold, so
        the first screen offered no way to act. This lands it in four. */
-    --step-5: clamp(3.2rem, 2.0rem + 4.6vw, 5.3rem);
+    --step-5: clamp(3.0rem, 1.9rem + 4.0vw, 5.0rem);
 
     --measure: 66ch;
     --measure-tight: 46ch;
