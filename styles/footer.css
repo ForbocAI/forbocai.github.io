@@ -82,10 +82,28 @@
     color: var(--night-ink);
 }
 
+/* The hit area is unconditional, not a touch concession.
+
+   It lived in touch.css behind `(pointer: coarse), (max-width: 860px)`, which
+   reads as "fingers need room" — but a 1280px laptop with a trackpad is
+   neither coarse nor narrow, and measured 23-24px rows: sixteen footer links
+   under the 24px floor in a band from 900px to 1330px, and $FAI at 24x48 under
+   it at EVERY width. A small target is hard to hit with a trackpad too, and
+   nothing about a comfortable row costs a mouse user anything. The negative
+   margin keeps the original rhythm, so the footer does not grow. */
 .footer-link-group a {
+    display: block;
     font-size: var(--step--1);
     color: var(--night-ink-soft);
     text-decoration: none;
+    padding-block: 0.55rem;
+    margin-block: -0.35rem;
+    /* The group is a flex column, so display:block still shrank each link to
+       its own text — "$FAI" measured 25px WIDE at every width, under the 24px
+       floor on the other axis. Stretching them to the column is what a footer
+       nav wants anyway: the whole row is the target, not just the four
+       characters in it. */
+    align-self: stretch;
 }
 
 .footer-link-group a:hover {
