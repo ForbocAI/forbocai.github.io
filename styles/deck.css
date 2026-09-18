@@ -1,18 +1,52 @@
 /* ------------------------------------------------------------------ deck -- */
 
+/* One slide is one screen. The deck ran 93-294px past the fold at four of five
+   sizes, which cut off the slide's own nav — the control a viewer needs to see
+   the next slide was below the bottom of the window.
+
+   The section padding was sized like a page's (128px at 1440), not a deck's.
+   A deck is a frame and its controls; the room around it is chrome. */
 .deck {
-    padding-top: clamp(1.5rem, 4vw, 3rem);
-    padding-bottom: clamp(3rem, 6vw, 5rem);
+    padding-top: clamp(0.75rem, 1.6vw, 1.5rem);
+    padding-bottom: clamp(1rem, 2vw, 2rem);
 }
 
 .deck-frame {
     display: flex;
     flex-direction: column;
     min-height: min(74vh, 640px);
+    /* The frame is CONTENT-driven — it measured 789px against a 640px
+       min-height — so lowering the minimum does nothing. It needs a ceiling
+       taken from the screen it has to fit inside: viewport, less the header,
+       less the deck's own chrome. */
+    max-height: calc(100svh - var(--header-height) - 5rem);
+    overflow: hidden;
     border-radius: var(--radius-lg);
     background: var(--surface-day);
     box-shadow: var(--membrane-day);
     overflow: hidden;
+}
+
+/* Only the SLIDE scrolls. .deck-controls is a child of the frame, so capping
+   the frame's height with overflow:auto scrolled the nav out of its own box —
+   at 1440x700 the controls sat at y=796 inside a frame ending at 643, which is
+   worse than the overflow it was meant to fix: the button you need to reach
+   the next slide was gone rather than merely low.
+
+   The header and the controls are fixed rows; the slide is the one part that
+   gives. min-height:0 is what lets a flex child shrink below its content at
+   all — without it the slide refuses to compress and pushes the controls out
+   again. */
+.deck-frame > .slide {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.deck-frame > .deck-header,
+.deck-frame > .deck-controls {
+    flex: 0 0 auto;
 }
 
 .deck-header {
