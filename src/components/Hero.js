@@ -18,7 +18,7 @@ export const Hero = () => {
                     <figcaption>The storm is the safe opening. Her brother's letter is the judgment.</figcaption>
                 </figure>
                 <p class="hero-lead"><strong>The ForbocAI NPC LM Servitor™ is the intelligence behind the living cast.</strong> It reads who she is, what she remembers, what she owes and what her world will allow — then reasons past the end of your script and decides as her. Not a line retrieved. A judgment made, in the moment, by someone.</p>
-                <p class="hero-engines"><strong>The ForbocAI NPC Protocol is how that intelligence enters a world without being able to change your state.</strong> Servitor™ proposes; your game alone makes it real. She decides like a person and she cannot touch your world — that is the whole invention, and it is what turns an open-ended model into a cast you can ship.</p>
+                <p class="hero-engines"><strong>The ForbocAI NPC Protocol is how that intelligence enters a world without being able to change your state.</strong> Servitor™ proposes; your game alone makes it real. She decides like a person and she cannot move your world. That is the invention, and it is what turns an open-ended model into a cast you can ship.</p>
                 <div class="hero-buttons">
                     <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
                     <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
