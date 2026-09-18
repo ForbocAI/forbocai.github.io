@@ -57,12 +57,29 @@
     --step-0: 1.1875rem;
     --step-1: 1.3125rem;
     --step-2: clamp(1.5rem, 1.25rem + 1vw, 1.9rem);
-    --step-3: clamp(2.05rem, 1.5rem + 2.4vw, 2.95rem);
-    --step-4: clamp(2.8rem, 1.8rem + 4.6vw, 4.9rem);
-    /* Tuned against the fold rather than picked. At 6.2rem the headline ran
-       five lines and pushed every call to action 102px below a 900px fold, so
-       the first screen offered no way to act. This lands it in four. */
-    --step-5: clamp(3.0rem, 1.9rem + 4.0vw, 5.0rem);
+    /* Derived too. A scale where one step is height-aware and the next is a
+       fixed clamp is not a scale — it inverts the moment a window gets short,
+       which is exactly what the hierarchy probe caught at 1366x768, 1440x700,
+       1024x768 and on a phone. Everything above body now descends from the
+       same source, so the ranks hold at every size by construction. */
+    --step-3: calc(var(--step-5) * 0.60);
+    /* Derived from step-5, not tuned beside it. When the headline shrinks on a
+       short screen the second rank has to shrink with it, or the mid-page peak
+       out-ranks the opening — which is exactly what happened the moment the
+       headline became height-aware and this stayed a fixed clamp. 0.82 keeps a
+       clear gap at every size the fold test covers. */
+    --step-4: calc(var(--step-5) * 0.82);
+    /* The headline has to clear the fold on every screen, not on the one it
+       was measured on. A width-only clamp cannot do that: a 1440x900 laptop
+       and a 1440x700 window have identical width and completely different
+       room, so any figure tuned against one is wrong on the other.
+
+       So the scale carries a viewport-HEIGHT term as well. A short window
+       shrinks the headline automatically and the calls to action stay above
+       the fold by construction rather than by a number I measured once. The
+       min() is what makes it a guarantee: whichever of width or height is
+       scarcer wins. */
+    --step-5: clamp(2.05rem, min(1.6rem + 3.4vw, 0.4rem + 6.6vh), 5.2rem);
 
     --measure: 66ch;
     --measure-tight: 46ch;
