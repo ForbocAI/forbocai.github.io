@@ -49,7 +49,7 @@ export const Whitepaper = () => {
                     <h3>3.2 Actions are proposed, not performed</h3>
                     <p>Servitor™ proposes structured intent; the Protocol defines how it is checked against studio-supplied contracts; the SDK carries those checks into game code; the game alone decides what moves on screen.</p>
                     <p class="doc-aside">A character can improvise the performance. She cannot improvise the world.</p>
-                    <p>The reply and any proposed action are checked separately. Transport failures reject the request. A server deadline miss or a reply that fails its required rules makes Finalize return a typed invalid result. Proposed actions that fail the studio's rules are not applied. None can authorize a memory write or state change, and the game owns the fallback. These checks alone do not guarantee factual accuracy, moderation or console certification.</p>
+                    <p>The reply and any proposed action are checked separately. Transport failures reject the request. A server deadline miss or a reply that fails its required rules returns a typed invalid result. Proposed actions that fail the studio's rules are not applied. None can authorize a memory write or state change, and the game owns the fallback. These checks alone do not guarantee factual accuracy, moderation or console certification.</p>
 
                     <h4>Entities, state, and world rules</h4>
                     <p>An entity-component system, an object graph, or a simulation you built yourself — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world. The validation step enforces that for actions, which is why a proposal your rules reject never touches state. It does not enforce it for prose: a character can still say something about your world that is untrue, and we do not claim otherwise.</p>
@@ -70,23 +70,26 @@ export const Whitepaper = () => {
 
                     <h3>3.5 The production ledger</h3>
                     <p><strong>Working now in ForbocAI evaluation environments:</strong> Servitor™ through the ForbocAI NPC Protocol; TypeScript and native Unreal Engine 5 interfaces; memory writes to studio-controlled local storage; structured action proposals; reply checks; action checks; internal test worlds; and an exact model and runtime build recorded internally.</p>
-                    <p id="wp-gates"><strong>Fifteen gates stand between here and full production authority, and here they are, in order, with what opens each one.</strong> Each is named once, numbered once, and cited by that number everywhere else on this site. This is an itinerary, not a confession. We publish it because we intend to walk it, and because you should be able to hold us to every line.</p>
+                    <p id="wp-gates"><strong>Eighteen gates stand between here and full production authority, and here they are, with what opens each one.</strong> Each is named once, numbered once, and cited by that number everywhere else on this site. This is an itinerary, not a confession. We publish it because we intend to walk it, and because you should be able to hold us to every line.</p>
                     <ol class="gate-ledger">
-                        <li><strong>External-studio evidence.</strong> Clears when a studio that is not ForbocAI runs Servitor™ in its own title.</li>
-                        <li><strong>Named-alternative comparison.</strong> Clears when a current public comparison of overall character-judgment quality, against an alternative we name, is passing. Gate thirteen is the narrower persona-hold measurement inside it.</li>
-                        <li><strong>Regional latency.</strong> Clears when typical and worst-case response times are measured end to end, by region, through a real integration.</li>
-                        <li><strong>Commercial release terms.</strong> Clears when the release contract binds the billable event, the public price, quotas, overage behavior, production capacity, unit economics measured at a shipped title's load rather than a demo's, and the retention terms for turn data.</li>
-                        <li><strong>Authored outage behavior.</strong> Clears when what a studio's world does during a ForbocAI outage is specified and contracted.</li>
-                        <li><strong>Platform certification.</strong> Clears when moderation and console requirements are met for a named platform.</li>
-                        <li><strong>Customer-selected release pinning.</strong> Clears when a studio can hold a build of the model across its ship window.</li>
-                        <li><strong>Contractual support window.</strong> Clears when the support term is bound in writing.</li>
-                        <li><strong>Continuity if this company stops.</strong> Clears when an instrument exists that keeps a shipped title running without us.</li>
-                        <li><strong>Producer-facing Ghost reports.</strong> Clears when a producer outside ForbocAI reads a coverage report from their own world.</li>
-                        <li><strong>Soul continuity.</strong> Clears when one Soul is carried end to end between two titles.</li>
-                        <li><strong>Prose grounding.</strong> Clears when a character's prose is measurably checked against the world the studio supplied. This is the open problem named in 3.2.</li>
-                        <li><strong>Persona hold.</strong> Clears when one authored character is measured holding her voice, loyalties and refusals under adversarial play, against a named alternative, on a cast we did not author.</li>
-                        <li><strong>Cast separation.</strong> Clears when a large cast is measured staying distinct from one another — the failure we name in the competition is a hundred characters converging on one voice, and holding one person is a different property from keeping four hundred apart.</li>
-                        <li><strong>Rationale faithfulness.</strong> Clears when the stated reason is measured to be the deciding reason. Everything we say about a refusal being inspectable rests on this, so it is owed a number of its own.</li>
+                        <li><strong><span class="gate-n">1.</span> External-studio evidence.</strong> Clears when a studio that is not ForbocAI runs Servitor™ in its own title.</li>
+                        <li><strong><span class="gate-n">2.</span> Named-alternative comparison.</strong> Clears when a current public comparison of overall character-judgment quality, against an alternative we name, is passing. It is the broad comparison; thirteen through fifteen are the specific properties, and none of them waits on this one.</li>
+                        <li><strong><span class="gate-n">3.</span> Regional latency.</strong> Clears when typical and worst-case response times are measured end to end, by region, through a real integration.</li>
+                        <li><strong><span class="gate-n">4.</span> Commercial release terms.</strong> Clears when the release contract binds the billable event, the public price, quotas, overage behavior, production capacity, unit economics measured at a shipped title's load rather than a demo's, and the retention terms for turn data.</li>
+                        <li><strong><span class="gate-n">5.</span> Authored outage behavior.</strong> Clears when what a studio's world does during a ForbocAI outage is specified and contracted.</li>
+                        <li><strong><span class="gate-n">6.</span> Platform certification.</strong> Clears when moderation and console requirements are met for a named platform.</li>
+                        <li><strong><span class="gate-n">7.</span> Customer-selected release pinning.</strong> Clears when a studio can hold a build of the model across its ship window.</li>
+                        <li><strong><span class="gate-n">8.</span> Contractual support window.</strong> Clears when the support term is bound in writing.</li>
+                        <li><strong><span class="gate-n">9.</span> Continuity if this company stops.</strong> Clears when an instrument exists that keeps a shipped title running without us. Hosted cognition makes this the hardest gate here, and the honest reading is that it means escrowed weights or a licensed runtime — we would rather name that than let the word "instrument" carry it.</li>
+                        <li><strong><span class="gate-n">10.</span> Producer-facing Ghost reports.</strong> Clears when a producer outside ForbocAI reads a coverage report from their own world.</li>
+                        <li><strong><span class="gate-n">11.</span> Soul continuity.</strong> Clears when one Soul is carried end to end between two titles.</li>
+                        <li><strong><span class="gate-n">12.</span> Prose grounding.</strong> Clears when a character's prose is measurably checked against the world the studio supplied. This is the open problem named in 3.2.</li>
+                        <li><strong><span class="gate-n">13.</span> Persona hold.</strong> Clears when one authored character is measured holding her voice, loyalties and refusals under adversarial play, against a named alternative, on a cast we did not author.</li>
+                        <li><strong><span class="gate-n">14.</span> Cast separation.</strong> Clears when a large cast is measured staying distinct from one another — the failure we name in the competition is a hundred characters converging on one voice, and holding one person is a different property from keeping four hundred apart.</li>
+                        <li><strong><span class="gate-n">15.</span> Rationale faithfulness.</strong> Clears when the stated reason is measured to be the deciding reason. Everything we say about a refusal being inspectable rests on this, so it is owed a number of its own.</li>
+                        <li><strong><span class="gate-n">16.</span> Adversarial safety.</strong> Clears when an authored character is measured holding her authored limits under deliberate attack. A model with no self of its own has no refusal identity of its own either, which makes this sharper for us than for a general model, not softer.</li>
+                        <li><strong><span class="gate-n">17.</span> Invalid-turn rate.</strong> Clears when the fraction of turns that miss the deadline or fail their checks is measured and published. A studio authors the line a player hears in that moment, so it has to know how often that line is reached.</li>
+                        <li><strong><span class="gate-n">18.</span> $FAI utility.</strong> Clears when a Soul is minted, carried and restored using $FAI between two live titles. Until then the token has no product function, and it belongs on this list rather than outside it.</li>
                     </ol>
                     <p>Twelve is the fault a studio fears. Thirteen, fourteen and fifteen are the three we most want to hand over, because together they are the claim this company rests on: that an authored person holds under pressure, that four hundred of them stay different from one another, and that the reason she gives is the reason she had. Servitor™ was trained for all three, and that is a reason to expect them rather than the results themselves. Keeping that distinction is the entire purpose of this list, because <strong>a limitation without a gate is just a well-worded no, and a strength without one is just a well-worded yes.</strong></p>
                 </section>
@@ -132,7 +135,7 @@ export const Whitepaper = () => {
 
             <footer class="doc-foot">
                 <p>The production ledger distinguishes working capability, active development and the evidence required for release. A diligence review should test those boundaries directly.</p>
-                <a href="#wp-gates" class="btn btn-primary">Read the fifteen gates</a>
+                <a href="#wp-gates" class="btn btn-primary">Read the eighteen gates</a>
             </footer>
         </div>
     </article>

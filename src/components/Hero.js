@@ -11,7 +11,7 @@ export const Hero = () => {
         <div class="container hero-grid">
             <div class="hero-copy">
                 <p class="kicker">ForbocAI — the NPC language model company</p>
-                <h1>The next great language model is already inside the game.</h1>
+                <h1>The next great language model is a person in your game.</h1>
                 <p class="hero-premise"><strong>Every other surface of a game came alive. The people did not.</strong> Worlds render weather you can feel and physics you can trust, and then the person standing in them runs out of script the moment a player asks something nobody wrote. You already know which of your NPCs players quote back to you, and you already know it is not the one with the most lines. That is the last unfinished surface in the medium, and it is the one that decides what a player carries away. Right now, in this scene, Maeve weighs what happened and decides as herself.</p>
                 <figure class="maeve-scene hero-maeve-glimpse">
                     <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
@@ -49,7 +49,7 @@ export const Hero = () => {
                         <span class="memory-what">You said you would come back before the thaw. You did not. She kept the lamp burning anyway.</span>
                     </li>
                 </ul>
-                <p class="memory-weigh" style="--i:3">The storm is safe. Her brother asked her to keep the letter sealed. This player is the only one who ever asked after him—and that is still not the same as being asked by her brother.</p>
+                <p class="memory-weigh" style="--i:3">The storm is the safe answer. Her brother asked her to keep the letter sealed. This player is the only one who ever asked after him—and that is still not the same as being asked by her brother.</p>
                 <p class="memory-foot" style="--i:4">Memory is the evidence. Judgment is the intelligence.</p>
             </figure>
         </div>

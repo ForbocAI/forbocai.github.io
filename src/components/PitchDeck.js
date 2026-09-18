@@ -10,13 +10,13 @@ import { selectPitchSlide } from '../domains/navigationSlice.js';
 const slides = [
     {
         id: 1,
-        title: 'The next great language model is already inside the game.',
+        title: 'The next great language model is a person in your game.',
         content: `
             <div class="title-slide">
                 <p class="proof-label">The ForbocAI NPC LM Servitor™</p>
                 <p class="subtitle">The intelligence behind the living cast.</p>
                 <p>Built for the moment a character must remember the evidence, reason through motive, decide as herself and propose what happens next.</p>
-                <p class="impact-statement"><strong>The living cast is already here.</strong></p>
+                <p class="impact-statement"><strong>One character who decides. That is where a living cast starts.</strong></p>
                 <p class="deck-meta">The category window — September 2026</p>
             </div>
             <img src="living-cast-scene.webp" class="title-slide-art title-slide-world" alt="Maeve and the living cast of Lanternbough after the storm." width="1672" height="941">
@@ -193,19 +193,41 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
             </div>
-            <p class="impact-statement">Your world state and your memory store stay yours, and neither becomes ForbocAI training data. The turn itself crosses our service, because hosted cognition is the thing you are buying; what is kept of it, and for how long, is bound in the release contract rather than promised in a sentence on a website. So nothing here compounds on your data. What compounds is the range of worlds one decision contract holds in. Be exact about which half of that is hard. The Protocol is the easy half, and we will say so plainly: a typed action boundary checked against studio rules is a fortnight of work for a good team, and anyone who wants one can have one. The model is the hard half. Everything about training a capable general model pushes it toward having a self, so selflessness is not a property you add to a model that already has opinions—you would have to train ours rather than wrap yours. The range then compounds on top of both: each genre this contract survives makes the next integration a smaller question, and that ladder gets climbed in order by everyone, including us. Today ours stands at our own evaluation worlds and no external studio — gate one, listed and unclaimed — which is exactly why the first three integrations are the whole thesis.</p>
+            <p class="impact-statement">Your world state and your memory store stay yours, and neither becomes ForbocAI training data. The turn itself crosses our service, because hosted cognition is the thing you are buying; what is kept of it, and for how long, is bound in the release contract rather than promised in a sentence on a website. So nothing here compounds on your data. What compounds is the range of worlds one decision contract holds in. Be exact about which half of that is hard. The Protocol is the easy half, and we will say so plainly: a typed action boundary checked against studio rules is a fortnight of work for a good team, and anyone who wants one can have one. The model is the hard half. Everything about training a capable general model pushes it toward having a self, so selflessness is not a property you add to a model that already has opinions—you would have to train ours rather than wrap yours. The range then compounds on top of both: each genre this contract survives makes the next integration a smaller question, and that ladder gets climbed in order by everyone, including us. Today ours stands at our own evaluation worlds and no external studio — gate one, listed and unclaimed — which is exactly why the first three integrations are the whole thesis. And the deeper asset is the list itself: clearing gates thirteen through fifteen means writing the definition of persona hold, of cast separation, of a faithful rationale, and building the harness that measures them at scale. Whoever writes a category's measurement writes its purchasing criteria. A rival who finishes a character model eighteen months from now needs that instrument and the authored casts it runs against, and has neither.</p>
         `
     },
     {
         id: 12,
-        title: 'The age of the living cast has already begun.',
+        title: 'Who is building this.',
+        content: `
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>Sean Dinwiddie</h4>
+                    <p><strong>President, board, lead developer</strong><br/>Builds the API, the ForbocAI NPC Protocol, Servitor™ itself and the TypeScript SDK.</p>
+                </div>
+                <div class="team-member">
+                    <h4>Tiernan Omalley</h4>
+                    <p><strong>Business development</strong><br/>Studio partnerships, publisher conversations and the developer community.</p>
+                </div>
+                <div class="team-member">
+                    <h4>Antara Bhavsar</h4>
+                    <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
+                </div>
+            </div>
+            <p class="team-note">One person built the model, and that is the sharpest question anyone can put to the moat slide: if a gate takes one engineer a few months, it is not a gate. Ask it here rather than finding it later. Widening this bench is the first thing new capital buys.</p>
+            <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
+        `
+    },
+    {
+        id: 13,
+        title: 'Three integrations decide the category.',
         content: `
             <div class="threshold-call">
                 <p class="proof-label">The category window is open</p>
-                <p class="threshold-lead">Outside, it still looks early. Inside, Character Intelligence already has its model and its laws, and the commercial standard is being bound gate by gate in public.</p>
-                <p class="threshold-line">NPC language models are already obvious from inside the game. Whoever ships the first cast a player argues with defines what they are.</p>
+                <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships the first one decides what this category means.</p>
+                <p class="threshold-line">Three integrations settle it. We would rather walk in with you than hand you a list of reasons to wait.</p>
             </div>
-            <p class="ask-note">Fifteen gates are listed, and the last three measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
+            <p class="ask-note">Eighteen gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Be one of the first three integrations</a>
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-ghost">Investors: come inside</a>
