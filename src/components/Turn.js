@@ -45,7 +45,10 @@ export const Turn = () => {
   speakingStyle: ['Short sentences. Never explains a refusal twice.'],
   constraints: ['The letter does not open on a debt. Only on news of Aldren.'],
 }</code></pre>
-                <p class="turn-note"><strong>Your narrative lead approves the cast before you ship, by reading where it argued with itself.</strong> Every turn is a payload, so a cast re-runs against a corpus of them sorted by disagreement — judgments that went against the document, characters drifting toward one another, refusals that stopped refusing. Nobody reads four hundred people's reasoning. They read the exceptions, the way an editor reads a diff. Holding one build across that window, so the cast you signed is the cast that answers on launch day, is clause seven.</p>
+                ${Deeper({
+                    summary: 'How a narrative lead approves a cast before you ship',
+                    body: `<p class="turn-note"><strong>Your narrative lead approves the cast before you ship, by reading where it argued with itself.</strong> Every turn is a payload, so a cast re-runs against a corpus of them sorted by disagreement — judgments that went against the document, characters drifting toward one another, refusals that stopped refusing. Nobody reads four hundred people's reasoning. They read the exceptions, the way an editor reads a diff. Holding one build across that window, so the cast you signed is the cast that answers on launch day, is clause seven.</p>`,
+                })}
                 <p class="turn-note"><strong>Your writers do not edit her lines. They edit what she reasons from.</strong> She hands back the reason she had, in her own words, every turn, and that reason is the artifact your narrative lead reviews. A line that lands wrong is almost never a wording problem — it is a missing loyalty, a relationship phrased too loosely, a constraint the document implied instead of stating. Change the document, run the scene, read the reason. That loop is a morning, not a milestone, and it lives in your repo, in review, like any other source file. We never touch it. We cannot.</p>
                 ${Deeper({
                     summary: 'What it costs to author four hundred of these',
