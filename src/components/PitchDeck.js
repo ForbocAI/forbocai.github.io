@@ -217,20 +217,20 @@ const slides = [
                     <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
                 </div>
             </div>
-            <p class="team-note">One person built the model, and and that invites the sharpest question anyone can put to the moat slide: if a gate takes one engineer a few months, it is not a gate. Ask it here rather than finding it later, and take the real answer: the model is the part one engineer can rebuild, which is why the moat slide says a well-funded competitor can begin it next quarter. What one engineer cannot rebuild in a few months is twenty-two gates' worth of definitions and the harness that measures them, run against casts nobody else has authored. Widening this bench is the first thing new capital buys.</p>
+            <p class="team-note">Engineering runs across the API, the model, the SDKs and the Unreal parity work. The sharpest question anyone can put to the moat slide still belongs here, so ask it now rather than later: if a gate takes a small team a few months, it is not a gate. The honest answer is that the model is the part a small team can rebuild — which is exactly why the moat slide says a well-funded competitor can begin it next quarter. What nobody skips is twenty-three gates' worth of definitions and the harness that measures them, run against casts nobody else has authored. Deepening this bench is the first thing new capital buys.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },
     {
         id: 13,
-        title: 'Three integrations decide the category.',
+        title: 'The first three worlds are the whole thesis.',
         content: `
             <div class="threshold-call">
                 <p class="proof-label">The category window is open</p>
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships the first one decides what this category means.</p>
-                <p class="threshold-line">Three integrations settle it — and to be plain about what that means, the first three are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against. That is the conversation, and it starts now.</p>
+                <p class="threshold-line">Those three settle it — and to be plain about what that means, they are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against. That is the conversation, and it starts now.</p>
             </div>
-            <p class="ask-note">Twenty-two gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
+            <p class="ask-note">Twenty-three gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Be one of the first three integrations</a>
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-ghost">Investors: come inside</a>

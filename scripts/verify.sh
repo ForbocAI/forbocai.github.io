@@ -8,6 +8,7 @@
 #   audit-consistency  a sentence that is wrong against the rest of the site
 #   layout             text collapsed to one word per line
 #   contrast           ink that fails WCAG on any of the fourteen routes
+#   type               body copy running past the 80-character measure
 #   gates              a gate cited by number that the ledger does not hold
 #   errors             anything the page throws in a real browser
 #
@@ -46,7 +47,7 @@ if [ -d .dream-loop ] && command -v node >/dev/null; then
     server=$!
     sleep 2
   fi
-  for check in layout contrast gates errors; do
+  for check in layout contrast type gates errors; do
     [ -f ".dream-loop/$check.mjs" ] && run "$check" node ".dream-loop/$check.mjs"
   done
   [ -n "$server" ] && kill "$server" 2>/dev/null
