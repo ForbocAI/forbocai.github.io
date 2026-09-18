@@ -55,12 +55,23 @@
     border-radius: 50%;
     overflow: hidden;
     isolation: isolate;
-    /* The ring is the lantern's light catching the rim of the opening, and the
-       spill is that light reaching the moss around it. */
-    border: 1px solid color-mix(in srgb, var(--lantern) 38%, transparent);
+    /* Glass, read from the outside in: a bright fresnel edge where the sphere
+       turns away from you, the lantern's light spilling onto the moss around
+       it, real weight sitting under it, and a warm bloom caught inside the
+       curve. Four shadows because glass is four things at once. */
     box-shadow:
-        0 0 120px -26px color-mix(in srgb, var(--lantern) 34%, transparent),
-        0 30px 60px -40px rgba(9, 14, 10, 0.9);
+        0 0 0 1px color-mix(in srgb, var(--lantern) 58%, transparent),
+        0 0 140px -22px color-mix(in srgb, var(--lantern) 40%, transparent),
+        0 44px 72px -48px rgba(6, 10, 7, 0.95),
+        inset 0 0 64px -20px color-mix(in srgb, var(--lantern) 34%, transparent),
+        /* The wall of the glass has thickness: a dark ring just inside the
+           bright rim, which is the only cue that separates a sphere from a
+           hole cut in the page. */
+        inset 0 0 0 3px rgba(18, 27, 20, 0.5),
+        inset 0 0 0 4px color-mix(in srgb, var(--lantern) 22%, transparent),
+        /* Light that went through the glass, hit the moss and came back up
+           into the underside of the curve. */
+        inset 0 -26px 40px -30px color-mix(in srgb, var(--lantern) 46%, transparent);
 }
 
 .portal-window img {
@@ -71,14 +82,13 @@
     filter: saturate(0.96) brightness(0.96);
 }
 
-/* The plate is painted on white paper, and white paper on a night ground reads
-   as a sheet of light rather than an opening. The moss is multiplied back over
-   it from the rim inwards, so the edge sinks into the dark and the lantern is
-   left as the one bright thing — which is what a window at night looks like. */
+/* The world is behind the glass, so it falls away toward the rim. Painted
+   under the highlight, which is why it takes the lower layer. */
 .portal-window::after {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 1;
     border-radius: 50%;
     background:
         radial-gradient(
@@ -93,6 +103,38 @@
             rgba(15, 23, 17, 0.96) 100%
         );
     mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+/* The glass itself. A curved specular where the light source strikes, a hard
+   little catchlight inside it, and the rim light wrapping the opposite
+   shoulder — the three marks that make a sphere read as glass rather than as
+   a hole. Screened, because a highlight adds light and never removes it. */
+.portal-window::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            ellipse 46% 30% at 30% 14%,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.14) 46%,
+            transparent 74%
+        ),
+        radial-gradient(
+            ellipse 9% 5% at 26% 25%,
+            rgba(255, 255, 255, 0.6),
+            transparent 70%
+        ),
+        linear-gradient(
+            118deg,
+            transparent 56%,
+            color-mix(in srgb, var(--lantern) 26%, transparent) 79%,
+            transparent 93%
+        );
+    mix-blend-mode: screen;
     pointer-events: none;
 }
 

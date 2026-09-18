@@ -45,6 +45,7 @@ export const Turn = () => {
 }</code></pre>
                     <p class="turn-note">She had <code>offer_item</code> available and did not take it. A refusal is a judgment your game can inspect, not a failed response: the rationale names the reason, so when a player is told no, your QA lead can find out why.</p>
                     <p class="turn-note">The reply is checked too, and it is worth being exact about what that means. It must name the action she actually took, must not argue for the one she refused, and must not claim a comparison the supplied evidence does not carry. It is <strong>not</strong> checked against your lore. Nothing here stops a character stating a fact about your world that is wrong; the action boundary is what protects your state, and factual grounding is a separate problem we do not claim to have solved.</p>
+                    <p class="turn-note">The same plainness about time. This turn crossed a network and ran under a hard deadline you configure. If it cannot finish in that budget and meet its rules, the turn comes back marked invalid and authorizes nothing—no action, no memory write, no change to your state—and the line the player hears in that moment is yours to author. Active cognition needs a connection; that is the trade, stated once.</p>
                 </div>
             </div>
 
@@ -56,12 +57,12 @@ export const Turn = () => {
                 </div>
                 <div class="turn-counterfactual-pair">
                     <article>
-                        <span>Brother evidence withheld</span>
-                        <strong>Maeve must not invent him, the letter or a reason to offer it.</strong>
+                        <span>Tonight</span>
+                        <strong><code>refuse</code> — the asking earned the road, not the letter. A broken promise about the thaw is still sitting between them.</strong>
                     </article>
                     <article>
-                        <span>Brother evidence supplied</span>
-                        <strong>Can Maeve surface him and propose the letter for a reason the writer accepts?</strong>
+                        <span>After the player brings her brother's ring back from the north road</span>
+                        <strong><code>offer_item</code> — the evidence changed, so the judgment did. Same character, same values, different verdict.</strong>
                     </article>
                 </div>
             </section>

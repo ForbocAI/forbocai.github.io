@@ -193,7 +193,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
             </div>
-            <p class="impact-statement">Nothing here compounds on your data—we never receive it. What compounds is the range of worlds one decision contract has already held in: every genre it survives makes the next integration a smaller question than the last.</p>
+            <p class="impact-statement">Nothing here compounds on your data—we never receive it. What compounds is the range of worlds one decision contract holds in. Today that range is our own evaluation worlds and no external studio—that gate is listed and unclaimed—which is exactly why the first three integrations are the whole thesis: every genre the contract survives makes the next one a smaller question than the last.</p>
         `
     },
     {

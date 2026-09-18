@@ -21,7 +21,7 @@ export const Hero = () => {
                 <p class="hero-engines"><strong>The ForbocAI NPC Protocol gives that intelligence a lawful place inside the world.</strong> Servitor™ proposes. Your game alone makes the choice real.</p>
                 <div class="hero-buttons">
                     <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
-                    <a href="#pitch/1" class="text-link" data-link>Enter the category</a>
+                    <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@ export const Hero = () => {
                     </li>
                     <li style="--i:2">
                         <span class="memory-when">Last session</span>
-                        <span class="memory-what">You left ahead of the storm. She kept the lamp burning anyway.</span>
+                        <span class="memory-what">You said you would come back before the thaw. You did not. She kept the lamp burning anyway.</span>
                     </li>
                 </ul>
                 <p class="memory-weigh" style="--i:3">The storm is safe. Her brother asked her to keep the letter sealed. This player is the only one who ever asked after him—and that is still not the same as being asked by her brother.</p>

@@ -29,8 +29,8 @@ export const Vision = () => {
                 <h3>Paid access to Servitor™ is the business</h3>
                 <p>The unit of sale is one character judgment, priced in ordinary money and needing no wallet. The billable event is bound in the release contract before any of it goes live. $FAI is a separate, opt-in layer around Soul continuity—live now, advancing as that continuity does, and required for none of the above.</p>
                 <div class="hero-buttons">
-                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Enter $FAI</a>
-                    <a href="#whitepaper" class="text-link" data-link>Read the architecture</a>
+                    <a href="#whitepaper" class="btn btn-primary" data-link>Read the architecture</a>
+                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="text-link" target="_blank" rel="noopener noreferrer">$FAI on pump.fun</a>
                 </div>
             </aside>
         </div>
