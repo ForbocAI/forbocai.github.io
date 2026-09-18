@@ -8,7 +8,7 @@
  */
 export const Technology = () => {
     return `
-    <section id="technology" class="chapter chapter-day">
+    <section id="technology" class="chapter is-quiet chapter-day">
         <div class="container">
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᚠ</span>

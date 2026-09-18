@@ -75,19 +75,18 @@
     -webkit-overflow-scrolling: touch;
 }
 
-/* Wrapping was worse than scrolling. At 390px pre-wrap broke every line at
-   about twenty-eight characters, mid-clause, and a payload broken mid-token
-   reads as damaged text rather than as evidence. It scrolls now, with a fade
-   at the right edge so the overflow is legible as overflow. */
+/* One treatment at every width. The payload is the evidence, so it may never
+   be cut: it wraps, and a wrapped line is marked as a continuation rather than
+   destroying the indentation that makes an object legible. No mask — wrapped
+   text has no overflow to fade, and painting one over it only made a readable
+   block look truncated. */
 .turn-code code {
+    display: block;
     font-family: inherit;
-    white-space: pre;
-}
-
-.turn-code {
-    position: relative;
-    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 2.5rem), transparent);
-    mask-image: linear-gradient(90deg, #000 calc(100% - 2.5rem), transparent);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    padding-left: 2ch;
+    text-indent: -2ch;
 }
 
 .turn-note {
@@ -351,7 +350,6 @@
 /* The answer block is a returned judgment like the two above it, so it sits in
    the same recessed pocket rather than running bare across the section. */
 .turn-answer .turn-code {
-    max-width: 78ch;
     margin: 0;
     padding: 0.85rem 1rem;
     border-radius: var(--radius-xs);
@@ -366,3 +364,90 @@
 }
 
 .turn-answer .turn-note em { font-style: italic; color: var(--night-ink); }
+
+/* ---------------------------------------------------------- the climax -- */
+
+/* A twenty-two screen page with even rhythm has no peak, and this is the one
+   exhibit whose argument is legible without reading a word of prose: same
+   persona, same question, one changed memory, a different choice. So it stops
+   being styled like its neighbours and becomes the event the page builds to. */
+.turn-counterfactual {
+    margin-inline: calc(var(--gutter) * -1);
+    padding: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 4vw, 3.5rem);
+    border-radius: var(--radius-lg);
+    border-color: color-mix(in srgb, var(--honey) 22%, transparent);
+    background:
+        radial-gradient(ellipse 80% 60% at 50% 0%,
+            color-mix(in srgb, var(--lantern) 7%, transparent), transparent 70%),
+        #11170f;
+}
+
+.turn-counterfactual .turn-counterfactual-head {
+    max-width: 52ch;
+    margin-inline: auto;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+}
+
+.turn-counterfactual .turn-counterfactual-head h3 {
+    font-size: var(--step-3);
+    line-height: 1.1;
+}
+
+/* The one line that changed, set as the thing the whole pair turns on. */
+.turn-diffline {
+    margin: 1.1rem auto 0;
+    max-width: 40ch;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--step-1);
+    color: var(--honey);
+}
+
+/* Equal height, so the two judgments read as one comparison rather than two
+   stacked blocks of unequal weight. */
+.turn-counterfactual .turn-counterfactual-pair {
+    align-items: stretch;
+    gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.turn-counterfactual .turn-counterfactual-pair article {
+    display: flex;
+    flex-direction: column;
+}
+
+.turn-counterfactual .turn-counterfactual-pair .turn-code {
+    flex: 1;
+    max-width: none;
+}
+
+/* The diff. Everything that did not change drops back; the tokens that did
+   are the only lit thing in the block, so the eye finds the argument before
+   it reads a line. */
+.turn-counterfactual .turn-code code {
+    /* Dimmed, not faded. Transparency dropped this under the contrast floor;
+       a solid step back keeps the diff readable for anyone who wants to read
+       it rather than only glance at it. */
+    color: var(--night-ink-faint);
+}
+
+.turn-counterfactual .turn-code b {
+    font-weight: 400;
+    color: var(--lantern);
+}
+
+.turn-counterfactual .turn-counterfactual-pair article:first-child .turn-code b {
+    color: var(--creek);
+}
+
+/* The stub connector read as a rendering artifact. Gone. */
+.turn-counterfactual .turn-counterfactual-pair article:first-child::after { content: none; }
+
+.turn-counterfactual-foot {
+    max-width: 62ch;
+    margin: clamp(2rem, 4vw, 3rem) auto 0;
+    text-align: center;
+    font-size: var(--step-0);
+    line-height: 1.55;
+    color: var(--night-ink-soft);
+}

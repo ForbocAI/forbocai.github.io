@@ -3,7 +3,7 @@ import { Lantern } from './Lantern.js';
 /** The final choice: test the character or fund the proof path. */
 export const Investors = () => {
     return `
-    <section id="investors" class="chapter chapter-night investors-section">
+    <section id="investors" class="chapter chapter-night investors-section is-event">
         <div class="lantern-glow" aria-hidden="true"></div>
         ${Lantern({ className: "lantern-investors", size: 1.5, tone: "bright" })}
         <div class="container">

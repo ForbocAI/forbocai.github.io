@@ -11,7 +11,7 @@ import { Deeper } from './Deeper.js';
  */
 export const Turn = () => {
     return `
-    <section id="turn" class="chapter turn-band">
+    <section id="turn" class="chapter turn-band is-event">
         <div class="container">
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛒ</span>
@@ -43,11 +43,11 @@ export const Turn = () => {
   speakingStyle: ['Short sentences. Never explains a refusal twice.'],
   constraints: ['The letter does not open on a debt. Only on news of Aldren.'],
 }</code></pre>
-                <p class="turn-note"><strong>Your narrative lead approves the cast before you ship — by reading where it argued with itself.</strong> Every turn is a payload, so a whole cast can be re-run against a corpus of them and sorted by disagreement: the judgments that went against the document, the characters drifting toward one another, the refusals that stopped refusing. Nobody reads four hundred people's reasoning. They read the exceptions, the way an editor reads a diff. When one is wrong it traces to a document, the document is in their repo, and the fix is a Tuesday. Holding one build across that window, so the cast you signed is the cast that answers on launch day, is clause seven.</p>
+                <p class="turn-note"><strong>Your narrative lead approves the cast before you ship, by reading where it argued with itself.</strong> Every turn is a payload, so a cast re-runs against a corpus of them sorted by disagreement — judgments that went against the document, characters drifting toward one another, refusals that stopped refusing. Nobody reads four hundred people's reasoning. They read the exceptions, the way an editor reads a diff. Holding one build across that window, so the cast you signed is the cast that answers on launch day, is clause seven.</p>
                 <p class="turn-note"><strong>Your writers do not edit her lines. They edit what she reasons from.</strong> She hands back the reason she had, in her own words, every turn, and that reason is the artifact your narrative lead reviews. A line that lands wrong is almost never a wording problem — it is a missing loyalty, a relationship phrased too loosely, a constraint the document implied instead of stating. Change the document, run the scene, read the reason. That loop is a morning, not a milestone, and it lives in your repo, in review, like any other source file. We never touch it. We cannot.</p>
                 ${Deeper({
                     summary: 'What it costs to author four hundred of these',
-                    body: `<p class="turn-note">Four hundred pages — a writer-week buys a dozen of them, so a cast is a season for a small room, against the hundreds of thousands of words of branch they replace. A persona document is a page, and your bible already has most of it — traits, goals, relationships, how she talks, what she will not do. Your team writes that today, for every named character, before one branch gets typed. What changes is where it goes afterwards. Today it goes into a writer's head and comes back as thirty thousand words of branch, most of which no player ever sees. Here it stays a page, and the branch is the part you stop paying for. A cast gets more expensive to imagine and far cheaper to cover. We will not put a number on it, because the honest version of that number comes off a real cast on a real schedule, and the first studio to run four hundred states it beside their own name.</p>`,
+                    body: `<p class="turn-note">Four hundred pages. A writer-week buys about a dozen, so a cast is a season for a small room — against the hundreds of thousands of words of branch it replaces. Your bible already has most of a persona document in it. What changes is where it goes: today it becomes thirty thousand words of branch nobody walks, and here it stays a page. A cast gets dearer to imagine and far cheaper to cover.</p>`,
                 })}
                 <p class="turn-note turn-authored-foot"><em>The letter does not open on a debt</em> is a writer's constraint, typed on a Tuesday. At the counter, at night, with this player in front of her, it costs her the letter. Nobody typed the second one — and your writer authored the half that decided it.</p>
             </div>
@@ -109,29 +109,29 @@ export const Turn = () => {
                 <div class="turn-counterfactual-head">
                     <p class="turn-label">The character changes when the meaning changes</p>
                     <h3 id="turn-counterfactual-title">One changed truth. A different choice.</h3>
-                    <p>Maeve does not vary because a generator rolled another line. She changes because the player changed what the moment means.</p>
+                    <p class="turn-diffline">The player went north, and came back with her brother's ring.</p>
                 </div>
                 <div class="turn-counterfactual-pair">
                     <article>
-                        <span>Tonight</span>
-                        <p class="turn-note">One line of memory: <em>You said you would come back before the thaw. You did not.</em></p>
+                        <span>Before</span>
+                        <p class="turn-note"><em>You said you would come back before the thaw. You did not.</em></p>
                         <pre class="turn-code"><code>{
-  dialogue: "He went north. That is all I can give you tonight.",
-  reasoningText: "That earns the road. It does not earn the letter.",
-  action: { type: 'refuse', payload: { item: 'brothers_letter' } },
+  dialogue: <b>"He went north. That is all I can give you tonight."</b>,
+  reasoningText: <b>"That earns the road. It does not earn the letter."</b>,
+  action: { type: <b>'refuse'</b>, payload: { item: 'brothers_letter' } },
 }</code></pre>
                     </article>
                     <article>
-                        <span>Same persona. Same question. One memory changed.</span>
-                        <p class="turn-note">The player came back from the north road with her brother's ring: <em>You kept the promise, and you brought her the worst news in town.</em></p>
+                        <span>After</span>
+                        <p class="turn-note"><em>You kept the promise, and you brought her the worst news in town.</em></p>
                         <pre class="turn-code"><code>{
-  dialogue: "Then you already know what is in it. Sit down first.",
-  reasoningText: "He is not coming back, and this one went to find that out for me. What he asked me to keep was never a wall to hold against the only person who looked.",
-  action: { type: 'offer_item', payload: { item: 'brothers_letter' } },
+  dialogue: <b>"Then you already know what is in it. Sit down first."</b>,
+  reasoningText: <b>"He is not coming back, and this one went to find that out for me. What he asked me to keep was never a wall to hold against the only person who looked."</b>,
+  action: { type: <b>'offer_item'</b>, payload: { item: 'brothers_letter' } },
 }</code></pre>
                     </article>
                 </div>
-                <p class="turn-note turn-counterfactual-foot">Nothing about Maeve changed. Her brother's request still stands, and she still weighs it the same way. What changed is what the player made true, and that is the whole difference between a character and a generator.</p>
+                <p class="turn-counterfactual-foot"><strong>Nothing about Maeve changed.</strong> Same persona, same question, same two verbs on the table. Her brother's request still stands and she still weighs it the same way. What changed is what the player made true — and that is the whole difference between a character and a generator.</p>
             </section>
 
 

@@ -18,7 +18,7 @@
 
 export const Mission = () => {
     return `
-    <section id="mission" class="chapter chapter-day mission">
+    <section id="mission" class="chapter chapter-day mission is-event">
         <div class="container">
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛟ</span>

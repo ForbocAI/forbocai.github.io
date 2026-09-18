@@ -7,7 +7,7 @@ import { Lantern } from './Lantern.js';
  */
 export const Roadmap = () => {
     return `
-    <section id="roadmap" class="chapter chapter-night">
+    <section id="roadmap" class="chapter is-quiet chapter-night">
         ${Lantern({ className: "lantern-path", size: 0.85 })}
         <div class="container">
             <header class="chapter-head">

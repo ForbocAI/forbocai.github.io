@@ -166,21 +166,10 @@
         font-size: 1.0625rem;
     }
 
-    /* A horizontal scroll inside a code block is invisible on a phone, and the
-       payload was being cut mid-token. Wrap it instead — this is the one
-       section whose whole job is to be read. */
+    /* The wrap treatment is the base rule now, at every width. A phone only
+       needs the size step. */
     .turn-code {
         font-size: 0.75rem;
-    }
-
-    .turn-code code {
-        white-space: pre-wrap;
-        overflow-wrap: anywhere;
-        /* Hanging indent, so a wrapped line reads as continuation rather than
-           destroying the indentation that makes the payload legible. */
-        display: block;
-        padding-left: 2ch;
-        text-indent: -2ch;
     }
 
     .turn-cli code {
