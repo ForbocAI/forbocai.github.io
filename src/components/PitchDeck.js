@@ -163,7 +163,7 @@ const slides = [
         content: `
             <div class="world-expansion" aria-label="Expansion through a game world">
                 <article><span>01</span><strong>One character</strong><p>An innkeeper decides what a latecomer is owed.</p></article>
-                <article><span>02</span><strong>A living cast</strong><p>Her brother, the miner she covered for, the neighbour who wants the room she just gave away.</p></article>
+                <article><span>02</span><strong>A living cast</strong><p>Her brother, the miner the player covered for, the neighbour who wants the room she just gave away.</p></article>
                 <article><span>03</span><strong>Systems answer back</strong><p>A refusal reaches your faction system as a decision, not a flag.</p></article>
                 <article><span>04</span><strong>An inhabited world</strong><p>The player goes somewhere you never wrote. The cast is already there.</p></article>
             </div>
@@ -226,7 +226,7 @@ const slides = [
         content: `
             <div class="threshold-call">
                 <p class="proof-label">The window</p>
-                <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships the first one decides what this category means. Every future character deserves a world that remembers it, and the veil has opened on a future too radiant to forget.</p>
+                <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships first decides what this category means. Every future character deserves a world that remembers it.</p>
                 <p class="threshold-line">Those three settle it — and to be plain about what that means, they are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against. That is the conversation, and it starts now.</p>
             </div>
             <p class="ask-note">Twenty-four gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
