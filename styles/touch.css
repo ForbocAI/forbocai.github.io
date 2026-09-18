@@ -15,8 +15,12 @@
         margin-block: -0.3rem;
     }
 
+    /* display:block was enlarging the tap target and destroying the marker
+       gutter with it: .doc-contents a is a grid whose first track is the 1.4rem
+       the "1." sits in, so overriding the display collapsed the counter onto
+       the title and rendered "1.Summary" on every touch width. The taller tap
+       target is padding, which grid gives just as well. */
     .doc-contents ol a {
-        display: block;
         padding-block: 0.85rem;
     }
 

@@ -23,7 +23,12 @@
    reads as one motion at a glance instead of six stacked rows. */
 .servitor-cognition {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    /* Six facets, so the column count has to divide six or one card is left
+       alone on a row. auto-fit does not know that: it fitted five across and
+       orphaned the sixth at every width from 1220 to past 1860, and four with
+       two below from 964. Explicit counts that divide six cannot orphan at any
+       width. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.9rem;
     margin: 1.6rem 0 0;
     padding: 0;
@@ -36,6 +41,10 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
     gap: 1rem;
     margin-top: 2.4rem;
+}
+
+@media (min-width: 640px) {
+    .servitor-cognition { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .servitor-cognition li,

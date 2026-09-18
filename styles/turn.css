@@ -111,7 +111,12 @@
     padding: 0.1em 0.35em;
     border-radius: var(--radius-xs);
     background: color-mix(in srgb, var(--honey) 16%, transparent);
-    color: var(--honey);
+    /* --honey measured 3.85:1 on the lit panel at 13.5px — well under AA, and
+       the smallest type in the night. The chip already carries a 16% honey
+       ground, so the warmth is in the background; the glyphs themselves can be
+       the brighter made light without changing what the chip reads as.
+       Gated by .dream-loop/nightcontrast.mjs against rendered pixels. */
+    color: var(--lantern);
 }
 
 .turn-refusal {

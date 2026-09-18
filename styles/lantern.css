@@ -108,6 +108,15 @@
     color: var(--night-ink-soft);
 }
 
+/* The lead alone takes the full ink. It is the first thing read in a chapter,
+   it sits at 19px, and the colonies light the ground under it — --night-ink-soft
+   measured 3.53:1 there at 390px, where the page has no margins for a colony to
+   stay out of. Body copy stays soft, so the tonal step between a lead and the
+   prose under it survives. Gated by .dream-loop/nightcontrast.mjs. */
+.chapter-night .chapter-lead {
+    color: var(--night-ink);
+}
+
 .chapter-night .chapter-mark {
     color: var(--lantern);
 }
@@ -162,8 +171,15 @@
     border-radius: 50%;
 }
 
+/* --honey measured 4.4:1 against the lit panel — just under AA for 15px/700.
+   The ground under these labels is not the flat night, it is --surface-night's
+   own warm lantern radial, which has lit them since long before the colonies
+   existed. --lantern is the same made light one step brighter, so the warm
+   system is unchanged and the label clears AA. Gated by
+   .dream-loop/nightcontrast.mjs, measured from rendered pixels. */
 .chapter-night .turn-label,
 .turn-band .turn-label {
+    color: var(--lantern);
     text-shadow: var(--biolume-ink);
 }
 

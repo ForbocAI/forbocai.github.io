@@ -372,12 +372,14 @@ main {
    is free, which opens gaps exactly as large as the void it was meant to fill.
    A float leaves the prose flow untouched and lets text run up beside it.
 
-   From 1200px, not 1400px. The two-column grid in breaks.css engages at 1100
-   and this engaged at 1400, so 1152-1400 was covered by neither and #mission
-   sat at 78% empty at 1280 — a band containing the single most common laptop
-   width there is. A 1180px shell leaves 1100px of content: a 660px measure, a
-   40px gutter and a ~300px margin fit inside that with room to spare. */
-@media (min-width: 1200px) {
+   From 1100px, which is exactly where the two-column grid in breaks.css
+   engages. This started at 1400 and then at 1200, and each time the uncovered
+   strip only MOVED: at 1400 #mission was 78% empty at 1280; at 1200 it was 77%
+   at 1152 and 1184, the same depth shifted 128px left. A gap between two
+   breakpoints is not narrowed by making it narrower, it is closed by making
+   the two numbers the same. A 1180px shell leaves 1100px of content: a 660px
+   measure, a 40px gutter and a ~300px margin fit inside that. */
+@media (min-width: 1100px) {
     /* Some chapters wrap their disclosure in a div, so matching only .deeper
        missed exactly the two worst sections: #mission holds its inside
        .mission-turn and #technology has a .ledger-note instead. */
