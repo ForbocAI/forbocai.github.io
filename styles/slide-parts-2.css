@@ -98,3 +98,34 @@
     border-top: 1px solid var(--day-rule);
 }
 
+
+/* The label above a slide's opening line. Set as a rubric, not a sentence:
+   uppercase, tracked and in the sage that marks every other proof mark on the
+   site, so it reads as a heading for what follows rather than more body copy.
+   Reconstructed against .dream-loop/r26-deck-target/slide-01.png. */
+.proof-label {
+    margin: 0 0 0.35rem;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--day-ink-soft);
+}
+
+/* The title slide's plate is the one image on the deck that carries weight, so
+   it is the exception to .title-slide-art's faded, multiplied treatment: full
+   strength, arched like a window, and tall enough to hold the right column.
+   Left as the general rule it rendered as a small washed-out oval floating in
+   the middle of the column. */
+.title-slide-world {
+    width: min(100%, 400px);
+    opacity: 1;
+    mix-blend-mode: normal;
+    -webkit-mask-image: none;
+    mask-image: none;
+    border-radius: 999px 999px 20px 20px;
+    align-self: stretch;
+    object-fit: cover;
+    max-height: 520px;
+}

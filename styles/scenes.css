@@ -1,0 +1,56 @@
+/* ---------------------------------------------------------------- scenes -- */
+
+/* The illustrated figures — the tavern glimpse in the hero, the choice and
+   living-world scenes in the deck, the cognition scene beside Servitor. They
+   share one treatment: a cropped plate with its caption laid over the foot of
+   the image, so the words belong to the picture rather than sitting under it
+   as a separate block.
+   Reconstructed against .dream-loop/r26-final/home-mobile-1.png. */
+
+.maeve-scene {
+    position: relative;
+    margin: 1.6rem 0 0;
+    border-radius: 14px;
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow:
+        0 1px 0 #fffdf6 inset,
+        0 18px 44px -26px rgba(92, 74, 59, 0.55),
+        0 2px 10px -6px rgba(92, 74, 59, 0.3);
+}
+
+.maeve-scene img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Laid over the plate, not beneath it. The band is dark enough to carry cream
+   ink at weight over whatever part of the illustration it lands on. */
+.maeve-scene figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0.85rem 1rem 0.95rem;
+    background: linear-gradient(transparent, rgba(19, 28, 21, 0.86) 38%);
+    color: var(--night-ink);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* The hero's glimpse is the phone's stand-in for the memory panel. On desktop
+   the panel already sits beside the copy, so the scene would say the same
+   thing twice; on a phone the panel is most of a screen below the fold and the
+   reader should meet the world before the explanation of it. */
+.hero-maeve-glimpse {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .hero-maeve-glimpse {
+        display: block;
+    }
+}

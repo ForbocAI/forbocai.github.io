@@ -25,7 +25,12 @@ LINE_CEILING = 300
 
 BANNER = re.compile(r"^/\* -+ ?([a-z][a-z ]*?) ?-+ \*/\s*$")
 # A bare relative asset reference — not data:, not http:, not an anchor.
-ASSET_URL = re.compile(r"url\((?!['\"]?(?:data:|https?:|//|#|\.\./))([^)]+)\)")
+# The quote, if any, has to stay outside the hop: url('logo.png') becomes
+# url('../logo.png'), never url(../'logo.png') — which silently voids a mask
+# and leaves the element painting its bare background colour.
+ASSET_URL = re.compile(
+    r"url\((?P<q>['\"]?)(?!data:|https?:|//|#|\.\./)(?P<path>[^)'\"]+)(?P=q)\)"
+)
 
 
 def slug(name: str) -> str:
@@ -123,7 +128,7 @@ def main() -> int:
             # against that folder. Assets stay where they are; the reference
             # gains the hop out. Verified by the 404 the browser check raised
             # the first time this ran.
-            body = ASSET_URL.sub(r"url(../\1)", body)
+            body = ASSET_URL.sub(r"url(\g<q>../\g<path>\g<q>)", body)
             suffix = f"-{part_index}" if multiple else ""
             filename = f"{name}{suffix}.css"
             (OUT_DIR / filename).write_text(body, encoding="utf-8")
@@ -132,7 +137,7 @@ def main() -> int:
 
     # Losslessness is the whole contract: concatenation must reproduce the file.
     rebuilt = "".join((OUT_DIR / name).read_text(encoding="utf-8") for name in written)
-    if rebuilt != ASSET_URL.sub(r"url(../\1)", source):
+    if rebuilt != ASSET_URL.sub(r"url(\g<q>../\g<path>\g<q>)", source):
         print("split-style: concatenation does not reproduce style.css", file=sys.stderr)
         return 1
 
