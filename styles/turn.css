@@ -54,9 +54,21 @@
     background: var(--night-bg);
 }
 
+/* These are the section's beats, not decoration: "What your writer hands us",
+   "Your game asks", "Servitor™ returns one complete change" — the three moves
+   the whole chapter is built on. At --step--1 they were 14px, below the size
+   at which anything registers in a skim, so a phone reader crossed 2,950px —
+   three and a half screenfuls — of monospace between one mark and the next.
+   The structure was on the page and invisible. */
 .turn-label {
     margin-bottom: 0.9rem;
-    font-size: var(--step--1);
+    /* Sized as the subheads they are. --step-1 (19px on a phone) reads as bold
+       body, not as a mark, and a skim only stops for something clearly larger
+       than what surrounds it. --step-2 capped at 1.55rem clears that on both
+       halves — 21.6px against 17px body on a phone, 24.8px against 19px on a
+       desktop — without letting an eyebrow grow to full h3 size on a wide
+       screen, which is what --step-2 uncapped would do. */
+    font-size: min(var(--step-2), 1.55rem);
     font-weight: 700;
     color: var(--honey);
 }
