@@ -56,7 +56,7 @@ export const Vision = () => {
             <aside class="soul-economy">
                 <h3>What $FAI is for</h3>
                 <p><strong>Two studios competing for the same player will not keep each other's canon.</strong> Neither will run the other's server, or take the other's word that a character arrived carrying what she claims to carry. A Soul crossing between them has to be checkable somewhere neither of them owns.</p>
-                <p>$FAI is a notary on Solana and nothing else: it records that this history is the history, so a receiving world can verify before it admits. It is opt-in, it is last in the Standard, and no studio touches it to buy a character judgment from us. <strong>The day two studios name a registry they both already trust, we will use theirs and retire ours, and say so here.</strong></p>
+                <p><strong>$FAI is a notary.</strong> It records that this history is the history, so a receiving world can verify before it admits one. Paid access to the Protocol and Servitor™ is the business and no studio touches a token to buy a character judgment — but a character who crosses between rivals needs somewhere impartial to be true, and that is what this is for.</p>
                 <div class="hero-buttons">
                     <a href="#whitepaper" class="btn btn-primary" data-link>Read the architecture</a>
                     <a href="#wp-gates" class="text-link" data-link>Read the Standard</a>

@@ -53,7 +53,7 @@ const slides = [
                 <article class="problem-column is-character-intelligence">
                     <p class="proof-label">Character Intelligence</p>
                     <h3>What would this person choose?</h3>
-                    <p>A general model reads a persona as instructions to perform, and performs itself through them. Servitor™ has no self to perform: one judgment carrying identity, evidence, motive, reasoning, dialogue and structured intent through the same decision.</p>
+                    <p>A general model reads a persona as instructions to perform, and performs itself through them. Servitor™ has no self to perform. Your writer's document is the character; we cannot write it and we do not want to.</p>
                 </article>
             </div>
             <p class="impact-statement"><strong>General conversation ends with words.</strong> Character Intelligence begins where identity, consequence and action meet.</p>
