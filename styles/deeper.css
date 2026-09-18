@@ -14,7 +14,15 @@
        and it stops reading as a control and starts reading as a chapter
        break. */
     max-width: var(--measure);
-    border-top: 1px solid var(--day-rule-soft);
+    /* A vein, like every other directional rule on the site. This one leads
+       into the fold, so it enters at full weight where the eye starts and
+       thins away — fifteen of these were the largest population of uniform
+       hairlines left on the page. */
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(90deg,
+        var(--day-rule) 0%,
+        color-mix(in srgb, var(--day-rule) 42%, transparent) 46%,
+        transparent 92%) 1;
 }
 
 .deeper summary {
@@ -86,7 +94,10 @@
 .chapter-night .deeper,
 .turn-band .deeper,
 .deeper-night {
-    border-top-color: var(--night-rule);
+    border-image: linear-gradient(90deg,
+        var(--night-rule) 0%,
+        color-mix(in srgb, var(--night-rule) 42%, transparent) 46%,
+        transparent 92%) 1;
 }
 
 .chapter-night .deeper summary,
