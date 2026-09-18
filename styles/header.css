@@ -1,0 +1,118 @@
+/* ---------------------------------------------------------------- header -- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    background: var(--day-bg);
+    border-bottom: 1px solid var(--day-rule-soft);
+    /* The crossing at the horizon is a transition, not a resting state; the
+       rest of the descent is tracked continuously by main.js. */
+    transition: background-color 0.35s var(--ease), border-color 0.35s var(--ease),
+        color 0.35s var(--ease);
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    background-color: var(--day-ink);
+    -webkit-mask: url(../'logo.png') no-repeat center / contain;
+    mask: url(../'logo.png') no-repeat center / contain;
+    transition: background-color 0.3s var(--ease);
+}
+
+.logo-word {
+    font-family: var(--font-mark);
+    font-size: 1.0625rem;
+    letter-spacing: 0.01em;
+    color: var(--day-ink);
+    padding-top: 0.15em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-left: auto;
+}
+
+.nav-btn {
+    padding: 0.45rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--step--1);
+    font-weight: 500;
+    color: var(--day-ink-soft);
+    text-decoration: none;
+    transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.nav-btn:hover {
+    background: color-mix(in srgb, var(--honey) 32%, transparent);
+    color: var(--day-ink);
+}
+
+
+
+/* Nightfall: the header follows the page down rather than sitting on it as a
+   lit bar. Toggled from main.js when a dark region passes under the header. */
+.site-header.is-night {
+    border-bottom-color: var(--night-rule);
+}
+
+.is-night .logo-icon {
+    background-color: var(--honey);
+}
+
+.is-night .logo-word {
+    color: var(--night-ink);
+}
+
+.is-night .nav-btn {
+    color: var(--night-ink-soft);
+}
+
+.is-night .nav-btn:hover {
+    background: color-mix(in srgb, var(--honey) 16%, transparent);
+    color: var(--lantern);
+}
+
+.site-header.is-night .nav-cta {
+    border-color: color-mix(in srgb, var(--honey) 55%, transparent);
+    color: var(--lantern);
+}
+
+.site-header.is-night .nav-cta:hover {
+    background: color-mix(in srgb, var(--honey) 16%, transparent);
+    border-color: var(--lantern);
+}
+
+.is-night .mobile-menu-toggle {
+    border-color: var(--night-rule);
+}
+
+.is-night .mobile-menu-toggle span {
+    background: var(--night-ink);
+}
+
+.is-night :focus-visible {
+    outline-color: var(--lantern);
+}
+

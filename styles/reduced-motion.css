@@ -1,0 +1,28 @@
+/* ------------------------------------------------------- reduced motion -- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+
+    .firefly {
+        opacity: 0.4;
+    }
+
+    /* Zeroing duration is not enough: `backwards` fill holds each line at
+       opacity 0 through its stagger delay, so the ledger reads blank for the
+       first 1.6s. Drop the entrance entirely instead. */
+    .is-remembering .memory-lines li,
+    .is-remembering .memory-weigh,
+    .is-remembering .memory-foot {
+        animation: none !important;
+    }
+}

@@ -1,0 +1,120 @@
+/* ---------------------------------------------------------------- lantern -- */
+
+.lantern {
+    position: absolute;
+    z-index: 2;
+    width: calc(40px * var(--lantern-scale, 1));
+    pointer-events: none;
+    color: var(--honey);
+    line-height: 0;
+}
+
+.lantern-body {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    filter: drop-shadow(0 0 calc(10px * var(--lantern-scale, 1)) rgba(255, 243, 194, 0.55));
+}
+
+.lantern-flame {
+    fill: var(--lantern);
+    filter: drop-shadow(0 0 5px rgba(255, 243, 194, 0.9));
+}
+
+/* The pool the lamp casts: anchored to the flame, not to the section. */
+.lantern-halo {
+    position: absolute;
+    left: 50%;
+    top: calc(48px * var(--lantern-scale, 1));
+    width: calc(1000px * var(--lantern-scale, 1));
+    height: calc(880px * var(--lantern-scale, 1));
+    transform: translate(-50%, -42%);
+    border-radius: 50%;
+    background: radial-gradient(closest-side,
+        rgba(255, 243, 194, 0.34) 0%,
+        rgba(255, 243, 194, 0.17) 26%,
+        rgba(224, 195, 138, 0.08) 52%,
+        transparent 78%);
+    pointer-events: none;
+}
+
+.lantern-bright {
+    color: var(--lantern);
+}
+
+.lantern-bright .lantern-halo {
+    background: radial-gradient(closest-side,
+        rgba(255, 243, 194, 0.44) 0%,
+        rgba(255, 243, 194, 0.24) 26%,
+        rgba(224, 195, 138, 0.11) 54%,
+        transparent 80%);
+}
+
+.lantern-souls {
+    right: 7%;
+    top: 0;
+}
+
+.lantern-path {
+    left: 4%;
+    top: 6%;
+}
+
+/* A lamp at the gate of the Soul Garden. */
+.lantern-gate {
+    right: 6%;
+    top: -1.75rem;
+}
+
+/* Anchored to the block it lights, the way the gate lamp anchors to the $FAI
+   card, rather than floating in the middle of the page. */
+.lantern-investors {
+    left: calc(var(--gutter) + var(--rail) + 1.5rem);
+    top: -1.25rem;
+}
+
+@media (max-width: 900px) {
+    .lantern-souls {
+        right: 4%;
+        --lantern-scale: 0.7;
+    }
+
+    .lantern-path {
+        left: 2%;
+        --lantern-scale: 0.6;
+    }
+
+    .lantern-gate {
+        right: 4%;
+        --lantern-scale: 0.55;
+    }
+
+    .lantern-investors {
+        --lantern-scale: 1;
+    }
+}
+
+.chapter-night h1,
+.chapter-night h2,
+.chapter-night h3,
+.chapter-night h4 {
+    color: var(--night-ink);
+}
+
+.chapter-night .chapter-lead,
+.chapter-night p {
+    color: var(--night-ink-soft);
+}
+
+.chapter-night .chapter-mark {
+    color: var(--lantern);
+    border-color: color-mix(in srgb, var(--honey) 40%, transparent);
+    background: color-mix(in srgb, var(--honey) 10%, transparent);
+}
+
+.chapter-night .chapter-mark::after {
+    background: linear-gradient(var(--night-rule), transparent);
+}
+

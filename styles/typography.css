@@ -1,0 +1,94 @@
+/* ------------------------------------------------------------ typography -- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.012em;
+    margin: 0;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--step-4);
+    line-height: 1.02;
+    letter-spacing: -0.028em;
+}
+
+h2 {
+    font-size: var(--step-3);
+    letter-spacing: -0.018em;
+}
+
+h3 {
+    font-size: var(--step-2);
+}
+
+h4 {
+    font-size: var(--step-1);
+}
+
+p {
+    margin: 0 0 1.1em;
+    max-width: var(--measure);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+    color: inherit;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    text-underline-offset: 0.18em;
+    transition: color 0.2s var(--ease), text-decoration-color 0.2s var(--ease);
+}
+
+a:hover {
+    text-decoration-color: currentColor;
+}
+
+:focus-visible {
+    outline: 2.5px solid var(--copper);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.chapter-night :focus-visible,
+.site-footer :focus-visible {
+    outline-color: var(--lantern);
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 200;
+    padding: 0.7rem 1.1rem;
+    background: var(--day-ink);
+    color: var(--lantern);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.kicker {
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--copper-ink);
+    margin-bottom: 0.9rem;
+}
+

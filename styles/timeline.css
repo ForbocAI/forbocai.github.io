@@ -1,0 +1,107 @@
+/* -------------------------------------------------------------- timeline -- */
+
+.timeline {
+    display: grid;
+    gap: 0;
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--rail) minmax(0, 1fr);
+    gap: 0 1.5rem;
+    padding-bottom: clamp(2.25rem, 4vw, 3.25rem);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+/* The lit path itself. */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: calc(var(--rail) / 2);
+    top: 1.9rem;
+    bottom: 0;
+    width: 1px;
+    background: var(--night-rule);
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 16px rgba(194, 203, 180, 0.28);
+    justify-self: center;
+    margin-top: 0.55rem;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--night-bg);
+    border: 2px solid var(--night-ink-faint);
+}
+
+.is-done .timeline-marker {
+    background: var(--sage);
+    border-color: var(--sage);
+    box-shadow: 0 0 0 4px rgba(157, 187, 139, 0.14), 0 0 22px rgba(157, 187, 139, 0.45);
+}
+
+.is-active .timeline-marker {
+    background: var(--lantern);
+    border-color: var(--lantern);
+    box-shadow: 0 0 0 5px rgba(255, 243, 194, 0.16), 0 0 26px rgba(255, 243, 194, 0.6);
+}
+
+.timeline-status {
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--night-ink-faint);
+    margin-bottom: 0.3rem;
+}
+
+.is-done .timeline-status {
+    color: var(--sage);
+}
+
+.is-active .timeline-status {
+    color: var(--lantern);
+}
+
+.timeline-content h3 {
+    margin-bottom: 0.9rem;
+}
+
+.roadmap-list {
+    display: grid;
+    gap: 0.55rem;
+    max-width: 58ch;
+}
+
+.roadmap-list li {
+    position: relative;
+    padding-left: 1.3rem;
+    color: var(--night-ink-soft);
+    line-height: 1.5;
+}
+
+.roadmap-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.68em;
+    width: 7px;
+    height: 1px;
+    background: var(--night-ink-faint);
+}
+
+.is-done .roadmap-list li::before {
+    background: var(--sage);
+    width: 9px;
+}
+

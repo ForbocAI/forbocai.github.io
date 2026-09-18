@@ -1,0 +1,128 @@
+/* ------------------------------------------------------------------ turn -- */
+
+/* The page's tunnel: edge to edge, so the header goes dark with it instead of
+   crossing it as a slab, and so the site has one fewer floating card. */
+.turn-band {
+    position: relative;
+    background: var(--night-bg);
+    color: var(--night-ink);
+    /* Room under the last line for the band to open out, so the tunnel does not
+       simply stop at a 1px edge. */
+    padding-bottom: calc(var(--chapter-gap) + 4rem);
+}
+
+/* You come out of the tunnel into the last of the light — the band's floor
+   warms into the first stop of the sunset that follows it. */
+.turn-band::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5rem;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent 0%, var(--dusk-0) 100%);
+}
+
+.turn-band h2,
+.turn-band h3 {
+    color: var(--night-ink);
+}
+
+.turn-band .chapter-lead {
+    color: var(--night-ink-soft);
+}
+
+.turn-band .chapter-mark {
+    color: var(--lantern);
+    border-color: color-mix(in srgb, var(--honey) 40%, transparent);
+    background: color-mix(in srgb, var(--honey) 10%, transparent);
+}
+
+.turn-band .chapter-mark::after {
+    background: linear-gradient(var(--night-rule), transparent);
+}
+
+.turn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--night-rule);
+    border-block: 1px solid var(--night-rule);
+}
+
+.turn-col {
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    background: var(--night-bg);
+}
+
+.turn-label {
+    margin-bottom: 0.9rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--honey);
+}
+
+.turn-code {
+    margin: 0 0 1rem;
+    overflow-x: auto;
+    scrollbar-color: var(--night-rule) transparent;
+    scrollbar-width: thin;
+    font-family: var(--font-code);
+    font-size: 0.8125rem;
+    line-height: 1.65;
+    color: var(--night-ink);
+    -webkit-overflow-scrolling: touch;
+}
+
+.turn-code code {
+    font-family: inherit;
+    white-space: pre;
+}
+
+.turn-note {
+    margin-bottom: 0;
+    font-size: var(--step--1);
+    line-height: 1.55;
+    color: var(--night-ink-soft);
+    max-width: 44ch;
+}
+
+.turn-note code,
+.turn-refusal code,
+.turn-cli code {
+    font-family: var(--font-code);
+    font-size: 0.9em;
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--honey) 16%, transparent);
+    color: var(--honey);
+}
+
+.turn-refusal {
+    margin-top: 1.75rem;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--ember);
+    color: var(--night-ink-soft);
+    max-width: 68ch;
+}
+
+.turn-cli {
+    margin-top: 1.25rem;
+    font-size: var(--step--1);
+    color: var(--night-ink-faint);
+    max-width: 68ch;
+}
+
+/* A command broken across two lines with its chip sliced in half reads as a
+   glitch; give it its own line and let it scroll if it must. */
+.turn-cli code {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+

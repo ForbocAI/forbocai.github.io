@@ -1,0 +1,100 @@
+/* ---------------------------------------------------------------- footer -- */
+
+.site-footer {
+    position: relative;
+    z-index: 3;
+    /* Last light of the page rather than a dead slab: the glow from the window
+       above still reaches the near edge, and falls off toward the foot. */
+    /* Origins sit inside the footer, not above its top edge: clipped at the
+       edge, the pool started at full strength and made a 15-point step in a
+       single pixel row. */
+    background:
+        radial-gradient(ellipse 80% 120% at 22% 18%, rgba(255, 243, 194, 0.11), transparent 74%),
+        radial-gradient(ellipse 60% 90% at 88% 30%, rgba(224, 195, 138, 0.06), transparent 76%),
+        var(--night-bg);
+    color: var(--night-ink-soft);
+    padding-block: clamp(3rem, 6vw, 4.5rem) 2rem;
+    border-top: 1px solid var(--night-rule);
+}
+
+/* Pages without a .nightfall section would otherwise cut from parchment to
+   footer at a hard 1px edge. Give them the same evening. */
+.page-inner + .site-footer {
+    margin-top: 12rem;
+}
+
+.page-inner + .site-footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* Overlaps its neighbours by 2px: flush, subpixel rounding left a single
+       row where neither the page ramp nor this gradient painted, and the body
+       parchment showed through as a bright line. */
+    top: calc(-12rem - 2px);
+    height: calc(12rem + 4px);
+    pointer-events: none;
+    background: linear-gradient(180deg,
+        var(--dusk-0) 0%,
+        var(--dusk-1) 22%,
+        var(--dusk-2) 42%,
+        var(--dusk-3) 60%,
+        var(--dusk-4) 78%,
+        var(--dusk-5) 90%,
+        var(--dusk-6) 100%);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr));
+    gap: clamp(1.75rem, 4vw, 3rem);
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--night-rule);
+}
+
+.site-footer .logo-icon {
+    background-color: var(--honey);
+}
+
+.site-footer .logo-word {
+    color: var(--night-ink);
+}
+
+.footer-tagline {
+    margin: 1rem 0 0;
+    font-size: var(--step--1);
+    color: var(--night-ink-faint);
+    max-width: 34ch;
+}
+
+.footer-link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: start;
+}
+
+.footer-group-label {
+    margin: 0 0 0.2rem;
+    font-family: var(--font-display);
+    font-size: var(--step-0);
+    font-weight: 600;
+    color: var(--night-ink);
+}
+
+.footer-link-group a {
+    font-size: var(--step--1);
+    color: var(--night-ink-soft);
+    text-decoration: none;
+}
+
+.footer-link-group a:hover {
+    color: var(--lantern);
+}
+
+.footer-copy {
+    margin: 1.75rem 0 0;
+    font-size: 0.8125rem;
+    color: var(--night-ink-faint);
+}
+

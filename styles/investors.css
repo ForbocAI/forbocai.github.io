@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------- investors -- */
+
+.investors-section {
+    padding-bottom: clamp(5rem, 10vw, 8rem);
+}
+
+/* The light at the end of the path now comes from the section, so the section
+   mark stays on the same rail as every other one. */
+.lantern-glow {
+    position: absolute;
+    inset: -4rem 0 -6rem;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 58% 62% at 50% 42%, rgba(255, 243, 194, 0.17), transparent 72%),
+        radial-gradient(ellipse 42% 44% at 50% 96%, rgba(224, 195, 138, 0.12), transparent 74%);
+}
+
+.investors-body {
+    display: grid;
+    gap: 0;
+    max-width: 62ch;
+}
+
+.investors-body p {
+    color: var(--night-ink-soft);
+}
+
+/* The sentence an investor carries into a partner meeting. */
+.investors-takeaway {
+    margin-top: clamp(1.75rem, 3vw, 2.25rem);
+    padding-left: 1.2rem;
+    border-left: 2px solid color-mix(in srgb, var(--honey) 70%, transparent);
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--night-ink);
+    max-width: 60ch;
+}
+

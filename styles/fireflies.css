@@ -1,0 +1,66 @@
+/* ------------------------------------------------------------- fireflies -- */
+
+/* Scoped inside .nightfall rather than fixed over the viewport: above that
+   section's own ground, below its prose. No gating needed — there is no
+   parchment here for them to blow out against, and they scroll with the world
+   instead of sitting on the glass. */
+.firefly-field {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+    /* Correctly stacked behind the prose is not the same as out of the way: a
+       mote sitting under a word still reads as dirt on the type. Masked to the
+       gutters, so they live in the margins where the world is, and drop to a
+       twelfth of their strength across the column where the words are. */
+    --mote-gutter: max(0px, calc((100% - var(--shell)) / 2));
+    -webkit-mask-image: linear-gradient(to right,
+        rgba(0, 0, 0, 1) 0,
+        rgba(0, 0, 0, 1) var(--mote-gutter),
+        rgba(0, 0, 0, 0.07) calc(var(--mote-gutter) + 64px),
+        rgba(0, 0, 0, 0.07) calc(100% - var(--mote-gutter) - 64px),
+        rgba(0, 0, 0, 1) calc(100% - var(--mote-gutter)),
+        rgba(0, 0, 0, 1) 100%);
+    mask-image: linear-gradient(to right,
+        rgba(0, 0, 0, 1) 0,
+        rgba(0, 0, 0, 1) var(--mote-gutter),
+        rgba(0, 0, 0, 0.07) calc(var(--mote-gutter) + 64px),
+        rgba(0, 0, 0, 0.07) calc(100% - var(--mote-gutter) - 64px),
+        rgba(0, 0, 0, 1) calc(100% - var(--mote-gutter)),
+        rgba(0, 0, 0, 1) 100%);
+}
+
+/* Softened and dimmed: correctly stacked behind the prose, a crisp opaque dot
+   sitting under a word still reads as a smudge on the glyph. Out of focus, it
+   reads as distance. */
+.firefly {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--lantern);
+    box-shadow: 0 0 var(--glow) rgba(255, 243, 194, 0.55);
+    filter: blur(0.6px);
+    opacity: 0;
+    animation: drift var(--dur) var(--delay) infinite ease-in-out;
+}
+
+@keyframes drift {
+    0%,
+    100% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    18%,
+    72% {
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(var(--dx), calc(var(--dy) / 2));
+    }
+    99% {
+        transform: translate(calc(var(--dx) * 1.4), var(--dy));
+    }
+}
+

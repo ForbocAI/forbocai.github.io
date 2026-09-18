@@ -1,0 +1,113 @@
+/* ------------------------------------------------------------- buttons --- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.78rem 1.4rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.18s var(--ease), background-color 0.2s var(--ease),
+        border-color 0.2s var(--ease), color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-small {
+    padding: 0.45rem 0.95rem;
+    font-size: var(--step--1);
+}
+
+.btn-primary {
+    background: var(--day-ink);
+    color: var(--lantern);
+    box-shadow: 0 1px 0 rgba(255, 243, 194, 0.28) inset;
+}
+
+.btn-primary:hover {
+    background: #16211a;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--honey) 32%, transparent);
+}
+
+.btn-secondary {
+    background: transparent;
+    border-color: var(--copper-ink);
+    color: var(--copper-ink);
+}
+
+.btn-secondary:hover {
+    background: color-mix(in srgb, var(--honey) 26%, transparent);
+}
+
+.btn-ghost {
+    background: transparent;
+    border-color: color-mix(in srgb, var(--honey) 55%, transparent);
+    color: var(--honey);
+}
+
+.btn-ghost:hover {
+    background: color-mix(in srgb, var(--honey) 14%, transparent);
+    color: var(--lantern);
+    border-color: var(--lantern);
+}
+
+/* The hero's primary is the page's one next step, so the persistent header CTA
+   is an outline. It must come after .btn: that rule sets a transparent border
+   at the same specificity, and on source order it was winning. */
+.site-header .nav-cta {
+    flex-shrink: 0;
+    background: transparent;
+    border-color: var(--copper);
+    color: var(--copper-ink);
+}
+
+.site-header .nav-cta:hover {
+    background: color-mix(in srgb, var(--honey) 30%, transparent);
+    border-color: var(--copper-ink);
+}
+
+/* On the night half the primary button is the lantern itself. */
+.chapter-night .btn-primary,
+.site-footer .btn-primary {
+    background: var(--lantern);
+    color: #20291f;
+    box-shadow: 0 0 34px -6px rgba(255, 243, 194, 0.55);
+}
+
+.chapter-night .btn-primary:hover,
+.site-footer .btn-primary:hover {
+    background: #fffae0;
+    box-shadow: 0 0 46px -4px rgba(255, 243, 194, 0.8);
+}
+
+/* A subordinate next step reads as a link, not as a second pill competing
+   with the primary one. */
+.text-link {
+    align-self: center;
+    font-weight: 700;
+    color: var(--copper-ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    text-decoration-color: color-mix(in srgb, var(--copper) 55%, transparent);
+}
+
+.text-link:hover {
+    color: var(--day-ink);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+

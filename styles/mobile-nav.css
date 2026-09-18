@@ -1,0 +1,279 @@
+/* ------------------------------------------------------------ mobile nav -- */
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    margin-left: auto;
+    background: none;
+    border: 1px solid var(--day-rule);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    margin-inline: auto;
+    background: var(--day-ink);
+    transition: transform 0.25s var(--ease), opacity 0.2s var(--ease);
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobile-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--gutter);
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    background: var(--day-surface);
+    border-bottom: 1px solid var(--day-rule);
+    transition: max-height 0.3s var(--ease), padding 0.3s var(--ease),
+        visibility 0s linear 0.3s;
+}
+
+.mobile-nav.active {
+    max-height: 70vh;
+    padding-block: 0.75rem 1.25rem;
+    overflow-y: auto;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.mobile-nav-link {
+    padding: 0.85rem 0;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    color: var(--day-ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--day-rule-soft);
+}
+
+.mobile-nav-link:last-child {
+    border-bottom: none;
+}
+
+/* The collapsed box learned the night in round 3; the open drawer never did,
+   so tapping the menu at the bottom of the page dropped a near-white sheet
+   over the moss. */
+.site-header.is-night + .mobile-nav {
+    background: var(--night-surface);
+    border-bottom-color: var(--night-rule);
+}
+
+.site-header.is-night + .mobile-nav .mobile-nav-link {
+    color: var(--night-ink);
+    border-bottom-color: var(--night-rule);
+}
+
+/* ============================================================== documents ==
+   Whitepaper and the seed deck: same ink, quieter room.
+   ======================================================================== */
+
+.doc {
+    padding-top: clamp(2.5rem, 6vw, 4.5rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+}
+
+.doc-head {
+    max-width: 62ch;
+    padding-left: calc(var(--rail) + 1.5rem);
+    margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--day-rule);
+}
+
+.doc-head h1 {
+    font-size: clamp(2.2rem, 1.5rem + 3vw, 3.4rem);
+    margin-bottom: 0.9rem;
+}
+
+.doc-meta {
+    font-size: var(--step--1);
+    color: var(--day-ink-faint);
+    margin-bottom: 0;
+}
+
+.doc-body {
+    max-width: 68ch;
+}
+
+/* A 68ch measure leaves the right half of a 1440 page empty. The contents
+   rail fills it with something a reader of a long brief actually wants, and
+   echoes the marginalia column used by the ledger on the home page. */
+.doc-shell {
+    padding-left: calc(var(--rail) + 1.5rem);
+    display: grid;
+    grid-template-columns: minmax(0, 68ch) minmax(14rem, 1fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+}
+
+.doc-contents {
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--day-rule);
+}
+
+.doc-contents-label {
+    margin: 0 0 0.7rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--day-ink-faint);
+}
+
+.doc-contents ol {
+    display: grid;
+    gap: 0.5rem;
+    counter-reset: toc;
+}
+
+.doc-contents a {
+    display: grid;
+    grid-template-columns: 1.4rem minmax(0, 1fr);
+    font-size: var(--step--1);
+    line-height: 1.35;
+    color: var(--day-ink-soft);
+    text-decoration: none;
+}
+
+.doc-contents a::before {
+    content: counter(toc) '.';
+    color: var(--copper-ink);
+    font-weight: 700;
+}
+
+.doc-contents a:hover {
+    color: var(--day-ink);
+}
+
+.doc-contents a[aria-current] {
+    color: var(--day-ink);
+    font-weight: 700;
+}
+
+.doc-contents a[aria-current]::before {
+    color: var(--copper-ink);
+}
+
+.doc-contents li {
+    counter-increment: toc;
+    position: relative;
+}
+
+.doc-contents li::before {
+    content: '';
+    position: absolute;
+    left: calc(-1.5rem - 1px);
+    top: 0.35em;
+    bottom: 0.35em;
+    width: 2px;
+    background: var(--copper);
+    opacity: 0;
+    transition: opacity 0.25s var(--ease);
+}
+
+.doc-contents li:has(a[aria-current])::before {
+    opacity: 1;
+}
+
+.doc-body > section {
+    padding-block: 0 clamp(2rem, 4vw, 3rem);
+}
+
+.doc-body h2 {
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+    margin-bottom: 0.9rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--day-rule-soft);
+}
+
+.doc-body > section:first-child h2 {
+    padding-top: 0;
+    border-top: none;
+}
+
+.doc-body h3 {
+    font-size: var(--step-1);
+    margin: 1.8rem 0 0.55rem;
+}
+
+.doc-body h4 {
+    font-size: var(--step-0);
+    margin: 1.4rem 0 0.4rem;
+    color: var(--copper-ink);
+}
+
+.doc-body p {
+    color: var(--day-ink-soft);
+}
+
+.doc-body ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0 0 1.2rem;
+}
+
+.doc-body li {
+    position: relative;
+    padding-left: 1.35rem;
+    color: var(--day-ink-soft);
+}
+
+.doc-body li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.68em;
+    width: 8px;
+    height: 1px;
+    background: var(--copper);
+}
+
+.doc-aside {
+    margin: 1.5rem 0;
+    padding: 1.1rem 1.4rem;
+    border-left: 2px solid var(--honey);
+    background: color-mix(in srgb, var(--day-surface) 80%, transparent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-style: italic;
+    color: var(--day-ink-soft);
+}
+
+.doc-foot {
+    padding-left: calc(var(--rail) + 1.5rem);
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--day-rule);
+    max-width: 62ch;
+}
+
+.doc-foot p {
+    font-size: var(--step--1);
+    color: var(--day-ink-faint);
+    margin-bottom: 1.4rem;
+}
+

@@ -1,0 +1,94 @@
+/* ---------------------------------------------------------------- layout -- */
+
+.container {
+    width: 100%;
+    max-width: var(--shell);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+    position: relative;
+    z-index: 3;
+}
+
+main {
+    position: relative;
+    z-index: 3;
+}
+
+/* The descent is the page, not a 96px ribbon at the bottom of it. The daylight
+   half carries a ramp from morning parchment down into evening clay across its
+   whole height, so by the time the turn panel arrives the ground has already
+   gone to dusk. Every ink still clears 4.5:1 against the darkest stop. */
+.daylight,
+.page-inner {
+    position: relative;
+    background-image:
+        linear-gradient(180deg,
+            var(--day-0) 0%,
+            var(--day-1) 14%,
+            var(--day-2) 42%,
+            var(--day-3) 68%,
+            var(--day-4) 86%,
+            var(--day-5) 100%),
+        radial-gradient(ellipse 52% 22% at 80% 3%, rgba(255, 243, 194, 0.7), transparent 70%),
+        radial-gradient(ellipse 44% 18% at 4% 9%, rgba(207, 233, 220, 0.45), transparent 70%);
+}
+
+.chapter {
+    position: relative;
+    padding-block: var(--chapter-gap);
+}
+
+/* Consecutive chapters on the same ground need a seam, not the full break
+   that separates day from night. */
+.chapter-day + .chapter-day,
+.chapter-night + .chapter-night {
+    padding-top: var(--chapter-seam);
+}
+
+/* The rail. Section marks live here and nowhere else — that is the whole
+   job the runes have on this site now. */
+.chapter-head {
+    display: grid;
+    grid-template-columns: var(--rail) minmax(0, 1fr);
+    gap: 0 1.5rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* The rune sits in a struck brass disc — enough presence to read as a section
+   mark rather than a stray glyph. */
+.chapter-mark {
+    position: relative;
+    justify-self: start;
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: 0.15rem;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--copper) 45%, transparent);
+    background: color-mix(in srgb, var(--honey) 22%, transparent);
+    font-family: var(--font-rune);
+    font-size: 1.15rem;
+    line-height: 1;
+    color: var(--copper-ink);
+}
+
+.chapter-mark::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 0.7rem);
+    width: 1px;
+    height: 3rem;
+    background: linear-gradient(var(--day-rule), transparent);
+}
+
+.chapter-lead {
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--day-ink-soft);
+    max-width: 54ch;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
