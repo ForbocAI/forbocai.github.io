@@ -30,9 +30,9 @@ export const Roadmap = () => {
                 <li class="timeline-item is-active">
                     <span class="timeline-marker" aria-hidden="true"></span>
                     <div class="timeline-content">
-                        <p class="timeline-status">Ghost in development</p>
+                        <p class="timeline-status">Ghost reports in development</p>
                         <h3>See the world before players do</h3>
-                        <p>Ghost already drives internal test worlds. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is in development. The only producers reading those reports today are our own, because no external studio has cleared its gate yet, and production qualification controls release.</p>
+                        <p>Ghost is the harness that already drives our own test worlds; the producer-facing reports on dead ends, unreachable content and social-loop coverage are the part in development. No studio outside ForbocAI has run it at all, so the only producers reading anything today are ours. Production qualification controls release.</p>
                     </div>
                 </li>
                 <li class="timeline-item">

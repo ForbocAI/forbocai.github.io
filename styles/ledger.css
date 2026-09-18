@@ -171,3 +171,44 @@
         radial-gradient(ellipse 50% 20% at 16% 72%, rgba(157, 187, 139, 0.05), transparent 74%);
 }
 
+
+/* ------------------------------------------------------------ gate ledger -- */
+
+/* The thirteen gates. Every route cites these by number — "gate eleven", "gate
+   thirteen" — so the number has to be the visual anchor, not a bullet the eye
+   slides past. Previously this was one comma-spliced paragraph and a reader had
+   to count clauses by hand to check a reference; two independent reviewers
+   raised it, which is what a credibility device failing looks like. */
+.gate-ledger {
+    counter-reset: gate;
+    list-style: none;
+    margin: 1.4rem 0 1.6rem;
+    padding: 0;
+    border-top: 1px solid var(--day-rule-soft);
+}
+
+.gate-ledger > li {
+    counter-increment: gate;
+    position: relative;
+    padding: 0.85rem 0 0.85rem 3.1rem;
+    border-bottom: 1px solid var(--day-rule-soft);
+    max-width: 68ch;
+}
+
+/* The number, set in the margin at the weight of a reference rather than a
+   decoration — this is the token the rest of the site points at. */
+.gate-ledger > li::before {
+    content: counter(gate);
+    position: absolute;
+    left: 0;
+    top: 0.85rem;
+    width: 2.1rem;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: var(--copper-ink);
+}
+
+.gate-ledger > li strong {
+    display: block;
+}

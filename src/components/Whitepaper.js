@@ -62,15 +62,31 @@ export const Whitepaper = () => {
                         <li><strong>Continuity of feeling.</strong> Mood, trust, and whatever other signals you author shape what she does next, and only then how she says it.</li>
                     </ul>
 
-                    <h3>3.3 Memory stays with your studio</h3>
+                    <h3>3.3 Your memory store stays with your studio; the turn does not</h3>
                     <p>ForbocAI returns a memory-write instruction. Your build applies it to a local store your studio controls and can read without us. Neither game-owned world state nor that studio-controlled memory becomes ForbocAI training data. The turn itself crosses ForbocAI infrastructure, because hosted cognition is what is being bought; what is retained of that exchange, and for how long, is bound in the release contract rather than asserted here. The separate, opt-in Soul path described below would send locally encrypted character ciphertext to a configured storage provider; it is not part of a title that never invokes it.</p>
 
                     <h3>3.4 Ghost</h3>
-                    <p>Procedural and adaptive systems can outrun manually authored test paths. The internal harness already drives test worlds during Servitor™ qualification. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is in development, and the only producers reading those reports today are our own, because no external studio has cleared its gate yet. Production qualification controls release.</p>
+                    <p>Procedural and adaptive systems can outrun manually authored test paths. The internal harness already drives test worlds during Servitor™ qualification. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is in development. No studio outside ForbocAI has run the harness at all, so the only producers reading anything today are ours. Production qualification controls release.</p>
 
                     <h3>3.5 The production ledger</h3>
                     <p><strong>Working now in ForbocAI evaluation environments:</strong> Servitor™ through the ForbocAI NPC Protocol; TypeScript and native Unreal Engine 5 interfaces; memory writes to studio-controlled local storage; structured action proposals; reply checks; action checks; internal test worlds; and an exact model and runtime build recorded internally.</p>
-                    <p><strong>Production authority requires explicit gates:</strong> external-studio evidence, a current passing public named-alternative comparison, regional end-to-end latency, production concurrency and unit economics, authored outage behavior, moderation or console certification, customer-selected release pinning, a contractual support window, continuity of the source if this company stops, producer-facing Ghost reports, a Soul carried end to end between two titles, a measured check that a character's prose agrees with the world the studio supplied, and a measured persona-hold result under adversarial play, against a named alternative, on a cast we did not author. None is claimed until its gate clears. The prose check is the open problem named in 3.2. The persona-hold measurement is the one we most want to hand over, because holding the authored person is the claim this company rests on and we currently answer it with a mechanism rather than a number — no self in the model to leak into her. A mechanism is a reason to expect a result. It is not the result. Both are on this list because a limitation without a gate is just a well-worded no, and a strength without one is just a well-worded yes.</p>
+                    <p id="wp-gates"><strong>Thirteen gates stand between here and full production authority, and here they are, in order, with what opens each one.</strong> Each is named once, numbered once, and cited by that number everywhere else on this site. This is an itinerary, not a confession. We publish it because we intend to walk it, and because you should be able to hold us to every line.</p>
+                    <ol class="gate-ledger">
+                        <li><strong>External-studio evidence.</strong> Clears when a studio that is not ForbocAI runs Servitor™ in its own title.</li>
+                        <li><strong>Named-alternative comparison.</strong> Clears when a current public comparison against an alternative we name is passing.</li>
+                        <li><strong>Regional latency.</strong> Clears when typical and worst-case response times are measured end to end, by region, through a real integration.</li>
+                        <li><strong>Unit economics at production concurrency.</strong> Clears when cost per judgment is measured at a shipped title's load, not a demo's.</li>
+                        <li><strong>Authored outage behavior.</strong> Clears when what a studio's world does during a ForbocAI outage is specified and contracted.</li>
+                        <li><strong>Platform certification.</strong> Clears when moderation and console requirements are met for a named platform.</li>
+                        <li><strong>Customer-selected release pinning.</strong> Clears when a studio can hold a build of the model across its ship window.</li>
+                        <li><strong>Contractual support window.</strong> Clears when the support term is bound in writing.</li>
+                        <li><strong>Continuity if this company stops.</strong> Clears when an instrument exists that keeps a shipped title running without us.</li>
+                        <li><strong>Producer-facing Ghost reports.</strong> Clears when a producer outside ForbocAI reads a coverage report from their own world.</li>
+                        <li><strong>Soul continuity.</strong> Clears when one Soul is carried end to end between two titles.</li>
+                        <li><strong>Prose grounding.</strong> Clears when a character's prose is measurably checked against the world the studio supplied. This is the open problem named in 3.2.</li>
+                        <li><strong>Persona hold.</strong> Clears when persona-hold is measured under adversarial play, against a named alternative, on a cast we did not author.</li>
+                    </ol>
+                    <p>The last two are the ones we most want to hand over. Twelve is the fault a studio fears. Thirteen is the claim this company rests on, and the mechanism behind it is the whole invention: there is no self in the model to leak into your character. Today that is a reason to expect a result rather than the result itself, and the measurement is next. Both sit on this list because <strong>a limitation without a gate is just a well-worded no, and a strength without one is just a well-worded yes.</strong></p>
                 </section>
 
                 <section id="wp-souls">
@@ -92,7 +108,7 @@ export const Whitepaper = () => {
                 <section id="wp-roadmap">
                     <h2>5. The arrival sequence</h2>
                     <ul>
-                        <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, decision rules a studio can mix and match per scene, exercised in internal tests, TypeScript and Unreal Engine 5 interfaces, public docs, and $FAI live as a token. Soul continuity is a separate development track.</li>
+                        <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, TypeScript and Unreal Engine 5 interfaces — itemized once in 3.5 and cited from here, because one ledger kept in two places is two ledgers. $FAI is a token rather than engineering and belongs to section 4. Soul continuity is a separate development track.</li>
                         <li><strong>In development.</strong> Producer-facing Ghost coverage reporting.</li>
                         <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. Opt-in Soul continuity advances separately behind core distribution. Release planning binds owners, gates, order and dates before a track enters qualification.</li>
                         <li><strong>Governed continuity.</strong> Opted-in history crosses between participating titles only when their technical, moderation and rights gates admit it. No portability right is assumed.</li>
@@ -114,7 +130,7 @@ export const Whitepaper = () => {
 
             <footer class="doc-foot">
                 <p>The production ledger distinguishes working capability, active development and the evidence required for release. A diligence review should test those boundaries directly.</p>
-                <a href="#wp-roadmap" class="btn btn-primary">Read the thirteen gates</a>
+                <a href="#wp-gates" class="btn btn-primary">Read the thirteen gates</a>
             </footer>
         </div>
     </article>

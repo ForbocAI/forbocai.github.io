@@ -140,7 +140,7 @@ const slides = [
                     <p>Accept or reject. Only game code can change state or write local memory.</p>
                 </li>
             </ol>
-            <p class="boundary-mantra">The model decides. The game disposes.</p>
+            <p class="boundary-mantra">The model proposes. The game disposes.</p>
         `
     },
     {
@@ -179,7 +179,7 @@ const slides = [
                 <article><span>Attachment</span><h3>History earns meaning</h3><p>The character remembers what the player made matter.</p></article>
                 <article><span>Strategy</span><h3>Identity changes decisions</h3><p>Who the character is becomes part of how the world plays.</p></article>
                 <article><span>Collection</span><h3>Every person can be singular</h3><p>A cast becomes a portfolio of identities, not interchangeable content.</p></article>
-                <article><span>Return</span><h3>Continuity deepens belonging</h3><p>Players return to relationships that remember becoming real.</p></article>
+                <article><span>Return</span><h3>Continuity deepens belonging</h3><p>A player comes back for the person who remembers what they did last season.</p></article>
             </div>
             <p class="moat-intro">Cards proved that people return to identities they care about. The deeper prize is not only who a character is, but who she becomes with you.</p>
         `

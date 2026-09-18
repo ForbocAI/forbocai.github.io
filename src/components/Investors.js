@@ -11,12 +11,12 @@ export const Investors = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛞ</span>
                 <div>
                     <h2>The category is already inhabited</h2>
-                    <p class="chapter-lead"><strong>The model category beneath the world's most consequential creative medium is being settled now, from inside it.</strong> The casts are being authored, the law they enter through is written, and the thirteen gates that authority still waits on are published rather than implied.</p>
+                    <p class="chapter-lead"><strong>This is not a proposal for a world that might exist.</strong> Servitor™ is reasoning inside one right now. The Protocol is the law she enters it through. The thirteen gates between here and production authority are numbered and public, because a category being settled from the inside can afford to publish its own itinerary. You are reading it from the outside.</p>
                 </div>
             </header>
 
             <div class="investors-body">
-                <p>You ran the experiment yourself, on your own titles, without meaning to: the characters players quote back to you were never the ones with the most lines. You proved the thesis before anyone pitched it to you. What did not exist until now was a model that can produce that character on demand instead of by luck, a boundary that lets her decide without letting her rewrite your world, and a price in ordinary money. Those exist. What is still owed is a list, and the list is public.</p>
+                <p>You ran the experiment yourself, on your own titles, without meaning to: the characters players quote back to you were never the ones with the most lines. You proved the thesis before anyone pitched it to you. What has never existed is a way to get that character on purpose instead of by luck. Three things have to be true at once: a model trained to hold an authored person rather than its own, a boundary that lets her decide without letting her rewrite your world, and a way to buy it by the judgment. The boundary is built and you can read it today. The model exists and is reasoning right now; gate thirteen is where its persona-hold becomes a public number. The price is being signed into place at gate four. That is the whole position, and the rest of the itinerary is published in the same voice.</p>
                 <figure class="investor-portal">
                     <span class="portal-window" aria-hidden="true">
                         <img src="Lanternbough.png" alt="" width="640" height="640">
@@ -25,7 +25,7 @@ export const Investors = () => {
                 </figure>
             </div>
 
-            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law she enters through. Character Intelligence is the medium the two of them make possible—and the casts are already being authored. The only open question on this page is whose.</p>
+            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law she enters through. Together they are the medium, and the first casts are being authored in it now. The only question left on this page is whose.</p>
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20will%20remember" class="btn btn-primary">Bring the character players will remember</a>

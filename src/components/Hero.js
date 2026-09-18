@@ -12,7 +12,7 @@ export const Hero = () => {
             <div class="hero-copy">
                 <p class="kicker">ForbocAI — the NPC language model company</p>
                 <h1>The next great language model is already inside the game.</h1>
-                <p class="hero-premise"><strong>Every other surface of a game came alive. The people did not.</strong> Worlds render weather you can feel and physics you can trust, and then the person standing in them runs out of script the moment a player asks something nobody wrote. That is the last unfinished surface in the medium—and it is the one that decides what players carry out. You already know which of your NPCs players quote back to you, and you already know it is not the one with the most lines. Right now, in this scene, Maeve weighs what happened and decides as herself.</p>
+                <p class="hero-premise"><strong>Every other surface of a game came alive. The people did not.</strong> Worlds render weather you can feel and physics you can trust, and then the person standing in them runs out of script the moment a player asks something nobody wrote. You already know which of your NPCs players quote back to you, and you already know it is not the one with the most lines. That is the last unfinished surface in the medium, and it is the one that decides what a player carries away. Right now, in this scene, Maeve weighs what happened and decides as herself.</p>
                 <figure class="maeve-scene hero-maeve-glimpse">
                     <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
                     <figcaption>The storm is the safe opening. Her brother's letter is the judgment.</figcaption>
@@ -21,7 +21,7 @@ export const Hero = () => {
                 <p class="hero-engines"><strong>The ForbocAI NPC Protocol gives that intelligence a lawful place inside the world.</strong> Servitor™ proposes. Your game alone makes the choice real.</p>
                 <div class="hero-buttons">
                     <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
-                    <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">See the call signature</a>
+                    <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
                 </div>
             </div>
 

@@ -27,7 +27,7 @@ export const Vision = () => {
             <aside class="soul-economy">
                 ${Lantern({ className: "lantern-gate", size: 0.75, tone: "bright" })}
                 <h3>Paid access to Servitor™ is the business</h3>
-                <p>The unit we intend to sell is one character judgment, priced in ordinary money and needing no wallet. Intend, not charge: what counts as a billable judgment is bound in the release contract, and until that is signed the unit is a design decision rather than a price. $FAI is a separate, opt-in token on Solana. It is tradeable today; the Soul continuity it is intended to serve is in development behind gate eleven, and none of the above requires either.</p>
+                <p>The unit is one character judgment, priced in ordinary money and needing no wallet. What counts as a billable judgment gets bound in the release contract, and that contract is gate four — it goes live with a public price attached, not before. $FAI is a separate, opt-in token on Solana. It is tradeable today; the Soul continuity it is intended to serve is in development behind gate eleven, and none of the above requires either.</p>
                 <div class="hero-buttons">
                     <a href="#whitepaper" class="btn btn-primary" data-link>Read the architecture</a>
                     <a href="#whitepaper" class="text-link" data-link>What $FAI is for</a>

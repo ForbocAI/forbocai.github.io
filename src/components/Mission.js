@@ -23,7 +23,7 @@ export const Mission = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛟ</span>
                 <div>
-                    <h2>The future is already inhabited</h2>
+                    <h2>Someone is already home in there</h2>
                 </div>
             </header>
 
