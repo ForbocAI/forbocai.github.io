@@ -1,77 +1,68 @@
 /* --------------------------------------------------------------- sprites -- */
 
-/* See src/components/Sprites.js for the research these numbers come from. The
-   short version: adult silent reading is 238 words per minute, AAA ambient
-   layers run 100-400 second durations, and those are the same speed. A sprite
-   that falls beside the line you are reading at the pace you read it is, by
-   arithmetic, a two-minute drift.
-
-   They are LIGHT, not objects. Blurred and dim on purpose — at nine pixels a
-   crisp dot is a rendering artifact and a soft one is a firefly seen across a
-   room. That single difference is why the first attempt read as a dead pixel.
-
-   Pure CSS, no JavaScript, nothing listening to scroll. Ambient means
-   indifferent to the reader; the moment it reacts, it is asking for attention
-   instead of keeping company. */
+/* See src/components/Sprites.js. Short version: three earlier attempts put
+   these in the page margins, and empty margin is not a habitat — a light with
+   nothing around it is a dead pixel, which is what they looked like every
+   time. Fairies live in shrubs; here the shrubs are the typography, so these
+   ride the rendered line boxes of the text itself. */
 
 .sprites {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 4;
+    z-index: 3;
     overflow: hidden;
 }
 
 .sprite {
     position: absolute;
-    left: var(--x);
     top: 0;
-    width: var(--sprite-size);
-    height: var(--sprite-size);
+    left: 0;
+    width: 0;
+    height: 0;
+    will-change: transform, opacity;
+}
+
+/* Soft enough to be light rather than an object. The blur is the single most
+   load-bearing property here: a crisp dot on top of a word is an artifact and
+   the eye files it as a defect, while a blurred one is a small light sitting
+   somewhere behind the leaves. */
+.sprite-core {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    width: 8px;
+    height: 8px;
     border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
     background: currentColor;
-    /* The whole trick. Without the blur these are squares with a glow; with it
-       they are a light source too far away to resolve. */
-    filter: blur(2.5px);
-    box-shadow:
-        0 0 10px color-mix(in srgb, currentColor 55%, transparent),
-        0 0 28px color-mix(in srgb, currentColor 24%, transparent);
-    opacity: 0;
-    animation:
-        sprite-fall var(--fall) linear var(--delay) infinite,
-        sprite-sway calc(var(--fall) / 4) ease-in-out var(--delay) infinite alternate;
+    filter: blur(3px);
+    box-shadow: 0 0 10px color-mix(in srgb, currentColor 34%, transparent);
+    transform: scale(var(--sprite-scale, 1));
 }
 
-/* Down the page at reading pace. Fading in and out at the ends so nothing ever
-   pops into or out of existence at a screen edge. */
-@keyframes sprite-fall {
-    0%   { transform: translateY(-8vh); opacity: 0; }
-    12%  { opacity: 0.5; }
-    88%  { opacity: 0.5; }
-    100% { transform: translateY(108vh); opacity: 0; }
-}
+/* The flicker used to be a CSS keyframe, which gave all three sprites the same
+   3.1s metronome and made the whole system read as a pattern. Brightness and
+   scale now come from per-sprite value noise in the component, sampled at rates
+   that share no common period — so no two are ever in step and none of them
+   comes back around. */
 
-/* A slow sideways wander so the descent is never a straight line. Quarter the
-   fall duration, so it never syncs into a visible pattern. */
-@keyframes sprite-sway {
-    from { margin-left: calc(var(--drift) * -1); }
-    to   { margin-left: var(--drift); }
-}
+/* Night: it glows, adding light to the glyphs instead of covering them. */
+.nightfall .sprite-core,
+.sprite-core { mix-blend-mode: plus-lighter; }
 
 .sprite-creek { color: var(--creek); }
 .sprite-sage { color: var(--sage); }
 .sprite-lantern { color: var(--lantern); }
 
-/* On the parchment half they have to survive a light ground, so they carry a
-   little more body and a little less bloom. */
-.sprite-lantern { filter: blur(2.2px); }
-
-/* A phone has no margins to drift in, and a mote crossing body copy at 390px
-   is in the way rather than beside it. */
-@media (max-width: 620px) {
-    .sprites { display: none; }
+/* Day: on parchment a cold glow washes out to nothing, so a day sprite is a
+   warm mote that darkens the page very slightly instead — pollen in a sunbeam
+   rather than a firefly. */
+.daylight .sprite-core {
+    mix-blend-mode: multiply;
+    color: var(--copper);
+    filter: blur(3.4px);
+    box-shadow: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .sprites { display: none; }
-}
+@media (max-width: 900px) { .sprites { display: none; } }
+@media (prefers-reduced-motion: reduce) { .sprites { display: none; } }

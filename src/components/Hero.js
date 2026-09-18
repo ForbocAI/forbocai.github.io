@@ -53,7 +53,6 @@ export const Hero = () => {
                 <p class="memory-foot" style="--i:4">Memory is the evidence. Judgment is the intelligence.</p>
             </figure>
         </div>
-        <span class="drift" aria-hidden="true"><span class="drift-spore"></span><span class="drift-spore"></span><span class="drift-spore"></span></span>
     </section>
     `;
 };
