@@ -14,7 +14,7 @@ export const Roadmap = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛏ</span>
                 <div>
                     <h2>The intelligence expands from inside the world</h2>
-                    <p class="chapter-lead">Servitor™ is the center. The ForbocAI NPC Protocol governs how its judgments enter game law. Engine paths, world exploration and opt-in continuity extend outward from that intelligence without replacing the studio as author.</p>
+                    <p class="chapter-lead">Servitor™ is the center. The ForbocAI NPC Protocol governs how its judgments enter game law. Engine paths, world exploration and the characters players carry between worlds extend outward from that intelligence without replacing the studio as author.</p>
                 </div>
             </header>
 
