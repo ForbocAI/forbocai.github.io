@@ -17,7 +17,7 @@ export const Investors = () => {
 
             <div class="investors-body">
                 <p><strong>You ran the experiment yourself, on your own titles, without meaning to.</strong> The characters players quote back to you were never the ones with the most lines. You proved the thesis before anyone pitched it to you.</p>
-                <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built and you can read it today. The model answers today. What it costs and what it proves are on the list, numbered, in the open.</p>
+                <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built and you can read it today. The model answers today.</p>
                 <p><strong>Nobody has to be talked into wanting this.</strong> Every studio in the industry has wanted characters who think since the first branch ran out, and wanting it was never the problem. Having it was. An open-ended voice loose in your world with your character's name on it is not a feature, it is an incident.</p>
                 <p><strong>So neither half ships without the other.</strong> A model that reasons like a person and cannot be stopped from moving your state is a liability, and a boundary with nothing behind it is a config file. Servitor™ needs the Protocol's law to enter a world at all. That is why they are one thing, and why the thing is served rather than shipped loose.</p>
                 <p><strong>The moat was never the boundary.</strong> It is the model, and what is in it cannot be prompted back out. <strong>Selflessness is weights, not a prompt.</strong></p>
@@ -32,6 +32,7 @@ export const Investors = () => {
 
             <p class="investors-takeaway"><strong>You have been paying for this by accident.</strong> The one your players quote made a decision nobody wrote, and no budget line can order another.</p>
             <p class="investors-takeaway">A handful of studios come through this door, and then it is a hallway like any other. In here, a character refuses a player for a reason she can name and hands you the reason she had. Out there, it is still a tree you pay to build whole so one player can walk one path through it. You are reading this from one side of that.</p>
+            <p class="investors-takeaway">First worlds are being chosen now. Whoever is inside when the first cast ships holds a position in the only market that has a standard, beside the company that wrote it.</p>
             <p class="investors-takeaway">Send us one character. We will take her to the moment your tree ends. Eighteen months later a player gets every detail of that scene wrong, and still gets her right.</p>
 
             <div class="hero-buttons">

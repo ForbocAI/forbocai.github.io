@@ -43,6 +43,11 @@ export const Turn = () => {
   speakingStyle: ['Short sentences. Never explains a refusal twice.'],
   constraints: ['The letter does not open on a debt. Only on news of Aldren.'],
 }</code></pre>
+                <p class="turn-note"><strong>Your writers do not edit her lines. They edit what she reasons from.</strong> She hands back the reason she had, in her own words, every turn, and that reason is the artifact your narrative lead reviews. A line that lands wrong is almost never a wording problem — it is a missing loyalty, a relationship phrased too loosely, a constraint the document implied instead of stating. Change the document, run the scene, read the reason. That loop is a morning, not a milestone, and it lives in your repo, in review, like any other source file. We never touch it. We cannot.</p>
+                ${Deeper({
+                    summary: 'What it costs to author four hundred of these',
+                    body: `<p class="turn-note">A persona document is a page, and your bible already has most of it — traits, goals, relationships, how she talks, what she will not do. Your team writes that today, for every named character, before one branch gets typed. What changes is where it goes afterwards. Today it goes into a writer's head and comes back as thirty thousand words of branch, most of which no player ever sees. Here it stays a page, and the branch is the part you stop paying for. A cast gets more expensive to imagine and far cheaper to cover. We will not put a number on it, because the honest version of that number comes off a real cast on a real schedule, and the first studio to run four hundred states it beside their own name.</p>`,
+                })}
                 <p class="turn-note turn-authored-foot"><em>The letter does not open on a debt</em> is a writer's constraint, typed on a Tuesday. <em>That earns the road. It does not earn the letter.</em> is what it costs her at the counter, at night, with this particular player in front of her. Nobody typed the second one. That is the entire product, and your writer authored the half that decides it.</p>
             </div>
 
@@ -68,7 +73,7 @@ export const Turn = () => {
 
                 <div class="turn-col">
                     <p class="turn-label">Servitor™ returns one complete character judgment</p>
-                    <p class="turn-note"><strong>Authored illustration, not a capture.</strong> This is the shape of a turn, not a recording of one — and we say so because the fault printed below it is real.</p>
+                    <p class="turn-note">The persona above is what a writer typed. What comes back is below — an authored illustration of the contract, and the fault printed under it is real.</p>
                     <pre class="turn-code"><code>{
   dialogue: "He went north. That is all I can give you tonight.",
   reasoningResult: {
@@ -82,6 +87,10 @@ export const Turn = () => {
   metadata: { valid: true },
 }</code></pre>
                     <p class="turn-note">She had <code>offer_item</code> on the table and did not take it.</p>
+                    ${Deeper({
+                        summary: 'How your QA files a bug against a line nobody wrote',
+                        body: `<p class="turn-note">As a JSON file, not a video. Every judgment is a function of four things your build already holds — the persona document, the memory excerpt, the world context and the legal action set — against one recorded model and runtime build. QA files the payload and it replays. A tester who cannot reproduce a line cannot file it, which is why the turn is a record before it is a performance. Holding one build across your ship window, so that record stays stable through certification, is clause seven.</p>`,
+                    })}
                     ${Deeper({
                         summary: 'What <code>valid: true</code> does and does not cover',
                         body: `<p class="turn-note">It means the turn met its deadline and passed its checks. It does not mean every word she says is true about your world — that limit is printed below, on our own demo.</p>`,
@@ -170,6 +179,10 @@ export const Turn = () => {
             </section>
 
             <p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localization lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what would you have put back in?</p>
+
+            <p class="turn-consequence"><strong>Now the harder half of that, since we raised it.</strong> Her judgment was never a string, so it was never on the string table, and the lock that cut your arc has nothing to hold her against. That is the freedom and it is also the problem. She reaches the decision once and a decision is language-independent — but delivery is not: register, idiom, honorifics, and what a refusal sounds like in a language where refusing is done sideways. Shipping her in nine languages means trusting her to be the same person in all nine and native in each. That is clause twenty-five, the hardest line in the Standard, and it is last on purpose.</p>
+
+            <p class="turn-consequence"><strong>We do not make voices, and we are not going to.</strong> Servitor™ returns a judgment and the words that carry it. No performer's voice is trained, cloned or generated here. That leaves the real question, and the plain answer is that a line nobody wrote is a line nobody recorded — so the first worlds ship her where your cast was already unvoiced, and your performed principals stay performed, exactly as written and recorded. Where a studio does want her reaching voice, that is a contract between the studio and the performer, and our position is the one we would want if we were on the other side of it: a voice is a person's work, it is used with their consent, and it is paid for.</p>
 
             <p class="turn-consequence"><strong>A refusal becomes the next piece of evidence too.</strong> The letter stays sealed, the world remembers that it was asked for, and Maeve enters the next encounter as the person who kept her brother's confidence — and who knows this player asked after him anyway.</p>
 

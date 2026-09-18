@@ -55,10 +55,11 @@ export const Vision = () => {
 
             <aside class="soul-economy">
                 <h3>What $FAI is for</h3>
-                <p><strong>When a character crosses between two studios with no reason to trust each other, her history has to be true somewhere neither of them owns and both can check.</strong> That is the question $FAI is pointed at: a separate, opt-in token on Solana, and the last thing on the standard we intend to answer.</p>
+                <p><strong>Two studios competing for the same player will not keep each other's canon.</strong> Neither will run the other's server, or take the other's word that a character arrived carrying what she claims to carry. A Soul crossing between them has to be checkable somewhere neither of them owns.</p>
+                <p>$FAI is a notary on Solana and nothing else: it records that this history is the history, so a receiving world can verify before it admits. It is opt-in, it is last in the Standard, and no studio touches it to buy a character judgment from us. <strong>The day two studios name a registry they both already trust, we will use theirs and retire ours, and say so here.</strong></p>
                 <div class="hero-buttons">
                     <a href="#whitepaper" class="btn btn-primary" data-link>Read the architecture</a>
-                    <a href="#wp-gates" class="text-link" data-link>See the standard</a>
+                    <a href="#wp-gates" class="text-link" data-link>Read the Standard</a>
                 </div>
             </aside>
         </div>

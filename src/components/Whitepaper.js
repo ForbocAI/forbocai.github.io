@@ -1,5 +1,3 @@
-import { Deeper } from './Deeper.js';
-
 /**
  * Whitepaper Component
  * The public brief. Benefits and boundaries, no internals.
@@ -80,15 +78,12 @@ export const Whitepaper = () => {
                     <h3>3.4 Ghost</h3>
                     <p>Procedural and adaptive systems can outrun manually authored test paths. The internal harness already drives test worlds during Servitor™ qualification. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is gate ten.</p>
 
-                    <h3>3.5 The production ledger</h3>
+                    <h3>3.5 The Character Intelligence Standard</h3>
                     <p><strong>Working now in ForbocAI evaluation environments:</strong> Servitor™ through the ForbocAI NPC Protocol; TypeScript and native Unreal Engine 5 interfaces; memory writes to studio-controlled local storage; structured action proposals; reply checks; action checks; internal test worlds; and an exact model and runtime build recorded internally.</p>
                     <p id="wp-gates"><strong>Here is what is true today.</strong> The model answers. The harness drives worlds. The boundary is readable, and you can read it. And the measurement this category will be bought on does not exist anywhere yet — one company is building the instrument that will define it.</p>
-                    <p><strong>Between here and full production authority is a crossing, and this is the map of it.</strong> <strong>All open. None claimed.</strong></p>
-                    <p><strong>This is a licence, not an apology.</strong> Anyone who serves something people want this badly publishes their proof — what is in it, at what strength, and what it does once it is inside. These lines are that proof, and they are the purchasing criteria for a category that does not have any. We wrote the test, published it before the results, and handed it to every rival on identical terms — on purpose, in public, in writing. It is what everyone who comes after us gets graded on. The crossing is hard and it is hard on purpose, because it is the last one anybody gets to make: on the other side, this category has a measurement, and that measurement has a cast's name on it.</p>
-                    ${Deeper({
-                        summary: 'The order they have to be walked in',
-                        body: `<p>Five, six and nine block one: no publisher signs a shipped integration before outage behaviour, platform certification and continuity are instrumented. Two names the alternative that thirteen, fourteen and fifteen are scored against, so it blocks all three, and twenty-three blocks them too, because a number measured on a cast we control is not a number. Four blocks twenty-two — nobody pays before there is a price. And one blocks eleven blocks twenty-four: a Soul crosses between live titles or not at all, and a token cannot serve a Soul that has never crossed.</p>`,
-                    })}
+                    <p><strong>Every category is bought on a measurement, and somebody writes it.</strong> The Character Intelligence Standard is twenty-five clauses a character model has to satisfy before a studio should ship one — ours included, ours first. It went out before we had results, handed to every rival on identical terms, with our own name at the top. Use it on us this week. Then use it on whoever pitches you next.</p>
+                    <p><strong>Most of these do not wait on us. They wait on a second party.</strong> A studio has to ship one. A rival has to be measured beside one. A producer who does not work here has to read one. We built the half a company can build alone, and the rest is what the first worlds through this door put their names on.</p>
+                    <p><strong>The order is not ours to choose either.</strong> Five, six and nine block one: no publisher signs a shipped integration before outage behaviour, platform certification and continuity are instrumented. Two names the alternative that thirteen, fourteen and fifteen are scored against, so it blocks all three, and twenty-three blocks them too, because a number measured on a cast we control is not a number. Four blocks twenty-two — nobody pays before there is a price. And one blocks eleven blocks twenty-four: a Soul crosses between live titles or not at all, and a token cannot serve a Soul that has never crossed.</p>
                     <ol class="gate-ledger">
                         <li><strong><span class="gate-n">1.</span> External-studio evidence.</strong> A studio that is not ForbocAI ships a title with Servitor™ in it.</li>
                         <li><strong><span class="gate-n">2.</span> Named-alternative comparison.</strong> A public comparison against an alternative we name, published win or lose.</li>
@@ -148,7 +143,7 @@ export const Whitepaper = () => {
             </div>
 
             <footer class="doc-foot">
-                <a href="#wp-gates" class="btn btn-primary">Read the standard</a>
+                <a href="#wp-gates" class="btn btn-primary">Read the Standard</a>
             </footer>
         </div>
     </article>
