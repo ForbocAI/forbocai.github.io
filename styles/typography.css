@@ -91,3 +91,54 @@ a:hover {
     color: var(--copper-ink);
     margin-bottom: 0.9rem;
 }
+
+/* --------------------------------------------------- the skim layer ------ */
+
+/* Two references asking for the same thing.
+   Backlinko's rule for a page somebody scans is abundant subheadings and
+   takeaway lines; a reviewer has scored this site's read-at-speed at under a
+   third for four rounds running, on 4,807 words with no skim path. And the
+   biomorphic property still missing from the audit is fractal self-similarity:
+   the same rule holding at every scale, where a chapter has a heading and its
+   movements have none.
+
+   Those are one update, and it costs no new words, because the takeaway lines
+   are already written — sixty paragraphs across the site open with a bolded
+   lead-in that states the point and is then buried inline where the eye cannot
+   catch it. Promoting them to their own line turns prose the reader must enter
+   into prose they can scan and choose to enter. The chapter's heading rule,
+   repeating one scale down.
+
+   Only where a paragraph opens with one. A bold inside a sentence stays
+   inside it. */
+.chapter p > strong:first-child,
+.investors-body p > strong:first-child,
+.doc-body p > strong:first-child {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    color: var(--day-ink);
+}
+
+.chapter-night p > strong:first-child,
+.turn-band p > strong:first-child {
+    color: var(--night-ink);
+}
+
+/* The takeaway inside a small note or a code caption is already doing its job
+   at that scale; promoting it there would make a caption shout. */
+.turn-note > strong:first-child,
+.deeper-body p > strong:first-child,
+.ask-note > strong:first-child,
+.team-note > strong:first-child {
+    display: inline;
+    margin-bottom: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
