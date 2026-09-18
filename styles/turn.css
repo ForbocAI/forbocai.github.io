@@ -88,6 +88,14 @@
     max-width: 44ch;
 }
 
+/* One note per column needed no rhythm; there are six now, and at a 0px gap
+   against a 21.7px line-height the space between two paragraphs was smaller
+   than the space between two lines inside one. Six separate disclosures read
+   as a single wall of text. Measured, not guessed. */
+.turn-note + .turn-note {
+    margin-top: 0.95rem;
+}
+
 .turn-note code,
 .turn-refusal code,
 .turn-cli code {
