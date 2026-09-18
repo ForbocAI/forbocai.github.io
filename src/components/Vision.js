@@ -18,7 +18,7 @@ export const Vision = () => {
                 </div>
             </header>
 
-            <p class="soul-decouple"><strong>The Soul layer is in active development now:</strong> an opt-in, encrypted record of identity, memory, relationships and temperament. A receiving title would inspect it, verify it and decide what enters its own canon. None of that has happened yet—no Soul has crossed between two titles, which is gate eleven.</p>
+            <p class="soul-decouple"><strong>The Soul layer is in active development now:</strong> an opt-in, encrypted record of identity, memory, relationships and temperament. A receiving title inspects it, verifies it and decides what enters its own canon. No Soul has crossed between two titles yet: gate eleven.</p>
 
             <p class="soul-card"><strong>Trading cards made identity collectible, and people have spent decades proving they will pay for it. <a href="https://www.gminsights.com/industry-analysis/trading-card-games-market" target="_blank" rel="noopener noreferrer">Global Market Insights sizes the printed trading-card game market at $8.4&nbsp;billion in 2025, growing to $9.2&nbsp;billion in 2026</a>. Souls would make that relationship cumulative.</strong> That figure is evidence of the habit, not a forecast of Soul revenue. A static card preserves who a character is. A Soul carries who she trusted, what she refused and the argument she is still having because of one player's choices.</p>
 

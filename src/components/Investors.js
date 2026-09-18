@@ -11,7 +11,7 @@ export const Investors = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛞ</span>
                 <div>
                     <h2>The category is already inhabited</h2>
-                    <p class="chapter-lead"><strong>This is not a proposal for a world that might exist.</strong> Servitor™ is reasoning inside one right now. The Protocol is the law its judgment enters a world through. The twenty-one gates between here and production authority are numbered and public, because a category being settled from the inside can afford to publish its own itinerary.</p>
+                    <p class="chapter-lead"><strong>Games are going to be full of people who decide.</strong> Not branches that fire — people, who keep a loyalty when it costs them and refuse a player who nearly earned it. That part is settled. The only open question is who builds the layer they think with. Servitor™ is that layer, and it is reasoning today; the Protocol is how its judgments enter a world without being able to break it. The twenty-one gates between here and production authority are numbered and public, because a category being settled from the inside can afford to publish its own itinerary.</p>
                 </div>
             </header>
 

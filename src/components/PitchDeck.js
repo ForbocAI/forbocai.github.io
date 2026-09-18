@@ -58,7 +58,7 @@ const slides = [
                 </article>
             </div>
             <p class="impact-statement"><strong>General conversation ends with words.</strong> Character Intelligence begins where identity, consequence and action meet.</p>
-            <p class="ask-note">Trained for, not yet measured: gates thirteen through fifteen carry the numbers for this slide.</p>
+            <p class="ask-note">Gates thirteen through fifteen carry the numbers for this slide.</p>
         `
     },
     {
@@ -113,7 +113,7 @@ const slides = [
                 <article><span>Decision</span><h3>Authorship stays alive</h3><p>Servitor™ carries the person into the unforeseen instead of replacing her.</p></article>
             </div>
             <p class="impact-statement">The model does not add one house personality to every world. It gives each authored person room to remain herself.</p>
-            <p class="ask-note">That is what Servitor™ was trained for, and it is gates thirteen and fourteen — persona hold, and cast separation — neither of them measured yet. The deck states the design; the ledger states the evidence.</p>
+            <p class="ask-note">Gates thirteen and fourteen: persona hold, cast separation.</p>
         `
     },
     {
@@ -183,7 +183,7 @@ const slides = [
                 <article><span>Collection</span><h3>Every person can be singular</h3><p>A cast becomes a portfolio of identities, not interchangeable content.</p></article>
                 <article><span>Return</span><h3>Continuity deepens belonging</h3><p>A player comes back for the person who remembers what they did last season.</p></article>
             </div>
-            <p class="moat-intro">Cards proved that people return to identities they care about. The deeper prize is not only who a character is, but who she becomes with you. Carrying that between two titles is gate eleven, and no Soul has crossed yet.</p>
+            <p class="moat-intro">Cards proved that people return to identities they care about. The deeper prize is not only who a character is, but who she becomes with you. Carrying that between two titles is gate eleven.</p>
         `
     },
     {
