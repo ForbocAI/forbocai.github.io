@@ -88,15 +88,15 @@
        The -turn variants are the same shape against the grain. Repeating cards
        alternate between the two, because eight identical asymmetric corners
        stop reading as growth and start reading as a skewed template. */
-    --radius-xs: 6px 4px 5px 4px;
-    --radius-sm: 11px 7px 10px 8px;
-    --radius: 18px 12px 16px 13px;
-    --radius-lg: 30px 20px 27px 22px;
+    --radius-xs: 8px 3px 7px 4px;
+    --radius-sm: 16px 6px 13px 7px;
+    --radius: 28px 10px 23px 12px;
+    --radius-lg: 48px 16px 38px 20px;
 
-    --radius-xs-turn: 4px 6px 4px 5px;
-    --radius-sm-turn: 7px 11px 8px 10px;
-    --radius-turn: 12px 18px 13px 16px;
-    --radius-lg-turn: 20px 30px 22px 27px;
+    --radius-xs-turn: 3px 8px 4px 7px;
+    --radius-sm-turn: 6px 16px 7px 13px;
+    --radius-turn: 10px 28px 12px 23px;
+    --radius-lg-turn: 16px 48px 20px 38px;
 
 /* ------------------------------------------------------------ membrane --
 
@@ -120,15 +120,17 @@
    and without it the surface reads as pasted rather than present. */
 --membrane-day:
     inset 0 1px 0 #fffdf6,
-    inset 0 0 64px -30px rgba(255, 243, 194, 0.95),
-    0 0 58px -24px rgba(224, 195, 138, 0.45),
-    0 8px 26px -26px rgba(92, 74, 59, 0.4);
+    inset 0 0 70px -22px rgba(255, 243, 194, 0.95),
+    0 0 44px -4px rgba(224, 195, 138, 0.36),
+    0 0 110px 10px rgba(224, 195, 138, 0.14),
+    0 10px 30px -22px rgba(92, 74, 59, 0.45);
 
 --membrane-night:
-    inset 0 1px 0 rgba(241, 232, 214, 0.08),
-    inset 0 0 70px -32px rgba(255, 243, 194, 0.3),
-    0 0 64px -26px rgba(255, 243, 194, 0.16),
-    0 8px 26px -26px rgba(5, 9, 6, 0.8);
+    inset 0 1px 0 rgba(241, 232, 214, 0.1),
+    inset 0 0 80px -24px rgba(255, 243, 194, 0.34),
+    0 0 52px -6px rgba(255, 243, 194, 0.2),
+    0 0 130px 12px rgba(255, 243, 194, 0.09),
+    0 10px 30px -22px rgba(5, 9, 6, 0.85);
 
     --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 

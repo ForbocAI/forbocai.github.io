@@ -134,51 +134,6 @@ export const Turn = () => {
                 <p class="turn-note turn-counterfactual-foot">Nothing about Maeve changed. Her brother's request still stands, and she still weighs it the same way. What changed is what the player made true, and that is the whole difference between a character and a generator.</p>
             </section>
 
-            <section class="turn-room" aria-labelledby="turn-room-title">
-                <div class="turn-counterfactual-head">
-                    <p class="turn-label">The rest of the room was listening</p>
-                    <h3 id="turn-room-title">Nobody wrote a branch for what the miner does while she refuses.</h3>
-                    <p>Brannoc is at the end of the counter. The player covered his room in the autumn when he came up short, and he has never mentioned it. He is close enough to hear Maeve say no.</p>
-                </div>
-                <div class="turn-counterfactual-pair">
-                    <article>
-                        <span>What your writer handed us</span>
-                        <pre class="turn-code"><code>const brannoc = {
-  traits: ['Owes more than he can say out loud',
-           'Slow to speak in a room he does not own'],
-  goals: ['Clear the debt before the thaw'],
-  relationships: [
-    { who: 'the player', bond: 'Covered his room in the autumn. Never mentioned since.' },
-    { who: 'Maeve', bond: 'Her lodger two winters. Her word runs this room.' },
-  ],
-  speakingStyle: ['Says the smallest true thing, then stops.'],
-  constraints: ['Will not contradict Maeve in her own house.'],
-}</code></pre>
-                    </article>
-                    <article>
-                        <span>What he did about it — your game fired this call, not us</span>
-                        <pre class="turn-code"><code>// legalActions: ['speak_to', 'stay_silent']
-{
-  dialogue: "Maeve. It was the two of them that covered my room in the autumn.",
-  reasoningText: "She is not wrong about the letter, and I will not say she is. But she is weighing what this one is owed without knowing the half of it. The half she is missing is mine to give her.",
-  action: { type: 'speak_to', payload: { target: 'maeve' } },
-}</code></pre>
-                    </article>
-                </div>
-                <div class="turn-answer">
-                    <p class="turn-label">And then she answers her own lodger</p>
-                    <pre class="turn-code"><code>// legalActions: ['offer_item', 'refuse'] — the same two, again
-{
-  dialogue: "Then I owe them a bed, not a letter. The corner room is yours tonight. Do not ask me for the drawer again.",
-  reasoningText: "Brannoc would not say that in my house unless it were true, and he would not say it at all unless he thought I was being hard. I am not. The letter is still my brother's and that has not moved. But what this one is owed just got larger than I knew, and I have a room.",
-  action: { type: 'offer_item', payload: { item: 'corner_room_key' } },
-}</code></pre>
-                    <p class="turn-note"><strong>Nothing in that call established that the corner room exists, is empty, or is hers to give.</strong> She reasons from the evidence you send, and evidence you do not send is evidence she can reach past. Your validation rules refuse the key or they do not. Clause twelve, again.</p>
-                    <p class="turn-note"><strong>She held.</strong> Leaned on publicly, in her own house, by a lodger whose word carries — and the letter is still sealed, because her writer typed <em>the letter does not open on a debt</em> and that is not a thing the room can talk her out of. What moved is what she paid instead. She found the debt somewhere else and settled it out of the inn.</p>
-                </div>
-
-                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> His constraint holds — he will not take her side down in her own house. He changes what is true in the room instead, and now she is weighing a debt she did not know about, in front of a player who never asked him to speak. <strong>There is no tree in which that scene exists.</strong> Two people in a room is not two branches; it is every pair, and three is every triple. That is why party banter gets cut in month thirty of every game ever made, and it is the one thing branch writing does not make expensive so much as impossible. Your game fired three calls here, in an order it chose, each one legal or it does not happen.</p>
-            </section>
 
         </div>
     </section>

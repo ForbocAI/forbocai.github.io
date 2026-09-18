@@ -75,13 +75,19 @@
     -webkit-overflow-scrolling: touch;
 }
 
-/* The flagship block was running off its own right edge and relying on a
-   horizontal scrollbar nobody uses, so the payload a reader came here to see
-   ended mid-sentence. It wraps instead. Lines short enough to fit are
-   unaffected, which is most of the left column. */
+/* Wrapping was worse than scrolling. At 390px pre-wrap broke every line at
+   about twenty-eight characters, mid-clause, and a payload broken mid-token
+   reads as damaged text rather than as evidence. It scrolls now, with a fade
+   at the right edge so the overflow is legible as overflow. */
 .turn-code code {
     font-family: inherit;
-    white-space: pre-wrap;
+    white-space: pre;
+}
+
+.turn-code {
+    position: relative;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 2.5rem), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 2.5rem), transparent);
 }
 
 .turn-note {

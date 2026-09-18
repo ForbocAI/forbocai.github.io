@@ -21,7 +21,7 @@ export const Room = () => {
 
             <section class="turn-room" aria-labelledby="turn-room-title">
                 <div class="turn-counterfactual-head">
-                    <p class="turn-label">The rest of the room was listening</p>
+                    <p class="turn-label">One night, one counter, three judgments</p>
                     <h3 id="turn-room-title">Nobody wrote a branch for what the miner does while she refuses.</h3>
                     <p>Brannoc is at the end of the counter. The player covered his room in the autumn when he came up short, and he has never mentioned it. He is close enough to hear Maeve say no.</p>
                 </div>
