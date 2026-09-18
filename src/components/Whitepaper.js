@@ -117,7 +117,7 @@ export const Whitepaper = () => {
                 <section id="wp-souls">
                     <h2>4. The Soul economy</h2>
                     <p class="doc-aside"><strong>$FAI is live on Solana, and the contract behind every $FAI link on this site is the one to check.</strong></p>
-                    <p>The Soul layer carries the history a player and character made together. We are assembling the opt-in record — identity, memory, relationships and temperament — while every receiving title decides what enters.</p>
+                    <p>The Soul layer carries the history a player and character made together. We are assembling the player-owned record — identity, memory, relationships and temperament — while every receiving title decides what enters.</p>
                     <ul>
                         <li><strong>Player value.</strong> A character can retain earned specificity instead of resetting to a template at every title boundary.</li>
                         <li><strong>Studio authority.</strong> Gather, encrypt, upload, verify, restore — every participating title still chooses what its technical, moderation and rights rules admit.</li>
@@ -135,7 +135,7 @@ export const Whitepaper = () => {
                     <ul>
                         <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, TypeScript and Unreal Engine 5 interfaces, itemized in 3.5. Soul continuity is a separate development track, and $FAI is described in section 4.</li>
                         <li><strong>In development.</strong> Producer-facing Ghost coverage reporting — clause ten.</li>
-                        <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. Opt-in Soul continuity advances separately behind core distribution — clause eleven. Release planning binds owners, gates, order and dates before a track enters qualification.</li>
+                        <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. The crossing follows the worlds it runs between: a character crosses between live titles or not at all, which is clause eleven, and clause one comes first.</li>
                         <li><strong>Governed continuity.</strong> Opted-in history crosses between participating titles only when their technical, moderation and rights gates admit it. No portability right is assumed.</li>
                     </ul>
                 </section>

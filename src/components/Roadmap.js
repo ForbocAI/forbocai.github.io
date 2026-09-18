@@ -40,7 +40,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Crossing</p>
                         <h3>Carry earned history between worlds</h3>
-                        <p>Every named character meets the unscripted and still chooses as that person, inside law the studio owns. The opt-in path carries earned character history into a receiving world without surrendering canon, law or game state.</p>
+                        <p>Every named character meets the unscripted and still chooses as that person, inside law the studio owns. She crosses when the player who made her carries her, and the receiving world admits what it chooses to admit — no canon, law or game state surrendered.</p>
                     </div>
                 </li>
             </ol>
