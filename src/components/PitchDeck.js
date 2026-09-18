@@ -196,7 +196,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
             </div>
-            <p class="impact-statement">Your world state and your memory store stay yours, and neither becomes ForbocAI training data. The part that moves is the turn — a memory excerpt, the persona, the world context — and excluding it from training is gate four. Until that contract is signed you have our word and not an instrument, and we would rather you had the instrument. So nothing here compounds on your data. What compounds is the range of worlds one decision contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. Today our range stands at our own evaluation worlds and no external studio: gate one, listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
+            <p class="impact-statement">Your store never leaves you. What moves is the turn — a memory excerpt drawn from it, the persona, the world context — and excluding that from training is gate four. Until that contract is signed you have our word and not an instrument, and we would rather you had the instrument. What we can say without waiting on it: there is no data flywheel here by design, so nothing about this arrangement is built to compound on what you send. What compounds is the range of worlds one decision contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. Today our range stands at our own evaluation worlds and no external studio: gate one, listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
         `
     },
     {
@@ -217,7 +217,7 @@ const slides = [
                     <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
                 </div>
             </div>
-            <p class="team-note">Four proofs carry this company, and this is the bench that owes them: a character who stays herself under held-out evaluation and live play; a protocol that fails closed from the CLI through to the model; the same contract in TypeScript and in Unreal; and a harness that explores a level and returns findings a team can act on.</p>
+            <p class="team-note">Four proofs carry this company. Two are working today in our own evaluation worlds — the same contract in TypeScript and in Unreal, and a protocol that fails closed end to end. Two are owed: a character who stays herself under held-out evaluation and live play; a protocol that fails closed from the CLI through to the model; the same contract in TypeScript and in Unreal; and a harness that explores a level and returns findings a team can act on.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },
