@@ -10,16 +10,19 @@ export const Hero = () => {
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-copy">
-                <p class="kicker">AI infrastructure for game NPCs</p>
-                <h1>Characters who decide.</h1>
-                <p class="hero-premise">You can still name a character from a game you finished five years ago. She could not name you the second time you walked through her door.</p>
-                <p class="hero-lead">We build the character layer game studios plug in. Your NPCs weigh a situation, hold a position, change their minds on evidence and act — all of it inside the rules you wrote. Memory is the floor they reason from. The product is what they do with it.</p>
-                <p class="hero-engines">Shipping today for <strong>TypeScript</strong>, in Node and the browser, and for <strong>Unreal&nbsp;Engine&nbsp;5</strong>. Unity is an integration scaffold rather than a shipped binding — if that is your engine, the honest answer is not yet.</p>
+                <p class="kicker">ForbocAI — the NPC language model company</p>
+                <h1>The next great language model is already inside the game.</h1>
+                <p class="hero-premise"><strong>Let every character face the choice you did not script.</strong> A player steps beyond the authored path with one question. Maeve weighs what happened, chooses as herself, and hands your game the next possibility.</p>
+                <figure class="maeve-scene hero-maeve-glimpse">
+                    <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
+                    <figcaption>The storm is the safe opening. Her brother's letter is the judgment.</figcaption>
+                </figure>
+                <p class="hero-lead"><strong>The ForbocAI NPC LM Servitor™ is the intelligence behind the living cast.</strong> Servitor™ reads authored identity, memory, motive, relationships and world evidence; reasons through the unforeseen; and makes the character judgment.</p>
+                <p class="hero-engines"><strong>The ForbocAI NPC Protocol gives that intelligence a lawful place inside the world.</strong> Servitor™ proposes. Your game alone makes the choice real.</p>
                 <div class="hero-buttons">
-                    <a href="https://docs.forboc.ai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read the developer docs</a>
-                    <a href="#turn" class="text-link" data-link>See a turn, end to end</a>
+                    <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
+                    <a href="#pitch/1" class="text-link" data-link>Enter the category</a>
                 </div>
-                <p class="hero-try">Or skip the docs for now. No engine code, one command, three minutes once your key lands — we cut them by hand, same day, until the portal ships: <code>forbocai npc chat maeve --text "her brother"</code></p>
             </div>
 
             <figure class="memory-panel">
@@ -31,7 +34,7 @@ export const Hero = () => {
                     </span>
                     <span class="memory-mood">Warm toward you</span>
                 </figcaption>
-                <p class="memory-title">What she is weighing</p>
+                <p class="memory-title">What Servitor™ is weighing</p>
                 <ul class="memory-lines">
                     <li style="--i:0">
                         <span class="memory-when">Three sessions back</span>
@@ -46,8 +49,8 @@ export const Hero = () => {
                         <span class="memory-what">You left ahead of the storm. She kept the lamp burning anyway.</span>
                     </li>
                 </ul>
-                <p class="memory-weigh" style="--i:3">She could open with the storm. It is the safer thing to say, and she has said it to everyone else tonight.</p>
-                <p class="memory-foot" style="--i:4">So tonight she opens with the brother. That is the judgment, not the recall.</p>
+                <p class="memory-weigh" style="--i:3">The storm is safe. Her brother's letter risks the truth, but this player earned the right to receive it.</p>
+                <p class="memory-foot" style="--i:4">Memory is the evidence. Judgment is the intelligence.</p>
             </figure>
         </div>
     </section>

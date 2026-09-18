@@ -3,13 +3,13 @@
  * Pure function returning the header HTML string.
  */
 const LINKS = [
-    { href: '#mission', label: 'The mission', internal: true },
-    { href: '#technology', label: 'Character layer', internal: true },
-    { href: '#servitor', label: 'Servitor', internal: true },
-    { href: '#souls', label: 'Souls', internal: true },
-    { href: '#roadmap', label: 'Roadmap', internal: true },
+    { href: '#servitor', label: 'Servitor™', internal: true },
+    { href: '#turn', label: 'One choice', internal: true },
+    { href: '#technology', label: 'Living worlds', internal: true },
+    { href: '#roadmap', label: 'Horizons', internal: true },
     { href: 'https://docs.forboc.ai', label: 'Docs', internal: false },
-    { href: '#investors', label: 'Investors', internal: true },
+    { href: '#whitepaper', label: 'Whitepaper', internal: true },
+    { href: '#pitch/1', label: 'Vision deck', internal: true },
 ];
 
 const link = ({ href, label, internal }, className) => internal

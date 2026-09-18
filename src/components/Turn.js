@@ -1,16 +1,5 @@
 /**
- * Turn Component
- *
- * The one place on the site that shows the product rather than describing it.
- * Names, fields and CLI commands here are the real ones from the TypeScript
- * SDK — processNPC, response.dialogue, response.action, metadata.valid,
- * validateBridgeThunk — not an illustrative invention.
- *
- * Full-bleed rather than an inset card: a dark panel floating inside the day
- * half meant the header crossed it as a cream slab with a hard edge, and it was
- * the third rounded card with a soft shadow on one page. Edge to edge, it is a
- * tunnel the page passes through on the way to nightfall, and the header can
- * simply go dark with it.
+ * One complete SDK turn, kept concrete so the category promise has a contract.
  */
 export const Turn = () => {
     return `
@@ -19,8 +8,8 @@ export const Turn = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛒ</span>
                 <div>
-                    <h2>One turn, end to end</h2>
-                    <p class="chapter-lead">Your game hands us who the character is, what she just observed, and the state of the world around her. We hand back something you can act on — or an honest refusal.</p>
+                    <h2>The moment an NPC becomes someone</h2>
+                    <p class="chapter-lead">A player asks the question nobody wrote. Servitor™ gathers who this person has been, what now matters and what the world permits—then creates the next choice only this character could make.</p>
                 </div>
             </header>
 
@@ -31,30 +20,54 @@ export const Turn = () => {
   processNPC({
     npcId: 'maeve',
     structuredPersona: maeve,
-    text: 'The player asks about her brother.',
+    text: 'Anything I should know before I go?',
     context: worldState,
     memory,
+    legalActions: ['offer_item', 'refuse'],
   }),
 ).unwrap()</code></pre>
-                    <p class="turn-note">Memory is a store your studio created and can read without us. World context is yours: nothing you send at runtime is retained, and a bench world exists only where a pilot agreement put it.</p>
+                    <p class="turn-note">Memory is a store your studio created and can read without us. World context and the legal action set belong to this turn. In Unreal, the equivalent entry is <code>UForbocAISubsystem::ProcessNPC</code>; Blueprint exposes <code>Process NPC</code>.</p>
                 </div>
 
                 <div class="turn-col">
-                    <p class="turn-label">ForbocAI answers</p>
+                    <p class="turn-label">Servitor™ returns one complete character judgment</p>
                     <pre class="turn-code"><code>{
   dialogue: "He took the north road in spring.",
-  action: { type: 'offer_item', item: 'brothers_letter' },
+  reasoningResult: {
+    reasoningText: "They noticed him when others did not.",
+    responseText: "He took the north road in spring.",
+  },
+  action: {
+    type: 'offer_item',
+    payload: { item: 'brothers_letter' },
+  },
   metadata: { valid: true },
 }</code></pre>
-                    <p class="turn-note">Nothing has moved yet. The action is a proposal — your build runs it through the validation path against your own rules, and only then does the letter change hands. Same contract from Unreal; the engine plugin is not a port of the TypeScript one.</p>
+                    <p class="turn-note"><code>offer_item</code> is a proposal, not a mutation. Your validation rules check it against the contracts your game supplied; only then may the letter change hands.</p>
                 </div>
             </div>
 
-            <p class="turn-refusal"><strong>Everyone sells you a speed number. We would rather sell you the failure contract.</strong> When it cannot answer honestly, <code>metadata.valid</code> comes back <code>false</code> and there is no action to run. A turn that could not be qualified fails where you can catch it, rather than arriving as plausible dialogue about a letter that does not exist. A fast wrong answer is worse than a slow one, and it is the failure that ends up in your bug tracker under "cannot reproduce".</p>
+            <section class="turn-counterfactual" aria-labelledby="turn-counterfactual-title">
+                <div class="turn-counterfactual-head">
+                    <p class="turn-label">The character changes when the meaning changes</p>
+                    <h3 id="turn-counterfactual-title">One changed truth. A different choice.</h3>
+                    <p>Maeve does not vary because a generator rolled another line. She changes because the player changed what the moment means.</p>
+                </div>
+                <div class="turn-counterfactual-pair">
+                    <article>
+                        <span>Brother evidence withheld</span>
+                        <strong>Maeve must not invent him, the letter or a reason to offer it.</strong>
+                    </article>
+                    <article>
+                        <span>Brother evidence supplied</span>
+                        <strong>Can Maeve surface him and propose the letter for a reason the writer accepts?</strong>
+                    </article>
+                </div>
+            </section>
 
-            <p class="turn-refusal"><strong>One thing we have not solved for you.</strong> A generated line is a line nobody localised and nobody recorded. We hand back text and structured intent; what your loc vendor and your audio pipeline do with a line that did not exist at ship is your cost and your schedule, and for a global title it is a bigger one than integrating us. Ask what it does to your budget on the first call — we would sooner lose the deal there than in month three.</p>
+            <p class="turn-consequence"><strong>One accepted choice becomes the next piece of evidence.</strong> The letter changes hands, the world remembers, and Maeve enters the next encounter as the person who chose to trust this player.</p>
 
-            <p class="turn-cli">There is exactly one integration surface — a schema of your action types, your state shape and your rules. Everything else is this call. Try it from a terminal before you write a line of engine code: <code>forbocai npc chat maeve --text "her brother"</code></p>
+            <p class="turn-refusal"><strong>The magic remains authored.</strong> Servitor™ creates the possibility; the Protocol makes it legible to the world; your game turns it into history. This is the moment an NPC stops filling space and starts becoming someone the player can never forget.</p>
         </div>
     </section>
     `;

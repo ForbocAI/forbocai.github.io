@@ -1,289 +1,213 @@
 /**
- * Pitch Deck Component
- * Company deck. Every figure here traces to the internal market research;
- * nothing claims to be shipped that is not.
+ * Vision deck.
+ *
+ * Character Intelligence is the category; the living cast is the vision;
+ * Servitor is the named intelligence; the Protocol is its law; SDKs distribute
+ * it into engines; the game remains truth.
  */
 import { selectPitchSlide } from '../domains/navigationSlice.js';
 
 const slides = [
     {
         id: 1,
-        title: 'Game characters who weigh a situation, decide inside your rules, and can be carried into the next world.',
+        title: 'The next great language model is already inside the game.',
         content: `
             <div class="title-slide">
-                <p class="subtitle">ForbocAI, Inc. sells game studios a character layer: bounded reasoning and decision-making, the memory it reasons from, validated actions, automated playtesting with Ghost, and Souls — with <strong>$FAI</strong> underneath the Soul economy.</p>
-                <p class="deck-meta">Seed round — September 2026</p>
+                <p class="proof-label">The ForbocAI NPC LM Servitor™</p>
+                <p class="subtitle">The intelligence behind the living cast.</p>
+                <p>Built for the moment a character must remember the evidence, reason through motive, decide as herself and propose what happens next.</p>
+                <p class="impact-statement"><strong>The living cast is already here.</strong></p>
+                <p class="deck-meta">The category window — September 2026</p>
             </div>
-            <img src="Lanternbough.png" class="title-slide-art" alt="" aria-hidden="true" width="640" height="640">
+            <img src="living-cast-scene.webp" class="title-slide-art title-slide-world" alt="Maeve and the living cast of Lanternbough after the storm." width="1672" height="941">
         `
     },
     {
         id: 2,
-        title: 'The problem',
+        title: 'Players have already crossed the edge of the script.',
         content: `
             <div class="problem-grid">
                 <div class="problem-column">
-                    <h3>Scripted AI is finite</h3>
-                    <ul class="problem-list">
-                        <li>Behaviour trees and state machines a player exhausts in an afternoon</li>
-                        <li>Nothing a character learns in hour three reaches hour forty</li>
-                        <li>Worlds that look extraordinary and still feel unpopulated</li>
-                    </ul>
+                    <p class="proof-label">The authored edge</p>
+                    <h3>The branch stops. The player does not.</h3>
+                    <p>Players ask what no writer anticipated, arrive in the wrong order and care about the character the script treated as scenery.</p>
                 </div>
                 <div class="problem-column">
-                    <h3>Generative AI is ungoverned</h3>
-                    <ul class="problem-list">
-                        <li>Nothing in a chat-shaped stack is built to miss a deadline gracefully — it arrives late, or it arrives wrong, and wrong is the one that reaches the player</li>
-                        <li>Per-token billing at gameplay cadence does not survive a real player count</li>
-                        <li>A model that was not told about your inventory will give away an item the player never had</li>
-                    </ul>
+                    <p class="proof-label">The living edge</p>
+                    <h3>The character meets them there.</h3>
+                    <p>Identity survives the unscripted moment. Memory supplies evidence. Motive gives it weight. Judgment creates the next possibility.</p>
                 </div>
             </div>
-            <p class="impact-statement">Neither is a model-quality problem. Both are architecture problems.</p>
+            <p class="impact-statement">The defining game worlds contain casts capable of judgment—not merely more lines.</p>
         `
     },
     {
         id: 3,
-        title: 'What we sell',
+        title: 'A chatbot can answer. A character must choose.',
         content: `
-            <p class="solution-intro">A character layer that sits between the game and the model. The game keeps world authority. We keep the character coherent — and hand back structured intent a build can act on.</p>
-            <ul class="feature-list">
-                <li><strong>Hosted cognition.</strong> ForbocAI's proprietary NPC model Servitor runs on our infrastructure. No runtime to package, no GPU path to qualify, and the player's hardware never decides how well a character thinks.</li>
-                <li><strong>Validated actions.</strong> A character proposes; the layer checks it against your state and rules before anything moves. An unqualified answer fails loudly instead of inventing something.</li>
-                <li><strong>Reasoning you can read.</strong> Consequence weighed, supplied values compared, conflicting duties resolved, commitments held across turns, positions revised on evidence — and a rationale that comes from the same thought as the action.</li>
-                <li><strong>Memory you own.</strong> We issue the instruction to remember; your build writes it to a store your studio controls and can read without us.</li>
-                <li><strong>Ghost (coverage reporting, Q4 2026).</strong> Headless characters that will play the build repeatedly and return coverage, dead ends and regressions before players find them. The harness behind it qualifies Servitor releases today.</li>
-                <li><strong>Souls (in build, undated).</strong> A character gathered up — identity, memory, relationships — verified and restored in another world. Queued behind Ghost.</li>
-            </ul>
+            <div class="problem-grid category-crossing">
+                <article class="problem-column">
+                    <p class="proof-label">Conversation</p>
+                    <h3>What words come next?</h3>
+                    <p>Generation extends the exchange. Memory can extend what the system mentions.</p>
+                </article>
+                <article class="problem-column is-character-intelligence">
+                    <p class="proof-label">Character Intelligence</p>
+                    <h3>What would this person choose?</h3>
+                    <p>Servitor™ is trained around the unit games actually need: one judgment carrying identity, evidence, motive, reasoning, dialogue and structured intent through the same decision.</p>
+                </article>
+            </div>
+            <p class="impact-statement"><strong>General conversation ends with words.</strong> Character Intelligence begins where identity, consequence and action meet.</p>
         `
     },
     {
         id: 4,
-        title: 'Why it holds',
+        title: 'Meet The ForbocAI NPC LM Servitor™.',
         content: `
-            <p class="moat-intro">One thing compounds. Two of the others raise the cost of leaving, and the fourth is a second product. None of the three is dressed up as the first.</p>
-            <div class="moat-grid">
-                <div class="moat-item moat-item-primary">
-                    <h4>The model, and the bench that qualifies it</h4>
-                    <p>Every other layer here is a quarter's work for a competent team. A model that composes into sixteen minds, holds a world it was never trained on and refuses to invent its way out of a gap is not, because the work is sequential: each release is qualified against the bar the last one cleared, and every bar is built from a world a studio agreed to let us inside. Canon is granted, never bought. You cannot hire past a gate you have not built, and you cannot commission the world that builds it.</p>
+            <div class="paired-proof model-reveal">
+                <p class="proof-label">Maeve faces the choice nobody wrote</p>
+                <div class="decision-pair">
+                    <article>
+                        <span>The safe answer</span>
+                        <strong>The storm. Familiar, harmless and already said to everyone else tonight.</strong>
+                    </article>
+                    <article>
+                        <span>The character judgment</span>
+                        <strong>Her brother's letter. The one truth this player earned the right to receive.</strong>
+                    </article>
                 </div>
-
-                <div class="moat-item">
-                    <h4>World authority stays with the studio</h4>
-                    <p>Character expression is structurally separated from game-state mutation. Copyable, and it makes leaving expensive once a title ships on it.</p>
-                </div>
-                <div class="moat-item">
-                    <h4>A game-agnostic protocol</h4>
-                    <p>Games supply state schemas, action types, and validation rules. We import none of their mechanics — the same boundary serves an RPG, a life-sim, and a roguelike. Copyable, and once your schemas are written to it, leaving means writing them again.</p>
-                </div>
-                <div class="moat-item">
-                    <h4>Ghost is a second product, not a second moat</h4>
-                    <p>Automated playtesting is a real category — modl.ai is the serious name in it — but what it tests is systems. Conversation is where its coverage runs out. Ghost's testers are the same characters your players will meet, so it surfaces dead conversation loops and unreachable quest states rather than collision bugs.</p>
-                </div>
-
+                <figure class="maeve-scene maeve-choice-scene">
+                    <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
+                    <figcaption>Servitor™ weighs who she is, what this player made matter and what the moment now demands.</figcaption>
+                </figure>
             </div>
         `
     },
     {
         id: 5,
-        title: 'Market',
+        title: 'Memory is evidence. Judgment is intelligence.',
         content: `
-            <p class="moat-intro">We are not going to print a market size we cannot source on a site that refuses to print its own unbacked numbers. The forecasts for AI NPCs are analyst guesses about a category that did not exist in 2022. Here is the argument that does not need them.</p>
-            <h4>Why now</h4>
-            <p class="moat-intro">Tokenised AI agents became a real category in 2025 and a loud one in 2026. A market cap for it would tell you nothing: a thin-float valuation is exactly the kind of number this page refuses everywhere else, and a count of launched tokens measures supply, not appetite. Here is the part that is signal, and you can check it against your own portfolio: for all the teams building agents that own themselves, we have not found one shipped inside a published title. Name us one. The reason is structural — a character who can act outside your canon breaks the world she is standing in. We are the bounded version — the one a studio can actually put in a game — and the ownership layer sits on top of that, not instead of it.</p>
-            <ul class="feature-list">
-                <li><strong>Small models got good enough.</strong> A compact model built for one job holds character at a serving cost that survives a shipped title, which a frontier API at gameplay cadence does not. We run it under a deadline and fail closed when it misses — the latency distribution publishes the same way everything else here does, from a passing release comparison we do not have yet.</li>
-                <li><strong>The cost of the alternative is visible.</strong> A frontier API priced per token bills you every time a player talks. A self-hosted model bills you a GPU whether anyone is playing or not. Hosting it ourselves means we carry that utilisation risk instead of the studio — that is the trade, not an oversight, and plans here are tiered by request volume rather than by tokens spoken or GPUs idling.</li>
-                <li><strong>Players notice.</strong> We cannot source a growth curve for a category this young, so here is the part we can stand behind: a world that resets every conversation is the last place in a modern game where a player can still catch it lying.</li>
-                <li><strong>They already pay to own characters.</strong> Pokémon's TCG Pocket took <a href="https://vtmvending.com/pages/pokemon-trading-card-market-usa" target="_blank" rel="noopener noreferrer">around $1.25&nbsp;billion in first-year player spending</a> on cards identical in every collection holding them. That figure is the app-analytics firms', not ours — it is the only third-party number on this deck, and you can check it in an afternoon. It sizes the wanting, not our share of it — and it cuts both ways, because a card market clears on interchangeable objects and known print runs, which a Soul is the opposite of on both counts. The scarcity that would let such a market clear is ours to design into the mint rules, and it is unbuilt. We put this here rather than in front of developers, because it is an argument about a market and they are buying a character layer.</li>
-            </ul>
+            <ol class="cognition-chain cognition-chain-six" aria-label="Character Intelligence">
+                <li><strong>Identity</strong><p>Who am I?</p></li>
+                <li><strong>Memory</strong><p>What happened?</p></li>
+                <li><strong>Motive</strong><p>What matters?</p></li>
+                <li><strong>Reasoning</strong><p>What follows?</p></li>
+                <li><strong>Judgment</strong><p>Where do I stand?</p></li>
+                <li><strong>Action</strong><p>What may I propose?</p></li>
+            </ol>
+            <div class="cognition-reveal">
+                <p><strong>Dialogue is what the player hears.</strong></p>
+                <p>Judgment is what makes the character alive.</p>
+            </div>
         `
     },
     {
         id: 6,
-        title: 'Business model',
+        title: 'One model. A cast of distinct minds.',
         content: `
-            <p class="moat-intro">Every layer below is rent on one asset. The subscription is not for the SDK: the SDK is the door, the model is the room, and there is no second door into it. A studio can leave for a competitor. It cannot keep the integration and stop paying.</p>
-            <div class="business-grid">
-                <div class="business-item">
-                    <span class="business-phase">Layer 1</span>
-                    <h4>SDK and API access</h4>
-                    <p>The SDK is inert without the API, so access is the product. Tiered plans by request volume, billed through Stripe and the engine marketplaces.</p>
-                    <span class="revenue-type">Recurring, per studio</span>
-                </div>
-                <div class="business-item">
-                    <span class="business-phase">Layer 2</span>
-                    <h4>Usage and operations</h4>
-                    <p>Every turn the API answers is a turn it counts, on our side of the boundary — nothing in a studio's build reports usage back to us, so the meter is ours to run and theirs to audit against their own call volume. Ghost and its dashboards are a separate per-title subscription.</p>
-                    <span class="revenue-type">Consumption, per title</span>
-                </div>
-                <div class="business-item">
-                    <span class="business-phase">Layer 3</span>
-                    <h4>Soul economy</h4>
-                    <p>A platform fee on Soul trading, settled in $FAI. Template licensing, if it ever reaches a studio's invoice, is priced in ordinary money like everything in Layers 1 and 2 — a studio is never asked to hold a token to buy something from us. Scales as titles ship with the SDK rather than as a launch bet.</p>
-                    <span class="revenue-type">Platform fee, per transaction</span>
-                </div>
+            <div class="creative-value-grid cast-minds">
+                <article><span>Identity</span><h3>Someone—not anyone</h3><p>Name, history, values and commitments establish who is choosing.</p></article>
+                <article><span>Relationship</span><h3>This player matters differently</h3><p>Shared history changes the weight of the same world evidence.</p></article>
+                <article><span>Motive</span><h3>Conflict takes sides</h3><p>Loyalties and duties remain active when there is no clean answer.</p></article>
+                <article><span>Decision</span><h3>Authorship stays alive</h3><p>Servitor™ carries the person into the unforeseen instead of replacing her.</p></article>
             </div>
+            <p class="impact-statement">The model does not add one house personality to every world. It gives each authored person room to remain herself.</p>
         `
     },
     {
         id: 7,
-        title: 'Go to market',
+        title: 'Intelligence enters the world through The ForbocAI NPC Protocol.',
         content: `
-            <ol class="gtm-steps">
-                <li>
-                    <div class="gtm-content">
-                        <strong>Prove it in a build</strong>
-                        <p>Playable demos across an Unreal project, a browser title, and a text world — showing memory, validated action, and continuity in something a developer can run.</p>
-                    </div>
+            <ol class="command-boundary" aria-label="Authority boundary">
+                <li class="boundary-stage is-studio">
+                    <span>Studio owned</span>
+                    <h2>Your world supplies</h2>
+                    <p>Identity, world state, local memory and the actions this scene permits.</p>
                 </li>
-                <li>
-                    <div class="gtm-content">
-                        <strong>Land developers directly</strong>
-                        <p>Docs and starter kits today, so a small team can get a character answering from the CLI before committing engine work. The account portal — keys, usage and billing in one place — is queued behind Ghost and deliberately undated. Until it lands we cut keys by hand, same day, which is not a bottleneck at the number of studios we can support this year.</p>
-                    </div>
+                <li class="boundary-stage is-model">
+                    <span>Character Intelligence</span>
+                    <h2>Servitor™ judges</h2>
+                    <p>Dialogue, rationale and structured intent arrive from one character decision.</p>
                 </li>
-                <li>
-                    <div class="gtm-content">
-                        <strong>Distribute through the engines</strong>
-                        <p>Fab for Unreal first, where studios already look for middleware and already have a payment relationship. Unity is the bigger install base and it is the second thing this round pays for — not the thing we pretend is already done.</p>
-                    </div>
+                <li class="boundary-stage is-contract">
+                    <span>Protocol law</span>
+                    <h2>Separate rules hold</h2>
+                    <p>The reply meets its contract. The action meets studio-authored policy.</p>
                 </li>
-                <li>
-                    <div class="gtm-content">
-                        <strong>Open the Soul marketplace</strong>
-                        <p>Once multiple titles ship with the SDK, Souls and $FAI turn an installed base into transaction flow.</p>
-                    </div>
+                <li class="boundary-stage is-studio">
+                    <span>Game truth</span>
+                    <h2>Your world decides</h2>
+                    <p>Accept or reject. Only game code can change state or write local memory.</p>
                 </li>
             </ol>
+            <p class="boundary-mantra">Servitor™ is the intelligence. The Protocol is the law. The game alone makes the choice real.</p>
         `
     },
     {
         id: 8,
-        title: 'Landscape',
+        title: 'The character chooses. The game remains sovereign.',
         content: `
-            <div class="competition-table">
-                <div class="comp-header">
-                    <span>Approach</span>
-                    <span>Rules enforced</span>
-                    <span>Memory you own</span>
-                    <span>Portable</span>
-                    <span>Engine-native</span>
-                </div>
-                <div class="comp-row">
-                    <span class="comp-name">Frontier chat APIs</span>
-                    <span class="comp-no">no</span>
-                    <span class="comp-no">no</span>
-                    <span class="comp-no">no</span>
-                    <span class="comp-no">no</span>
-                </div>
-                <div class="comp-row">
-                    <span class="comp-name">NPC dialogue platforms</span>
-                    <span class="comp-partial">partial</span>
-                    <span class="comp-no">no</span>
-                    <span class="comp-no">no</span>
-                    <span class="comp-partial">partial</span>
-                </div>
-                <div class="comp-row">
-                    <span class="comp-name">In-house prototypes</span>
-                    <span class="comp-partial">partial</span>
-                    <span class="comp-yes">yes</span>
-                    <span class="comp-no">no</span>
-                    <span class="comp-yes">yes</span>
-                </div>
-                <div class="comp-row highlight-row">
-                    <span class="comp-name"><strong>ForbocAI</strong></span>
-                    <span class="comp-yes">yes</span>
-                    <span class="comp-yes">yes</span>
-                    <span class="comp-yes">yes</span>
-                    <span class="comp-yes">yes</span>
-                </div>
-            </div>
-            <div class="comp-note"><p>The comparison set is Inworld, Convai, NPCx and Charisma.ai — real companies with real integrations, and on conversation quality we are not claiming to have beaten them. That is their axis and they are good at it; we treat it as a floor a candidate clears before the three properties are scored at all, not a scoreboard we are climbing. What we score is decision quality under constraint: how much of a persona survives a long exchange, how often a gap comes back as an honest unknown rather than an invention, and how far apart two profiles stay when handed the same scene. Ours is decision quality under constraint: whether what a character proposes is still legal, still in character and still recognisably hers forty turns later, with a player working on her the whole time.</p>
-
-            <p>What we can say about ours is checkable end to end: we put a validation boundary between a character's intent and the game's state, we trained Servitor, we qualify it against our own bench, and we serve it. No third party sits in the path where a price change or a policy change can reach your players. Those are the facts that decide whether a studio can ship on it and whether the thing compounds.</p>
-
-            <p>The fair question is why a company with integrations we do not have could not build the same bench faster. They could. A shipped integration is a relationship, canon is granted through relationships, and that is a head start we do not have and will not pretend away. What it does not buy them is durability. What makes a bench worth anything is a real studio's canon — the rules that world enforces and the places its writers know it strains — and that is granted, never commissioned. Where we differ is what a result binds: we train and serve the thing being measured, so a bar we clear is a floor we keep. Qualify a model you rent and the bar moves whenever somebody else's release notes say it does. Being second into a bench is survivable. Renting the thing the bench measures is not.</p></div>
+            <ol class="arrival-contract" aria-label="Maeve's choice enters canon">
+                <li><span>Judgment</span><strong>Maeve trusts this player.</strong><p>Identity, memory and motive make her brother's letter the character choice.</p></li>
+                <li><span>Proposal</span><strong>Servitor™ offers the letter.</strong><p>Dialogue, rationale and <code>offer_item</code> arrive together for inspection.</p></li>
+                <li><span>Canon</span><strong>Your game accepts—or refuses.</strong><p>If accepted, the letter changes hands and that consequence can become evidence next time.</p></li>
+            </ol>
+            <p class="arrival-answer"><strong>She can choose her next move.</strong> Only the game can make it history.</p>
         `
     },
     {
         id: 9,
-        title: 'Team',
+        title: 'The living cast is the new creative medium.',
         content: `
-            <div class="team-grid">
-                <div class="team-member">
-                    <h4>Sean Dinwiddie</h4>
-                    <p><strong>President, lead developer</strong><br/>Today he builds the API, Servitor itself and the TypeScript SDK. That is one person holding the whole chain, and closing that gap is the first line item in this raise — which is also why every SDK is a thin client over an HTTP API you could drive with curl, small enough to be worth writing and small enough to repoint. What happens to that API if we are not here is a continuity commitment we cannot make credibly at three people, and we are not going to pretend otherwise.</p>
-                    <p>One person built the model, which is the fairest shot anyone can take at the moat slide: if a gate takes one engineer a few months, it is not a gate. The answer is the qualification history — how many candidates never took the seat, and what each successor had to clear before it did. We will put that sequence in front of you on the first call and let you decide whether it is a gate or a sprint.</p>
-                </div>
-                <div class="team-member">
-                    <h4>Tiernan Omalley</h4>
-                    <p><strong>Business development</strong><br/>Studio partnerships, publisher conversations, and developer community.</p>
-                </div>
-                <div class="team-member">
-                    <h4>Antara Bhavsar</h4>
-                    <p><strong>Software developer</strong><br/>Engine integration, with a focus on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
-                </div>
+            <div class="world-expansion" aria-label="Expansion through a game world">
+                <article><span>01</span><strong>One character</strong><p>Enter through one impossible scene.</p></article>
+                <article><span>02</span><strong>A living cast</strong><p>Distinct motives meet the unforeseen.</p></article>
+                <article><span>03</span><strong>Systems answer back</strong><p>Factions and quests react through judgment.</p></article>
+                <article><span>04</span><strong>An inhabited world</strong><p>Possibility expands. Authorship holds.</p></article>
             </div>
-            <p class="team-note">Delaware C corporation, incorporated February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
+            <figure class="maeve-scene living-world-scene">
+                <img src="living-cast-scene.webp" alt="Maeve and a distinct living cast move through Lanternbough after the storm." width="1672" height="941">
+                <figcaption>One unforgettable character opens a world that answers back.</figcaption>
+            </figure>
         `
     },
     {
         id: 10,
-        title: 'Traction',
+        title: 'Characters are compounding creative assets.',
         content: `
-            <ul class="traction-list">
-                <li><strong>The API is live.</strong> Servitor is deployed and serving behaviour on our own infrastructure against a pinned, qualified release.</li>
-                <li><strong>Persistent memory works.</strong> Semantic recall and time-aware memory are shipped, writing to a store the studio owns.</li>
-                <li><strong>Sixteen profiles ship today.</strong> Four letters in a persona file select one, and two profiles handed the same scene propose two different actions. This is the asset the moat slide calls the compounding one, and it is deployed.</li>
-                <li><strong>Two SDKs ship the full contract.</strong> TypeScript for Node and the browser, and a native Unreal Engine 5 plugin.</li>
-                <li><strong>Playable demos.</strong> Three builds we own — an Unreal project, a browser title, and a text world — each running against the live API. No third-party title has shipped on it yet; the first pilots are what this round is for.</li>
-                <li><strong>No pilot is signed, and we would rather count it than imply it.</strong> What we can put in front of you is the pipeline as it stands and what each conversation is waiting on. That is a data-room page rather than a slide, and it is the first one we would open.</li>
-                <li><strong>Docs are public</strong> at docs.forboc.ai, covering both SDKs.</li>
-                <li><strong>$FAI is live.</strong> Its stated product uses are Soul minting, Soul upgrades and marketplace operations. It gets one line here on purpose: subscriptions and usage are the business today.</li>
-                <li><strong>End-to-end verification.</strong> A micro-game harness drives the whole path — CLI to SDK to API to Servitor and back — so coverage and model quality are proved separately and neither borrows the other's green mark.</li>
-            </ul>
-            <h4>Next</h4>
-            <ul class="milestone-list">
-                <li>Q4 2026 — Ghost coverage reporting. It is the only thing we are dating.</li>
-                <li>Queued behind it, in this order and deliberately undated — the account portal, Soul minting end to end, SDK 1.0, engine marketplace listings, then marketplace operations and further engine bindings</li>
-                <li>Cross-title Soul portability — as fast as the rights conversation allows. The protocol is ours to date; somebody else's signature is not.</li>
-            </ul>
+            <div class="creative-value-grid">
+                <article><span>Attachment</span><h3>History earns meaning</h3><p>The character remembers what the player made matter.</p></article>
+                <article><span>Strategy</span><h3>Identity changes decisions</h3><p>Who the character is becomes part of how the world plays.</p></article>
+                <article><span>Collection</span><h3>Every person can be singular</h3><p>A cast becomes a portfolio of identities, not interchangeable content.</p></article>
+                <article><span>Return</span><h3>Continuity deepens belonging</h3><p>Players return to relationships that remember becoming real.</p></article>
+            </div>
+            <p class="moat-intro">Cards proved that people return to identities they care about. The deeper prize is not only who a character is, but who she becomes with you.</p>
         `
     },
     {
         id: 11,
-        title: 'Roadmap',
+        title: 'One character is the wedge. The living cast is the economy.',
         content: `
-            <ol class="roadmap-steps">
-                <li><strong>Shipped —</strong> hosted cognition, persistent memory, validated actions, sixteen personality profiles, TypeScript and Unreal SDKs, public docs, $FAI live</li>
-                <li><strong>Q4 2026 —</strong> Ghost coverage reporting. The only date on this deck, and it stays the only one.</li>
-                <li><strong>Then —</strong> the account portal, with billing and key management in one place</li>
-                <li><strong>Then —</strong> Soul minting end to end: gather, encrypt, upload, verify, restore</li>
-                <li><strong>Then —</strong> SDK 1.0 and the engine marketplace listings, including the Fab listing for Unreal</li>
-                <li><strong>Then —</strong> marketplace operations for Soul trading and NPC template licensing</li>
-                <li><strong>When the rights conversation allows —</strong> cross-title Soul portability and wider studio rollout. Undated, because it needs a signature that is not ours.</li>
-            </ol>
+            <div class="business-grid model-economy">
+                <div class="business-item"><span class="business-phase">Enter</span><h4>One impossible choice</h4><p>A single scene reveals the new unit: a judgment no branch contained.</p></div>
+                <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
+                <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
+            </div>
+            <p class="impact-statement">The model compounds across characters. The Protocol compounds across studios. The category compounds across worlds.</p>
         `
     },
     {
         id: 12,
-        title: 'The ask',
+        title: 'The age of the living cast has already begun.',
         content: `
-            <p class="ask-intro">We are raising a seed round to qualify the SDK, API and billing path, deliver the first studio integrations, and take Ghost to production readiness — with Soul minting queued behind it, where the roadmap has had it all along.</p>
-            <div class="use-of-funds">
-                <h4>Use of funds</h4>
-                <ul class="funds-list">
-                    <li><strong>40%</strong> — Engineering: co-founder hires and contractors</li>
-                    <li><strong>30%</strong> — Studio partner development, pilot support, market validation</li>
-                    <li><strong>20%</strong> — Infrastructure: compute, support, operations</li>
-                    <li><strong>10%</strong> — Legal and compliance</li>
-                </ul>
+            <div class="threshold-call">
+                <p class="proof-label">The category window is open</p>
+                <p class="threshold-lead">Outside, it still looks early. Inside, Character Intelligence already has its model, its laws and its commercial standard.</p>
+                <p class="threshold-line">NPC language models are already obvious from inside the game. The right to define them is being claimed now.</p>
             </div>
-            <p class="ask-note">The amount is not on this slide. A seed number printed on a public page prices the round before the conversation that should set it, and this deck does not print figures it would have to defend later. The amount and the terms are in the data room. So is the relationship between $FAI and the equity cap table, which we expect to be your first question and would sooner answer with the documents open in front of you than in one sentence on a public page — a live, trading token beside an equity raise is a structural question, and it deserves the structure rather than a reassurance. Ask, and you will have all of it the same day you would have an API key.</p>
+            <p class="ask-note">ForbocAI is choosing the studios and investors defining the age of the living cast from inside it.</p>
             <div class="contact-box">
-                <a href="mailto:hello@forboc.ai" class="btn btn-primary">hello@forboc.ai</a>
-                <a href="#whitepaper" class="btn btn-secondary">Read the whitepaper</a>
+                <a href="mailto:hello@forboc.ai?subject=Enter%20the%20age%20of%20the%20living%20cast" class="btn btn-primary">Enter the age of the living cast</a>
             </div>
         `
     }
@@ -294,7 +218,7 @@ export const PitchDeck = (state) => {
     const totalSlides = slides.length;
 
     const safeSlideIndex = Math.max(1, Math.min(currentSlide, totalSlides));
-    const slide = slides.find(s => s.id === safeSlideIndex);
+    const slide = slides.find((candidate) => candidate.id === safeSlideIndex);
 
     const prevLink = safeSlideIndex > 1 ? `#pitch/${safeSlideIndex - 1}` : '#';
     const nextLink = safeSlideIndex < totalSlides ? `#pitch/${safeSlideIndex + 1}` : '#';
@@ -302,10 +226,9 @@ export const PitchDeck = (state) => {
     return `
     <section class="deck">
         <div class="container">
-            <div class="deck-frame">
-
+            <div class="deck-frame deck-frame-${safeSlideIndex}">
                 <div class="deck-header">
-                    <span class="deck-brand">ForbocAI, Inc. — seed deck</span>
+                    <span class="deck-brand">ForbocAI — Character Intelligence</span>
                     <span class="deck-count">
                         <span class="indicator-current">${safeSlideIndex}</span>
                         <span class="indicator-separator">/</span>
@@ -313,7 +236,7 @@ export const PitchDeck = (state) => {
                     </span>
                 </div>
 
-                <div class="slide">
+                <div class="slide slide-${safeSlideIndex}">
                     <h1 class="slide-title">${slide?.title || 'Slide not found'}</h1>
                     <div class="slide-body">
                         ${slide?.content || '<p>This slide could not be loaded.</p>'}
@@ -323,18 +246,17 @@ export const PitchDeck = (state) => {
                 <div class="deck-controls">
                     <a href="${prevLink}" class="btn-control ${safeSlideIndex <= 1 ? 'disabled' : ''}" ${safeSlideIndex <= 1 ? 'aria-disabled="true" tabindex="-1"' : ''}>Back</a>
                     <div class="slide-dots">
-                        ${slides.map(s => `
+                        ${slides.map((candidate) => `
                             <a
-                                href="#pitch/${s.id}"
-                                class="slide-dot ${s.id === safeSlideIndex ? 'active' : ''}"
-                                aria-label="Go to slide ${s.id} of ${totalSlides}"
-                                ${s.id === safeSlideIndex ? 'aria-current="true"' : ''}
+                                href="#pitch/${candidate.id}"
+                                class="slide-dot ${candidate.id === safeSlideIndex ? 'active' : ''}"
+                                aria-label="Go to slide ${candidate.id} of ${totalSlides}"
+                                ${candidate.id === safeSlideIndex ? 'aria-current="true"' : ''}
                             ></a>
                         `).join('')}
                     </div>
                     <a href="${nextLink}" class="btn-control ${safeSlideIndex >= totalSlides ? 'disabled' : ''}" ${safeSlideIndex >= totalSlides ? 'aria-disabled="true" tabindex="-1"' : ''}>Next</a>
                 </div>
-
             </div>
         </div>
     </section>

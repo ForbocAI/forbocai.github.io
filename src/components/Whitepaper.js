@@ -16,40 +16,40 @@ export const Whitepaper = () => {
             <div class="doc-body">
                 <section id="wp-summary">
                     <h2>1. Summary</h2>
-                    <p>Games look extraordinary now. Their characters mostly do not keep up. Behaviour still falls into one of two traps: authored branches that repeat until a player can recite them, or generative systems that improvise straight through the rules of the world.</p>
-                    <p><strong>ForbocAI, Inc.</strong> builds the layer in between. A character layer with persistent memory, a validation step that stands between a character's intent and your game state, Ghost characters that will play your build before your players do, and Souls — a way for a character to leave one world with her continuity intact. This brief explains the approach at the level a studio needs to evaluate it.</p>
+                    <p>Games taught worlds to look alive. Open-ended intelligence is already inside them. The strategic question is no longer whether it arrives, but whether it lives there as an ungoverned voice or as people who can meet the unforeseen and still belong.</p>
+                    <p><strong>ForbocAI, Inc. creates Character Intelligence—the intelligence of people who belong to a world.</strong> The ForbocAI NPC LM Servitor™ interprets identity, memory, motive, relationships and world evidence to make the character judgment. The ForbocAI NPC Protocol gives Servitor™ a lawful place inside the game while the world keeps authority over every consequence. Memory is evidence. Judgment is intelligence. The living cast begins inside that boundary.</p>
                 </section>
 
                 <section id="wp-problem">
                     <h2>2. The problem</h2>
 
                     <h3>2.1 The scripted ceiling</h3>
-                    <p>Behaviour trees and finite state machines are predictable, debuggable, and finite. A player exhausts them. Nothing an NPC learns in hour three changes what she says in hour forty, because there is nowhere for her to put it.</p>
+                    <p>Behaviour trees and finite state machines are predictable and debuggable, but authored coverage is finite. Once a player reaches beyond it, the character has no new decision to make. Memory alone does not solve that: remembering hour three matters only if the evidence can change what the character chooses in hour forty.</p>
 
                     <h3>2.2 Freeform drift</h3>
                     <p>Dropping a general model into a playable system trades one failure for three:</p>
                     <ul>
                         <li><strong>Latency.</strong> A round trip that reads fine in a chat window is a broken beat in live play.</li>
-                        <li><strong>Cost.</strong> Per-token billing at gameplay cadence does not survive contact with a shipped title's player count.</li>
-                        <li><strong>Incoherence.</strong> A model that has not been told about your inventory will cheerfully give away an item the player never had.</li>
+                        <li><strong>Cost.</strong> A model demo says nothing about unit economics at a shipped title's concurrency.</li>
+                        <li><strong>Incoherence.</strong> A model that lacks inventory evidence can propose an item the player never had.</li>
                     </ul>
-                    <p>None of the three is a model-quality problem. All three are architecture problems, and §3 takes each in turn.</p>
+                    <p>These are production questions, not prompts to polish. The protocol makes the decision boundary inspectable while the commercial and performance proofs are qualified in the open.</p>
                 </section>
 
                 <section id="wp-layer">
-                    <h2>3. The ForbocAI layer</h2>
-                    <p>We separate what a character expresses from what the game permits, then reconnect the two through an explicit validation step. Your game keeps world authority. We keep the character coherent.</p>
+                    <h2>3. Character Intelligence</h2>
+                    <p>Servitor™ is the intelligence. The Protocol is the law that admits its judgment into an authored world. We separate what the character expresses from what the game permits, then reconnect the two through separate reply and action checks. Your game remains truth.</p>
 
                     <h3>3.1 Where the thinking happens</h3>
-                    <p>ForbocAI's proprietary NPC model Servitor runs on our own infrastructure. Studios do not package a runtime, qualify a GPU path, or ship a title that thinks well on one player's machine and badly on another's. Your build makes a call, and the same machine does the thinking whichever hardware the player is sitting at — that hardware never decides how well she thinks.</p>
-                    <p>The split is deliberate: the SDK in your game is the body, the API is the mind. The body never guesses at behaviour, and the mind never touches your world directly.</p>
-                    <p>Latency is the trap we inherit rather than escape, because hosted cognition is a round trip. What we change is the failure. Cognition runs under a deadline you configure, and a turn that misses it comes back as a typed invalid result authorizing no action and no memory write — your build falls through to the lines you already wrote. The distribution publishes the way everything else here does: from a release comparison that passed, which we do not have yet. A missed beat you can plan around is a design problem. A late answer that still arrives is a bug you cannot reproduce.</p>
-                    <p>Cost follows from the same split. A compact model built for one job serves at a price a shipped title can carry, and plans count answered turns rather than tokens spoken — a character who only talks costs what one who asks for the world to change costs, and a turn we could not answer costs nothing at all. Counting happens where the request arrives, on our side of the boundary, so no usage reporting runs inside your build. The figures come on the call.</p>
+                    <p>Studios invoke Servitor™ through the ForbocAI NPC Protocol; the model reasons in ForbocAI infrastructure rather than being packaged as a client runtime. The trade is equally plain: active cognition requires a network connection.</p>
+                    <p>The hierarchy is deliberate: Servitor™ makes the judgment; the Protocol defines its authority boundary; the API carries the exchange; the SDK makes that exchange native to game code; the game applies only the effects its contracts admit.</p>
+                    <p>Latency is a trap networked cognition inherits rather than escapes. Servitor™ runs under a hard server-side deadline. If it cannot finish and produce a reply that meets the required rules in time, Finalize produces a typed invalid result authorizing no action, memory write or state change. That hard deadline and typed boundary are testable now. Regional p50 and p95 become public only after they are measured end to end through the integration.</p>
+                    <p>Paid access to Servitor™ is in commercial qualification in standard currency, not tokens. Its release contract must bind the billable event, quotas, overage behavior, public price, production capacity and unit economics before those claims go live.</p>
 
                     <h3>3.2 Actions are proposed, not performed</h3>
-                    <p>A character never mutates the game. She proposes structured intent, and that intent is measured against world state, content rules, and your own constraints before anything moves on screen.</p>
+                    <p>Servitor™ proposes structured intent; the Protocol defines how it is checked against studio-supplied contracts; the SDK carries those checks into game code; the game alone decides what moves on screen.</p>
                     <p class="doc-aside">A character can improvise the performance. She cannot improvise the world.</p>
-                    <p>When a response cannot be validated, it comes back as an explicit failure your game can handle — the fallback line, the shrug, whatever you authored for the moment. It is never silently replaced with invented dialogue or an action you never authored, because a quiet substitution is the one failure a studio cannot debug.</p>
+                    <p>The reply and any proposed action are checked separately. Transport failures reject the request. A server deadline miss or a reply that fails its required rules makes Finalize return a typed invalid result. Proposed actions that fail the studio's rules are not applied. None can authorize a memory write or state change, and the game owns the fallback. These checks alone do not guarantee factual accuracy, moderation or console certification.</p>
 
                     <h4>Entities, state, and world rules</h4>
                     <p>ECS, object graph, or a bespoke simulation — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world, and the validation step is where that grounding is enforced.</p>
@@ -63,43 +63,39 @@ export const Whitepaper = () => {
                     </ul>
 
                     <h3>3.3 Memory stays with your studio</h3>
-                    <p>ForbocAI issues the instruction to remember. Your build performs the write, against a vector store your studio owns and can read without us. That keeps player data under your control and your continuity readable in your own tooling.</p>
+                    <p>ForbocAI returns a memory-write instruction. Your build applies it to a local store your studio controls and can read without us. Neither game-owned world state nor that studio-controlled memory becomes ForbocAI training data. The separate, opt-in Soul path described below would send locally encrypted character ciphertext to a configured storage provider; it is not part of a title that never invokes it.</p>
 
                     <h3>3.4 Ghost</h3>
-                    <p>Procedural and adaptive systems outrun manual QA immediately. Ghost characters will play the build headless and repeatedly, walking encounters, social loops and content paths until dead ends and unreachable states surface as coverage a producer can read — coverage reporting lands Q4 2026, and the harness that drives it is what qualifies Servitor releases today. QA is the line item every producer has already tried to cut twice; this is the part of it a machine should be doing.</p>
+                    <p>Procedural and adaptive systems can outrun manually authored test paths. The internal harness already drives test worlds during Servitor™ qualification. Ghost development is turning those runs into producer-facing reports on dead ends, unreachable states and social-loop coverage. Production-value qualification controls release.</p>
+
+                    <h3>3.5 The production ledger</h3>
+                    <p><strong>Working now in ForbocAI evaluation environments:</strong> Servitor™ through the ForbocAI NPC Protocol; TypeScript and native Unreal Engine 5 interfaces; memory writes to studio-controlled local storage; structured action proposals; reply checks; action checks; internal test worlds; and an exact model and runtime build recorded internally.</p>
+                    <p><strong>Production authority requires explicit gates:</strong> external-studio evidence, a current passing public named-alternative comparison, regional end-to-end latency, production concurrency and unit economics, authored outage behavior, moderation or console certification, customer-selected release pinning, a contractual support window, source continuity, producer-facing Ghost reports and end-to-end Souls. None is claimed until its gate clears.</p>
                 </section>
 
                 <section id="wp-souls">
-                    <h2>4. Souls and $FAI</h2>
-                    <p>A character who has been somewhere should be able to leave with what she learned. A Soul is that character gathered up — identity, memory, relationships, temperament — in a form that survives leaving your game.</p>
-
-                    <h3>4.1 What a Soul carries</h3>
+                    <h2>4. The Soul economy</h2>
+                    <p class="doc-aside"><strong>$FAI is live. Soul continuity is opt-in and in active development; neither is required for paid access to Servitor™.</strong></p>
+                    <p>A card preserves who a character is. The Soul layer is designed to carry the history a player and character made together. Development is assembling the opt-in record — identity, memory, relationships and temperament — while every receiving title decides what enters. Accumulated specificity, not artificial scarcity, is the value being built.</p>
                     <ul>
-                        <li><strong>One identity.</strong> Memory, gear, and temperament move together, or not at all.</li>
-                        <li><strong>Verified restoration.</strong> Gather, encrypt, upload, verify, restore — and the restore happens only under a name that checks out.</li>
-                        <li><strong>Continuity past the save file.</strong> A character no longer has to end where one title's story ends.</li>
+                        <li><strong>Player value.</strong> A character can retain earned specificity instead of resetting to a template at every title boundary.</li>
+                        <li><strong>Studio authority.</strong> Gather, encrypt, upload, verify, restore — every participating title still chooses what its technical, moderation and rights rules admit.</li>
+                        <li><strong>Current development.</strong> Character records, cross-title restoration, minting and upgrades form the active track; marketplace operations follow participating titles rather than lead them.</li>
                     </ul>
 
-                    <h3>4.2 What $FAI is for</h3>
-                    <p><strong>$FAI</strong> is the live utility layer in the Soul economy. Its public role is narrow and specific:</p>
-                    <ul>
-                        <li><strong>Minting.</strong> Bringing a character into the economy as a Soul.</li>
-                        <li><strong>Upgrades.</strong> Extending a Soul's continuity as the character grows.</li>
-                        <li><strong>Marketplace operations.</strong> Settling Soul trading and template licensing as the ecosystem opens.</li>
-                    </ul>
-                    <p>The verification chain is not optional and does not bend for the market: a listing never stands in for a valid receipt, an API signature, and a locally restored payload.</p>
-
-                    <h3>4.3 Where it stands</h3>
-                    <p>$FAI is live and trading. Soul minting and the marketplace are in active development. Those are two different tenses, and this paper keeps them apart.</p>
+                    <h3>4.1 Why durable identity matters</h3>
+                    <p><strong>A card preserves who a character is. A Soul carries who she became with you.</strong> Trading cards demonstrate a durable appetite for identity, strategy, collecting and a cast that grows across releases. <a href="https://investor.hasbro.com/node/35596" target="_blank" rel="noopener noreferrer">Hasbro reports $1.72&nbsp;billion of 2025 Magic revenue across tabletop and digital and 17% CAGR since 2009.</a> That is evidence of the habit, not a forecast of Soul revenue.</p>
+                    <p><a href="https://www.npc.com/" target="_blank" rel="noopener noreferrer">Non-Playable Coin packages collectible identity as a memecoin–NFT hybrid</a>, while <a href="https://whitepaper.virtuals.io/about-virtuals/about-virtuals-protocol.md" target="_blank" rel="noopener noreferrer">Virtuals frames agents as autonomous economic actors</a>. <a href="https://assets.coingecko.com/reports/2024/CoinGecko-2024-Annual-Crypto-Industry-Report.pdf" target="_blank" rel="noopener noreferrer">CoinGecko measured AI-agent tokens at $15.5&nbsp;billion in aggregate market capitalization at the end of 2024.</a> That is category heat and attention, not studio demand, product evidence or TAM.</p>
+                    <p>Together these signals reveal active appetite for identity, agents, collecting and digital ownership. ForbocAI directs that appetite toward continuity for the player, authority for every receiving studio, and no game-state action unless that world's validation rules accept it. Paid access to Servitor™ remains the core business. This paper asserts no equity, revenue, governance or asset right for $FAI; legal and cap-table claims require governing documents and counsel-approved disclosure.</p>
                 </section>
 
                 <section id="wp-roadmap">
-                    <h2>5. Roadmap</h2>
+                    <h2>5. The arrival sequence</h2>
                     <ul>
-                        <li><strong>Shipped.</strong> Persistent memory with semantic and time-aware recall, validated actions, Servitor on ForbocAI infrastructure, TypeScript and Unreal Engine 5 SDKs, public docs, and $FAI live.</li>
-                        <li><strong>Q4 2026.</strong> Ghost coverage reporting. It is the only item in this paper carrying a date, deliberately.</li>
-                        <li><strong>Queued behind it, in order and undated.</strong> The account portal, Soul minting end to end, SDK 1.0, engine marketplace listings, then marketplace operations and further engine bindings held to the same contract as the shipped ones.</li>
-                        <li><strong>As the rights conversation allows.</strong> Cross-title Soul portability. The protocol is ours to schedule; the licensing is not. Undated, because it needs a signature that is not ours.</li>
+                        <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, composable decision settings exercised in internal tests, TypeScript and Unreal Engine 5 interfaces, public docs, and $FAI live as a token. Soul continuity is a separate development track.</li>
+                        <li><strong>In development.</strong> Producer-facing Ghost coverage reporting.</li>
+                        <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. Opt-in Soul continuity advances separately behind core distribution. Release planning binds owners, gates, order and dates before a track enters qualification.</li>
+                        <li><strong>Governed continuity.</strong> Opted-in history crosses between participating titles only when their technical, moderation and rights gates admit it. No portability right is assumed.</li>
                     </ul>
                 </section>
             </div>
@@ -109,16 +105,16 @@ export const Whitepaper = () => {
                 <ol>
                     <li><a href="#wp-summary">Summary</a></li>
                     <li><a href="#wp-problem">The problem</a></li>
-                    <li><a href="#wp-layer">The ForbocAI layer</a></li>
-                    <li><a href="#wp-souls">Souls and $FAI</a></li>
-                    <li><a href="#wp-roadmap">Roadmap</a></li>
+                    <li><a href="#wp-layer">Character Intelligence</a></li>
+                    <li><a href="#wp-souls">Optional continuity</a></li>
+                    <li><a href="#wp-roadmap">The arrival sequence</a></li>
                 </ol>
             </nav>
             </div>
 
             <footer class="doc-foot">
-                <p>This brief is a living document and will keep changing as the work does. Public claims here are kept consistent with what is actually deployed.</p>
-                <a href="mailto:hello@forboc.ai" class="btn btn-primary">Talk to the team</a>
+                <p>The production ledger distinguishes working capability, active development and the evidence required for release. A diligence review should test those boundaries directly.</p>
+                <a href="mailto:hello@forboc.ai" class="btn btn-primary">Bring us one hard scene</a>
             </footer>
         </div>
     </article>

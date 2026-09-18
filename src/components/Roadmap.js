@@ -1,11 +1,9 @@
 import { Lantern } from './Lantern.js';
 
 /**
- * Roadmap Component
- *
- * A genuine sequence, so it is the one place on the page that gets a numbered
- * spine. Status is written as shipped / in progress / next rather than as fixed
- * quarters, so a date passing does not quietly make the page a lie.
+ * Three active horizons: the working layer, the development track, and the
+ * destination. The compact sequence keeps the future vivid without borrowing
+ * evidence from the present.
  */
 export const Roadmap = () => {
     return `
@@ -15,8 +13,8 @@ export const Roadmap = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛏ</span>
                 <div>
-                    <h2>The Lantern Path</h2>
-                    <p class="chapter-lead">Our roadmap, as of September 2026 — where the work actually stands, rather than where we would like it to be.</p>
+                    <h2>The intelligence expands from inside the world</h2>
+                    <p class="chapter-lead">Servitor™ is the center. The ForbocAI NPC Protocol governs how its judgments enter game law. Engine paths, world exploration and opt-in continuity extend outward from that intelligence without replacing the studio as author.</p>
                 </div>
             </header>
 
@@ -24,41 +22,25 @@ export const Roadmap = () => {
                 <li class="timeline-item is-done">
                     <span class="timeline-marker" aria-hidden="true"></span>
                     <div class="timeline-content">
-                        <p class="timeline-status">Shipped</p>
-                        <h3>The hearth is lit</h3>
-                        <ul class="roadmap-list">
-                            <li>Characters that hold memory across sessions, with semantic and time-aware recall</li>
-                            <li>Rule checking between a character's intent and your world state</li>
-                            <li>Sixteen personality profiles selectable from a persona file, governing the action a character proposes rather than the accent she says it in</li>
-                            <li>Servitor answering on our own infrastructure, with the TypeScript and Unreal&nbsp;Engine&nbsp;5 SDKs against it</li>
-                            <li>Developer docs at docs.forboc.ai, playable demos, and $FAI live on the market</li>
-                        </ul>
+                        <p class="timeline-status">In evaluation now</p>
+                        <h3>Receive one bounded judgment</h3>
+                        <p>Servitor™ Character Intelligence through TypeScript and native Unreal Engine 5 paths, with studio-controlled memory, structured action proposals and rules that keep every consequence inside the game.</p>
                     </div>
                 </li>
                 <li class="timeline-item is-active">
                     <span class="timeline-marker" aria-hidden="true"></span>
                     <div class="timeline-content">
-                        <p class="timeline-status">In progress</p>
-                        <h3>Ghost on the road, keys at the gate</h3>
-                        <ul class="roadmap-list">
-                            <li>Ghost playtesting with coverage reports a producer can read — <strong>Q4 2026</strong>, and it is the only date we are committing to on this page</li>
-                            <li>Then the account portal — keys, usage and billing in one place</li>
-                            <li>Then Soul minting end to end: gather, encrypt, upload, verify, restore</li>
-                            <li>Then SDK 1.0 and a Fab listing for Unreal; Unity stays an integration scaffold until it meets the same contract</li>
-                            <li>Those four are deliberately undated and strictly ordered, because three people do not ship four things at once. Dating them would be a guess dressed as a commitment, and you would find out which in month three.</li>
-                        </ul>
+                        <p class="timeline-status">Ghost in development</p>
+                        <h3>See the world before players do</h3>
+                        <p>Ghost already drives internal test worlds. Development is opening those runs to producers as reports on dead ends, unreachable content and social-loop coverage; production qualification controls release.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <span class="timeline-marker" aria-hidden="true"></span>
                     <div class="timeline-content">
-                        <p class="timeline-status">Next</p>
-                        <h3>Characters that cross the fence</h3>
-                        <ul class="roadmap-list">
-                            <li>Marketplace operations for Soul trading and NPC template licensing</li>
-                            <li>Souls carried between titles with their continuity intact — as fast as the rights conversation allows. The protocol is ours to date. The licensing is not, and we will not put a year on somebody else's signature.</li>
-                            <li>Further engine bindings, each held to the same contract the shipped ones meet</li>
-                        </ul>
+                        <p class="timeline-status">Continuity in development</p>
+                        <h3>Carry earned history between worlds</h3>
+                        <p>Every named character can meet the unscripted and still choose as that person inside studio-owned law. Development is assembling the opt-in path that lets participating worlds receive earned character history without surrendering canon, law or game state.</p>
                     </div>
                 </li>
             </ol>

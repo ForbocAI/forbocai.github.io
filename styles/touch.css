@@ -1,0 +1,53 @@
+/* ----------------------------------------------------------------- touch -- */
+
+/* Every hit-area concession lives here, so the cost of touch is auditable in
+   one file rather than scattered through the components.
+   A finger needs about 44px. Measured before this file existed: footer links
+   23px tall, whitepaper contents entries 19px with the next entry directly
+   beneath, deck indicator dots 24px square, and the quiet text links 28px.
+   In each case the text keeps its size and position — the padding grows the
+   area around it, and negative margin holds the original rhythm. */
+
+@media (pointer: coarse), (max-width: 860px) {
+    .footer-link-group a {
+        display: block;
+        padding-block: 0.8rem;
+        margin-block: -0.3rem;
+    }
+
+    .doc-contents ol a {
+        display: block;
+        padding-block: 0.85rem;
+    }
+
+    .doc-contents ol li + li {
+        margin-top: 0;
+    }
+
+    /* The quiet second action beside a primary button. It reads as a line of
+       text, so it was one line of text tall. */
+    .text-link {
+        display: inline-block;
+        padding-block: 0.5rem;
+    }
+
+    .logo,
+    .mobile-menu-toggle,
+    .btn-control {
+        min-height: 44px;
+    }
+
+    .logo,
+    .btn-control {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* The dot stays 8px; the band around it grows. Twelve of them at this
+       width still fit one row on a 390px phone, and .slide-dots wraps if a
+       narrower one ever needs it to. */
+    .slide-dot {
+        width: 30px;
+        height: 44px;
+    }
+}

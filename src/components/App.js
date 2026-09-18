@@ -10,11 +10,11 @@ import { Header } from './Header.js';
 import { Footer } from './Footer.js';
 import { Hero } from './Hero.js';
 import { Mission } from './Mission.js';
-import { Technology } from './Technology.js';
 import { Servitor } from './Servitor.js';
+import { Technology } from './Technology.js';
 import { Turn } from './Turn.js';
-import { Vision } from './Vision.js';
 import { Roadmap } from './Roadmap.js';
+import { Vision } from './Vision.js';
 import { Investors } from './Investors.js';
 import { Whitepaper } from './Whitepaper.js';
 import { PitchDeck } from './PitchDeck.js';
@@ -63,15 +63,15 @@ export const App = (state) => {
             <div class="daylight">
                 ${Hero()}
                 ${Mission()}
-                ${Technology()}
                 ${Servitor()}
                 ${Turn()}
+                ${Technology()}
             </div>
             <div class="nightfall">
                 <div class="nightfall-edge" aria-hidden="true"></div>
                 ${Fireflies()}
-                ${Vision()}
                 ${Roadmap()}
+                ${Vision()}
                 ${Investors()}
             </div>
         `;

@@ -2,12 +2,8 @@ import { Lantern } from './Lantern.js';
 
 /**
  * Vision Component
- * Souls and the public $FAI utility — the first section after nightfall.
- *
- * Gathering and restoring are two steps of one protocol, so they sit on the
- * same ruled spine the capability ledger uses. $FAI is a different kind of
- * claim — economics, not protocol — so it is pulled out rather than given a
- * third equal cell.
+ * The living-character economy, extending outward from Servitor without
+ * surrendering the receiving world's authorship.
  */
 export const Vision = () => {
     return `
@@ -17,42 +13,24 @@ export const Vision = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛋ</span>
                 <div>
-                    <h2>Souls</h2>
-                    <p class="chapter-lead">A character who has been somewhere should be able to leave with what she learned. A Soul is that character gathered up — who she is, what she remembers, who she trusts — in a form that can be carried out of your game and set down in another.</p>
+                    <h2>A living character does not end at the credits</h2>
+                    <p class="chapter-lead"><strong>The ForbocAI NPC LM Servitor™ gives a character room to become specific inside one world.</strong> Souls carry that earned identity toward every new world that chooses to receive it.</p>
                 </div>
             </header>
 
-            <ol class="ledger ledger-night">
-                <li class="ledger-row">
-                    <div class="ledger-body">
-                        <h3>She leaves whole, or not at all</h3>
-                        <p>Identity, memory, relationships, and temperament are collected together. A Soul that arrives half-remembered is not a Soul, so the protocol moves all of it or none of it.</p>
-                    </div>
-                    <p class="ledger-fact">Gather, encrypt, upload, verify, restore — the same five steps every time she moves, and the export is not done until the last one proves out.</p>
-                </li>
+            <p class="soul-decouple"><strong>The Soul layer is in active development now:</strong> an opt-in, encrypted record of identity, memory, relationships and unresolved history. A receiving title can inspect it, verify it and decide what enters its own canon.</p>
 
-                <li class="ledger-row">
-                    <div class="ledger-body">
-                        <h3>She comes back under a verified name</h3>
-                        <p>Arriving in a new world is not a matter of presenting a file. The payload is confirmed remotely, verified, and only then restored into a character the receiving game can trust.</p>
-                    </div>
-                    <p class="ledger-fact">No listing, receipt, or market claim substitutes for that verification. The chain is not optional and does not bend.</p>
-                </li>
-            </ol>
+            <p class="soul-card"><strong>Trading cards made identity collectible. Souls make relationship cumulative.</strong> A static card preserves who a character is. A Soul carries who she trusted, what she refused and the argument she is still having because of one player's choices.</p>
 
-            <p class="soul-decouple"><strong>None of this touches the character layer</strong>, as the end of that section said: $FAI settles the Soul economy and nothing else — minting, upgrades, marketplace. Souls are opt-in, and a title ships perfectly well having touched none of it.</p>
-
-            <p class="soul-card">The nearest familiar thing is a trading card, and the comparison earns its keep by where it breaks. A card market clears because the objects are interchangeable and the print run is known — that is what makes a price. A Soul is the opposite on both counts. She arrives carrying what she did in the world she came from: who she trusted there, what she refused, the argument she is still having. Two players holding the same character are not holding the same character, and nothing about her is scarce unless a studio chooses to make her so.</p>
-
-            <p class="soul-market">Elsewhere, people are building characters that own themselves — agents answering to nobody, making their own calls. No studio can ship one of those, because a character who can act outside your canon breaks the world she is standing in. A Soul is the other shape: ownership for the player, authority for the studio, and a character who is only ever what your game made her. Whether she is worth more than a character everyone else also has, only a shipped marketplace answers, and the scarcity that would let one clear is ours to write into the mint rules first. We have shipped neither.</p>
+            <p class="soul-market">The player does not merely carry an image of who Maeve was. They carry the history of who she became with them. Studios gain a compounding creative asset across seasons, worlds and communities while every receiving world keeps authority over canon, law and game state.</p>
 
             <aside class="soul-economy">
                 ${Lantern({ className: "lantern-gate", size: 0.75, tone: "bright" })}
-                <h3>What $FAI is for</h3>
-                <p>The token is live and trading. It is what mints a Soul, what pays for an upgrade as a character grows, and what settles marketplace operations as the ecosystem opens. Souls and the marketplace themselves are in active development. A live token is not a live economy, and we are not going to let the first be read as the second.</p>
+                <h3>$FAI is the product utility layer around the Soul economy</h3>
+                <p>Access to The ForbocAI NPC LM Servitor™ uses ordinary money and requires no wallet. $FAI is live, with stated product uses across Soul minting, upgrades, registration and marketplace participation as that layer advances through active development.</p>
                 <div class="hero-buttons">
-                    <a href="#whitepaper" class="btn btn-primary" data-link>Read the whitepaper</a>
-                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Look up $FAI</a>
+                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Enter $FAI</a>
+                    <a href="#whitepaper" class="text-link" data-link>Read the architecture</a>
                 </div>
             </aside>
         </div>

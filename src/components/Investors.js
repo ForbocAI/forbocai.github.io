@@ -1,12 +1,6 @@
 import { Lantern } from './Lantern.js';
 
-/**
- * Investors Component
- *
- * The lit window at the end of the path. The light comes from the section
- * itself rather than from a bordered card: a fourth container treatment was
- * pushing the section mark 127px off the rail every other section sits on.
- */
+/** The final choice: test the character or fund the proof path. */
 export const Investors = () => {
     return `
     <section id="investors" class="chapter chapter-night investors-section">
@@ -16,20 +10,26 @@ export const Investors = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛞ</span>
                 <div>
-                    <h2>Investors</h2>
-                    <p class="chapter-lead">ForbocAI, Inc. is a Delaware C corporation raising a seed round to put persistent, rule-checked character AI in front of every studio building a world worth returning to.</p>
+                    <h2>The category is already inhabited</h2>
+                    <p class="chapter-lead"><strong>Game makers:</strong> bring the character your players are meant to remember. <strong>Investors:</strong> enter the model category taking its place inside the world's most consequential creative medium.</p>
                 </div>
             </header>
 
             <div class="investors-body">
-                <p>The SDK is inert without the API, so access is the product. We have not announced a studio integration yet; the demos running against the live API are ours. The first pilots are what this round buys.</p>
+                <p>The studios that define the next era will not ship the most generated dialogue. They will ship the first casts players believe are alive. ForbocAI is putting the model, the Protocol and the commercial standard beneath that shift. The only decision left is whether to watch from outside or enter while the category is still choosing who defines it.</p>
+                <figure class="investor-portal">
+                    <span class="portal-window" aria-hidden="true">
+                        <img src="Lanternbough.png" alt="" width="640" height="640">
+                    </span>
+                    <figcaption>Inside the living world</figcaption>
+                </figure>
             </div>
 
-            <p class="investors-takeaway">If you take one sentence from this page, take the one we would have to defend in your partner meeting: every layer of an NPC stack except the model is a quarter's work for a competent team, and the model is the part you cannot rent, cannot hire past, and cannot start without a studio letting you inside its canon.</p>
+            <p class="investors-takeaway">Those casts are being authored now. Servitor™ is their intelligence. The ForbocAI NPC Protocol is how they enter the world. Character Intelligence is the new creative medium.</p>
 
             <div class="hero-buttons">
-                <a href="#pitch/1" class="btn btn-primary" data-link>Open the seed deck</a>
-                <a href="mailto:hello@forboc.ai" class="btn btn-ghost">hello@forboc.ai</a>
+                <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20will%20remember" class="btn btn-primary">Bring the character players will remember</a>
+                <a href="#pitch/1" class="btn btn-ghost" data-link>Enter the category</a>
             </div>
         </div>
     </section>
