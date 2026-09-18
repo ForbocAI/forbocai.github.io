@@ -43,7 +43,7 @@ export const Whitepaper = () => {
                     <h3>3.1 Where the thinking happens</h3>
                     <p>Studios invoke Servitor™ through the ForbocAI NPC Protocol; the model reasons in ForbocAI infrastructure rather than being packaged as a client runtime. The trade is equally plain: active cognition requires a network connection.</p>
                     <p>The hierarchy is deliberate: Servitor™ makes the judgment; the Protocol defines its authority boundary; the API carries the exchange; the SDK makes that exchange native to game code; the game applies only the effects its contracts admit.</p>
-                    <p>Latency is a trap networked cognition inherits rather than escapes. Servitor™ runs under a hard server-side deadline. If it cannot finish and produce a reply that meets the required rules in time, Finalize produces a typed invalid result authorizing no action, memory write or state change. That hard deadline and typed boundary are testable now. Regional p50 and p95 become public only after they are measured end to end through the integration.</p>
+                    <p>Latency is a trap networked cognition inherits rather than escapes. Servitor™ runs under a hard server-side deadline. If it cannot finish and produce a reply that meets the required rules in time, the turn comes back explicitly marked invalid, and an invalid turn authorizes nothing: no action, no memory write, no change to your state. That hard deadline and typed boundary are testable now. Typical and worst-case response times, measured by region, become public only after they are measured end to end through a real integration.</p>
                     <p>Paid access to Servitor™ is in commercial qualification in standard currency, not tokens. Its release contract must bind the billable event, quotas, overage behavior, public price, production capacity and unit economics before those claims go live.</p>
 
                     <h3>3.2 Actions are proposed, not performed</h3>
@@ -52,13 +52,13 @@ export const Whitepaper = () => {
                     <p>The reply and any proposed action are checked separately. Transport failures reject the request. A server deadline miss or a reply that fails its required rules makes Finalize return a typed invalid result. Proposed actions that fail the studio's rules are not applied. None can authorize a memory write or state change, and the game owns the fallback. These checks alone do not guarantee factual accuracy, moderation or console certification.</p>
 
                     <h4>Entities, state, and world rules</h4>
-                    <p>ECS, object graph, or a bespoke simulation — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world, and the validation step is where that grounding is enforced.</p>
+                    <p>An entity-component system, an object graph, or a simulation you built yourself — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world, and the validation step is where that grounding is enforced.</p>
 
                     <h4>Beyond dialogue</h4>
                     <p>Speech is the visible part. The same layer carries the rest of a character's cognitive surface:</p>
                     <ul>
                         <li><strong>Decisions.</strong> Moves, trades, follow-ups, and social actions arrive as structured intent, not prose to be parsed.</li>
-                        <li><strong>Recall.</strong> Retrieval lets a character reference prior events, relationships, and local context instead of resetting at every scene boundary.</li>
+                        <li><strong>Evidence.</strong> Prior events, relationships and local context are what the character reasons from — not trivia she can mention, but the grounds on which she decides differently in hour forty than she would have in hour three.</li>
                         <li><strong>Continuity of feeling.</strong> Mood, trust, and whatever other signals you author shape what she does next, and only then how she says it.</li>
                     </ul>
 
@@ -106,7 +106,7 @@ export const Whitepaper = () => {
                     <li><a href="#wp-summary">Summary</a></li>
                     <li><a href="#wp-problem">The problem</a></li>
                     <li><a href="#wp-layer">Character Intelligence</a></li>
-                    <li><a href="#wp-souls">Optional continuity</a></li>
+                    <li><a href="#wp-souls">The Soul economy</a></li>
                     <li><a href="#wp-roadmap">The arrival sequence</a></li>
                 </ol>
             </nav>
