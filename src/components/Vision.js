@@ -17,12 +17,12 @@ export const Vision = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛃ</span>
                 <div>
-                    <h2>Paid access to the ForbocAI NPC Protocol and Servitor™ is the business</h2>
+                    <h2>Paid access to all three is the business</h2>
                     <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
                 </div>
             </header>
 
-            <p class="soul-market"><strong>The people are the one surface of a game nobody has finished.</strong> Branch content is the most expensive writing in the building, it is already annual, and most of it is never seen once.</p>
+            <p class="soul-market"><strong>The people are the one surface of a game nobody has finished.</strong> That spend is already in the building, already annual, and it has nowhere else to go.</p>
 
             ${Deeper({
                 summary: 'The size of that room, and how we read it',
@@ -37,26 +37,21 @@ export const Vision = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛋ</span>
                 <div>
-                    <h2>A living character does not end at the credits</h2>
-                    <p class="chapter-lead"><strong>Servitor™ gives a character room to become specific inside one world.</strong> Souls are the road that earned identity travels to the next one. The format is written and the encryption is built.</p>
+                    <h2>The third pillar: tradable NPCs</h2>
+                    <p class="chapter-lead"><strong>Servitor™ makes her someone. The Protocol lets her act inside a world that stays yours. The third is that she can be owned, carried and traded — and none of the three is complete without the others.</strong></p>
                 </div>
             </header>
 
-            <p class="soul-decouple"><strong>A Soul is an opt-in, encrypted record of identity, memory, relationships and temperament.</strong> A receiving title inspects it, verifies it and decides what enters its own canon — the receiving world keeps every say over what it admits.</p>
+            <p class="soul-decouple"><strong>The player does not carry an image of who Maeve was. They carry the history of who she became with them.</strong> A Soul is that history made portable: an opt-in, encrypted record of identity, memory, relationships and temperament, which a receiving title inspects, verifies and admits on its own terms.</p>
 
-            <p class="soul-card"><strong>A card preserves who a character is. A Soul carries who she became with you.</strong> People have spent decades proving they will pay for identity they can keep — and a card has never once been able to remember them back.</p>
+            <p class="soul-card"><strong>People have spent decades paying for characters they can keep, and every one of them was a picture.</strong> A card preserves who a character is. A tradable NPC carries who she became with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>
 
-            ${Deeper({
-                summary: 'The evidence behind that habit',
-                body: `<p class="soul-card"><a href="https://www.gminsights.com/industry-analysis/trading-card-games-market" target="_blank" rel="noopener noreferrer">Global Market Insights sizes the printed trading-card game market at $8.4&nbsp;billion in 2025, growing to $9.2&nbsp;billion in 2026</a>. Read it as evidence of the appetite, not as a forecast of Soul revenue — printed cards are a different product in a different market.</p>`,
-            })}
-
-            <p class="soul-market">The player does not carry an image of who Maeve was. They carry the history of who she became with them. That history is the asset a studio compounds — across seasons, across worlds, across a community. Every receiving world still rules its own canon. The crossing is where it stops being ours and starts being yours.</p>
+            <p class="soul-market">That is the whole ecology closing: a person, a law she enters worlds through, and an owner. Take any one away and the other two are a demo. Together they are the first character who is somebody, is safe to ship, and belongs to the player who made her that way.</p>
 
             <aside class="soul-economy">
-                <h3>What $FAI is for</h3>
-                <p><strong>Two studios competing for the same player will not keep each other's canon.</strong> Neither will run the other's server, or take the other's word that a character arrived carrying what she claims to carry. A Soul crossing between them has to be checkable somewhere neither of them owns.</p>
-                <p><strong>$FAI is a notary.</strong> It records that this history is the history, so a receiving world can verify before it admits one. Paid access to the Protocol and Servitor™ is the business and no studio touches a token to buy a character judgment — but a character who crosses between rivals needs somewhere impartial to be true, and that is what this is for.</p>
+                <h3>What $FAI is</h3>
+                <p><strong>Two studios competing for the same player will not keep each other's canon.</strong> Neither will run the other's server, or take the other's word that a character arrived carrying what she claims to carry. A character crossing between rivals has to be checkable somewhere neither of them owns.</p>
+                <p><strong>$FAI is that place.</strong> It records that this history is the history, so a receiving world can verify before it admits her. Ownership needs a registry the way judgment needs a law.</p>
                 <div class="hero-buttons">
                     <a href="#whitepaper" class="btn btn-primary" data-link>Read the architecture</a>
                     <a href="#wp-gates" class="text-link" data-link>Read the Standard</a>

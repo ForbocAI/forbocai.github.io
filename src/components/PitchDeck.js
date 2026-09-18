@@ -193,7 +193,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>One model, every cast in a catalogue. An innkeeper, a fleet commander, a child in a besieged city. No two of them sounding like the same mind.</p></div>
             </div>
-            <p class="impact-statement">Your store never leaves you. What moves is the turn, and what it may be used for is written into the release contract. What compounds is the range of worlds one contract holds in, and the instrument that measures whether any character model holds at all. The first worlds through set the range, and the range is what the whole thesis rests on.</p>
+            <p class="impact-statement">What compounds is the range of worlds one contract holds in, and the instrument that measures whether any character model holds at all. The first worlds through set the range, and the range is what the whole thesis rests on.</p>
         `
     },
     {
