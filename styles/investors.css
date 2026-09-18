@@ -36,3 +36,78 @@
     max-width: 60ch;
 }
 
+
+/* The portal is a window cut into the night, not a picture hung on it. Without
+   a rule the source plate showed as a raw white square sitting on the moss —
+   the one place on the page where an asset looked pasted in.
+   Reconstructed against .dream-loop/r26-final/home-desktop-11.png. */
+.investor-portal {
+    display: grid;
+    justify-items: center;
+    margin: 0;
+}
+
+.portal-window {
+    position: relative;
+    display: block;
+    width: min(100%, 480px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    isolation: isolate;
+    /* The ring is the lantern's light catching the rim of the opening, and the
+       spill is that light reaching the moss around it. */
+    border: 1px solid color-mix(in srgb, var(--lantern) 38%, transparent);
+    box-shadow:
+        0 0 120px -26px color-mix(in srgb, var(--lantern) 34%, transparent),
+        0 30px 60px -40px rgba(9, 14, 10, 0.9);
+}
+
+.portal-window img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.96) brightness(0.96);
+}
+
+/* The plate is painted on white paper, and white paper on a night ground reads
+   as a sheet of light rather than an opening. The moss is multiplied back over
+   it from the rim inwards, so the edge sinks into the dark and the lantern is
+   left as the one bright thing — which is what a window at night looks like. */
+.portal-window::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle at 50% 60%,
+            rgba(255, 243, 194, 0.2) 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 60%,
+            transparent 24%,
+            rgba(36, 52, 38, 0.5) 62%,
+            rgba(15, 23, 17, 0.96) 100%
+        );
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+.investor-portal figcaption {
+    margin-top: 0.95rem;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--lantern);
+}
+
+@media (max-width: 860px) {
+    .portal-window {
+        width: min(100%, 320px);
+    }
+}

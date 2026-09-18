@@ -73,7 +73,7 @@ const slides = [
                     </article>
                     <article>
                         <span>The character judgment</span>
-                        <strong>Her brother's letter. The one truth this player earned the right to receive.</strong>
+                        <strong>Her brother's letter. Sealed at his asking, and opened now against it.</strong>
                     </article>
                 </div>
                 <figure class="maeve-scene maeve-choice-scene">
@@ -205,7 +205,7 @@ const slides = [
                 <p class="threshold-lead">Outside, it still looks early. Inside, Character Intelligence already has its model, its laws and its commercial standard.</p>
                 <p class="threshold-line">NPC language models are already obvious from inside the game. The right to define them is being claimed now.</p>
             </div>
-            <p class="ask-note">ForbocAI is choosing the studios and investors defining the age of the living cast from inside it.</p>
+            <p class="ask-note">The studios and investors who define this age are the ones already inside it.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=Enter%20the%20age%20of%20the%20living%20cast" class="btn btn-primary">Enter the age of the living cast</a>
             </div>

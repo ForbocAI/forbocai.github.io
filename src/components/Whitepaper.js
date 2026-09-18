@@ -76,7 +76,7 @@ export const Whitepaper = () => {
                 <section id="wp-souls">
                     <h2>4. The Soul economy</h2>
                     <p class="doc-aside"><strong>$FAI is live. Soul continuity is opt-in and in active development; neither is required for paid access to Servitor™.</strong></p>
-                    <p>A card preserves who a character is. The Soul layer is designed to carry the history a player and character made together. Development is assembling the opt-in record — identity, memory, relationships and temperament — while every receiving title decides what enters. Accumulated specificity, not artificial scarcity, is the value being built.</p>
+                    <p>A card preserves who a character is. The Soul layer is designed to carry the history a player and character made together. We are assembling the opt-in record — identity, memory, relationships and temperament — while every receiving title decides what enters. Accumulated specificity, not artificial scarcity, is the value being built.</p>
                     <ul>
                         <li><strong>Player value.</strong> A character can retain earned specificity instead of resetting to a template at every title boundary.</li>
                         <li><strong>Studio authority.</strong> Gather, encrypt, upload, verify, restore — every participating title still chooses what its technical, moderation and rights rules admit.</li>

@@ -32,7 +32,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Ghost in development</p>
                         <h3>See the world before players do</h3>
-                        <p>Ghost already drives internal test worlds. Development is opening those runs to producers as reports on dead ends, unreachable content and social-loop coverage; production qualification controls release.</p>
+                        <p>Ghost already drives internal test worlds. We are opening those runs to producers as reports on dead ends, unreachable content and social-loop coverage; production qualification controls release.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -40,7 +40,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Continuity in development</p>
                         <h3>Carry earned history between worlds</h3>
-                        <p>Every named character can meet the unscripted and still choose as that person inside studio-owned law. Development is assembling the opt-in path that lets participating worlds receive earned character history without surrendering canon, law or game state.</p>
+                        <p>Every named character can meet the unscripted and still choose as that person inside studio-owned law. We are assembling the opt-in path that lets participating worlds receive earned character history without surrendering canon, law or game state.</p>
                     </div>
                 </li>
             </ol>

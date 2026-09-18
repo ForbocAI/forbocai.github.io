@@ -49,7 +49,7 @@ export const Hero = () => {
                         <span class="memory-what">You left ahead of the storm. She kept the lamp burning anyway.</span>
                     </li>
                 </ul>
-                <p class="memory-weigh" style="--i:3">The storm is safe. Her brother's letter risks the truth, but this player earned the right to receive it.</p>
+                <p class="memory-weigh" style="--i:3">The storm is safe. Her brother asked her to keep the letter sealed—and she is about to break that promise, because this player is the only one who ever asked after him.</p>
                 <p class="memory-foot" style="--i:4">Memory is the evidence. Judgment is the intelligence.</p>
             </figure>
         </div>

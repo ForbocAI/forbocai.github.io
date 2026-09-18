@@ -11,7 +11,7 @@ export const Investors = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛞ</span>
                 <div>
                     <h2>The category is already inhabited</h2>
-                    <p class="chapter-lead"><strong>Game makers:</strong> bring the character your players are meant to remember. <strong>Investors:</strong> enter the model category taking its place inside the world's most consequential creative medium.</p>
+                    <p class="chapter-lead"><strong>The model category beneath the world's most consequential creative medium is being settled now, from inside it.</strong> The casts are being authored, the law they enter through is written, and the standard is already commercial.</p>
                 </div>
             </header>
 
