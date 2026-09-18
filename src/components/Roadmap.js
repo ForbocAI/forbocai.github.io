@@ -32,7 +32,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Ghost reports in development</p>
                         <h3>See the world before players do</h3>
-                        <p>Ghost is the harness that already drives our own test worlds; the producer-facing reports on dead ends, unreachable content and social-loop coverage are the part in development — gate ten. No studio outside ForbocAI has run it at all, so the only producers reading anything today are ours. Production qualification controls release.</p>
+                        <p>Ghost already drives our own test worlds. It walks a level the way a thousand players would, finds the room nobody can reach and the loop nobody closes, and hands a producer the map before a player ever sees it.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -40,7 +40,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Continuity in development</p>
                         <h3>Carry earned history between worlds</h3>
-                        <p>Every named character can meet the unscripted and still choose as that person inside studio-owned law. The opt-in path carries earned character history into participating worlds without surrendering canon, law or game state. That is gate eleven, Soul continuity, and it has not cleared.</p>
+                        <p>Every named character meets the unscripted and still chooses as that person, inside law the studio owns. The opt-in path carries earned character history into a receiving world without surrendering canon, law or game state.</p>
                     </div>
                 </li>
             </ol>

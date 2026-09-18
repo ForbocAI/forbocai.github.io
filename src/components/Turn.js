@@ -88,7 +88,7 @@ export const Turn = () => {
                     <p class="turn-note">She had <code>offer_item</code> on the table and did not take it.</p>
                     ${Deeper({
                         summary: 'What <code>valid: true</code> does and does not cover',
-                        body: `<p class="turn-note">It means the turn met its deadline and passed its checks. It does not mean every word is true about your world — that is the gate twelve limit printed below.</p>`,
+                        body: `<p class="turn-note">It means the turn met its deadline and passed its checks. It does not mean every word she says is true about your world — that limit is printed below, on our own demo.</p>`,
                     })}
                     ${Deeper({
                         summary: 'There is a lore error in the turn above',
@@ -129,6 +129,42 @@ export const Turn = () => {
                     </article>
                 </div>
                 <p class="turn-note turn-counterfactual-foot">Nothing about Maeve changed. Her brother's request still stands, and she still weighs it the same way. What changed is what the player made true, and that is the whole difference between a character and a generator.</p>
+            </section>
+
+            <section class="turn-room" aria-labelledby="turn-room-title">
+                <div class="turn-counterfactual-head">
+                    <p class="turn-label">The rest of the room was listening</p>
+                    <h3 id="turn-room-title">Nobody wrote a branch for what the miner does while she refuses.</h3>
+                    <p>Brannoc is at the end of the counter. The player covered his room in the autumn when he came up short, and he has never mentioned it. He is close enough to hear Maeve say no.</p>
+                </div>
+                <div class="turn-counterfactual-pair">
+                    <article>
+                        <span>What your writer handed us</span>
+                        <pre class="turn-code"><code>const brannoc = {
+  traits: ['Owes more than he can say out loud',
+           'Slow to speak in a room he does not own'],
+  goals: ['Clear the debt before the thaw'],
+  relationships: [
+    { who: 'the player',
+      bond: 'Covered his room in the autumn. Never mentioned since.' },
+    { who: 'Maeve', bond: 'Her lodger two winters. Her word runs this room.' },
+  ],
+  speakingStyle: ['Says the smallest true thing, then stops.'],
+  constraints: ['Will not contradict Maeve in her own house.'],
+}</code></pre>
+                    </article>
+                    <article>
+                        <span>What he did about it</span>
+                        <pre class="turn-code"><code>{
+  dialogue: "Maeve. It was them that covered my room in the autumn.",
+  reasoningText: "She is not wrong about the letter and I will not say
+    she is. But she is weighing what this one is owed without knowing
+    the half of it, and the half she is missing is mine to give her.",
+  action: { type: 'speak_to', payload: { target: 'maeve' } },
+}</code></pre>
+                    </article>
+                </div>
+                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> His constraint holds — he will not take her side down in her own house. He changes what is true in the room instead, and now she is weighing a debt she did not know about, in front of a player who never asked him to speak. <strong>There is no tree in which that scene exists.</strong> Two people in a room is not two branches; it is every pair, and three is every triple. That is why party banter gets cut in month thirty of every game ever made, and it is the one thing branch writing does not make expensive so much as impossible.</p>
             </section>
 
             <p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localization lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what would you have put back in?</p>
