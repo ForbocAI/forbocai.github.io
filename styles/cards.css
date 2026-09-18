@@ -44,7 +44,7 @@
     padding: 1rem 1.05rem 1.15rem;
     border: 1px solid var(--day-rule-soft);
     border-top: 2px solid var(--day-rule);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     background: var(--day-surface);
 }
 
@@ -90,7 +90,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin: 1.6rem 0 2rem;
     border: 1px solid var(--day-rule-soft);
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     background: var(--day-surface);
     overflow: hidden;
 }
@@ -167,7 +167,7 @@
     padding: 0.95rem 1rem 1.05rem;
     border: 1px solid var(--day-rule-soft);
     border-top: 2px solid var(--day-rule);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     background: var(--day-surface);
 }
 
@@ -252,7 +252,7 @@
 .decision-pair article {
     padding: 0.85rem 1rem 0.95rem;
     border: 1px solid var(--day-rule-soft);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     background: var(--day-surface);
 }
 

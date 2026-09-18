@@ -47,7 +47,7 @@
     max-width: 100%;
     overflow-x: auto;
     padding: 0.12em 0.4em;
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
     background: color-mix(in srgb, var(--copper) 12%, transparent);
     color: var(--copper-ink);
 }

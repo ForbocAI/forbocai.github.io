@@ -72,7 +72,11 @@
     --chapter-gap: clamp(3.5rem, 6vw, 5.5rem);
     --chapter-seam: clamp(1.75rem, 3vw, 2.75rem);
 
-    --radius-sm: 6px;
+    /* Cohere's softness is a scale used consistently, not one radius on
+       everything. --radius-xs is the inline chip step that hero.css,
+       turn.css and typography.css were each approximating by hand. */
+    --radius-xs: 5px;
+    --radius-sm: 8px;
     --radius: 14px;
     --radius-lg: 24px;
 

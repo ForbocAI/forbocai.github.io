@@ -19,7 +19,7 @@
     position: relative;
     padding: 0.85rem 1rem 1rem;
     border: 1px solid var(--day-rule-soft);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     background: var(--day-surface);
 }
 
