@@ -217,7 +217,7 @@ const slides = [
                     <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
                 </div>
             </div>
-            <p class="team-note">Engineering runs across the API, the model, the SDKs and the Unreal parity work. The sharpest question anyone can put to the moat slide still belongs here, so ask it now rather than later: if a gate takes a small team a few months, it is not a gate. The honest answer is that the model is the part a small team can rebuild — which is exactly why the moat slide says a well-funded competitor can begin it next quarter. What nobody skips is twenty-three gates' worth of definitions and the harness that measures them, run against casts nobody else has authored. Deepening this bench is the first thing new capital buys.</p>
+            <p class="team-note">Four proofs carry this company, and each belongs to someone here: a character who stays herself under held-out evaluation and live play; a protocol that fails closed from the CLI through to the model; the same contract in TypeScript and in Unreal; and a harness that explores a level and returns findings a team can act on.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },
