@@ -37,15 +37,15 @@ export const Hero = () => {
                 <p class="memory-title">What Servitor™ is weighing</p>
                 <ul class="memory-lines">
                     <li style="--i:0">
-                        <span class="memory-when">Three sessions back</span>
+                        <span class="memory-when">Three sessions back</span> 
                         <span class="memory-what">You covered the miner's room when he came up short.</span>
                     </li>
                     <li style="--i:1">
-                        <span class="memory-when">Two sessions back</span>
+                        <span class="memory-when">Two sessions back</span> 
                         <span class="memory-what">You asked after her brother. Nobody else in town had.</span>
                     </li>
                     <li style="--i:2">
-                        <span class="memory-when">Last session</span>
+                        <span class="memory-when">Last session</span> 
                         <span class="memory-what">You said you would come back before the thaw. You did not. She kept the lamp burning anyway.</span>
                     </li>
                 </ul>

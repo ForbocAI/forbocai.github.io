@@ -26,12 +26,12 @@ export const Servitor = () => `
                     <h3>What she does with what she remembers</h3>
                     <p>Dialogue is what the player hears. Servitor™ carries authored identity through evidence, motive and consequence to decide what the character means—and what she may propose next.</p>
                     <ol class="servitor-cognition" aria-label="Character Intelligence sequence">
-                        <li><span>Identity</span><strong>Who am I?</strong></li>
-                        <li><span>Memory</span><strong>What happened?</strong></li>
-                        <li><span>Motive</span><strong>What matters?</strong></li>
-                        <li><span>Reasoning</span><strong>What follows?</strong></li>
-                        <li><span>Judgment</span><strong>Where do I stand?</strong></li>
-                        <li><span>Action</span><strong>What may I propose?</strong></li>
+                        <li><span>Identity</span> <strong>Who am I?</strong></li>
+                        <li><span>Memory</span> <strong>What happened?</strong></li>
+                        <li><span>Motive</span> <strong>What matters?</strong></li>
+                        <li><span>Reasoning</span> <strong>What follows?</strong></li>
+                        <li><span>Judgment</span> <strong>Where do I stand?</strong></li>
+                        <li><span>Action</span> <strong>What may I propose?</strong></li>
                     </ol>
                 </div>
             </div>
@@ -60,9 +60,9 @@ export const Servitor = () => `
             </div>
 
             <div class="model-hierarchy" aria-label="ForbocAI product hierarchy">
-                <p><span>Intelligence</span><strong>Servitor™ creates a character's next possibility.</strong></p>
-                <p><span>Law</span><strong>The Protocol makes it native to the world.</strong></p>
-                <p><span>Authorship</span><strong>Your game turns choice into history and play.</strong></p>
+                <p><span>Intelligence</span> <strong>Servitor™ creates a character's next possibility.</strong></p>
+                <p><span>Law</span> <strong>The Protocol makes it native to the world.</strong></p>
+                <p><span>Authorship</span> <strong>Your game turns choice into history and play.</strong></p>
             </div>
 
             <div class="hero-buttons">
