@@ -19,7 +19,14 @@
     --day-rule-soft: #e7dac1;
     --day-ink: #263127;
     --day-ink-soft: #5c4a3b;
-    --day-ink-faint: #645645;
+    /* Both "faint" inks carry real sentences, not decoration, and both measured
+       just under AA at 15-19px once the grounds were lit: --day-ink-faint at
+       4.23 on .ledger-fact and 4.40 on a disclosure label, --night-ink-soft at
+       3.96 on .soul-market and 4.00 on #room's prose. A tone that has to be
+       read is not allowed to be the faintest thing that will still pass — it
+       has to pass. Each moves one step toward its own ink and no further, so
+       the tier below the body copy survives. */
+    --day-ink-faint: #56493a;
 
     /* Night — moss side */
     --night-bg: #263127;
@@ -27,7 +34,7 @@
     --night-surface-high: #374534;
     --night-rule: #3f5248;
     --night-ink: #f1e8d6;
-    --night-ink-soft: #c2cbb4;
+    --night-ink-soft: #d4dcc9;
     --night-ink-faint: #93a18b;
 
     /* Lantern and accents */

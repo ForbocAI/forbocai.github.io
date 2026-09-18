@@ -172,16 +172,37 @@
    Three placements on a 3-cycle against nine sections, so the pattern does not
    line up with the chapter rhythm and no two neighbours share a side. */
 .nightfall .chapter {
-    background-repeat: repeat-y;
-    background-size: 100% var(--colony-span, 1400px);
-    background-image: radial-gradient(760px 640px at var(--colony-x) var(--colony-ty),
-        color-mix(in srgb, var(--colony-hue) 16%, transparent) 0%,
-        color-mix(in srgb, var(--colony-hue) 6%, transparent) 42%,
-        transparent 70%);
+    background-repeat: repeat-y, repeat-y;
+    background-size: 100% var(--lamp-span, 1180px), 100% var(--colony-span, 1400px);
+    /* TWO sources, and the warm one is the KEY.
+
+       The night had only the cold half at chapter level, so the grown light
+       out-shone the made light and the brightest 8% of every night chapter
+       measured grey-green — 104,111,93 in #room against the day's lantern
+       cream 229,206,167. The page was delivering "cosy" by ALTERNATING warm
+       parchment with a cold dark, rather than by putting a warm light inside
+       the dark, which is the difference between an inn at night and a lit
+       specimen. The design language already said warm light is MADE and cold
+       light is GROWN; only the grown half had been built.
+
+       The lantern pool is brighter and tighter than the colony, and sits
+       opposite it: a lamp is a source, a colony is a seep. */
+    background-image:
+        radial-gradient(620px 520px at var(--lamp-x) var(--lamp-ty),
+            color-mix(in srgb, var(--lantern) 40%, transparent) 0%,
+            color-mix(in srgb, var(--honey) 17%, transparent) 38%,
+            transparent 68%),
+        radial-gradient(760px 640px at var(--colony-x) var(--colony-ty),
+            color-mix(in srgb, var(--colony-hue) 16%, transparent) 0%,
+            color-mix(in srgb, var(--colony-hue) 6%, transparent) 42%,
+            transparent 70%);
     --colony-hue: var(--biolume-core);
     --colony-x: 1%;
     --colony-span: 1400px;
     --colony-ty: 40%;
+    --lamp-x: 88%;
+    --lamp-ty: 22%;
+    --lamp-span: 1180px;
 }
 
 .nightfall .chapter:nth-of-type(3n+2) {
@@ -189,12 +210,18 @@
     --colony-x: 99%;
     --colony-span: 1750px;
     --colony-ty: 30%;
+    --lamp-x: 9%;
+    --lamp-ty: 62%;
+    --lamp-span: 1460px;
 }
 
 .nightfall .chapter:nth-of-type(3n) {
     --colony-x: 5%;
     --colony-span: 1180px;
     --colony-ty: 34%;
+    --lamp-x: 92%;
+    --lamp-ty: 74%;
+    --lamp-span: 1330px;
 }
 
 /* The day has colonies too, and it needed them more.
