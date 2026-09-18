@@ -27,7 +27,7 @@ export const Investors = () => {
                 </figure>
             </div>
 
-            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law its judgment enters through. Together they are the medium. Eighteen months from now a player will describe one of your scenes to a friend and get the details wrong. They will still get your character right. That is the whole of it, and the first three studios through this door are the ones who will have read the list before they walked in.</p>
+            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law its judgment enters through. You already ran this experiment. The character your players quote back to you was never the one with the most lines — it was the one who made a decision nobody wrote, and you have been paying for that by accident. Twenty-four gates stand between here and production authority, numbered and public, none closed. The first three studios through this door are not customers. They are the casts the measurement is written on, and their names sit beside the results for as long as this category exists. Bring us one character. We will take her to the moment your tree ends. Eighteen months later a player will get every detail of that scene wrong, and still get her right.</p>
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20will%20remember" class="btn btn-primary">Bring the character players will remember</a>

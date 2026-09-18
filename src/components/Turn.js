@@ -9,7 +9,7 @@ export const Turn = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛒ</span>
                 <div>
                     <h2>The moment an NPC becomes someone</h2>
-                    <p class="chapter-lead">A player asks the question nobody wrote. Servitor™ gathers who this person has been, what now matters and what the world permits—then creates the next choice only this character could make.</p>
+                    <p class="chapter-lead">Late, at the counter of the Lanternbough inn, with the thaw coming and her brother's letter in the drawer behind her. A player asks the question nobody wrote. Servitor™ gathers who Maeve has been, what now matters and what her world permits — then makes the choice only she could make.</p>
                 </div>
             </header>
 
@@ -68,6 +68,8 @@ export const Turn = () => {
                     </article>
                 </div>
             </section>
+
+            <p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localisation lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what would you have put back in?</p>
 
             <p class="turn-consequence"><strong>A refusal becomes the next piece of evidence too.</strong> The letter stays sealed, the world remembers that it was asked for, and Maeve enters the next encounter as the person who kept her brother's confidence—and who knows this player asked after him anyway.</p>
 

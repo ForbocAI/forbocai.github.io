@@ -37,6 +37,7 @@ export const Mission = () => {
             </div>
 
             <p class="mission-felt"><strong>Picture it at full strength:</strong> a cast of four hundred and not one of them repeating; a captain who disobeys because the loyalty she was authored with outweighed the order in front of her; a town that receives a player differently in the spring because of the winter they walked away from. Servitor™ supplies the decision. Your faction system still rules what her refusal does to the faction — the world stays yours. What changes is that the decision came from someone.</p>
+            <p class="mission-felt">Some studio is going to ship the first cast that answers the question nobody wrote. That game becomes the reference for a decade, and every trailer after it gets measured against the scene where a character said no for a reason the player could name. You have the writers for that. What you have never had is a way to get it on purpose.</p>
         </div>
     </section>
     `;
