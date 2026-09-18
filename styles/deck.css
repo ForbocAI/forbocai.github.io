@@ -15,38 +15,51 @@
     display: flex;
     flex-direction: column;
     min-height: min(74vh, 640px);
-    /* The frame is CONTENT-driven — it measured 789px against a 640px
-       min-height — so lowering the minimum does nothing. It needs a ceiling
-       taken from the screen it has to fit inside: viewport, less the header,
-       less the deck's own chrome. */
-    max-height: calc(100svh - var(--header-height) - 5rem);
-    overflow: hidden;
+    /* No ceiling, and nothing here hides. An earlier pass capped this frame so
+       the deck would fit the fold, and bought that fit by turning the slide
+       into a silent scroll container: 13 of 13 slides on a phone hid a mean
+       309px, worst 488px, with offsetWidth - clientWidth = 0, so there was not
+       even a scrollbar to hint at it. A sheared headline with no cue reads as
+       a bug. The fold is not worth a word of the argument. */
     border-radius: var(--radius-lg);
     background: var(--surface-day);
     box-shadow: var(--membrane-day);
-    overflow: hidden;
+    /* clip, not hidden. Both trim the illustration to the rounded corner, but
+       `hidden` establishes a scroll container and a scroll container disables
+       position:sticky inside it — which is why the controls went off screen on
+       the taller slides even after the slide stopped scrolling. `clip` does the
+       same trimming without becoming a scrollport. */
+    overflow: clip;
 }
 
-/* Only the SLIDE scrolls. .deck-controls is a child of the frame, so capping
-   the frame's height with overflow:auto scrolled the nav out of its own box —
-   at 1440x700 the controls sat at y=796 inside a frame ending at 643, which is
-   worse than the overflow it was meant to fix: the button you need to reach
-   the next slide was gone rather than merely low.
+/* The controls stick instead. That was the real requirement all along — round
+   ten's finding was never "the page must not scroll", it was that the Back and
+   Next buttons were below the bottom of the window. A long slide now makes the
+   PAGE scroll, which is ordinary and expected, while the controls ride the
+   bottom of the viewport and stay reachable the whole way down.
 
-   The header and the controls are fixed rows; the slide is the one part that
-   gives. min-height:0 is what lets a flex child shrink below its content at
-   all — without it the slide refuses to compress and pushes the controls out
-   again. */
+   Gated by .dream-loop/deckfold.mjs, which asserts BOTH that the controls are
+   on screen and that no slide hides any of its own content. The previous gate
+   only measured the box, so it certified a build whose slides were shearing
+   their own headlines. */
 .deck-frame > .slide {
     flex: 1 1 auto;
     min-height: 0;
-    overflow-y: auto;
-    overscroll-behavior: contain;
 }
 
-.deck-frame > .deck-header,
+.deck-frame > .deck-header {
+    flex: 0 0 auto;
+}
+
 .deck-frame > .deck-controls {
     flex: 0 0 auto;
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    background: var(--day-bg);
+    border-top: 1px solid var(--day-rule-soft);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
 }
 
 .deck-header {
