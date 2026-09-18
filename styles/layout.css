@@ -372,9 +372,12 @@ main {
    is free, which opens gaps exactly as large as the void it was meant to fill.
    A float leaves the prose flow untouched and lets text run up beside it.
 
-   Only above 1400px, because below that the container is not wide enough to
-   hold a measure and a margin at once, and nothing that already composes moves. */
-@media (min-width: 1400px) {
+   From 1200px, not 1400px. The two-column grid in breaks.css engages at 1100
+   and this engaged at 1400, so 1152-1400 was covered by neither and #mission
+   sat at 78% empty at 1280 — a band containing the single most common laptop
+   width there is. A 1180px shell leaves 1100px of content: a 660px measure, a
+   40px gutter and a ~300px margin fit inside that with room to spare. */
+@media (min-width: 1200px) {
     /* Some chapters wrap their disclosure in a div, so matching only .deeper
        missed exactly the two worst sections: #mission holds its inside
        .mission-turn and #technology has a .ledger-note instead. */
