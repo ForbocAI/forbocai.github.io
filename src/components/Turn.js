@@ -44,6 +44,7 @@ export const Turn = () => {
   metadata: { valid: true },
 }</code></pre>
                     <p class="turn-note">She had <code>offer_item</code> available and did not take it. A refusal is a judgment your game can inspect, not a failed response: the rationale names the reason, so when a player is told no, your QA lead can find out why.</p>
+                    <p class="turn-note">The reply is checked too, and it is worth being exact about what that means. It must name the action she actually took, must not argue for the one she refused, and must not claim a comparison the supplied evidence does not carry. It is <strong>not</strong> checked against your lore. Nothing here stops a character stating a fact about your world that is wrong; the action boundary is what protects your state, and factual grounding is a separate problem we do not claim to have solved.</p>
                 </div>
             </div>
 

@@ -40,7 +40,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Continuity in development</p>
                         <h3>Carry earned history between worlds</h3>
-                        <p>Every named character can meet the unscripted and still choose as that person inside studio-owned law. The opt-in path carries earned character history into participating worlds without surrendering canon, law or game state. Its gate is end-to-end Souls, and that gate is open.</p>
+                        <p>Every named character can meet the unscripted and still choose as that person inside studio-owned law. The opt-in path carries earned character history into participating worlds without surrendering canon, law or game state. Its gate is end-to-end Souls, and that gate has not cleared.</p>
                     </div>
                 </li>
             </ol>
