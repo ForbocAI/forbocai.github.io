@@ -123,6 +123,19 @@
 /* A 68ch measure leaves the right half of a 1440 page empty. The contents
    rail fills it with something a reader of a long brief actually wants, and
    echoes the marginalia column used by the ledger on the home page. */
+/* The whitepaper deliberately keeps the PROSE shell, not the hero's.
+
+   Round ten called it 93% empty at 2560 and freezing at 1100px. Widening it
+   was tried and is wrong: the body is capped at 68ch, so every extra pixel
+   flows into the 1fr contents rail — at --shell-hero the rail came out 604px
+   against a 775px body, a table of contents wider than most articles. The
+   natural width of this layout is 68ch + a rail + a gap, which is about
+   1030-1100px, and that is what it already was.
+
+   That figure is viewport share, and for a centred long-form document the rest
+   is margin, not void — the same reason prose on the home page is pinned to
+   1180px rather than allowed to grow. */
+
 .doc-shell {
     padding-left: calc(var(--rail) + 1.5rem);
     display: grid;

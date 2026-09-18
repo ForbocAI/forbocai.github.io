@@ -88,7 +88,17 @@
        out-ranks the opening — which is exactly what happened the moment the
        headline became height-aware and this stayed a fixed clamp. 0.82 keeps a
        clear gap at every size the fold test covers. */
-    --step-4: calc(var(--step-5) * 0.82);
+    /* The second act. As a pure ratio of h1 it collapsed onto the h2 plateau on a
+   phone — 29.9px against 28px, a 1.07x step, where desktop gives it 1.37x. The
+   page's dramatic centre was invisible on mobile because h2 has a floor and
+   this did not, so the two converged as h1 shrank.
+
+   The floor is RELATIVE to h2, not absolute: an absolute one large enough to
+   matter (2.4rem) would have put the second act above h1 at 390px, where h1 is
+   only 36.5px. 1.18x of h2 clears the plateau and still sits under h1 at 320,
+   the tightest width on the page. Above the floor the 0.82 ratio wins and
+   nothing on desktop moves. */
+--step-4: max(calc(var(--step-3) * 1.18), calc(var(--step-5) * 0.82));
     /* The headline has to clear the fold on every screen, not on the one it
        was measured on. A width-only clamp cannot do that: a 1440x900 laptop
        and a 1440x700 window have identical width and completely different
