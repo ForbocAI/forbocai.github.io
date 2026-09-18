@@ -215,3 +215,67 @@ main {
 .chapter.is-quiet {
     padding-block: calc(var(--chapter-gap) * 0.7);
 }
+
+/* ---------------------------------------------------------------- veins -- */
+
+/* Venation, and the slippery slide, are the same move.
+   Thirty-four horizontal hairlines on this site are `1px solid`, which is
+   uniform along its whole length and therefore inert — it separates two things
+   and says nothing about which way to go. It is also the generated default: a
+   border is uniform unless somebody decides otherwise, so every machine-laid
+   page is ruled this way.
+
+   Nothing in a living thing carries flow along a constant section. A vein is
+   thick where it leaves the stem and vanishes where it arrives, and that taper
+   is the direction. Backlinko's rule for a page somebody reads is that the
+   only job of one line is to deliver you to the next one, which is the same
+   instruction stated for prose.
+
+   So a rule on this site now enters at full weight on the left, where reading
+   starts, and thins away to nothing on the right. The eye is handed onward
+   instead of stopped. Uniform borders survive only where a line is structural
+   rather than directional — a table row, an input, a focus ring. */
+.chapter-head,
+.deeper,
+.memory-panel-head,
+.turn-answer,
+.doc-contents,
+.investors-body,
+.soul-economy {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.chapter-head,
+.memory-panel-head,
+.turn-answer {
+    border-image: linear-gradient(90deg,
+        var(--day-rule) 0%,
+        color-mix(in srgb, var(--day-rule) 45%, transparent) 42%,
+        transparent 88%) 1;
+}
+
+.chapter-night .memory-panel-head,
+.chapter-night .turn-answer,
+.turn-band .turn-answer,
+.chapter-night .chapter-head,
+.turn-band .chapter-head {
+    border-image: linear-gradient(90deg,
+        var(--night-rule) 0%,
+        color-mix(in srgb, var(--night-rule) 45%, transparent) 42%,
+        transparent 88%) 1;
+}
+
+/* The rail line under a chapter mark is the one vein that already ran the
+   right way; it just had a constant section. It tapers now, so the stem
+   narrows as it descends. */
+.chapter-mark::after {
+    width: 2px;
+    height: 3.4rem;
+    border-radius: 2px;
+    background: linear-gradient(180deg,
+        var(--day-rule) 0%,
+        color-mix(in srgb, var(--day-rule) 50%, transparent) 55%,
+        transparent 100%);
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 40% 100%);
+}
