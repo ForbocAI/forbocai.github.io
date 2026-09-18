@@ -132,3 +132,34 @@
     color: var(--night-ink);
 }
 
+
+/* The crossing. Pillar three was the only one proved by description while the
+   other two were proved by scene, in a document that teaches a reader to
+   expect scenes. */
+.soul-crossing {
+    margin-top: clamp(2rem, 4vw, 3rem);
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border-radius: var(--radius-lg);
+    border: 1px solid color-mix(in srgb, var(--creek) 26%, transparent);
+    background: color-mix(in srgb, var(--night-surface) 48%, transparent);
+    box-shadow: var(--membrane-night);
+}
+
+.soul-crossing h3 { margin: 0 0 0.8rem; font-size: var(--step-2); }
+
+.soul-crossing .turn-code {
+    max-width: 72ch;
+    margin: 1.2rem 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
+    background: color-mix(in srgb, #12180f 58%, transparent);
+    font-family: var(--font-code);
+    font-size: 0.78125rem;
+    line-height: 1.65;
+    color: var(--night-ink);
+    overflow-x: auto;
+}
+
+.soul-crossing .turn-code code { white-space: pre-wrap; }
+.soul-crossing .soul-market { max-width: 62ch; }

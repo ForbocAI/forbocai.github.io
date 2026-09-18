@@ -46,7 +46,26 @@ export const Vision = () => {
 
             <p class="soul-card"><strong>People have spent decades paying for characters they can keep, and every one of them was a picture.</strong> A card preserves who a character is. A tradable NPC carries who she became with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>
 
-            <p class="soul-market">That is the whole ecology closing: a person, a law she enters worlds through, and an owner. Take any one away and the other two are a demo. Together they are the first character who is somebody, is safe to ship, and belongs to the player who made her that way.</p>
+            <div class="soul-crossing">
+                <p class="turn-label">The night she arrives somewhere else</p>
+                <h3>A different studio's world reads her, and keeps its own counsel</h3>
+                <p class="soul-market">Two years later, a different studio, a different engine, a harbour town that has never heard of Lanternbough. The player brings her. The receiving world opens the record and decides what it is willing to know.</p>
+                <pre class="turn-code"><code>// the receiving title inspects, verifies, and rules
+{
+  admitted: [
+    'She keeps a confidence past the point it costs her',
+    'This player went north for her once, and came back',
+    'She does not open what was asked to stay shut',
+  ],
+  refused: [
+    'Aldren, her brother',        // no such person in this canon
+    'the corner room, the inn',   // she owns nothing here
+  ],
+  verified: 'registry',
+}</code></pre>
+                <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> Her brother does not exist here and it kept none of him. She has no inn on this coast. What crossed is the part that was never about Lanternbough — a woman who keeps a confidence past the point it costs her, and a player she already went north for.</p>
+                <p class="soul-market"><strong>That is the whole ecology closing.</strong> A person, a law she enters worlds through, and an owner who carried her here. The registry is how this town knew the record was hers and not a story the player typed. Its own canon is how it knew what to refuse. Take any one away and the other two are a demo — and standing in the harbour is a character no studio on earth can sell you today, at any price, because she was made somewhere else and she still walked in.</p>
+            </div>
 
             <aside class="soul-economy">
                 <h3>What $FAI is</h3>
