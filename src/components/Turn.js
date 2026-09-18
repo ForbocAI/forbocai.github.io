@@ -21,6 +21,32 @@ export const Turn = () => {
                 </div>
             </header>
 
+            <div class="turn-authored">
+                <div class="turn-authored-head">
+                    <p class="turn-label">What your writer hands us</p>
+                    <h3>The document is the character. We do not write it and we cannot.</h3>
+                    <p class="turn-note">This is <code>maeve</code> — the object the call below passes as <code>structuredPersona</code>. Every line of it was typed by a person on your narrative team, and it is the most load-bearing asset in your build. The better it is written, the better she judges.</p>
+                </div>
+                <pre class="turn-code"><code>const maeve = {
+  traits: ['Keeps a confidence past the point it costs her',
+           'Warm first, exact second'],
+  goals: ['Hold the inn through the thaw',
+          'Find out what became of her brother'],
+  relationships: [
+    { who: 'Aldren, her brother',
+      bond: 'Asked her to keep the letter sealed. Gone since autumn.' },
+    { who: 'the player',
+      bond: 'Asked after Aldren when nobody in town did. Promised to
+             return before the thaw, and did not.' },
+  ],
+  world: ['Lanternbough, the night the thaw comes',
+          'The letter is in the drawer behind her'],
+  speakingStyle: ['Short sentences. Never explains a refusal twice.'],
+  constraints: ['The letter does not open on a debt. Only on news of Aldren.'],
+}</code></pre>
+                <p class="turn-note turn-authored-foot"><strong>Read the last line, then read her reasoning below.</strong> <em>The letter does not open on a debt</em> is a writer's constraint, typed on a Tuesday. <em>That earns the road. It does not earn the letter.</em> is what it costs her at the counter, at night, with this particular player in front of her. Nobody typed the second one. That is the entire product, and your writer authored the half that decides it.</p>
+            </div>
+
             <div class="turn-grid">
                 <div class="turn-col">
                     <p class="turn-label">Your game asks</p>
@@ -34,7 +60,7 @@ export const Turn = () => {
     legalActions: ['offer_item', 'refuse'],
   }),
 ).unwrap()</code></pre>
-                    <p class="turn-note"><strong>You wrote the verbs. You did not write what she did inside one.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions you allowed. She took the refusal — and then gave him the road anyway, a thing smaller than the letter and larger than the weather that is nowhere in your tree. The vocabulary is yours and stays yours; that is the only reason she is safe to ship. The judgment inside it was never yours to write.</p>
+                    <p class="turn-note"><strong>You wrote what she is allowed to do. You did not write what she would say while doing it.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions on the table, and she took the refusal — then gave him the road anyway, in the line itself: a thing smaller than the letter and larger than the weather, nowhere in your tree. The vocabulary is yours and stays yours. What she made of it was never yours to write.</p>
                     ${Deeper({
                         summary: 'What your game owns in this call',
                         body: `<p class="turn-note">Memory is a store your studio created and can read without us. World context and the legal action set belong to this turn. In Unreal, the equivalent entry is <code>UForbocAISubsystem::ProcessNPC</code>; Blueprint exposes <code>Process NPC</code>.</p>`,
@@ -64,7 +90,10 @@ export const Turn = () => {
                         summary: 'What <code>valid: true</code> does and does not cover',
                         body: `<p class="turn-note">It means the turn met its deadline and passed its checks. It does not mean every word is true about your world — that is the gate twelve limit printed below.</p>`,
                     })}
-                    <p class="turn-note"><strong>There is a lore error in the turn above.</strong> Look at <em>He went north.</em> The refusal is guaranteed — your state never moved. The road is prose, and nothing here checked it against your world. If act two moved her brother south, it is in the player's quest log by morning. That is gate twelve, and we print it on our own demo rather than three paragraphs away from one.</p>
+                    ${Deeper({
+                        summary: 'There is a lore error in the turn above',
+                        body: `<p class="turn-note">Look at <em>He went north.</em> The refusal is guaranteed — your state never moved. But the road is prose, and nothing here checked it against your world. If act two moved her brother south, it is in the player's quest log by morning. We print that on our own demo rather than three paragraphs away from one.</p>`,
+                    })}
                     <p class="turn-note"><strong>One judgment, one call.</strong> Not a chain of calls per line, not a re-roll to get a parseable action.</p>
                     ${Deeper({
                         summary: 'What happens when a turn misses its deadline',
@@ -106,7 +135,7 @@ export const Turn = () => {
 
             <p class="turn-consequence"><strong>A refusal becomes the next piece of evidence too.</strong> The letter stays sealed, the world remembers that it was asked for, and Maeve enters the next encounter as the person who kept her brother's confidence — and who knows this player asked after him anyway.</p>
 
-            <p class="turn-refusal"><strong>The magic remains authored.</strong> Servitor™ creates the possibility; the Protocol makes it legible to the world; your game turns it into history. Eighteen months from now a player will describe this scene to a friend and get the details wrong. They will still get Maeve right.</p>
+            <p class="turn-refusal"><strong>The magic remains authored.</strong> Servitor™ creates the possibility; the Protocol makes it legible to the world; your game turns it into history.</p>
         </div>
     </section>
     `;

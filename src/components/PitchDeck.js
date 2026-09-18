@@ -57,7 +57,6 @@ const slides = [
                 </article>
             </div>
             <p class="impact-statement"><strong>General conversation ends with words.</strong> Character Intelligence begins where identity, consequence and action meet.</p>
-            <p class="ask-note">Gates thirteen through fifteen carry the numbers for this slide.</p>
         `
     },
     {
@@ -113,7 +112,6 @@ const slides = [
                 <article><span>Decision</span><h3>Authorship stays alive</h3><p>Servitor™ carries the person into the unforeseen instead of replacing her.</p></article>
             </div>
             <p class="impact-statement">The model does not add one house personality to every world. It gives each authored person room to remain herself.</p>
-            <p class="ask-note">Gates thirteen and fourteen: persona hold, cast separation.</p>
         `
     },
     {
@@ -134,7 +132,7 @@ const slides = [
                 <li class="boundary-stage is-contract">
                     <span>Protocol law</span>
                     <h2>Separate rules hold</h2>
-                    <p>The reply meets its contract; that check is mechanical, and it is not a lore check — gate twelve. The action meets studio-authored policy.</p>
+                    <p>The reply meets its contract and the action meets studio-authored policy. Both checks are mechanical; neither is a lore check.</p>
                 </li>
                 <li class="boundary-stage is-studio">
                     <span>Game truth</span>
@@ -151,7 +149,7 @@ const slides = [
         content: `
             <ol class="arrival-contract" aria-label="Maeve's choice enters canon">
                 <li><span>Judgment</span><strong>Maeve keeps the confidence.</strong><p>Identity, memory and motive weigh a promise to her brother against a debt to a stranger.</p></li>
-                <li><span>Proposal</span><strong>Servitor™ returns the refusal.</strong><p>Dialogue, the reasoning behind it and the <code>refuse</code> action arrive together, for the game to inspect. That the stated reason is the deciding one is gate fifteen.</p></li>
+                <li><span>Proposal</span><strong>Servitor™ returns the refusal.</strong><p>Dialogue, the reasoning behind it and the <code>refuse</code> action arrive together, for the game to inspect.</p></li>
                 <li><span>Canon</span><strong>Your game accepts — or overrides.</strong><p>The letter stays sealed, and that consequence can become evidence next time.</p></li>
             </ol>
             <p class="arrival-answer"><strong>She can choose her next move.</strong> Only the game can make it history.</p>
@@ -183,7 +181,7 @@ const slides = [
                 <article><span>Collection</span><h3>Every person can be singular</h3><p>A cast becomes a portfolio of identities, not interchangeable content.</p></article>
                 <article><span>Return</span><h3>Continuity deepens belonging</h3><p>A player comes back for the person who remembers what they did last season.</p></article>
             </div>
-            <p class="moat-intro">Cards proved that people return to identities they care about. The deeper prize is not only who a character is, but who she becomes with you. Carrying that between two titles is gate eleven.</p>
+            <p class="moat-intro">Cards proved that people return to identities they care about. The deeper prize is not only who a character is, but who she becomes with you — and carrying that from one world into the next.</p>
         `
     },
     {
@@ -193,9 +191,9 @@ const slides = [
             <div class="business-grid model-economy">
                 <div class="business-item"><span class="business-phase">Enter</span><h4>One impossible choice</h4><p>A single scene reveals the new unit: a judgment no branch contained.</p></div>
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
-                <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>One model holding a thousand casts with nothing in common — a Lanternbough innkeeper, a fleet commander, a child in a besieged city — and no two of them sounding like the same mind.</p></div>
+                <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>One model holding every cast in a catalogue, with nothing in common between them — a Lanternbough innkeeper, a fleet commander, a child in a besieged city — and no two of them sounding like the same mind.</p></div>
             </div>
-            <p class="impact-statement">Your store never leaves you; what moves is the turn, and keeping it out of training is gate four. What compounds is the range of worlds one contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. Today that range is our own evaluation worlds and no external studio: gate one, listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
+            <p class="impact-statement">Your store never leaves you; what moves is the turn, and it stays out of training. What compounds is the range of worlds one contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. Today that range is our own evaluation worlds and no external studio: gate one, listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
         `
     },
     {
@@ -216,7 +214,7 @@ const slides = [
                     <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
                 </div>
             </div>
-            <p class="team-note">Four proofs carry this company. Two work today in our own evaluation worlds: Servitor™ itself, reasoning through the Protocol and failing closed end to end, and the same contract in TypeScript and in Unreal. Two are owed: a character who stays herself under held-out evaluation and live play, which is gate thirteen; and a harness that explores a level and returns findings an outside team can act on, which is gate ten.</p>
+            <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category will be bought on. That is not a small company — it is what the rate of arrival looks like from inside it.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },
@@ -228,9 +226,9 @@ const slides = [
                 <p class="proof-label">The window</p>
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not yet have is a cast a player has argued with in a shipped title — and the studio that ships first decides what this category means for everyone who follows it.</p>
                 <p class="threshold-line">Those three settle it — and to be plain, they are not shipped titles. The ledger says nobody signs a shipped integration before five, six and nine clear. The first three are the worlds we clear them against.</p>
-                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> Gate one is a studio. Gates thirteen to fifteen are a character who stays herself under an evaluation someone else designed. Gate twenty-one is that evaluation published and handed to our rivals, because the party who authors a category's test authors what the category is worth. None of it asks you to believe a forecast — the model is reasoning tonight, in our own worlds. It asks whether you would rather be in the room while the law is written, or reading it afterwards.</p>
+                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> A studio. Then a character who stays herself under an evaluation somebody else designed. Then that evaluation published and handed to our rivals, because whoever authors a category's test authors what the category is worth. None of it asks you to believe a forecast. It asks whether you would rather be in the room while the law is written, or reading it afterwards.</p>
             </div>
-            <p class="ask-note">Twenty-four gates are listed, and thirteen through fifteen measure the claims we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
+            <p class="ask-note">The standard this category will be graded on is published, and every line of it is unclaimed.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Be one of the first three integrations</a>
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-ghost">Investors: come inside</a>

@@ -59,7 +59,7 @@ export const Vision = () => {
                 <p>What it is pointed at is the harder version of gate eleven. When a character crosses between two studios who have no reason to trust each other, her history has to be true somewhere neither of them owns and both can check. That is a question worth a token, and it is the last line on the ledger — gate twenty-four, unclaimed, with everything else we owe.</p>
                 <div class="hero-buttons">
                     <a href="#whitepaper" class="btn btn-primary" data-link>Read the architecture</a>
-                    <a href="#wp-gates" class="text-link" data-link>See the twenty-four gates</a>
+                    <a href="#wp-gates" class="text-link" data-link>See the standard</a>
                 </div>
             </aside>
         </div>

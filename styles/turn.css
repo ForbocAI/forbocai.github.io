@@ -275,3 +275,41 @@
             color-mix(in srgb, var(--honey) 52%, transparent));
     }
 }
+
+/* ------------------------------------------------------------- authored -- */
+
+/* The writer's document, published beside the judgment it produced. Set as a
+   peer of the turn grid rather than a sidebar, because a narrative team's
+   artifact is not an annotation on the engineering — it is the half of this
+   product that decides what she does. */
+.turn-authored {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    border-radius: var(--radius-lg);
+    border: 1px solid color-mix(in srgb, var(--honey) 24%, transparent);
+    background: color-mix(in srgb, var(--night-surface) 45%, transparent);
+    box-shadow: var(--membrane-night);
+}
+
+.turn-authored-head {
+    max-width: 62ch;
+    margin-bottom: 1.2rem;
+}
+
+.turn-authored-head h3 {
+    margin: 0 0 0.6rem;
+    font-size: var(--step-2);
+}
+
+.turn-authored .turn-note {
+    max-width: 68ch;
+}
+
+.turn-authored-foot {
+    margin-top: 1.1rem;
+}
+
+.turn-authored-foot em {
+    font-style: italic;
+    color: var(--night-ink);
+}

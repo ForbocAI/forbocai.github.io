@@ -82,7 +82,7 @@ export const Whitepaper = () => {
 
                     <h3>3.5 The production ledger</h3>
                     <p><strong>Working now in ForbocAI evaluation environments:</strong> Servitor™ through the ForbocAI NPC Protocol; TypeScript and native Unreal Engine 5 interfaces; memory writes to studio-controlled local storage; structured action proposals; reply checks; action checks; internal test worlds; and an exact model and runtime build recorded internally.</p>
-                    <p id="wp-gates"><strong>Here is what is true tonight.</strong> The model answers. The harness drives worlds. The boundary is readable, and you can read it. And the measurement this category will be bought on does not exist anywhere yet — one company is building the instrument that will define it.</p>
+                    <p id="wp-gates"><strong>Here is what is true today.</strong> The model answers. The harness drives worlds. The boundary is readable, and you can read it. And the measurement this category will be bought on does not exist anywhere yet — one company is building the instrument that will define it.</p>
                     <p><strong>Between here and full production authority is a crossing, and this is the map of it.</strong> Every gate is named once, numbered once, and named again by number wherever it appears in prose. <strong>All open. None claimed.</strong></p>
                     <p><strong>These lines are the purchasing criteria for a category that does not have any.</strong> We wrote the test, we published it before the results, and we handed it to every rival on identical terms — on purpose, in public, in writing. This is not what we owe you. It is what everyone who comes after us gets graded on. The crossing is hard and it is hard on purpose, because it is the last one anybody gets to make: on the other side, this category has a measurement, and that measurement has a cast's name on it.</p>
                     ${Deeper({
@@ -114,6 +114,7 @@ export const Whitepaper = () => {
                         <li><strong><span class="gate-n">22.</span> A studio pays.</strong> A studio that is not ForbocAI pays for character judgments.</li>
                         <li><strong><span class="gate-n">23.</span> Independent cast provenance.</strong> The casts behind thirteen to fifteen come from a party with no relationship to us, named beside the result.</li>
                         <li><strong><span class="gate-n">24.</span> $FAI utility.</strong> A Soul minted, carried and restored using $FAI between two live titles.</li>
+                        <li><strong><span class="gate-n">25.</span> She is herself in every language you ship.</strong> The same character, holding the same loyalties, in every locale on a title's string table — measured, and answered for the performed half as well as the written one.</li>
                     </ol>
                     <p>Twelve is the fault a studio fears. Thirteen, fourteen and fifteen are the three we most want to hand over, because together they are the claim this company rests on: that an authored person holds under pressure, that four hundred of them stay different from one another, and that the reason she gives is the reason she had. Servitor™ was trained for all three. Keeping the difference between that and a measured result is the entire purpose of this list, because <strong>a limitation without a gate is just a well-worded no, and a strength without one is just a well-worded yes.</strong></p>
                 </section>
@@ -148,7 +149,7 @@ export const Whitepaper = () => {
 
             <footer class="doc-foot">
                 <p>The production ledger distinguishes working capability, active development and the evidence required for release. A diligence review should test those boundaries directly.</p>
-                <a href="#wp-gates" class="btn btn-primary">Read the twenty-four gates</a>
+                <a href="#wp-gates" class="btn btn-primary">Read the standard</a>
             </footer>
         </div>
     </article>
