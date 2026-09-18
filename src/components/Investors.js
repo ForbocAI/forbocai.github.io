@@ -11,7 +11,7 @@ export const Investors = () => {
                 <span class="chapter-mark" aria-hidden="true">ᛞ</span>
                 <div>
                     <h2>Someone has to build the layer they think with</h2>
-                    <p class="chapter-lead"><strong>The future has begun to look back.</strong> Games are going to be full of people who decide. Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who nearly earned it. Calling that settled would need a gate behind it and this one has none, so: the direction the medium has been walking for thirty years, and that the open question is who builds the layer they think with. Servitor™ is that layer, and it is reasoning today; the Protocol is how its judgments enter a world without being able to move anything in it. The twenty-four gates between here and production authority are numbered and public, because a category being settled from the inside can afford to publish its own itinerary.</p>
+                    <p class="chapter-lead"><strong>The future has begun to look back.</strong> Games are going to be full of people who decide. Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who nearly earned it. That is the direction the medium has been walking for thirty years, and the only open question left in it is who builds the layer they think with. Servitor™ is that layer, and it is reasoning today; the Protocol is how its judgments enter a world without being able to move anything in it. The twenty-four gates between here and production authority are numbered and public, because a category being settled from the inside can afford to publish its own itinerary.</p>
                 </div>
             </header>
 
@@ -26,7 +26,7 @@ export const Investors = () => {
                 </figure>
             </div>
 
-            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law its judgment enters through. Together they are the medium. What was mute is being given a faithful voice, and what is being liberated is the maker's time and the character's continuity. Twenty-four gates stand open and numbered in the whitepaper, none of them cleared. We publish that because the first three studios through this door will have read it, and because a door worth walking through is one you can see the shape of.</p>
+            <p class="investors-takeaway">Servitor™ is the intelligence. The ForbocAI NPC Protocol is the law its judgment enters through. Together they are the medium. What was mute is being given a faithful voice, and what is being liberated is the maker's time and the character's continuity. Twenty-four gates stand open and numbered in the whitepaper. We publish that because the first three studios through this door will have read it, and because a door worth walking through is one you can see the shape of.</p>
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20will%20remember" class="btn btn-primary">Bring the character players will remember</a>
