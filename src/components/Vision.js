@@ -20,7 +20,7 @@ export const Vision = () => {
 
             <p class="soul-decouple"><strong>The Soul layer is in active development now:</strong> an opt-in, encrypted record of identity, memory, relationships and unresolved history. A receiving title can inspect it, verify it and decide what enters its own canon.</p>
 
-            <p class="soul-card"><strong>Trading cards made identity collectible. Souls make relationship cumulative.</strong> A static card preserves who a character is. A Soul carries who she trusted, what she refused and the argument she is still having because of one player's choices.</p>
+            <p class="soul-card"><strong>Trading cards made identity collectible, and people have spent decades proving they will pay for it—<a href="https://www.gminsights.com/industry-analysis/trading-card-games-market" target="_blank" rel="noopener noreferrer">a roughly $9&nbsp;billion market in 2026 forecast to reach $16.9&nbsp;billion by 2035</a>. Souls make that relationship cumulative.</strong> That figure is evidence of the habit, not a forecast of Soul revenue. A static card preserves who a character is. A Soul carries who she trusted, what she refused and the argument she is still having because of one player's choices.</p>
 
             <p class="soul-market">The player does not merely carry an image of who Maeve was. They carry the history of who she became with them. Studios gain a compounding creative asset across seasons, worlds and communities while every receiving world keeps authority over canon, law and game state.</p>
 

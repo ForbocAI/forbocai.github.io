@@ -30,6 +30,7 @@ export const Mission = () => {
             <div class="mission-turn">
                 <p class="mission-turn-label">The category: Character Intelligence</p>
                 <p><strong>Games learned to render impossible worlds, simulate their physics and let players cross every horizon.</strong> The people inside them are the last surface that still ends at the edge of a branch. Character Intelligence removes that ceiling.</p>
+                <p><strong>Everyone else is making the model more itself. We took the self out.</strong> A general model brings its own voice, its own agreeableness and its own opinions to every character it wears, which is why the cast of a hundred NPCs sounds like one actor. Servitor™ is trained the other way round: it holds no self of its own, so the authored person is the only one in the room. That is not a higher score on the same measure. It is the opposite measure.</p>
                 <p><strong>A chatbot answers. A character chooses.</strong> Servitor™ interprets identity, memory, motive, relationships and world evidence to make the judgment that belongs to this person. The ForbocAI NPC Protocol gives that intelligence a governed place inside the game.</p>
                 <p class="mission-turn-punch">A character may reason beyond the script. Only her world can make the consequence real.</p>
             </div>
