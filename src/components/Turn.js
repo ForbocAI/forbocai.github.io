@@ -60,7 +60,7 @@ export const Turn = () => {
     legalActions: ['offer_item', 'refuse'],
   }),
 ).unwrap()</code></pre>
-                    <p class="turn-note"><strong>You wrote what she is allowed to do. You did not write what she would say while doing it.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions on the table, and she took the refusal — then gave him the road anyway, in the line itself: a thing smaller than the letter and larger than the weather, nowhere in your tree. The vocabulary is yours and stays yours. What she made of it was never yours to write.</p>
+                    <p class="turn-note"><strong>You wrote what she is allowed to do. You did not write what she would say while doing it.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions on the table. She took the refusal. Then she gave him the road anyway, in the line itself — a thing smaller than the letter and larger than the weather, and nowhere in your tree. The vocabulary is yours and stays yours. What she made of it was never yours to write.</p>
                     ${Deeper({
                         summary: 'What your game owns in this call',
                         body: `<p class="turn-note">Memory is a store your studio created and can read without us. World context and the legal action set belong to this turn. In Unreal, the equivalent entry is <code>UForbocAISubsystem::ProcessNPC</code>; Blueprint exposes <code>Process NPC</code>.</p>`,

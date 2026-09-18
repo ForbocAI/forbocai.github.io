@@ -51,7 +51,7 @@ export const Vision = () => {
                 body: `<p class="soul-card"><a href="https://www.gminsights.com/industry-analysis/trading-card-games-market" target="_blank" rel="noopener noreferrer">Global Market Insights sizes the printed trading-card game market at $8.4&nbsp;billion in 2025, growing to $9.2&nbsp;billion in 2026</a>. Read it as evidence of the appetite, not as a forecast of Soul revenue — printed cards are a different product in a different market.</p>`,
             })}
 
-            <p class="soul-market">The player does not carry an image of who Maeve was. They carry the history of who she became with them — and that history is the asset a studio compounds across seasons, worlds and communities, while every receiving world keeps authority over its own canon, law and state. The crossing is where it stops being ours and starts being yours.</p>
+            <p class="soul-market">The player does not carry an image of who Maeve was. They carry the history of who she became with them. That history is the asset a studio compounds — across seasons, across worlds, across a community. Every receiving world still rules its own canon. The crossing is where it stops being ours and starts being yours.</p>
 
             <aside class="soul-economy">
                 <h3>What $FAI is for</h3>
