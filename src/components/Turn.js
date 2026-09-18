@@ -31,7 +31,7 @@ export const Turn = () => {
             <div class="turn-authored">
                 <div class="turn-authored-head">
                     <p class="turn-label">What your writer hands us</p>
-                    <h3>The document is the character. We do not write it and we cannot.</h3>
+                    <h3>The document is the character, and every one of yours has one. We do not write them and we cannot.</h3>
                     <p class="turn-note">This is <code>maeve</code> — the object the call below passes as <code>structuredPersona</code>. Every line of it was typed by a person on your narrative team, and it is the most load-bearing asset in your build. The better it is written, the better she judges.</p>
                 </div>
                 <pre class="turn-code"><code>const maeve = {

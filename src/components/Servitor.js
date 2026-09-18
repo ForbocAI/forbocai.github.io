@@ -15,7 +15,7 @@ export const Servitor = () => `
                 ${ChapterMark({ rune: 'ᛗ' })}
                 <div>
                     <h2>Meet The ForbocAI NPC LM Servitor™</h2>
-                    <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> A general model reads a persona as instructions to perform, and performs itself through them. Servitor™ was trained with the character as the unit of the decision, so there is no house voice underneath waiting to come through.</p>
+                    <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> A general model reads a persona as instructions to perform, and performs itself through them — which is why a cast of a hundred sounds like one actor doing accents. Servitor™ was trained with the character as the unit of the decision, so there is no house voice underneath waiting to come through, and four hundred of your people can share one model without sharing a personality.</p>
                     ${Deeper({
                         summary: 'What is actually trained in',
                         body: `<p>Not <em>which</em> person she is — you still hand us your character on every turn, and the cast is yours and stays yours. What is trained in is <em>how</em> a person is held: one character judgment carrying identity, evidence, motive, reasoning, dialogue and structured intent through the same decision.</p>`,
