@@ -41,6 +41,7 @@ export const selectCurrentPath = (state) => state.navigation.currentPath;
 export const selectCurrentPage = (state) => {
     const path = selectCurrentPath(state);
     if (path === 'whitepaper') return 'whitepaper';
+    if (path === 'scenes') return 'scenes';
     if (path.startsWith('pitch')) return 'pitch';
     return 'index';
 };

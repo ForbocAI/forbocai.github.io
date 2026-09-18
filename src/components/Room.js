@@ -95,3 +95,35 @@ export const Room = () => {
     </section>
     `;
 };
+
+/**
+ * The teaser the home page carries instead of the whole scene.
+ *
+ * The full scene is 2.5 screens of second demonstration, and the home page had
+ * 19.4 of them against an AAA benchmark of 6-7. Everything it proves is still
+ * proven — it is one link away on /#scenes rather than in the scroll of
+ * someone deciding whether to care yet. The claim, the picture and the one
+ * line that lands stay here; the walkthrough moves.
+ */
+export const RoomTeaser = () => `
+    <section id="room" class="chapter turn-band">
+        <div class="container">
+            <header class="chapter-head">
+                ${ChapterMark({ rune: 'ᛖ' })}
+                <div>
+                    <h2>The rest of the room was listening</h2>
+                    <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
+                </div>
+            </header>
+
+            <figure class="maeve-scene room-scene">
+                <img src="living-cast-scene.webp" alt="Maeve and the living cast of Lanternbough after the storm." width="1672" height="941" loading="lazy">
+                <figcaption>Everyone in the room has something at stake in what she just said.</figcaption>
+            </figure>
+
+            <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt she did not know about. Two people is every pair; five is every combination of five in every order; a raid is that with a boss in the middle.</p>
+
+            <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">Watch the whole room decide</a></p>
+        </div>
+    </section>
+`;

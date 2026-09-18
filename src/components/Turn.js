@@ -28,6 +28,56 @@ export const Turn = () => {
                 <figcaption>The drawer is behind her. The question has already been asked.</figcaption>
             </figure>
 
+            <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">Read the whole turn, line by line</a></p>
+
+            <section class="turn-counterfactual" aria-labelledby="turn-counterfactual-title">
+                <div class="turn-counterfactual-head">
+                    <p class="turn-label">The character changes when the meaning changes</p>
+                    <h3 id="turn-counterfactual-title">One changed truth. A different choice.</h3>
+                    <p class="turn-diffline">The player went north, and came back with her brother's ring.</p>
+                </div>
+                <div class="turn-counterfactual-pair">
+                    <article>
+                        <span>Before</span>
+                        <p class="turn-note"><em>You said you would come back before the thaw. You did not.</em></p>
+                        <pre class="turn-code"><code>{
+  dialogue: <b>"He went north. That is all I can give you tonight."</b>,
+  reasoningText: <b>"That earns the road. It does not earn the letter."</b>,
+  action: { type: <b>'refuse'</b>, payload: { item: 'brothers_letter' } },
+}</code></pre>
+                    </article>
+                    <article>
+                        <span>After</span>
+                        <p class="turn-note"><em>You kept the promise, and you brought her the worst news in town.</em></p>
+                        <pre class="turn-code"><code>{
+  dialogue: <b>"Then you already know what is in it. Sit down first."</b>,
+  reasoningText: <b>"He is not coming back, and this one went to find that out for me. What he asked me to keep was never a wall to hold against the only person who looked."</b>,
+  action: { type: <b>'offer_item'</b>, payload: { item: 'brothers_letter' } },
+}</code></pre>
+                    </article>
+                </div>
+                <p class="turn-counterfactual-foot"><strong>Nothing about Maeve changed.</strong> Same persona, same question, same two verbs on the table. Her brother's request still stands and she still weighs it the same way. What changed is what the player made true — and that is the whole difference between a character and a generator.</p>
+            </section>
+
+
+        </div>
+    </section>
+    `;
+};
+
+
+/**
+ * The walkthrough the home page no longer carries.
+ *
+ * #turn ran 4.5 screens — the persona document, the call, the return and the
+ * apparatus around all three — inside a page that was 18 screens against an
+ * AAA benchmark of six or seven. The evidence is not padding and none of it is
+ * cut; it is on /#scenes for the reader who wants it, while the home page
+ * keeps the scene and the counterfactual, which is the moment that lands.
+ */
+export const TurnWalkthrough = () => `
+    <section id="turn-walkthrough" class="chapter turn-band">
+        <div class="container">
             <div class="turn-authored">
                 <div class="turn-authored-head">
                     <p class="turn-label">What your writer hands us</p>
@@ -114,38 +164,6 @@ export const Turn = () => {
                     })}
                 </div>
             </div>
-
-            <section class="turn-counterfactual" aria-labelledby="turn-counterfactual-title">
-                <div class="turn-counterfactual-head">
-                    <p class="turn-label">The character changes when the meaning changes</p>
-                    <h3 id="turn-counterfactual-title">One changed truth. A different choice.</h3>
-                    <p class="turn-diffline">The player went north, and came back with her brother's ring.</p>
-                </div>
-                <div class="turn-counterfactual-pair">
-                    <article>
-                        <span>Before</span>
-                        <p class="turn-note"><em>You said you would come back before the thaw. You did not.</em></p>
-                        <pre class="turn-code"><code>{
-  dialogue: <b>"He went north. That is all I can give you tonight."</b>,
-  reasoningText: <b>"That earns the road. It does not earn the letter."</b>,
-  action: { type: <b>'refuse'</b>, payload: { item: 'brothers_letter' } },
-}</code></pre>
-                    </article>
-                    <article>
-                        <span>After</span>
-                        <p class="turn-note"><em>You kept the promise, and you brought her the worst news in town.</em></p>
-                        <pre class="turn-code"><code>{
-  dialogue: <b>"Then you already know what is in it. Sit down first."</b>,
-  reasoningText: <b>"He is not coming back, and this one went to find that out for me. What he asked me to keep was never a wall to hold against the only person who looked."</b>,
-  action: { type: <b>'offer_item'</b>, payload: { item: 'brothers_letter' } },
-}</code></pre>
-                    </article>
-                </div>
-                <p class="turn-counterfactual-foot"><strong>Nothing about Maeve changed.</strong> Same persona, same question, same two verbs on the table. Her brother's request still stands and she still weighs it the same way. What changed is what the player made true — and that is the whole difference between a character and a generator.</p>
-            </section>
-
-
         </div>
     </section>
-    `;
-};
+`;

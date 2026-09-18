@@ -14,7 +14,8 @@ import { Mission } from './Mission.js';
 import { Servitor } from './Servitor.js';
 import { Technology } from './Technology.js';
 import { Turn } from './Turn.js';
-import { Room } from './Room.js';
+import { RoomTeaser } from './Room.js';
+import { Scenes } from './Scenes.js';
 import { Roadmap } from './Roadmap.js';
 import { Vision } from './Vision.js';
 import { Investors } from './Investors.js';
@@ -57,6 +58,10 @@ export const App = (state) => {
             return Whitepaper();
         }
 
+        if (page === 'scenes') {
+            return Scenes();
+        }
+
         if (page === 'pitch') {
             return PitchDeck(state);
         }
@@ -72,7 +77,7 @@ export const App = (state) => {
                 <div class="nightfall-edge" aria-hidden="true"></div>
                 ${Fireflies()}
                 ${Turn()}
-                ${Room()}
+                ${RoomTeaser()}
                 ${Roadmap()}
                 ${Vision()}
                 ${Investors()}

@@ -6,6 +6,7 @@ const LINKS = [
     { href: '#servitor', label: 'Servitor™', internal: true },
     { href: '#turn', label: 'One choice', internal: true },
     { href: '#technology', label: 'Living worlds', internal: true },
+    { href: '#scenes', label: 'The scenes', internal: true },
     { href: '#roadmap', label: 'Horizons', internal: true },
     { href: 'https://docs.forboc.ai', label: 'Docs', internal: false },
     { href: '#whitepaper', label: 'Whitepaper', internal: true },
