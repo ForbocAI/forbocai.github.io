@@ -119,3 +119,16 @@
     margin-top: 1.5rem;
 }
 
+/* .text-link's copper ink is tuned for the parchment chapters. This panel is
+   the one place it lands on --night-surface, where it measures 1.67:1 and all
+   but disappears. The night context borrows the lantern the heading above it
+   already uses. */
+.soul-economy .text-link {
+    color: var(--lantern);
+    text-decoration-color: color-mix(in srgb, var(--lantern) 55%, transparent);
+}
+
+.soul-economy .text-link:hover {
+    color: var(--night-ink);
+}
+

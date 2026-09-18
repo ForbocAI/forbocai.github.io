@@ -163,7 +163,7 @@ const slides = [
                 <article><span>01</span><strong>One character</strong><p>Enter through one impossible scene.</p></article>
                 <article><span>02</span><strong>A living cast</strong><p>Distinct motives meet the unforeseen.</p></article>
                 <article><span>03</span><strong>Systems answer back</strong><p>Factions and quests react through judgment.</p></article>
-                <article><span>04</span><strong>An inhabited world</strong><p>Possibility expands. Authorship holds.</p></article>
+                <article><span>04</span><strong>An inhabited world</strong><p>The player goes somewhere you never wrote. The cast is already there.</p></article>
             </div>
             <figure class="maeve-scene living-world-scene">
                 <img src="living-cast-scene.webp" alt="Maeve and a distinct living cast move through Lanternbough after the storm." width="1672" height="941">
@@ -193,7 +193,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>Servitor™ becomes the shared model layer beneath distinct authored casts.</p></div>
             </div>
-            <p class="impact-statement">Nothing here compounds on your data—it arrives with the turn and we keep none of it. What compounds is the range of worlds one decision contract holds in. Today that range is our own evaluation worlds and no external studio—that gate is listed and unclaimed—which is exactly why the first three integrations are the whole thesis: every genre the contract survives makes the next one a smaller question than the last. The self is the hard part to copy: everything else about training a capable general model pushes it toward having one, and the boundary that keeps a character's judgment separable from the game's authority is not a layer you fit over a model that already has opinions.</p>
+            <p class="impact-statement">Your world state and your memory store stay yours, and neither becomes ForbocAI training data. The turn itself crosses our service, because hosted cognition is the thing you are buying; what is kept of it, and for how long, is bound in the release contract rather than promised in a sentence on a website. So nothing here compounds on your data. What compounds is the range of worlds one decision contract holds in—and that is the whole moat, so it is worth being exact about both halves. The self is hard to subtract: everything about training a capable general model pushes it toward having one, and the boundary that keeps a character's judgment separable from the game's authority is not a layer you fit over a model that already has opinions. That is why a competitor cannot retrofit it. What stops one starting fresh is the second half—each genre this contract survives makes the next integration a smaller question, and that ladder has to be climbed in order by anyone. Today ours stands at our own evaluation worlds and no external studio; that gate is listed and unclaimed, which is exactly why the first three integrations are the whole thesis.</p>
         `
     },
     {
@@ -205,7 +205,7 @@ const slides = [
                 <p class="threshold-lead">Outside, it still looks early. Inside, Character Intelligence already has its model and its laws, and the commercial standard is being bound gate by gate in public.</p>
                 <p class="threshold-line">NPC language models are already obvious from inside the game. Whoever ships the first cast a player argues with defines what they are.</p>
             </div>
-            <p class="ask-note">Twelve gates are listed. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
+            <p class="ask-note">Thirteen gates are listed, and the last one measures the claim we are proudest of. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=Enter%20the%20age%20of%20the%20living%20cast" class="btn btn-primary">Enter the age of the living cast</a>
             </div>

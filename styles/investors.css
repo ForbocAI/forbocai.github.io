@@ -42,9 +42,34 @@
    the one place on the page where an asset looked pasted in.
    Reconstructed against .dream-loop/r26-final/home-desktop-11.png. */
 .investor-portal {
+    position: relative;
     display: grid;
     justify-items: center;
     margin: 0;
+}
+
+.investor-portal::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: min(150%, 760px);
+    aspect-ratio: 1;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        color-mix(in srgb, var(--lantern) 16%, transparent) 0%,
+        transparent 62%
+    );
+    pointer-events: none;
+    animation: portal-spill 9s ease-in-out infinite alternate;
+    will-change: opacity, transform;
+}
+
+@keyframes portal-spill {
+    from { opacity: 0.66; scale: 0.97; }
+    to { opacity: 1; scale: 1.03; }
 }
 
 .portal-window {
@@ -76,6 +101,25 @@
     transform: scale(1.14);
     transform-origin: 50% 56%;
     filter: saturate(1.02) brightness(0.98);
+    /* There is a candle in there. A flame that never moves is a photograph of
+       a flame, so the light it throws breathes — slowly enough that you notice
+       it only if you stay. */
+    animation:
+        portal-candle 9s ease-in-out infinite alternate,
+        portal-refract 22s ease-in-out infinite alternate;
+    will-change: transform, filter;
+}
+
+@keyframes portal-candle {
+    from { filter: saturate(1.02) brightness(0.955); }
+    to { filter: saturate(1.05) brightness(1.02); }
+}
+
+/* Counter to portal-gleam, and a third of its distance — the amount a lens
+   this thick would actually displace what is behind it. */
+@keyframes portal-refract {
+    from { transform: scale(1.14) translate3d(0.5%, 0.3%, 0); }
+    to { transform: scale(1.145) translate3d(-0.8%, -0.45%, 0); }
 }
 
 /* The body of the sphere. A real glass ball on a dark ground goes almost black
@@ -111,9 +155,10 @@
 .portal-window::before {
     content: "";
     position: absolute;
-    inset: 0;
+    /* Oversized so the drift never walks an edge into view; the sphere's own
+       overflow does the clipping. */
+    inset: -14%;
     z-index: 2;
-    border-radius: 50%;
     background:
         radial-gradient(
             ellipse 30% 20% at 30% 20%,
@@ -139,6 +184,16 @@
         );
     mix-blend-mode: screen;
     pointer-events: none;
+    /* Transform only, so this rides the compositor and costs no layout. The
+       arc is a few per cent across twenty-two seconds: at that speed it reads
+       as a held object catching the light rather than as an effect. */
+    animation: portal-gleam 22s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes portal-gleam {
+    from { transform: translate3d(-1.6%, -1.1%, 0) rotate(-1.6deg); }
+    to { transform: translate3d(2.4%, 1.4%, 0) rotate(1.6deg); }
 }
 
 .investor-portal figcaption {

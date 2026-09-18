@@ -21,7 +21,7 @@ export const Hero = () => {
                 <p class="hero-engines"><strong>The ForbocAI NPC Protocol gives that intelligence a lawful place inside the world.</strong> Servitor™ proposes. Your game alone makes the choice real.</p>
                 <div class="hero-buttons">
                     <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
-                    <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
+                    <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">See the call signature</a>
                 </div>
             </div>
 

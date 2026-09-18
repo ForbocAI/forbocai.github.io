@@ -32,7 +32,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Ghost in development</p>
                         <h3>See the world before players do</h3>
-                        <p>Ghost already drives internal test worlds. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is in development. Those producers work here until an external studio clears its gate, and production qualification controls release.</p>
+                        <p>Ghost already drives internal test worlds. Turning those runs into producer-facing reports on dead ends, unreachable content and social-loop coverage is in development. The only producers reading those reports today are our own, because no external studio has cleared its gate yet, and production qualification controls release.</p>
                     </div>
                 </li>
                 <li class="timeline-item">

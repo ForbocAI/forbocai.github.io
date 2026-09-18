@@ -35,7 +35,7 @@ export const Mission = () => {
                 <p class="mission-turn-punch">A character may reason beyond the script. Only her world can make the consequence real.</p>
             </div>
 
-            <p class="mission-felt"><strong>We are already inside the age of the living cast.</strong> Character Intelligence is the creative medium that lets a world answer through the people in it, and the model, the law and the commercial terms underneath it are being settled now.</p>
+            <p class="mission-felt"><strong>We are already inside the age of the living cast.</strong> Character Intelligence is the creative medium that lets a world answer through the people in it. We are building the model. We wrote the law it enters through. We are negotiating the commercial terms now, and we publish what is not settled yet.</p>
         </div>
     </section>
     `;
