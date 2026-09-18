@@ -1,3 +1,5 @@
+import { Deeper } from './Deeper.js';
+
 /**
  * The named model reveal.
  *
@@ -11,7 +13,11 @@ export const Servitor = () => `
                 <span class="chapter-mark" aria-hidden="true">ᛗ</span>
                 <div>
                     <h2>Meet The ForbocAI NPC LM Servitor™</h2>
-                    <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> You still hand it your character on every turn — that part looks the same, and it should, because the cast is yours and stays yours. What is trained in is not <em>which</em> person she is but <em>how</em> a person is held: a general model reads a persona as instructions to perform, and performs itself through them. Servitor™ was trained around the character as the unit of the decision, so there is no house voice underneath waiting to come through. It is trained around the unit games actually need: one character judgment that carries identity, evidence, motive, reasoning, dialogue and structured intent through the same decision.</p>
+                    <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> A general model reads a persona as instructions to perform, and performs itself through them. Servitor™ was trained with the character as the unit of the decision, so there is no house voice underneath waiting to come through.</p>
+                    ${Deeper({
+                        summary: 'What is actually trained in',
+                        body: `<p>Not <em>which</em> person she is — you still hand us your character on every turn, and the cast is yours and stays yours. What is trained in is <em>how</em> a person is held: one character judgment carrying identity, evidence, motive, reasoning, dialogue and structured intent through the same decision.</p>`,
+                    })}
                 </div>
             </header>
 
