@@ -1,5 +1,13 @@
+import { Deeper } from './Deeper.js';
+
 /**
  * One complete SDK turn, kept concrete so the category promise has a contract.
+ *
+ * Everything this turn owes a careful reader is still here. What changed is
+ * that the mechanical disclosures — what the illustration is, what `valid`
+ * covers, what a missed deadline authorizes — sit under a toggle instead of
+ * between the reader and the judgment. The one that stays in the open is the
+ * lore error, because that is not a caveat, it is the argument.
  */
 export const Turn = () => {
     return `
@@ -27,12 +35,18 @@ export const Turn = () => {
   }),
 ).unwrap()</code></pre>
                     <p class="turn-note"><strong>You wrote the verbs. You did not write what she did inside one.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions you allowed. She took the refusal — and then gave him the road anyway, a thing smaller than the letter and larger than the weather that is nowhere in your tree. The vocabulary is yours and stays yours; that is the only reason she is safe to ship. The judgment inside it was never yours to write.</p>
-                    <p class="turn-note">Memory is a store your studio created and can read without us. World context and the legal action set belong to this turn. In Unreal, the equivalent entry is <code>UForbocAISubsystem::ProcessNPC</code>; Blueprint exposes <code>Process NPC</code>.</p>
+                    ${Deeper({
+                        summary: 'What your game owns in this call',
+                        body: `<p class="turn-note">Memory is a store your studio created and can read without us. World context and the legal action set belong to this turn. In Unreal, the equivalent entry is <code>UForbocAISubsystem::ProcessNPC</code>; Blueprint exposes <code>Process NPC</code>.</p>`,
+                    })}
                 </div>
 
                 <div class="turn-col">
                     <p class="turn-label">Servitor™ returns one complete character judgment</p>
-                    <p class="turn-note">This block is an authored illustration of the contract — the shape of a turn, not a capture from a run. We say so because the fault printed below it is real, and a disclosed limit is worth more than a reader wondering whether it was staged.</p>
+                    ${Deeper({
+                        summary: 'Is this a capture from a real run?',
+                        body: `<p class="turn-note">No. It is an authored illustration of the contract — the shape of a turn, not a recording of one. We say so because the fault printed below it is real, and a disclosed limit is worth more than a reader wondering whether it was staged.</p>`,
+                    })}
                     <pre class="turn-code"><code>{
   dialogue: "He went north. That is all I can give you tonight.",
   reasoningResult: {
@@ -45,9 +59,17 @@ export const Turn = () => {
   },
   metadata: { valid: true },
 }</code></pre>
-                    <p class="turn-note">She had <code>offer_item</code> on the table and did not take it. <code>valid</code> means the turn met its deadline and passed its checks — not that every word is true about your world.</p>
+                    <p class="turn-note">She had <code>offer_item</code> on the table and did not take it.</p>
+                    ${Deeper({
+                        summary: 'What <code>valid: true</code> does and does not cover',
+                        body: `<p class="turn-note">It means the turn met its deadline and passed its checks. It does not mean every word is true about your world — that is the gate twelve limit printed below.</p>`,
+                    })}
                     <p class="turn-note"><strong>There is a lore error in the turn above.</strong> Look at <em>He went north.</em> The refusal is guaranteed — your state never moved. The road is prose, and nothing here checked it against your world. If act two moved her brother south, it is in the player's quest log by morning. That is gate twelve, and we print it on our own demo rather than three paragraphs away from one.</p>
-                    <p class="turn-note">One judgment, one call. A real turn runs under a hard deadline, and a turn that misses it authorizes nothing — no action, no memory write, no change to your state. The line the player hears in that moment is yours to author.</p>
+                    <p class="turn-note"><strong>One judgment, one call.</strong> Not a chain of calls per line, not a re-roll to get a parseable action.</p>
+                    ${Deeper({
+                        summary: 'What happens when a turn misses its deadline',
+                        body: `<p class="turn-note">Nothing is authorized — no action, no memory write, no change to your state. The line the player hears in that moment is yours to author, and a turn that fails is a turn your game never hears from.</p>`,
+                    })}
                 </div>
             </div>
 
@@ -72,7 +94,7 @@ export const Turn = () => {
                         <p class="turn-note">The player came back from the north road with her brother's ring: <em>You kept the promise, and you brought her the worst news in town.</em></p>
                         <pre class="turn-code"><code>{
   dialogue: "Then you already know what is in it. Sit down first.",
-  reasoningText: "He is not coming back, and this one went to find that out for me. The confidence was his to keep. It is not a wall I hold against the only person who went looking.",
+  reasoningText: "He is not coming back, and this one went to find that out for me. What he asked me to keep was never a wall to hold against the only person who looked.",
   action: { type: 'offer_item', payload: { item: 'brothers_letter' } },
 }</code></pre>
                     </article>

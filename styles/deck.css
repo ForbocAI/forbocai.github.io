@@ -12,7 +12,7 @@
     border: 1px solid var(--day-rule);
     border-radius: var(--radius-lg);
     background: linear-gradient(170deg, #fffdf6, var(--day-surface));
-    box-shadow: 0 20px 50px -34px rgba(92, 74, 59, 0.5);
+    box-shadow: var(--membrane-day);
     overflow: hidden;
 }
 

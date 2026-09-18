@@ -1,0 +1,111 @@
+/* ---------------------------------------------------------------- deeper -- */
+
+/* The disclosure layer. See src/components/Deeper.js for why it exists: the
+   pitch runs at full speed on the surface, and everything we owe a careful
+   reader sits one click under it rather than being cut.
+   Deliberately quiet. A row of loud accordions would say "there is a lot of
+   fine print here", which is the opposite of what a reader should feel. It is
+   a hairline, a short label and a karat — the page's own furniture, not a
+   widget dropped onto it. */
+
+.deeper {
+    margin-top: 1.1rem;
+    /* The rule belongs to the paragraph above it. Run it to the full container
+       and it stops reading as a control and starts reading as a chapter
+       break. */
+    max-width: var(--measure);
+    border-top: 1px solid var(--day-rule-soft);
+}
+
+.deeper summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    cursor: pointer;
+    list-style: none;
+    color: var(--day-ink-faint);
+    transition: color 0.2s var(--ease);
+}
+
+/* Safari and Chrome each draw their own marker; we draw ours. */
+.deeper summary::-webkit-details-marker { display: none; }
+.deeper summary::marker { content: ''; }
+
+.deeper summary:hover,
+.deeper[open] summary {
+    color: var(--day-ink);
+}
+
+.deeper summary:focus-visible {
+    outline: 2px solid var(--copper);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+}
+
+.deeper-label {
+    font-size: var(--step--1);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* The karat. A chevron drawn from two borders, so there is no asset to load
+   and it inherits the colour of the row it sits in. */
+.deeper-karat {
+    flex: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.15rem;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg) translate(-0.1rem, -0.1rem);
+    transition: transform 0.22s var(--ease);
+}
+
+.deeper[open] .deeper-karat {
+    transform: rotate(-135deg) translate(-0.05rem, -0.05rem);
+}
+
+.deeper-body > *:first-child { margin-top: 0; }
+.deeper-body > *:last-child { margin-bottom: 0; }
+
+.deeper-body {
+    padding-bottom: 1rem;
+    /* Opening a disclosure should feel like a drawer, not a jump cut. */
+    animation: deeper-open 0.3s var(--ease);
+}
+
+@keyframes deeper-open {
+    from { opacity: 0; transform: translateY(-0.35rem); }
+    to { opacity: 1; transform: none; }
+}
+
+/* --------------------------------------------------------------- night -- */
+
+.chapter-night .deeper,
+.turn-band .deeper,
+.deeper-night {
+    border-top-color: var(--night-rule);
+}
+
+.chapter-night .deeper summary,
+.turn-band .deeper summary,
+.deeper-night summary {
+    color: var(--night-ink-faint);
+}
+
+.chapter-night .deeper summary:hover,
+.chapter-night .deeper[open] summary,
+.turn-band .deeper summary:hover,
+.turn-band .deeper[open] summary,
+.deeper-night summary:hover,
+.deeper-night[open] summary {
+    color: var(--night-ink);
+}
+
+.chapter-night .deeper summary:focus-visible,
+.turn-band .deeper summary:focus-visible,
+.deeper-night summary:focus-visible {
+    outline-color: var(--honey);
+}

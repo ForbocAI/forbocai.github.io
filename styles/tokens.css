@@ -74,11 +74,61 @@
 
     /* Cohere's softness is a scale used consistently, not one radius on
        everything. --radius-xs is the inline chip step that hero.css,
-       turn.css and typography.css were each approximating by hand. */
-    --radius-xs: 5px;
-    --radius-sm: 8px;
-    --radius: 14px;
-    --radius-lg: 24px;
+       turn.css and typography.css were each approximating by hand.
+
+       Biomorphic, read as a rule rather than a decoration: a form that GREW is
+       asymmetric and a form that was CONSTRUCTED is not. So no corner on this
+       site matches the corner opposite it. The disagreement is about a third of
+       the step — enough that a surface reads as having settled into its place,
+       small enough that nobody calls it a mistake. Every card, panel, aside,
+       code block and slide part inherits it from here; nothing is treated
+       locally, or the site would have one organic block and nineteen machined
+       ones.
+
+       The -turn variants are the same shape against the grain. Repeating cards
+       alternate between the two, because eight identical asymmetric corners
+       stop reading as growth and start reading as a skewed template. */
+    --radius-xs: 6px 4px 5px 4px;
+    --radius-sm: 11px 7px 10px 8px;
+    --radius: 18px 12px 16px 13px;
+    --radius-lg: 30px 20px 27px 22px;
+
+    --radius-xs-turn: 4px 6px 4px 5px;
+    --radius-sm-turn: 7px 11px 8px 10px;
+    --radius-turn: 12px 18px 13px 16px;
+    --radius-lg-turn: 20px 30px 22px 27px;
+
+/* ------------------------------------------------------------ membrane --
+
+   Urbit and biomorphic form are not two skins to pick between. Their
+   intersection is one object, and it happens to be this company's thesis: a
+   CELL. A living interior, a sovereign boundary, and a strict rule about what
+   crosses. Servitor is the interior. The Protocol is the membrane. "She
+   proposes, your game disposes" is the crossing rule. A Soul is the cell
+   crossing into a world that decides what it admits.
+
+   So the rule for every surface on this site: light comes from INSIDE the
+   boundary and bleeds outward through it. It is never a lamp above a card.
+   A drop shadow says an object was placed on a table by someone; a membrane
+   says something is lit from within and is holding itself together. The three
+   card systems here — the memory panel, the scene plates, the deck frame —
+   were all running the same `0 18px 44px -26px` drop, which made the three
+   most important surfaces on the site the three most obviously constructed
+   ones.
+
+   The small dark term stays. A cell resting on a ground does occlude a little,
+   and without it the surface reads as pasted rather than present. */
+--membrane-day:
+    inset 0 1px 0 #fffdf6,
+    inset 0 0 64px -30px rgba(255, 243, 194, 0.95),
+    0 0 58px -24px rgba(224, 195, 138, 0.45),
+    0 8px 26px -26px rgba(92, 74, 59, 0.4);
+
+--membrane-night:
+    inset 0 1px 0 rgba(241, 232, 214, 0.08),
+    inset 0 0 70px -32px rgba(255, 243, 194, 0.3),
+    0 0 64px -26px rgba(255, 243, 194, 0.16),
+    0 8px 26px -26px rgba(5, 9, 6, 0.8);
 
     --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 

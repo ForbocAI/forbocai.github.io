@@ -1,0 +1,89 @@
+/* ------------------------------------------------------- the title slide -- */
+
+/* The deck's opening frame: the headline set as a headline rather than a slide
+   caption, the world art beside it, and the dateline under both. */
+
+/* ------------------------------------------------------------ slide parts -- */
+
+.title-slide {
+    display: grid;
+    gap: 1.1rem;
+    padding-block: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+/* The title slide's headline is the h1 itself now, so it is set like one. The
+   art sits beside the supporting copy — the grid has to go on .slide-body,
+   which is where both of them actually live. */
+.slide:has(.title-slide) .slide-title {
+    font-size: clamp(1.7rem, 1.2rem + 2.1vw, 2.7rem);
+    max-width: 26ch;
+    margin-bottom: 1.6rem;
+}
+
+.slide-body:has(.title-slide) {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+}
+
+.title-slide-art {
+    grid-column: 2;
+    justify-self: center;
+    width: min(100%, 290px);
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 42%, transparent 72%);
+    mask-image: radial-gradient(circle at 50% 50%, #000 42%, transparent 72%);
+}
+
+.title-slide .tagline {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.018em;
+    max-width: 22ch;
+    margin: 0;
+}
+
+.title-slide .subtitle {
+    font-size: var(--step-1);
+    color: var(--day-ink-soft);
+    max-width: 52ch;
+}
+
+.deck-meta {
+    font-size: var(--step--1);
+    color: var(--day-ink-faint);
+}
+
+/* The title slide's plate is the one image on the deck that carries weight, so
+   it is the exception to .title-slide-art's faded, multiplied treatment: full
+   strength, arched like a window, and tall enough to hold the right column.
+   Left as the general rule it rendered as a small washed-out oval floating in
+   the middle of the column. */
+.title-slide-world {
+    width: min(100%, 400px);
+    opacity: 1;
+    mix-blend-mode: normal;
+    -webkit-mask-image: none;
+    mask-image: none;
+    border-radius: 999px 999px 20px 20px;
+    align-self: stretch;
+    object-fit: cover;
+    max-height: 520px;
+}
+
+/* Stacked, the art stops being a companion to the headline and becomes a
+   mark under it. */
+@media (max-width: 720px) {
+    .slide-body:has(.title-slide) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .title-slide-art {
+        grid-column: 1;
+        width: min(60%, 200px);
+    }
+}

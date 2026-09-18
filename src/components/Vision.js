@@ -1,4 +1,5 @@
 import { Lantern } from './Lantern.js';
+import { Deeper } from './Deeper.js';
 
 /**
  * Vision Component
@@ -21,9 +22,12 @@ export const Vision = () => {
                 </div>
             </header>
 
-            <p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium, not an addressable slice, and we will not pretend a share of it. What matters inside that number is that the people are the one surface nobody has finished.</p>
+            <p class="soul-market"><strong>That habit is <a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">$188&nbsp;billion</a> wide.</strong> The people are the one surface of a game nobody has finished, and they are the one studios pay the most to fake.</p>
 
-            <p class="soul-market">What counts as a billable judgment gets bound in the release contract, and that contract is gate four — it goes live with a public price attached, not before.</p>
+            ${Deeper({
+                summary: 'How we are reading that number',
+                body: `<p class="soul-market">As the whole medium, not an addressable slice, and we will not pretend a share of it. <a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo</a> puts it at roughly $188&nbsp;billion in 2025 heading toward $205&nbsp;billion in 2026; what it evidences is the size of the room, not our position in it. What counts as a billable judgment gets bound in the release contract, and that contract is gate four — it goes live with a public price attached, not before.</p>`,
+            })}
         </div>
     </section>
 
@@ -40,7 +44,12 @@ export const Vision = () => {
 
             <p class="soul-decouple"><strong>A Soul is an opt-in, encrypted record of identity, memory, relationships and temperament.</strong> A receiving title inspects it, verifies it and decides what enters its own canon. No Soul has crossed between two titles yet: gate eleven.</p>
 
-            <p class="soul-card"><strong>A card preserves who a character is. A Soul carries who she became with you.</strong> <a href="https://www.gminsights.com/industry-analysis/trading-card-games-market" target="_blank" rel="noopener noreferrer">Global Market Insights sizes the printed trading-card game market at $8.4&nbsp;billion in 2025, growing to $9.2&nbsp;billion in 2026</a> — evidence of the habit, not a forecast of Soul revenue. People have spent decades proving they will pay for identity they can keep.</p>
+            <p class="soul-card"><strong>A card preserves who a character is. A Soul carries who she became with you.</strong> People have spent decades proving they will pay for identity they can keep — and a card has never once been able to remember them back.</p>
+
+            ${Deeper({
+                summary: 'The evidence behind that habit',
+                body: `<p class="soul-card"><a href="https://www.gminsights.com/industry-analysis/trading-card-games-market" target="_blank" rel="noopener noreferrer">Global Market Insights sizes the printed trading-card game market at $8.4&nbsp;billion in 2025, growing to $9.2&nbsp;billion in 2026</a>. Read it as evidence of the appetite, not as a forecast of Soul revenue — printed cards are a different product in a different market, and no Soul has crossed between two titles yet.</p>`,
+            })}
 
             <p class="soul-market">The player does not carry an image of who Maeve was. They carry the history of who she became with them — and that history is the asset a studio compounds across seasons, worlds and communities, while every receiving world keeps authority over its own canon, law and state. Gate eleven is where it stops being ours and starts being yours.</p>
 

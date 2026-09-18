@@ -140,3 +140,44 @@ main {
 #technology {
     background: var(--dusk-0);
 }
+
+/* ------------------------------------------------------ grown surfaces -- */
+
+/* Counter-grain. The radius scale in tokens.css makes every corner disagree
+   with the one opposite it, which reads as growth on a single surface and as a
+   skewed template the moment eight of them sit in a grid leaning the same way.
+   Alternating the grain is what turns a row of cards back into a row of
+   separate things that each settled on their own. */
+.servitor-cognition li:nth-child(even),
+.character-intelligence-grid article:nth-child(even),
+.boundary-stage:nth-child(even),
+.decision-pair article:nth-child(even),
+.world-expansion article:nth-child(even),
+.turn-counterfactual-pair article:nth-child(even) {
+    border-radius: var(--radius-sm-turn);
+}
+
+/* Ambient light is the shape of whatever stands in front of it, never an
+   ellipse. These are the two overlay fields on the site — both pointer-events
+   none, both inset over a section that owns its own background, so shaping
+   them cannot round a section edge. The drift is slower than anyone watches;
+   it is there so the light is not a photograph of light. */
+.lantern-glow,
+.nightfall::after {
+    border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
+    animation: grown-drift 46s ease-in-out infinite alternate;
+    will-change: border-radius, transform;
+}
+
+/* Nothing in nature returns to the shape it just left, so the two ends of the
+   alternation are different forms rather than one form scaled. */
+@keyframes grown-drift {
+    from {
+        border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
+        transform: translate3d(-0.6%, 0.4%, 0) rotate(-0.4deg);
+    }
+    to {
+        border-radius: 44% 56% 57% 43% / 57% 45% 55% 43%;
+        transform: translate3d(0.7%, -0.5%, 0) rotate(0.5deg);
+    }
+}

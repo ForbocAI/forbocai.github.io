@@ -1,0 +1,59 @@
+/* -------------------------------------------------- the comparison table -- */
+
+/* The competition matrix. It was split across two files by line count, so the
+   header lived in one and the cells it governs in another. */
+
+.competition-table {
+    display: grid;
+    gap: 0;
+    margin-bottom: 1.5rem;
+    font-size: var(--step--1);
+}
+
+.comp-header,
+.comp-row {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid var(--day-rule-soft);
+}
+
+.comp-header {
+    font-weight: 700;
+    color: var(--day-ink-faint);
+    border-bottom-color: var(--day-rule);
+}
+
+.comp-header span:not(:first-child),
+.comp-row span:not(:first-child) {
+    text-align: center;
+}
+
+.comp-yes {
+    /* Measured 4.28:1 on slide 8's honey-tinted highlight row; the palette's
+       moss carries it at 8:1 and is a pinned colour. */
+    color: var(--day-ink);
+    font-weight: 700;
+}
+
+.comp-no {
+    color: var(--day-ink-faint);
+}
+
+.comp-partial {
+    color: var(--copper-ink);
+    font-weight: 700;
+}
+
+.highlight-row {
+    background: color-mix(in srgb, var(--honey) 22%, transparent);
+    border-radius: var(--radius-sm);
+    border-bottom-color: transparent;
+}
+
+.comp-note {
+    font-size: var(--step--1);
+    color: var(--day-ink-soft);
+}
