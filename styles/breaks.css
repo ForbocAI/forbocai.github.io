@@ -324,3 +324,48 @@
         padding-right: var(--panel-inset);
     }
 }
+
+/* -------------------------------------------------------------- packing -- */
+
+/* Cellular packing, and it is a composition rule rather than a surface one.
+   Living forms fill space by pressing against their neighbours — a cell wall
+   exists because two cells met — and nothing alive floats in a gap. A neon
+   street is the same logic: signage stacked and overlapping, overgrowth in
+   every crevice, no dead air anywhere.
+
+   Measured, this page mostly packs: seven of nine sections run their ink to
+   within 40px of the container, which is the gutter. Two do not. #business and
+   #room each leave 200px of empty ground to the right of a single measure
+   column, and #business is the commercial section — an investor reads the one
+   paragraph they came for with a fifth of the page empty beside it.
+
+   So the apparatus moves into the slack instead of stacking under the
+   argument. The disclosure and the ask sit beside the claim they belong to,
+   the two cells meet, and the section gets shorter as well as fuller. */
+@media (min-width: 1100px) {
+    #business > .container,
+    #room > .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(16rem, 21rem);
+        gap: clamp(2rem, 4vw, 3.5rem);
+        align-items: start;
+    }
+
+    #business > .container > .chapter-head,
+    #room > .container > .chapter-head {
+        grid-column: 1 / -1;
+    }
+
+    /* The apparatus packs right and stays there. */
+    #business > .container > .deeper,
+    #business > .container > .hero-buttons,
+    #room > .container > .turn-consequence:last-of-type {
+        grid-column: 2;
+        margin-left: 0;
+    }
+
+    #business > .container > .soul-market,
+    #room > .container > .turn-room {
+        grid-column: 1;
+    }
+}
