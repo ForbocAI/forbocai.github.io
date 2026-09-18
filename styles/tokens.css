@@ -132,6 +132,10 @@
     0 0 130px 12px rgba(255, 243, 194, 0.09),
     0 10px 30px -22px rgba(5, 9, 6, 0.85);
 
+    /* One inset for every panel, so the page has one panel edge rather than
+       one per component stylesheet. */
+    --panel-inset: clamp(1.4rem, 2.6vw, 2.1rem);
+
     --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 
     /* The descent, once. Both gradients below and the header tone in main.js
