@@ -116,7 +116,15 @@
        the fold by construction rather than by a number I measured once. The
        min() is what makes it a guarantee: whichever of width or height is
        scarcer wins. */
-    --step-5: clamp(1.8rem, min(1.5rem + 3.2vw, 0.3rem + 6.4vh), 5.2rem);
+    /* The floor is 2.75rem, not 1.8rem, and that floor is the phone's whole
+   hierarchy. --step-5 is min(width-term, height-term), and on a 390px screen
+   the width term wins at 36.5px — which made the peak only 1.30x the 28px h2
+   plateau, against 2.03x on a desktop. A peak that is barely a third louder
+   than the thing it outranks is not a peak, and a phone reader met nine marks
+   across twenty-seven screenfuls with almost no difference between them.
+
+   44px costs one extra line of headline at 320px and buys a real top tier. */
+--step-5: clamp(2.75rem, min(1.5rem + 3.2vw, 0.3rem + 6.4vh), 5.2rem);
 
     --measure: 66ch;
     --measure-tight: 46ch;
