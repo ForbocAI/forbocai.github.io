@@ -54,12 +54,8 @@
 
     .investors-body p {
         max-width: none;
+        margin-bottom: 1.1em;
         break-inside: avoid;
-    }
-
-    .investors-body p {
-        max-width: 42ch;
-        margin-bottom: 0;
     }
 }
 

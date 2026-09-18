@@ -58,8 +58,7 @@
     margin: 0;
     padding: clamp(1.5rem, 3vw, 2.1rem);
     border-radius: var(--radius-lg);
-    background: linear-gradient(168deg, #fffdf6 0%, var(--day-surface) 58%, #f3e9d4 100%);
-    border: 1px solid var(--day-rule);
+    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
     box-shadow: var(--membrane-day);
     overflow: hidden;
     isolation: isolate;

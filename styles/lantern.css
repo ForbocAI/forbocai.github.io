@@ -110,8 +110,6 @@
 
 .chapter-night .chapter-mark {
     color: var(--lantern);
-    border-color: color-mix(in srgb, var(--honey) 40%, transparent);
-    background: color-mix(in srgb, var(--honey) 10%, transparent);
 }
 
 .chapter-night .chapter-mark::after {

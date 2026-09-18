@@ -67,18 +67,27 @@
 /* The tint cycles so six adjacent cards read as six distinct faculties rather
    than one striped block. Kept within a few points of the parchment so it is
    a change of temperature, not a palette. */
+/* These were three raw hexes that belonged to no ramp: #f1ede2, #eceee9 and
+   #f6ecea. The middle one measured at chroma 5 against a ground of chroma 56 —
+   a grey card on a themed page, which is the default card fill of every UI kit
+   ever generated, and it was two of every three cards in the section a reader
+   reaches third.
+
+   Mixed off the page's own ground instead, and finally spending the cool
+   accents that were declared and never used. The cycle now means something:
+   warm where the world is, cool where a thing is being verified. */
 .servitor-cognition li:nth-child(3n + 2),
 .character-intelligence-grid article:nth-child(4n + 2) {
-    background: #f1ede2;
+    background: color-mix(in srgb, var(--honey) 9%, var(--day-bg));
 }
 
 .servitor-cognition li:nth-child(3n),
 .character-intelligence-grid article:nth-child(4n + 3) {
-    background: #eceee9;
+    background: color-mix(in srgb, var(--sage) 7%, var(--day-bg));
 }
 
 .character-intelligence-grid article:nth-child(4n) {
-    background: #f6ecea;
+    background: color-mix(in srgb, var(--creek) 6%, var(--day-bg));
 }
 
 /* The hierarchy is one band, not three cards: it is a single sentence about

@@ -35,8 +35,6 @@
 
 .turn-band .chapter-mark {
     color: var(--lantern);
-    border-color: color-mix(in srgb, var(--honey) 40%, transparent);
-    background: color-mix(in srgb, var(--honey) 10%, transparent);
 }
 
 .turn-band .chapter-mark::after {

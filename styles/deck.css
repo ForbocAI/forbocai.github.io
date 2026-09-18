@@ -9,9 +9,8 @@
     display: flex;
     flex-direction: column;
     min-height: min(74vh, 640px);
-    border: 1px solid var(--day-rule);
     border-radius: var(--radius-lg);
-    background: linear-gradient(170deg, #fffdf6, var(--day-surface));
+    background: color-mix(in srgb, var(--day-bg) 94%, #fff);
     box-shadow: var(--membrane-day);
     overflow: hidden;
 }
