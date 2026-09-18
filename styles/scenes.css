@@ -71,3 +71,19 @@
         display: block;
     }
 }
+
+/* The two chapters that carried the argument and no picture. Code occupied
+   more of this page than imagery did — 6.1% against 4.2% — which is the exact
+   inverse of how a game site is built, so these run wide rather than inset. */
+.room-scene,
+.turn-scene {
+    margin: 0 0 clamp(1.75rem, 3.5vw, 2.75rem);
+    max-width: none;
+}
+
+.room-scene img,
+.turn-scene img {
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    object-position: center 42%;
+}

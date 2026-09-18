@@ -23,6 +23,11 @@ export const Turn = () => {
                 </div>
             </header>
 
+            <figure class="maeve-scene turn-scene">
+                <img src="maeve-letter-scene.webp" alt="Maeve holds her brother's sealed letter across the Lanternbough counter." width="1672" height="941" loading="lazy">
+                <figcaption>The drawer is behind her. The question has already been asked.</figcaption>
+            </figure>
+
             <div class="turn-authored">
                 <div class="turn-authored-head">
                     <p class="turn-label">What your writer hands us</p>

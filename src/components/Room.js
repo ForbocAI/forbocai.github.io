@@ -22,6 +22,11 @@ export const Room = () => {
                 </div>
             </header>
 
+            <figure class="maeve-scene room-scene">
+                <img src="living-cast-scene.webp" alt="Maeve and the living cast of Lanternbough after the storm." width="1672" height="941" loading="lazy">
+                <figcaption>Everyone in the room has something at stake in what she just said.</figcaption>
+            </figure>
+
             <section class="turn-room" aria-labelledby="turn-room-title">
                 <div class="turn-counterfactual-head">
                     <p class="turn-label">One night, one counter, three judgments</p>
