@@ -313,3 +313,38 @@
     font-style: italic;
     color: var(--night-ink);
 }
+
+/* The second character's scene is a peer of the counterfactual, so it carries
+   the same membrane. Without it the block sat flush to the page and read as
+   an appendix to the turn rather than the argument the turn was building to. */
+.turn-room {
+    margin-top: clamp(2.75rem, 5vw, 4rem);
+    padding: clamp(1.75rem, 3.5vw, 2.75rem);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--night-rule);
+    background: color-mix(in srgb, var(--night-surface) 55%, transparent);
+}
+
+/* This paragraph is the argument, not a caption, so it gets a reading measure
+   rather than the narrow column the code blocks sit in. */
+.turn-room > .turn-note,
+.turn-counterfactual > .turn-note {
+    /* 72ch measured 86 rendered characters at this step; the cap is on the
+       rendered line, not on the number in the declaration. */
+    max-width: 62ch;
+}
+
+/* Her answer closes the scene. Set apart from the pair above it because it is
+   the turn the pair was building toward, not a third column of it. */
+.turn-answer {
+    margin-top: clamp(1.5rem, 3vw, 2.25rem);
+    padding-top: clamp(1.25rem, 2.5vw, 1.75rem);
+    border-top: 1px solid color-mix(in srgb, var(--honey) 26%, transparent);
+}
+
+.turn-answer .turn-note {
+    max-width: 62ch;
+    margin-top: 0.9rem;
+}
+
+.turn-answer .turn-note em { font-style: italic; color: var(--night-ink); }

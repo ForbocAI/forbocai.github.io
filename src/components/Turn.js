@@ -36,15 +36,14 @@ export const Turn = () => {
     { who: 'Aldren, her brother',
       bond: 'Asked her to keep the letter sealed. Gone since autumn.' },
     { who: 'the player',
-      bond: 'Asked after Aldren when nobody in town did. Promised to
-             return before the thaw, and did not.' },
+      bond: 'Asked after Aldren when nobody in town did. Promised to return before the thaw, and did not.' },
   ],
   world: ['Lanternbough, the night the thaw comes',
           'The letter is in the drawer behind her'],
   speakingStyle: ['Short sentences. Never explains a refusal twice.'],
   constraints: ['The letter does not open on a debt. Only on news of Aldren.'],
 }</code></pre>
-                <p class="turn-note turn-authored-foot"><strong>Read the last line, then read her reasoning below.</strong> <em>The letter does not open on a debt</em> is a writer's constraint, typed on a Tuesday. <em>That earns the road. It does not earn the letter.</em> is what it costs her at the counter, at night, with this particular player in front of her. Nobody typed the second one. That is the entire product, and your writer authored the half that decides it.</p>
+                <p class="turn-note turn-authored-foot"><em>The letter does not open on a debt</em> is a writer's constraint, typed on a Tuesday. <em>That earns the road. It does not earn the letter.</em> is what it costs her at the counter, at night, with this particular player in front of her. Nobody typed the second one. That is the entire product, and your writer authored the half that decides it.</p>
             </div>
 
             <div class="turn-grid">
@@ -60,7 +59,7 @@ export const Turn = () => {
     legalActions: ['offer_item', 'refuse'],
   }),
 ).unwrap()</code></pre>
-                    <p class="turn-note"><strong>You wrote what she is allowed to do. You did not write what she would say while doing it.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions on the table. She took the refusal. Then she gave him the road anyway, in the line itself — a thing smaller than the letter and larger than the weather, and nowhere in your tree. The vocabulary is yours and stays yours. What she made of it was never yours to write.</p>
+                    <p class="turn-note"><strong>You wrote what she is allowed to do. You did not write what she would say while doing it.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions on the table. She took the refusal. Then she gave the road anyway, in the line itself — a thing smaller than the letter and larger than the weather, and nowhere in your tree. The vocabulary is yours and stays yours. What she made of it was never yours to write.</p>
                     ${Deeper({
                         summary: 'What your game owns in this call',
                         body: `<p class="turn-note">Memory is a store your studio created and can read without us. World context and the legal action set belong to this turn. In Unreal, the equivalent entry is <code>UForbocAISubsystem::ProcessNPC</code>; Blueprint exposes <code>Process NPC</code>.</p>`,
@@ -69,10 +68,7 @@ export const Turn = () => {
 
                 <div class="turn-col">
                     <p class="turn-label">Servitor™ returns one complete character judgment</p>
-                    ${Deeper({
-                        summary: 'Is this a capture from a real run?',
-                        body: `<p class="turn-note">No. It is an authored illustration of the contract — the shape of a turn, not a recording of one. We say so because the fault printed below it is real, and a disclosed limit is worth more than a reader wondering whether it was staged.</p>`,
-                    })}
+                    <p class="turn-note"><strong>Authored illustration, not a capture.</strong> This is the shape of a turn, not a recording of one — and we say so because the fault printed below it is real.</p>
                     <pre class="turn-code"><code>{
   dialogue: "He went north. That is all I can give you tonight.",
   reasoningResult: {
@@ -90,10 +86,7 @@ export const Turn = () => {
                         summary: 'What <code>valid: true</code> does and does not cover',
                         body: `<p class="turn-note">It means the turn met its deadline and passed its checks. It does not mean every word she says is true about your world — that limit is printed below, on our own demo.</p>`,
                     })}
-                    ${Deeper({
-                        summary: 'There is a lore error in the turn above',
-                        body: `<p class="turn-note">Look at <em>He went north.</em> The refusal is guaranteed — your state never moved. But the road is prose, and nothing here checked it against your world. If act two moved her brother south, it is in the player's quest log by morning. We print that on our own demo rather than three paragraphs away from one.</p>`,
-                    })}
+                    <p class="turn-note"><strong>There is a lore error in the turn above, and we put it there.</strong> Look at <em>He went north.</em> The refusal is guaranteed — your state never moved. But the road is prose, and nothing checked it against your world. If act two moved her brother south, it is in the player's quest log by morning. We print that on our own demo rather than three paragraphs away from one.</p>
                     <p class="turn-note"><strong>One judgment, one call.</strong> Not a chain of calls per line, not a re-roll to get a parseable action.</p>
                     ${Deeper({
                         summary: 'What happens when a turn misses its deadline',
@@ -145,8 +138,7 @@ export const Turn = () => {
            'Slow to speak in a room he does not own'],
   goals: ['Clear the debt before the thaw'],
   relationships: [
-    { who: 'the player',
-      bond: 'Covered his room in the autumn. Never mentioned since.' },
+    { who: 'the player', bond: 'Covered his room in the autumn. Never mentioned since.' },
     { who: 'Maeve', bond: 'Her lodger two winters. Her word runs this room.' },
   ],
   speakingStyle: ['Says the smallest true thing, then stops.'],
@@ -154,17 +146,27 @@ export const Turn = () => {
 }</code></pre>
                     </article>
                     <article>
-                        <span>What he did about it</span>
-                        <pre class="turn-code"><code>{
-  dialogue: "Maeve. It was them that covered my room in the autumn.",
-  reasoningText: "She is not wrong about the letter and I will not say
-    she is. But she is weighing what this one is owed without knowing
-    the half of it, and the half she is missing is mine to give her.",
+                        <span>What he did about it — your game fired this call, not us</span>
+                        <pre class="turn-code"><code>// legalActions: ['speak_to', 'stay_silent']
+{
+  dialogue: "Maeve. It was the two of them that covered my room in the autumn.",
+  reasoningText: "She is not wrong about the letter, and I will not say she is. But she is weighing what this one is owed without knowing the half of it. The half she is missing is mine to give her.",
   action: { type: 'speak_to', payload: { target: 'maeve' } },
 }</code></pre>
                     </article>
                 </div>
-                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> His constraint holds — he will not take her side down in her own house. He changes what is true in the room instead, and now she is weighing a debt she did not know about, in front of a player who never asked him to speak. <strong>There is no tree in which that scene exists.</strong> Two people in a room is not two branches; it is every pair, and three is every triple. That is why party banter gets cut in month thirty of every game ever made, and it is the one thing branch writing does not make expensive so much as impossible.</p>
+                <div class="turn-answer">
+                    <p class="turn-label">And then she answers her own lodger</p>
+                    <pre class="turn-code"><code>// legalActions: ['offer_item', 'refuse'] — the same two, again
+{
+  dialogue: "Then I owe them a bed, not a letter. The corner room is yours tonight. Do not ask me for the drawer again.",
+  reasoningText: "Brannoc would not say that in my house unless it were true, and he would not say it at all unless he thought I was being hard. I am not. The letter is still my brother's and that has not moved. But what this one is owed just got larger than I knew, and I have a room.",
+  action: { type: 'offer_item', payload: { item: 'corner_room_key' } },
+}</code></pre>
+                    <p class="turn-note"><strong>She held.</strong> Leaned on publicly, in her own house, by a lodger whose word carries — and the letter is still sealed, because her writer typed <em>the letter does not open on a debt</em> and that is not a thing the room can talk her out of. What moved is what she paid instead. She found the debt somewhere else and settled it out of the inn.</p>
+                </div>
+
+                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> His constraint holds — he will not take her side down in her own house. He changes what is true in the room instead, and now she is weighing a debt she did not know about, in front of a player who never asked him to speak. <strong>There is no tree in which that scene exists.</strong> Two people in a room is not two branches; it is every pair, and three is every triple. That is why party banter gets cut in month thirty of every game ever made, and it is the one thing branch writing does not make expensive so much as impossible. Your game fired three calls here, in an order it chose, each one legal or it does not happen.</p>
             </section>
 
             <p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localization lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what would you have put back in?</p>

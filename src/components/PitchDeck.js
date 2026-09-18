@@ -193,7 +193,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>One model, every cast in a catalogue. An innkeeper, a fleet commander, a child in a besieged city. No two of them sounding like the same mind.</p></div>
             </div>
-            <p class="impact-statement">Your store never leaves you; what moves is the turn, and it stays out of training. What compounds is the range of worlds one contract holds in — and the instrument that measures whether any character model holds at all, because whoever writes a category's measurement writes its purchasing criteria. The first worlds through set the range, and the range is what the whole thesis rests on.</p>
+            <p class="impact-statement">Your store never leaves you. What moves is the turn, and what it may be used for is written into the release contract. What compounds is the range of worlds one contract holds in, and the instrument that measures whether any character model holds at all. The first worlds through set the range, and the range is what the whole thesis rests on.</p>
         `
     },
     {
@@ -225,7 +225,7 @@ const slides = [
             <div class="threshold-call">
                 <p class="proof-label">The window</p>
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not have yet is a cast a player has argued with in public — and the studio that ships first decides what this category means for everyone who follows it.</p>
-                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> A studio. Then a character who stays herself under an evaluation somebody else designed. Then that evaluation published and handed to our rivals, because whoever authors a category's test authors what the category is worth. None of it asks you to believe a forecast. It asks whether you would rather be in the room while the law is written, or reading it afterwards.</p>
+                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> A studio. Then a character who stays herself under an evaluation somebody else designed. Then that evaluation published and handed to our rivals, because whoever authors a category's test authors what the category is worth. It asks whether you would rather be in the room while the law is written, or reading it afterwards.</p>
             </div>
             <p class="ask-note">Send us one character. We will take her to the moment your tree ends. Eighteen months later a player gets every detail of that scene wrong, and still gets her right.</p>
             <div class="contact-box">

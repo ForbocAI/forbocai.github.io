@@ -4,8 +4,8 @@ import { Deeper } from './Deeper.js';
 /**
  * Vision Component
  *
- * Two sections, in this order on purpose. Paid access to Servitor is the
- * business; Souls are what a character becomes once she has somewhere to go.
+ * Two sections, in this order on purpose. Paid access to the Protocol and
+ * Servitor together is the business; Souls are what a character becomes once she has somewhere to go.
  * When the business sat inside the Soul chapter, the heading hierarchy said the
  * business was the token, and no inline sentence can undo a heading.
  */
@@ -17,12 +17,12 @@ export const Vision = () => {
             <header class="chapter-head">
                 <span class="chapter-mark" aria-hidden="true">ᛃ</span>
                 <div>
-                    <h2>Paid access to Servitor™ is the business</h2>
-                    <p class="chapter-lead"><strong>The unit is one character judgment, priced in ordinary money and needing no wallet.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
+                    <h2>Paid access to the ForbocAI NPC Protocol and Servitor™ is the business</h2>
+                    <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
                 </div>
             </header>
 
-            <p class="soul-market"><strong>The people are the one surface of a game nobody has finished, and the one studios pay the most to fake.</strong> That spend is already in the building, already annual, and it buys branches that a player walks one path through. It has nowhere else to go.</p>
+            <p class="soul-market"><strong>The people are the one surface of a game nobody has finished.</strong> Branch content is the most expensive writing in the building, it is already annual, and most of it is never seen once.</p>
 
             ${Deeper({
                 summary: 'The size of that room, and how we read it',
@@ -55,7 +55,7 @@ export const Vision = () => {
 
             <aside class="soul-economy">
                 <h3>What $FAI is for</h3>
-                <p><strong>When a character crosses between two studios with no reason to trust each other, her history has to be true somewhere neither of them owns and both can check.</strong> That is the question $FAI is pointed at: a separate, opt-in token on Solana, and the last line on the standard.</p>
+                <p><strong>When a character crosses between two studios with no reason to trust each other, her history has to be true somewhere neither of them owns and both can check.</strong> That is the question $FAI is pointed at: a separate, opt-in token on Solana, and the last thing on the standard we intend to answer.</p>
                 <div class="hero-buttons">
                     <a href="#whitepaper" class="btn btn-primary" data-link>Read the architecture</a>
                     <a href="#wp-gates" class="text-link" data-link>See the standard</a>

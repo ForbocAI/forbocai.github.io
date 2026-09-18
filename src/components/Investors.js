@@ -18,7 +18,7 @@ export const Investors = () => {
             <div class="investors-body">
                 <p><strong>You ran the experiment yourself, on your own titles, without meaning to.</strong> The characters players quote back to you were never the ones with the most lines. You proved the thesis before anyone pitched it to you.</p>
                 <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built and you can read it today. The model answers today. What it costs and what it proves are on the list, numbered, in the open.</p>
-                <p><strong>The Protocol is a fortnight of work for a good team, and we are not charging for it.</strong> Copy it. Ship it. Name it after yourself. We would rather every character in the industry were unable to touch game state than be the only ones who are.</p>
+                <p><strong>Neither half ships without the other.</strong> A model that can reason as a person and cannot be stopped from moving your state is not a product, it is a liability — and a boundary with nothing behind it is a config file. Servitor™ needs the Protocol's law to enter a world at all. That is why they are one thing, and why the thing is licensed rather than downloaded.</p>
                 <p><strong>The moat was never the boundary.</strong> It is the model, and what is in it cannot be prompted back out. <strong>Selflessness is weights, not a prompt.</strong></p>
                 <p>What they will be measured by is our instrument — published before the results, handed to their model on identical terms, on purpose. Whoever writes a category's measurement writes its purchasing criteria.</p>
                 <figure class="investor-portal">
