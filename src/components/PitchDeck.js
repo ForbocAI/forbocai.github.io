@@ -205,7 +205,7 @@ const slides = [
                 <p class="threshold-lead">Outside, it still looks early. Inside, Character Intelligence already has its model and its laws, and the commercial standard is being bound gate by gate in public.</p>
                 <p class="threshold-line">NPC language models are already obvious from inside the game. The right to define them is being claimed now.</p>
             </div>
-            <p class="ask-note">Eleven gates are listed. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
+            <p class="ask-note">Twelve gates are listed. None is claimed until it clears. That list is the fastest way to find out what this is.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=Enter%20the%20age%20of%20the%20living%20cast" class="btn btn-primary">Enter the age of the living cast</a>
             </div>

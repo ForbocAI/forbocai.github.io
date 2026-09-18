@@ -16,7 +16,7 @@ export const Investors = () => {
             </header>
 
             <div class="investors-body">
-                <p>The studios that define the next era will not ship the most generated dialogue. They will ship the first casts players believe are alive. ForbocAI is putting the model, the Protocol and the commercial standard beneath that shift. It is being defined now, by the people already working inside it.</p>
+                <p>You already know which of your NPCs players quote back to you, and you already know it is not the one with the most lines. That is the whole argument for this category and you ran the experiment yourself, on your own titles, without meaning to. The model underneath it, the law it enters through and the terms it is sold on all exist and are being bound in public, gate by gate.</p>
                 <figure class="investor-portal">
                     <span class="portal-window" aria-hidden="true">
                         <img src="Lanternbough.png" alt="" width="640" height="640">
