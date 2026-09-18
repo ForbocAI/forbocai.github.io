@@ -15,6 +15,12 @@
 
 .hero h1 {
     margin-bottom: 1.4rem;
+    /* Even the rag rather than pinning a measure, which would fight the fluid
+       shell and reintroduce an orphan at some width nobody tested. Note this
+       changed no line count at any width measured — Chrome declines to balance
+       above its own line threshold — so the shell curve is doing the work and
+       this is here for the widths between the ones sampled. */
+    text-wrap: balance;
 }
 
 .hero-lead {

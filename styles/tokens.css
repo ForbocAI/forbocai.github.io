@@ -92,7 +92,33 @@
     --measure: 66ch;
     --measure-tight: 46ch;
 
-    --shell: 1180px;
+    /* The shell grows with the screen, sub-linearly, the way a thing that
+       grows toward light widens fast at first and then slows.
+
+       It was a flat 1180px, and that single number was the whole rigidity
+       problem: the type scale has a viewport term and the container did not,
+       so from 1024 to 2560 the headline grew 54px -> 83px inside a column
+       frozen at 486px and broke into seven lines with a one-word orphan. Type
+       outgrowing its measure is the exact opposite of the intent, and at 2560
+       the page was using 43% of the screen.
+
+       The curve is solved for a floor, not opened as far as it will go. Every
+       pixel of shell beyond what the headline needs becomes empty right-hand
+       margin in the prose chapters, which are single-column and measure-capped
+       — so widening this token trades a broken headline for a bigger void, and
+       an early attempt at 76vw+86px (1720px at 2560) put #mission at 100% of
+       its bands more than 40% empty.
+
+       So: 62.5vw + 280px is the gentlest curve that still holds the headline
+       at four lines everywhere. It lands exactly on 1180px at 1440, so nothing
+       already composed moves, clears the 1330px that 1680x1050 needs, and caps
+       at 1600px — the least width that keeps 2560 at four lines.
+
+       1680x1050 sets the floor because the type there is HEIGHT-driven (the
+       6.4vh term wins) while the shell is width-driven: a tall, narrow window
+       gets large type in a narrow column, and a gentler curve left five lines
+       there while every other width had four. */
+    --shell: min(1600px, max(1180px, 62.5vw + 280px));
     --gutter: clamp(1.25rem, 4vw, 2.5rem);
     --header-height: 76px;
     --rail: 3.25rem;
