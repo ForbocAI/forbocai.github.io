@@ -17,7 +17,7 @@ export const Hero = () => {
                     <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
                     <figcaption>The storm is the safe opening. Her brother's letter is the judgment.</figcaption>
                 </figure>
-                <p class="hero-lead"><strong>The ForbocAI NPC LM Servitor™ is the intelligence behind the living cast.</strong> It reads who she is, what she remembers, what she owes and what her world will allow — then reasons past the end of your script and decides as her. Not a line retrieved. A judgment made, in the moment, by someone.</p>
+                <p class="hero-lead"><strong>Everyone else is making the model more itself. We took the self out.</strong> The ForbocAI NPC LM Servitor™ is a language model with no self to defend, so the person your writers authored is the one who answers. It reads who she is, what she remembers, what she owes and what her world will allow — then reasons past the end of your script and decides as her. Not a line retrieved. A judgment made, in the moment, by someone.</p>
                 <p class="hero-engines"><strong>The ForbocAI NPC Protocol is how that intelligence enters a world without being able to change your state.</strong> Servitor™ proposes; your game alone makes it real. She decides like a person and she cannot move your world. The model is the invention; the Protocol is what makes it safe to ship.</p>
                 <div class="hero-buttons">
                     <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
