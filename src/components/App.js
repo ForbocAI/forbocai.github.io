@@ -66,13 +66,13 @@ export const App = (state) => {
                 ${Hero()}
                 ${Mission()}
                 ${Servitor()}
-                ${Turn()}
-                ${Room()}
                 ${Technology()}
             </div>
             <div class="nightfall">
                 <div class="nightfall-edge" aria-hidden="true"></div>
                 ${Fireflies()}
+                ${Turn()}
+                ${Room()}
                 ${Roadmap()}
                 ${Vision()}
                 ${Investors()}

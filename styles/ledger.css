@@ -138,8 +138,13 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -14rem;
-    height: 14rem;
+    /* The page now descends exactly once — day, dusk, night, never back up —
+       which makes this the only tonal event on the site and the one place the
+       design language actually happens. It was 14rem carrying a 161-point
+       luminance step, which reads as two websites stapled together rather than
+       as a sunset. At 26rem the ramp has room to be an evening. */
+    top: -26rem;
+    height: 26rem;
     /* Parchment straight to moss is a luminance ramp with no chromatic event,
        which reads as fog. Passing through petal clay and dusk lavender makes it
        an evening, and puts two pinned palette colours to work. */
