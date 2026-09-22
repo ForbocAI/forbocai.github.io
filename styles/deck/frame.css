@@ -41,7 +41,19 @@
        "a plant fills the pot it is in" at itself. Do not re-impose a ceiling
        to stop the Next button moving between slides: the note below records
        why that was removed. */
-    min-height: min(56vh, 460px);
+    /* A FLOOR, not a ceiling. The note below is about a max-height, which
+       bought the fold by turning the slide into a silent scroll container, and
+       it still stands. This is the opposite: a height the short slides grow UP
+       to, so a tall slide is never clipped and the chrome stops riding the
+       content.
+
+       A reviewer measured what shrink-wrapping costs: "footer-bar tops at
+       y=764 / 648 / 697 on desktop — Back and Next jump 116px between slide 1
+       and slide 5. Clicking Next moves the Next button out from under the
+       pointer." Measured across all thirteen it was 141px on desktop and 137
+       at 1920. In vh, so the floor is a share of the screen the deck is being
+       read on rather than a number chosen for one monitor. */
+    min-height: min(80vh, 760px);
     /* No ceiling, and nothing here hides. An earlier pass capped this frame so
        the deck would fit the fold, and bought that fit by turning the slide
        into a silent scroll container: 13 of 13 slides on a phone hid a mean

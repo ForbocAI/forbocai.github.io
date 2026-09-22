@@ -19,6 +19,7 @@
 #   stickyoverlap      a pinned chapter title riding over the body beside it
 #   stemtouch          the drawn margin sitting on a word instead of behind it
 #   deckfold           a slide that runs past the window or hides its words
+#   decktravel         Back and Next moving between slides
 #   descent-gate       a night that stops descending, or climbs back out of itself
 #   sidehead           a side head that stopped sticking, or a bare margin
 #   gates              a gate cited by number that the ledger does not hold
@@ -62,7 +63,7 @@ if [ -d .dream-loop ] && command -v node >/dev/null; then
     server=$!
     sleep 2
   fi
-  for check in layout contrast type leadwidth navcurrent readcount stickyoverlap stemtouch sidehead deckfold descent-gate gates errors; do
+  for check in layout contrast type leadwidth navcurrent readcount stickyoverlap stemtouch sidehead deckfold decktravel descent-gate gates errors; do
     [ -f ".dream-loop/$check.mjs" ] && run "$check" node ".dream-loop/$check.mjs"
   done
   [ -n "$server" ] && kill "$server" 2>/dev/null
