@@ -266,7 +266,7 @@ export const PitchDeck = (state) => {
                     </div>
                 </div>
 
-                <div class="deck-controls">
+                <div class="deck-controls" data-count="${safeSlideIndex} / ${totalSlides}">
                     <a href="${prevLink}" class="btn-control ${safeSlideIndex <= 1 ? 'disabled' : ''}" ${safeSlideIndex <= 1 ? 'aria-disabled="true" tabindex="-1"' : ''}>Back</a>
                     <div class="slide-dots">
                         ${slides.map((candidate) => `

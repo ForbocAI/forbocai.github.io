@@ -87,3 +87,13 @@
         width: min(60%, 200px);
     }
 }
+
+/* Where the screen is short, the title art takes its height from the screen
+   rather than from a fixed 520px. It was the last image left straddling the
+   fold on slide 1 — a mark under the headline is worth having, a mark sliced
+   in half by the window edge is not. */
+@media (max-height: 820px), (max-width: 760px) {
+    .title-slide-art {
+        max-height: min(26vh, 220px);
+    }
+}

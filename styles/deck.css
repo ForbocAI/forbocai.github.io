@@ -45,18 +45,26 @@
 .deck-frame > .slide {
     flex: 1 1 auto;
     min-height: 0;
+    /* The slide gives, so the frame can fit a screen. */
+    padding-bottom: clamp(0.75rem, 2vh, 1.5rem);
 }
 
 .deck-frame > .deck-header {
     flex: 0 0 auto;
 }
 
+/* NOT sticky. Sticky kept the nav reachable and paid for it in words: an opaque
+   bar floating at the window's bottom covers whatever is under it at ANY scroll
+   position on a slide taller than the screen, and 22 of 65 slide/shape pairs
+   had text sheared behind it. Reserving the bar's height under the slide does
+   not help either — that protects the slide's END, and the bar floats over its
+   MIDDLE.
+
+   The contract this file already states is "one slide is one screen". A bar at
+   the frame's own bottom occludes nothing, and the way to keep it in view is to
+   make the slide fit, not to float the bar over the slide. */
 .deck-frame > .deck-controls {
     flex: 0 0 auto;
-    position: sticky;
-    bottom: 0;
-    z-index: 2;
-    background: var(--day-bg);
     border-top: 1px solid var(--day-rule-soft);
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
@@ -184,3 +192,59 @@
     transform: scale(1.35);
 }
 
+
+
+/* Thirteen dots wrap to two rows on a phone and take the control bar to 178px —
+   21% of a 390x844 screen, spent on an indicator. Below 640px they give way to
+   a plain count, which says the same thing in one row and brings the bar to
+   ~69px, the height the slide reserves for it.
+
+   This sits at the END of the file on purpose: the first version was a media
+   query ABOVE the base .slide-dots rule, and a later rule of equal specificity
+   wins whether or not the earlier one is inside a media query. It silently did
+   nothing and the bar stayed 178px. */
+@media (max-width: 640px) {
+    .slide-dots {
+        display: none;
+    }
+
+    .deck-controls::after {
+        content: attr(data-count);
+        font-size: var(--step--1);
+        font-weight: 700;
+        color: var(--day-ink-faint);
+    }
+}
+
+
+/* Where height is scarce, the slide spends less of it on padding. A deck slide
+   that does not fit its screen is the defect; the room around the words is the
+   first thing to give up. */
+/* Where height is scarce, the slide spends less of it on chrome and on title.
+   A deck slide that does not fit its screen is the defect; the room around the
+   words gives up first, then the size of the title, and the words themselves
+   never do. Closing the last of it — mobile ran 259px past the window — takes
+   the title down a step and the gaps with it. */
+@media (max-height: 820px), (max-width: 760px) {
+    .slide {
+        padding: clamp(0.9rem, 2.2vh, 1.5rem) clamp(1rem, 3vw, 1.6rem);
+    }
+
+    .slide-title {
+        font-size: clamp(1.4rem, 1.1rem + 1.5vw, 1.9rem);
+        margin-bottom: 0.9rem;
+    }
+
+    .slide-body h4 {
+        margin: 1rem 0 0.45rem;
+    }
+
+    .slide .maeve-scene img {
+        max-height: min(150px, 18vh);
+    }
+
+
+    .deck-controls {
+        padding-block: 0.55rem;
+    }
+}
