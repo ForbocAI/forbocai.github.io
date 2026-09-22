@@ -41,7 +41,15 @@ main {
 /* Consecutive chapters on the same ground need a seam, not the full break
    that separates day from night. */
 .chapter-day + .chapter-day,
-.chapter-night + .chapter-night {
+.chapter-night + .chapter-night,
+.turn-band + .turn-band,
+.turn-band + .chapter-night,
+.chapter-night + .turn-band {
+    /* The turn-band chapters are night too, and they fell through this rule:
+       #turn and #room got the full chapter gap on both sides of their shared
+       seam, which is the 350px of bare moss round fourteen measured between
+       them on the home page, and the 277px between the walkthrough and the
+       room on /#scenes — the two largest holes on either page. */
     padding-top: var(--chapter-seam);
 }
 
