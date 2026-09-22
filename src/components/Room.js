@@ -108,6 +108,7 @@ export const Room = () => {
 export const RoomTeaser = () => `
     <section id="room" class="chapter turn-band">
         <div class="container">
+            <div class="chapter-spread">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛖ' })}
                 <div>
@@ -121,9 +122,12 @@ export const RoomTeaser = () => `
                 <figcaption>Everyone in the room has something at stake in what she just said.</figcaption>
             </figure>
 
+            <div class="chapter-body">
             <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt she did not know about. Two people is every pair; five is every combination of five in every order; a raid is that with a boss in the middle.</p>
 
             <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">Watch the whole room decide</a></p>
+            </div>
+            </div>
         </div>
     </section>
 `;

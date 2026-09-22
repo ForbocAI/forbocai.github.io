@@ -11,25 +11,25 @@ import { Deeper } from './Deeper.js';
 export const Servitor = () => `
     <section id="servitor" class="chapter chapter-day servitor">
         <div class="container">
+            <div class="chapter-spread">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛗ' })}
                 <div>
                     <h2>Meet The ForbocAI NPC LM Servitor™</h2>
+                </div>
+            </header>
+
+            <figure class="maeve-scene servitor-scene">
+                    <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941" loading="lazy">
+                    <figcaption>Maeve does not search for the nearest line. She chooses who receives the letter.</figcaption>
+            </figure>
+
+            <div class="chapter-body servitor-intelligence">
                     <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> A general model reads a persona as instructions to perform and performs itself through them — which is why a cast of a hundred sounds like one actor doing accents. Four hundred of your people can share this model without sharing a personality.</p>
                     ${Deeper({
                         summary: 'What is actually trained in',
                         body: `<p>Not <em>which</em> person she is — you still hand us your character on every turn, and the cast is yours and stays yours. What is trained in is <em>how</em> a person is held: one character judgment carrying identity, evidence, motive, reasoning, dialogue and structured intent through the same decision.</p>`,
                     })}
-                </div>
-            </header>
-
-            <div class="servitor-reveal">
-                <figure class="maeve-scene servitor-scene">
-                    <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941" loading="lazy">
-                    <figcaption>Maeve does not search for the nearest line. She chooses who receives the letter.</figcaption>
-                </figure>
-
-                <div class="servitor-intelligence">
                     <p class="kicker">The cognitive motion of a living character</p>
                     <h3>What she does with what she remembers</h3>
                     <p>Dialogue is what the player hears. Servitor™ carries authored identity through evidence, motive and consequence to decide what the character means — and what she may propose next.</p>
@@ -41,7 +41,7 @@ export const Servitor = () => `
                         <li><span>Judgment</span> <strong>Where do I stand?</strong></li>
                         <li><span>Action</span> <strong>What may I propose?</strong></li>
                     </ol>
-                </div>
+            </div>
             </div>
 
             <div class="character-intelligence-grid">

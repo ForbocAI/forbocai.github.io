@@ -13,38 +13,46 @@ export const Vision = () => {
     return `
     <section id="business" class="chapter chapter-night">
         <div class="container">
+            <div class="chapter-spread">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛃ' })}
                 <div>
                     <h2>Paid access to all three is the business</h2>
-                    <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
                 </div>
             </header>
 
+            <div class="chapter-body">
+            <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
             <p class="soul-market"><strong>The people are the one surface of a game nobody has finished.</strong> That spend is already in the building, already annual, and it has nowhere else to go.</p>
 
             ${Deeper({
                 summary: 'The size of that room, and how we read it',
                 body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium, not an addressable slice, and we will not pretend a share of it — it evidences the size of the room, not our position in it. What counts as a billable judgment gets bound in the release contract, and that contract goes live with a public price attached, not before.</p>`,
             })}
+            </div>
+            </div>
         </div>
     </section>
 
     <section id="souls" class="chapter chapter-night">
         <div class="container">
+            <div class="chapter-spread">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛋ' })}
                 <div>
                     <h2>Dev born. Player grown. Yours to carry.</h2>
-                    <p class="chapter-lead"><strong>That is the whole of it, and no company on earth can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>
                 </div>
             </header>
 
+            <div class="chapter-body">
+            <p class="chapter-lead"><strong>That is the whole of it, and no company on earth can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>
             <p class="soul-decouple"><strong>The player does not carry an image of who Maeve was. They carry the history of who she became with them.</strong> A Soul is that history made portable: a player-owned, encrypted record of identity, memory, relationships and temperament, which a receiving title inspects, verifies and admits on its own terms.</p>
                 ${Deeper({
                     summary: 'What decades of paying for characters already proved',
                     body: `<p class="soul-card"><strong>People have spent decades paying for characters they can keep, and every one of them was a picture.</strong> A card preserves who a character is. A tradable NPC carries who she became with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>`,
                 })}
+            </div>
+            </div>
 
             <div class="soul-crossing">
                 <p class="turn-label sigil-pair">${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 46, tone: 'honey' })} The night she arrives somewhere else</p>

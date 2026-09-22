@@ -38,9 +38,17 @@
        something, though — in #turn the floated figure overlapped
        .turn-authored by 371x159px, because a following block with a background
        runs underneath a float rather than beside it. */
-    .chapter:not(#business):not(#room) > .container > .deeper,
-    .chapter:not(#business):not(#room) > .container > .mission-turn,
-    .chapter:not(#business):not(#room) > .container > .ledger-note {
+    /* Only where there is prose to run beside. A float is placed at its own
+       position in the flow, so a disclosure that FOLLOWS the last paragraph
+       floated into the margin under nothing — #technology's note hung at
+       the far right beside 800px of empty parchment, #souls' disclosure sat
+       alone in the corner — and a reviewer counted both as fragments. The
+       condition is structural: a following paragraph, or no float. Chapters
+       with a .chapter-body (side-head.css) keep their disclosures in the
+       measure column, where this rule cannot reach them. */
+    .chapter > .container > .deeper:has(+ p),
+    .chapter > .container > .mission-turn:has(+ p),
+    .chapter > .container > .ledger-note:has(+ p) {
         float: right;
         width: clamp(19rem, 26vw - 8rem, 27rem);
         margin: 0.4rem 0 1.8rem clamp(2rem, 3.2vw, 3.4rem);

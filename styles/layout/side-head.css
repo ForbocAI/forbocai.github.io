@@ -1,0 +1,97 @@
+/* ------------------------------------------------------------ side head -- */
+
+/* Why every wide shape read as a blog beside a wall.
+   Two reviewers, independently, put the same thing second on their list: at
+   1440 and 1024 the prose chapters are a left-pinned ~660px column with 500
+   to 700px of empty ground beside it — "a blog layout, not a plant filling
+   its pot". Widening the measure is not the answer; 66ch is the line a person
+   reads. Imagery is the AAA answer, and this site has three pictures. What a
+   magazine does with a text chapter and room to spare is the side head: the
+   title stands in the margin beside the body it introduces, and stays with
+   it as the reader scrolls, so the margin is never empty while there is
+   anything to read.
+
+   Opt-in by markup. A chapter whose body is prose wraps its head and body
+   (and the figure between them, if it has one) in .chapter-spread, with the
+   body in .chapter-body. A chapter whose body is a full-width instrument —
+   the ledger, the timeline, the walkthrough, the counterfactual, the
+   investors' own two-column shell — has no spread and keeps its head above,
+   as before. What follows the spread — a card grid, a band, the doors — is
+   ordinary flow under it.
+
+   The spread is its own grid, not the container. A sticky grid item is held
+   inside its GRID CONTAINER, not its grid area: with the whole container as
+   the grid, the head kept sticking past its own row and rode over the card
+   grid and the crossing panel below it. A spread that holds only the head,
+   the figure and the body is as tall as the body, and the head cannot leave
+   it. Gated by .dream-loop/stickyoverlap.mjs.
+
+   From 1100px, the same threshold as the rest of the wide layout. Below it
+   the wrappers are inert divs and the chapter stacks as it always did. */
+@media (min-width: 1100px) {
+    .chapter-spread {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 66ch);
+        column-gap: clamp(2.5rem, 5vw, 5rem);
+        align-items: start;
+        margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .chapter-spread > .chapter-head {
+        grid-column: 1;
+        position: sticky;
+        top: calc(var(--header-height) + 1.5rem);
+        margin-bottom: 0;
+    }
+
+    .chapter-spread > .chapter-body {
+        grid-column: 2;
+        min-width: 0;
+    }
+
+    /* The lead figure opens the chapter, above both columns. */
+    .chapter-spread > figure {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin-top: 0;
+        margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    .chapter-spread:has(> figure) > .chapter-head,
+    .chapter-spread:has(> figure) > .chapter-body {
+        grid-row: 2;
+    }
+
+    /* The head is the title, and only the title. A lead paragraph left in
+       the margin column made the head taller than the body it stood beside
+       — #business and #souls had a three-line h2, a six-line lead and a
+       body of two paragraphs, so the measure column emptied out under them
+       and the head could never stick. The lead opens the body instead, at
+       the top of the measure, level with the title. */
+    .chapter-body > :first-child {
+        margin-top: 0;
+    }
+
+    .chapter-body > .chapter-lead {
+        margin-bottom: 1.1em;
+    }
+
+    /* Blocks that stood off the rail when they sat under a spanning head are
+       in the measure column now; the column is the offset. */
+    .chapter-body > .mission-felt {
+        padding-left: 0;
+    }
+
+    .chapter-body > .mission-turn,
+    .chapter-body > .soul-decouple,
+    .chapter-body > .soul-market {
+        margin-left: 0;
+    }
+
+    /* The title measures were set for a head spanning 1100px. In the margin
+       column the column is the measure. */
+    .chapter-spread > .chapter-head h2,
+    .chapter-spread > .chapter-head .chapter-lead {
+        max-width: none;
+    }
+}

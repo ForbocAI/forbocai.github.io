@@ -23,6 +23,7 @@ export const Mission = () => {
     return `
     <section id="mission" class="chapter chapter-day mission">
         <div class="container">
+            <div class="chapter-spread">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛟ' })}
                 <div>
@@ -30,6 +31,7 @@ export const Mission = () => {
                 </div>
             </header>
 
+            <div class="chapter-body">
                 <p class="mission-opening"><strong>Every other surface of a game came alive. The people did not.</strong> They still run out of script the moment a player asks something nobody wrote, which is why a whole cast sounds like one actor doing accents.</p>
                 <p class="mission-turn-line"><strong>That ended.</strong></p>
                 <p class="mission-opening"><strong>Everyone else is making the model more itself. We took the self out.</strong> The ForbocAI NPC LM Servitor™ has no self to defend, so the people your writers authored are the ones who answer — reasoning past the end of your script and deciding as themselves. Not lines retrieved. Judgments made, in the moment, by someone.</p>
@@ -53,6 +55,8 @@ export const Mission = () => {
 
             <p class="mission-felt"><strong>Full strength is a whole settlement, no two alike.</strong> A captain disobeys because her authored loyalty outweighed the order. A town receives you differently in spring for the winter you walked away from. Servitor™ supplies every one of those decisions; your faction system still rules what they cost.</p>
             <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade. Yours included, whether or not you are in it.</p>
+            </div>
+            </div>
         </div>
     </section>
     `;

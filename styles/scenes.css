@@ -10,7 +10,11 @@
 .maeve-scene {
     position: relative;
     margin: 1.6rem 0 0;
-    border-radius: var(--radius);
+    /* The large step of the radius scale. At 1100px wide the small step's
+       28px corners read as square — "a sharp rectangle with a black caption
+       bar, a Steam screenshot frame" — and the most beautiful thing on the
+       site was in the most rigid container on it. */
+    border-radius: var(--radius-lg);
     overflow: hidden;
     isolation: isolate;
     box-shadow: var(--membrane-day);
@@ -30,7 +34,14 @@
    it — legible over a dark plate, not over a bright one. So the floor and the
    fade are now separate layers: the band itself is opaque, and ::before carries
    the softening above it. Cream on #131c15 measures 14.9:1, and it measures the
-   same over every plate instead of depending on the frame underneath. */
+   same over every plate instead of depending on the frame underneath.
+
+   Opaque, though, it was a bar: a flat black band across the foot of a
+   painting, and both reviewers named it. At 84% the plate is still under the
+   words — the counter, the lamplight — dimmed enough that cream measures
+   above 9:1 even over the brightest plate on the site, and the band reads as
+   dusk falling across the bottom of the picture rather than a label stuck
+   on it. The fade above it is taller for the same reason. */
 .maeve-scene figcaption {
     position: absolute;
     left: 0;
@@ -38,7 +49,7 @@
     bottom: 0;
     margin: 0;
     padding: 0.85rem 1rem 0.95rem;
-    background-color: #131c15;
+    background-color: rgba(19, 28, 21, 0.84);
     color: var(--night-ink);
     font-size: 0.9375rem;
     font-weight: 600;
@@ -53,8 +64,8 @@
     left: 0;
     right: 0;
     bottom: 100%;
-    height: 3.4rem;
-    background: linear-gradient(rgba(19, 28, 21, 0), #131c15);
+    height: 5rem;
+    background: linear-gradient(rgba(19, 28, 21, 0), rgba(19, 28, 21, 0.84));
     pointer-events: none;
 }
 
