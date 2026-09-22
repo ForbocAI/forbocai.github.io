@@ -236,7 +236,11 @@
 .is-remembering .memory-weigh,
 .is-remembering .memory-foot {
     animation: remember 0.62s cubic-bezier(0.32, 0.72, 0.3, 1) backwards;
-    animation-delay: calc(0.15s + var(--i, 0) * 0.42s);
+    /* 0.2s a line, not 0.42s. Three memories and a verdict took 2.3 seconds
+       to finish writing; on a phone that is longer than a reader gives the
+       first screen. The write-on is still a write-on — it just does not make
+       the proof wait. */
+    animation-delay: calc(0.15s + var(--i, 0) * 0.2s);
 }
 
 /* A write-on, not the stagger-and-fade-up every generated page uses: the line

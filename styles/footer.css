@@ -18,12 +18,17 @@
 }
 
 /* Pages without a .nightfall section would otherwise cut from parchment to
-   footer at a hard 1px edge. Give them the same evening. */
-.page-inner + .site-footer {
+   footer at a hard 1px edge. Give them the same evening.
+
+   Pages WITH one are excluded, by the class the router puts on <main>.
+   /#scenes became page-inner and inherited this: a 192px tan-to-rust sunset
+   between a night page and a night footer, a dawn it never descended from.
+   A page that is already night has nowhere to set. */
+.page-inner:not(.page-night) + .site-footer {
     margin-top: 12rem;
 }
 
-.page-inner + .site-footer::before {
+.page-inner:not(.page-night) + .site-footer::before {
     content: '';
     position: absolute;
     left: 0;

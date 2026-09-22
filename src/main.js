@@ -240,7 +240,12 @@ const setupMemoryEntrance = () => {
                 observer.unobserve(entry.target);
             });
         },
-        { threshold: 0.55 },
+        // 0.2, not 0.55. At 0.55 the memory card had to be more than half in
+        // view before its lines began to write, and on a 390px phone only 24%
+        // of it is on the first screen — so the first thing a phone reader saw
+        // under "What Servitor™ is weighing" was nothing, and the proof the
+        // hero exists to show arrived 240px of scroll and 2.3 seconds later.
+        { threshold: 0.2 },
     );
 
     panelWatcher.observe(panel);

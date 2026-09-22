@@ -94,7 +94,7 @@ export const App = (state) => {
 
     ${Header(state)}
 
-    <main id="main-content" class="${isHomePage ? 'page-home' : 'page-inner'}" tabindex="-1">
+    <main id="main-content" class="${isHomePage ? 'page-home' : 'page-inner'}${page === 'scenes' ? ' page-night' : ''}" tabindex="-1">
         ${renderContent()}
     </main>
 
