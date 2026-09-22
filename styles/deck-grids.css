@@ -137,6 +137,11 @@
         grid-row: 1 / span 2;
         margin-bottom: 0;
     }
+
+    /* Level with the window's first paragraph, not with its eyebrow. */
+    .threshold-spread > .ask-note {
+        padding-top: 1.7rem;
+    }
 }
 
 /* Slide 10's four cards had no layout rule at all and stacked in block flow —

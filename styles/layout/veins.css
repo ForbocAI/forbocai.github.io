@@ -48,17 +48,12 @@
         transparent 88%) 1;
 }
 
-/* The rail line under a chapter mark is the one vein that already ran the
-   right way; it just had a constant section. It tapers now, so the stem
-   narrows as it descends. */
+/* The rail line under a chapter mark was the one vein that already ran the
+   right way, tapering as it descended. With the title standing beside its
+   body there is nothing below the mark for a stem to run to, and three
+   reviews read it the same way: "a connector to a timeline that is not
+   there", "ends in nothing". A vein that leads nowhere is a stray line. */
 .chapter-mark::after {
-    width: 2px;
-    height: 3.4rem;
-    border-radius: 2px;
-    background: linear-gradient(180deg,
-        var(--day-rule) 0%,
-        color-mix(in srgb, var(--day-rule) 50%, transparent) 55%,
-        transparent 100%);
-    clip-path: polygon(0 0, 100% 0, 60% 100%, 40% 100%);
+    content: none;
 }
 

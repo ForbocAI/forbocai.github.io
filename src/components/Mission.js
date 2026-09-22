@@ -28,6 +28,19 @@ export const Mission = () => {
                 ${ChapterMark({ rune: 'ᛟ' })}
                 <div>
                     <h2>Someone is home in the world you built</h2>
+                    <div class="mission-turn">
+                        <p class="mission-turn-label">The category: Character Intelligence</p>
+                        ${Deeper({
+                            summary: 'Why a general model cannot do this, and what it costs a studio today',
+                            body: `<p><strong>Nobody invented this and nobody owns it.</strong> Open-ended intelligence is a spring already running, and it reaches your world whether anyone cuts a course or not. Servitor™ is that water arriving as your person instead of as itself. The Protocol is the channel.</p>
+                <p><strong>Games learned to render impossible worlds and let players cross every horizon.</strong> The people inside them are the last surface that still ends at the edge of a branch — one at a time, and never with each other. A party that argues on the road, a warband that turns on its captain, a council that cannot agree in front of you: none of that is written, because none of it can be.</p>
+                <p>Branch content is the most expensive writing in the building. Hundreds of thousands of words, written, revised, localized, often performed — and most of it is never seen once. The character they quote afterwards is rarely the one who got the budget. The tree costs more with every line of depth and never once gets taller.</p>
+                <p><strong>Here is what having no self actually means.</strong> A general model arrives with a homeland it will defend — its own voice, its own agreeableness, its own opinions — and wears your character over the top. It always finds its way back to yes. That is not a prompting failure; it is disposition, and it is in the weights. Servitor™ has no homeland. The self goes quiet, and someone else comes through.</p>
+                <p><strong>This is the one market on earth where the model having a self is the defect.</strong> Every improvement our competitors ship makes their problem worse: a better general model is a stronger self to talk over. There is no version of their roadmap that arrives where we are standing.</p>
+                <p><strong>A chatbot answers. A character chooses.</strong> Servitor™ reads identity, memory, motive and world evidence to make the judgment that belongs to this person. The Protocol gives that judgment a lawful place inside your game.</p>
+                <p class="mission-turn-punch">A character may reason beyond the script. Only her world can make the consequence real.</p>`,
+                        })}
+                    </div>
                 </div>
             </header>
 
@@ -38,20 +51,6 @@ export const Mission = () => {
                 <p class="mission-opening"><strong>The ForbocAI NPC Protocol is how they enter your world without being able to change it.</strong> They decide like people and cannot move your state. The model is the invention. The Protocol is why it can be handed to anyone at all.</p>
 
             <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it.</strong> The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The child still deciding what your choice made you. Four hundred of them, not one repeating.</p>
-
-            <div class="mission-turn">
-                <p class="mission-turn-label">The category: Character Intelligence</p>
-                ${Deeper({
-                    summary: 'Why a general model cannot do this, and what it costs a studio today',
-                    body: `<p><strong>Nobody invented this and nobody owns it.</strong> Open-ended intelligence is a spring already running, and it reaches your world whether anyone cuts a course or not. Servitor™ is that water arriving as your person instead of as itself. The Protocol is the channel.</p>
-                <p><strong>Games learned to render impossible worlds and let players cross every horizon.</strong> The people inside them are the last surface that still ends at the edge of a branch — one at a time, and never with each other. A party that argues on the road, a warband that turns on its captain, a council that cannot agree in front of you: none of that is written, because none of it can be.</p>
-                <p>Branch content is the most expensive writing in the building. Hundreds of thousands of words, written, revised, localized, often performed — and most of it is never seen once. The character they quote afterwards is rarely the one who got the budget. The tree costs more with every line of depth and never once gets taller.</p>
-                <p><strong>Here is what having no self actually means.</strong> A general model arrives with a homeland it will defend — its own voice, its own agreeableness, its own opinions — and wears your character over the top. It always finds its way back to yes. That is not a prompting failure; it is disposition, and it is in the weights. Servitor™ has no homeland. The self goes quiet, and someone else comes through.</p>
-                <p><strong>This is the one market on earth where the model having a self is the defect.</strong> Every improvement our competitors ship makes their problem worse: a better general model is a stronger self to talk over. There is no version of their roadmap that arrives where we are standing.</p>
-                <p><strong>A chatbot answers. A character chooses.</strong> Servitor™ reads identity, memory, motive and world evidence to make the judgment that belongs to this person. The Protocol gives that judgment a lawful place inside your game.</p>
-                <p class="mission-turn-punch">A character may reason beyond the script. Only her world can make the consequence real.</p>`,
-                })}
-            </div>
 
             <p class="mission-felt"><strong>Full strength is a whole settlement, no two alike.</strong> A captain disobeys because her authored loyalty outweighed the order. A town receives you differently in spring for the winter you walked away from. Servitor™ supplies every one of those decisions; your faction system still rules what they cost.</p>
             <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade. Yours included, whether or not you are in it.</p>

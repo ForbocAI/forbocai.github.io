@@ -7,9 +7,14 @@
     padding-bottom: clamp(4rem, 8vw, 6rem);
 }
 
+/* The head lives inside the shell now (row 1, column 1), so the contents
+   rail can stand level with the title instead of starting 400px down beside
+   an empty column, and the head's rule runs under its own text rather than
+   starting 76px to the left of it. The shell carries the rail offset. */
 .doc-head {
+    grid-column: 1;
+    grid-row: 1;
     max-width: 62ch;
-    padding-left: calc(var(--rail) + 1.5rem);
     margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--day-rule);
@@ -50,18 +55,19 @@
     padding-left: calc(var(--rail) + 1.5rem);
     display: grid;
     grid-template-columns: minmax(0, 68ch) minmax(14rem, 1fr);
-    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-rows: auto 1fr;
+    gap: 0 clamp(2rem, 5vw, 4rem);
     align-items: start;
 }
 
 /* The nav sits before .doc-body in the DOM so a screen reader and a plain-text
    read of this brief both get the contents first; the grid puts it back on the
    right where a reader of a long document expects the rail. */
-.doc-body { grid-column: 1; grid-row: 1; }
+.doc-body { grid-column: 1; grid-row: 2; }
 
 .doc-contents {
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 1 / span 2;
     position: sticky;
     top: calc(var(--header-height) + 2rem);
     padding-left: 1.5rem;
@@ -91,7 +97,11 @@
 }
 
 .doc-contents a::before {
-    content: counter(toc) '.';
+    /* Roman, because that is what the section titles read as: Vollkorn's
+       display "1." at 32px was read as "I." by two reviewers in a row, and
+       a contents list that says 1-5 beside headings that read I-V is a
+       mismatch either way. The list matches the eye. */
+    content: counter(toc, upper-roman) '.';
     color: var(--copper-ink);
     font-weight: 700;
 }
@@ -216,7 +226,6 @@
    between the screen edge and the title and wrapped it to four lines, the
    widest gutter on the site on its narrowest screen. */
 @media (max-width: 620px) {
-    .doc-head,
     .doc-shell,
     .doc-foot {
         padding-left: 0;

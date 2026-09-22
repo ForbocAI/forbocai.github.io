@@ -14,9 +14,14 @@
     font-family: var(--font-display);
     font-size: var(--step-2);
     line-height: 1.2;
-    /* "Dev born. Player grown. Yours to / carry." on every shape. Balanced,
-       the two lines break at the sentence. */
-    text-wrap: balance;
+    /* "Dev born. Player grown. Yours to / carry." on every shape, and
+       balanced it broke "Dev born. Player / grown." instead. The first two
+       beats are one breath and stay on one line; the break can only land
+       after them. */
+}
+
+.hero-potion .beat {
+    white-space: nowrap;
 }
 
 /* The ask rides with the promise. It was at the foot of three paragraphs,
@@ -29,7 +34,7 @@
 /* Three asks in one row wrap 2+1 on a tablet and a phone, with "Read the
    docs" alone on the second line. Where the row cannot hold three, the ask
    takes the first line and the two doors share the second. */
-@media (max-width: 1000px) {
+@media (max-width: 1099px) {
     .hero-buttons-lead .btn-primary {
         flex-basis: 100%;
     }

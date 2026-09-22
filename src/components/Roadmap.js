@@ -1,6 +1,5 @@
 import { ChapterMark } from './Sigil.js';
 
-import { Lantern } from './Lantern.js';
 
 /**
  * Three active horizons: the working layer, the development track, and the
@@ -10,7 +9,6 @@ import { Lantern } from './Lantern.js';
 export const Roadmap = () => {
     return `
     <section id="roadmap" class="chapter is-quiet chapter-night">
-        ${Lantern({ className: "lantern-path", size: 0.85 })}
         <div class="container">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛏ' })}

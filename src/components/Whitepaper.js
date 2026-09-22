@@ -6,13 +6,12 @@ export const Whitepaper = () => {
     return `
     <article class="doc">
         <div class="container">
+            <div class="doc-shell">
             <header class="doc-head">
                 <p class="kicker">Whitepaper</p>
                 <h1>Characters who decide, inside worlds that still hold.</h1>
                 <p class="doc-meta">ForbocAI, Inc. — Version 1.1, September 2026</p>
             </header>
-
-            <div class="doc-shell">
             <nav class="doc-contents" aria-label="Contents">
                 <p class="doc-contents-label">Contents</p>
                 <ol>

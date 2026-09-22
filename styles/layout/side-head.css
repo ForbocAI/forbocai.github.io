@@ -66,17 +66,21 @@
    rail like the head's own text does, so a chapter has one left edge. A
    reviewer counted three per screen at 1024: the title at the rail, the
    paragraphs at the gutter, a card at the rail again. */
-@media (min-width: 621px) and (max-width: 1099px) {
+@media (min-width: 621px) and (max-width: 959px) {
     .chapter-body {
         padding-left: calc(var(--rail) + 1.5rem);
     }
 }
 
-@media (min-width: 1100px) {
+/* From 960px, not 1100. At 1024 the stacked layout left the seal alone in a
+   56px margin and the right quarter of the screen empty for whole chapters
+   — neither grid. A 60ch measure and the fluid h2 (34px there) give the
+   margin column about 260px, which holds a three-line title. */
+@media (min-width: 960px) {
     .chapter-spread {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 66ch);
-        column-gap: clamp(2.5rem, 5vw, 5rem);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 60ch);
+        column-gap: clamp(2rem, 4.5vw, 5rem);
         align-items: start;
         margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
     }
@@ -118,5 +122,22 @@
     .chapter-spread > .chapter-head h2,
     .chapter-spread > .chapter-head .chapter-lead {
         max-width: none;
+    }
+
+    /* The margin column holds the chapter's supporting material under its
+       title — the disclosure, the category card — where a printed margin
+       keeps its notes. Pinned, the title used to hang over 400-700px of
+       empty column; the notes are what a margin is for. */
+    .chapter-head .deeper,
+    .chapter-head .mission-turn {
+        margin-top: 1.4rem;
+        margin-left: 0;
+        max-width: none;
+    }
+}
+
+@media (min-width: 1100px) {
+    .chapter-spread {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 66ch);
     }
 }

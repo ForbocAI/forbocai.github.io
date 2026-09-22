@@ -23,9 +23,11 @@
 /* The label sits on the same line as the statement here — the band is wide and
    a stacked rubric would leave it floating. */
 .model-hierarchy p > span {
-    display: inline-block;
-    margin-right: 0.55rem;
-    margin-bottom: 0.15rem;
+    /* Above the statement, not inline with it. Inline, each cell's sentence
+       wrapped at a different word and the three labels sat at three
+       different heights in the row. */
+    display: block;
+    margin-bottom: 0.35rem;
 }
 
 .model-hierarchy strong {

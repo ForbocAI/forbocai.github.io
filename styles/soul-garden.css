@@ -68,7 +68,8 @@
 .soul-economy {
     position: relative;
     margin-top: clamp(2rem, 4vw, 3rem);
-    margin-left: calc(var(--rail) + 1.5rem);
+    /* Flush with the crossing panel above it. Standing off the rail it was
+       76px narrower than the panel — "two card widths in one chapter". */
     padding: clamp(1.4rem, 3vw, 2rem);
     border: 1px solid color-mix(in srgb, var(--honey) 28%, transparent);
     border-radius: var(--radius);
@@ -85,6 +86,16 @@
 
 .soul-economy p {
     max-width: 62ch;
+}
+
+/* This paragraph's bold is a clause, not a lead-in: promoted to a block by
+   the chapter's lead-in rule, the sentence continued on the next line with
+   ", or take the other's word" — a paragraph that began with a comma. */
+.soul-economy p > strong:first-child {
+    display: inline;
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 .soul-economy .hero-buttons {
@@ -127,7 +138,12 @@
     grid-template-columns: minmax(0, 1fr);
 }
 
-.crossing-head .turn-label {
+/* The sigil above the line, not beside it, so the label, the h3 and the
+   note below them share one left edge instead of three. */
+.crossing-head .sigil-pair {
+    display: grid;
+    justify-items: start;
+    gap: 0.6rem;
     margin-bottom: 0.6rem;
 }
 

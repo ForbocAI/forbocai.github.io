@@ -112,6 +112,8 @@
     letter-spacing: -0.015em;
     max-width: 20ch;
     margin-inline: auto;
+    /* "One changed / truth. A / different choice." on a phone. */
+    text-wrap: balance;
 }
 
 .turn-counterfactual {

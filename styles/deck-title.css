@@ -67,7 +67,12 @@
     mix-blend-mode: normal;
     -webkit-mask-image: none;
     mask-image: none;
-    border-radius: 999px 999px 20px 20px;
+    /* The site's own grown radius, not an arch. The arch — round on top,
+       flat on the bottom — read as a window in one review and a tombstone
+       on a shelf in the next, and squashed to a half-ellipse on a short
+       screen. This corner set is what every card and panel on the site
+       already wears. */
+    border-radius: var(--radius-lg);
     align-self: stretch;
     object-fit: cover;
     max-height: 520px;

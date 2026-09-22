@@ -90,7 +90,13 @@
     --dusk-1: #dfae8a;
     --dusk-2: #c98a68;
     --dusk-3: #9c6247;
-    --dusk-4: #5d4b3c;
-    --dusk-5: #3a4336;
+    /* Plum, then slate, not brown then grey-green. The run from copper to
+       moss went through #5d4b3c and #3a4336, and the last 113px of it —
+       what a chapter arrival shows — read as "a muddy brown band, a dirty
+       bar". A sunset goes violet before it goes dark. Same luminance as
+       the two they replace, so the header's crossing math and every
+       contrast figure hold. */
+    --dusk-4: #5c4657;
+    --dusk-5: #3b3f48;
     --dusk-6: #263127;
 }

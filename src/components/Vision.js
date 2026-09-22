@@ -18,17 +18,16 @@ export const Vision = () => {
                 ${ChapterMark({ rune: 'ᛃ' })}
                 <div>
                     <h2>Paid access to all three is the business</h2>
+                    ${Deeper({
+                        summary: 'The size of that room, and how we read it',
+                        body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium, not an addressable slice, and we will not pretend a share of it — it evidences the size of the room, not our position in it. What counts as a billable judgment gets bound in the release contract, and that contract goes live with a public price attached, not before.</p>`,
+                    })}
                 </div>
             </header>
 
             <div class="chapter-body">
             <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
             <p class="soul-market"><strong>The people are the one surface of a game nobody has finished.</strong> That spend is already in the building, already annual, and it has nowhere else to go.</p>
-
-            ${Deeper({
-                summary: 'The size of that room, and how we read it',
-                body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium, not an addressable slice, and we will not pretend a share of it — it evidences the size of the room, not our position in it. What counts as a billable judgment gets bound in the release contract, and that contract goes live with a public price attached, not before.</p>`,
-            })}
             </div>
             </div>
         </div>
@@ -41,16 +40,16 @@ export const Vision = () => {
                 ${ChapterMark({ rune: 'ᛋ' })}
                 <div>
                     <h2>Dev born. Player grown. Yours to carry.</h2>
+                    ${Deeper({
+                        summary: 'What decades of paying for characters already proved',
+                        body: `<p class="soul-card"><strong>People have spent decades paying for characters they can keep, and every one of them was a picture.</strong> A card preserves who a character is. A tradable NPC carries who she became with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>`,
+                    })}
                 </div>
             </header>
 
             <div class="chapter-body">
             <p class="chapter-lead"><strong>That is the whole of it, and no company on earth can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>
             <p class="soul-decouple"><strong>The player does not carry an image of who Maeve was. They carry the history of who she became with them.</strong> A Soul is that history made portable: a player-owned, encrypted record of identity, memory, relationships and temperament, which a receiving title inspects, verifies and admits on its own terms.</p>
-                ${Deeper({
-                    summary: 'What decades of paying for characters already proved',
-                    body: `<p class="soul-card"><strong>People have spent decades paying for characters they can keep, and every one of them was a picture.</strong> A card preserves who a character is. A tradable NPC carries who she became with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>`,
-                })}
             </div>
             </div>
 
@@ -60,13 +59,9 @@ export const Vision = () => {
                     <div>
                         <p class="turn-label sigil-pair">${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 46, tone: 'honey' })} The night she arrives somewhere else</p>
                         <h3>A different studio's world reads her, and keeps its own counsel</h3>
-                    </div>
-                </header>
-                <div class="chapter-body">
-                <p class="soul-market">Two years later, a different studio, a different engine, a harbour town that has never heard of Lanternbough. The player brings her. The receiving world opens the record and decides what it is willing to know.</p>
-                ${Deeper({
-                    summary: 'What the harbour town admitted, and what it refused',
-                    body: `<pre class="turn-code"><code>// the receiving title inspects, verifies, and rules
+                        ${Deeper({
+                            summary: 'What the harbour town admitted, and what it refused',
+                            body: `<pre class="turn-code"><code>// the receiving title inspects, verifies, and rules
 {
   admitted: [
     'She keeps a confidence past the point it costs her',
@@ -79,7 +74,11 @@ export const Vision = () => {
   ],
   verified: 'registry',
 }</code></pre>`,
-                })}
+                        })}
+                    </div>
+                </header>
+                <div class="chapter-body">
+                <p class="soul-market">Two years later, a different studio, a different engine, a harbour town that has never heard of Lanternbough. The player brings her. The receiving world opens the record and decides what it is willing to know.</p>
                 <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> It refused her brother — no such man in this canon — and kept his request, because that had become hers. Then a stranger on the harbour road asks her to pass something along.</p>
                 <pre class="turn-code"><code>// a studio that never heard of Lanternbough
 // legalActions: ['tell', 'refuse']

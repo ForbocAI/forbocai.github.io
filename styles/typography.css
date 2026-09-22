@@ -130,6 +130,9 @@ a:hover {
     font-size: var(--step-0);
     font-weight: 700;
     line-height: 1.4;
+    /* A block of its own, so the paragraph's `pretty` does not reach it:
+       "…no non-player characters in / it." stood in the lead-in itself. */
+    text-wrap: pretty;
     letter-spacing: 0.01em;
     color: var(--day-ink);
 }

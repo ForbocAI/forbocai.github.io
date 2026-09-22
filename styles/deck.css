@@ -32,6 +32,10 @@
     border-radius: var(--radius-lg);
     background: var(--surface-day);
     box-shadow: var(--membrane-day);
+    /* The frame's surface is within a few points of the page it sits on, so
+       its edge existed only as a shadow. A hairline says where the deck
+       ends and the page begins. */
+    border: 1px solid color-mix(in srgb, var(--day-rule) 80%, transparent);
     /* clip, not hidden. Both trim the illustration to the rounded corner, but
        `hidden` establishes a scroll container and a scroll container disables
        position:sticky inside it — which is why the controls went off screen on

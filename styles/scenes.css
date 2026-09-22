@@ -92,6 +92,19 @@
    hands and the lamp, the way a second shot in a film cuts closer to what
    the first shot established. The figure's overflow does the cropping. */
 .turn-scene img {
-    transform: scale(1.8);
-    transform-origin: 63% 66%;
+    /* 1.3, not 1.8. The tighter cut framed the letter and the hands and
+       took her head off — "the crop begins at her neck, her face is absent
+       at the moment the page names the moment an NPC becomes someone". This
+       one keeps her face and the letter and loses the room around them. */
+    transform: scale(1.3);
+    transform-origin: 63% 58%;
+}
+
+/* A 21:9 band at 390px is 167px tall, and the group scene's figures were cut
+   at the chest. On a phone the plates stand taller. */
+@media (max-width: 620px) {
+    .room-scene img,
+    .turn-scene img {
+        aspect-ratio: 4 / 3;
+    }
 }

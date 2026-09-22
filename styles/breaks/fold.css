@@ -8,15 +8,6 @@
         gap: 2.5rem;
     }
 
-    /* Once the panel goes full width the watercolour lands in the text column
-       instead of behind it, so it shrinks into the corner it came from. */
-    .memory-panel-art {
-        width: 46%;
-        right: -7%;
-        bottom: -12%;
-        opacity: 0.22;
-    }
-
     /* Below this the contents rail would squeeze the measure, so it moves
        above the brief as an ordinary jump list. */
     .doc-shell {
@@ -26,10 +17,16 @@
 
     /* The rail's explicit column placement is for the two-column shell only.
        Left standing here it invents a second column and crushes the measure. */
+    .doc-head,
     .doc-body,
     .doc-contents {
         grid-column: 1;
         grid-row: auto;
+    }
+
+    /* The head first, then the jump list, then the brief. */
+    .doc-head {
+        order: -2;
     }
 
     .doc-contents {

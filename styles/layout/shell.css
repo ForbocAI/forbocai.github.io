@@ -22,7 +22,13 @@ main {
        window, which put the first heading of every chapter under the bar —
        tablet and short shots showed only descenders, and the counterfactual's
        eyebrow sat 15px under the nav. The target itself declares the room. */
-    scroll-margin-top: calc(var(--header-height) + 0.75rem);
+    /* And less the chapter's own top padding, so a reader arrives at the
+       chapter's first ink rather than at its top edge: with the full gap
+       kept, every arrival showed 100px of the previous chapter's tail —
+       a card bottom, a released title cut in half — under the bar before
+       the heading. The seam sits just above the bar; the head is one
+       breath under it. */
+    scroll-margin-top: calc(var(--header-height) + 2rem - var(--chapter-gap));
 }
 
 /* Consecutive chapters on the same ground need a seam, not the full break
