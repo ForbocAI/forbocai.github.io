@@ -206,3 +206,19 @@
     .chapter-night .lantern-halo,
     .turn-band .lantern-halo { animation: none; }
 }
+
+
+/* The halo is 1000px wide and centred on the section. On a desktop most of it
+   falls in the margin and only its skirt crosses the measure; on a 390px
+   screen the whole bright core is behind the text. It held the ground under
+   #investors' lead at 92/255 against a base night of 48 — removing it in a
+   bisect dropped the ground 44 points in one step, after the lamp, the
+   section glow and the colony had each been ruled out.
+
+   Halved on a phone. It is atmosphere, and atmosphere is worth less than the
+   sentence in front of it. */
+@media (max-width: 900px) {
+    .lantern-halo {
+        opacity: 0.4;
+    }
+}

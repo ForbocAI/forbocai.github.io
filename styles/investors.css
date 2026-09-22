@@ -15,6 +15,18 @@
         radial-gradient(ellipse 42% 44% at 50% 96%, rgba(224, 195, 138, 0.12), transparent 74%);
 }
 
+/* The glow is centred at 50% 42%, which is beside the measure on a desktop and
+   directly ON it at 390px. It lifted the ground under the lead to a median of
+   98 against a base night of 46, and the near-white lead fell to 3.34:1 — the
+   brightest ink on the page failing AA because the light behind it got
+   brighter. Light at the end of the path is worth having; it is not worth the
+   sentence in front of it. */
+@media (max-width: 900px) {
+    .lantern-glow {
+        display: none;
+    }
+}
+
 .investors-body {
     display: grid;
     gap: 0;

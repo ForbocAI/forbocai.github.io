@@ -65,8 +65,12 @@
     margin-bottom: 0.3rem;
 }
 
+/* --sage is a SURFACE colour — low saturation, sized for a wall in the dark —
+   and at 14px/700 on the night ground it measured 3.83:1. A status word is
+   read, so it takes the lighter mint that was already in the palette for
+   exactly this. */
 .is-done .timeline-status {
-    color: var(--sage);
+    color: var(--mint, #cfe9dc);
 }
 
 .is-active .timeline-status {

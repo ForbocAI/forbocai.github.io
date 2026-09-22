@@ -26,7 +26,7 @@
        read is not allowed to be the faintest thing that will still pass — it
        has to pass. Each moves one step toward its own ink and no further, so
        the tier below the body copy survives. */
-    --day-ink-faint: #56493a;
+    --day-ink-faint: #4c4132;
 
     /* Night — moss side */
     --night-bg: #263127;
@@ -43,7 +43,7 @@
     --copper: #a46a3f;
     /* #a46a3f clears 3:1 as a rule or border but only reaches 3.7:1 as text
        on parchment, so anything set in copper uses this darker ink. */
-    --copper-ink: #794e2f;
+    --copper-ink: #6b4429;
     --ember: #d9896d;
     --creek: #7aa7b3;
     --sage: #9dbb8b;
