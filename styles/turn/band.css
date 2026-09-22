@@ -6,9 +6,12 @@
     position: relative;
     background: var(--night-bg);
     color: var(--night-ink);
-    /* Room under the last line for the band to open out, so the tunnel does not
-       simply stop at a 1px edge. */
-    padding-bottom: calc(var(--chapter-gap) + 4rem);
+    /* This carried an extra 4rem "for the band to open out" into the sunset
+       floor described below. That floor is gone and what follows a band is
+       always another night chapter on the same ground, so the 4rem was 64px
+       of bare moss inside the two largest holes on either page: turn -> room
+       243px on the home page, walkthrough -> room 234px on /#scenes. */
+    padding-bottom: var(--chapter-gap);
 }
 
 /* There used to be a sunset floor here — a 5rem fade into --dusk-0 at the foot
