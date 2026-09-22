@@ -476,7 +476,14 @@
 }
 
 .turn-counterfactual {
-    padding-block: clamp(4rem, 9vw, 7rem);
+    /* Top keeps the room it arrives through — the ::before ramp lives there.
+       The bottom had the same 4-7rem for symmetry, and under it sat the chapter
+       gap and the next chapter's seam: about 120px of empty panel on top of
+       ~190px of empty moss, 307px between the second act's last line and the
+       next heading. Symmetry is not a reason to hold a screen's worth of
+       nothing after the page's strongest moment. */
+    padding-top: clamp(4rem, 9vw, 7rem);
+    padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 /* A ramp into it, so it arrives rather than appears. */
