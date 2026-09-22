@@ -73,6 +73,48 @@
     color: var(--day-ink);
 }
 
+/* Where you are. Ten chapters and no current-section state anywhere — both
+   reviewers found the same absence. A lamp under the label rather than a
+   filled tab: the mark is light, like everything else that says "here" on
+   this page, and it is the one nav element that moves. */
+.nav-btn[aria-current] {
+    position: relative;
+    color: var(--day-ink);
+}
+
+.nav-btn[aria-current]::after {
+    content: '';
+    position: absolute;
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 0.15rem;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg,
+        transparent,
+        var(--copper) 30%,
+        var(--copper) 70%,
+        transparent);
+}
+
+.site-header.is-night .nav-btn[aria-current] {
+    color: var(--night-ink);
+}
+
+.site-header.is-night .nav-btn[aria-current]::after {
+    background: linear-gradient(90deg,
+        transparent,
+        var(--lantern) 30%,
+        var(--lantern) 70%,
+        transparent);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--lantern) 55%, transparent);
+}
+
+/* The drawer says it too. */
+.mobile-nav-link[aria-current] {
+    color: var(--lantern);
+}
+
 
 
 /* Nightfall: the header follows the page down rather than sitting on it as a

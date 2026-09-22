@@ -1,0 +1,29 @@
+   further out than the chrome there instead. */
+.slide {
+    flex: 1;
+    padding: var(--deck-pad-block) var(--deck-pad);
+}
+
+.slide-title {
+    letter-spacing: -0.018em;
+    font-size: clamp(1.7rem, 1.3rem + 1.8vw, 2.4rem);
+    margin-bottom: calc(var(--deck-air) * 1.1);
+}
+
+.slide-body p {
+    color: var(--day-ink-soft);
+}
+
+/* :not(:last-child), because the base `p:last-child { margin-bottom: 0 }`
+   has the same specificity as `.slide-body p` and this file is later. */
+.slide-body p:not(:last-child) {
+    margin-bottom: var(--deck-air);
+}
+
+.slide-body h4 {
+    margin: calc(var(--deck-air) * 1.15) 0 calc(var(--deck-air) * 0.5);
+}
+
+.slide-body h4:first-child {
+    margin-top: 0;
+}

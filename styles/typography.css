@@ -184,3 +184,14 @@ a:hover {
     font-size: var(--step-2);
     line-height: 1.2;
 }
+
+/* A trademark at display size is a mark, not a word. Vollkorn sets ™ at about
+   half the cap height and raises it above the cap line, so at 32px+ it read as
+   a separate word tacked onto the product's own name — correct in the nav and
+   in body copy at 15-19px, wrong in the one place the name is set large. */
+.tm {
+    font-size: 0.4em;
+    vertical-align: 0.62em;
+    letter-spacing: 0;
+    margin-left: 0.04em;
+}

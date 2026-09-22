@@ -72,6 +72,16 @@
     .investor-portal {
         padding-left: calc(var(--rail) + 1.5rem);
     }
+
+    /* The close is one composition. The portal and its caption sat on the
+       content's centre while the ask sat on the rail 229px to the left — the
+       page's final frame and the thing it wants were on two different axes.
+       The spine governs the body; an ending is allowed to centre, and this
+       one now does, together. */
+    .investors-section .investor-portal + .hero-buttons {
+        justify-content: center;
+        padding-left: calc(var(--rail) + 1.5rem);
+    }
 }
 
 .investor-portal::before {

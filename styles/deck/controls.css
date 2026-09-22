@@ -1,0 +1,98 @@
+
+.deck-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem var(--deck-pad);
+    border-top: 1px solid var(--day-rule-soft);
+    background: color-mix(in srgb, var(--day-bg-deep) 55%, transparent);
+}
+
+.btn-control {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--day-rule);
+    border-radius: 999px;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--day-ink);
+    text-decoration: none;
+    background: var(--surface-day);
+    box-shadow: var(--membrane-day);
+    white-space: nowrap;
+    transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.btn-control:hover {
+    background: color-mix(in srgb, var(--honey) 30%, transparent);
+    border-color: var(--copper);
+}
+
+/* pointer-events alone leaves it reachable with Enter; PitchDeck.js also drops
+   it from the tab order. */
+.btn-control.disabled {
+    background: transparent;
+    border-color: var(--day-rule-soft);
+    color: var(--day-ink-faint);
+    /* The membrane glow stayed on, so a transparent pill still read as a
+       lit one: Back at 1/13 and Next at 13/13 looked exactly like their live
+       twins. An end is an end. */
+    box-shadow: none;
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.slide-dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* The visible dot is 8px; the tap target around it is 24px, which is the
+   smallest a thumb should ever have to hit. */
+.slide-dot {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.slide-dot::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--day-rule);
+    transition: background-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.slide-dot:hover::after {
+    background: var(--copper-ink);
+}
+
+.slide-dot.active::after {
+    background: var(--day-ink);
+    transform: scale(1.35);
+}
+
+
+
+/* Thirteen dots wrap to two rows on a phone and take the control bar to 178px —
+   21% of a 390x844 screen, spent on an indicator. Below 640px they go, and the
+   bar is Back and Next. The count is already in the deck header ("5 / 13");
+   a second copy of it beside Next, which this once painted, read as a
+   duplicate on every phone slide.
+
+   This sits at the END of the file on purpose: the first version was a media
+   query ABOVE the base .slide-dots rule, and a later rule of equal specificity
+   wins whether or not the earlier one is inside a media query. It silently did
+   nothing and the bar stayed 178px. */
+@media (max-width: 640px) {
+    .slide-dots {
+        display: none;
+    }
+}
+
+/* A slide is a fixed canvas, so a full-height plate pushes everything else off
+   it. Inside the deck these scenes are a band across the composition, cropped

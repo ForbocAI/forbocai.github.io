@@ -61,9 +61,17 @@
    lead beneath it stopped at 925 — the exact overhang this rule exists to
    close, in the one place the rule did not reach. */
 .chapter-head h1,
-.chapter-head h2,
-.chapter-head .chapter-lead {
+.chapter-head h2 {
     max-width: 22ch;
+}
+
+/* The lead is prose and keeps the prose measure. It was in the rule above,
+   with a 62ch override immediately after; the override went out with the
+   62ch-to-measure pass and left every chapter lead capped at 22ch — about
+   230px, four words a line, beside a thousand pixels of empty ground. It was
+   the turn's own opening paragraph, which is the best writing on the page. */
+.chapter-head .chapter-lead {
+    max-width: var(--measure);
 }
 
 

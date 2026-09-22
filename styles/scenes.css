@@ -120,4 +120,15 @@
     .room-scene img {
         aspect-ratio: 4 / 3;
     }
+
+    /* The turn's plate goes to the source's own ratio, so `cover` crops
+       almost nothing, and the zoom eases off. At 21:9 on a 390px screen it
+       was a 167px letterbox and the 1.3x push put Maeve's face against the
+       right edge with neither the drawer nor the letter in frame — under a
+       caption that names both. */
+    .turn-scene img {
+        aspect-ratio: 16 / 9;
+        transform: scale(1.12);
+        transform-origin: 58% 54%;
+    }
 }

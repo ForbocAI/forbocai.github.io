@@ -1,0 +1,41 @@
+   to the part that carries the moment. */
+.slide .maeve-scene img {
+    max-height: 215px;
+    object-fit: cover;
+    object-position: center 38%;
+}
+
+@media (max-width: 720px) {
+    .slide .maeve-scene img {
+        max-height: 170px;
+    }
+}
+
+
+/* Where height is scarce, the slide spends less of it on padding. A deck slide
+   that does not fit its screen is the defect; the room around the words is the
+   first thing to give up. */
+/* Where height is scarce, the slide spends less of it on chrome and on title.
+   A deck slide that does not fit its screen is the defect; the room around the
+   words gives up first, then the size of the title, and the words themselves
+   never do. Closing the last of it — mobile ran 259px past the window — takes
+   the title down a step and the gaps with it. */
+@media (max-height: 820px), (max-width: 760px) {
+    .deck {
+        --deck-pad: clamp(1rem, 3vw, 1.6rem);
+        --deck-pad-block: clamp(0.9rem, 2.2vh, 1.5rem);
+    }
+
+    .slide-title {
+        font-size: clamp(1.4rem, 1.1rem + 1.5vw, 1.9rem);
+    }
+
+    .slide .maeve-scene img {
+        max-height: min(150px, 18vh);
+    }
+
+    .deck-header,
+    .deck-controls {
+        padding-block: 0.55rem;
+    }
+}
