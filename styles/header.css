@@ -195,3 +195,77 @@
     outline-color: var(--lantern);
 }
 
+
+
+/* Passed, not here.
+   Seven items name ten chapters. A single lit state had to answer for the
+   three it does not name, and it answered by lying: two reviewers
+   independently found "chapters 5/6/7 all show One choice" and "chapters
+   8/9/10 all show Horizons", and both concluded the nav was decoration. The
+   lamp now means you are in this chapter and nothing else; a chapter behind
+   you wears a spent rule, which stays true whichever unnamed chapter you are
+   standing in. */
+.nav-btn[data-passed] {
+    /* Positioned, and the mark is taken out of flow, for the same reason the
+       lamp above is: a block pseudo-element inside the anchor grows the bar
+       every time a chapter is passed, so the whole nav would step down the
+       first time a reader scrolled. */
+    position: relative;
+    color: var(--day-ink);
+}
+
+.nav-btn[data-passed]::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 34%;
+    transform: translateX(-50%);
+    bottom: 0.15rem;
+    height: 1px;
+    border-radius: 1px;
+    background: color-mix(in srgb, var(--day-rule) 85%, transparent);
+}
+
+.site-header.is-night .nav-btn[data-passed] {
+    color: var(--night-ink);
+}
+
+.site-header.is-night .nav-btn[data-passed]::after {
+    background: color-mix(in srgb, var(--night-rule) 90%, transparent);
+}
+
+/* How far down the descent you are, on every shape including the one with no
+   room for a word. The phone has a logo and a hamburger and, across fifty
+   screenshots over two rounds, never once said where the reader was.
+
+   A vein along the header's own edge rather than a progress bar: this page is
+   drawn in venation everywhere else, and a 2px rule that fills is the same
+   idea the chapter stems are. It rides the header's bottom border, so it costs
+   no height on a phone. */
+.read-vein {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    transform: scaleX(var(--read, 0));
+    transform-origin: left center;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--copper) 55%, transparent),
+        var(--copper) 62%,
+        var(--copper-ink));
+}
+
+.site-header.is-night .read-vein {
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--creek) 55%, transparent),
+        var(--honey) 62%,
+        var(--lantern));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .read-vein {
+        transition: transform 0.12s linear;
+    }
+}
