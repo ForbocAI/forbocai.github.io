@@ -29,9 +29,27 @@
     --day-ink-faint: #4c4132;
 
     /* Night — moss side */
-    --night-bg: #263127;
-    --night-surface: #2e3a2f;
-    --night-surface-high: #374534;
+    /* Deep moss, not grey with a green tint.
+
+       The night ground was #263127 — an RGB range of 11, which is a grey.
+       Rendered, every night chapter measured chroma 13-17 out of 255 across
+       53-58% of the scroll, and the brief's "cosy" half was failing on the
+       dark side of the page because a lantern in a grey room is a lit
+       specimen, not an inn.
+
+       Each token keeps its luminance to within a point of the old #263127
+       (46.6) so nothing that clears AA today stops clearing it; only the
+       saturation moves, roughly doubling.
+
+       And the hue sits at olive-moss (~100°), not blue-green (~138°). The first
+       saturated pass went blue-green and read as a cold field: the lamps mix
+       into the ground, and a lantern over blue-green comes out grey-green,
+       which dropped the warm share of the brightest pixels from 80% to 42% in
+       #turn. Over olive the same lantern comes out amber. Overgrowth is green;
+       the light in it is warm; the ground has to let the light stay warm. */
+    --night-bg: #253321;
+    --night-surface: #2c3d27;
+    --night-surface-high: #35492e;
     --night-rule: #3f5248;
     --night-ink: #f1e8d6;
     --night-ink-soft: #d4dcc9;
