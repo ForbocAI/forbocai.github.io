@@ -56,11 +56,26 @@ export const setupHeaderTone = () => {
     // It self-corrected after ~38px of scroll, so every arrival and every
     // scroll-to-top was a cream-to-moss flinch through the 0.35s transition.
     const day = document.querySelector('.daylight, .page-inner:not(.page-night)');
-    if (!day) return;
 
     const ramp = readStops(['--day-0', '--day-1', '--day-2', '--day-3', '--day-4', '--day-5']);
     const crossing = readStops(['--dusk-0', '--dusk-1', '--dusk-2', '--dusk-3', '--dusk-4', '--dusk-5', '--dusk-6']);
     const night = rgb(crossing[crossing.length - 1][1]);
+
+    if (!day) {
+        // A page that is night from its first pixel has no ramp to track, and
+        // returning here left the bar at its stylesheet default: a reviewer
+        // found "/#scenes — a parchment header sitting on a night page, with
+        // the transition crushed into 20 rows. The one place the site visibly
+        // forgets its own rule." There is nothing to interpolate, but there is
+        // still an answer, and it is the end of the crossing.
+        header.style.backgroundColor = `rgb(${night.join(', ')})`;
+        header.classList.add('is-night');
+        headerTeardown = () => {
+            header.style.backgroundColor = '';
+            header.classList.remove('is-night');
+        };
+        return;
+    }
 
     const bandEls = [...document.querySelectorAll('.turn-band')];
     const edgeEl = document.querySelector('.nightfall-edge');

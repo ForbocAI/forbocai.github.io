@@ -128,7 +128,3 @@
     color: var(--copper-ink);
 }
 
-/* One inset for the frame. The chrome and the slide were each given their own
-   clamp and never tied together, so the brand and the slide title sat 12px
-   apart across the header hairline on all thirteen slides — and the
-   short-screen block re-declared only one of the two, which put the slide

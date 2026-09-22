@@ -7,6 +7,7 @@
 #   audit-claims       a sentence that is wrong against the product
 #   audit-consistency  a sentence that is wrong against the rest of the site
 #   line-count         a file past 300 lines, hiding several concerns
+#   css-syntax         a stylesheet cut mid-comment, dropping the rule after it
 #   dead-code          a class nothing wears, a sheet nothing links, a module
 #                      nothing imports, a script nothing names
 #   layout             text collapsed to one word per line
@@ -42,6 +43,7 @@ run() {
 
 run "claims" python3 scripts/audit-claims.py
 run "line-count" python3 scripts/check_line_count.py
+run "css-syntax" python3 scripts/check_css_syntax.py
 run "dead-code" python3 scripts/check_dead_code.py
 
 if [ -f .dream-loop/copy.txt ]; then
