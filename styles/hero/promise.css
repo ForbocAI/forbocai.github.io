@@ -36,7 +36,10 @@
    takes the first line and the two doors share the second. */
 @media (max-width: 1099px) {
     .hero-buttons-lead .btn-primary {
+        /* Its own line, at its own width: the full-width version "read as a
+           form submit" beside two text links at natural width. */
         flex-basis: 100%;
+        max-width: max-content;
     }
 }
 

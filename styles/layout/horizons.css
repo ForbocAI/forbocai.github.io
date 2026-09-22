@@ -53,29 +53,22 @@
             color-mix(in srgb, var(--honey) 9%, transparent) 40%,
             transparent 100%),
         linear-gradient(180deg, var(--seam-from, transparent) 0%, transparent 100%);
-    /* The glint: the last of the light along the crown of the ridge. It rises
-       out of nothing past a quarter of the width, peaks at the centre and is
-       gone before three quarters. */
-    border-top: 1px solid transparent;
-    border-image: linear-gradient(90deg,
-        transparent 22%,
-        color-mix(in srgb, var(--lantern) 34%, transparent) 38%,
-        color-mix(in srgb, var(--lantern) 70%, transparent) 50%,
-        color-mix(in srgb, var(--lantern) 34%, transparent) 62%,
-        transparent 78%) 1;
 }
 
-/* Into the night the glint cools, because what is catching the last light
-   down there is the growth rather than the sky. */
-.chapter-night + .chapter-night::before,
-.turn-band + .chapter::before,
-.chapter + .turn-band::before {
-    border-image: linear-gradient(90deg,
-        transparent 22%,
-        color-mix(in srgb, var(--creek) 30%, transparent) 38%,
-        color-mix(in srgb, var(--lantern) 52%, transparent) 50%,
-        color-mix(in srgb, var(--sage) 26%, transparent) 62%,
-        transparent 78%) 1;
+/* There was a glint along the seam — a 1px line of lantern rising out of
+   nothing past a quarter of the width and gone before three quarters, "the
+   last of the light along the crown of the ridge". Four reviews called it a
+   ruled line, and at 800px across a screen that is what a 1px line is,
+   whatever it fades at. The lamplight at the seam is the whole event now: a
+   soft ellipse of light where two grounds meet, which is how light actually
+   catches a ridge. */
+
+/* No lamplight at the dusk. The turn is the first night chapter and it
+   arrives out of the sunset; a cream-to-amber band at its top edge, on the
+   dark, read as "a 60px render stripe under the nav" rather than as the
+   crossing it sits under. The sunset is the event there. */
+.chapter-day + .turn-band::before {
+    background: none;
 }
 
 /* The ground above, leaving: whatever the chapter grew on its ground — a

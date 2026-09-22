@@ -27,6 +27,19 @@
     max-width: 68ch;
 }
 
+/* The writer's document is a returned object like the judgments below it,
+   and it sits in the same recessed pocket. Bare on the card, "raw monospace
+   with no background, border or padding", it was the one code block on the
+   site with no surface of its own. */
+.turn-authored .turn-code {
+    margin: 0.9rem 0 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
+    background: color-mix(in srgb, #12180f 58%, transparent);
+    font-size: 0.78125rem;
+}
+
 .turn-authored-foot {
     margin-top: 1.1rem;
 }

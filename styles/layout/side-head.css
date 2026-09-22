@@ -72,6 +72,23 @@
     }
 }
 
+/* Stacked, a head that ends in a note keeps only a paragraph's worth of
+   room under it. With the full head margin after the disclosure's own
+   margin, every phone chapter opened on "70-80px of nothing between the
+   accordion and the first paragraph". */
+@media (max-width: 959px) {
+    .chapter-head:has(.deeper, .mission-turn) {
+        margin-bottom: clamp(1.1rem, 3vw, 1.75rem);
+    }
+}
+
+/* Inside the category card the disclosure is the last thing, and the card's
+   padding is its room; the disclosure's own bottom margin left 60px of empty
+   panel under its rule. */
+.mission-turn .deeper {
+    margin-bottom: 0;
+}
+
 /* From 960px, not 1100. At 1024 the stacked layout left the seal alone in a
    56px margin and the right quarter of the screen empty for whole chapters
    — neither grid. A 60ch measure and the fluid h2 (34px there) give the

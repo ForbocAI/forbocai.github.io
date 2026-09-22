@@ -68,6 +68,11 @@
         height: 8rem;
     }
 
+    /* Five entries in two columns leaves the fifth alone on a third row. */
+    .doc-contents ol {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .page-inner:not(.page-night) + .site-footer {
         margin-top: 3rem;
     }

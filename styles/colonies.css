@@ -46,41 +46,58 @@
 
        The lantern pool is brighter and tighter than the colony, and sits
        opposite it: a lamp is a source, a colony is a seep. */
+    /* On the screen's edge, and smaller. These sat at 88-92% and 1-9%
+       when the prose stopped at x=830; with the body at the measure beside a
+       side head it runs to x=1270, and a pool centred at 88% of 1440 is a
+       310px radius of light centred UNDER the last words of every line — "a
+       bright beige smear directly behind the text". Centred on the edge
+       itself, only the pool's skirt crosses the gutter, and the reading
+       stays on plain ground. */
     background-image:
-        radial-gradient(620px 520px at var(--lamp-x) var(--lamp-ty),
+        radial-gradient(520px 440px at var(--lamp-x) var(--lamp-ty),
             color-mix(in srgb, var(--lantern) 40%, transparent) 0%,
             color-mix(in srgb, var(--honey) 17%, transparent) 38%,
             transparent 68%),
-        radial-gradient(760px 640px at var(--colony-x) var(--colony-ty),
+        radial-gradient(640px 540px at var(--colony-x) var(--colony-ty),
             color-mix(in srgb, var(--colony-hue) 16%, transparent) 0%,
             color-mix(in srgb, var(--colony-hue) 6%, transparent) 42%,
             transparent 70%);
     --colony-hue: var(--biolume-core);
-    --colony-x: 1%;
+    --colony-x: 0%;
     --colony-span: 1400px;
     --colony-ty: 40%;
-    --lamp-x: 88%;
+    --lamp-x: 100%;
     --lamp-ty: 22%;
     --lamp-span: 1180px;
 }
 
 .nightfall .chapter:nth-of-type(3n+2) {
     --colony-hue: var(--spore);
-    --colony-x: 99%;
+    --colony-x: 100%;
     --colony-span: 1750px;
     --colony-ty: 30%;
-    --lamp-x: 9%;
+    --lamp-x: 0%;
     --lamp-ty: 62%;
     --lamp-span: 1460px;
 }
 
 .nightfall .chapter:nth-of-type(3n) {
-    --colony-x: 5%;
+    --colony-x: 0%;
     --colony-span: 1180px;
     --colony-ty: 34%;
-    --lamp-x: 92%;
+    --lamp-x: 100%;
     --lamp-ty: 74%;
     --lamp-span: 1330px;
+}
+
+/* The turn holds the counterfactual, a frame wider than the measure that
+   darkens whatever is behind it: a lamp pool at the edge showed as a bright
+   shape cut off by the frame's straight side, "a glow rectangle clipped by
+   the card". The turn's lamp sits at the top centre instead, under the
+   plate that opens the chapter, where the frame never reaches. */
+.nightfall .chapter.turn-band {
+    --lamp-x: 50%;
+    --lamp-ty: 0%;
 }
 
 /* The day has colonies too, and it needed them more.
