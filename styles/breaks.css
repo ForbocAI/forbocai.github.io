@@ -342,69 +342,30 @@
    So the apparatus moves into the slack instead of stacking under the
    argument. The disclosure and the ask sit beside the claim they belong to,
    the two cells meet, and the section gets shorter as well as fuller. */
+/* These two went back to a single column, centred.
+
+   The grid was right when it was written: #business and #room were long, and a
+   644px measure inside an 1100px container left 200px of one-sided emptiness
+   beside it. They are not long any more — the copy was distilled and the full
+   room scene moved to /#scenes — and what the grid holds now is a 43px
+   disclosure beside a 61px paragraph in a 572px section, and a button beside a
+   paragraph in a teaser whose other two children both span.
+
+   Holding a 324px column open for that costs 128-144px of inkless band inside
+   the chapter (a grid row takes its height from the taller sibling) and pushes
+   the content 334px left of optical centre at 1440. Centred, the same
+   emptiness is margin on both sides, which is what a measure narrower than its
+   container is supposed to look like. */
 @media (min-width: 1100px) {
-    #business > .container,
-    #room > .container {
-        display: grid;
-        /* Both tracks are fractions of the CONTAINER, not of the viewport.
-           A viewport-relative cap was right while --shell grew; now that prose
-           is back on a fixed 1180px shell it made the apparatus column 512px
-           against a 532px content column at 2560 — the support material
-           swallowing half the section. Fractions cannot drift apart from the
-           container they divide, whatever the shell does later. */
-        grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.45fr);
-        gap: clamp(2rem, 4vw, 3.5rem);
-        align-items: start;
+    #business > .container > *,
+    #room > .container > * {
+        margin-inline: auto;
     }
 
     #business > .container > .chapter-head,
-    #room > .container > .chapter-head {
-        grid-column: 1 / -1;
-    }
-
-    /* The apparatus packs right and stays there. Rows are explicit: auto
-       placement put the disclosure in a row of its own and opened a hole
-       beside the paragraph it belongs to, which is the same fault the
-       investors grid had. A cell packs against its neighbour or it is not
-       packing. */
-    /* The scene spans. Auto-placement had been dropping it into the narrow
-       apparatus track, so it rendered 944x405 at 1024 and 336x144 at 1440 —
-       an 87% smaller picture on a bigger screen, and it is the same file the
-       page hands out as its og:image. Nothing else in #room is wide enough to
-       fill the container, which is why that section stayed at 68-74% empty
-       while every other one came down. */
+    #room > .container > .chapter-head,
     #room > .container > figure.maeve-scene {
-        grid-column: 1 / -1;
-        grid-row: 2;
-    }
-
-    #business > .container > .soul-market {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    #room > .container > .turn-room {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    #business > .container > .deeper {
-        grid-column: 2;
-        grid-row: 2;
-        margin-left: 0;
-        align-self: end;
-    }
-
-    #room > .container > .turn-consequence:last-of-type {
-        grid-column: 2;
-        grid-row: 3;
-        margin-left: 0;
-        align-self: end;
-    }
-
-    #business > .container > .hero-buttons {
-        grid-column: 2;
-        grid-row: 3;
-        margin-left: 0;
+        max-width: none;
     }
 }
+
