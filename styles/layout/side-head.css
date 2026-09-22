@@ -28,6 +28,21 @@
 
    From 1100px, the same threshold as the rest of the wide layout. Below it
    the wrappers are inert divs and the chapter stacks as it always did. */
+/* The vein's colour belongs to the chapter, not to the hairline that used to
+   be the only thing wearing it: styles/layout/stem.css draws a whole plant in
+   this colour now, and needs it at every width the system might measure at.
+   --vein-lit is the lamp on the branch the reader is level with. */
+.chapter-spread {
+    --vein: var(--day-rule);
+    --vein-lit: var(--copper);
+}
+
+.chapter-night .chapter-spread,
+.turn-band .chapter-spread {
+    --vein: color-mix(in srgb, var(--creek) 62%, var(--night-rule));
+    --vein-lit: var(--lantern);
+}
+
 /* The figure opens the chapter on every shape, above the head, so the
    chapter's anatomy does not depend on the viewport (a reviewer found the
    image before the title on a desktop and after it on a tablet). */
@@ -183,12 +198,6 @@
             transparent 92%);
         /* Narrowing as it descends, the way a stem does. */
         clip-path: polygon(0 0, 100% 0, 72% 100%, 28% 100%);
-        --vein: var(--day-rule);
-    }
-
-    .chapter-night .chapter-spread::before,
-    .turn-band .chapter-spread::before {
-        --vein: color-mix(in srgb, var(--creek) 62%, var(--night-rule));
     }
 }
 

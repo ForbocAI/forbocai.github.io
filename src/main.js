@@ -17,6 +17,7 @@ import { setupHeaderTone } from './systems/headerTone.js';
 import { setupMemoryEntrance } from './systems/memoryEntrance.js';
 import { setupDocContents } from './systems/docContents.js';
 import { setupNavCurrent } from './systems/navCurrent.js';
+import { setupChapterStem } from './systems/chapterStem.js';
 import { arrive } from './systems/arrival.js';
 
 // Initialize Store
@@ -43,6 +44,7 @@ const render = () => {
         stopSprites = wakeSprites();
         setupDocContents();
         setupNavCurrent();
+        setupChapterStem();
 
         // Post-render: where the page lands.
         arrive(state);

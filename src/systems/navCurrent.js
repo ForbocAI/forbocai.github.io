@@ -60,7 +60,13 @@ export const setupNavCurrent = () => {
     // chapter. Once a chapter the nav DOES name has been passed, its link
     // stays lit until the next named one arrives — the bar answers "which part
     // of the page is this" rather than "is this exactly a linked section".
-    const sections = [...linksFor.keys()].sort((a, b) => a.offsetTop - b.offsetTop);
+    // Ordered by where they actually are on the page, not by offsetTop.
+    // offsetTop is measured against each element's own offset parent, and these
+    // sections do not share one, so the sort silently mixed two coordinate
+    // systems: standing in the investors chapter, the bar lit "Living worlds" —
+    // chapter four — because #technology sorted last of the ones scrolled past.
+    const docTop = (el) => el.getBoundingClientRect().top + window.scrollY;
+    const sections = [...linksFor.keys()].sort((a, b) => docTop(a) - docTop(b));
 
     const mark = () => {
         // The topmost section still on screen is the one being read; failing

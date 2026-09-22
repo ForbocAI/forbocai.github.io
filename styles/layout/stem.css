@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------- the stem -- */
+
+/* The drawn margin column. src/systems/chapterStem.js measures the column and
+   src/components/Stem.js draws it; this is only where it sits and what colour
+   it is.
+
+   Absolutely positioned, so that although it is a child of the spread's grid
+   it is out of flow and creates no implicit row. It is placed and sized in
+   pixels by the system, because the numbers come from the rendered text. */
+.chapter-stem {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+    color: var(--vein);
+    /* The plant is ground, not ink. It stands behind a title that rides over
+       it as the reader scrolls, and a hairline crossing a 34px glyph has to
+       be invisible against the sentence and present against the page. */
+    opacity: 0.9;
+}
+
+.chapter-stem .stem-svg {
+    display: block;
+    overflow: visible;
+}
+
+/* The branch at the height a reader is at. The lamp is the page's own way of
+   saying "here" — the nav mark is a lamp, the deck's slide mark is a lamp —
+   so the stem says it the same way rather than inventing a third signal. */
+.chapter-stem .stem-branch {
+    transition: opacity 0.45s var(--ease);
+}
+
+.chapter-stem .stem-branch .stem-node {
+    transition: r 0.45s var(--ease), fill 0.45s var(--ease);
+}
+
+.chapter-stem .stem-branch.is-current {
+    opacity: 1;
+}
+
+.chapter-stem .stem-branch.is-current .stem-node {
+    fill: var(--vein-lit);
+    r: 4;
+}
+
+/* Text stands in front of its own margin. The stem is appended after both
+   columns, so without a stacking order the drawing paints over the chapter it
+   measures.
+
+   The head gets a z-index and NOTHING ELSE. Declaring position: relative on it
+   here cost the side head entirely: this sheet loads after side-head.css at
+   equal specificity, so relative beat the sticky that pins the title beside
+   its body, and the title scrolled away mid-chapter on every wide shape. It is
+   already positioned — sticky is a position — so z-index applies on its own. */
+.chapter-spread > .chapter-head {
+    z-index: 1;
+}
+
+.chapter-spread > .chapter-body {
+    position: relative;
+    z-index: 1;
+}
+
+/* Nothing grows without JavaScript, and the column should not simply empty:
+   the hairline vein in side-head.css stays as the fallback and steps aside
+   once a stem has taken root. */
+.chapter-spread:has(> .chapter-stem)::before {
+    display: none;
+}
+
+/* Below the spread there is no margin column, and the system grows nothing.
+   Belt and braces for a stem left behind by a resize that raced. */
+@media (max-width: 959px) {
+    .chapter-stem {
+        display: none;
+    }
+}
+
+/* Reduced motion keeps the drawing and drops the travelling lamp; the current
+   branch still reads, it just arrives rather than fades. */
+@media (prefers-reduced-motion: reduce) {
+    .chapter-stem .stem-branch,
+    .chapter-stem .stem-branch .stem-node {
+        transition: none;
+    }
+}
