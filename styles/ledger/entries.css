@@ -31,10 +31,21 @@
 
 .ledger-row {
     display: grid;
-    align-items: stretch;
-    grid-template-columns: var(--rail) minmax(0, 1.35fr) minmax(0, 1fr);
-    gap: 0 1.5rem;
-    align-items: start;
+    /* The fact takes the width, and the note takes what a note needs.
+       At 1.35fr / 1fr the fact ran 574px and the note 425px, so every row was
+       as tall as a four-line fact while its note was one or two lines — and
+       both reviewers measured the result. "Each note is one or two lines
+       followed by 100-190px of empty ground before the next hairline rule. The
+       right third of this chapter is a column of captions floating above
+       nothing." It is the flattest screen on the site and the worst void on
+       it, at 64% empty bands. A wider fact is a shorter row, and a shorter row
+       has less nothing under its note. */
+    grid-template-columns: var(--rail) minmax(0, 1.75fr) minmax(0, 1fr);
+    gap: 0 clamp(1.5rem, 3vw, 2.75rem);
+    /* And the note sits level with the fact it annotates rather than at the
+       top of a box it cannot fill — the difference between a caption above a
+       void and a margin note beside its line. */
+    align-items: center;
     padding-block: clamp(1.75rem, 3.5vw, 2.5rem);
     border-bottom: 1px solid var(--day-rule);
 }

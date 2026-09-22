@@ -23,8 +23,20 @@
     font-size: var(--step-2);
 }
 
+/* This note is not a note. It is the card's lede, and it carries the one
+   instruction a studio has to act on — "it is the most load-bearing asset in
+   your build" — while set at the smallest size on the page, under a 26px
+   heading, beside a full-width code block. A reviewer put it exactly: "the
+   typography contradicts the claim", and measured the result as 532px of
+   empty card beside three lines of 12px type.
+
+   Body size and the reading measure. 68ch at --step--1 rendered 534px wide and
+   still counted as fine print; 68ch at body size would have run past what
+   type.mjs allows anybody to read. */
 .turn-authored .turn-note {
-    max-width: 68ch;
+    font-size: var(--step-0);
+    line-height: 1.5;
+    max-width: var(--measure);
 }
 
 /* The writer's document is a returned object like the judgments below it,
