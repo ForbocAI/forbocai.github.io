@@ -49,6 +49,26 @@ p:last-child {
     margin-bottom: 0;
 }
 
+/* `pretty` is worth its price on a wide column and not on a narrow one.
+   It buys a whole word off the last line by trading a slightly shorter line
+   above, which is invisible at a 61ch measure. At a phone's 300px it is three
+   visibly short lines in a row: a reviewer measured a paragraph whose lines
+   ended at 272, 279 and 264 while its neighbours ran to 328-337, and read the
+   column as damaged. Measured here on that same paragraph: 48px mean shortfall
+   with `pretty`, 37px without.
+
+   One width, for one typographic setting, because the thing it should follow
+   is the column and CSS cannot ask an element how wide it is without
+   containment this page has no other reason to carry. */
+@media (max-width: 640px) {
+    p,
+    .chapter p > strong:first-child,
+    .investors-body p > strong:first-child,
+    .doc-body p > strong:first-child {
+        text-wrap: wrap;
+    }
+}
+
 strong {
     font-weight: 700;
 }
