@@ -1,6 +1,11 @@
 // Mobile Menu State
 let mobileMenuOpen = false;
 
+// The keyboard handler is on document, which outlives every render. Without
+// this, each hash navigation stacked one more listener there — every one of
+// them holding the toggle and the sheet of a page that no longer existed.
+let keyTeardown = null;
+
 // Setup Mobile Menu Event Listeners
 //
 // The drawer covers the page, so while it is open it owns the keyboard. Three
@@ -9,6 +14,13 @@ let mobileMenuOpen = false;
 // it; Escape did nothing, which is the one key everybody tries; and Tab ran
 // straight past the links into the page underneath the sheet.
 export const setupMobileMenu = () => {
+    keyTeardown?.();
+    keyTeardown = null;
+    // A render replaces the sheet, so the page behind it is scrollable again
+    // and the state says so.
+    mobileMenuOpen = false;
+    document.body.style.overflow = '';
+
     const toggle = document.getElementById('mobileMenuToggle');
     const mobileNav = document.getElementById('mobileNav');
     if (!toggle || !mobileNav) return;
@@ -39,7 +51,7 @@ export const setupMobileMenu = () => {
         if (event.target.closest('a[href]')) setOpen(false, { restoreFocus: false });
     });
 
-    document.addEventListener('keydown', (event) => {
+    const onKey = (event) => {
         if (!mobileMenuOpen) return;
         if (event.key === 'Escape') {
             setOpen(false);
@@ -60,5 +72,8 @@ export const setupMobileMenu = () => {
             event.preventDefault();
             first.focus();
         }
-    });
+    };
+
+    document.addEventListener('keydown', onKey);
+    keyTeardown = () => document.removeEventListener('keydown', onKey);
 };
