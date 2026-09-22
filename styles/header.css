@@ -15,6 +15,39 @@
         color 0.35s var(--ease);
 }
 
+/* Under the bar, the page does not stop — it dissolves.
+   A reviewer counted nine screens where the header's straight edge cut a line
+   of running text through its x-height: a caption reading "Everyone in the
+   room has something at stake" with the tops of the glyphs eaten and the
+   bottoms hanging beneath the rule. An opaque bar over a scrolling page
+   always does this, and nothing about the scroll can be changed. What can be
+   changed is the edge. Light does not end at a line, and neither does a leaf:
+   a short band of the header's own ground, faded out, turns a severed line
+   into one passing behind mist.
+
+   background-color: inherit, because the ground is set on the element by
+   headerTone.js as the descent runs, so there is no token to name here — the
+   band takes whatever the bar is wearing at that scroll position, night or
+   day, without a second interpolation to keep in step. */
+.site-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: clamp(14px, 2.4vw, 28px);
+    pointer-events: none;
+    background-color: inherit;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
+}
+
+/* The drawer opens exactly where the band falls, and the header's stacking
+   context sits above it, so the band would veil the first link in it. */
+.site-header:has(+ .mobile-nav.active)::after {
+    display: none;
+}
+
 .site-header nav {
     display: flex;
     align-items: center;

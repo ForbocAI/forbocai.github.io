@@ -30,29 +30,38 @@
 
    Three placements on a 3-cycle against nine sections, so the pattern does not
    line up with the chapter rhythm and no two neighbours share a side. */
-.nightfall .chapter {
+/* The light is painted on a layer of its own, and that layer fades out at the
+   chapter's own edges.
+   A background box is the element's rectangle, so a repeat-y tile RESTARTS at
+   each chapter's top and is CLIPPED at its bottom: the ground brightness above
+   a seam and below it came from unrelated tile phases, and the difference
+   showed as a hard-edged band across the top of nearly every night section —
+   the one thing a continuous descent cannot have. Masked top and bottom, each
+   chapter's light arrives and leaves the way light does, and the seam has
+   nothing to draw. */
+.nightfall .chapter::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    mask-image: linear-gradient(180deg,
+        transparent 0%, #000 9%, #000 91%, transparent 100%);
     background-repeat: repeat-y, repeat-y;
     background-size: 100% var(--lamp-span, 1180px), 100% var(--colony-span, 1400px);
     /* TWO sources, and the warm one is the KEY.
 
        The night had only the cold half at chapter level, so the grown light
        out-shone the made light and the brightest 8% of every night chapter
-       measured grey-green — 104,111,93 in #room against the day's lantern
-       cream 229,206,167. The page was delivering "cosy" by ALTERNATING warm
+       measured grey-green. The page was delivering "cosy" by ALTERNATING warm
        parchment with a cold dark, rather than by putting a warm light inside
        the dark, which is the difference between an inn at night and a lit
-       specimen. The design language already said warm light is MADE and cold
-       light is GROWN; only the grown half had been built.
+       specimen.
 
        The lantern pool is brighter and tighter than the colony, and sits
-       opposite it: a lamp is a source, a colony is a seep. */
-    /* On the screen's edge, and smaller. These sat at 88-92% and 1-9%
-       when the prose stopped at x=830; with the body at the measure beside a
-       side head it runs to x=1270, and a pool centred at 88% of 1440 is a
-       310px radius of light centred UNDER the last words of every line — "a
-       bright beige smear directly behind the text". Centred on the edge
-       itself, only the pool's skirt crosses the gutter, and the reading
-       stays on plain ground. */
+       opposite it: a lamp is a source, a colony is a seep. On the screen's
+       edge, because with the body at the measure beside a side head a pool
+       centred at 88% sat under the last words of every line. */
     background-image:
         radial-gradient(520px 440px at var(--lamp-x) var(--lamp-ty),
             color-mix(in srgb, var(--lantern) 40%, transparent) 0%,
@@ -62,6 +71,12 @@
             color-mix(in srgb, var(--colony-hue) 16%, transparent) 0%,
             color-mix(in srgb, var(--colony-hue) 6%, transparent) 42%,
             transparent 70%);
+}
+
+/* The values sit on the CHAPTER, not on its light layer: the variants below
+   set them per chapter, and a declaration on the pseudo-element would beat
+   anything they inherit. */
+.nightfall .chapter {
     --colony-hue: var(--biolume-core);
     --colony-x: 0%;
     --colony-span: 1400px;
@@ -161,7 +176,7 @@
 
    Atmosphere is worth less than the sentence it sits behind. */
 @media (max-width: 900px) {
-    .nightfall .chapter {
+    .nightfall .chapter::after {
         /* The colony alone, and faintly. Damping the lamp was not enough — at
            13% it still held the ground under #investors' lead at a median of
            93 against a base night of 46, and the brightest ink on the page
