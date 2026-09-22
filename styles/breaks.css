@@ -140,12 +140,13 @@
     }
 }
 
-@media (max-width: 860px) {
-    :root {
-        --rail: 2.25rem;
-        --header-height: 66px;
-    }
-
+/* The burger takes over at 940px, not 860. Seven links and the CTA need about
+   940px at their set size; between 880 and 940 the desktop nav wrapped onto
+   two lines — "One / choice", "Living / worlds" — and overflowed its container
+   by up to 33px. Nothing else about the menu is gated on width (no
+   matchMedia, no other @media in mobile-nav.css), so only the switch moves;
+   the rail and header-height changes below stay at 860 where they belong. */
+@media (max-width: 940px) {
     .nav-links,
     .nav-cta {
         display: none;
@@ -153,6 +154,13 @@
 
     .mobile-menu-toggle {
         display: flex;
+    }
+}
+
+@media (max-width: 860px) {
+    :root {
+        --rail: 2.25rem;
+        --header-height: 66px;
     }
 
     .business-grid,
@@ -357,15 +365,28 @@
    emptiness is margin on both sides, which is what a measure narrower than its
    container is supposed to look like. */
 @media (min-width: 1100px) {
-    #business > .container > *,
-    #room > .container > * {
-        margin-inline: auto;
+    /* On the RAIL, not centred. Centring the boxes put the body's left edge at
+       x=389 under a heading whose ink starts at x=246 on the rail — the section
+       went from one left edge to two, 143px apart, which reads as a stagger
+       rather than as composition. A single left edge on the rail is the site's
+       own grammar; the emptiness it leaves on the right is a measure narrower
+       than its container, which every prose chapter on the page already is. */
+    #business > .container > :not(.chapter-head):not(figure),
+    #room > .container > :not(.chapter-head):not(figure) {
+        margin-left: calc(var(--rail) + 1.5rem);
+        margin-right: auto;
     }
 
+    /* The head and the figure carry their own rail and span the container.
+       The first version of this rule hit them too, through `*`, and moved the
+       heading 76px right along with the body — so the body landed 76px LEFT of
+       the heading's ink instead of on it, and the stagger it was meant to close
+       flipped sign (-76) rather than closing. */
     #business > .container > .chapter-head,
     #room > .container > .chapter-head,
     #room > .container > figure.maeve-scene {
         max-width: none;
+        margin-left: 0;
     }
 }
 

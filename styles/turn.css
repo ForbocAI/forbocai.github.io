@@ -11,18 +11,13 @@
     padding-bottom: calc(var(--chapter-gap) + 4rem);
 }
 
-/* You come out of the tunnel into the last of the light — the band's floor
-   warms into the first stop of the sunset that follows it. */
-.turn-band::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 5rem;
-    pointer-events: none;
-    background: linear-gradient(180deg, transparent 0%, var(--dusk-0) 100%);
-}
+/* There used to be a sunset floor here — a 5rem fade into --dusk-0 at the foot
+   of every turn band, "the first stop of the sunset that follows it". Nothing
+   sunset follows a turn band any more: on the home page #turn is followed by
+   #room, another night chapter, and on /#scenes the walkthrough is followed by
+   the room. What it painted was a cream stripe across the moss between two
+   night chapters, peak luminance 186 over a ground of 42-70, on both pages —
+   the page's one dramatic tonal event, the dusk, with an accidental twin. */
 
 .turn-band h2,
 .turn-band h3 {

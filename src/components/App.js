@@ -51,7 +51,11 @@ const Fireflies = () => `
 
 export const App = (state) => {
     const page = selectCurrentPage(state);
-    const isHomePage = page !== 'whitepaper' && page !== 'pitch';
+    // Exact, not a list of exceptions. The exception list was written when
+    // there were two inner pages, and /#scenes silently became a third one
+    // that still rendered as page-home — which is why the router could not
+    // see a route change when a reader clicked into it.
+    const isHomePage = page === 'index';
 
     const renderContent = () => {
         if (page === 'whitepaper') {
