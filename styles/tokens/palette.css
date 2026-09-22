@@ -54,6 +54,16 @@
        #turn. Over olive the same lantern comes out amber. Overgrowth is green;
        the light in it is warm; the ground has to let the light stay warm. */
     --night-bg: #253321;
+    /* The night has a floor, and the way down to it.
+       Measured over the whole page in its own left gutter, the day drifted 29
+       luminance levels across three chapters, fell 137 in one 400px cliff, and
+       then the six night chapters sat inside 13 levels of each other with no
+       direction at all — #roadmap and #souls BRIGHTER than #turn, because what
+       varied was the colony lighting and not the ground. A page whose one idea
+       is a continuous descent spent its whole back half not descending.
+       --night-bg stays the night you arrive in; these are where it goes. */
+    --night-mid: #1c2715;
+    --night-floor: #121a0c;
     --night-surface: #2c3d27;
     --night-surface-high: #35492e;
     --night-rule: #3f5248;

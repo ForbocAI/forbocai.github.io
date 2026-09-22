@@ -9,6 +9,27 @@
        not a source. A second source needs AREA, which means it has to light
        ground. See the colonies on .nightfall .chapter below. */
     background-color: var(--night-bg);
+    /* And the descent does not stop at the horizon.
+       One element holds the entire night, so a single ramp across it cannot
+       band the way a per-chapter fill did — the same reason the day's own ramp
+       lives on one element. It OPENS on --dusk-6, the exact colour the sunset
+       above closes on, because a night that started even five levels lighter
+       than the dusk landing would trade a flat back half for a fresh seam at
+       the one boundary the whole design is about.
+       Only downward from there, so every contrast on this ground improves.
+
+       Steep enough to beat its own weather. A gentler first ramp took the
+       night from 46 to 29 and the per-chapter means still went DOWN, UP, down,
+       UP: the colonies swing the ground by about eight levels and adjacent
+       chapters are only a few hundred pixels apart on the ramp, so the
+       lighting out-voted the descent locally. At this rate the trend wins over
+       any two chapters while the weather still varies inside each one, which
+       is what a forest floor does. */
+    background-image: linear-gradient(180deg,
+        var(--dusk-6) 0%,
+        var(--night-bg) 14%,
+        var(--night-mid) 52%,
+        var(--night-floor) 100%);
     color: var(--night-ink);
     margin-top: 14rem;
     /* The lantern halos are wider than the page on purpose. Clip only the
