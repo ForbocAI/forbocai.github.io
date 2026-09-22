@@ -154,5 +154,41 @@
         margin-left: 0;
         max-width: none;
     }
+
+    /* And the stem the chapter grows on.
+       The notes fill 60-100px of a column that stands beside 2,000px of body,
+       so both reviewers went on finding 300-550px of bare margin under a
+       pinned title. A margin does not have to hold words to be doing
+       something: this is the venation doctrine at page scale — a vein enters
+       at full weight where the chapter starts and thins to nothing as it
+       descends, so the column reads as the stem the chapter is growing from
+       rather than as a column that ran out. It lives on the spread, not on
+       the sticky head, so it stays with the chapter while the title rides. */
+    .chapter-spread {
+        position: relative;
+    }
+
+    .chapter-spread::before {
+        content: '';
+        position: absolute;
+        left: calc(var(--rail) / 2 - 1px);
+        top: 0.6rem;
+        bottom: clamp(2rem, 6vw, 5rem);
+        width: 2px;
+        border-radius: 2px;
+        pointer-events: none;
+        background: linear-gradient(180deg,
+            var(--vein) 0%,
+            color-mix(in srgb, var(--vein) 40%, transparent) 38%,
+            transparent 92%);
+        /* Narrowing as it descends, the way a stem does. */
+        clip-path: polygon(0 0, 100% 0, 72% 100%, 28% 100%);
+        --vein: var(--day-rule);
+    }
+
+    .chapter-night .chapter-spread::before,
+    .turn-band .chapter-spread::before {
+        --vein: color-mix(in srgb, var(--creek) 62%, var(--night-rule));
+    }
 }
 
