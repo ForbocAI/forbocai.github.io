@@ -97,7 +97,10 @@
    plate that opens the chapter, where the frame never reaches. */
 .nightfall .chapter.turn-band {
     --lamp-x: 50%;
-    --lamp-ty: 0%;
+    /* 14%, not 0: at the top edge the pool's own core became the bright line
+       along the seam, which is the defect the seam treatment exists to
+       remove. */
+    --lamp-ty: 14%;
 }
 
 /* The day has colonies too, and it needed them more.

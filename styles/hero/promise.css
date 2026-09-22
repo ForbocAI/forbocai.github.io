@@ -34,12 +34,23 @@
 /* Three asks in one row wrap 2+1 on a tablet and a phone, with "Read the
    docs" alone on the second line. Where the row cannot hold three, the ask
    takes the first line and the two doors share the second. */
+/* A real break, not a dead declaration. `flex-basis: 100%` with
+   `max-width: max-content` renders identically to no rule at all — flex
+   line-breaking uses the hypothetical main size, which max-width has already
+   clamped back to the button's own width, so nothing ever wrapped and the
+   2+1 rag this comment named went on shipping. A zero-height item with a
+   full-width basis is the only thing that forces the line, and it leaves the
+   button at its own width. */
+.hero-buttons-lead .row-break {
+    display: none;
+}
+
 @media (max-width: 1099px) {
-    .hero-buttons-lead .btn-primary {
-        /* Its own line, at its own width: the full-width version "read as a
-           form submit" beside two text links at natural width. */
+    .hero-buttons-lead .row-break {
+        display: block;
         flex-basis: 100%;
-        max-width: max-content;
+        height: 0;
+        margin: 0;
     }
 }
 

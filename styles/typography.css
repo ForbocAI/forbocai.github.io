@@ -156,6 +156,25 @@ a:hover {
     letter-spacing: inherit;
 }
 
+/* And a lede inside a paragraph that is ALREADY above body size keeps that
+   size. Promotion assumes the paragraph under it is body copy; six paragraphs
+   are set larger than that, so their opening sentence was DEMOTED — on
+   .mission-destination the page's thesis line sat at 19px sans on top of its
+   own 32px Vollkorn continuation, the least prominent thing in its own
+   paragraph. It still becomes its own block; only the size follows the
+   paragraph it opens. Specificity has to beat the promotion rule's 0-2-2,
+   hence the redundant element and class. */
+.chapter p.chapter-lead > strong:first-child,
+.chapter p.mission-destination > strong:first-child,
+.chapter p.mission-turn-line > strong:first-child,
+.chapter p.mission-felt > strong:first-child,
+.chapter p.hero-potion > strong:first-child {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+
 
 /* Five tiers with air between them. The promoted scan lines moved off --step-1
    and onto body size, which freed that step for the headings that are actually

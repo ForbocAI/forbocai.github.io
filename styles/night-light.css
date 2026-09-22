@@ -66,12 +66,18 @@
         drop-shadow(0 0 26px color-mix(in srgb, var(--sage) 46%, transparent));
 }
 
-/* The cold light, finally emitted rather than described. */
-.chapter-night .chapter-mark,
-.turn-band .chapter-mark {
-    box-shadow: var(--biolume);
-    border-radius: 50%;
-}
+/* The cold light is emitted by the sigil itself — see the drop-shadows above,
+   which follow the drawn strands.
+
+   There was a `box-shadow: var(--biolume); border-radius: 50%` here. The mark
+   is a 2.6rem box with no background, so an outer box-shadow paints a hard rim
+   with an unlit middle — an annulus, not a glow — and the blanket
+   `corner-shape: superellipse(2.4)` turned that 50% into a squircle, because
+   .chapter-mark is not on the round exemption list. So the site's one
+   procedurally grown mark sat inside a machined rounded square of light, which
+   is the exact thing Sigil.js says it removed from the markup: "The rune was
+   sitting in a perfect circle with a hairline border — the constructed version
+   of the exact form the sigil grows." A lighting rule had put it back, larger. */
 
 /* --honey measured 4.4:1 against the lit panel — just under AA for 15px/700.
    The ground under these labels is not the flat night, it is --surface-night's

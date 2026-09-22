@@ -48,7 +48,14 @@ export const setupHeaderTone = () => {
     const header = document.querySelector('.site-header');
     if (!header) return;
 
-    const day = document.querySelector('.daylight, .page-inner');
+    // Not a night page. /#scenes is `page-inner page-night`, so it matched
+    // this selector and BECAME the day ramp element: at scroll 0 the sample
+    // sits above the element's top, the branch below reads that as full
+    // morning, and the bar painted #faf3e5 — the brightest parchment on the
+    // site, with dark ink — over a page that is moss from its first pixel.
+    // It self-corrected after ~38px of scroll, so every arrival and every
+    // scroll-to-top was a cream-to-moss flinch through the 0.35s transition.
+    const day = document.querySelector('.daylight, .page-inner:not(.page-night)');
     if (!day) return;
 
     const ramp = readStops(['--day-0', '--day-1', '--day-2', '--day-3', '--day-4', '--day-5']);
@@ -94,7 +101,16 @@ export const setupHeaderTone = () => {
             // Clay through copper carries neither dark ink nor light ink above
             // 3:1, so the bar never rests there: it tracks while that is
             // readable, then crosses in one CSS-transitioned move.
-            return t >= 0.12 ? night : sampleStops(crossing, t);
+            //
+            // But it need not go flat. Snapping to #263127 and holding it for
+            // the remaining 88% of the ramp put one dark tone against the
+            // sunset's clay, copper, plum and slate in turn, on a ruled
+            // full-width line. A quarter of the ground mixed into the night
+            // keeps the bar under the luminance the light ink needs while
+            // letting it carry the hue of whatever it is standing on, so the
+            // crossing reads as one event instead of two.
+            if (t < 0.12) return sampleStops(crossing, t);
+            return mix(night, sampleStops(crossing, t), 0.25);
         }
 
         const dayTop = docTop(day);

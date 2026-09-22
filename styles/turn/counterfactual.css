@@ -25,7 +25,13 @@
     font-size: var(--step-2);
 }
 
-.turn-counterfactual-head p {
+/* The plain descriptive paragraph, and only that one. Unscoped, this matched
+   every <p> in the head and beat both of them on specificity: the eyebrow
+   (.turn-label, 0-1-0) was demoted to caption size, and the diff line
+   (.turn-diffline) lost its size, its honey, its top margin and its centring
+   — so the page's declared climax, the one composed frame on the site, was
+   introduced by two captions and three different centre axes. */
+.turn-counterfactual-head > p:not(.turn-label):not(.turn-diffline) {
     margin: 0;
     max-width: 52ch;
     font-size: var(--step--1);
@@ -110,7 +116,7 @@
 .turn-counterfactual-pair .turn-code {
     margin: 0;
     padding: 0.85rem 1rem;
-    border-radius: var(--radius-xs);
+    border-radius: var(--radius-sm);
     border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
     background: color-mix(in srgb, #12180f 58%, transparent);
     font-size: 0.78125rem;

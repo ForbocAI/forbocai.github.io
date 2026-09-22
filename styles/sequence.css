@@ -23,10 +23,14 @@
     box-shadow: var(--membrane-day);
 }
 
-/* Each step sits a little higher than the last, so the row itself climbs. */
-.world-expansion article:nth-child(2) { background: #eaf1ea; }
-.world-expansion article:nth-child(3) { background: #e8eee9; }
-.world-expansion article:nth-child(4) { background: #f4ecf2; }
+/* Each step sits a little higher than the last, so the row itself climbs.
+   As a tint on the surface's own base, not as `background:` — that shorthand
+   threw away the face light — and mixed off the page's ground rather than the
+   three raw off-ramp hexes (#eaf1ea, #e8eee9, #f4ecf2) this row was still
+   carrying after the palette cleanup reached its sibling component. */
+.world-expansion article:nth-child(2) { --surface-tint: color-mix(in srgb, var(--sage) 8%, var(--day-bg)); }
+.world-expansion article:nth-child(3) { --surface-tint: color-mix(in srgb, var(--creek) 7%, var(--day-bg)); }
+.world-expansion article:nth-child(4) { --surface-tint: color-mix(in srgb, var(--lavender) 8%, var(--day-bg)); }
 
 .world-expansion article > span {
     display: block;

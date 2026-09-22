@@ -28,12 +28,21 @@
     --chapter-base: var(--night-bg);
 }
 
+/* .hero + .chapter as well. The hero is not a .chapter, so the page's FIRST
+   horizon — parchment to the mission's deeper parchment — matched neither
+   half of this treatment and stayed a dead-straight 1440px colour step, in a
+   file whose own contract is "every chapter boundary, not a chosen few". It
+   also left #mission without a positioning context, so its leaving-fade
+   resolved against .daylight and painted at the foot of the whole day half
+   instead of at the foot of the chapter. */
+.hero + .chapter,
 .chapter + .chapter {
     position: relative;
 }
 
 /* The ground below, arriving: the colour it is leaving dissolves into its own
    over the top of the band, and the lamplight catches along the seam. */
+.hero + .chapter::before,
 .chapter + .chapter::before {
     content: '';
     position: absolute;
@@ -48,9 +57,14 @@
        layer under it, leaving the colour step standing at both screen edges
        outside the masked middle. */
     background:
-        radial-gradient(ellipse 64% 100% at 50% 0%,
-            color-mix(in srgb, var(--lantern) 22%, transparent) 0%,
-            color-mix(in srgb, var(--honey) 9%, transparent) 40%,
+        /* Centred BELOW the edge, so the seam gets the ellipse's shoulder
+           rather than its core. At `at 50% 0%` the 22% stop landed on the
+           element's first pixel row and painted a bright line along the
+           whole boundary — the lamplight was making the ruled edge it
+           replaced. */
+        radial-gradient(ellipse 64% 130% at 50% -18%,
+            color-mix(in srgb, var(--lantern) 26%, transparent) 0%,
+            color-mix(in srgb, var(--honey) 10%, transparent) 46%,
             transparent 100%),
         linear-gradient(180deg, var(--seam-from, transparent) 0%, transparent 100%);
 }
@@ -73,8 +87,14 @@
 
 /* The ground above, leaving: whatever the chapter grew on its ground — a
    colony, a lamp pool, the day's moss — settles into the chapter's own base
-   colour before the seam, so nothing is cut through by the edge. */
-.chapter::after {
+   colour before the seam, so nothing is cut through by the edge.
+
+   Day chapters only. Every night chapter shares --night-bg, so on the night
+   half this faded the ground to the colour it already was — which did
+   nothing for the colour step and everything to the colony passing under it,
+   flattening the grown light to flat moss for the last 4-7rem of every
+   chapter and making the boundary the hard edge it was meant to dissolve. */
+.chapter-day::after {
     content: '';
     position: absolute;
     left: 0;

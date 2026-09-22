@@ -99,8 +99,13 @@
     color: var(--day-ink);
 }
 
+/* The faculty is the label and the question is the headline — the order the
+   home page sets. The two components had the emphasis reversed, so the
+   product's six named parts were the caption in one view and the headline in
+   the other; the markup was swapped to agree, and the label's margin moves
+   with it. */
 .cognition-chain p {
-    margin: 0.2rem 0 0;
+    margin: 0 0 0.2rem;
     font-size: var(--step--1);
     color: var(--day-ink-soft);
 }

@@ -73,9 +73,18 @@
        screen. This corner set is what every card and panel on the site
        already wears. */
     border-radius: var(--radius-lg);
-    align-self: stretch;
+    /* An authored crop. `align-self: stretch` made the plate's HEIGHT the
+       prose column's row height while its width stayed a fixed cap, so
+       `cover` absorbed the difference and the painting's framing was decided
+       by paragraph reflow: a 0.94:1 portrait at 1440x900 and a 2.18:1 strip
+       at 1440x700, where the castle, the waterfall and the sunrise are
+       cropped away. Height from the ratio, so every shape shows the same
+       picture. */
+    align-self: center;
+    aspect-ratio: 4 / 5;
+    height: auto;
     object-fit: cover;
-    max-height: 520px;
+    max-height: min(58vh, 520px);
 }
 
 /* Stacked, the art stops being a companion to the headline and becomes a
@@ -101,6 +110,6 @@
    in half by the window edge is not. */
 @media (max-height: 820px), (max-width: 760px) {
     .title-slide-art {
-        max-height: min(26vh, 220px);
+        max-height: min(34vh, 260px);
     }
 }

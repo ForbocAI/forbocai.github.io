@@ -88,12 +88,12 @@ const slides = [
         title: 'Memory is the evidence. Judgment is the intelligence.',
         content: `
             <ol class="cognition-chain cognition-chain-six" aria-label="Character Intelligence">
-                <li><strong>Identity</strong><p>Who am I?</p></li>
-                <li><strong>Memory</strong><p>What happened?</p></li>
-                <li><strong>Motive</strong><p>What matters?</p></li>
-                <li><strong>Reasoning</strong><p>What follows?</p></li>
-                <li><strong>Judgment</strong><p>Where do I stand?</p></li>
-                <li><strong>Action</strong><p>What may I propose?</p></li>
+                <li><p>Identity</p><strong>Who am I?</strong></li>
+                <li><p>Memory</p><strong>What happened?</strong></li>
+                <li><p>Motive</p><strong>What matters?</strong></li>
+                <li><p>Reasoning</p><strong>What follows?</strong></li>
+                <li><p>Judgment</p><strong>Where do I stand?</strong></li>
+                <li><p>Action</p><strong>What may I propose?</strong></li>
             </ol>
             <div class="cognition-reveal">
                 <p><strong>Dialogue is what the player hears.</strong></p>
@@ -231,7 +231,7 @@ const slides = [
             <p class="ask-note">Send us one character. We will take her to the moment your tree ends. Eighteen months later a player gets every detail of that scene wrong, and still gets her right.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Put your character in the room</a>
-                <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-ghost">Investors: come inside</a>
+                <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="text-link">Investors: come inside</a>
             </div>
             </div>
         `

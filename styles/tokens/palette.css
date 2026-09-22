@@ -15,8 +15,14 @@
     --day-bg: #f4ead7;
     --day-bg-deep: #ede0c7;
     --day-surface: #fbf6ea;
-    --day-rule: #ddcdae;
-    --day-rule-soft: #e7dac1;
+    /* A hairline has to be a hairline on the WHOLE descent, not only at the
+       top of it. #ddcdae measured 1.012:1 against #technology's --dusk-0
+       ground — the ledger's row dividers were unpainted along their whole
+       length, and what looked like a taper was a decorative colony passing
+       underneath them. These clear 1.3:1 against the darkest day ground and
+       still read as a hairline against the lightest. */
+    --day-rule: #c7ae87;
+    --day-rule-soft: #d8c6a4;
     --day-ink: #263127;
     --day-ink-soft: #5c4a3b;
     /* Both "faint" inks carry real sentences, not decoration, and both measured

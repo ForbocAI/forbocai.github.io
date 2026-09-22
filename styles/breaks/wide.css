@@ -17,7 +17,10 @@
 
     .timeline-content {
         display: grid;
-        grid-template-columns: minmax(0, 19rem) minmax(0, 1fr);
+        /* The track IS the measure, so the paragraph inside it is constrained
+           once rather than twice — a 1fr track opened wider than the measure
+           and left its own right side bare under every entry. */
+        grid-template-columns: minmax(0, 19rem) minmax(0, var(--measure));
         /* Status on row 1 and the title on row 2, both in the left column;
            the paragraph auto-places beside the title. Row 2 takes the slack
            so the title stays on its status rather than drifting down. */

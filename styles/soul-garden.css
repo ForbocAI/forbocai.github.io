@@ -85,7 +85,23 @@
 }
 
 .soul-economy p {
-    max-width: 62ch;
+    max-width: var(--measure);
+}
+
+/* A panel-wide box holding one measure-wide column left a third of itself
+   bare. It takes the same shape as the crossing panel above it: the heading
+   in the margin, the prose at the measure beside it. */
+@media (min-width: 960px) {
+    .soul-economy {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, var(--measure));
+        column-gap: clamp(2rem, 4.5vw, 5rem);
+        align-items: start;
+    }
+
+    .soul-economy h3 {
+        margin-bottom: 0;
+    }
 }
 
 /* This paragraph's bold is a clause, not a lead-in: promoted to a block by
@@ -147,18 +163,20 @@
     margin-bottom: 0.6rem;
 }
 
+/* The pocket, and nothing the shared rule already says. This block was a
+   copy-paste of .turn-code that carried two values its source had since
+   moved past: a `max-width: 72ch` measured against a frozen 12.5px font, so
+   it stayed ~542px at every viewport while the prose beside it grew — the one
+   width-capped payload on a site whose rule is "one treatment at every width,
+   the payload is the evidence" — and `line-height: 1.65`, the value the
+   density pass replaced with 1.5 everywhere it reached. */
 .soul-crossing .turn-code {
-    max-width: 72ch;
     margin: 1.2rem 0;
     padding: 0.85rem 1rem;
-    border-radius: var(--radius-xs);
+    border-radius: var(--radius-sm);
     border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
     background: color-mix(in srgb, #12180f 58%, transparent);
-    font-family: var(--font-code);
     font-size: 0.78125rem;
-    line-height: 1.65;
-    color: var(--night-ink);
-    overflow-x: auto;
 }
 
 .soul-crossing .turn-code code { white-space: pre-wrap; }

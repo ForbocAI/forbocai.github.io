@@ -67,6 +67,11 @@
        desktop — without letting an eyebrow grow to full h3 size on a wide
        screen, which is what --step-2 uncapped would do. */
     font-size: min(var(--step-2), 1.55rem);
+    /* Leading tightens as type grows. Undeclared, this inherited the body's
+       1.62 while the h3 beneath it took 1.12 — so the smaller label was set
+       looser than the larger heading, its own two lines fell further apart
+       than the heading's, and a wrapped label stopped binding as one phrase. */
+    line-height: 1.25;
     font-weight: 700;
     color: var(--honey);
 }
@@ -84,17 +89,23 @@
 }
 
 /* One treatment at every width. The payload is the evidence, so it may never
-   be cut: it wraps, and a wrapped line is marked as a continuation rather than
-   destroying the indentation that makes an object legible. No mask — wrapped
-   text has no overflow to fade, and painting one over it only made a readable
-   block look truncated. */
+   be cut: it wraps. No mask — wrapped text has no overflow to fade, and
+   painting one over it only made a readable block look truncated.
+
+   There was a `padding-left: 2ch; text-indent: -2ch` pair here, meant to mark
+   a wrapped line as a continuation. It did the opposite of its own comment,
+   because text-indent styles the first formatted line of a BLOCK and a forced
+   newline does not restart it: the block's opening brace hung 2ch left of its
+   own closing brace on every code block on the site, and every soft-wrapped
+   line fell back to the flat 2ch base — one level outside the key it
+   continued, level with the braces. CSS cannot address a visual line, so
+   there is no way to mark a continuation; the source's own indentation is
+   what makes the object legible and it now survives the wrap intact. */
 .turn-code code {
     display: block;
     font-family: inherit;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
-    padding-left: 2ch;
-    text-indent: -2ch;
 }
 
 .turn-note {
@@ -119,6 +130,12 @@
     font-size: 0.9em;
     padding: 0.1em 0.35em;
     border-radius: var(--radius-xs);
+    /* The chip's right padding plus its rounded ground reads as a word space,
+       so a sentence's full stop detached from the word it belongs to wherever
+       the markup writes </code> straight into punctuation. A small negative
+       kern closes that; between a chip and a following word the real word
+       space still separates them. */
+    margin-right: -0.12em;
     background: color-mix(in srgb, var(--honey) 16%, transparent);
     /* --honey measured 3.85:1 on the lit panel at 13.5px — well under AA, and
        the smallest type in the night. The chip already carries a 16% honey
@@ -131,7 +148,11 @@
 .turn-refusal {
     margin-top: 1.75rem;
     padding-left: 1.1rem;
-    border-left: 2px solid var(--ember);
+    /* Honey, not --ember. The light model says warm is MADE and cold is
+       GROWN, and every other rail on the site obeys it; #d9896d appeared in
+       no lighting rule and nowhere else in the build, so the room's one
+       salmon rail was the single pull-quote colour that signified nothing. */
+    border-left: 2px solid color-mix(in srgb, var(--honey) 70%, transparent);
     color: var(--night-ink-soft);
     max-width: 68ch;
 }

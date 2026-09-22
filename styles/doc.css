@@ -14,7 +14,9 @@
 .doc-head {
     grid-column: 1;
     grid-row: 1;
-    max-width: 62ch;
+    /* The same measure as the column it heads, so the masthead rule and the
+       section dividers below it end on one edge instead of 62px apart. */
+    max-width: 63ch;
     margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--day-rule);
@@ -31,8 +33,9 @@
     margin-bottom: 0;
 }
 
+/* 63ch renders ~73 characters; 68ch rendered 79. See tokens/type.css. */
 .doc-body {
-    max-width: 68ch;
+    max-width: 63ch;
 }
 
 /* A 68ch measure leaves the right half of a 1440 page empty. The contents
@@ -54,7 +57,7 @@
 .doc-shell {
     padding-left: calc(var(--rail) + 1.5rem);
     display: grid;
-    grid-template-columns: minmax(0, 68ch) minmax(14rem, 1fr);
+    grid-template-columns: minmax(0, 63ch) minmax(14rem, 1fr);
     grid-template-rows: auto 1fr;
     gap: 0 clamp(2rem, 5vw, 4rem);
     align-items: start;
@@ -196,10 +199,11 @@
 .doc-aside {
     margin: 1.5rem 0;
     padding: 1.1rem 1.4rem;
-    /* The surrounding prose is held under the 80-character measure; this block
-       sat at 86ch because its padding was added outside a width nothing
-       constrained. Measured by .dream-loop/type.mjs. */
-    max-width: 68ch;
+    /* The surrounding prose is held under the measure; this block sat wider
+       because its padding was added outside a width nothing constrained.
+       Measured by .dream-loop/type.mjs, which now fails above 76 rendered
+       characters. */
+    max-width: 63ch;
     border-left: 2px solid var(--honey);
     background: color-mix(in srgb, var(--day-surface) 80%, transparent);
     border-radius: 0 10px 8px 0;

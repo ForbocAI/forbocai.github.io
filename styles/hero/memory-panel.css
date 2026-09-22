@@ -25,12 +25,13 @@
     pointer-events: none;
 }
 
+/* One composition, always. As a wrapping flex row with space-between, whether
+   the mood chip sat on its own line under the role or flush right on the
+   role's own baseline was decided by about 5px of slack — so a 1440x900
+   window and a 1440x700 window showed two different cards, and a longer
+   character name or a webfont that failed to load would flip it the same way.
+   The chip is a second line of the record; it belongs under the name. */
 .memory-panel-head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
     padding-bottom: 0.9rem;
     border-bottom: 1px solid var(--day-rule-soft);
 }
@@ -65,6 +66,8 @@
 }
 
 .memory-mood {
+    display: inline-block;
+    margin-top: 0.7rem;
     font-size: var(--step--1);
     font-weight: 700;
     color: var(--copper-ink);

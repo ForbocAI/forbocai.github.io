@@ -38,7 +38,12 @@
     font-size: var(--step-1);
     line-height: 1.55;
     color: var(--day-ink-soft);
-    max-width: 54ch;
+    /* The measure, like every other paragraph. This was 54ch, and the 62ch
+       lift below it was scoped to a lead inside a HEAD — so a lead the markup
+       puts in the body column instead (the room, business and souls chapters)
+       matched neither rule, fell to 54ch inside a 61ch column, and widowed its
+       own last line while the prose beneath it ran on. One measure. */
+    max-width: var(--measure);
     margin-top: 1rem;
     margin-bottom: 0;
 }
@@ -51,16 +56,19 @@
    correct (64-75 characters) and must not be widened to close that gap, so the
    headings come in to meet it instead. The margin then reads as an intentional
    editorial margin rather than as a column that ran out. */
+/* h1 as well as h2: /#scenes is the site's one page-level chapter heading and
+   it was exempt by element name, so its title ran the full 985px while the
+   lead beneath it stopped at 925 — the exact overhang this rule exists to
+   close, in the one place the rule did not reach. */
+.chapter-head h1,
 .chapter-head h2,
 .chapter-head .chapter-lead {
     max-width: 22ch;
 }
 
-.chapter-head .chapter-lead {
-    max-width: 62ch;
-}
 
 @media (min-width: 1100px) {
+    .chapter-head h1,
     .chapter-head h2 {
         max-width: 30ch;
     }

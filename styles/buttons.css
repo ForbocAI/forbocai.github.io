@@ -78,6 +78,26 @@
     box-shadow: 0 0 46px -4px rgba(255, 243, 194, 0.8);
 }
 
+/* The way back. Declared in Scenes.js and defined nowhere, it fell through to
+   .btn alone: bold pill-weight type carrying a pill's padding for a pill that
+   never painted, indented past its own column, with no hover affordance at
+   all — .btn removes the underline and nothing was left to change on hover.
+   It is the first ink a reader meets on /#scenes. Quiet, but a control. */
+.btn-quiet {
+    padding-inline: 0;
+    font-weight: 600;
+    color: var(--night-ink-soft);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3em;
+    text-decoration-color: color-mix(in srgb, var(--night-ink-soft) 40%, transparent);
+}
+
+.btn-quiet:hover {
+    color: var(--lantern);
+    text-decoration-color: color-mix(in srgb, var(--lantern) 60%, transparent);
+}
+
 /* A subordinate next step reads as a link, not as a second pill competing
    with the primary one. */
 .text-link {

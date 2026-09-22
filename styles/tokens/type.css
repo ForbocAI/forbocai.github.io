@@ -67,7 +67,14 @@
    44px costs one extra line of headline at 320px and buys a real top tier. */
 --step-5: clamp(2.75rem, min(1.5rem + 3.2vw, 0.3rem + 6.4vh), 5.2rem);
 
-    --measure: 66ch;
+    /* 61ch, not 66. `ch` is the advance of "0", which in Alegreya Sans is
+       wider than the average lowercase letter, so 66ch delivered 79 rendered
+       characters — measured, not theorised, by .dream-loop/type.mjs, which
+       sizes a 26-letter probe in the element's own font. The site states its
+       own target twice (layout/chapter-head.css: "the prose measure is
+       correct (64-75 characters)") and was missing it everywhere. The gate
+       now fails above 76. */
+    --measure: 61ch;
     --measure-tight: 46ch;
 
 }

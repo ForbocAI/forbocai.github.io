@@ -15,6 +15,9 @@
        pot it is in: at 1080 this is 24px, at 900 about 21, at 700 about 16,
        and the slide fits by construction rather than by a breakpoint. */
     --deck-air: clamp(0.4rem, 2.3vh, 1.5rem);
+    /* The frame's one horizontal inset: chrome and slide both read it. */
+    --deck-pad: clamp(1.25rem, 3vw, 2.25rem);
+    --deck-pad-block: clamp(1.75rem, 4vw, 3rem);
     padding-top: clamp(0.5rem, 1.6vh, 1.5rem);
     padding-bottom: clamp(1rem, 2vw, 2rem);
 }
@@ -22,7 +25,15 @@
 .deck-frame {
     display: flex;
     flex-direction: column;
-    min-height: min(74vh, 640px);
+    /* A floor the shortest slide can actually reach. At 640px the frame
+       reserved space no slide had to fill, `.slide { flex: 1 1 auto }` handed
+       the whole surplus to the slide, and with nothing distributing it the
+       shortfall pooled as one gap above the controls — 225px of bare
+       parchment under slide 5, a third of the frame, on a file that quotes
+       "a plant fills the pot it is in" at itself. Do not re-impose a ceiling
+       to stop the Next button moving between slides: the note below records
+       why that was removed. */
+    min-height: min(56vh, 460px);
     /* No ceiling, and nothing here hides. An earlier pass capped this frame so
        the deck would fit the fold, and bought that fit by turning the slide
        into a silent scroll container: 13 of 13 slides on a phone hid a mean
@@ -87,7 +98,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.9rem clamp(1.25rem, 3vw, 2.25rem);
+    padding: 0.9rem var(--deck-pad);
     border-bottom: 1px solid var(--day-rule-soft);
     background: color-mix(in srgb, var(--honey) 14%, transparent);
 }
@@ -109,9 +120,14 @@
     color: var(--copper-ink);
 }
 
+/* One inset for the frame. The chrome and the slide were each given their own
+   clamp and never tied together, so the brand and the slide title sat 12px
+   apart across the header hairline on all thirteen slides — and the
+   short-screen block re-declared only one of the two, which put the slide
+   further out than the chrome there instead. */
 .slide {
     flex: 1;
-    padding: clamp(1.75rem, 4vw, 3rem);
+    padding: var(--deck-pad-block) var(--deck-pad);
 }
 
 .slide-title {
@@ -143,7 +159,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.9rem clamp(1.25rem, 3vw, 2.25rem);
+    padding: 0.9rem var(--deck-pad);
     border-top: 1px solid var(--day-rule-soft);
     background: color-mix(in srgb, var(--day-bg-deep) 55%, transparent);
 }
@@ -258,8 +274,9 @@
    never do. Closing the last of it — mobile ran 259px past the window — takes
    the title down a step and the gaps with it. */
 @media (max-height: 820px), (max-width: 760px) {
-    .slide {
-        padding: clamp(0.9rem, 2.2vh, 1.5rem) clamp(1rem, 3vw, 1.6rem);
+    .deck {
+        --deck-pad: clamp(1rem, 3vw, 1.6rem);
+        --deck-pad-block: clamp(0.9rem, 2.2vh, 1.5rem);
     }
 
     .slide-title {

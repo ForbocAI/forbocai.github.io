@@ -53,11 +53,25 @@
    a rule the source plate showed as a raw white square sitting on the moss —
    the one place on the page where an asset looked pasted in.
    Reconstructed against .dream-loop/r26-final/home-desktop-11.png. */
+/* Centred on the CONTENT, not on the container. The page's closing frame was
+   the one element ignoring the rail that breaks/wide.css puts everything else
+   on — "without this the page has two left edges and the spine breaks twice"
+   — so the close carried three axes: head and buttons at the rail, prose at
+   the measure, portal and caption on the container's own midline. Left-
+   aligning it instead only moved the imbalance to the other side (a 460px
+   medallion with 560px of bare moss beside it, measured). Inside the rail, a
+   centred medallion shares the content's axis and stays a closing frame. */
 .investor-portal {
     position: relative;
     display: grid;
     justify-items: center;
     margin: clamp(2rem, 4vw, 3rem) 0 0;
+}
+
+@media (min-width: 900px) {
+    .investor-portal {
+        padding-left: calc(var(--rail) + 1.5rem);
+    }
 }
 
 .investor-portal::before {

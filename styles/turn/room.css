@@ -31,7 +31,7 @@
 .turn-answer .turn-code {
     margin: 0;
     padding: 0.85rem 1rem;
-    border-radius: var(--radius-xs);
+    border-radius: var(--radius-sm);
     border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
     background: color-mix(in srgb, #12180f 58%, transparent);
     font-size: 0.78125rem;

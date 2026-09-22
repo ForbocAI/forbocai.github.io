@@ -17,18 +17,19 @@
    starts, and thins away to nothing on the right. The eye is handed onward
    instead of stopped. Uniform borders survive only where a line is structural
    rather than directional — a table row, an input, a focus ring. */
-.chapter-head,
+/* Three, not seven. .chapter-head has no border to reset (its rule is grid
+   and gap only), .investors-body has none, .doc-contents is handed a hard
+   border-bottom by breaks/fold.css which wins on cascade order, and
+   .soul-economy's reset is wiped by its own `border: 1px solid` shorthand —
+   so four of the seven were resetting nothing and their border-images painted
+   over a zero-width border. */
 .deeper,
 .memory-panel-head,
-.turn-answer,
-.doc-contents,
-.investors-body,
-.soul-economy {
+.turn-answer {
     border-top-color: transparent;
     border-bottom-color: transparent;
 }
 
-.chapter-head,
 .memory-panel-head,
 .turn-answer {
     border-image: linear-gradient(90deg,
@@ -39,13 +40,47 @@
 
 .chapter-night .memory-panel-head,
 .chapter-night .turn-answer,
-.turn-band .turn-answer,
-.chapter-night .chapter-head,
-.turn-band .chapter-head {
+.turn-band .turn-answer {
     border-image: linear-gradient(90deg,
         var(--night-rule) 0%,
         color-mix(in srgb, var(--night-rule) 45%, transparent) 42%,
         transparent 88%) 1;
+}
+
+/* The doctrine had only one axis. Every border-image on the site was a 90deg
+   gradient on an element bordered top and bottom, so a VERTICAL rule could
+   not taper by construction — and all ten border-lefts were `Npx solid`,
+   constant section, square at both ends. These seven are the directional
+   rails: a pull-quote's bar enters at full weight where the reading starts
+   and thins as it descends, exactly as a horizontal vein thins to the right.
+   Carried on border-image with a 180deg gradient, so only the left edge,
+   which is the only one with width, ever paints. */
+.ledger-fact,
+.ledger-note,
+.investors-takeaway,
+.soul-decouple,
+.turn-refusal,
+.doc-aside {
+    border-left-color: transparent;
+    border-image: linear-gradient(180deg,
+        var(--vein) 0%,
+        color-mix(in srgb, var(--vein) 55%, transparent) 55%,
+        color-mix(in srgb, var(--vein) 12%, transparent) 100%) 1;
+}
+
+.ledger-fact,
+.ledger-note,
+.investors-takeaway,
+.doc-aside {
+    --vein: var(--honey);
+}
+
+.soul-decouple {
+    --vein: var(--creek);
+}
+
+.turn-refusal {
+    --vein: var(--honey);
 }
 
 /* The rail line under a chapter mark was the one vein that already ran the

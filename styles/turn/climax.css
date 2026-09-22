@@ -65,8 +65,13 @@
     flex-direction: column;
 }
 
+/* The ARTICLES are equal height (align-items: stretch above); the code
+   pockets are not. `flex: 1` handed the pair's height surplus to the <pre>,
+   so the exhibit whose whole argument is that the two returns differ opened
+   with one recessed box visibly emptier than the other — 78px of unpainted
+   pocket that reads as content which failed to load. The surplus belongs to
+   the article's own ground, where nothing is drawn on it. */
 .turn-counterfactual .turn-counterfactual-pair .turn-code {
-    flex: 1;
     max-width: none;
 }
 

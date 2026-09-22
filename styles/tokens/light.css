@@ -90,6 +90,14 @@
    the light comes from, and this says the surface is full. Deliberately weak:
    about six points of lift at the crown. Nobody should see a dome; they should
    see a surface that is not flat and not be able to say why. */
+/* --surface-tint is the card's own base, and the only thing a tinted card
+   should change. Tinting used to mean re-declaring `background`, which is the
+   shorthand — it reset background-image and threw both layers away, so three
+   cards in every four lost the face light this comment spends twelve lines
+   arguing for, and "a flat fill beside one of these looks dead" came true
+   inside the one component that demonstrates the property. */
+--surface-tint: var(--day-bg);
+
 --surface-day:
     radial-gradient(120% 96% at 34% 22%,
         color-mix(in srgb, #fffdf4 62%, transparent) 0%,
@@ -97,8 +105,8 @@
         transparent 74%),
     linear-gradient(148deg,
         color-mix(in srgb, var(--honey) 13%, #fffdf4) 0%,
-        color-mix(in srgb, var(--day-bg) 94%, #fff) 46%,
-        color-mix(in srgb, var(--creek) 7%, var(--day-bg)) 100%);
+        color-mix(in srgb, var(--surface-tint) 94%, #fff) 46%,
+        color-mix(in srgb, var(--creek) 7%, var(--surface-tint)) 100%);
 
 --surface-night:
     radial-gradient(120% 96% at 34% 22%,

@@ -5,16 +5,24 @@
 .daylight,
 .page-inner {
     position: relative;
+    /* The two lights FIRST, the ramp behind them.
+       They were written last in this list and so painted last — which in CSS
+       means underneath, because layer one is topmost. Every stop of the ramp
+       is an opaque hex, so for as long as this file has existed the warm made
+       light at 80% 3% and the cold grown light at 4% 9% have rendered
+       nothing at all. The brief's whole mechanism was dead code in the one
+       frame every visitor sees: the hero is the only stretch of .daylight
+       that no chapter's own opaque background-color covers. */
     background-image:
+        radial-gradient(ellipse 52% 22% at 80% 3%, rgba(255, 243, 194, 0.7), transparent 70%),
+        radial-gradient(ellipse 44% 18% at 4% 9%, rgba(207, 233, 220, 0.45), transparent 70%),
         linear-gradient(180deg,
             var(--day-0) 0%,
             var(--day-1) 14%,
             var(--day-2) 42%,
             var(--day-3) 68%,
             var(--day-4) 86%,
-            var(--day-5) 100%),
-        radial-gradient(ellipse 52% 22% at 80% 3%, rgba(255, 243, 194, 0.7), transparent 70%),
-        radial-gradient(ellipse 44% 18% at 4% 9%, rgba(207, 233, 220, 0.45), transparent 70%);
+            var(--day-5) 100%);
 }
 
 /* ---------------------------------------------------------- the descent -- */

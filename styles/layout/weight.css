@@ -27,7 +27,29 @@
     max-width: 26ch;
 }
 
+/* The whole chapter steps down, not only its title. --step-2 is capped at
+   0.82 of --step-3, and the quiet head is 0.88 of the same term, so above
+   390px the two ranks a reader navigates by were tied at 1.07x — solved on a
+   phone and inverted everywhere else, because the cap makes h3 track h2 down
+   in lockstep. Taking h3 down with the head restores a real step (1.29x) and
+   keeps the chapter quieter than an ordinary one, which is what the class
+   is for. */
+.chapter.is-quiet h3 {
+    font-size: calc(var(--step-3) * 0.68);
+}
+
 .chapter.is-quiet {
     padding-block: calc(var(--chapter-gap) * 0.7);
+}
+
+/* …and it still yields to the seam. This rule loads after layout/shell.css
+   at equal specificity, so a quiet chapter sharing a ground with the one
+   above it took 60.5px where an ordinary chapter takes 43.2 — the weight
+   knob read "quieter" in type and "more important" in space, and both
+   chapters carrying the class are exactly that case. */
+.chapter-day + .chapter.is-quiet,
+.chapter-night + .chapter.is-quiet,
+.turn-band + .chapter.is-quiet {
+    padding-top: var(--chapter-seam);
 }
 

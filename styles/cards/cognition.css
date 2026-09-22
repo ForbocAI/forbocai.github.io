@@ -105,16 +105,19 @@
    Mixed off the page's own ground instead, and finally spending the cool
    accents that were declared and never used. The cycle now means something:
    warm where the world is, cool where a thing is being verified. */
+/* The tint is the surface's base, not the whole background. See
+   tokens/light.css: `background:` here was the shorthand, and it discarded
+   the turgor gradient along with it. */
 .character-intelligence-grid article:nth-child(4n + 2) {
-    background: color-mix(in srgb, var(--honey) 9%, var(--day-bg));
+    --surface-tint: color-mix(in srgb, var(--honey) 9%, var(--day-bg));
 }
 
 .character-intelligence-grid article:nth-child(4n + 3) {
-    background: color-mix(in srgb, var(--sage) 7%, var(--day-bg));
+    --surface-tint: color-mix(in srgb, var(--sage) 7%, var(--day-bg));
 }
 
 .character-intelligence-grid article:nth-child(4n) {
-    background: color-mix(in srgb, var(--creek) 6%, var(--day-bg));
+    --surface-tint: color-mix(in srgb, var(--creek) 6%, var(--day-bg));
 }
 
 @media (max-width: 860px) {
