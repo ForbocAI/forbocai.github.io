@@ -32,7 +32,9 @@ const BEATS = 'p, li, figure, pre, h4, blockquote';
 
 let stemObserver = null;
 let stemResize = null;
+let stemScroll = null;
 let raf = 0;
+let shadeRaf = 0;
 
 const clearStems = () => {
     document.querySelectorAll('.chapter-stem').forEach((el) => el.remove());
@@ -90,10 +92,26 @@ const growOne = (spread) => {
     stem.innerHTML = stemSvg({ seed: stem.dataset.seed, width, height, stemX: rail / 2, nodes, minors });
 
     spread.appendChild(stem);
-    return { stem, movements: movements.filter((el) => {
-        const y = el.getBoundingClientRect().top - spreadBox.top;
-        return y > 12 && y < height - 12;
-    }) };
+    return {
+        stem,
+        spread,
+        head,
+        movements: movements.filter((el) => {
+            const y = el.getBoundingClientRect().top - spreadBox.top;
+            return y > 12 && y < height - 12;
+        }),
+        // Every drawn group with the height it was drawn at, so the shading
+        // pass below does not have to measure SVG geometry on every scroll.
+        // Each list is paired with the array it was drawn from. A single
+        // querySelectorAll over both classes returns document order — every
+        // branchlet, then every branch — which is not the order of a combined
+        // sorted list, so pairing by index across the two would have shaded
+        // whichever part happened to land at that index.
+        parts: [
+            ...[...stem.querySelectorAll('.stem-minor')].map((el, i) => ({ el, y: minors[i] })),
+            ...[...stem.querySelectorAll('.stem-branch')].map((el, i) => ({ el, y: nodes[i] })),
+        ].filter((q) => Number.isFinite(q.y)),
+    };
 };
 
 // Which movement is being read. The branch at that height lights, so the
@@ -130,20 +148,57 @@ const watch = (grown) => {
     groupFor.forEach((_g, el) => stemObserver.observe(el));
 };
 
+/* The drawing gives way to the words.
+   Both round-twenty-one reviewers led with the same defect, and it was mine:
+   "a line running through the words 'room was' in the chapter title, ending in
+   a dot inside 'was' — a strikethrough on an H2", found in seven shots across
+   three shapes, and "the title renders as 'Meet•The ForbocAI NPC LM
+   Servitor™'". The cause is structural rather than a matter of degree: the
+   head is STICKY and its text spans the whole margin column, so it rides down
+   over every branch in turn and there is no height at which a branch is safe.
+
+   So the plant is shaded out wherever the head is standing, and comes back
+   when the head has passed. That is also what the thing it is drawn as would
+   do — a leaf behind a sign is not a leaf across a sign. */
+const shade = (grown) => {
+    cancelAnimationFrame(shadeRaf);
+    shadeRaf = requestAnimationFrame(() => {
+        grown.forEach(({ spread, head, parts }) => {
+            const sb = spread.getBoundingClientRect();
+            const hb = head.getBoundingClientRect();
+            const top = hb.top - sb.top - 10;
+            const bottom = hb.bottom - sb.top + 10;
+            parts.forEach(({ el, y }) => {
+                el.classList.toggle('is-shaded', y >= top && y <= bottom);
+            });
+        });
+    });
+};
+
 const grow = () => {
     stemObserver?.disconnect();
     stemObserver = null;
     clearStems();
     if (window.innerWidth < SPREAD_MIN) return;
 
+    if (stemScroll) window.removeEventListener('scroll', stemScroll);
+    stemScroll = null;
+
     const grown = [...document.querySelectorAll('.chapter-spread')]
         .map(growOne)
         .filter(Boolean);
-    if (grown.length) watch(grown);
+    if (!grown.length) return;
+
+    watch(grown);
+    stemScroll = () => shade(grown);
+    window.addEventListener('scroll', stemScroll, { passive: true });
+    shade(grown);
 };
 
 export const setupChapterStem = () => {
     if (stemResize) window.removeEventListener('resize', stemResize);
+    if (stemScroll) window.removeEventListener('scroll', stemScroll);
+    stemScroll = null;
 
     // After layout, not during it. Fonts land after first paint and move every
     // paragraph down the page, so a stem measured at render time marks the

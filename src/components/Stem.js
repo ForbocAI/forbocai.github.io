@@ -103,12 +103,41 @@ const stemPath = (line, height, base) => {
 };
 
 /**
+ * A leaf, drawn along a direction.
+ *
+ * The first version ended every branch in a filled dot, and a reviewer read the
+ * whole drawing correctly for what that grammar is: "a near-horizontal
+ * single-weight hairline terminating in a solid filled dot — that is the visual
+ * grammar of a leader line, so my eye follows each one looking for the thing it
+ * points at, and there is nothing there". Two of the dots landed inside words
+ * and were read as an interpunct in the product's own name. A leaf points at
+ * nothing and asks to be followed nowhere.
+ */
+const leaf = (x, y, ang, len, wid) => {
+    const dx = Math.cos(ang);
+    const dy = Math.sin(ang);
+    const px = -dy;
+    const py = dx;
+    const tx = round(x + dx * len);
+    const ty = round(y + dy * len);
+    const m = 0.38;
+    const a = `${round(x + dx * len * m + px * wid)},${round(y + dy * len * m + py * wid)}`;
+    const b = `${round(x + dx * len * m - px * wid)},${round(y + dy * len * m - py * wid)}`;
+    return `M${round(x)},${round(y)}Q${a} ${tx},${ty}Q${b} ${round(x)},${round(y)}Z`;
+};
+
+/**
  * A branch, reaching toward the text it marks.
  *
  * It reaches RIGHT — across the empty column, toward the body — because that
  * is the direction the thing it annotates is in, and because that is where the
  * dead ground is. Length varies per branch so the column's right edge is
  * ragged; a set of equal branches would be a bar chart.
+ *
+ * It also RISES or FALLS by a real amount rather than running level. Level
+ * hairlines across a column of text are struck-through text, which is exactly
+ * what a reviewer saw: "a hairline runs horizontally through the second line of
+ * the title", "a strikethrough through a clickable accordion label".
  */
 const branch = (rand, x, y, reach, droop) => {
     const cx = x + reach * 0.42;
@@ -116,6 +145,7 @@ const branch = (rand, x, y, reach, droop) => {
     const ex = round(x + reach);
     const ey = round(y + droop);
     const path = `M${round(x)},${round(y)}Q${round(cx)},${round(cy)} ${ex},${ey}`;
+    const ang = Math.atan2(ey - cy, ex - cx);
     // One or two filaments off the branch, which is what makes it read as
     // something grown rather than a leader line on a diagram.
     const hairs = Array.from({ length: 1 + Math.round(rand()) }, () => {
@@ -126,7 +156,7 @@ const branch = (rand, x, y, reach, droop) => {
         const lift = round(-3 - rand() * 7);
         return `M${hx},${hy}q${round(len * 0.5)},${round(lift * 0.7)} ${len},${lift}`;
     });
-    return { path, hairs, tip: { x: ex, y: ey } };
+    return { path, hairs, ang, tip: { x: ex, y: ey } };
 };
 
 /**
@@ -142,7 +172,10 @@ const branch = (rand, x, y, reach, droop) => {
 export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
     const rand = rngOf(seedOf(seed));
     const uid = `stem-${seed.replace(/[^a-z0-9]/gi, '')}`;
-    const sway = Math.min(width * 0.06, 16);
+    // "The trunk is a dead-straight single-weight vertical with no taper, no
+    // curve, no thickness change." At 16px over 1,300 the lean was below
+    // noticing, which is the same as not being there.
+    const sway = Math.min(width * 0.16, 52);
     const line = centreline(rand, stemX, height, sway);
     // Thicker on a tall chapter: a plant that carried more is thicker at the
     // base, and this is the one place a proportion should come from the
@@ -155,7 +188,7 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
     const grown = nodes.map((y) => {
         const t = Math.min(1, y / Math.max(1, height));
         const reach = room * (0.42 + rand() * 0.46);
-        const droop = 6 + rand() * 26;
+        const droop = (rand() < 0.5 ? -1 : 1) * (16 + rand() * 40);
         return { ...branch(rand, xAt(line, y), y, reach, droop), t, y };
     });
 
@@ -174,11 +207,11 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
     const small = minors.map((y) => {
         const t = Math.min(1, y / Math.max(1, height));
         const reach = room * (0.17 + rand() * 0.3);
-        const droop = 3 + rand() * 11;
+        const droop = (rand() < 0.5 ? -1 : 1) * (9 + rand() * 20);
         const b = branch(rand, xAt(line, y), y, reach, droop);
         return `<g class="stem-minor" opacity="${round(fadeOf(t) * 0.72)}">
             <path d="${b.path}" fill="none" stroke="currentColor" stroke-width="0.85" stroke-linecap="round"/>
-            <circle cx="${b.tip.x}" cy="${b.tip.y}" r="${round(1.3 + (1 - t) * 0.8)}" fill="currentColor"/>
+            <path d="${leaf(b.tip.x, b.tip.y, b.ang, 7 + (1 - t) * 5, 2.1 + (1 - t) * 1.4)}" fill="currentColor"/>
         </g>`;
     }).join('');
 
@@ -186,7 +219,7 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
         <g class="stem-branch" data-movement="${i}" opacity="${fadeOf(b.t)}">
             <path d="${b.path}" fill="none" stroke="currentColor" stroke-width="${round(1.05 + (1 - b.t) * 0.75)}" stroke-linecap="round"/>
             ${b.hairs.map((h) => `<path d="${h}" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.7"/>`).join('')}
-            <circle class="stem-node" cx="${b.tip.x}" cy="${b.tip.y}" r="${round(2.4 + (1 - b.t) * 1.8)}" fill="currentColor"/>
+            <path class="stem-node" d="${leaf(b.tip.x, b.tip.y, b.ang, 14 + (1 - b.t) * 12, 4 + (1 - b.t) * 3)}" fill="currentColor"/>
         </g>`).join('');
 
     return `<svg class="stem-svg" width="${round(width)}" height="${round(height)}" viewBox="0 0 ${round(width)} ${round(height)}" fill="none" aria-hidden="true" focusable="false">

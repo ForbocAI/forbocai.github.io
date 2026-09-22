@@ -32,7 +32,11 @@
 }
 
 .chapter-stem .stem-branch .stem-node {
-    transition: r 0.45s var(--ease), fill 0.45s var(--ease);
+    transition: fill 0.45s var(--ease);
+}
+
+.chapter-stem .stem-minor {
+    transition: opacity 0.35s var(--ease);
 }
 
 .chapter-stem .stem-branch.is-current {
@@ -41,7 +45,17 @@
 
 .chapter-stem .stem-branch.is-current .stem-node {
     fill: var(--vein-lit);
-    r: 4;
+}
+
+/* Last, and on purpose. A lit branch is still a branch behind the title: with
+   the shading rule above .is-current, the one branch a reader is level with
+   was the one that kept striking through the head. */
+.chapter-stem .stem-branch.is-shaded,
+.chapter-stem .stem-branch.is-current.is-shaded,
+.chapter-stem .stem-minor.is-shaded {
+    /* Not display:none — it fades, so a title arriving does not make the
+       margin blink. */
+    opacity: 0;
 }
 
 /* Text stands in front of its own margin. The stem is appended after both

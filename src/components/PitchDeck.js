@@ -61,7 +61,7 @@ const slides = [
     },
     {
         id: 4,
-        title: 'Meet The ForbocAI NPC LM Servitor™.',
+        title: 'Meet The ForbocAI NPC LM Servitor<span class="tm">™</span>.',
         content: `
             <div class="paired-proof model-reveal">
                 <p class="proof-label">The choice nobody wrote</p>
@@ -126,7 +126,7 @@ const slides = [
                 </li>
                 <li class="boundary-stage is-model">
                     <span>Character Intelligence</span>
-                    <h2>Servitor™ judges</h2>
+                    <h2>Servitor<span class="tm">™</span> judges</h2>
                     <p>Dialogue, rationale and structured intent arrive from one character decision.</p>
                 </li>
                 <li class="boundary-stage is-contract">

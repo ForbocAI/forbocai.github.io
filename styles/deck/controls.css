@@ -96,3 +96,36 @@
 
 /* A slide is a fixed canvas, so a full-height plate pushes everything else off
    it. Inside the deck these scenes are a band across the composition, cropped
+
+
+/* A phone cannot hold a slide, and the words are not what gives.
+   Measured across all thirteen: 9 of 13 slides run 27-155px past a 390x844
+   window, and the tall element is always .slide-body — the argument itself.
+   frame.css states the order in which things give up: the room first, then the
+   size of the title, and the words never. On a phone there is no room left.
+
+   So the page scrolls, which is ordinary, and the controls move to the TOP of
+   the frame and stay in view the whole way down. Round ten floated them at the
+   BOTTOM and paid for it in words — 22 of 65 slide/shape pairs had text sheared
+   behind the bar — and that note is why they are not floated there again. The
+   asymmetry it missed is the one that makes a site header unremarkable and a
+   bottom bar intolerable: text passing under a bar at the top is text you have
+   already read, and text behind a bar at the bottom is text you are about to
+   read. Only one of those costs a reader a sentence. */
+@media (max-width: 760px) {
+    .deck-frame > .deck-controls {
+        order: -1;
+        position: sticky;
+        top: var(--header-height);
+        z-index: 3;
+        /* Opaque, because the site header's own fade band lands exactly here
+           and a translucent bar would show the slide sliding under both. */
+        background: var(--surface-day);
+        border-top: none;
+        border-bottom: 1px solid var(--day-rule-soft);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+    }
+}

@@ -39,7 +39,7 @@
 
 .chapter-night .chapter-spread,
 .turn-band .chapter-spread {
-    --vein: color-mix(in srgb, var(--creek) 62%, var(--night-rule));
+    --vein: color-mix(in srgb, var(--creek) 86%, var(--night-rule));
     --vein-lit: var(--lantern);
 }
 

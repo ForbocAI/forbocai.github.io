@@ -27,3 +27,15 @@
 .slide-body h4:first-child {
     margin-top: 0;
 }
+
+/* One measure per column, not two.
+   A reviewer found the opening slide setting its subtitle to one width and the
+   paragraph below it to another — "two measures stacked in one column", with an
+   empty strip between the shorter line's end and the longer one's. The fix is
+   for them to agree, not for both to grow: widening the slide measure to 82ch
+   was tried and .dream-loop/type.mjs caught it at 98 rendered characters on
+   four slides, which is half again past the line anybody reads comfortably.
+   The reading measure is the reading measure, on a slide as on a page. */
+.title-slide .subtitle {
+    max-width: var(--measure);
+}
