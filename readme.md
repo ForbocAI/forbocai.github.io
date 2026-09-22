@@ -90,8 +90,11 @@ Any static file server is fine.
 ## Checks
 
 ```bash
+scripts/verify.sh                      # everything that has to be true before a push
 python3 scripts/audit-claims.py        # fail on any capability claim the product contradicts
 python3 scripts/audit-claims.py --list # show what it looks for and why
+python3 scripts/check_line_count.py    # fail on any authored file over 300 lines
+python3 scripts/check_dead_code.py     # fail on a class nothing wears, a sheet nothing links, a module nothing imports
 ```
 
 Three claims were live on this site and wrong: inference described as local, a

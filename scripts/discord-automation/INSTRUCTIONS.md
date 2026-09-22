@@ -24,6 +24,15 @@ To apply updates to the server configuration (e.g., adding new channels or roles
     ```
     The script is idempotent—it will only create resources that do not already exist.
 
+## Scripts
+
+All run from this directory with `.env` in place (`npm install` once).
+
+*   `node setup.js` (what `npm start` runs): apply `ROLES_CONFIG` and `CATEGORIES_CONFIG` to the server. Idempotent.
+*   `node list-channels.js`: print every category and its channels in position order, with the uncategorized channels last. Run it before and after `setup.js` to see what changed.
+*   `node post-announcement.js`: post the message in its `ANNOUNCEMENT` constant to `#announcements`. It holds the docs-release announcement; edit the constant, then run.
+*   `node post-server-update.js`: the same shape, holding the welcome-flow update. The template for the next server update.
+
 ## Configuration Reference
 
 ### Roles

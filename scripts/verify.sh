@@ -6,6 +6,9 @@
 #
 #   audit-claims       a sentence that is wrong against the product
 #   audit-consistency  a sentence that is wrong against the rest of the site
+#   line-count         a file past 300 lines, hiding several concerns
+#   dead-code          a class nothing wears, a sheet nothing links, a module
+#                      nothing imports, a script nothing names
 #   layout             text collapsed to one word per line
 #   contrast           ink that fails WCAG on any of the fourteen routes
 #   type               body copy running past the 80-character measure
@@ -33,6 +36,8 @@ run() {
 }
 
 run "claims" python3 scripts/audit-claims.py
+run "line-count" python3 scripts/check_line_count.py
+run "dead-code" python3 scripts/check_dead_code.py
 
 if [ -f .dream-loop/copy.txt ]; then
   run "cross-route consistency" python3 scripts/audit-consistency.py
