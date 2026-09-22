@@ -181,7 +181,7 @@ const slides = [
                 <article><span>Collection</span><h3>Every person can be singular</h3><p>A cast becomes a portfolio of identities, not interchangeable content.</p></article>
                 <article><span>Return</span><h3>Continuity deepens belonging</h3><p>A player comes back for the person who remembers what they did last season.</p></article>
             </div>
-            <p class="moat-intro"><strong>Dev born. Player grown. Yours to carry.</strong> Cards proved people return to identities they care about, and a card has never once remembered them back. She is authored by a studio, made specific by a player, and then carried — into a second world that reads her record, refuses what its canon will not hold, and admits the rest. She reasons on the far side from what survived. That is the third pillar, and no company can hand you it without the first two.</p>
+            <p class="moat-intro"><strong>Dev born. Player grown. Yours to carry.</strong> Cards proved people return to identities they care about, and a card has never once remembered them back. She is authored by a studio, made specific by a player, and carried into a second world that reads her record and admits what its canon will hold. That is the third pillar, and no company can hand you it without the first two.</p>
         `
     },
     {
