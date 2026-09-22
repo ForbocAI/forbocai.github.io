@@ -1,0 +1,40 @@
+/* ------------------------------------------------- chapter weight -------- */
+
+/* Why the page has no peak: every chapter is set at the same weight, so
+   nothing can be more important than anything else. A reader scanning for
+   sixty seconds has no size signal to follow, and twenty-two screens of even
+   rhythm is a document rather than an argument.
+
+   Three weights, applied across every chapter rather than one bespoke
+   treatment on the section that happened to need it most. `is-event` is the
+   page's peak; `is-quiet` is the support material that should get out of the
+   way; everything else is the ordinary chapter. Nothing here is local — a
+   chapter changes weight by changing a class. */
+.chapter.is-event .chapter-head h2 {
+    line-height: 1.04;
+    letter-spacing: -0.012em;
+    max-width: 18ch;
+}
+
+.chapter.is-event {
+    padding-block: calc(var(--chapter-gap) * 1.5);
+}
+
+.chapter.is-event .chapter-head .chapter-lead {
+    font-size: var(--step-1);
+}
+
+/* A quiet chapter is still a chapter. Borrowing --step-2 outright made its
+   title exactly the size of the h3s inside it — 22px against 22px at 390 —
+   so the section head and its own subheads tied and the tier vanished. Its own
+   step sits between the two: still plainly quieter than an ordinary h2, still
+   unmistakably above what it contains. */
+.chapter.is-quiet .chapter-head h2 {
+    font-size: calc(var(--step-3) * 0.88);
+    max-width: 26ch;
+}
+
+.chapter.is-quiet {
+    padding-block: calc(var(--chapter-gap) * 0.7);
+}
+

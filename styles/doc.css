@@ -1,0 +1,214 @@
+/* ============================================================== documents ==
+   Whitepaper and the seed deck: same ink, quieter room.
+   ======================================================================== */
+
+.doc {
+    padding-top: clamp(2.5rem, 6vw, 4.5rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+}
+
+.doc-head {
+    max-width: 62ch;
+    padding-left: calc(var(--rail) + 1.5rem);
+    margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--day-rule);
+}
+
+.doc-head h1 {
+    font-size: clamp(2.2rem, 1.5rem + 3vw, 3.4rem);
+    margin-bottom: 0.9rem;
+}
+
+.doc-meta {
+    font-size: var(--step--1);
+    color: var(--day-ink-faint);
+    margin-bottom: 0;
+}
+
+.doc-body {
+    max-width: 68ch;
+}
+
+/* A 68ch measure leaves the right half of a 1440 page empty. The contents
+   rail fills it with something a reader of a long brief actually wants, and
+   echoes the marginalia column used by the ledger on the home page. */
+/* The whitepaper deliberately keeps the PROSE shell, not the hero's.
+
+   Round ten called it 93% empty at 2560 and freezing at 1100px. Widening it
+   was tried and is wrong: the body is capped at 68ch, so every extra pixel
+   flows into the 1fr contents rail — at --shell-hero the rail came out 604px
+   against a 775px body, a table of contents wider than most articles. The
+   natural width of this layout is 68ch + a rail + a gap, which is about
+   1030-1100px, and that is what it already was.
+
+   That figure is viewport share, and for a centred long-form document the rest
+   is margin, not void — the same reason prose on the home page is pinned to
+   1180px rather than allowed to grow. */
+
+.doc-shell {
+    padding-left: calc(var(--rail) + 1.5rem);
+    display: grid;
+    grid-template-columns: minmax(0, 68ch) minmax(14rem, 1fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+}
+
+/* The nav sits before .doc-body in the DOM so a screen reader and a plain-text
+   read of this brief both get the contents first; the grid puts it back on the
+   right where a reader of a long document expects the rail. */
+.doc-body { grid-column: 1; grid-row: 1; }
+
+.doc-contents {
+    grid-column: 2;
+    grid-row: 1;
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--day-rule);
+}
+
+.doc-contents-label {
+    margin: 0 0 0.7rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--day-ink-faint);
+}
+
+.doc-contents ol {
+    display: grid;
+    gap: 0.5rem;
+    counter-reset: toc;
+}
+
+.doc-contents a {
+    display: grid;
+    grid-template-columns: 1.4rem minmax(0, 1fr);
+    font-size: var(--step--1);
+    line-height: 1.35;
+    color: var(--day-ink-soft);
+    text-decoration: none;
+}
+
+.doc-contents a::before {
+    content: counter(toc) '.';
+    color: var(--copper-ink);
+    font-weight: 700;
+}
+
+.doc-contents a:hover {
+    color: var(--day-ink);
+}
+
+.doc-contents a[aria-current] {
+    color: var(--day-ink);
+    font-weight: 700;
+}
+
+.doc-contents a[aria-current]::before {
+    color: var(--copper-ink);
+}
+
+.doc-contents li {
+    counter-increment: toc;
+    position: relative;
+}
+
+.doc-contents li::before {
+    content: '';
+    position: absolute;
+    left: calc(-1.5rem - 1px);
+    top: 0.35em;
+    bottom: 0.35em;
+    width: 2px;
+    background: var(--copper);
+    opacity: 0;
+    transition: opacity 0.25s var(--ease);
+}
+
+.doc-contents li:has(a[aria-current])::before {
+    opacity: 1;
+}
+
+.doc-body > section {
+    padding-block: 0 clamp(2rem, 4vw, 3rem);
+}
+
+.doc-body h2 {
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+    margin-bottom: 0.9rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--day-rule-soft);
+}
+
+.doc-body > section:first-child h2 {
+    padding-top: 0;
+    border-top: none;
+}
+
+.doc-body h3 {
+    font-size: var(--step-1);
+    margin: 1.8rem 0 0.55rem;
+}
+
+.doc-body h4 {
+    font-size: var(--step-0);
+    margin: 1.4rem 0 0.4rem;
+    color: var(--copper-ink);
+}
+
+.doc-body p {
+    color: var(--day-ink-soft);
+}
+
+.doc-body ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0 0 1.2rem;
+}
+
+.doc-body li {
+    position: relative;
+    padding-left: 1.35rem;
+    color: var(--day-ink-soft);
+}
+
+.doc-body li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.68em;
+    width: 8px;
+    height: 1px;
+    background: var(--copper);
+}
+
+.doc-aside {
+    margin: 1.5rem 0;
+    padding: 1.1rem 1.4rem;
+    /* The surrounding prose is held under the 80-character measure; this block
+       sat at 86ch because its padding was added outside a width nothing
+       constrained. Measured by .dream-loop/type.mjs. */
+    max-width: 68ch;
+    border-left: 2px solid var(--honey);
+    background: color-mix(in srgb, var(--day-surface) 80%, transparent);
+    border-radius: 0 10px 8px 0;
+    font-style: italic;
+    color: var(--day-ink-soft);
+}
+
+.doc-foot {
+    padding-left: calc(var(--rail) + 1.5rem);
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--day-rule);
+    max-width: 62ch;
+}
+
+.doc-foot p {
+    font-size: var(--step--1);
+    color: var(--day-ink-faint);
+    margin-bottom: 1.4rem;
+}
+
+

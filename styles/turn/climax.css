@@ -1,0 +1,123 @@
+/* ---------------------------------------------------------- the climax -- */
+
+/* A twenty-two screen page with even rhythm has no peak, and this is the one
+   exhibit whose argument is legible without reading a word of prose: same
+   persona, same question, one changed memory, a different choice. So it stops
+   being styled like its neighbours and becomes the event the page builds to. */
+.turn-counterfactual {
+    margin-inline: calc(var(--gutter) * -1);
+    padding: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 4vw, 3.5rem);
+    border-radius: var(--radius-lg);
+    border-color: color-mix(in srgb, var(--honey) 22%, transparent);
+    background:
+        radial-gradient(ellipse 80% 60% at 50% 0%,
+            color-mix(in srgb, var(--lantern) 7%, transparent), transparent 70%),
+        #11170f;
+}
+
+.turn-counterfactual .turn-counterfactual-head {
+    max-width: 52ch;
+    margin-inline: auto;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+}
+
+.turn-counterfactual .turn-counterfactual-head h3 {
+    font-size: var(--step-3);
+    line-height: 1.1;
+}
+
+/* The one line that changed, set as the thing the whole pair turns on. */
+.turn-diffline {
+    margin: 1.1rem auto 0;
+    max-width: 40ch;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--step-1);
+    color: var(--honey);
+}
+
+/* Equal height, so the two judgments read as one comparison rather than two
+   stacked blocks of unequal weight. */
+.turn-counterfactual .turn-counterfactual-pair {
+    align-items: stretch;
+    gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.turn-counterfactual .turn-counterfactual-pair article {
+    display: flex;
+    flex-direction: column;
+}
+
+.turn-counterfactual .turn-counterfactual-pair .turn-code {
+    flex: 1;
+    max-width: none;
+}
+
+/* The diff. Everything that did not change drops back; the tokens that did
+   are the only lit thing in the block, so the eye finds the argument before
+   it reads a line. */
+.turn-counterfactual .turn-code code {
+    /* Dimmed, not faded. Transparency dropped this under the contrast floor;
+       a solid step back keeps the diff readable for anyone who wants to read
+       it rather than only glance at it. */
+    color: var(--night-ink-faint);
+}
+
+.turn-counterfactual .turn-code b {
+    font-weight: 400;
+    color: var(--lantern);
+}
+
+.turn-counterfactual .turn-counterfactual-pair article:first-child .turn-code b {
+    color: var(--creek);
+}
+
+/* The stub connector read as a rendering artifact. Gone. */
+.turn-counterfactual .turn-counterfactual-pair article:first-child::after { content: none; }
+
+.turn-counterfactual-foot {
+    max-width: 62ch;
+    margin: clamp(2rem, 4vw, 3rem) auto 0;
+    text-align: center;
+    font-size: var(--step-0);
+    line-height: 1.55;
+    color: var(--night-ink-soft);
+}
+
+/* The one peak. It is the only composed frame on the site — centred, on the
+   darkest ground, two objects and one statement — and the only screen that
+   makes the argument in a picture rather than a paragraph. It was set at the
+   same weight as the prose around it and buried as an unmarked sub-block, so
+   the page had four co-equal maxima and therefore none. */
+.turn-counterfactual .turn-counterfactual-head h3 {
+    font-size: var(--step-4);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    max-width: 20ch;
+    margin-inline: auto;
+}
+
+.turn-counterfactual {
+    /* Top keeps the room it arrives through — the ::before ramp lives there.
+       The bottom had the same 4-7rem for symmetry, and under it sat the chapter
+       gap and the next chapter's seam: about 120px of empty panel on top of
+       ~190px of empty moss, 307px between the second act's last line and the
+       next heading. Symmetry is not a reason to hold a screen's worth of
+       nothing after the page's strongest moment. */
+    padding-top: clamp(4rem, 9vw, 7rem);
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* A ramp into it, so it arrives rather than appears. */
+.turn-counterfactual::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: clamp(2rem, 5vw, 3.5rem);
+    background: linear-gradient(var(--honey), transparent);
+    opacity: 0.5;
+}
+

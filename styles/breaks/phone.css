@@ -1,0 +1,129 @@
+@media (max-width: 620px) {
+    body {
+        font-size: 1.0625rem;
+    }
+
+    /* The wrap treatment is the base rule now, at every width. A phone only
+       needs the size step. */
+    .turn-code {
+        font-size: 0.75rem;
+    }
+
+    .turn-cli code {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        /* Same hanging indent as the payload, so a wrapped command reads as
+           one command rather than two. */
+        padding-left: calc(0.7rem + 2ch);
+        text-indent: -2ch;
+    }
+
+    .soul-economy {
+        margin-left: 0;
+    }
+
+    .chapter-head,
+    .ledger-row,
+    .timeline-item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .ledger::before,
+    .ledger-row::before {
+        display: none;
+    }
+
+    .chapter-mark {
+        margin-bottom: 0.9rem;
+        padding-top: 0;
+    }
+
+    .chapter-mark::after {
+        display: none;
+    }
+
+    .ledger-mark {
+        margin-bottom: 0.9rem;
+    }
+
+    .ledger-fact {
+        grid-column: 1;
+    }
+
+    .timeline-item {
+        padding-left: 1.6rem;
+    }
+
+    .timeline-item::before {
+        left: 6px;
+        top: 1.5rem;
+    }
+
+    .timeline-marker {
+        position: absolute;
+        left: 0;
+        top: 0.35rem;
+        margin-top: 0;
+    }
+
+    /* 14rem of empty horizon is a quarter of a phone screen. Keep the sunset,
+       shorten it. Not on a page that IS the night: ledger.css zeroes this for
+       .nightfall-page, and this rule — same specificity, later file — was
+       quietly putting 128px of parchment back under the header on /#scenes at
+       phone widths. Third time this cascade shape has bitten this project. */
+    .nightfall:not(.nightfall-page) {
+        margin-top: 8rem;
+    }
+
+    .nightfall-edge {
+        top: -8rem;
+        height: 8rem;
+    }
+
+    .page-inner:not(.page-night) + .site-footer {
+        margin-top: 7rem;
+    }
+
+    .page-inner:not(.page-night) + .site-footer::before {
+        top: -7rem;
+        height: 7rem;
+    }
+
+    .memory-panel-head {
+        gap: 0.5rem 0.75rem;
+    }
+
+    .memory-mood {
+        font-size: 0.8125rem;
+    }
+
+    .problem-grid,
+    .moat-grid,
+    .team-grid,
+    .business-grid,
+    .market-metrics,
+    .footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .competition-table {
+        overflow-x: auto;
+    }
+
+    .comp-header,
+    .comp-row {
+        min-width: 30rem;
+    }
+
+    .deck-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .slide-dots {
+        order: 3;
+        width: 100%;
+    }
+}
+

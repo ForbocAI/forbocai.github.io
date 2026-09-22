@@ -1,0 +1,137 @@
+/* ------------------------------------------------------- counterfactual -- */
+
+/* This block shipped with no styling at all, which is most of why a reader
+   took the heading's promise of a changed truth for an empty payload. It is
+   one organism under two conditions, so it is drawn as one: a cell, and the
+   same cell after it divided. Nothing about Maeve changes between the two
+   blocks — that is the argument the shape is making. */
+.turn-counterfactual {
+    position: relative;
+    isolation: isolate;
+    margin-top: clamp(2.75rem, 5vw, 4rem);
+    padding: clamp(1.75rem, 3.5vw, 2.75rem);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--night-rule);
+    background: var(--surface-night);
+}
+
+.turn-counterfactual-head {
+    max-width: 58ch;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.turn-counterfactual-head h3 {
+    margin: 0 0 0.6rem;
+    font-size: var(--step-2);
+}
+
+.turn-counterfactual-head p {
+    margin: 0;
+    max-width: 52ch;
+    font-size: var(--step--1);
+    line-height: 1.6;
+    color: var(--night-ink-soft);
+}
+
+.turn-counterfactual-pair {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    gap: clamp(1.25rem, 3vw, 2.25rem);
+    align-items: start;
+}
+
+/* Each condition is a cell: a membrane, and light sitting under it the way it
+   sits under something translucent rather than on top of something opaque. */
+.turn-counterfactual-pair article {
+    position: relative;
+    padding: clamp(1.1rem, 2.4vw, 1.6rem);
+    border-radius: var(--radius-sm);
+    border: 1px solid color-mix(in srgb, var(--night-ink) 8%, transparent);
+    background:
+        radial-gradient(ellipse 120% 90% at 18% 0%,
+            color-mix(in srgb, var(--night-surface-high) 78%, transparent),
+            transparent 68%),
+        color-mix(in srgb, var(--night-bg) 55%, transparent);
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--night-ink) 9%, transparent);
+}
+
+/* The second cell is the one that divided off: a sibling, not a copy, so it
+   runs warm where the first runs cool. */
+.turn-counterfactual-pair article:last-child {
+    border-color: color-mix(in srgb, var(--honey) 26%, transparent);
+    background:
+        radial-gradient(ellipse 120% 90% at 82% 0%,
+            color-mix(in srgb, var(--honey) 9%, transparent), transparent 66%),
+        color-mix(in srgb, var(--night-bg) 55%, transparent);
+}
+
+/* The filament still joining them. Across the gap when they sit side by side,
+   down it when they stack — either way it says these did not arrive apart. */
+.turn-counterfactual-pair article:first-child::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: calc(clamp(1.25rem, 3vw, 2.25rem) * -1);
+    width: clamp(1.25rem, 3vw, 2.25rem);
+    height: 1px;
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--creek) 52%, transparent),
+        color-mix(in srgb, var(--honey) 52%, transparent));
+}
+
+.turn-counterfactual-pair article > span {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--honey);
+}
+
+.turn-counterfactual-pair article:first-child > span {
+    color: var(--creek);
+}
+
+.turn-counterfactual-pair .turn-note {
+    max-width: none;
+    margin-bottom: 0.9rem;
+}
+
+.turn-counterfactual-pair .turn-note em {
+    font-style: italic;
+    color: var(--night-ink);
+}
+
+/* Side by side these columns are half the width of the ones above, so the
+   returned block wraps rather than running off its own edge. Indented
+   continuation keeps the shape of the object readable through the wrap. */
+/* The returned block is recessed: what the cell produced, not the cell. */
+.turn-counterfactual-pair .turn-code {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
+    background: color-mix(in srgb, #12180f 58%, transparent);
+    font-size: 0.78125rem;
+}
+
+.turn-counterfactual-foot {
+    margin-top: clamp(1.4rem, 3vw, 2rem);
+    max-width: 68ch;
+}
+
+@media (max-width: 760px) {
+    .turn-counterfactual-pair article:first-child::after {
+        top: auto;
+        right: auto;
+        bottom: calc(clamp(1.25rem, 3vw, 2.25rem) * -1);
+        left: 50%;
+        width: 1px;
+        height: clamp(1.25rem, 3vw, 2.25rem);
+        background: linear-gradient(180deg,
+            color-mix(in srgb, var(--creek) 52%, transparent),
+            color-mix(in srgb, var(--honey) 52%, transparent));
+    }
+}
+

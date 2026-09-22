@@ -1,0 +1,32 @@
+/* --------------------------------------------------------------- spine -- */
+
+/* One panel inset, and an honest note about what is still wrong.
+   Measured on the live page, this site has four left edges below the hero:
+   170 where a chapter container starts its body, 246 where a chapter HEAD's
+   rail grid puts its heading, and then whatever each panel's own padding adds
+   on top of one of those two. Heads are railed and bodies are not, which is a
+   structural difference, not a styling one.
+
+   Two overrides were tried here and both regressed it. Pulling panels left by
+   their padding fought each component stylesheet through the cascade and
+   overshot to the container wall. Shifting every chapter body onto the rail
+   double-shifted the chapters whose content is nested one level deeper, and
+   introduced 322 and 357 where there had been 246.
+
+   So the override is gone and only the shared inset remains. Closing this
+   properly means one container model — the rail belongs to the container, not
+   to the chapter head — and that is a refactor of .chapter-head across nine
+   components rather than a rule appended here. Left measured and named so the
+   next pass starts from the cause. */
+@media (min-width: 900px) {
+    .mission-turn,
+    .turn-authored,
+    .turn-room,
+    .soul-crossing,
+    .soul-economy,
+    .turn-answer {
+        padding-left: var(--panel-inset);
+        padding-right: var(--panel-inset);
+    }
+}
+

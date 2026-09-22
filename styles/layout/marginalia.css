@@ -1,0 +1,72 @@
+/* ------------------------------------------------- marginalia ----------- */
+
+/* The right-hand void.
+   Prose sits at a readable measure (~660px) inside a container that now opens
+   to 1600px, and it is all left-aligned, so half of every vertical band in the
+   prose chapters was empty on the right — #mission ran 95% of its bands more
+   than 40% empty. Widening the measure is not the answer: 660px is already a
+   generous line, and longer lines read worse.
+
+   So the margin gets used instead of removed. Supporting material — the
+   disclosures and the scene figures — moves into it and sits BESIDE the prose
+   it belongs to, which is what a margin is for in a printed page.
+
+   Floated rather than gridded on purpose: a grid re-flows every child into
+   rows and an item placed in column two lands in the next row where column two
+   is free, which opens gaps exactly as large as the void it was meant to fill.
+   A float leaves the prose flow untouched and lets text run up beside it.
+
+   From 1100px, which is exactly where the two-column grid in breaks.css
+   engages. This started at 1400 and then at 1200, and each time the uncovered
+   strip only MOVED: at 1400 #mission was 78% empty at 1280; at 1200 it was 77%
+   at 1152 and 1184, the same depth shifted 128px left. A gap between two
+   breakpoints is not narrowed by making it narrower, it is closed by making
+   the two numbers the same. A 1180px shell leaves 1100px of content: a 660px
+   measure, a 40px gutter and a ~300px margin fit inside that. */
+@media (min-width: 1100px) {
+    /* Some chapters wrap their disclosure in a div, so matching only .deeper
+       missed exactly the two worst sections: #mission holds its inside
+       .mission-turn and #technology has a .ledger-note instead. */
+    /* #business and #room are excluded: their containers are already explicit
+       two-column grids (see breaks.css), and a width on a grid item overflows
+       its track rather than floating beside anything. Floats are inert on grid
+       items anyway, so this was silently setting a 432px width inside a 336px
+       column. */
+    /* Disclosures only — NOT figures. Every scene figure on this page sits in a
+       section with a layout of its own, and floating them bought nothing: the
+       wins here come from .mission-turn, .ledger-note and .deeper. It cost
+       something, though — in #turn the floated figure overlapped
+       .turn-authored by 371x159px, because a following block with a background
+       runs underneath a float rather than beside it. */
+    .chapter:not(#business):not(#room) > .container > .deeper,
+    .chapter:not(#business):not(#room) > .container > .mission-turn,
+    .chapter:not(#business):not(#room) > .container > .ledger-note {
+        float: right;
+        width: clamp(19rem, 26vw - 8rem, 27rem);
+        margin: 0.4rem 0 1.8rem clamp(2rem, 3.2vw, 3.4rem);
+        clear: right;
+    }
+
+    /* A float is out of flow, so a following block with its own background
+       runs UNDER it instead of beside it. Anything that spans, or carries a
+       surface of its own, clears first. */
+    .chapter > .container > .chapter-head,
+    .chapter > .container > .ledger,
+    .chapter > .container > .soul-crossing,
+    .chapter > .container > .soul-economy,
+    .chapter > .container > .turn-authored,
+    .chapter > .container > figure,
+    .chapter > .container > section,
+    .chapter > .container > aside,
+    .chapter > .container > .hero-buttons {
+        clear: both;
+    }
+
+    /* #room's figure is a grid item in that same two-column grid, so it takes
+       its size from the track rather than from anything here. Letting it fill
+       the track is all that is needed now the track itself breathes. */
+    #room > .container > figure.maeve-scene {
+        width: 100%;
+        max-width: none;
+    }
+}

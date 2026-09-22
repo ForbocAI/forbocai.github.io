@@ -1,0 +1,116 @@
+@media (max-width: 1000px) {
+    .turn-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    /* Once the panel goes full width the watercolour lands in the text column
+       instead of behind it, so it shrinks into the corner it came from. */
+    .memory-panel-art {
+        width: 46%;
+        right: -7%;
+        bottom: -12%;
+        opacity: 0.22;
+    }
+
+    /* Below this the contents rail would squeeze the measure, so it moves
+       above the brief as an ordinary jump list. */
+    .doc-shell {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    /* The rail's explicit column placement is for the two-column shell only.
+       Left standing here it invents a second column and crushes the measure. */
+    .doc-body,
+    .doc-contents {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .doc-contents {
+        position: static;
+        order: -1;
+        padding: 0 0 1.4rem;
+        border-left: none;
+        border-bottom: 1px solid var(--day-rule);
+    }
+
+    .doc-contents li::before {
+        display: none;
+    }
+
+    .doc-contents ol {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 0.5rem 1.25rem;
+    }
+
+    .hero-lead {
+        max-width: var(--measure-tight);
+    }
+
+    .ledger-row {
+        grid-template-columns: var(--rail) minmax(0, 1fr);
+    }
+
+    .ledger-fact {
+        grid-column: 2;
+        margin-top: 1rem;
+    }
+
+    .ledger-body p {
+        max-width: 52ch;
+    }
+
+    .soul-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* The burger takes over at 940px, not 860. Seven links and the CTA need about
+   940px at their set size; between 880 and 940 the desktop nav wrapped onto
+   two lines — "One / choice", "Living / worlds" — and overflowed its container
+   by up to 33px. Nothing else about the menu is gated on width (no
+   matchMedia, no other @media in mobile-nav.css), so only the switch moves;
+   the rail and header-height changes below stay at 860 where they belong. */
+@media (max-width: 940px) {
+    .nav-links,
+    .nav-cta {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 860px) {
+    :root {
+        --rail: 2.25rem;
+        --header-height: 66px;
+    }
+
+    .business-grid,
+    .market-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .comp-header,
+    .comp-row {
+        grid-template-columns: minmax(0, 1.6fr) repeat(4, minmax(0, 1fr));
+        font-size: 0.8125rem;
+    }
+}
+

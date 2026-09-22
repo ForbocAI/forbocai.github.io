@@ -1,0 +1,161 @@
+/* The colonies.
+
+   A colony belongs to a SECTION, not to the page. Laying the field on
+   .nightfall with repeating vertical periods could not cover it: sections here
+   run from 572px to 3962px tall, so any period long enough to be atmospheric
+   left short sections sitting in the gaps. Two attempts proved it — at
+   2600/3390/2130 #roadmap fell in a hole at 93% single-hue, and tightening to
+   1870/2330/1610 fixed #roadmap and dropped #investors to 0.16%. Chasing the
+   numbers was moving the hole around, not closing it.
+
+   Tiled inside the section rather than placed once in it: sections run 572px
+   to 3962px tall, so a single placement at a percentage of the section put the
+   colony 1,865px down a tall one — below the fold of the screen a reader
+   arrives on. A tile gives a short section one and a tall section several,
+   with no number to tune per section.
+
+   The bright CORE sits off the page and only the faint tail crosses the text.
+   Centred in the margin it lifted the ground under prose from L=0.028 to
+   L=0.09-0.11 and cost up to 4.4 contrast points, putting two runs under AA —
+   light where the reading is, which is the one place overgrowth should not be.
+
+   Variation is in the tile's own height and the position WITHIN it, never in a
+   negative offset. An offset shifts the whole sequence out of the section: at
+   -520px with a 1180px tile, #roadmap — 841px tall — had its colony land at
+   y=-1 and the next one at 1179, so an 841px section sat between two pools and
+   measured 97% single-hue. Every placement here lands inside 560px of a
+   section's top, which is inside the shortest section on the page. They sit toward the margins — where overgrowth
+   would be, and where prose does not reach — so warm light is still MADE in
+   the middle where the reading is, and cold light is GROWN from the edges in.
+
+   Three placements on a 3-cycle against nine sections, so the pattern does not
+   line up with the chapter rhythm and no two neighbours share a side. */
+.nightfall .chapter {
+    background-repeat: repeat-y, repeat-y;
+    background-size: 100% var(--lamp-span, 1180px), 100% var(--colony-span, 1400px);
+    /* TWO sources, and the warm one is the KEY.
+
+       The night had only the cold half at chapter level, so the grown light
+       out-shone the made light and the brightest 8% of every night chapter
+       measured grey-green — 104,111,93 in #room against the day's lantern
+       cream 229,206,167. The page was delivering "cosy" by ALTERNATING warm
+       parchment with a cold dark, rather than by putting a warm light inside
+       the dark, which is the difference between an inn at night and a lit
+       specimen. The design language already said warm light is MADE and cold
+       light is GROWN; only the grown half had been built.
+
+       The lantern pool is brighter and tighter than the colony, and sits
+       opposite it: a lamp is a source, a colony is a seep. */
+    background-image:
+        radial-gradient(620px 520px at var(--lamp-x) var(--lamp-ty),
+            color-mix(in srgb, var(--lantern) 40%, transparent) 0%,
+            color-mix(in srgb, var(--honey) 17%, transparent) 38%,
+            transparent 68%),
+        radial-gradient(760px 640px at var(--colony-x) var(--colony-ty),
+            color-mix(in srgb, var(--colony-hue) 16%, transparent) 0%,
+            color-mix(in srgb, var(--colony-hue) 6%, transparent) 42%,
+            transparent 70%);
+    --colony-hue: var(--biolume-core);
+    --colony-x: 1%;
+    --colony-span: 1400px;
+    --colony-ty: 40%;
+    --lamp-x: 88%;
+    --lamp-ty: 22%;
+    --lamp-span: 1180px;
+}
+
+.nightfall .chapter:nth-of-type(3n+2) {
+    --colony-hue: var(--spore);
+    --colony-x: 99%;
+    --colony-span: 1750px;
+    --colony-ty: 30%;
+    --lamp-x: 9%;
+    --lamp-ty: 62%;
+    --lamp-span: 1460px;
+}
+
+.nightfall .chapter:nth-of-type(3n) {
+    --colony-x: 5%;
+    --colony-span: 1180px;
+    --colony-ty: 34%;
+    --lamp-x: 92%;
+    --lamp-ty: 74%;
+    --lamp-span: 1330px;
+}
+
+/* The day has colonies too, and it needed them more.
+
+   --creek leads and --sage varies, not the other way round: sage (#9dbb8b) sits
+   so close to parchment's own hue that at any strength which still looks like
+   shade it reads as the SAME tone — #servitor and #technology stayed at 96-98%
+   single-hue while #mission, the one creek section, came down to 94.7%.
+
+   Lighting the night fixed its monoculture and left the DAY as the flattest
+   surface on the page: #technology measured 98.3% single-hue and #mission
+   97.7%, against a night that had come down to 77-85%. Those are the first two
+   chapters a reader meets after the hero, so the page opened on its most
+   uniform ground and got more varied as it went — backwards.
+
+   On parchment overgrowth is not light, it is SHADE. A cold glow on a bright
+   ground either disappears or looks like a screen defect; moss on a warm wall
+   is a cool tint that darkens. So the day colonies subtract rather than add,
+   which also means they can only help the dark-on-light text they pass under.
+
+   Same tiling as the night: inside the section, never a negative offset, on
+   periods that do not divide into each other. */
+.daylight .chapter {
+    background-repeat: repeat-y;
+    background-size: 100% var(--moss-span, 1500px);
+    background-image: radial-gradient(720px 600px at var(--moss-x) var(--moss-ty),
+        color-mix(in srgb, var(--moss-hue) 46%, transparent) 0%,
+        color-mix(in srgb, var(--moss-hue) 17%, transparent) 44%,
+        transparent 72%);
+    --moss-hue: var(--creek);
+    --moss-x: 2%;
+    --moss-span: 1500px;
+    --moss-ty: 38%;
+}
+
+.daylight .chapter:nth-of-type(3n+2) {
+    --moss-hue: var(--sage);
+    --moss-x: 98%;
+    --moss-span: 1840px;
+    --moss-ty: 28%;
+}
+
+.daylight .chapter:nth-of-type(3n) {
+    --moss-x: 6%;
+    --moss-span: 1270px;
+    --moss-ty: 46%;
+}
+
+
+/* Below 900px there is no margin for light to live in.
+
+   The lamp and the colony are both positioned toward the edges, which works
+   while there are edges: on a desktop they light the ground beside the measure.
+   A phone is all measure. At full strength they lit the ground UNDER the text —
+   #investors' crop measured a median of 98 and a p90 of 172 against a base
+   night of 46, and its near-white lead fell to 3.22:1, which is the brightest
+   ink on the page failing AA because the thing behind it got brighter.
+
+   Atmosphere is worth less than the sentence it sits behind. */
+@media (max-width: 900px) {
+    .nightfall .chapter {
+        /* The colony alone, and faintly. Damping the lamp was not enough — at
+           13% it still held the ground under #investors' lead at a median of
+           93 against a base night of 46, and the brightest ink on the page
+           read 3.48:1. There is no position on a 390px screen that is beside
+           the measure, so a light source there is always behind a sentence.
+           The night on a phone is night; the two-source model is a thing you
+           can see where there is room to see it. */
+        background-image:
+            radial-gradient(760px 640px at var(--colony-x) var(--colony-ty),
+                color-mix(in srgb, var(--colony-hue) 8%, transparent) 0%,
+                color-mix(in srgb, var(--colony-hue) 3%, transparent) 42%,
+                transparent 70%);
+        background-size: 100% var(--colony-span, 1400px);
+    }
+}
+
+

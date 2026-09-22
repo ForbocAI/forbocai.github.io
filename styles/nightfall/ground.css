@@ -1,0 +1,63 @@
+/* -------------------------------------------------------------- nightfall */
+
+.nightfall {
+    position: relative;
+
+    /* The night was a single flat fill, and that is the whole reason it
+       measured 86-96% one hue: the cold half of the lighting model existed
+       only on sigils and chapter marks, which are 2.6rem glyphs — a decoration,
+       not a source. A second source needs AREA, which means it has to light
+       ground. See the colonies on .nightfall .chapter below. */
+    background-color: var(--night-bg);
+    color: var(--night-ink);
+    margin-top: 14rem;
+    /* The lantern halos are wider than the page on purpose. Clip only the
+       horizontal axis, so light still spills up into the sunset and down into
+       the footer without the halos widening the document. */
+    overflow-x: clip;
+}
+
+/* Dusk: the parchment above dissolving into moss. */
+.nightfall-edge {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* The page now descends exactly once — day, dusk, night, never back up —
+       which makes this the only tonal event on the site and the one place the
+       design language actually happens. It was 14rem carrying a 161-point
+       luminance step, which reads as two websites stapled together rather than
+       as a sunset. At 26rem the ramp has room to be an evening. */
+    top: -26rem;
+    height: 26rem;
+    /* Parchment straight to moss is a luminance ramp with no chromatic event,
+       which reads as fog. Passing through petal clay and dusk lavender makes it
+       an evening, and puts two pinned palette colours to work. */
+    /* Opens on the exact colour .daylight closes on — a transparent first stop
+       revealed the body parchment underneath and made the sunset start with a
+       step *lighter*. Chroma is held above ~30 into the last third so the fall
+       does not go grey on the way down. */
+    background: linear-gradient(180deg,
+        var(--dusk-0) 0%,
+        var(--dusk-1) 22%,
+        var(--dusk-2) 42%,
+        var(--dusk-3) 60%,
+        var(--dusk-4) 78%,
+        var(--dusk-5) 90%,
+        var(--dusk-6) 100%);
+    pointer-events: none;
+}
+
+/* Ambient only. The measurable light now comes from the lanterns themselves —
+   ambient gradients with nothing casting them read as lighter patches, not as
+   a lit room. */
+.nightfall::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 60% 24% at 74% 34%, rgba(122, 167, 179, 0.07), transparent 74%),
+        radial-gradient(ellipse 50% 20% at 16% 72%, rgba(157, 187, 139, 0.05), transparent 74%);
+}
+
+

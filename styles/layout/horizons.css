@@ -1,0 +1,70 @@
+/* ------------------------------------------------------------- horizons -- */
+
+/* Drama, taken from the AAA sites and left cozy.
+   Diablo IV runs abrupt full-width edges so a reader gets distinct visual
+   chapters — you always know you have arrived somewhere. This page runs one
+   continuous gradient from parchment to moss, which is beautiful and is also
+   why every section feels like the same section: nothing ever ARRIVES, it just
+   keeps fading.
+
+   The cozy version of an abrupt edge is not a hard cut, it is a horizon. The
+   light changes at a line, the way the sun drops behind a ridge, and the last
+   of it catches along the seam before the next ground takes over. Dramatic
+   because it is an event; warm because the event is a sunset rather than a
+   scene change.
+
+   Every chapter boundary, not a chosen few. */
+.chapter + .chapter {
+    position: relative;
+}
+
+.chapter + .chapter::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: clamp(3rem, 6vw, 5.5rem);
+    pointer-events: none;
+    z-index: 1;
+    background:
+        linear-gradient(180deg,
+            color-mix(in srgb, var(--lantern) 26%, transparent) 0%,
+            color-mix(in srgb, var(--honey) 11%, transparent) 22%,
+            transparent 100%);
+    mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+}
+
+/* The seam itself: one bright line where the two grounds meet, dimming as it
+   runs outward. This is the last of the light, and it is the only hard edge on
+   the page. */
+.chapter + .chapter::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(90deg,
+        transparent,
+        color-mix(in srgb, var(--lantern) 62%, transparent) 26%,
+        color-mix(in srgb, var(--lantern) 78%, transparent) 50%,
+        color-mix(in srgb, var(--lantern) 62%, transparent) 74%,
+        transparent);
+}
+
+/* Into the night the horizon cools, because what is catching the last light
+   down there is the growth rather than the sky. */
+.chapter-night + .chapter-night::after,
+.turn-band + .chapter::after,
+.chapter + .turn-band::after {
+    background: linear-gradient(90deg,
+        transparent,
+        color-mix(in srgb, var(--creek) 46%, transparent) 26%,
+        color-mix(in srgb, var(--lantern) 58%, transparent) 50%,
+        color-mix(in srgb, var(--sage) 42%, transparent) 74%,
+        transparent);
+}
+

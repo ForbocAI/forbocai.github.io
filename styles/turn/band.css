@@ -1,0 +1,167 @@
+/* ------------------------------------------------------------------ turn -- */
+
+/* The page's tunnel: edge to edge, so the header goes dark with it instead of
+   crossing it as a slab, and so the site has one fewer floating card. */
+.turn-band {
+    position: relative;
+    background: var(--night-bg);
+    color: var(--night-ink);
+    /* Room under the last line for the band to open out, so the tunnel does not
+       simply stop at a 1px edge. */
+    padding-bottom: calc(var(--chapter-gap) + 4rem);
+}
+
+/* There used to be a sunset floor here — a 5rem fade into --dusk-0 at the foot
+   of every turn band, "the first stop of the sunset that follows it". Nothing
+   sunset follows a turn band any more: on the home page #turn is followed by
+   #room, another night chapter, and on /#scenes the walkthrough is followed by
+   the room. What it painted was a cream stripe across the moss between two
+   night chapters, peak luminance 186 over a ground of 42-70, on both pages —
+   the page's one dramatic tonal event, the dusk, with an accidental twin. */
+
+.turn-band h2,
+.turn-band h3 {
+    color: var(--night-ink);
+}
+
+.turn-band .chapter-lead {
+    color: var(--night-ink-soft);
+}
+
+.turn-band .chapter-mark {
+    color: var(--lantern);
+}
+
+.turn-band .chapter-mark::after {
+    background: linear-gradient(var(--night-rule), transparent);
+}
+
+.turn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    gap: 1px;
+    background: var(--night-rule);
+    border-block: 1px solid var(--night-rule);
+}
+
+.turn-col {
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    background: var(--night-bg);
+}
+
+/* These are the section's beats, not decoration: "What your writer hands us",
+   "Your game asks", "Servitor™ returns one complete change" — the three moves
+   the whole chapter is built on. At --step--1 they were 14px, below the size
+   at which anything registers in a skim, so a phone reader crossed 2,950px —
+   three and a half screenfuls — of monospace between one mark and the next.
+   The structure was on the page and invisible. */
+.turn-label {
+    margin-bottom: 0.9rem;
+    /* Sized as the subheads they are. --step-1 (19px on a phone) reads as bold
+       body, not as a mark, and a skim only stops for something clearly larger
+       than what surrounds it. --step-2 capped at 1.55rem clears that on both
+       halves — 21.6px against 17px body on a phone, 24.8px against 19px on a
+       desktop — without letting an eyebrow grow to full h3 size on a wide
+       screen, which is what --step-2 uncapped would do. */
+    font-size: min(var(--step-2), 1.55rem);
+    font-weight: 700;
+    color: var(--honey);
+}
+
+.turn-code {
+    margin: 0 0 1rem;
+    overflow-x: auto;
+    scrollbar-color: var(--night-rule) transparent;
+    scrollbar-width: thin;
+    font-family: var(--font-code);
+    font-size: 0.8125rem;
+    line-height: 1.65;
+    color: var(--night-ink);
+    -webkit-overflow-scrolling: touch;
+}
+
+/* One treatment at every width. The payload is the evidence, so it may never
+   be cut: it wraps, and a wrapped line is marked as a continuation rather than
+   destroying the indentation that makes an object legible. No mask — wrapped
+   text has no overflow to fade, and painting one over it only made a readable
+   block look truncated. */
+.turn-code code {
+    display: block;
+    font-family: inherit;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    padding-left: 2ch;
+    text-indent: -2ch;
+}
+
+.turn-note {
+    margin-bottom: 0;
+    font-size: var(--step--1);
+    line-height: 1.55;
+    color: var(--night-ink-soft);
+    max-width: 44ch;
+}
+
+/* One note per column needed no rhythm; there are six now, and at a 0px gap
+   against a 21.7px line-height the space between two paragraphs was smaller
+   than the space between two lines inside one. Six separate disclosures read
+   as a single wall of text. Measured, not guessed. */
+.turn-note + .turn-note {
+    margin-top: 0.95rem;
+}
+
+.turn-note code,
+.turn-refusal code,
+.turn-cli code {
+    font-family: var(--font-code);
+    font-size: 0.9em;
+    padding: 0.1em 0.35em;
+    border-radius: var(--radius-xs);
+    background: color-mix(in srgb, var(--honey) 16%, transparent);
+    /* --honey measured 3.85:1 on the lit panel at 13.5px — well under AA, and
+       the smallest type in the night. The chip already carries a 16% honey
+       ground, so the warmth is in the background; the glyphs themselves can be
+       the brighter made light without changing what the chip reads as.
+       Gated by .dream-loop/nightcontrast.mjs against rendered pixels. */
+    color: var(--lantern);
+}
+
+.turn-refusal {
+    margin-top: 1.75rem;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--ember);
+    color: var(--night-ink-soft);
+    max-width: 68ch;
+}
+
+.turn-cli {
+    margin-top: 1.25rem;
+    font-size: var(--step--1);
+    color: var(--night-ink-faint);
+    max-width: 68ch;
+}
+
+/* A command broken across two lines with its chip sliced in half reads as a
+   glitch; give it its own line and let it scroll if it must. */
+.turn-cli code {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+/* Seven of twenty-two screens were monospace. The exhibits earn their place —
+   two reviewers scored the argument on them — but they were set at prose
+   leading, which is what made them cost a third of the page. Denser, the way
+   a payload actually reads. */
+.turn-code {
+    line-height: 1.5;
+}
+
+.turn-code code {
+    font-size: 0.8125rem;
+}

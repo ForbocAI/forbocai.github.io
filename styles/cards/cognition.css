@@ -1,0 +1,115 @@
+/* ----------------------------------------------------------------- cards -- */
+
+/* Three label-and-statement patterns in the Servitor chapter. All three share
+   one idea: a small tracked rubric naming the faculty, then the claim itself in
+   display type. Without a rule the span and the statement are adjacent inline
+   boxes, so the page read "IntelligenceServitor™ creates…" as one word.
+   Reconstructed against .dream-loop/r26-final/home-desktop-4.png. */
+
+.rubric,
+.servitor-cognition li > span,
+.character-intelligence-grid article > span,
+.model-hierarchy p > span {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--day-ink-soft);
+}
+
+/* The six stages of one judgment. A grid rather than a list so the sequence
+   reads as one motion at a glance instead of six stacked rows. */
+.servitor-cognition {
+    display: grid;
+    /* Six facets, so the column count has to divide six or one card is left
+       alone on a row. auto-fit does not know that: it fitted five across and
+       orphaned the sixth at every width from 1220 to past 1860, and four with
+       two below from 964. Explicit counts that divide six cannot orphan at any
+       width. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin: 1.6rem 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: none;
+}
+
+.character-intelligence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: 1rem;
+    margin-top: 2.4rem;
+}
+
+@media (min-width: 640px) {
+    .servitor-cognition { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.servitor-cognition li,
+.character-intelligence-grid article {
+    padding: 1.15rem 1.2rem 1.3rem;
+    border-radius: var(--radius-sm);
+    background: var(--surface-day);
+    box-shadow: var(--membrane-day);
+}
+
+.servitor-cognition li > strong,
+.character-intelligence-grid article > h3 {
+    display: block;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--day-ink);
+}
+
+.character-intelligence-grid article > p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--day-ink-soft);
+}
+
+/* The tint cycles so six adjacent cards read as six distinct faculties rather
+   than one striped block. Kept within a few points of the parchment so it is
+   a change of temperature, not a palette. */
+/* These were three raw hexes that belonged to no ramp: #f1ede2, #eceee9 and
+   #f6ecea. The middle one measured at chroma 5 against a ground of chroma 56 —
+   a grey card on a themed page, which is the default card fill of every UI kit
+   ever generated, and it was two of every three cards in the section a reader
+   reaches third.
+
+   Mixed off the page's own ground instead, and finally spending the cool
+   accents that were declared and never used. The cycle now means something:
+   warm where the world is, cool where a thing is being verified. */
+.servitor-cognition li:nth-child(3n + 2),
+.character-intelligence-grid article:nth-child(4n + 2) {
+    background: color-mix(in srgb, var(--honey) 9%, var(--day-bg));
+}
+
+.servitor-cognition li:nth-child(3n),
+.character-intelligence-grid article:nth-child(4n + 3) {
+    background: color-mix(in srgb, var(--sage) 7%, var(--day-bg));
+}
+
+.character-intelligence-grid article:nth-child(4n) {
+    background: color-mix(in srgb, var(--creek) 6%, var(--day-bg));
+}
+
+@media (max-width: 860px) {
+    .servitor-cognition,
+    .character-intelligence-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .servitor-cognition,
+    .character-intelligence-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+

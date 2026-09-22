@@ -1,0 +1,60 @@
+/* The turn. One line, alone, between the diagnosis and the arrival — the
+   sentence the whole page pivots on, which was previously the third clause of
+   a body paragraph. It is set as a statement because it is one. */
+.hero-turn {
+    margin: 1.4rem 0;
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--day-ink);
+}
+
+/* The potion, named directly under the turn. Three short sentences that are
+   the whole product, set between the pivot and the explanation. */
+.hero-potion {
+    margin: 0 0 1.05rem;
+    max-width: var(--measure-tight);
+    font-size: var(--step-1);
+    line-height: 1.45;
+    color: var(--day-ink);
+}
+
+.hero-potion strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    line-height: 1.2;
+}
+
+/* The ask rides with the promise. It was at the foot of three paragraphs,
+   which put it below the fold at 1440x900 and at 390x844 — a hero that states
+   the pitch and then makes you scroll to find out what to do with it. */
+.hero-buttons-lead {
+    margin: 0 0 clamp(1.1rem, 2vw, 1.5rem);
+}
+
+
+/* The smallest phone still in common use. Everything above already scales, so
+   this only has to stop the deck and the ask spending lines they do not have. */
+/* The smallest screens still in common use — a 320x568 phone, or any window
+   shorter than 600px. Measured there, the promise line was fine and its gloss
+   was seven lines and 228px, which is what pushed the ask off the fold. The
+   three beats ARE the promise; the sentence explaining them is the first thing
+   that can go when there is no room, and it is still one scroll away. */
+@media (max-height: 600px), (max-width: 360px) {
+    .hero-gloss { display: none; }
+
+    .kicker { font-size: 0.8125rem; }
+
+    .hero-potion {
+        font-size: var(--step-1);
+        margin-bottom: 0.7rem;
+    }
+
+    .hero-buttons-lead {
+        gap: 0.5rem 1rem;
+        margin-bottom: 0.9rem;
+    }
+}

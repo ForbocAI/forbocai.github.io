@@ -1,0 +1,51 @@
+/* The descent is the page, not a 96px ribbon at the bottom of it. The daylight
+   half carries a ramp from morning parchment down into evening clay across its
+   whole height, so by the time the turn panel arrives the ground has already
+   gone to dusk. Every ink still clears 4.5:1 against the darkest stop. */
+.daylight,
+.page-inner {
+    position: relative;
+    background-image:
+        linear-gradient(180deg,
+            var(--day-0) 0%,
+            var(--day-1) 14%,
+            var(--day-2) 42%,
+            var(--day-3) 68%,
+            var(--day-4) 86%,
+            var(--day-5) 100%),
+        radial-gradient(ellipse 52% 22% at 80% 3%, rgba(255, 243, 194, 0.7), transparent 70%),
+        radial-gradient(ellipse 44% 18% at 4% 9%, rgba(207, 233, 220, 0.45), transparent 70%);
+}
+
+/* ---------------------------------------------------------- the descent -- */
+
+/* The target brief is explicit: the page "opens on parchment ... and darkens
+   through dusk into deep moss", and calls an all-cream page "the single largest
+   failure", because lantern light only reads as light when there is dark around
+   it. Measured, the page had exactly two luminance values — 0.83 and 0.028 —
+   with no dusk between them, and #technology bounced back to full daylight
+   after the page had already gone dark.
+
+   The dusk ramp already existed in tokens.css and was only ever used for
+   gradients. These are its light steps, applied where they belong: each day
+   chapter sits a little lower than the one above it, so the parchment run is a
+   descent rather than a flat field, and the lantern-lit turn reads as an inset
+   in a page that was already on its way down. */
+/* background-COLOR, not the shorthand. These are ID selectors, so `background`
+   here beat everything and silently reset background-image, -size and -repeat
+   along with it — which is why the day chapters could not carry the overgrowth
+   the night ones do. A shorthand at specificity 1,0,0 is a quiet veto over
+   longhands set anywhere else, and nothing about the descent needs it: each of
+   these only ever sets a colour. */
+#mission {
+    background-color: var(--day-bg-deep);
+}
+
+#servitor {
+    background-color: color-mix(in srgb, var(--dusk-0) 55%, var(--day-bg-deep));
+}
+
+#technology {
+    background-color: var(--dusk-0);
+}
+

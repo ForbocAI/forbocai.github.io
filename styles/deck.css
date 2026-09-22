@@ -216,6 +216,21 @@
     }
 }
 
+/* A slide is a fixed canvas, so a full-height plate pushes everything else off
+   it. Inside the deck these scenes are a band across the composition, cropped
+   to the part that carries the moment. */
+.slide .maeve-scene img {
+    max-height: 215px;
+    object-fit: cover;
+    object-position: center 38%;
+}
+
+@media (max-width: 720px) {
+    .slide .maeve-scene img {
+        max-height: 170px;
+    }
+}
+
 
 /* Where height is scarce, the slide spends less of it on padding. A deck slide
    that does not fit its screen is the defect; the room around the words is the

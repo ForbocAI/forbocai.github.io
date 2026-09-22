@@ -1,0 +1,73 @@
+:root {
+    /* Type */
+    --font-display: 'Vollkorn', Georgia, 'Times New Roman', serif;
+    --font-body: 'Alegreya Sans', 'Segoe UI', system-ui, sans-serif;
+    --font-mark: 'Eagle Lake', var(--font-display);
+    --font-rune: 'Noto Sans Runic', var(--font-display);
+    /* System mono: code is the one place a monospace face earns its keep,
+       and it should not cost a webfont. */
+    --font-code: ui-monospace, 'SF Mono', SFMono-Regular, 'Cascadia Mono',
+        Menlo, Consolas, 'Liberation Mono', monospace;
+
+    /* The bottom of the ladder used to be three fixed rem values, frozen from
+       768 all the way to 2560 while h1 and h2 grew — five of seven steps rigid
+       on a page whose brief is that nothing should be. Each is solved to land
+       on its current value at 1440 so the composed width does not move, with a
+       floor for phones and room to grow on a large monitor. */
+    --step--1: clamp(0.875rem, 0.777rem + 0.179vw, 1.0625rem);
+    --step-0: clamp(1.0625rem, 0.979rem + 0.232vw, 1.35rem);
+    --step-1: clamp(1.1875rem, 0.991rem + 0.357vw, 1.5625rem);
+    /* h3. Capped against h2 so the two can never cross: h2 is a ratio of h1 and
+       shrinks on a phone, while this had a fixed 1.5rem floor that did not — so
+       at 390px h2 measured 22px against h3's 24px, an inverted ladder. Tying
+       the ceiling to h2 makes that arithmetically impossible at any size, and
+       the higher max lets it keep growing past 1440 instead of freezing. */
+    --step-2: min(clamp(1.35rem, 1.05rem + 1.05vw, 2.6rem), calc(var(--step-3) * 0.82));
+    /* Derived too. A scale where one step is height-aware and the next is a
+       fixed clamp is not a scale — it inverts the moment a window gets short,
+       which is exactly what the hierarchy probe caught at 1366x768, 1440x700,
+       1024x768 and on a phone. Everything above body now descends from the
+       same source, so the ranks hold at every size by construction. */
+    /* h2 keeps a floor of its own. As a pure ratio of h1 it collapsed to 22px on a
+   phone — 1.29x the body text, which is not a heading, it is bold prose. */
+--step-3: max(1.75rem, calc(var(--step-5) * 0.60));
+    /* Derived from step-5, not tuned beside it. When the headline shrinks on a
+       short screen the second rank has to shrink with it, or the mid-page peak
+       out-ranks the opening — which is exactly what happened the moment the
+       headline became height-aware and this stayed a fixed clamp. 0.82 keeps a
+       clear gap at every size the fold test covers. */
+    /* The second act. As a pure ratio of h1 it collapsed onto the h2 plateau on a
+   phone — 29.9px against 28px, a 1.07x step, where desktop gives it 1.37x. The
+   page's dramatic centre was invisible on mobile because h2 has a floor and
+   this did not, so the two converged as h1 shrank.
+
+   The floor is RELATIVE to h2, not absolute: an absolute one large enough to
+   matter (2.4rem) would have put the second act above h1 at 390px, where h1 is
+   only 36.5px. 1.18x of h2 clears the plateau and still sits under h1 at 320,
+   the tightest width on the page. Above the floor the 0.82 ratio wins and
+   nothing on desktop moves. */
+--step-4: max(calc(var(--step-3) * 1.18), calc(var(--step-5) * 0.82));
+    /* The headline has to clear the fold on every screen, not on the one it
+       was measured on. A width-only clamp cannot do that: a 1440x900 laptop
+       and a 1440x700 window have identical width and completely different
+       room, so any figure tuned against one is wrong on the other.
+
+       So the scale carries a viewport-HEIGHT term as well. A short window
+       shrinks the headline automatically and the calls to action stay above
+       the fold by construction rather than by a number I measured once. The
+       min() is what makes it a guarantee: whichever of width or height is
+       scarcer wins. */
+    /* The floor is 2.75rem, not 1.8rem, and that floor is the phone's whole
+   hierarchy. --step-5 is min(width-term, height-term), and on a 390px screen
+   the width term wins at 36.5px — which made the peak only 1.30x the 28px h2
+   plateau, against 2.03x on a desktop. A peak that is barely a third louder
+   than the thing it outranks is not a peak, and a phone reader met nine marks
+   across twenty-seven screenfuls with almost no difference between them.
+
+   44px costs one extra line of headline at 320px and buys a real top tier. */
+--step-5: clamp(2.75rem, min(1.5rem + 3.2vw, 0.3rem + 6.4vh), 5.2rem);
+
+    --measure: 66ch;
+    --measure-tight: 46ch;
+
+}

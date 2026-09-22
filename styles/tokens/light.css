@@ -1,0 +1,148 @@
+:root {
+/* ------------------------------------------------------------ membrane --
+
+   Urbit and biomorphic form are not two skins to pick between. Their
+   intersection is one object, and it happens to be this company's thesis: a
+   CELL. A living interior, a sovereign boundary, and a strict rule about what
+   crosses. Servitor is the interior. The Protocol is the membrane. "She
+   proposes, your game disposes" is the crossing rule. A Soul is the cell
+   crossing into a world that decides what it admits.
+
+   So the rule for every surface on this site: light comes from INSIDE the
+   boundary and bleeds outward through it. It is never a lamp above a card.
+   A drop shadow says an object was placed on a table by someone; a membrane
+   says something is lit from within and is holding itself together. The three
+   card systems here — the memory panel, the scene plates, the deck frame —
+   were all running the same `0 18px 44px -26px` drop, which made the three
+   most important surfaces on the site the three most obviously constructed
+   ones.
+
+   The small dark term stays. A cell resting on a ground does occlude a little,
+   and without it the surface reads as pasted rather than present. */
+/* Tropism. Every membrane on this site glowed equally on all four sides, and
+   nothing alive is lit that way — a living boundary facing a light source is
+   bright where it faces the light and occluded opposite. Uniform symmetric
+   glow is also what every generated page ships, because a box-shadow is
+   symmetric unless somebody decides otherwise. Light held consistently across
+   a page in one direction is what makes a design read as photographed rather
+   than assembled.
+
+   The source is not arbitrary: this world has a lantern in it. The light comes
+   from above and slightly left, the way a lamp on a counter falls, and every
+   surface on the page agrees about where it is. The inner highlight rides the
+   lit edge, the outward bloom leans away from it, and the occlusion gathers on
+   the side the light does not reach. */
+--light-x: -1;
+--light-y: -1;
+
+--membrane-day:
+    inset 2px 2px 0 -1px rgba(255, 253, 246, 0.9),
+    inset -10px -12px 22px -20px rgba(45, 62, 52, 0.3),
+    inset 0 0 70px -22px rgba(255, 243, 194, 0.95),
+    -6px -4px 44px -8px rgba(224, 195, 138, 0.42),
+    14px 18px 110px 4px rgba(224, 195, 138, 0.12),
+    10px 16px 30px -22px rgba(45, 62, 52, 0.5);
+
+--membrane-night:
+    inset 2px 2px 0 -1px rgba(241, 232, 214, 0.14),
+    inset -12px -14px 26px -22px rgba(5, 9, 6, 0.45),
+    inset 0 0 80px -24px rgba(255, 243, 194, 0.34),
+    /* Grown light, on the side the lamp does not reach. The warm source sits
+       up and left (--light-x/--light-y), so the colony seeps in from down and
+       right. Dimmer and further out than the made light: a fungus does not
+       out-shine a sign, it creeps around it. */
+    inset -20px -24px 58px -42px rgba(95, 227, 205, 0.34),
+    -6px -4px 52px -10px rgba(255, 243, 194, 0.24),
+    18px 22px 92px -18px rgba(95, 227, 205, 0.14),
+    14px 18px 130px 6px rgba(255, 243, 194, 0.07),
+    10px 16px 30px -22px rgba(5, 9, 6, 0.9);
+
+/* ------------------------------------------------- biomorphic colour ----- */
+
+/* Colour in nature is never flat, and it shifts HUE with light — a lit surface
+   runs warm where the light falls and cool where it does not. Every generated
+   page reaches for a LIGHTNESS gradient instead, which is why those surfaces
+   read as printed paper rather than as material.
+
+   The membranes went phototropic last pass but the surfaces they wrap did not
+   respond, so the light had a direction and the colour did not know about it.
+   These two run warm at the lit corner and cool at the shadowed one, along the
+   same axis the membrane already uses. The shift is about four points of hue —
+   nobody will name it, and a flat fill beside one of these looks dead.
+
+   This also replaces a tint cycle that was measured at 0.0009 apart in green,
+   which is below the threshold at which a difference is a difference. Surfaces
+   now vary as material rather than as three swatches. */
+/* Turgor — the last structural property in the audit, and the one that costs
+   no words.
+   Living tissue is pressurised from the inside. A leaf, a berry, a fungal cap
+   is not a flat face with a soft edge; it presses OUTWARD against its membrane
+   and reads slightly convex, brightest where the surface turns toward you and
+   falling off as it curves away. Every surface here has had edge light since
+   the membrane pass and no face light at all, which is why they read as
+   panels rather than as things.
+
+   It is also the neon property. A tube is pressurised glass: a hot core with
+   the glow falling off toward its walls. Warm made light and cold grown light
+   both behave this way, so one gradient serves the whole two-source model.
+
+   A radial laid over the directional one — the tropic shift still says where
+   the light comes from, and this says the surface is full. Deliberately weak:
+   about six points of lift at the crown. Nobody should see a dome; they should
+   see a surface that is not flat and not be able to say why. */
+--surface-day:
+    radial-gradient(120% 96% at 34% 22%,
+        color-mix(in srgb, #fffdf4 62%, transparent) 0%,
+        color-mix(in srgb, #fffdf4 22%, transparent) 38%,
+        transparent 74%),
+    linear-gradient(148deg,
+        color-mix(in srgb, var(--honey) 13%, #fffdf4) 0%,
+        color-mix(in srgb, var(--day-bg) 94%, #fff) 46%,
+        color-mix(in srgb, var(--creek) 7%, var(--day-bg)) 100%);
+
+--surface-night:
+    radial-gradient(120% 96% at 34% 22%,
+        color-mix(in srgb, var(--lantern) 13%, transparent) 0%,
+        color-mix(in srgb, var(--lantern) 5%, transparent) 40%,
+        transparent 76%),
+    radial-gradient(112% 90% at 84% 86%,
+        color-mix(in srgb, var(--biolume-core) 10%, transparent) 0%,
+        color-mix(in srgb, var(--biolume-core) 4%, transparent) 38%,
+        transparent 72%),
+    linear-gradient(148deg,
+        color-mix(in srgb, var(--honey) 18%, var(--night-surface)) 0%,
+        var(--night-surface) 44%,
+        color-mix(in srgb, var(--creek) 16%, var(--night-bg)) 78%,
+        color-mix(in srgb, var(--sage) 13%, var(--night-bg)) 100%);
+
+/* Neon, two sources, the way a street actually looks.
+   Hong Kong retro signage is never one colour: warm sodium and amber stacked
+   against cold cyan and jade, bleeding into humid air. And this world's night
+   is overgrown — bioluminescent plants and fungal light colonising the built
+   thing — which means the cold half does not come from a lamp at all. It comes
+   from something alive.
+
+   That also answers the flattest measurement anyone has taken of this site:
+   the palette runs a hundred warm uses against twelve cool, with --creek at
+   seven and --sage at five, which is a monochrome wearing five tokens. A
+   living cold light is not a decorative accent here, it is the other half of
+   the lighting model, and it is the half that stops the night reading as brown
+   paper in the dark.
+
+   Warm is made: lanterns, signage, the lamp on Maeve's counter. Cold is grown:
+   sigils, spores, whatever is eating the sign. */
+--neon-warm: 0 0 12px color-mix(in srgb, var(--lantern) 62%, transparent),
+             0 0 34px color-mix(in srgb, var(--honey) 38%, transparent),
+             0 0 72px color-mix(in srgb, var(--honey) 16%, transparent);
+
+--neon-ink: 0 0 18px color-mix(in srgb, var(--lantern) 34%, transparent);
+
+/* The living half. Cooler, dimmer and further out than the made light — a
+   fungus does not out-shine a sign, it seeps around it. */
+--biolume: 0 0 10px color-mix(in srgb, var(--biolume-core) 52%, transparent),
+           0 0 30px color-mix(in srgb, var(--biolume-core) 28%, transparent),
+           0 0 66px color-mix(in srgb, var(--spore) 15%, transparent);
+
+--biolume-ink: 0 0 16px color-mix(in srgb, var(--biolume-core) 38%, transparent);
+
+}

@@ -1,0 +1,68 @@
+/* The rail. Section marks live here and nowhere else — that is the whole
+   job the runes have on this site now. */
+.chapter-head {
+    display: grid;
+    grid-template-columns: var(--rail) minmax(0, 1fr);
+    gap: 0 1.5rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* The rune sits in a struck brass disc — enough presence to read as a section
+   mark rather than a stray glyph. */
+.chapter-mark {
+    position: relative;
+    justify-self: start;
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: 0.15rem;
+    /* The membrane is drawn, not bordered — see styles/sigil.css. */
+    font-family: var(--font-rune);
+    font-size: 1.15rem;
+    line-height: 1;
+    color: var(--copper-ink);
+}
+
+.chapter-mark::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 0.7rem);
+    width: 1px;
+    height: 3rem;
+    background: linear-gradient(var(--day-rule), transparent);
+}
+
+.chapter-lead {
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--day-ink-soft);
+    max-width: 54ch;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+
+/* One right edge for the text column.
+   Measured at 1440px: chapter headings ran to 1310 while the prose beneath them
+   stopped at 790, so every section read as a wide title stepping down onto a
+   narrow column with ~650px of empty parchment beside it. The prose measure is
+   correct (64-75 characters) and must not be widened to close that gap, so the
+   headings come in to meet it instead. The margin then reads as an intentional
+   editorial margin rather than as a column that ran out. */
+.chapter-head h2,
+.chapter-head .chapter-lead {
+    max-width: 22ch;
+}
+
+.chapter-head .chapter-lead {
+    max-width: 62ch;
+}
+
+@media (min-width: 1100px) {
+    .chapter-head h2 {
+        max-width: 30ch;
+    }
+}
+
