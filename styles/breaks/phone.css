@@ -9,15 +9,6 @@
         font-size: 0.75rem;
     }
 
-    .turn-cli code {
-        white-space: pre-wrap;
-        overflow-wrap: anywhere;
-        /* Same hanging indent as the payload, so a wrapped command reads as
-           one command rather than two. */
-        padding-left: calc(0.7rem + 2ch);
-        text-indent: -2ch;
-    }
-
     .soul-economy {
         margin-left: 0;
     }
@@ -41,10 +32,6 @@
 
     .chapter-mark::after {
         display: none;
-    }
-
-    .ledger-mark {
-        margin-bottom: 0.9rem;
     }
 
     .ledger-fact {
@@ -99,21 +86,10 @@
     }
 
     .problem-grid,
-    .moat-grid,
     .team-grid,
     .business-grid,
-    .market-metrics,
     .footer-grid {
         grid-template-columns: minmax(0, 1fr);
-    }
-
-    .competition-table {
-        overflow-x: auto;
-    }
-
-    .comp-header,
-    .comp-row {
-        min-width: 30rem;
     }
 
     .deck-controls {

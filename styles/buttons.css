@@ -37,16 +37,6 @@
     box-shadow: 0 0 0 4px color-mix(in srgb, var(--honey) 32%, transparent);
 }
 
-.btn-secondary {
-    background: transparent;
-    border-color: var(--copper-ink);
-    color: var(--copper-ink);
-}
-
-.btn-secondary:hover {
-    background: color-mix(in srgb, var(--honey) 26%, transparent);
-}
-
 .btn-ghost {
     background: transparent;
     border-color: color-mix(in srgb, var(--honey) 55%, transparent);

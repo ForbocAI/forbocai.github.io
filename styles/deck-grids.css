@@ -1,12 +1,16 @@
 /* ------------------------------------------------- slide grids and lists -- */
 
-/* Every repeating block a slide is built from — the four grid families, the five
-   list families, the metric boxes, and the numbered step sequences. One file
-   because they share a measure, a gutter and a heading scale; change one and the
-   others have to move with it. */
+/* Every repeating block a slide is built from — the three grid families
+   (problem, business, team), the headings and phase labels inside them, and
+   the creative-value grid. One file because they share a measure, a gutter
+   and a heading scale; change one and the others have to move with it.
+
+   It held five list families, a metric box, two numbered step sequences and a
+   funds box as well, for slides the deck no longer has. Those rules matched
+   nothing and are gone; the dead-code guard (scripts/check_dead_code.py) is
+   what will say so next time. */
 
 .problem-grid,
-.moat-grid,
 .business-grid,
 .team-grid {
     display: grid;
@@ -17,7 +21,6 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
 }
 
-.moat-grid,
 .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
 }
@@ -27,7 +30,6 @@
 }
 
 .problem-column h3,
-.moat-item h4,
 .business-item h4,
 .team-member h4 {
     margin-bottom: 0.45rem;
@@ -37,72 +39,12 @@
     margin-bottom: 0.8rem;
 }
 
-.problem-list,
-.feature-list,
-.traction-list,
-.milestone-list,
-.funds-list {
-    display: grid;
-    gap: 0.6rem;
-}
-
-.problem-list li,
-.feature-list li,
-.traction-list li,
-.milestone-list li,
-.funds-list li {
-    position: relative;
-    padding-left: 1.4rem;
-    color: var(--day-ink-soft);
-    line-height: 1.5;
-}
-
-.problem-list li::before,
-.feature-list li::before,
-.milestone-list li::before,
-.funds-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.68em;
-    width: 8px;
-    height: 1px;
-    background: var(--copper);
-}
-
-.traction-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--sage);
-    font-weight: 700;
-}
-
-/* One of the four compounds; the slide should say so at a glance. */
-.moat-item-primary {
-    grid-column: 1 / -1;
-    border-top-width: 2px;
-    border-top-color: var(--copper);
-}
-
-.moat-item-primary h4 {
-    font-size: var(--step-2);
-}
-
-.moat-item-primary p {
-    font-size: var(--step-0) !important;
-    max-width: 68ch;
-}
-
-.moat-item,
 .business-item,
 .team-member {
     padding-top: 1rem;
     border-top: 1px solid var(--day-rule);
 }
 
-.moat-item p,
 .business-item p,
 .team-member p {
     font-size: var(--step--1);
@@ -110,138 +52,11 @@
     margin-bottom: 0;
 }
 
-.business-phase,
-.revenue-type {
+.business-phase {
     display: block;
     font-size: 0.8125rem;
     font-weight: 700;
     color: var(--copper-ink);
-}
-
-.revenue-type {
-    margin-top: 0.7rem;
-    color: var(--day-ink-faint);
-    font-weight: 500;
-    font-style: italic;
-}
-
-.market-metrics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
-    gap: clamp(1rem, 3vw, 2rem);
-    margin-bottom: 2rem;
-}
-
-.metric-box {
-    padding-top: 0.9rem;
-    border-top: 2px solid var(--copper);
-}
-
-.metric-value {
-    display: block;
-    font-family: var(--font-display);
-    font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.4rem);
-    font-weight: 700;
-    line-height: 1.05;
-    color: var(--day-ink);
-}
-
-.metric-label {
-    display: block;
-    margin-top: 0.3rem;
-    font-size: var(--step--1);
-    color: var(--day-ink-faint);
-    line-height: 1.35;
-}
-
-.gtm-steps {
-    display: grid;
-    gap: 1.1rem;
-    counter-reset: gtm;
-}
-
-.gtm-steps li {
-    display: grid;
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 0 1rem;
-    counter-increment: gtm;
-}
-
-.gtm-steps li::before {
-    content: counter(gtm, decimal-leading-zero);
-    font-family: var(--font-display);
-    font-size: var(--step-0);
-    font-weight: 700;
-    color: var(--copper-ink);
-    line-height: 1.5;
-}
-
-.gtm-content strong {
-    display: block;
-    font-family: var(--font-display);
-    font-size: var(--step-1);
-    font-weight: 600;
-    margin-bottom: 0.2rem;
-}
-
-.gtm-content p {
-    font-size: var(--step--1);
-    margin-bottom: 0;
-}
-
-.roadmap-steps {
-    display: grid;
-    gap: 1.35rem;
-    counter-reset: stage2;
-}
-
-/* Not a grid. As one, the ::before counter, the <strong> and the trailing text
-   node were three items in a two-column track, so the text landed in row 2 of
-   the 2.2rem column and set one word per line. Absolute marker, flowing text —
-   the same shape every other list on the deck uses. */
-.roadmap-steps li {
-    position: relative;
-    /* 115 characters on one line at this width; capped so the entries wrap at a
-       readable measure and the five of them fill the frame. */
-    max-width: 74ch;
-    padding-left: 3.2rem;
-    padding-bottom: 1.35rem;
-    color: var(--day-ink-soft);
-    line-height: 1.55;
-    counter-increment: stage2;
-    border-bottom: 1px solid var(--day-rule-soft);
-}
-
-.roadmap-steps li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.roadmap-steps li::before {
-    content: counter(stage2, decimal-leading-zero);
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-family: var(--font-display);
-    font-weight: 700;
-    line-height: 1.55;
-    color: var(--copper-ink);
-}
-
-.roadmap-steps strong {
-    color: var(--day-ink);
-}
-
-.use-of-funds {
-    margin: 1.75rem 0;
-    padding: 1.4rem 1.6rem;
-    border: 1px solid var(--day-rule);
-    border-radius: var(--radius);
-    background: color-mix(in srgb, var(--honey) 12%, transparent);
-}
-
-.use-of-funds h4 {
-    margin-bottom: 0.8rem;
 }
 
 /* Slide 10's four cards had no layout rule at all and stacked in block flow —

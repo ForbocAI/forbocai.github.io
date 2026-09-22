@@ -111,8 +111,7 @@
 }
 
 .turn-note code,
-.turn-refusal code,
-.turn-cli code {
+.turn-refusal code {
     font-family: var(--font-code);
     font-size: 0.9em;
     padding: 0.1em 0.35em;
@@ -132,25 +131,6 @@
     border-left: 2px solid var(--ember);
     color: var(--night-ink-soft);
     max-width: 68ch;
-}
-
-.turn-cli {
-    margin-top: 1.25rem;
-    font-size: var(--step--1);
-    color: var(--night-ink-faint);
-    max-width: 68ch;
-}
-
-/* A command broken across two lines with its chip sliced in half reads as a
-   glitch; give it its own line and let it scroll if it must. */
-.turn-cli code {
-    display: block;
-    width: fit-content;
-    max-width: 100%;
-    margin-top: 0.5rem;
-    padding: 0.4rem 0.7rem;
-    overflow-x: auto;
-    white-space: nowrap;
 }
 
 

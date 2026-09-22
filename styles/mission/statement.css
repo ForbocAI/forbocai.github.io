@@ -1,26 +1,5 @@
 /* --------------------------------------------------------------- mission -- */
 
-.mission-statement {
-    padding-left: calc(var(--rail) + 1.5rem);
-    max-width: 62ch;
-}
-
-.mission-lead {
-    font-size: clamp(1.4rem, 1.1rem + 1.3vw, 2rem);
-    font-family: var(--font-display);
-    font-weight: 500;
-    line-height: 1.28;
-    letter-spacing: -0.012em;
-    color: var(--day-ink);
-    margin-bottom: 1.2em;
-}
-
-.mission-statement p {
-    font-size: var(--step-1);
-    line-height: 1.55;
-    color: var(--day-ink-soft);
-}
-
 .mission-destination {
     margin-top: 1.4em;
     padding-top: 1.4em;
@@ -36,17 +15,6 @@
     line-height: 1.55;
     color: var(--day-ink-soft);
     max-width: 62ch;
-}
-
-/* The resolve: the page opens on one sentence and closes by returning to it. */
-.mission-resolve {
-    margin-top: clamp(2.5rem, 5vw, 3.5rem);
-    padding-left: calc(var(--rail) + 1.5rem);
-    font-family: var(--font-display);
-    font-size: var(--step-2);
-    line-height: 1.35;
-    color: var(--day-ink);
-    max-width: 44ch;
 }
 
 
@@ -80,9 +48,7 @@
 }
 
 @media (max-width: 620px) {
-    .mission-statement,
-    .mission-felt,
-    .mission-resolve {
+    .mission-felt {
         padding-left: 0;
     }
 }

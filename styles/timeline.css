@@ -81,31 +81,3 @@
     margin-bottom: 0.9rem;
 }
 
-.roadmap-list {
-    display: grid;
-    gap: 0.55rem;
-    max-width: 58ch;
-}
-
-.roadmap-list li {
-    position: relative;
-    padding-left: 1.3rem;
-    color: var(--night-ink-soft);
-    line-height: 1.5;
-}
-
-.roadmap-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.68em;
-    width: 7px;
-    height: 1px;
-    background: var(--night-ink-faint);
-}
-
-.is-done .roadmap-list li::before {
-    background: var(--sage);
-    width: 9px;
-}
-

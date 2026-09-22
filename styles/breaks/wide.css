@@ -19,8 +19,9 @@
     .timeline-content {
         display: grid;
         grid-template-columns: minmax(0, 19rem) minmax(0, 1fr);
-        /* The list spans both rows, so row 2 has to absorb the slack — otherwise
-           it is split between the rows and the title drifts off its status. */
+        /* Status on row 1 and the title on row 2, both in the left column;
+           the paragraph auto-places beside the title. Row 2 takes the slack
+           so the title stays on its status rather than drifting down. */
         grid-template-rows: auto 1fr;
         gap: 0 clamp(2rem, 4vw, 3.5rem);
         align-items: start;
@@ -33,12 +34,6 @@
 
     .timeline-content h3 {
         margin-bottom: 0;
-    }
-
-    .roadmap-list {
-        grid-column: 2;
-        grid-row: 1 / span 2;
-        max-width: none;
     }
 
     /* Auto-placed grid rows take the height of their tallest sibling, so a

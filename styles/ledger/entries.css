@@ -64,7 +64,6 @@
 /* The longest facts carry three movements. One rail still holds them together;
    the breaks exist so the argument can be put down and picked back up. */
 .ledger-fact p,
-.comp-note p,
 .team-note p,
 .ledger-note p {
     margin: 0;
@@ -72,30 +71,9 @@
 }
 
 .ledger-fact p + p,
-.comp-note p + p,
 .team-note p + p,
 .ledger-note p + p {
     margin-top: 0.9em;
-}
-
-/* The token assurance sits here, before the Souls section rather than inside it,
-   so a reader vetting for risk never has to enter the crypto material to learn
-   they can skip it. */
-.ledger-boundary {
-    margin-top: clamp(1.75rem, 3.5vw, 2.25rem);
-    margin-left: calc(var(--rail) + 1.5rem);
-    padding-left: 1.2rem;
-    border-left: 2px solid var(--copper);
-    font-size: var(--step--1);
-    line-height: 1.55;
-    color: var(--day-ink-soft);
-    max-width: 62ch;
-}
-
-@media (max-width: 900px) {
-    .ledger-boundary {
-        margin-left: 0;
-    }
 }
 
 /* The question a studio asks third, answered where they will find it. */

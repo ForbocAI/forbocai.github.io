@@ -1,33 +1,5 @@
 /* ----------------------------------------------------------- soul garden -- */
 
-/* The ledger again, in moss: gathering and restoring are two entries in one
-   protocol, and reusing the device says so without a new container. */
-.ledger-night {
-    border-top-color: var(--night-rule);
-}
-
-.ledger-night::before {
-    background: var(--night-rule);
-}
-
-.ledger-night .ledger-row {
-    border-bottom-color: var(--night-rule);
-}
-
-.ledger-night .ledger-row::before {
-    background: var(--night-bg);
-    box-shadow: 0 0 0 1px var(--honey);
-}
-
-.ledger-night .ledger-body p {
-    color: var(--night-ink-soft);
-}
-
-.ledger-night .ledger-fact {
-    color: var(--night-ink-faint);
-    border-left-color: color-mix(in srgb, var(--honey) 50%, transparent);
-}
-
 /* A technical director should not have to wonder whether buying the character
    layer means touching a token. */
 .soul-decouple {

@@ -49,10 +49,6 @@
         gap: 0.5rem 1.25rem;
     }
 
-    .hero-lead {
-        max-width: var(--measure-tight);
-    }
-
     .ledger-row {
         grid-template-columns: var(--rail) minmax(0, 1fr);
     }
@@ -64,10 +60,6 @@
 
     .ledger-body p {
         max-width: 52ch;
-    }
-
-    .soul-grid {
-        grid-template-columns: minmax(0, 1fr);
     }
 
     .footer-grid {
@@ -102,15 +94,8 @@
         --header-height: 66px;
     }
 
-    .business-grid,
-    .market-metrics {
+    .business-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .comp-header,
-    .comp-row {
-        grid-template-columns: minmax(0, 1.6fr) repeat(4, minmax(0, 1fr));
-        font-size: 0.8125rem;
     }
 }
 

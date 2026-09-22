@@ -37,16 +37,6 @@
     mask-image: radial-gradient(circle at 50% 50%, #000 42%, transparent 72%);
 }
 
-.title-slide .tagline {
-    font-family: var(--font-display);
-    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.6rem);
-    font-weight: 600;
-    line-height: 1.12;
-    letter-spacing: -0.018em;
-    max-width: 22ch;
-    margin: 0;
-}
-
 .title-slide .subtitle {
     font-size: var(--step-1);
     color: var(--day-ink-soft);

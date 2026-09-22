@@ -58,20 +58,6 @@
     pointer-events: none;
 }
 
-/* The hero's glimpse is the phone's stand-in for the memory panel. On desktop
-   the panel already sits beside the copy, so the scene would say the same
-   thing twice; on a phone the panel is most of a screen below the fold and the
-   reader should meet the world before the explanation of it. */
-.hero-maeve-glimpse {
-    display: none;
-}
-
-@media (max-width: 1000px) {
-    .hero-maeve-glimpse {
-        display: block;
-    }
-}
-
 /* The two chapters that carried the argument and no picture. Code occupied
    more of this page than imagery did — 6.1% against 4.2% — which is the exact
    inverse of how a game site is built, so these run wide rather than inset. */
