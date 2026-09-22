@@ -12,17 +12,17 @@ export const Servitor = () => `
     <section id="servitor" class="chapter chapter-day servitor">
         <div class="container">
             <div class="chapter-spread">
+            <figure class="maeve-scene servitor-scene">
+                    <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941" loading="lazy">
+                    <figcaption>Maeve does not search for the nearest line. She chooses who receives the letter.</figcaption>
+            </figure>
+
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛗ' })}
                 <div>
                     <h2>Meet The ForbocAI NPC LM Servitor™</h2>
                 </div>
             </header>
-
-            <figure class="maeve-scene servitor-scene">
-                    <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941" loading="lazy">
-                    <figcaption>Maeve does not search for the nearest line. She chooses who receives the letter.</figcaption>
-            </figure>
 
             <div class="chapter-body servitor-intelligence">
                     <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> A general model reads a persona as instructions to perform and performs itself through them — which is why a cast of a hundred sounds like one actor doing accents. Four hundred of your people can share this model without sharing a personality.</p>

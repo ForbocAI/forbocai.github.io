@@ -55,8 +55,14 @@ export const Vision = () => {
             </div>
 
             <div class="soul-crossing">
-                <p class="turn-label sigil-pair">${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 46, tone: 'honey' })} The night she arrives somewhere else</p>
-                <h3>A different studio's world reads her, and keeps its own counsel</h3>
+                <div class="chapter-spread">
+                <header class="chapter-head crossing-head">
+                    <div>
+                        <p class="turn-label sigil-pair">${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 46, tone: 'honey' })} The night she arrives somewhere else</p>
+                        <h3>A different studio's world reads her, and keeps its own counsel</h3>
+                    </div>
+                </header>
+                <div class="chapter-body">
                 <p class="soul-market">Two years later, a different studio, a different engine, a harbour town that has never heard of Lanternbough. The player brings her. The receiving world opens the record and decides what it is willing to know.</p>
                 ${Deeper({
                     summary: 'What the harbour town admitted, and what it refused',
@@ -83,6 +89,8 @@ export const Vision = () => {
   action: { type: 'refuse' },
 }</code></pre>
                 <p class="soul-market"><strong>No character born in that town could have reached that.</strong> She refused a harbour man for the sake of one this world would not admit — inside a law this studio wrote, in a scene neither studio staged. The record was never luggage. It is what she thinks with, and no studio on earth can sell you a character who was made somewhere else and still walked in.</p>
+                </div>
+                </div>
             </div>
 
             <aside class="soul-economy">

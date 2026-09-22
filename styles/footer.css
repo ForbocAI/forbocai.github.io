@@ -39,13 +39,15 @@
     top: calc(-12rem - 2px);
     height: calc(12rem + 4px);
     pointer-events: none;
+    /* Not the home page's sunset. That one has 26rem and a whole daylight
+       half to set from; here it was the same peach-clay-copper ramp squeezed
+       into 12rem under a beige deck card, and two reviews read it as "a rust
+       band from nowhere". An inner page goes to evening the short way: the
+       parchment it was on, a dim clay, then moss. */
     background: linear-gradient(180deg,
-        var(--dusk-0) 0%,
-        var(--dusk-1) 22%,
-        var(--dusk-2) 42%,
-        var(--dusk-3) 60%,
-        var(--dusk-4) 78%,
-        var(--dusk-5) 90%,
+        var(--day-5) 0%,
+        color-mix(in srgb, var(--dusk-3) 45%, var(--dusk-4)) 48%,
+        var(--dusk-5) 78%,
         var(--dusk-6) 100%);
 }
 

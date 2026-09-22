@@ -28,6 +28,50 @@
 
    From 1100px, the same threshold as the rest of the wide layout. Below it
    the wrappers are inert divs and the chapter stacks as it always did. */
+/* The figure opens the chapter on every shape, above the head, so the
+   chapter's anatomy does not depend on the viewport (a reviewer found the
+   image before the title on a desktop and after it on a tablet). */
+.chapter-spread > figure:first-child {
+    margin-top: 0;
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* The head is the title, and only the title. A lead paragraph left in the
+   margin column made the head taller than the body it stood beside —
+   #business and #souls had a three-line h2, a six-line lead and a body of
+   two paragraphs, so the measure column emptied out under them and the head
+   could never stick. The lead opens the body instead, level with the title. */
+.chapter-body > :first-child {
+    margin-top: 0;
+}
+
+.chapter-body > .chapter-lead {
+    margin-bottom: 1.1em;
+}
+
+/* Blocks that stood off the rail on their own, when they sat under a
+   spanning head, sit in the body now; the body carries the offset, once,
+   where there is a rail to stand off (below, and in the column above). */
+.chapter-body > .mission-felt {
+    padding-left: 0;
+}
+
+.chapter-body > .mission-turn,
+.chapter-body > .soul-decouple,
+.chapter-body > .soul-market {
+    margin-left: 0;
+}
+
+/* Stacked, between the phone and the wide layout, the body stands off the
+   rail like the head's own text does, so a chapter has one left edge. A
+   reviewer counted three per screen at 1024: the title at the rail, the
+   paragraphs at the gutter, a card at the rail again. */
+@media (min-width: 621px) and (max-width: 1099px) {
+    .chapter-body {
+        padding-left: calc(var(--rail) + 1.5rem);
+    }
+}
+
 @media (min-width: 1100px) {
     .chapter-spread {
         display: grid;
@@ -35,6 +79,12 @@
         column-gap: clamp(2.5rem, 5vw, 5rem);
         align-items: start;
         margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    /* When nothing follows the spread, the chapter's own padding is the
+       room; another 40px under the last line was counted as a void. */
+    .chapter-spread:last-child {
+        margin-bottom: 0;
     }
 
     .chapter-spread > .chapter-head {
@@ -47,6 +97,7 @@
     .chapter-spread > .chapter-body {
         grid-column: 2;
         min-width: 0;
+        padding-left: 0;
     }
 
     /* The lead figure opens the chapter, above both columns. */
@@ -60,32 +111,6 @@
     .chapter-spread:has(> figure) > .chapter-head,
     .chapter-spread:has(> figure) > .chapter-body {
         grid-row: 2;
-    }
-
-    /* The head is the title, and only the title. A lead paragraph left in
-       the margin column made the head taller than the body it stood beside
-       — #business and #souls had a three-line h2, a six-line lead and a
-       body of two paragraphs, so the measure column emptied out under them
-       and the head could never stick. The lead opens the body instead, at
-       the top of the measure, level with the title. */
-    .chapter-body > :first-child {
-        margin-top: 0;
-    }
-
-    .chapter-body > .chapter-lead {
-        margin-bottom: 1.1em;
-    }
-
-    /* Blocks that stood off the rail when they sat under a spanning head are
-       in the measure column now; the column is the offset. */
-    .chapter-body > .mission-felt {
-        padding-left: 0;
-    }
-
-    .chapter-body > .mission-turn,
-    .chapter-body > .soul-decouple,
-    .chapter-body > .soul-market {
-        margin-left: 0;
     }
 
     /* The title measures were set for a head spanning 1100px. In the margin

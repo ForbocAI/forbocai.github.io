@@ -52,6 +52,10 @@ body::before {
     pointer-events: none;
     opacity: 0.28;
     mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(../%23n)' opacity='0.34'/%3E%3C/svg%3E");
+    /* The filter reference is url(%23n) — the SVG's own #n. The stylesheet
+       split (0c2e079) rewrote it to url(../%23n) along with every asset path,
+       and with no filter to reach the rect rendered as flat black: the
+       "grain" was a 9% darkening of everything with no grain in it. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.34'/%3E%3C/svg%3E");
 }
 

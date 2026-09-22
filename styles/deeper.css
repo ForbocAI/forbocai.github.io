@@ -19,10 +19,17 @@
        thins away — fifteen of these were the largest population of uniform
        hairlines left on the page. */
     border-top: 1px solid transparent;
+    /* And a vein below, with room under it. With a rule above only, a closed
+       disclosure and the paragraph after it read as one thing: a chevron
+       with a paragraph "sitting directly beneath it — whether the panel is
+       open or closed cannot be read from the screen". Two rules make it a
+       drawer; the gap makes the paragraph the next thing, not the contents. */
+    border-bottom: 1px solid transparent;
     border-image: linear-gradient(90deg,
         var(--day-rule) 0%,
         color-mix(in srgb, var(--day-rule) 42%, transparent) 46%,
         transparent 92%) 1;
+    margin-bottom: 1.4rem;
 }
 
 .deeper summary {

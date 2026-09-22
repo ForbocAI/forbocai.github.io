@@ -169,6 +169,11 @@
     background: transparent;
     border-color: var(--day-rule-soft);
     color: var(--day-ink-faint);
+    /* The membrane glow stayed on, so a transparent pill still read as a
+       lit one: Back at 1/13 and Next at 13/13 looked exactly like their live
+       twins. An end is an end. */
+    box-shadow: none;
+    opacity: 0.55;
     pointer-events: none;
 }
 

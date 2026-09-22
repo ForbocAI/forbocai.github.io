@@ -80,6 +80,10 @@
         color-mix(in srgb, var(--honey) 52%, transparent));
 }
 
+/* One colour for both labels. The first cell's label ran creek and the
+   second's honey, to say cold-before and warm-after; two reviewers read a
+   blue label and a gold one as two themes, not two temperatures. The cells'
+   own grounds still lean cool and warm, which is as much as the eye needs. */
 .turn-counterfactual-pair article > span {
     display: block;
     margin-bottom: 0.75rem;
@@ -87,10 +91,6 @@
     font-weight: 700;
     line-height: 1.35;
     color: var(--honey);
-}
-
-.turn-counterfactual-pair article:first-child > span {
-    color: var(--creek);
 }
 
 .turn-counterfactual-pair .turn-note {

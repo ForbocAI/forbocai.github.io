@@ -7,7 +7,9 @@
 
 .hero {
     position: relative;
-    padding-top: clamp(0.7rem, 1.6vh, 2.1rem);
+    /* 1.6vh was 14px at 900: the memory card's top edge kissed the bar. The
+       fold gate holds the calls to action above 700px either way. */
+    padding-top: clamp(1.1rem, 2.6vh, 2.5rem);
     padding-bottom: clamp(1.5rem, 4vh, 4rem);
 }
 

@@ -21,6 +21,16 @@
         color-mix(in srgb, #11170f 84%, transparent);
 }
 
+/* At 1024 the gutter is 41px, so the frame's negative margin reached the
+   screen edge exactly and its rounded corners showed at the viewport edge:
+   a card clipped by the window, not a frame designed full-bleed. Below the
+   wide layout it stays inside the gutters. */
+@media (max-width: 1099px) {
+    .turn-counterfactual {
+        margin-inline: 0;
+    }
+}
+
 .turn-counterfactual .turn-counterfactual-head {
     max-width: 52ch;
     margin-inline: auto;
@@ -70,13 +80,13 @@
     color: var(--night-ink-faint);
 }
 
+/* The lit tokens are lantern in both cells. Blue strings on the left and
+   cream on the right read as two syntax themes side by side rather than as
+   the cold and warm halves of one light; the diff is which tokens are lit,
+   not what colour they are lit in. */
 .turn-counterfactual .turn-code b {
     font-weight: 400;
     color: var(--lantern);
-}
-
-.turn-counterfactual .turn-counterfactual-pair article:first-child .turn-code b {
-    color: var(--creek);
 }
 
 /* The stub connector read as a rendering artifact. Gone. */

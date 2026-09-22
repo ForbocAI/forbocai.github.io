@@ -13,11 +13,27 @@
    because it is an event; warm because the event is a sunset rather than a
    scene change.
 
-   Every chapter boundary, not a chosen few. */
+   Every chapter boundary, not a chosen few.
+
+   What two rounds of reviewers then said, four times over: the boundary was a
+   ruler. Each chapter's ground stopped at a straight edge — a colour step on
+   the day side, a colony cut clean through on the night side — with a 1300px
+   line laid along it, and "the page is a stack of rectangles with tinted
+   backgrounds". A ridge is not a ruler. So the seam now dissolves: the ground
+   above fades into its own base before the edge (::after, below), the ground
+   below opens with the colour it is leaving (--seam-from, in ground.css), and
+   the last of the light is a glint along the crown of the ridge, not a line
+   across the page. */
+.chapter {
+    --chapter-base: var(--night-bg);
+}
+
 .chapter + .chapter {
     position: relative;
 }
 
+/* The ground below, arriving: the colour it is leaving dissolves into its own
+   over the top of the band, and the lamplight catches along the seam. */
 .chapter + .chapter::before {
     content: '';
     position: absolute;
@@ -27,52 +43,52 @@
     height: clamp(3rem, 6vw, 5.5rem);
     pointer-events: none;
     z-index: 1;
+    /* The lamplight is an ellipse centred on the seam, so it needs no mask to
+       fade at the sides — and a mask here would also have cut the dissolve
+       layer under it, leaving the colour step standing at both screen edges
+       outside the masked middle. */
     background:
-        linear-gradient(180deg,
-            color-mix(in srgb, var(--lantern) 26%, transparent) 0%,
-            color-mix(in srgb, var(--honey) 11%, transparent) 22%,
-            transparent 100%);
-    mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+        radial-gradient(ellipse 64% 100% at 50% 0%,
+            color-mix(in srgb, var(--lantern) 22%, transparent) 0%,
+            color-mix(in srgb, var(--honey) 9%, transparent) 40%,
+            transparent 100%),
+        linear-gradient(180deg, var(--seam-from, transparent) 0%, transparent 100%);
+    /* The glint: the last of the light along the crown of the ridge. It rises
+       out of nothing past a quarter of the width, peaks at the centre and is
+       gone before three quarters. */
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(90deg,
+        transparent 22%,
+        color-mix(in srgb, var(--lantern) 34%, transparent) 38%,
+        color-mix(in srgb, var(--lantern) 70%, transparent) 50%,
+        color-mix(in srgb, var(--lantern) 34%, transparent) 62%,
+        transparent 78%) 1;
 }
 
-/* The seam itself: one bright line where the two grounds meet, dimming as it
-   runs outward. This is the last of the light, and it is the only hard edge on
-   the page.
+/* Into the night the glint cools, because what is catching the last light
+   down there is the growth rather than the sky. */
+.chapter-night + .chapter-night::before,
+.turn-band + .chapter::before,
+.chapter + .turn-band::before {
+    border-image: linear-gradient(90deg,
+        transparent 22%,
+        color-mix(in srgb, var(--creek) 30%, transparent) 38%,
+        color-mix(in srgb, var(--lantern) 52%, transparent) 50%,
+        color-mix(in srgb, var(--sage) 26%, transparent) 62%,
+        transparent 78%) 1;
+}
 
-   It ran to within 5% of both screen edges at 62% strength, and at 1440 that
-   is a 1300px ruled line: "full-bleed 1px rules on a plant-fills-its-pot
-   page", said one reviewer, and the other counted them. A ridge catches the
-   last light along its crown, not from edge to edge. Now it comes up out of
-   nothing past a quarter of the width, peaks at the centre and is gone again
-   before three quarters — a glint along the seam rather than a rule across
-   it. */
-.chapter + .chapter::after {
+/* The ground above, leaving: whatever the chapter grew on its ground — a
+   colony, a lamp pool, the day's moss — settles into the chapter's own base
+   colour before the seam, so nothing is cut through by the edge. */
+.chapter::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
-    height: 1px;
+    bottom: 0;
+    height: clamp(4rem, 8vw, 7rem);
     pointer-events: none;
-    z-index: 2;
-    background: linear-gradient(90deg,
-        transparent 22%,
-        color-mix(in srgb, var(--lantern) 40%, transparent) 38%,
-        color-mix(in srgb, var(--lantern) 78%, transparent) 50%,
-        color-mix(in srgb, var(--lantern) 40%, transparent) 62%,
-        transparent 78%);
+    z-index: 1;
+    background: linear-gradient(180deg, transparent, var(--chapter-base));
 }
-
-/* Into the night the horizon cools, because what is catching the last light
-   down there is the growth rather than the sky. */
-.chapter-night + .chapter-night::after,
-.turn-band + .chapter::after,
-.chapter + .turn-band::after {
-    background: linear-gradient(90deg,
-        transparent 22%,
-        color-mix(in srgb, var(--creek) 34%, transparent) 38%,
-        color-mix(in srgb, var(--lantern) 58%, transparent) 50%,
-        color-mix(in srgb, var(--sage) 30%, transparent) 62%,
-        transparent 78%);
-}
-

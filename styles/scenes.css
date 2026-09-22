@@ -84,3 +84,14 @@
     object-fit: cover;
     object-position: center 42%;
 }
+
+/* The turn's plate is the same painting the Servitor chapter opens with, and
+   a reader on a 900px screen met it whole twice inside three screens. The
+   turn is about one object in that painting — the sealed letter in her hand
+   — so the turn shows the detail: the frame closes in on the letter, the
+   hands and the lamp, the way a second shot in a film cuts closer to what
+   the first shot established. The figure's overflow does the cropping. */
+.turn-scene img {
+    transform: scale(1.8);
+    transform-origin: 63% 66%;
+}

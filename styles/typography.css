@@ -38,6 +38,11 @@ h4 {
 p {
     margin: 0 0 1.1em;
     max-width: var(--measure);
+    /* The last line of a paragraph is never a two-letter word. "…without
+       being able to change / it." and "…no non-player characters in / it."
+       stood on every wide shape; the browser can trade a slightly shorter
+       line above for a whole word below, and does. */
+    text-wrap: pretty;
 }
 
 p:last-child {

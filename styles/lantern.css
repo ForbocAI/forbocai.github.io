@@ -62,16 +62,27 @@
     top: 6%;
 }
 
-/* Anchored to the block it lights, the way the gate lamp anchors to the $FAI
-   card, rather than floating in the middle of the page. */
+/* Hung from the seam at the chapter's far right, where nothing stands. It
+   used to hang over the rail at the left, where its foot met the chapter's
+   own rune mark; the card it once anchored to is gone. */
 .lantern-investors {
-    left: calc(var(--gutter) + var(--rail) + 1.5rem);
-    top: -1.25rem;
+    right: 6%;
+    top: -2.5rem;
+}
+
+/* Below the wide layout the left margin is the rail's own 40px, and at 1024
+   the lamp at 4% landed exactly on the roadmap's chapter glyph — two marks
+   drawn on top of each other. It crosses to the right, where nothing stands. */
+@media (max-width: 1099px) {
+    .lantern-path {
+        left: auto;
+        right: 4%;
+    }
 }
 
 @media (max-width: 900px) {
     .lantern-path {
-        left: 2%;
+        right: 2%;
         --lantern-scale: 0.6;
     }
 
@@ -115,8 +126,18 @@
    was rendering it as an illustration of a lamp rather than as a lamp. */
 .chapter-night .lantern-body,
 .turn-band .lantern-body {
-    filter: drop-shadow(0 0 calc(10px * var(--lantern-scale, 1)) rgba(255, 243, 194, 0.7));
-    box-shadow: var(--neon-warm);
+    /* Drop-shadows, never box-shadow. The neon was a box-shadow on the SVG,
+       and a box-shadow follows the BOX: a 60x144px rectangle of light with
+       the lamp drawn inside it, which is exactly what two rounds of
+       reviewers meant by "boxed lanterns", "a thin rectangular frame",
+       "misplaced favicons". Measured: a rim 30 luminance points brighter
+       than the lamp's own surroundings, tracing the element's edges. A
+       filter's shadow follows the drawn shape, so the light comes off the
+       glass and the frame, not off a rectangle nobody drew. */
+    filter:
+        drop-shadow(0 0 calc(10px * var(--lantern-scale, 1)) rgba(255, 243, 194, 0.7))
+        drop-shadow(0 0 calc(26px * var(--lantern-scale, 1)) color-mix(in srgb, var(--honey) 38%, transparent))
+        drop-shadow(0 0 calc(60px * var(--lantern-scale, 1)) color-mix(in srgb, var(--honey) 16%, transparent));
 }
 
 .chapter-night .chapter-mark-rune,

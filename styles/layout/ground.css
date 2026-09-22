@@ -37,15 +37,24 @@
    the night ones do. A shorthand at specificity 1,0,0 is a quiet veto over
    longhands set anywhere else, and nothing about the descent needs it: each of
    these only ever sets a colour. */
+/* Each day chapter also names its own base (what its ground settles into
+   before the seam) and the colour it is leaving (what its seam opens with), so
+   the descent's three steps dissolve into one another instead of stepping.
+   See horizons.css. */
 #mission {
     background-color: var(--day-bg-deep);
+    --chapter-base: var(--day-bg-deep);
 }
 
 #servitor {
     background-color: color-mix(in srgb, var(--dusk-0) 55%, var(--day-bg-deep));
+    --chapter-base: color-mix(in srgb, var(--dusk-0) 55%, var(--day-bg-deep));
+    --seam-from: var(--day-bg-deep);
 }
 
 #technology {
     background-color: var(--dusk-0);
+    --chapter-base: var(--dusk-0);
+    --seam-from: color-mix(in srgb, var(--dusk-0) 55%, var(--day-bg-deep));
 }
 

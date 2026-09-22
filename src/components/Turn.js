@@ -15,6 +15,11 @@ export const Turn = () => {
     return `
     <section id="turn" class="chapter turn-band">
         <div class="container">
+            <figure class="maeve-scene turn-scene">
+                <img src="maeve-letter-scene.webp" alt="The sealed letter in Maeve's hand, close, across the Lanternbough counter." width="1672" height="941" loading="lazy">
+                <figcaption>The drawer is behind her. The question has already been asked.</figcaption>
+            </figure>
+
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛒ' })}
                 <div>
@@ -22,11 +27,6 @@ export const Turn = () => {
                     <p class="chapter-lead">Late, at the counter of the Lanternbough inn, with the thaw coming and her brother's letter in the drawer behind her. A player asks the question nobody wrote. Servitor™ gathers who Maeve has been, what now matters and what her world permits — then makes the choice only she could make.</p>
                 </div>
             </header>
-
-            <figure class="maeve-scene turn-scene">
-                <img src="maeve-letter-scene.webp" alt="Maeve holds her brother's sealed letter across the Lanternbough counter." width="1672" height="941" loading="lazy">
-                <figcaption>The drawer is behind her. The question has already been asked.</figcaption>
-            </figure>
 
             <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">Read the whole turn, line by line</a></p>
 

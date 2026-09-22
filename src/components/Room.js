@@ -109,20 +109,20 @@ export const RoomTeaser = () => `
     <section id="room" class="chapter turn-band">
         <div class="container">
             <div class="chapter-spread">
-            <header class="chapter-head">
-                ${ChapterMark({ rune: 'ᛖ' })}
-                <div>
-                    <h2>The rest of the room was listening</h2>
-                    <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
-                </div>
-            </header>
-
             <figure class="maeve-scene room-scene">
                 <img src="living-cast-scene.webp" alt="Maeve and the living cast of Lanternbough after the storm." width="1672" height="941" loading="lazy">
                 <figcaption>Everyone in the room has something at stake in what she just said.</figcaption>
             </figure>
 
+            <header class="chapter-head">
+                ${ChapterMark({ rune: 'ᛖ' })}
+                <div>
+                    <h2>The rest of the room was listening</h2>
+                </div>
+            </header>
+
             <div class="chapter-body">
+            <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
             <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt she did not know about. Two people is every pair; five is every combination of five in every order; a raid is that with a boss in the middle.</p>
 
             <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">Watch the whole room decide</a></p>

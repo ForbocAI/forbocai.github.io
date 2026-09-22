@@ -11,7 +11,6 @@
         padding-left: calc(var(--gutter) + var(--rail) + 1.5rem);
     }
 
-    .investors-body,
     .investors-section .hero-buttons {
         padding-left: calc(var(--rail) + 1.5rem);
     }
@@ -36,21 +35,10 @@
         margin-bottom: 0;
     }
 
-    /* Auto-placed grid rows take the height of their tallest sibling, so a
-       three-line paragraph beside a seventeen-line one opened a 270px void
-       that every reader read as a rendering fault. Column flow cannot make
-       one. */
-    .investors-body {
-        display: block;
-        columns: 2;
-        column-gap: clamp(2rem, 4vw, 3.5rem);
-        max-width: none;
-    }
-
-    .investors-body p {
-        max-width: none;
-        margin-bottom: 1.1em;
-        break-inside: avoid;
-    }
+    /* The investors' body ran in two CSS columns here, with the portal
+       landing in the second and 420px of empty moss under it. It is a
+       side-head chapter now (side-head.css): one measure beside a sticky
+       title, and the portal stands on its own below, a window at the end
+       of the path rather than a picture stuck in a column. */
 }
 
