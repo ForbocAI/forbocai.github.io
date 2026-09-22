@@ -19,6 +19,13 @@
    L=0.09-0.11 and cost up to 4.4 contrast points, putting two runs under AA —
    light where the reading is, which is the one place overgrowth should not be.
 
+   The placement must land inside the SHORTEST chapter on the page, and that
+   number moves. It was 572px when these were set, so cores at 401-560px down
+   their tile were inside every section. #business is 385px now, and its core
+   fell past its own bottom edge: nighthue.mjs measured it at 0.18% saturated
+   cold — no second source at all — while every other night chapter ran 2-4.5%.
+   Re-derived against 385: every core now lands within 300px of a section's top.
+
    Variation is in the tile's own height and the position WITHIN it, never in a
    negative offset. An offset shifts the whole sequence out of the section: at
    -520px with a 1180px tile, #roadmap — 841px tall — had its colony land at
@@ -49,7 +56,15 @@
         transparent 0%, #000 9%, #000 91%, transparent 100%);
     background-repeat: repeat-y, repeat-y;
     background-size: 100% var(--lamp-span, 1180px), 100% var(--colony-span, 1400px);
-    /* TWO sources, and the warm one is the KEY.
+    /* Damped, now that the ground itself descends.
+       These alphas were set when the night was one flat fill and the lighting
+       was the only thing varying it, so they had to carry the whole of the
+       night's variety. With the ramp doing the descending, the same swing
+       became weather loud enough to reverse it: a reviewer measured the ninth
+       chapter at L62 against the eighth at L34 and read it as the page
+       climbing back toward daylight one chapter before the end.
+
+       TWO sources, and the warm one is the KEY.
 
        The night had only the cold half at chapter level, so the grown light
        out-shone the made light and the brightest 8% of every night chapter
@@ -58,18 +73,25 @@
        the dark, which is the difference between an inn at night and a lit
        specimen.
 
+       The lamp sits INSIDE the container, not on the page's edge. At 0% and
+       100% its pool spilled into the outer gutter, which is both the place a
+       reader sees bare ground and the column the descent is measured in — so
+       the two chapters whose variant puts the lamp on the left read 6 levels
+       brighter than their neighbours and the fall appeared to reverse. A lamp
+       in a room is not against the outside wall.
+
        The lantern pool is brighter and tighter than the colony, and sits
        opposite it: a lamp is a source, a colony is a seep. On the screen's
        edge, because with the body at the measure beside a side head a pool
        centred at 88% sat under the last words of every line. */
     background-image:
         radial-gradient(520px 440px at var(--lamp-x) var(--lamp-ty),
-            color-mix(in srgb, var(--lantern) 40%, transparent) 0%,
-            color-mix(in srgb, var(--honey) 17%, transparent) 38%,
+            color-mix(in srgb, var(--lantern) 29%, transparent) 0%,
+            color-mix(in srgb, var(--honey) 12%, transparent) 38%,
             transparent 68%),
         radial-gradient(640px 540px at var(--colony-x) var(--colony-ty),
-            color-mix(in srgb, var(--colony-hue) 16%, transparent) 0%,
-            color-mix(in srgb, var(--colony-hue) 6%, transparent) 42%,
+            color-mix(in srgb, var(--colony-deep) 74%, transparent) 0%,
+            color-mix(in srgb, var(--colony-deep) 34%, transparent) 42%,
             transparent 70%);
 }
 
@@ -78,20 +100,41 @@
    anything they inherit. */
 .nightfall .chapter {
     --colony-hue: var(--biolume-core);
+    /* The colony tints rather than lights.
+       Damping its alpha to stop it reversing the descent took its hue out with
+       its brightness, and nighthue.mjs caught a chapter left with no second
+       source at all — which is the monoculture the two-source model exists to
+       cure. So it is the hue, carried on a body dark enough not to lift the
+       ground: saturation without luminance, which is what the DAY colonies
+       already do one paragraph down ("on parchment overgrowth is not light, it
+       is SHADE"). Cold light on a forest floor is a colour, not a lamp.
+
+       Named, not mixed. Two goes at deriving this from --colony-hue failed in
+       opposite directions: an srgb mix toward near-black dragged chroma down
+       with lightness and left a chapter at 0.18% saturated cold, and an oklab
+       mix kept the chroma but needed an alpha that lifted the ground again.
+       These are chosen AT the night's own luminance — #0b2b26 measures 35.8
+       and the ground it sits on measures about 40 — with the saturation a
+       reading of "cold light" needs. A colony that neither brightens nor dulls
+       the floor it grows on can be as loud as it likes. */
+    --colony-deep: #0b2b26;
     --colony-x: 0%;
     --colony-span: 1400px;
-    --colony-ty: 40%;
-    --lamp-x: 100%;
+    --colony-ty: 21%;
+    --lamp-x: 94%;
     --lamp-ty: 22%;
     --lamp-span: 1180px;
 }
 
 .nightfall .chapter:nth-of-type(3n+2) {
     --colony-hue: var(--spore);
+    /* Spore violet at the same luminance as the cyan above it, so the rarer
+       colony is a different COLOUR and not a brighter patch. */
+    --colony-deep: #2a1f47;
     --colony-x: 100%;
     --colony-span: 1750px;
-    --colony-ty: 30%;
-    --lamp-x: 0%;
+    --colony-ty: 17%;
+    --lamp-x: 6%;
     --lamp-ty: 62%;
     --lamp-span: 1460px;
 }
@@ -99,8 +142,8 @@
 .nightfall .chapter:nth-of-type(3n) {
     --colony-x: 0%;
     --colony-span: 1180px;
-    --colony-ty: 34%;
-    --lamp-x: 100%;
+    --colony-ty: 25%;
+    --lamp-x: 94%;
     --lamp-ty: 74%;
     --lamp-span: 1330px;
 }

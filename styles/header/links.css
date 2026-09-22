@@ -1,0 +1,24 @@
+/* ---------------------------------------------------------------- header --
+   the links — the nav items themselves */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-left: auto;
+}
+
+.nav-btn {
+    padding: 0.45rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--step--1);
+    font-weight: 500;
+    color: var(--day-ink-soft);
+    text-decoration: none;
+    transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.nav-btn:hover {
+    background: color-mix(in srgb, var(--honey) 32%, transparent);
+    color: var(--day-ink);
+}

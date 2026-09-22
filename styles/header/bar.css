@@ -1,0 +1,103 @@
+/* ---------------------------------------------------------------- header --
+   the bar — the sticky ground it wears, and the band that dissolves the page under it */
+
+/* ---------------------------------------------------------------- header -- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    background: var(--day-bg);
+    /* Soft, because a hard 1px rule across running text IS a strikethrough.
+       The fade band below and the reading vein along this edge both say where
+       the bar ends, so the line no longer has to, and a reviewer counted the
+       cost of it saying so: "the top third of every glyph cut off by a rule
+       running the full width", on every scrolled shot. */
+    border-bottom: 1px solid color-mix(in srgb, var(--day-rule-soft) 35%, transparent);
+    /* The crossing at the horizon is a transition, not a resting state; the
+       rest of the descent is tracked continuously by main.js. */
+    transition: background-color 0.35s var(--ease), border-color 0.35s var(--ease),
+        color 0.35s var(--ease);
+}
+
+/* Under the bar, the page does not stop — it dissolves.
+   A reviewer counted nine screens where the header's straight edge cut a line
+   of running text through its x-height: a caption reading "Everyone in the
+   room has something at stake" with the tops of the glyphs eaten and the
+   bottoms hanging beneath the rule. An opaque bar over a scrolling page
+   always does this, and nothing about the scroll can be changed. What can be
+   changed is the edge. Light does not end at a line, and neither does a leaf:
+   a short band of the header's own ground, faded out, turns a severed line
+   into one passing behind mist.
+
+   background-color: inherit, because the ground is set on the element by
+   headerTone.js as the descent runs, so there is no token to name here — the
+   band takes whatever the bar is wearing at that scroll position, night or
+   day, without a second interpolation to keep in step. */
+.site-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: clamp(12px, 2vw, 22px);
+    pointer-events: none;
+    background-color: inherit;
+    /* Eased, not linear, and this is the whole difference between a veil and a
+       stain. A linear ramp is at half opacity across the middle of the band,
+       which is where a colour wash MIXES hardest — and the band wears the
+       header's ground, so at the turn, where the night green sits over the
+       chapter's rust-lit illustration, a reviewer measured the blend landing
+       on RGB(92,69,86) and named it exactly: "purple appears nowhere in this
+       palette". Green over rust at 50% is mauve; there is no palette in which
+       it is not. Front-loading the opacity puts the veil where the cut is and
+       clears it before it can tint anything. */
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.6) 18%,
+        rgba(0, 0, 0, 0.28) 42%, rgba(0, 0, 0, 0.09) 68%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.6) 18%,
+        rgba(0, 0, 0, 0.28) 42%, rgba(0, 0, 0, 0.09) 68%, transparent 100%);
+}
+
+/* The drawer opens exactly where the band falls, and the header's stacking
+   context sits above it, so the band would veil the first link in it. */
+.site-header:has(+ .mobile-nav.active)::after {
+    display: none;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.site-header.is-night .nav-btn[aria-current]::after {
+    background: linear-gradient(90deg,
+        transparent,
+        var(--lantern) 16%,
+        var(--lantern) 84%,
+        transparent);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--lantern) 55%, transparent);
+}
+
+.site-header.is-night .nav-btn[data-passed]::after {
+    background: color-mix(in srgb, var(--night-rule) 55%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .read-vein {
+        transition: transform 0.12s linear;
+    }
+}
+
+/* On a phone the bar is a logo and a hamburger, which is exactly where the
+   absence was worst — twenty-five screenshots with no position feedback at
+   all. It sits between them. */
+@media (max-width: 900px) {
+    .read-count {
+        margin-left: auto;
+        margin-right: 0.85rem;
+    }
+}

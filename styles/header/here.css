@@ -1,0 +1,137 @@
+/* ---------------------------------------------------------------- header --
+   where you are — the lamp, the spent rule, the reading vein and the chapter count */
+
+/* Where you are. Ten chapters and no current-section state anywhere — both
+   reviewers found the same absence. A lamp under the label rather than a
+   filled tab: the mark is light, like everything else that says "here" on
+   this page, and it is the one nav element that moves. */
+.nav-btn[aria-current] {
+    position: relative;
+    color: var(--day-ink);
+}
+
+.nav-btn[aria-current]::after {
+    content: '';
+    position: absolute;
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 0.15rem;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg,
+        transparent,
+        var(--copper) 16%,
+        var(--copper) 84%,
+        transparent);
+}
+
+.site-header.is-night .nav-btn[aria-current] {
+    color: var(--night-ink);
+}
+
+/* The drawer says it too. */
+.mobile-nav-link[aria-current] {
+    color: var(--lantern);
+}
+
+
+
+/* The lamp out-reads the spent rule, which is the whole point of having two.
+   Measured the other way round: "the current lamp is at intensity 38 while two
+   passed rules sit at 60-80 — the signal is literally backwards", on the two
+   chapters where it mattered most. The lamp's gradient was transparent across
+   its outer 30% at each end, so most of its length was faint, while the spent
+   rule was a solid 85%. The lamp now carries colour across 84% of its width
+   and the spent rule is halved.
+
+   Passed, not here.
+   Seven items name ten chapters. A single lit state had to answer for the
+   three it does not name, and it answered by lying: two reviewers
+   independently found "chapters 5/6/7 all show One choice" and "chapters
+   8/9/10 all show Horizons", and both concluded the nav was decoration. The
+   lamp now means you are in this chapter and nothing else; a chapter behind
+   you wears a spent rule, which stays true whichever unnamed chapter you are
+   standing in. */
+.nav-btn[data-passed] {
+    /* Positioned, and the mark is taken out of flow, for the same reason the
+       lamp above is: a block pseudo-element inside the anchor grows the bar
+       every time a chapter is passed, so the whole nav would step down the
+       first time a reader scrolled. */
+    position: relative;
+    color: var(--day-ink);
+}
+
+.nav-btn[data-passed]::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 34%;
+    transform: translateX(-50%);
+    bottom: 0.15rem;
+    height: 1px;
+    border-radius: 1px;
+    background: color-mix(in srgb, var(--day-rule) 45%, transparent);
+}
+
+.site-header.is-night .nav-btn[data-passed] {
+    color: var(--night-ink);
+}
+
+/* How far down the descent you are, on every shape including the one with no
+   room for a word. The phone has a logo and a hamburger and, across fifty
+   screenshots over two rounds, never once said where the reader was.
+
+   A vein along the header's own edge rather than a progress bar: this page is
+   drawn in venation everywhere else, and a 2px rule that fills is the same
+   idea the chapter stems are. It rides the header's bottom border, so it costs
+   no height on a phone. */
+.read-vein {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    transform: scaleX(var(--read, 0));
+    transform-origin: left center;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--copper) 55%, transparent),
+        var(--copper) 62%,
+        var(--copper-ink));
+}
+
+
+/* Which chapter, of how many.
+   The lamp can only speak for a chapter the bar names, and four consecutive
+   chapters have no anchor — so on the darkest 40% of the essay both reviewers
+   found the header saying nothing twice running: "you have passed everything
+   and you are nowhere", "I stopped looking at the header after chapter 7
+   because it stopped changing."
+
+   A count cannot be wrong about an unnamed chapter, and it is the one device
+   on this site both reviewers already called legible where it appears — the
+   deck's own "1 / 13". Tabular figures so the number does not jostle the
+   logo every time it turns over. */
+.read-count {
+    margin: 0 0 0 1rem;
+    align-self: center;
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+    color: var(--day-ink-faint);
+    white-space: nowrap;
+    /* Empty above the first chapter and on the routes, and an empty box must
+       not leave a gap where a reader reads one. */
+    min-width: 0;
+}
+
+.read-count:empty,
+.read-count:has(.read-at:empty) {
+    margin-left: 0;
+}
+
+.read-at {
+    color: var(--day-ink);
+}

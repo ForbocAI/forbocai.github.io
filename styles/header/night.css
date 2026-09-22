@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------------- header --
+   nightfall — what the whole bar becomes once the page has crossed */
+
+/* Nightfall: the header follows the page down rather than sitting on it as a
+   lit bar. Toggled from main.js when a dark region passes under the header. */
+.site-header.is-night {
+    border-bottom-color: color-mix(in srgb, var(--night-rule) 40%, transparent);
+}
+
+.is-night .logo-icon {
+    background-color: var(--honey);
+}
+
+.is-night .logo-word {
+    color: var(--night-ink);
+}
+
+.is-night .nav-btn {
+    color: var(--night-ink-soft);
+}
+
+.is-night .nav-btn:hover {
+    background: color-mix(in srgb, var(--honey) 16%, transparent);
+    color: var(--lantern);
+}
+
+.site-header.is-night .nav-cta {
+    border-color: color-mix(in srgb, var(--honey) 55%, transparent);
+    color: var(--lantern);
+}
+
+.site-header.is-night .nav-cta:hover {
+    background: color-mix(in srgb, var(--honey) 16%, transparent);
+    border-color: var(--lantern);
+}
+
+.is-night .mobile-menu-toggle {
+    border-color: var(--night-rule);
+}
+
+.is-night .mobile-menu-toggle span {
+    background: var(--night-ink);
+}
+
+.is-night :focus-visible {
+    outline-color: var(--lantern);
+}
+
+.site-header.is-night .read-vein {
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--creek) 55%, transparent),
+        var(--honey) 62%,
+        var(--lantern));
+}
+
+.site-header.is-night .read-count {
+    color: var(--night-ink-soft);
+}
+
+.site-header.is-night .read-at {
+    color: var(--lantern);
+}

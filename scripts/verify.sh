@@ -15,6 +15,9 @@
 #   type               body copy running past the measure
 #   leadwidth          a paragraph capped far below the column it sits in
 #   navcurrent         a chapter that does not mark its own nav link
+#   readcount          a chapter the header cannot name by number
+#   stickyoverlap      a pinned chapter title riding over the body beside it
+#   stemtouch          the drawn margin sitting on a word instead of behind it
 #   deckfold           a slide that runs past the window or hides its words
 #   descent-gate       a night that stops descending, or climbs back out of itself
 #   sidehead           a side head that stopped sticking, or a bare margin
@@ -22,7 +25,7 @@
 #   errors             anything the page throws in a real browser
 #
 # The browser checks need the measurement tools in .dream-loop and a server on
-# 8899; they are skipped with a notice when either is missing, so this stays
+# 8777 — the port every probe in .dream-loop asks for; they are skipped with a notice when either is missing, so this stays
 # runnable from a clean clone.
 #
 #   scripts/verify.sh
@@ -54,12 +57,12 @@ fi
 
 if [ -d .dream-loop ] && command -v node >/dev/null; then
   server=""
-  if ! curl -sf -o /dev/null http://localhost:8899/ 2>/dev/null; then
-    python3 -m http.server 8899 >/dev/null 2>&1 &
+  if ! curl -sf -o /dev/null http://localhost:8777/ 2>/dev/null; then
+    python3 -m http.server 8777 >/dev/null 2>&1 &
     server=$!
     sleep 2
   fi
-  for check in layout contrast type leadwidth navcurrent sidehead deckfold descent-gate gates errors; do
+  for check in layout contrast type leadwidth navcurrent readcount stickyoverlap stemtouch sidehead deckfold descent-gate gates errors; do
     [ -f ".dream-loop/$check.mjs" ] && run "$check" node ".dream-loop/$check.mjs"
   done
   [ -n "$server" ] && kill "$server" 2>/dev/null

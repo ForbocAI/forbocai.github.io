@@ -32,6 +32,38 @@ const veinFor = () => {
     return vein;
 };
 
+/* The chapter a reader is actually in, out of how many there are.
+   Every .chapter counts, not only the ones the bar happens to name, which is
+   the whole point: the four chapters with no nav anchor are exactly the ones
+   that had no answer. Measured against the reading band rather than the top of
+   the window, so it turns over where a reader would say it does. */
+const countFor = () => {
+    const at = document.querySelector('.read-at');
+    const of = document.querySelector('.read-of');
+    if (!at || !of) return null;
+    const chapters = [...document.querySelectorAll('main section.chapter')];
+    return { at, of, chapters };
+};
+
+const drawCount = (c) => {
+    if (!c) return;
+    if (!c.chapters.length) {
+        c.at.textContent = '';
+        c.of.textContent = '';
+        return;
+    }
+    const line = window.innerHeight * 0.34;
+    let i = -1;
+    c.chapters.forEach((sec, n) => {
+        if (sec.getBoundingClientRect().top <= line) i = n;
+    });
+    // Above the first chapter — the hero — there is no chapter to be in, and
+    // saying "01" there would be the same kind of lie the lamp used to tell.
+    const pad = (n) => String(n).padStart(2, '0');
+    c.at.textContent = i < 0 ? '' : pad(i + 1);
+    c.of.textContent = i < 0 ? '' : ` / ${pad(c.chapters.length)}`;
+};
+
 const drawVein = (vein) => {
     if (!vein) return;
     const doc = document.documentElement;
@@ -70,7 +102,11 @@ export const setupNavCurrent = () => {
         // nothing for the observer to do — but the descent is still being
         // travelled, so the vein still has to be drawn and kept.
         const routeVein = veinFor();
+        const routeCount = countFor();
         drawVein(routeVein);
+        // A route is not a chapter of the essay, so the count says nothing
+        // rather than counting the deck's own sections as chapters.
+        if (routeCount) { routeCount.at.textContent = ''; routeCount.of.textContent = ''; }
         navScroll = () => drawVein(routeVein);
         window.addEventListener('scroll', navScroll, { passive: true });
         return;
@@ -104,6 +140,7 @@ export const setupNavCurrent = () => {
     // is true whatever unnamed chapter you are standing in, and leaves the bar
     // never dead and never lying.
     const vein = veinFor();
+    const count = countFor();
     const visible = new Set();
     // Ordered by where they actually are on the page, not by offsetTop.
     // offsetTop is measured against each element's own offset parent, and these
@@ -131,6 +168,7 @@ export const setupNavCurrent = () => {
         if (current) linksFor.get(current).forEach((a) => a.setAttribute('aria-current', 'true'));
 
         drawVein(vein);
+        drawCount(count);
     };
 
     // The observer only fires when a section CROSSES the reading band, while

@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------------- header --
+   the mark — the logo and its two states */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    /* The night state already fills this mark with honey and reads soft; the
+       day state filled it with near-black, which made a dense runic disc the
+       hardest element on a warm parchment page. Bark copper is the palette's
+       own answer and keeps the mark warm in both states. */
+    background-color: var(--copper);
+    /* ../../ — this sheet moved a directory deeper when header.css was split,
+       and a relative url() is resolved against the STYLESHEET, not the page.
+       The deck split broke a filter reference the same way and nobody noticed
+       for weeks; .dream-loop/errors.mjs caught this one the same hour, which
+       is the entire reason it was taught to exit non-zero. */
+    -webkit-mask: url('../../logo.png') no-repeat center / contain;
+    mask: url('../../logo.png') no-repeat center / contain;
+    transition: background-color 0.3s var(--ease);
+}
+
+.logo-word {
+    font-family: var(--font-mark);
+    font-size: 1.0625rem;
+    letter-spacing: 0.01em;
+    color: var(--day-ink);
+    padding-top: 0.15em;
+}

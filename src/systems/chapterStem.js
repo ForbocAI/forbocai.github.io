@@ -100,17 +100,21 @@ const growOne = (spread) => {
             const y = el.getBoundingClientRect().top - spreadBox.top;
             return y > 12 && y < height - 12;
         }),
-        // Every drawn group with the height it was drawn at, so the shading
-        // pass below does not have to measure SVG geometry on every scroll.
-        // Each list is paired with the array it was drawn from. A single
-        // querySelectorAll over both classes returns document order — every
-        // branchlet, then every branch — which is not the order of a combined
-        // sorted list, so pairing by index across the two would have shaded
-        // whichever part happened to land at that index.
-        parts: [
-            ...[...stem.querySelectorAll('.stem-minor')].map((el, i) => ({ el, y: minors[i] })),
-            ...[...stem.querySelectorAll('.stem-branch')].map((el, i) => ({ el, y: nodes[i] })),
-        ].filter((q) => Number.isFinite(q.y)),
+        // Every drawn group with the extent it actually OCCUPIES, measured
+        // once from the SVG rather than taken from the height it grew at.
+        //
+        // Shading by the origin y was not enough and a reviewer found where:
+        // "a leaf lands on the word 'in'", "a blade lying across 'one i'",
+        // on the 1024 and 1440x700 shapes while 1440x900 was clean. A branch
+        // rises or falls by up to 56px from its node and then ends in a leaf
+        // up to 26px long, so its drawn shape reaches some 80px away from the
+        // point it was filed under — far enough to be inside a head that the
+        // origin sat clear of. getBBox gives the shape, which is the thing
+        // that can touch a word.
+        parts: [...stem.querySelectorAll('.stem-branch, .stem-minor')].map((el) => {
+            const box = el.getBBox();
+            return { el, top: box.y, bottom: box.y + box.height };
+        }),
     };
 };
 
@@ -168,8 +172,10 @@ const shade = (grown) => {
             const hb = head.getBoundingClientRect();
             const top = hb.top - sb.top - 10;
             const bottom = hb.bottom - sb.top + 10;
-            parts.forEach(({ el, y }) => {
-                el.classList.toggle('is-shaded', y >= top && y <= bottom);
+            parts.forEach(({ el, top: t, bottom: bt }) => {
+                // Overlap, not containment: a branch that merely reaches into
+                // the head is the one that crosses a line of it.
+                el.classList.toggle('is-shaded', bt >= top && t <= bottom);
             });
         });
     });

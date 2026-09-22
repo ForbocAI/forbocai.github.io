@@ -4,8 +4,15 @@
  */
 const LINKS = [
     { href: '#servitor', label: 'Servitor™', internal: true },
-    { href: '#turn', label: 'One choice', internal: true },
+    /* In PAGE order. #technology comes before #turn in the document, and the
+       bar listed them the other way round, so as a reader scrolled forward the
+       lamp moved LEFT and a chapter already behind them sat to the right of the
+       one they were in. A reviewer read it as the nav contradicting itself:
+       "the lamp goes Living worlds, One choice, Living worlds while I scroll
+       forward. Navigation moving backwards." Passed-and-current only mean
+       anything against a bar that runs the way the page does. */
     { href: '#technology', label: 'Living worlds', internal: true },
+    { href: '#turn', label: 'One choice', internal: true },
     { href: '#roadmap', label: 'Horizons', internal: true },
     { href: 'https://docs.forboc.ai', label: 'Docs', internal: false },
     { href: '#whitepaper', label: 'Whitepaper', internal: true },
@@ -25,6 +32,20 @@ export const Header = () => {
                     <span class="logo-icon" aria-hidden="true"></span>
                     <span class="logo-word">ForbocAI</span>
                 </a>
+                <!-- Which chapter of how many. Seven nav items name ten
+                     chapters, so four consecutive chapters — 40% of the essay,
+                     and the darkest, most disorienting stretch of it — could
+                     never light a lamp whatever the marking rules were. Both
+                     reviewers led on it twice: "the navigation says you have
+                     passed everything and you are nowhere", "I stopped looking
+                     at the header after chapter 7 because it stopped
+                     changing."
+                     A count answers for every chapter, named or not, and on
+                     every shape including the one with no room for a word. It
+                     is also the device both reviewers already singled out as
+                     working elsewhere on this site — "1 / 13 instantly legible
+                     as a deck". src/systems/navCurrent.js fills it. -->
+                <p class="read-count" aria-live="polite"><span class="read-at"></span><span class="read-of"></span></p>
                 <div class="nav-links">
                     ${LINKS.map((l) => link(l, 'nav-btn')).join('')}
                 </div>
