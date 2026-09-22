@@ -53,6 +53,23 @@ RULES = [
         "List Unity and Godot as roadmap or marketplace listings, not as shipped.",
     ),
     (
+        # classified/docs/business/brochure-commercial-claim-authority.md, §11:
+        # the Account repository configures Initiate / Operative / Architect at
+        # free / $49 / $299 a month, and that anchor is "Conditional; not
+        # brochure-safe until the commercial contract is reconciled and the
+        # live checkout is verified". The business chapter publishes the
+        # position instead — the price arrives with the release contract — and
+        # that position is worth exactly nothing if a number leaks onto the page
+        # ahead of the founder decision and the checkout verification the
+        # authority requires. This is the check that notices.
+        "unapproved public price",
+        re.compile(r"\$\s?\d[\d,.]*\s*(?:/|per\s+)\s*(?:mo\b|month)|"
+                   r"\b(?:Initiate|Operative|Architect)\s+(?:tier|plan)\b|"
+                   r"\bplans?\s+start\s+at\b", re.I),
+        "The pricing anchor is publish-conditional on founder approval and a verified live checkout.",
+        "Say the price arrives bound to the release contract, and link the whitepaper gate.",
+    ),
+    (
         "stale fixed quarter",
         re.compile(r"Q[1-3]\s*20(?:2[0-5])\b"),
         "A quarter that has already passed makes the roadmap read as abandoned.",

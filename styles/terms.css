@@ -1,0 +1,75 @@
+/* ----------------------------------------------------------------- terms -- */
+
+/* The four facts a buyer carries back to a producer.
+   Two reviewers, independently, finished the whole site unable to answer what
+   it runs on, what it costs, or who is building it — and one of them wrote "I
+   would contact you the day this page has a number on it". Every one of those
+   facts was already published here and none was findable: the engine paths sat
+   mid-paragraph two chapters away, the team sat on slide twelve of the deck,
+   and the pricing position sat inside a collapsed disclosure on this very
+   chapter.
+
+   So this is a definition list, which is what it actually is, set so the
+   question reads at a glance and the answer reads at the measure. Not a card
+   grid: a card grid is what the chapter above it already does, and this is the
+   one block on the page that a person is scanning rather than reading. */
+.terms {
+    margin: clamp(1.75rem, 4vw, 2.75rem) 0 0;
+    display: grid;
+    gap: clamp(1rem, 2.4vw, 1.6rem);
+}
+
+.terms > div {
+    display: grid;
+    gap: 0.3rem;
+    padding-left: clamp(0.85rem, 2vw, 1.15rem);
+    /* The venation rule the rest of the page keeps: a vein at full weight
+       where the entry starts, thinning as it descends. */
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(180deg,
+        var(--vein-term) 0%,
+        color-mix(in srgb, var(--vein-term) 38%, transparent) 62%,
+        transparent 100%) 1;
+    --vein-term: var(--day-rule);
+}
+
+.chapter-night .terms > div,
+.turn-band .terms > div {
+    --vein-term: color-mix(in srgb, var(--creek) 80%, var(--night-rule));
+}
+
+.terms dt {
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    color: var(--copper-ink);
+}
+
+.chapter-night .terms dt,
+.turn-band .terms dt {
+    color: var(--lantern);
+}
+
+.terms dd {
+    margin: 0;
+    max-width: var(--measure);
+    color: var(--day-ink-soft);
+}
+
+.chapter-night .terms dd,
+.turn-band .terms dd {
+    color: var(--night-ink-soft);
+}
+
+/* Side by side once there is room for the question to stand beside its
+   answer, which is how a specification sheet reads and how a paragraph does
+   not. Intrinsic, so it folds on its own when the column narrows. */
+@media (min-width: 620px) {
+    .terms > div {
+        grid-template-columns: minmax(7.5rem, 0.32fr) minmax(0, 1fr);
+        gap: 0.35rem clamp(1rem, 2.5vw, 1.75rem);
+        align-items: baseline;
+    }
+}

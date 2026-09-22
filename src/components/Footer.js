@@ -30,6 +30,8 @@ export const Footer = () => {
                 <nav class="footer-link-group" aria-label="Company">
                     <p class="footer-group-label">Company</p>
                     <a href="#investors" data-link>Investors</a>
+                    <a href="#pitch/12" data-link>Who is building this</a>
+                    <a href="#whitepaper" data-link>Commercial terms</a>
                     <a href="#pitch/1">Vision deck</a>
                     <a href="mailto:hello@forboc.ai">hello@forboc.ai</a>
                     <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Careers</a>

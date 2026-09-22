@@ -20,7 +20,7 @@ export const Vision = () => {
                     <h2>Paid access to all three is the business</h2>
                     ${Deeper({
                         summary: 'The size of that room, and how we read it',
-                        body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium, not an addressable slice, and we will not pretend a share of it — it evidences the size of the room, not our position in it. What counts as a billable judgment gets bound in the release contract, and that contract goes live with a public price attached, not before.</p>`,
+                        body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium, not an addressable slice, and we will not pretend a share of it — it evidences the size of the room, not our position in it.</p>`,
                     })}
                 </div>
             </header>
@@ -28,6 +28,31 @@ export const Vision = () => {
             <div class="chapter-body">
             <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
             <p class="soul-market"><strong>The people are the one surface of a game nobody has finished.</strong> That spend is already in the building, already annual, and it has nowhere else to go.</p>
+
+            <!-- The four things a studio buyer has to carry back to a producer.
+                 Every one of them was already on this site and none of them was
+                 findable: the engine paths sat mid-paragraph two chapters away,
+                 the team sat on slide twelve of the deck, and the pricing
+                 position sat inside the disclosure above — which is why two
+                 reviewers read the chapter titled "Paid access to all three is
+                 the business" as refusing to answer, and why one of them wrote
+                 "I would contact you the day this page has a number on it".
+                 Nothing here is a new claim. It is the same claims, where the
+                 person who needs them is standing. -->
+            <dl class="terms">
+                <div>
+                    <dt>What it costs</dt>
+                    <dd>What counts as a billable judgment gets bound in the release contract, and that contract goes live with a public price attached, not before. The <a href="#whitepaper" data-link>whitepaper</a> publishes commercial release terms as an open gate rather than an answer we do not have yet.</dd>
+                </div>
+                <div>
+                    <dt>What it runs through</dt>
+                    <dd>TypeScript and native Unreal Engine&nbsp;5 paths. Memory writes to storage your studio owns and can read without us, and every action arrives as a proposal your game is free to refuse.</dd>
+                </div>
+                <div>
+                    <dt>Who is building it</dt>
+                    <dd>Three people hold the model, the law it enters through and the instrument this category will be bought on. <a href="#pitch/12" data-link>Their names and what each one does</a>.</dd>
+                </div>
+            </dl>
             </div>
             </div>
         </div>
