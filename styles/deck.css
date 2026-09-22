@@ -7,7 +7,15 @@
    The section padding was sized like a page's (128px at 1440), not a deck's.
    A deck is a frame and its controls; the room around it is chrome. */
 .deck {
-    padding-top: clamp(0.75rem, 1.6vw, 1.5rem);
+    /* The deck's vertical rhythm, once, from the room it has. Every gap
+       inside a slide — under the title, between paragraphs, above the impact
+       line, around the contact box — was a fixed rem or a WIDTH-based clamp,
+       so a 1440x700 window got the same air as a 1440x900 one and slides 1,
+       5 and 13 ran 35-87px past it with their Next button. A plant fills the
+       pot it is in: at 1080 this is 24px, at 900 about 21, at 700 about 16,
+       and the slide fits by construction rather than by a breakpoint. */
+    --deck-air: clamp(0.4rem, 2.3vh, 1.5rem);
+    padding-top: clamp(0.5rem, 1.6vh, 1.5rem);
     padding-bottom: clamp(1rem, 2vw, 2rem);
 }
 
@@ -105,15 +113,21 @@
 .slide-title {
     letter-spacing: -0.018em;
     font-size: clamp(1.7rem, 1.3rem + 1.8vw, 2.4rem);
-    margin-bottom: 1.5rem;
+    margin-bottom: calc(var(--deck-air) * 1.1);
 }
 
 .slide-body p {
     color: var(--day-ink-soft);
 }
 
+/* :not(:last-child), because the base `p:last-child { margin-bottom: 0 }`
+   has the same specificity as `.slide-body p` and this file is later. */
+.slide-body p:not(:last-child) {
+    margin-bottom: var(--deck-air);
+}
+
 .slide-body h4 {
-    margin: 1.6rem 0 0.7rem;
+    margin: calc(var(--deck-air) * 1.15) 0 calc(var(--deck-air) * 0.5);
 }
 
 .slide-body h4:first-child {
@@ -247,18 +261,13 @@
 
     .slide-title {
         font-size: clamp(1.4rem, 1.1rem + 1.5vw, 1.9rem);
-        margin-bottom: 0.9rem;
-    }
-
-    .slide-body h4 {
-        margin: 1rem 0 0.45rem;
     }
 
     .slide .maeve-scene img {
         max-height: min(150px, 18vh);
     }
 
-
+    .deck-header,
     .deck-controls {
         padding-block: 0.55rem;
     }

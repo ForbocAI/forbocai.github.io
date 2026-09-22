@@ -59,6 +59,78 @@
     color: var(--copper-ink);
 }
 
+/* Slide 5's six beats. They had no rule at all: an <ol> of one-word rows,
+   369px tall, which is the whole reason that slide ran past a 700px window.
+   They are the six faculties the home page sets as cards, and here they are
+   the chain they read as — across the slide where there is width, three
+   then two abreast where there is less. Counts that divide six, never
+   auto-fit, so no beat is ever left alone on a row. */
+.cognition-chain {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--deck-air) clamp(1rem, 2.5vw, 2rem);
+    margin: 0 0 calc(var(--deck-air) * 1.3);
+    padding: 0;
+    list-style: none;
+    counter-reset: beat;
+}
+
+.cognition-chain li {
+    counter-increment: beat;
+    padding-top: calc(var(--deck-air) * 0.5);
+    border-top: 1px solid var(--day-rule);
+}
+
+.cognition-chain li::before {
+    content: counter(beat, decimal-leading-zero);
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--copper-ink);
+}
+
+.cognition-chain strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--day-ink);
+}
+
+.cognition-chain p {
+    margin: 0.2rem 0 0;
+    font-size: var(--step--1);
+    color: var(--day-ink-soft);
+}
+
+@media (min-width: 640px) {
+    .cognition-chain { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1100px) {
+    .cognition-chain { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+
+/* Slide 13 closes the deck with three things: the window, the ask and the
+   two doors. Stacked, that was 458px of measure-width text beside an empty
+   right half, and the last slide was one of the three that ran past a
+   700px window. Where there is width the ask and the doors sit beside the
+   argument they follow from; where there is not, they follow it. */
+@media (min-width: 900px) {
+    .threshold-spread {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+        gap: var(--deck-air) clamp(2rem, 4vw, 3.5rem);
+        align-items: start;
+    }
+
+    .threshold-spread > .threshold-call {
+        grid-row: 1 / span 2;
+    }
+}
+
 /* Slide 10's four cards had no layout rule at all and stacked in block flow —
    four articles tall, which made it the one slide whose Next button fell off
    the bottom of the window at six of nine shapes, including 1440x900. Two

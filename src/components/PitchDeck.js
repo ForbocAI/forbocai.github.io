@@ -222,6 +222,7 @@ const slides = [
         id: 13,
         title: 'The first three worlds are the whole thesis.',
         content: `
+            <div class="threshold-spread">
             <div class="threshold-call">
                 <p class="proof-label">The window</p>
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not have yet is a cast a player has argued with in public — and the studio that ships first decides what this category means for everyone who follows it.</p>
@@ -231,6 +232,7 @@ const slides = [
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Put your character in the room</a>
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-ghost">Investors: come inside</a>
+            </div>
             </div>
         `
     }

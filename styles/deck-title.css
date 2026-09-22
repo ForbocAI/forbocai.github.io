@@ -7,17 +7,25 @@
 
 .title-slide {
     display: grid;
-    gap: 1.1rem;
-    padding-block: clamp(0.5rem, 2vw, 1.5rem);
+    /* Both from --deck-air (deck.css). The padding was a WIDTH clamp, which on
+       a short wide window paid its full 24px twice for nothing; at half the
+       air it is 8px on a short screen and 10 on a phone, where the full token
+       pushed the art 6px through the fold. */
+    gap: var(--deck-air);
+    padding-block: calc(var(--deck-air) * 0.5);
 }
 
 /* The title slide's headline is the h1 itself now, so it is set like one. The
    art sits beside the supporting copy — the grid has to go on .slide-body,
    which is where both of them actually live. */
 .slide:has(.title-slide) .slide-title {
-    font-size: clamp(1.7rem, 1.2rem + 2.1vw, 2.7rem);
+    /* This selector outranks the short-window .slide-title step in deck.css,
+       so the one headline that most needed to give on a 700px screen was the
+       one that could not. The height term does what that step does for the
+       others: 5.6vh is 39px at 700 and past the cap by 900. */
+    font-size: min(clamp(1.7rem, 1.2rem + 2.1vw, 2.7rem), 5.6vh);
     max-width: 26ch;
-    margin-bottom: 1.6rem;
+    margin-bottom: calc(var(--deck-air) * 1.2);
 }
 
 .slide-body:has(.title-slide) {
@@ -66,7 +74,10 @@
 }
 
 /* Stacked, the art stops being a companion to the headline and becomes a
-   mark under it. */
+   mark under it — directly under it, before the copy, so a phone reader
+   meets the world before the explanation of it, and the thing the fold cuts
+   is a paragraph (which scrolls) rather than a picture (which reads as a
+   defect). */
 @media (max-width: 720px) {
     .slide-body:has(.title-slide) {
         grid-template-columns: minmax(0, 1fr);
@@ -74,6 +85,7 @@
 
     .title-slide-art {
         grid-column: 1;
+        order: -1;
         width: min(60%, 200px);
     }
 }
