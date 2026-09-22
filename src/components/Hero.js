@@ -13,7 +13,7 @@ export const Hero = () => {
         <div class="container hero-grid">
             <div class="hero-copy">
                 <p class="kicker">ForbocAI — the NPC language model company</p>
-                <h1>The next great language model are the characters in your game.</h1>
+                <h1>The next great language model is the characters in your game.</h1>
                 <p class="hero-potion"><strong>Dev born. Player grown. Yours to carry.</strong> <span class="hero-gloss">Your writers author them. Players make them specific — a different version of the same cast in every save. Then they belong to the people who made them that way, and they can leave with them.</span></p>
                 <div class="hero-buttons hero-buttons-lead">
                     <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Send her tonight</a>
