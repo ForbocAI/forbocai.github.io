@@ -37,7 +37,15 @@
 
 /* The seam itself: one bright line where the two grounds meet, dimming as it
    runs outward. This is the last of the light, and it is the only hard edge on
-   the page. */
+   the page.
+
+   It ran to within 5% of both screen edges at 62% strength, and at 1440 that
+   is a 1300px ruled line: "full-bleed 1px rules on a plant-fills-its-pot
+   page", said one reviewer, and the other counted them. A ridge catches the
+   last light along its crown, not from edge to edge. Now it comes up out of
+   nothing past a quarter of the width, peaks at the centre and is gone again
+   before three quarters — a glint along the seam rather than a rule across
+   it. */
 .chapter + .chapter::after {
     content: '';
     position: absolute;
@@ -48,11 +56,11 @@
     pointer-events: none;
     z-index: 2;
     background: linear-gradient(90deg,
-        transparent,
-        color-mix(in srgb, var(--lantern) 62%, transparent) 26%,
+        transparent 22%,
+        color-mix(in srgb, var(--lantern) 40%, transparent) 38%,
         color-mix(in srgb, var(--lantern) 78%, transparent) 50%,
-        color-mix(in srgb, var(--lantern) 62%, transparent) 74%,
-        transparent);
+        color-mix(in srgb, var(--lantern) 40%, transparent) 62%,
+        transparent 78%);
 }
 
 /* Into the night the horizon cools, because what is catching the last light
@@ -61,10 +69,10 @@
 .turn-band + .chapter::after,
 .chapter + .turn-band::after {
     background: linear-gradient(90deg,
-        transparent,
-        color-mix(in srgb, var(--creek) 46%, transparent) 26%,
+        transparent 22%,
+        color-mix(in srgb, var(--creek) 34%, transparent) 38%,
         color-mix(in srgb, var(--lantern) 58%, transparent) 50%,
-        color-mix(in srgb, var(--sage) 42%, transparent) 74%,
-        transparent);
+        color-mix(in srgb, var(--sage) 30%, transparent) 62%,
+        transparent 78%);
 }
 

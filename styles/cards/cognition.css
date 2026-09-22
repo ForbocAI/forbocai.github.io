@@ -19,7 +19,14 @@
 }
 
 /* The six stages of one judgment. A grid rather than a list so the sequence
-   reads as one motion at a glance instead of six stacked rows. */
+   reads as one motion at a glance instead of six stacked rows.
+
+   They were six glossy cards with a bevel, two words each — the feature grid
+   every generated page ships, and two reviewers said so: "look like buttons
+   and are not", "plastic inner-shadow bevel, nothing grown about them". On a
+   phone the seven stacked cards were 570px of screen. Now they are the six
+   numbered beats the deck already sets on slide 5: a hairline, a number, the
+   faculty, the question. Nothing to press, nothing raised. */
 .servitor-cognition {
     display: grid;
     /* Six facets, so the column count has to divide six or one card is left
@@ -28,11 +35,26 @@
        two below from 964. Explicit counts that divide six cannot orphan at any
        width. */
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.9rem;
+    gap: clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.5vw, 2rem);
     margin: 1.6rem 0 0;
     padding: 0;
     list-style: none;
-    counter-reset: none;
+    counter-reset: beat;
+}
+
+.servitor-cognition li {
+    counter-increment: beat;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--day-rule);
+}
+
+.servitor-cognition li::before {
+    content: counter(beat, decimal-leading-zero);
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--copper-ink);
 }
 
 .character-intelligence-grid {
@@ -46,7 +68,6 @@
     .servitor-cognition { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
-.servitor-cognition li,
 .character-intelligence-grid article {
     padding: 1.15rem 1.2rem 1.3rem;
     border-radius: var(--radius-sm);
@@ -84,12 +105,10 @@
    Mixed off the page's own ground instead, and finally spending the cool
    accents that were declared and never used. The cycle now means something:
    warm where the world is, cool where a thing is being verified. */
-.servitor-cognition li:nth-child(3n + 2),
 .character-intelligence-grid article:nth-child(4n + 2) {
     background: color-mix(in srgb, var(--honey) 9%, var(--day-bg));
 }
 
-.servitor-cognition li:nth-child(3n),
 .character-intelligence-grid article:nth-child(4n + 3) {
     background: color-mix(in srgb, var(--sage) 7%, var(--day-bg));
 }
@@ -99,14 +118,12 @@
 }
 
 @media (max-width: 860px) {
-    .servitor-cognition,
     .character-intelligence-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 560px) {
-    .servitor-cognition,
     .character-intelligence-grid {
         grid-template-columns: minmax(0, 1fr);
     }

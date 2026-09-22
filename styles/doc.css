@@ -211,4 +211,16 @@
     margin-bottom: 1.4rem;
 }
 
+/* The head, the shell and the foot all stand off the rail, which is where the
+   section marks live on a desktop. A phone has no rail: the same 60px stood
+   between the screen edge and the title and wrapped it to four lines, the
+   widest gutter on the site on its narrowest screen. */
+@media (max-width: 620px) {
+    .doc-head,
+    .doc-shell,
+    .doc-foot {
+        padding-left: 0;
+    }
+}
+
 

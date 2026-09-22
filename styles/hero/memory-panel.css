@@ -10,14 +10,18 @@
     isolation: isolate;
 }
 
-/* The watercolour is atmosphere behind the record, not the subject. */
+/* The watercolour is atmosphere behind the record, not the subject — but it
+   has to be legibly a watercolour. At 30% and hanging 18% off the card's
+   corner it was a ghost cut by the edge, and two reviewers read it as an
+   image that had failed to load. Whole and inside the card, at a strength
+   that reads as a wash, it is a picture behind a record. */
 .memory-panel-art {
     position: absolute;
-    right: -18%;
-    bottom: -22%;
-    width: 78%;
+    right: 2%;
+    bottom: 3%;
+    width: 62%;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.5;
     mix-blend-mode: multiply;
     -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 38%, transparent 72%);
     mask-image: radial-gradient(circle at 50% 50%, #000 38%, transparent 72%);

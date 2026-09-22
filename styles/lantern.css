@@ -52,20 +52,14 @@
         transparent 80%);
 }
 
-.lantern-souls {
-    right: 7%;
-    top: 0;
-}
-
+/* Two more of these hung at the top-right corner of #business and #souls, at
+   0.75 and 1x, each straddling the chapter seam. At that size the glyph is a
+   35x70px outlined rectangle with a dot in it, and two reviewers read the
+   pair as misplaced favicons — "boxed lanterns are the anti-brief". A lamp
+   only earns its place where it lights something: the path, and the card. */
 .lantern-path {
     left: 4%;
     top: 6%;
-}
-
-/* A lamp at the gate of the Soul Garden. */
-.lantern-gate {
-    right: 6%;
-    top: -1.75rem;
 }
 
 /* Anchored to the block it lights, the way the gate lamp anchors to the $FAI
@@ -76,19 +70,9 @@
 }
 
 @media (max-width: 900px) {
-    .lantern-souls {
-        right: 4%;
-        --lantern-scale: 0.7;
-    }
-
     .lantern-path {
         left: 2%;
         --lantern-scale: 0.6;
-    }
-
-    .lantern-gate {
-        right: 4%;
-        --lantern-scale: 0.55;
     }
 
     .lantern-investors {

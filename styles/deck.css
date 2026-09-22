@@ -209,9 +209,10 @@
 
 
 /* Thirteen dots wrap to two rows on a phone and take the control bar to 178px —
-   21% of a 390x844 screen, spent on an indicator. Below 640px they give way to
-   a plain count, which says the same thing in one row and brings the bar to
-   ~69px, the height the slide reserves for it.
+   21% of a 390x844 screen, spent on an indicator. Below 640px they go, and the
+   bar is Back and Next. The count is already in the deck header ("5 / 13");
+   a second copy of it beside Next, which this once painted, read as a
+   duplicate on every phone slide.
 
    This sits at the END of the file on purpose: the first version was a media
    query ABOVE the base .slide-dots rule, and a later rule of equal specificity
@@ -220,13 +221,6 @@
 @media (max-width: 640px) {
     .slide-dots {
         display: none;
-    }
-
-    .deck-controls::after {
-        content: attr(data-count);
-        font-size: var(--step--1);
-        font-weight: 700;
-        color: var(--day-ink-faint);
     }
 }
 

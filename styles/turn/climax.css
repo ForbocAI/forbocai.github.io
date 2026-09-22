@@ -9,10 +9,16 @@
     padding: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 4vw, 3.5rem);
     border-radius: var(--radius-lg);
     border-color: color-mix(in srgb, var(--honey) 22%, transparent);
+    /* A membrane, not a slab. Solid, the frame blocked the chapter's lamp
+       pool: to its right the ground glowed olive, inside it went black, and
+       the frame's straight edge read as a seam between two grounds rather
+       than as a form standing in one. At 84% the pool passes through, dimmed
+       — the way lamplight reaches through a dark window — and the edge is a
+       change of depth rather than a change of world. */
     background:
         radial-gradient(ellipse 80% 60% at 50% 0%,
             color-mix(in srgb, var(--lantern) 7%, transparent), transparent 70%),
-        #11170f;
+        color-mix(in srgb, #11170f 84%, transparent);
 }
 
 .turn-counterfactual .turn-counterfactual-head {
@@ -99,25 +105,18 @@
 }
 
 .turn-counterfactual {
-    /* Top keeps the room it arrives through — the ::before ramp lives there.
-       The bottom had the same 4-7rem for symmetry, and under it sat the chapter
-       gap and the next chapter's seam: about 120px of empty panel on top of
-       ~190px of empty moss, 307px between the second act's last line and the
-       next heading. Symmetry is not a reason to hold a screen's worth of
-       nothing after the page's strongest moment. */
+    /* Top keeps the room the frame arrives through. The bottom had the same
+       4-7rem for symmetry, and under it sat the chapter gap and the next
+       chapter's seam: about 120px of empty panel on top of ~190px of empty
+       moss, 307px between the second act's last line and the next heading.
+       Symmetry is not a reason to hold a screen's worth of nothing after the
+       page's strongest moment.
+
+       There was a 1px honey "ramp" hanging from the top edge into that room,
+       meant to make the frame arrive rather than appear. Two reviewers who
+       had never seen the intent both read it as a stray tick under the nav.
+       A cue only the author can read is not a cue. */
     padding-top: clamp(4rem, 9vw, 7rem);
     padding-bottom: clamp(2rem, 4vw, 3rem);
-}
-
-/* A ramp into it, so it arrives rather than appears. */
-.turn-counterfactual::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 1px;
-    height: clamp(2rem, 5vw, 3.5rem);
-    background: linear-gradient(var(--honey), transparent);
-    opacity: 0.5;
 }
 

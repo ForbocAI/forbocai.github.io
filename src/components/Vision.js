@@ -1,4 +1,3 @@
-import { Lantern } from './Lantern.js';
 import { Deeper } from './Deeper.js';
 import { Sigil, ChapterMark } from './Sigil.js';
 
@@ -13,7 +12,6 @@ import { Sigil, ChapterMark } from './Sigil.js';
 export const Vision = () => {
     return `
     <section id="business" class="chapter chapter-night">
-        ${Lantern({ className: "lantern-gate", size: 0.75, tone: "bright" })}
         <div class="container">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛃ' })}
@@ -33,7 +31,6 @@ export const Vision = () => {
     </section>
 
     <section id="souls" class="chapter chapter-night">
-        ${Lantern({ className: "lantern-souls", size: 1 })}
         <div class="container">
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛋ' })}

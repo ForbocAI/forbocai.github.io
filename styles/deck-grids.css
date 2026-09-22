@@ -118,6 +118,13 @@
    right half, and the last slide was one of the three that ran past a
    700px window. Where there is width the ask and the doors sit beside the
    argument they follow from; where there is not, they follow it. */
+/* Stacked, the window's last paragraph sits on the ask with only line-height
+   between them — the base rule zeroes a last child's margin, and inside the
+   wrapper that paragraph IS the last child. The gap belongs to the block. */
+.threshold-spread > .threshold-call {
+    margin-bottom: var(--deck-air);
+}
+
 @media (min-width: 900px) {
     .threshold-spread {
         display: grid;
@@ -128,6 +135,7 @@
 
     .threshold-spread > .threshold-call {
         grid-row: 1 / span 2;
+        margin-bottom: 0;
     }
 }
 

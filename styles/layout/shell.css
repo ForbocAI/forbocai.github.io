@@ -17,6 +17,12 @@ main {
 .chapter {
     position: relative;
     padding-block: var(--chapter-gap);
+    /* The header is fixed and 66-76px tall. A nav link, a "Watch one
+       judgment" door or a back link scrolls its target to the very top of the
+       window, which put the first heading of every chapter under the bar —
+       tablet and short shots showed only descenders, and the counterfactual's
+       eyebrow sat 15px under the nav. The target itself declares the room. */
+    scroll-margin-top: calc(var(--header-height) + 0.75rem);
 }
 
 /* Consecutive chapters on the same ground need a seam, not the full break
