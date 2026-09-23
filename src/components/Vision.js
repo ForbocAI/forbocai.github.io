@@ -17,7 +17,7 @@ export const Vision = () => {
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛃ' })}
                 <div>
-                    <h2>Paid access to the model, the protocol and the tradable characters is the business</h2>
+                    <h2>The model. The protocol. The tradable characters.</h2>
                     ${Deeper({
                         summary: 'The size of that room, and how we read it',
                         body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium: the size of the room this opens into.</p>`,
