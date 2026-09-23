@@ -48,10 +48,9 @@
    caught on the stem — "both of this round's new ornaments are drawn in a
    colour that belongs to neither declared light source". */
 .site-header.is-night .read-vein {
-    background: linear-gradient(90deg,
-        color-mix(in oklab, var(--sage) 55%, transparent),
-        var(--honey) 62%,
-        var(--lantern));
+    --vine-root: color-mix(in oklab, var(--sage) 55%, transparent);
+    --vine-mid: var(--honey);
+    --vine-tip: var(--lantern);
 }
 
 .site-header.is-night .read-count {

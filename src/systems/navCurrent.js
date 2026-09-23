@@ -6,8 +6,12 @@
 //
 // The same instrument as docContents.js, pointed at the header: mark the link
 // whose section a reader is actually inside.
+import { vineSvg } from '../components/ReadVine.js';
+
 let navWatcher = null;
 let navScroll = null;
+let vineResize = null;
+let vineIdle = 0;
 
 /* How far down the descent you are.
    Both reviewers, twice each, found the phone with no position feedback of any
@@ -30,6 +34,33 @@ const veinFor = () => {
         header.appendChild(vein);
     }
     return vein;
+};
+
+/* The vine at full length, with a leaf where each chapter starts; the reader's
+   depth reveals it (--read, below). Regrown when the window changes, since
+   both the header's width and where the chapters fall move with it. */
+const growVine = (vein) => {
+    if (!vein) return;
+    const run = document.documentElement.scrollHeight - window.innerHeight;
+    const nodes = run > 40
+        ? [...document.querySelectorAll('main section.chapter')]
+            .map((sec) => (sec.getBoundingClientRect().top + window.scrollY) / run)
+            .filter((f) => f > 0.01 && f < 0.99)
+        : [];
+    vein.innerHTML = vineSvg({ width: vein.getBoundingClientRect().width, height: vein.getBoundingClientRect().height, nodes });
+};
+
+const keepVine = (vein) => {
+    if (vineResize) window.removeEventListener('resize', vineResize);
+    const settle = () => growVine(vein);
+    // After the fonts, whose reflow moves every chapter.
+    if (document.fonts && document.fonts.status !== 'loaded') document.fonts.ready.then(settle).catch(settle);
+    else settle();
+    vineResize = () => {
+        clearTimeout(vineIdle);
+        vineIdle = setTimeout(settle, 180);
+    };
+    window.addEventListener('resize', vineResize, { passive: true });
 };
 
 /* The chapter a reader is actually in, out of how many there are.
@@ -102,6 +133,7 @@ export const setupNavCurrent = () => {
         // nothing for the observer to do — but the descent is still being
         // travelled, so the vein still has to be drawn and kept.
         const routeVein = veinFor();
+        keepVine(routeVein);
         const routeCount = countFor();
         drawVein(routeVein);
         // A route is not a chapter of the essay, so the count says nothing
@@ -136,6 +168,7 @@ export const setupNavCurrent = () => {
     // back half it put four underlines in the bar at once: "four nav underlines
     // read as four active states", from both design judges, two rounds running.
     const vein = veinFor();
+    keepVine(vein);
     const count = countFor();
     const visible = new Set();
     // Ordered by where they actually are on the page, not by offsetTop.

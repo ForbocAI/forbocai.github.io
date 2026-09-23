@@ -83,7 +83,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .read-vein {
-        transition: transform 0.12s linear;
+        transition: clip-path 0.12s linear;
     }
 }
 

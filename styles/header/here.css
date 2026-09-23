@@ -53,29 +53,30 @@
    screenshots over two rounds, never once said where the reader was.
 
    A vein along the header's own edge rather than a progress bar: this page is
-   drawn in venation everywhere else, and a 2px rule that fills is the same
-   idea the chapter stems are. It rides the header's bottom border, so it costs
-   no height on a phone. */
+   drawn in venation everywhere else, and the vine is the same idea the
+   chapter stems are. It rides the header's bottom edge, so it costs no height
+   on a phone. */
 .read-vein {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -1px;
-    height: 2px;
-    transform: scaleX(var(--read, 0));
-    transform-origin: left center;
+    /* A band straddling the header's edge, so the leaves turn both into the
+       bar and out over the page. */
+    bottom: -8px;
+    height: 16px;
     pointer-events: none;
-    background: linear-gradient(90deg,
-        color-mix(in srgb, var(--copper) 55%, transparent),
-        var(--copper) 62%,
-        var(--copper-ink));
-    /* A growing tip, not a guillotine. A reviewer measured the head falling
-       193 luminance levels in two pixels and read the whole thing as "a
-       browser loading bar rather than a vein". The mask is in the element's
-       own space, so it scales with the fill and the tip stays a tip at any
-       length. */
-    -webkit-mask-image: linear-gradient(90deg, #000 88%, rgba(0, 0, 0, 0.35) 96%, transparent);
-    mask-image: linear-gradient(90deg, #000 88%, rgba(0, 0, 0, 0.35) 96%, transparent);
+    --vine-root: color-mix(in srgb, var(--copper) 55%, transparent);
+    --vine-mid: var(--copper);
+    --vine-tip: var(--copper-ink);
+    /* Grown to the reader's depth: the vine is drawn at full length
+       (ReadVine.js) and uncovered from the root, so the leaves already
+       passed stay where they grew instead of sliding with a scaled fill. */
+    clip-path: inset(-6px calc((1 - var(--read, 0)) * 100%) -6px 0);
+}
+
+.read-vein svg {
+    display: block;
+    overflow: visible;
 }
 
 
