@@ -12,7 +12,7 @@ export const Investors = () => {
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛞ' })}
                 <div>
-                    <h2>Someone has to build the layer they think with</h2>
+                    <h2>The layer every character thinks with</h2>
                     ${Deeper({
                         summary: 'What a studio gets if it trains its own instead',
                         body: `<p>A studio with a budget can fine-tune an open model on its own documents, and some do. What they get is that studio's cast, frozen at that studio's last training run, with a machine-learning team to staff forever — and a house voice that overfits to itself, which is a general model's homeland made smaller and harder to see from inside. We are the layer underneath every cast, improving for all of them at once.</p>`,
