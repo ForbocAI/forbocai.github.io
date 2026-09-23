@@ -21,19 +21,19 @@ export const Investors = () => {
             </header>
 
             <div class="chapter-body investors-body">
-                <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earned a yes. Nobody scheduled it, and it waits on no one's roadmap. The only open question is who builds the layer they think with.</p>
+                <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earns a yes. Nobody scheduled it, and it waits on no one's roadmap. The only open question is who builds the layer they think with.</p>
                 <p><strong>You run the experiment yourself, on every title, without meaning to.</strong> The characters players quote back to you are never the ones with the most lines. You prove the thesis before anyone pitches it to you.</p>
                 <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built and you can read it today. The model answers today.</p>
                 <p><strong>Nobody has to be talked into wanting this.</strong> Every studio in the industry wants characters who think, and wanting it is never the problem. Having it is. An open-ended voice loose in your world with your character's name on it is not a feature, it is an incident.</p>
                 <p><strong>So neither half ships without the other.</strong> A model that reasons like a person and cannot be stopped from moving your state is a liability, and a boundary with nothing behind it is a config file. Servitor™ needs the Protocol's law to enter a world at all. That is why they are one thing, and why the thing is served rather than shipped loose.</p>
                 <p><strong>The moat is not the boundary.</strong> It is the model, and what is in it cannot be prompted back out. <strong>Selflessness is weights, not a prompt.</strong></p>
-                <p>We wrote this category’s measure. Every rival is held to it, as we are. Whoever writes a category's measurement writes its purchasing criteria.</p>
+                <p>We write this category’s measure. Every rival is held to it, as we are. Whoever writes a category's measurement writes its purchasing criteria.</p>
 
-                <p class="investors-takeaway"><strong>You have been paying for this by accident.</strong> The one your players quote made a decision nobody wrote, and no budget line can order another.</p>
+                <p class="investors-takeaway"><strong>You have been paying for this by accident.</strong> The one your players quote makes a decision nobody wrote, and no budget line can order another.</p>
                 ${Deeper({
                     summary: 'The position, argued',
                     body: `<p class="investors-takeaway">A handful of studios come through this door, and then it is a hallway like any other. In here, a character refuses a player for a reason she can name and hands you the reason she holds. Out there, it is still a tree you pay to build whole so one player can walk one path through it. You are reading this from one side of that.</p>
-<p class="investors-takeaway">First worlds are being chosen now. Whoever is inside when the first cast ships holds a position in the only market that has a standard, beside the company that wrote it.</p>`,
+<p class="investors-takeaway">First worlds are being chosen now. Whoever is inside when the first cast ships holds a position in the only market that has a standard, beside the company that writes it.</p>`,
                 })}
                 <p class="investors-takeaway">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player gets every detail of that scene wrong, and still gets her right.</p>
             </div>
