@@ -32,7 +32,7 @@ export const Scenes = () => `
                 <header class="chapter-head">
                     ${ChapterMark({ rune: 'ᚹ' })}
                     <div>
-                        <h1>Two nights at the counter, line by line</h1>
+                        <h1>One night at the counter, line by line</h1>
                         <p class="chapter-lead">Everything the home page claims, shown in full: the persona document a writer typed, the call your game makes, the judgment that comes back — and then the rest of the room deciding what to do about it.</p>
                     </div>
                 </header>

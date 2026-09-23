@@ -24,7 +24,7 @@ export const Turn = () => {
                 ${ChapterMark({ rune: 'ᛒ' })}
                 <div>
                     <h2>The moment an NPC becomes someone</h2>
-                    <p class="chapter-lead">Late, at the counter of the Lanternbough inn, with the thaw coming and her brother's letter in the drawer behind her. A player asks the question nobody wrote. Servitor™ gathers who Maeve has been, what now matters and what her world permits — then makes the choice only she could make.</p>
+                    <p class="chapter-lead">Late, at the counter of the Lanternbough inn, the night the thaw comes, with her brother's letter in the drawer behind her. A player asks the question nobody wrote. Servitor™ gathers who Maeve has been, what now matters and what her world permits — then makes the choice only she could make.</p>
                 </div>
             </header>
 
@@ -38,7 +38,7 @@ export const Turn = () => {
                 </div>
                 <div class="turn-counterfactual-pair">
                     <article>
-                        <span>Before</span>
+                        <span>One save</span>
                         <p class="turn-note"><em>You said you would come back before the thaw. You did not.</em></p>
                         <pre class="turn-code"><code>{
   dialogue: <b>"He went north. That is all I can give you tonight."</b>,
@@ -47,7 +47,7 @@ export const Turn = () => {
 }</code></pre>
                     </article>
                     <article>
-                        <span>After</span>
+                        <span>Another save</span>
                         <p class="turn-note"><em>You kept the promise, and you brought her the worst news in town.</em></p>
                         <pre class="turn-code"><code>{
   dialogue: <b>"Then you already know what is in it. Sit down first."</b>,
@@ -138,7 +138,7 @@ export const TurnWalkthrough = () => `
                     <pre class="turn-code"><code>{
   dialogue: "He went north. That is all I can give you tonight.",
   reasoningResult: {
-    reasoningText: "My brother asked me to keep it sealed. This one asked after him when nobody else in town did — then swore he would be back before the thaw, and was not. I kept the lamp lit anyway. That earns the road. It does not earn the letter.",
+    reasoningText: "My brother asked me to keep it sealed. This one asked after him when nobody else in town did — then swore to be back before the thaw, and was not. I kept the lamp lit anyway. That earns the road. It does not earn the letter.",
     responseText: "He went north. That is all I can give you tonight.",
   },
   action: {
