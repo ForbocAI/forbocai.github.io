@@ -37,7 +37,7 @@ const slides = [
                     <p>Identity survives the unscripted moment. Memory supplies evidence. Motive gives it weight. Judgment creates the next possibility.</p>
                 </div>
             </div>
-            <p class="impact-statement">The worlds that define the next decade will be the ones whose people can judge — not the ones with more lines.</p>
+            <p class="impact-statement">The worlds that define this decade are the ones whose people judge — not the ones with more lines.</p>
         `
     },
     {
@@ -52,7 +52,7 @@ const slides = [
                 </article>
                 <article class="problem-column is-character-intelligence">
                     <p class="proof-label">Character Intelligence</p>
-                    <h3>What would this person choose?</h3>
+                    <h3>What does this person choose?</h3>
                     <p>A general model reads a persona as instructions to perform, and performs itself through them. Servitor™ has no self to perform. Your writer's document is the character; we cannot write it and we do not want to.</p>
                 </article>
             </div>
@@ -65,7 +65,7 @@ const slides = [
         content: `
             <div class="paired-proof model-reveal">
                 <p class="proof-label">The choice nobody wrote</p>
-                <p>A player asks a question no writer anticipated. Servitor™ gathers who she is, what this player made matter and what her world permits — then returns one judgment: the line, the reasoning behind it, and a structured action the game is free to refuse. One call. Not a branch that was waiting.</p>
+                <p>A player asks a question no writer anticipated. Servitor™ gathers who she is, what this player made matter and what her world permits — then returns one judgment: the line, the reasoning behind it, and a structured action the game is free to refuse. One call. Not a branch lying in wait.</p>
                 <div class="decision-pair">
                     <article>
                         <span>The safe answer</span>
@@ -73,7 +73,7 @@ const slides = [
                     </article>
                     <article>
                         <span>The character judgment</span>
-                        <strong>Her brother's confidence. Kept, against a player who had earned almost enough.</strong>
+                        <strong>Her brother's confidence. Kept, against a player who has earned almost enough.</strong>
                     </article>
                 </div>
                 <figure class="maeve-scene maeve-choice-scene">
@@ -181,7 +181,7 @@ const slides = [
                 <article><span>Collection</span><h3>Every person can be singular</h3><p>A cast becomes a portfolio of identities, not interchangeable content.</p></article>
                 <article><span>Return</span><h3>Continuity deepens belonging</h3><p>A player comes back for the person who remembers what they did last season.</p></article>
             </div>
-            <p class="moat-intro"><strong>Dev born. Player grown. Yours to carry.</strong> Cards proved people return to identities they care about, and a card has never once remembered them back. She is authored by a studio, made specific by a player, and carried into a second world that reads her record and admits what its canon will hold. That is the third pillar, and no company can hand you it without the first two.</p>
+            <p class="moat-intro"><strong>Dev born. Player grown. Yours to carry.</strong> Cards proved people return to identities they care about, and a card has never once remembered them back. She is authored by a studio, made specific by a player, and carried into a second world that reads her record and admits what its canon holds. That is the third pillar, and no company can hand you it without the first two.</p>
         `
     },
     {
@@ -227,9 +227,9 @@ const slides = [
             <div class="threshold-call">
                 <p class="proof-label">The window</p>
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not have yet is a cast a player has argued with in public — and the studio that ships first decides what this category means for everyone who follows it.</p>
-                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> A studio. Then a character who stays herself under an evaluation somebody else designed. Then that evaluation published and handed to our rivals, because whoever authors a category's test authors what the category is worth. It asks whether you would rather be in the room while the law is written, or reading it afterwards.</p>
+                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> A studio. Then a character who stays herself under an evaluation somebody else designed. Then that evaluation published and handed to our rivals, because whoever authors a category's test authors what the category is worth. It asks whether you are in the room while the law is written, or reading it afterwards.</p>
             </div>
-            <p class="ask-note">Send us one character. We will take her to the moment your tree ends. Eighteen months later a player gets every detail of that scene wrong, and still gets her right.</p>
+            <p class="ask-note">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player gets every detail of that scene wrong, and still gets her right.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Put your character in the room</a>
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="text-link">Investors: come inside</a>
