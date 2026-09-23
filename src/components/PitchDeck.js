@@ -61,7 +61,7 @@ const slides = [
     },
     {
         id: 4,
-        title: 'Meet The ForbocAI NPC LM Servitor<span class="tm">™</span>.',
+        title: 'The ForbocAI NPC LM Servitor<span class="tm">™</span>.',
         content: `
             <div class="paired-proof model-reveal">
                 <p class="proof-label">The choice nobody wrote</p>
