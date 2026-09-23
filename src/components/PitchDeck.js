@@ -166,7 +166,7 @@ const slides = [
                 <article><span>04</span><strong>An inhabited world</strong><p>The player goes somewhere you never wrote. The cast is already there.</p></article>
             </div>
             <figure class="maeve-scene living-world-scene">
-                <img src="living-cast-scene.webp" alt="Maeve and a distinct living cast move through Lanternbough after the storm." width="1672" height="941">
+                <img src="living-cast-portraits.webp" alt="Five people of the Lanternbough market, each with a face of their own." width="1672" height="941">
                 <figcaption>One unforgettable character opens a world that answers back.</figcaption>
             </figure>
         `
