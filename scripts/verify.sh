@@ -22,6 +22,7 @@
 #   headerfalls        a header that stands still while the night descends
 #   bruise             a sunset passing through plum or slate, off the palette
 #   shelves            a chapter that begins with a lighter band against the last
+#   nightbuttons       a primary button left dark on the night's dark ground
 #   deckfold           a slide that runs past the window or hides its words
 #   decktravel         Back and Next moving between slides
 #   descent-gate       a night that stops descending, or climbs back out of itself
@@ -67,7 +68,7 @@ if [ -d .dream-loop ] && command -v node >/dev/null; then
     server=$!
     sleep 2
   fi
-  for check in layout contrast type leadwidth navcurrent readcount navwrap stickyoverlap stemtouch sidehead headerfalls bruise shelves deckfold decktravel descent-gate gates errors; do
+  for check in layout contrast type leadwidth navcurrent readcount navwrap stickyoverlap stemtouch sidehead headerfalls bruise shelves nightbuttons deckfold decktravel descent-gate gates errors; do
     [ -f ".dream-loop/$check.mjs" ] && run "$check" node ".dream-loop/$check.mjs"
   done
   [ -n "$server" ] && kill "$server" 2>/dev/null

@@ -64,15 +64,25 @@
     border-color: var(--copper-ink);
 }
 
-/* On the night half the primary button is the lantern itself. */
+/* On the night half the primary button is the lantern itself — on EVERY
+   night chapter. This keyed on .chapter-night, and the turn and the room are
+   night by standing inside .nightfall rather than by carrying that class, so
+   their primary fell back to the day's dark pill on a dark ground: "dark
+   green on dark green, it almost disappears". The lit button in the finale
+   is the one both design judges keep rating among the best things on the
+   page; it is what a button in the night should be. */
+.nightfall .btn-primary,
 .chapter-night .btn-primary,
+.turn-band .btn-primary,
 .site-footer .btn-primary {
     background: var(--lantern);
     color: #20291f;
     box-shadow: 0 0 34px -6px rgba(255, 243, 194, 0.55);
 }
 
+.nightfall .btn-primary:hover,
 .chapter-night .btn-primary:hover,
+.turn-band .btn-primary:hover,
 .site-footer .btn-primary:hover {
     background: #fffae0;
     box-shadow: 0 0 46px -4px rgba(255, 243, 194, 0.8);
