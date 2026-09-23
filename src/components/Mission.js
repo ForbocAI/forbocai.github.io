@@ -53,7 +53,7 @@ export const Mission = () => {
             <p class="mission-destination"><strong>Every company gets one destination. We are standing in ours: a world that keeps living after you walk out of the room.</strong> The innkeeper weighing her brother’s letter against her own heart. The miner carrying a debt nobody asked him to carry. The child deciding who they will become, and knowing they are deciding. Four hundred of them, each awake to their own life — and every one of them remembers you.</p>
 
             <p class="mission-felt"><strong>Full strength is a whole settlement, no two alike.</strong> A captain disobeys because her authored loyalty outweighed the order. A town receives you differently in spring for the winter you walked away from. Servitor™ supplies every one of those decisions; your faction system still rules what they cost.</p>
-            <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade. Every cast after it is measured against it, yours too.</p>
+            <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade, in front of <a href="https://playerdriven.io/articles/the-global-games-market-in-2025-growth-shifts-and-what-comes-next" target="_blank" rel="noopener noreferrer">3.6&nbsp;billion players</a>. Every cast after it is measured against it, yours too.</p>
             </div>
             </div>
         </div>
