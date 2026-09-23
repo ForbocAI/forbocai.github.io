@@ -93,7 +93,7 @@ export const TurnWalkthrough = () => `
     { who: 'Aldren, her brother',
       bond: 'Asked her to keep the letter sealed. Gone since autumn.' },
     { who: 'the player',
-      bond: 'Asked after Aldren when nobody in town did. Promised to return before the thaw, and did not.' },
+      bond: 'Asked after Aldren when nobody in town did. Promised to return before the thaw.' },
   ],
   world: ['Lanternbough, the night the thaw comes',
           'The letter is in the drawer behind her'],
