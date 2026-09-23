@@ -165,8 +165,9 @@ def reference_corpus() -> list[Path]:
     return [p for p in corpus if p.is_file()]
 
 
-# The root of the script graph: verify.sh names the gates, nothing names it.
-ENTRY_SCRIPTS = {"scripts/verify.sh"}
+# The roots of the script graph: verify.sh names the gates, and ship.sh is the
+# one path to a push, which runs verify.sh first. Nothing names either.
+ENTRY_SCRIPTS = {"scripts/verify.sh", "scripts/ship.sh"}
 
 
 def dead_scripts() -> list[Path]:

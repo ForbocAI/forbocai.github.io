@@ -261,8 +261,17 @@ export const setupChapterStem = () => {
         raf = requestAnimationFrame(() => requestAnimationFrame(grow));
     };
 
-    settle();
-    document.fonts?.ready.then(settle).catch(() => {});
+    // Only once the fonts are in, when they are still arriving. Growing first
+    // and regrowing on arrival left a window where the text had reflowed under
+    // a plant measured against the old layout: a branch could cross a title
+    // for the frames before the regrow, which stemtouch caught at the first
+    // scroll position on a different screen shape each run. A plant grown
+    // after the reflow has nothing stale to show.
+    if (document.fonts && document.fonts.status !== 'loaded') {
+        document.fonts.ready.then(settle).catch(settle);
+    } else {
+        settle();
+    }
 
     // A resize changes the column, the spread's height and every movement's
     // position at once, so the plant is regrown rather than rescaled — the
