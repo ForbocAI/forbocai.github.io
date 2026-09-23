@@ -21,5 +21,16 @@ fi
 
 git add -A
 git commit -q -F "$msg"
-git push -q origin main
-git log --oneline -1
+
+# GitHub answers a push with a transient 500 now and then. Retry it; if it
+# still fails, say so loudly — a commit that exists only here is not shipped.
+for attempt in 1 2 3; do
+    if git push -q origin main; then
+        git log --oneline -1
+        exit 0
+    fi
+    echo "ship: push attempt $attempt failed" >&2
+    sleep $((attempt * 5))
+done
+echo "ship: committed locally but NOT pushed — run 'git push origin main'" >&2
+exit 1
