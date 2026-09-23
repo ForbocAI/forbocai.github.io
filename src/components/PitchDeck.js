@@ -229,7 +229,7 @@ const slides = [
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not have yet is a cast a player has argued with in public — and the studio that ships first decides what this category means for everyone who follows it.</p>
                 <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> A studio. Then a character who stays herself under an evaluation somebody else designed. Then that evaluation published and handed to our rivals, because whoever authors a category's test authors what the category is worth. It asks whether you are in the room while the law is written, or reading it afterwards.</p>
             </div>
-            <p class="ask-note">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player gets every detail of that scene wrong, and still gets her right.</p>
+            <p class="ask-note">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player forgets the scene and still remembers her.</p>
             <div class="contact-box">
                 <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Put your character in the room</a>
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="text-link">Investors: come inside</a>
