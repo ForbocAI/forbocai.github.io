@@ -24,7 +24,7 @@ export const Technology = () => {
                 <li class="ledger-row">
                     <div class="ledger-body">
                         <h3>Drama that remembers</h3>
-                        <p>Rivals remember mercy. Companions carry unfinished arguments. Betrayal changes the next encounter because it changed the person entering it.</p>
+                        <p>Rivals remember mercy. Companions carry unfinished arguments. Betrayal changes the next encounter because it changes the person entering it.</p>
                     </div>
                     <p class="ledger-fact">The past does not decorate the dialogue. It changes the next decision.</p>
                 </li>
@@ -32,7 +32,7 @@ export const Technology = () => {
                 <li class="ledger-row">
                     <div class="ledger-body">
                         <h3>Strategy with a point of view</h3>
-                        <p>A captain may disobey, a faction may fracture, and an ally may choose the costly plan because identity — not a random branch — made that decision inevitable.</p>
+                        <p>A captain may disobey, a faction may fracture, and an ally may choose the costly plan because identity — not a random branch — makes that decision inevitable.</p>
                     </div>
                     <p class="ledger-fact">Tactics become personal when every decision belongs to someone.</p>
                 </li>
