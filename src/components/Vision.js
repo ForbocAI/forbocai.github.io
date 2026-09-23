@@ -20,7 +20,7 @@ export const Vision = () => {
                     <h2>The model. The protocol. The tradable characters.</h2>
                     ${Deeper({
                         summary: 'The size of the room this opens into',
-                        body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium: the size of the room this opens into.</p>`,
+                        body: `<p class="soul-market">The market for AI-generated characters grows from $1.41&nbsp;billion in 2024 to <a href="https://www.globenewswire.com/news-release/2026/01/29/3228744/0/en/Non-Player-Character-NPC-Generation-Artificial-Intelligence-Research-Report-2026-5-51-Bn-Market-Opportunities-Trends-Competitive-Analysis-Strategies-Forecasts-2019-2024-2024-2029F-.html" target="_blank" rel="noopener noreferrer">$5.51&nbsp;billion by 2029</a>, inside a games market of about <a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">$188&nbsp;billion</a>. That is the room this opens into.</p>`,
                     })}
                 </div>
             </header>
