@@ -25,15 +25,17 @@ import { leaf } from './stem/geometry.js';
 export const sprigSvg = ({ seed, length, height }) => {
     const rand = rngOf(seedOf(`sprig-${seed}`));
     const mid = height / 2;
-    const reach = length * (0.72 + rand() * 0.22);
+    const reach = length * (0.45 + rand() * 0.5);
     const phase = rand() * Math.PI * 2;
-    const sway = height * (0.12 + rand() * 0.1);
+    const sway = height * (0.08 + rand() * 0.2);
+    // How many turns it takes on its way out: one lazy bend, or several.
+    const turns = 0.8 + rand() * 2.4;
     const steps = 28;
 
     // The line: from the seal outward, wandering a little and settling.
     const pts = Array.from({ length: steps + 1 }, (_, i) => {
         const t = i / steps;
-        return { t, x: t * reach, y: mid + Math.sin(phase + t * Math.PI * 2.2) * sway * Math.sin(t * Math.PI) };
+        return { t, x: t * reach, y: mid + Math.sin(phase + t * Math.PI * turns) * sway * Math.sin(t * Math.PI) };
     });
 
     // Tapered, as the margin stem is: a filled shape, full at the seal.
@@ -44,12 +46,14 @@ export const sprigSvg = ({ seed, length, height }) => {
 
     // A curl where it ends, the way a tendril finishes.
     const end = pts[pts.length - 1];
-    const cr = height * (0.12 + rand() * 0.06);
-    const curl = `M${round(end.x)},${round(end.y)}q${round(cr * 1.2)},${round(-cr * 0.2)} ${round(cr * 0.9)},${round(-cr)}q${round(-cr * 0.4)},${round(-cr * 0.55)} ${round(-cr * 0.75)},${round(-cr * 0.05)}`;
+    const cr = height * (0.08 + rand() * 0.14);
+    // The curl turns up or down, as the tendril happened to.
+    const cd = rand() < 0.5 ? 1 : -1;
+    const curl = `M${round(end.x)},${round(end.y)}q${round(cr * 1.2)},${round(-cr * 0.2 * cd)} ${round(cr * 0.9)},${round(-cr * cd)}q${round(-cr * 0.4)},${round(-cr * 0.55 * cd)} ${round(-cr * 0.75)},${round(-cr * 0.05 * cd)}`;
 
     // Leaves off it, alternately, turned away from the line and shrinking
     // toward the tip.
-    const count = 3 + Math.round(rand() * 2);
+    const count = 2 + Math.round(rand() * 4);
     let side = rand() < 0.5 ? -1 : 1;
     const leaves = Array.from({ length: count }, (_, k) => {
         const t = 0.16 + (k / count) * 0.7 + rand() * 0.04;
@@ -57,14 +61,24 @@ export const sprigSvg = ({ seed, length, height }) => {
         const a = pts[Math.max(0, i - 1)];
         const b = pts[Math.min(steps, i + 1)];
         const ang = Math.atan2(b.y - a.y, b.x - a.x) + side * (0.75 + rand() * 0.35);
-        const len = height * (0.34 - t * 0.14);
+        const len = height * (0.34 - t * 0.14) * (0.7 + rand() * 0.6);
         side = -side;
         return `<path d="${leaf(pts[i].x, pts[i].y, ang, len, len * 0.42)}" fill="currentColor"/>`;
     }).join('');
+
+    // Now and then a second, thinner shoot parts from the first.
+    const fork = rand() < 0.45 ? (() => {
+        const p = pts[Math.round(steps * (0.3 + rand() * 0.3))];
+        const dir = rand() < 0.5 ? 1 : -1;
+        const fl = reach * (0.18 + rand() * 0.14);
+        return `<path d="M${round(p.x)},${round(p.y)}q${round(fl * 0.5)},${round(dir * height * 0.05)} ${round(fl)},${round(dir * height * 0.18)}" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/>`
+            + `<path d="${leaf(p.x + fl, p.y + dir * height * 0.18, dir * 0.5, height * 0.18, height * 0.07)}" fill="currentColor"/>`;
+    })() : '';
 
     return `<svg class="sprig-svg" width="${round(length)}" height="${round(height)}" viewBox="0 0 ${round(length)} ${round(height)}" aria-hidden="true" focusable="false">
         <path d="${stem}" fill="currentColor"/>
         <path d="${curl}" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"/>
         ${leaves}
+        ${fork}
     </svg>`;
 };
