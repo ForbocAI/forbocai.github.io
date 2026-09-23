@@ -32,19 +32,36 @@
 import { seedOf, rngOf, round } from './stem/seed.js';
 import { settlement } from './horizon/settlement.js';
 
-/* A crown, lopsided: the two shoulders rise to different heights, and now and
-   then it has two lobes. Equal domes on a line were the stamp. */
+/* A crown, as a tree has one: a clump of foliage masses of different sizes,
+   the middle ones standing highest, each bulging on its own, so the edge
+   breaks into lobes and notches. One smooth dome per tree, however lopsided,
+   read as "one bump shape stamped over and over". */
 const crown = (rand, x, w, y0, y1, h) => {
-    if (rand() < 0.18) {
-        const m = x + w * (0.42 + rand() * 0.16);
-        const ym = (y0 + y1) / 2;
-        const h2 = h * (0.62 + rand() * 0.3);
-        return `C${round(x + (m - x) * 0.05)},${round(y0 - h)} ${round(m - (m - x) * 0.1)},${round(ym - h)} ${round(m)},${round(ym - h * 0.35)}`
-            + `C${round(m + (x + w - m) * 0.1)},${round(ym - h2)} ${round(x + w * 0.97)},${round(y1 - h2)} ${round(x + w)},${round(y1)}`;
-    }
-    const a = 0.72 + rand() * 0.55;
-    const c = 0.72 + rand() * 0.55;
-    return `C${round(x + w * 0.02)},${round(y0 - h * a)} ${round(x + w * 0.98)},${round(y1 - h * c)} ${round(x + w)},${round(y1)}`;
+    // As many masses as the crown is wide enough to hold round ones.
+    const n = Math.max(2, Math.min(4, Math.round((w / h) * (1.2 + rand() * 0.9))));
+    const cuts = Array.from({ length: n }, () => 0.6 + rand());
+    const sum = cuts.reduce((a, c) => a + c, 0);
+    const peak = 0.3 + rand() * 0.4;
+    let at = x;
+    return cuts.map((c, i) => {
+        const lw = (w * c) / sum;
+        const x1 = at + lw;
+        const mid = (at + lw / 2 - x) / w;
+        // Tallest near the crown's peak, falling off toward its shoulders.
+        // A mass is broader than it is tall: taller ones drew fingers, then eggs.
+        const lift = Math.min(lw * 0.62, h * (1 - Math.abs(mid - peak) * 1.1) * (0.75 + rand() * 0.35));
+        const base0 = y0 + (y1 - y0) * ((at - x) / w);
+        const base1 = y0 + (y1 - y0) * ((x1 - x) / w);
+        // A notch between masses: each lobe starts a little below the last one's end.
+        const dip = i ? h * (0.08 + rand() * 0.14) : 0;
+        const seg = `L${round(at)},${round(base0 - lift * 0.35 + dip)}`
+            // Control points straight above the ends: the fullest dome that
+            // never doubles back, since a lobe that overhung its neighbour
+            // looped, and the loop filled as a hollow ring.
+            + `C${round(at)},${round(base0 - lift * 1.3)} ${round(x1)},${round(base1 - lift * (1.2 + rand() * 0.2))} ${round(x1)},${round(base1 - lift * 0.35)}`;
+        at = x1;
+        return seg;
+    }).join('');
 };
 
 /* One ridge: a rolling baseline, and on it a crown per few pixels, so the
@@ -65,20 +82,25 @@ const ridge = (rand, width, height, { base, roll, rise, span, emergence, clear =
     let x = -span * rand();
     let top = `M0,${round(at(0))}`;
     while (x < width + span) {
-        const w = span * (0.55 + rand() * 1.1);
+        // An emergent tree is broad as well as tall: height alone, under the
+        // cap that keeps a mass broader than tall, made no bigger tree.
+        const emergent = rand() < emergence ? 1.6 + rand() * 0.5 : 1;
+        const w = span * (0.55 + rand() * 1.1) * emergent;
         // A clearing now and then — the ground shows between the crowns —
         // and now and then one tree standing well above the rest.
         // The settlement's own clearing, where the forest was cut back for
         // the houses, is kept open whatever the dice say.
         const cut = x + w > clear[0] && x < clear[1];
-        const clearing = rand() < 0.07 || cut;
-        const emergent = rand() < emergence ? 1.6 + rand() * 0.5 : 1;
+        const clearing = rand() < 0.04 || cut;
         const h = clearing ? 0 : height * rise * (0.45 + rand() * 0.85) * emergent;
         const y0 = at(x);
         const y1 = at(x + w);
         if (clearing) top += `L${round(x + w)},${round(y1)}`;
         else top += crown(rand, x, w, y0, y1, h);
-        x += w * (0.55 + rand() * 0.35);
+        // Crowns abut, meeting part way up, rather than overlap: a path that
+        // steps back left over its own last crown winds the other way, and
+        // the overlap filled as a hollow crescent.
+        x += w;
     }
     return { d: `M0,${round(height)}L${top.slice(1)}L${round(width)},${round(height)}Z`, top, at };
 };
@@ -103,15 +125,15 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
     // solid ground under it: at a chapter's top the band's last stretch shows
     // under the header, and crowns there read as "a dark scalloped band, like
     // a rendering glitch".
-    const far = ridge(rand, width, height, { base: 0.57, roll: 0.08, rise: 0.06, span: span * 0.8, emergence: 0.1 });
-    const mid = ridge(rand, width, height, { base: 0.69, roll: 0.07, rise: 0.085, span, emergence: 0.08 });
+    const far = ridge(rand, width, height, { base: 0.57, roll: 0.08, rise: 0.06, span: span * 0.8, emergence: 0.14 });
+    const mid = ridge(rand, width, height, { base: 0.69, roll: 0.07, rise: 0.085, span, emergence: 0.12 });
     // Where the houses stand: chosen before the nearest ridge grows, so that
     // ridge can leave them their clearing. Evening only; at dawn the same
     // stretch is forest.
     const cx = width * (0.24 + rand() * 0.3);
     const homes = lights ? 3 + Math.round(rand() * 2) : 0;
     const reachX = span * 2.1 * homes;
-    const near = ridge(rand, width, height, { base: 0.8, roll: 0.045, rise: 0.1, span: span * 1.3, emergence: 0, clear: [cx - reachX / 2, cx + reachX / 2] });
+    const near = ridge(rand, width, height, { base: 0.8, roll: 0.045, rise: 0.1, span: span * 1.3, emergence: 0.1, clear: [cx - reachX / 2, cx + reachX / 2] });
 
     // Half the disc above the far ridge, half behind it: a sun that is going,
     // or coming, and not a glow with nothing at its centre.
