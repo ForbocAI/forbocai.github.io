@@ -31,7 +31,7 @@ export const Investors = () => {
 
                 <p class="investors-takeaway"><strong>No budget line can order the character players quote.</strong> She makes a decision nobody wrote.</p>
                 ${Deeper({
-                    summary: 'The position, argued',
+                    summary: 'Where you stand when the first cast ships',
                     body: `<p class="investors-takeaway">A handful of studios come through this door first. After them, it is a hallway everyone walks. In here, a character refuses a player for a reason she can name and hands you the reason she holds. Out there, it is still a tree you pay to build whole so one player can walk one path through it. You are reading this from one side of that.</p>
 <p class="investors-takeaway">First worlds are being chosen now. Whoever is inside when the first cast ships holds a position in the only market that has a standard, beside the company that writes it.</p>`,
                 })}
