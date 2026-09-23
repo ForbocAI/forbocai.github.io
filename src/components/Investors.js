@@ -33,7 +33,7 @@ export const Investors = () => {
                 ${Deeper({
                     summary: 'Where you stand when the first cast ships',
                     body: `<p class="investors-takeaway">A handful of studios come through this door first. After them, it is a hallway everyone walks. In here, a character refuses a player for a reason she can name and hands you the reason she holds. Out there, it is still a tree you pay to build whole so one player can walk one path through it. You are reading this from one side of that.</p>
-<p class="investors-takeaway">First worlds are being chosen now. Whoever is inside when the first cast ships holds a position in the only market that has a standard, beside the company that writes it.</p>`,
+<p class="investors-takeaway">The nearest company to this market is valued at half a billion dollars. This is the ground floor of the one that comes after it.</p><p class="investors-takeaway">First worlds are being chosen now. Whoever is inside when the first cast ships holds a position in the only market that has a standard, beside the company that writes it.</p>`,
                 })}
                 <p class="investors-takeaway">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player forgets the scene and still remembers her.</p>
                 <p class="investors-takeaway"><strong>The seed round is open.</strong> It takes the first partner worlds live and brings Souls and Ghost into play.</p>
