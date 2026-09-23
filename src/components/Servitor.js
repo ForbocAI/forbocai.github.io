@@ -29,7 +29,7 @@ export const Servitor = () => `
             </header>
 
             <div class="chapter-body servitor-intelligence">
-                    <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> A general model performs itself through a persona, which is why a cast of a hundred sounds like one actor doing accents. Four hundred of your people can share this model without sharing a personality.</p>
+                    <p class="chapter-lead"><strong>Servitor™ is not a general model wearing a character prompt.</strong> A general model performs itself through a persona, which is why a cast of a hundred sounds like one actor doing accents. Four hundred of your people draw on one vast mind, and never become one another.</p>
                     <p class="kicker">The cognitive motion of a living character</p>
                     <h3>What she does with what she remembers</h3>
                     <p>Dialogue is what the player hears. Servitor™ carries authored identity through evidence, motive and consequence to decide what the character means — and what she may propose next.</p>

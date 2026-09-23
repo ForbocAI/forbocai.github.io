@@ -21,7 +21,7 @@ export const Investors = () => {
             </header>
 
             <div class="chapter-body investors-body">
-                <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earns a yes. Nobody scheduled it, and it waits on no one's roadmap. The layer they think with is already here.</p>
+                <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earns a yes. Players already feel it coming: <a href="https://www.prnewswire.com/news-releases/inworld-ai-99-of-gamers-are-excited-by-the-potential-of-smart-npcs-powered-by-advanced-artificial-intelligence-301747635.html" target="_blank" rel="noopener noreferrer">99 in 100</a> say characters like these make the game better. The layer they think with is already here.</p>
                 <p><strong>Studios run the experiment on every title without meaning to.</strong> The characters players quote back are never the ones with the most lines. Every studio proves the thesis before anyone pitches it.</p>
                 <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built. The model answers today.</p>
                 <p><strong>Every studio wants characters who think.</strong> Wanting them is never the problem; having them is. An open-ended voice loose in your world with your character's name on it is not a feature, it is an incident.</p>
