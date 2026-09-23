@@ -75,3 +75,16 @@
         margin-bottom: 0.9rem;
     }
 }
+
+/* The weight of the door, said once and quietly under the invitation: a
+   signature in the display face, not a banner. It stays at every size — on
+   the smallest screens it is the one fact the first view keeps. */
+.hero-ground {
+    max-width: 34rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--step-0);
+    line-height: 1.5;
+    color: var(--day-ink-soft);
+}

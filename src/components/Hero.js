@@ -22,6 +22,7 @@ export const Hero = () => {
                     <a href="#turn" class="text-link" data-link>See one judgment</a>
                     <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
                 </div>
+                <p class="hero-ground">The nearest company to this market is valued at half a billion dollars. This is the ground floor of the one that comes after it.</p>
             </div>
 
             <div class="hero-vista" aria-hidden="true"></div>
