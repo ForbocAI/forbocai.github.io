@@ -70,7 +70,9 @@ const growOne = (spread) => {
        sticky; the seal's offset inside the head is fixed however far the head
        has ridden. */
     const bodyTop = body.getBoundingClientRect().top - spreadBox.top;
-    const mark = head.querySelector('.chapter-mark');
+    // The seal is the chapter's rune, or — in the crossing — the character's
+    // own sigil standing in the rail where a rune would.
+    const mark = head.querySelector(':scope > .chapter-mark, :scope > .sigil');
     const markBox = mark?.getBoundingClientRect();
     const rootY = markBox ? bodyTop + (markBox.bottom - headBox.top) + 4 : bodyTop;
     const stemX = markBox ? markBox.left + markBox.width / 2 - headBox.left : rail / 2;
@@ -214,8 +216,8 @@ const shade = (grown) => {
                was hidden. The rail is the strip left of the title's own text;
                nothing is written there, so the trunk can stay visible in it
                from wherever the medallion currently is, downward. */
-            const mark = head.querySelector('.chapter-mark');
-            const title = head.querySelector('h2, h1');
+            const mark = head.querySelector(':scope > .chapter-mark, :scope > .sigil');
+            const title = head.querySelector('h2, h1, h3');
             if (mark && title) {
                 const railW = Math.max(0, title.getBoundingClientRect().left - sb.left - 6);
                 const medB = mark.getBoundingClientRect().bottom - sb.top + 3;

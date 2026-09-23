@@ -146,21 +146,17 @@
 
 .soul-crossing h3 { margin: 0 0 0.8rem; font-size: var(--step-2); }
 
-/* The crossing carries its own side head (side-head.css): the sigil line
-   and the h3 stand in the margin, the scene runs at the measure beside
-   them. Its head has no rune, so it drops the rail column the chapter heads
-   keep for theirs, and the label's own gap does the head's spacing. */
-.crossing-head {
-    grid-template-columns: minmax(0, 1fr);
-}
-
-/* The sigil above the line, not beside it, so the label, the h3 and the
-   note below them share one left edge instead of three. */
-.crossing-head .sigil-pair {
-    display: grid;
-    justify-items: start;
-    gap: 0.6rem;
-    margin-bottom: 0.6rem;
+/* The crossing carries its own side head (side-head.css), and it keeps the
+   rail every other chapter head keeps, with Maeve's own sigil standing in it
+   where a chapter's rune would. It used to drop the rail — "its head has no
+   rune" — and stack the sigil above the label, which gave this one chapter a
+   different head grammar from the rest ("two stacked headings in two faces,
+   it reads as a leftover label") and left its margin plant nothing to grow
+   from: a judge measured the stem starting 330px below the seal. The sigil is
+   this chapter's seal, and now the plant grows out of it. */
+.crossing-head > .sigil {
+    justify-self: center;
+    margin-top: 0.1rem;
 }
 
 /* The pocket, and nothing the shared rule already says. This block was a

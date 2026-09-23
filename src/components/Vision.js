@@ -91,8 +91,9 @@ export const Vision = () => {
             <div class="soul-crossing">
                 <div class="chapter-spread">
                 <header class="chapter-head crossing-head">
+                    ${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 46, tone: 'honey' })}
                     <div>
-                        <p class="turn-label sigil-pair">${Sigil({ name: 'Maeve Ashlin, Lanternbough', size: 46, tone: 'honey' })} The night she arrives somewhere else</p>
+                        <p class="turn-label">The night she arrives somewhere else</p>
                         <h3>A different studio's world reads her, and keeps its own counsel</h3>
                         ${Deeper({
                             summary: 'What the harbour town admitted, and what it refused',
