@@ -43,7 +43,7 @@ export const Hero = () => {
                 <ul class="memory-lines">
                     <li style="--i:0">
                         <span class="memory-when">Three sessions back</span> 
-                        <span class="memory-what">You covered the miner's room when he came up short.</span>
+                        <span class="memory-what">You sat with the miner the night he came up short.</span>
                     </li>
                     <li style="--i:1">
                         <span class="memory-when">Two sessions back</span> 
