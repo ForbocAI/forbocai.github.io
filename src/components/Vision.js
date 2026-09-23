@@ -56,9 +56,9 @@ export const Vision = () => {
                          the founders supply fact-checked biographies. -->
                     <dd>
                         <ul class="terms-team">
-                            <li><strong>Sean Dinwiddie</strong> — president, board and lead developer; builds the API, the ForbocAI NPC Protocol, Servitor™ and the TypeScript SDK.</li>
-                            <li><strong>Tiernan Omalley</strong> — corporate partnerships and investor relations; studio and publisher conversations.</li>
-                            <li><strong>Antara Bhavsar</strong> — software developer; the NPC runtime, structured personas across the API and SDK, and the Soul’s encrypted transport.</li>
+                            <li><strong>Sean Dinwiddie</strong> — founder, president and chair; architect of the ForbocAI NPC Protocol, and the builder of the API it runs through, Servitor™ from dataset to release, and the TypeScript and Unreal Engine&nbsp;5 SDKs.</li>
+                            <li><strong>Tiernan Omalley</strong> — corporate partnerships and investor relations; leads the company’s relationships with its corporate partners, venture capital and investors.</li>
+                            <li><strong>Antara Bhavsar</strong> — software developer; built the NPC runtime at the heart of the API, carried structured personas end to end across the API and SDK, retrained the model on Qwen, and now builds the Soul’s encrypted transport.</li>
                         </ul>
                     </dd>
                 </div>

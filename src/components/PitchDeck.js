@@ -203,15 +203,15 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <h4>Sean Dinwiddie</h4>
-                    <p><strong>President, board, lead developer</strong><br/>Builds the API, the ForbocAI NPC Protocol, Servitor™ itself and the TypeScript SDK.</p>
+                    <p><strong>Founder, president and chair</strong><br/>Architect of the ForbocAI NPC Protocol. Built the API it runs through, Servitor™ from dataset to release, and the TypeScript and Unreal Engine 5 SDKs.</p>
                 </div>
                 <div class="team-member">
                     <h4>Tiernan Omalley</h4>
-                    <p><strong>Corporate partnerships &amp; investor relations</strong><br/>Corporate and studio partnerships, publisher conversations, investor relations and the developer community.</p>
+                    <p><strong>Corporate partnerships &amp; investor relations</strong><br/>Leads the company’s relationships with its corporate partners, venture capital and investors.</p>
                 </div>
                 <div class="team-member">
                     <h4>Antara Bhavsar</h4>
-                    <p><strong>Software developer</strong><br/>The NPC runtime: Servitor™’s inference path in the API, structured personas across the API and SDK, the model’s retrain, the Platform game built on the SDK, and now the Soul’s encrypted transport.</p>
+                    <p><strong>Software developer</strong><br/>Built the NPC runtime at the heart of the API, carried structured personas end to end across the API and SDK, retrained the model on Qwen, and brought the Platform game onto the SDK. Now building the Soul’s encrypted transport.</p>
                 </div>
             </div>
             <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category will be bought on. That is what the rate of arrival looks like from inside it.</p>

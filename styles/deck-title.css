@@ -61,7 +61,12 @@
    strength, arched like a window, and tall enough to hold the right column.
    Left as the general rule it rendered as a small washed-out oval floating in
    the middle of the column. */
-.title-slide-world {
+/* `.slide .title-slide-world`, not the bare class: `.slide img` sets
+   `contain` for the deck's diagrams and outranks a single class, so this
+   painting was letterboxed inside its own 4:5 box on every slide shape —
+   floating low with empty frame above it on a desktop, and a 106px
+   thumbnail in a 237px gap on a phone. */
+.slide .title-slide-world {
     width: min(100%, 400px);
     opacity: 1;
     mix-blend-mode: normal;
@@ -102,6 +107,14 @@
         order: -1;
         width: min(60%, 200px);
     }
+
+    /* On a phone the painting runs the width of the slide in its own
+       landscape, rather than a portrait crop of a picture a phone is too
+       narrow to stand beside anything. */
+    .slide .title-slide-world {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+    }
 }
 
 /* Where the screen is short, the title art takes its height from the screen
@@ -109,7 +122,8 @@
    fold on slide 1 — a mark under the headline is worth having, a mark sliced
    in half by the window edge is not. */
 @media (max-height: 820px), (max-width: 760px) {
-    .title-slide-art {
+    .title-slide-art,
+    .slide .title-slide-world {
         max-height: min(34vh, 260px);
     }
 }
