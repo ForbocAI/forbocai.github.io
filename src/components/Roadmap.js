@@ -14,7 +14,7 @@ export const Roadmap = () => {
                 ${ChapterMark({ rune: 'ᛏ' })}
                 <div>
                     <h2>The intelligence expands from inside the world</h2>
-                    <p class="chapter-lead">Servitor™ is the center. The ForbocAI NPC Protocol governs how its judgments enter game law. Engine paths, world exploration and the characters players carry between worlds extend outward from it, and the studio stays the author.</p>
+                    <p class="chapter-lead">Servitor™ is the center. The ForbocAI NPC Protocol governs how its judgments enter game law. Engine paths, world exploration and the characters players carry between worlds open outward from it one threshold at a time, and the studio stays the author.</p>
                 </div>
             </header>
 

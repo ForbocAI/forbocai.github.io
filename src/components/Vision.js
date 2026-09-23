@@ -75,13 +75,13 @@ export const Vision = () => {
                     <h2>Dev born. Player grown. Yours to carry.</h2>
                     ${Deeper({
                         summary: 'What decades of paying for characters prove',
-                        body: `<p class="soul-card"><strong>People pay for characters they can keep, and every one of them is a picture.</strong> A card preserves who a character is. A tradable NPC carries who she becomes with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>`,
+                        body: `<p class="soul-card"><strong>People <a href="https://www.globenewswire.com/news-release/2025/06/05/3094288/28124/en/Trading-Card-Games-Analysis-Report-2025-A-Global-11-8-Billion-Market-by-2030-Driven-by-New-Card-Releases-High-Prices-of-Advanced-TCG-Packs-and-Broad-Age-Appeal-Through-Diverse-Game.html" target="_blank" rel="noopener noreferrer">pay billions</a> for characters they can keep, and every one of them is a picture.</strong> A card preserves who a character is. A tradable NPC carries who she becomes with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>`,
                     })}
                 </div>
             </header>
 
             <div class="chapter-body">
-            <p class="chapter-lead"><strong>No one can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>
+            <p class="chapter-lead"><strong>No one can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself, and more awake for the crossing.</p>
             <p class="soul-decouple"><strong>The player does not carry an image of who Maeve is. They carry the history of who she becomes with them.</strong> A Soul is that history made portable: a player-owned, encrypted record of identity, memory, relationships and temperament, which a receiving title inspects, verifies and admits on its own terms.</p>
             </div>
             </div>

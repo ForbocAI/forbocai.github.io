@@ -16,7 +16,7 @@ export const Technology = () => {
                 ${ChapterMark({ rune: 'ᚠ' })}
                 <div>
                     <h2>Every game system comes alive through the people inside it</h2>
-                    <p class="chapter-lead">Combat creates danger. Quests create direction. Economies create pressure. Character Intelligence turns each one into motive, loyalty, betrayal and choice. AI in games is on its way to <a href="https://www.markettrendsanalysis.com/product/ai-in-games-market/" target="_blank" rel="noopener noreferrer">$12.8&nbsp;billion by 2033</a>, and this is where it becomes someone.</p>
+                    <p class="chapter-lead">Combat creates danger. Quests create direction. Economies create pressure. Character Intelligence floods each one with motive, loyalty, betrayal and choice. AI in games is on its way to <a href="https://www.markettrendsanalysis.com/product/ai-in-games-market/" target="_blank" rel="noopener noreferrer">$12.8&nbsp;billion by 2033</a>, and this is where it becomes someone.</p>
                 </div>
             </header>
 
