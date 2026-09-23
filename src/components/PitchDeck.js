@@ -202,16 +202,16 @@ const slides = [
         content: `
             <div class="team-grid">
                 <div class="team-member">
-                    <h4>Sean Dinwiddie</h4>
+                    <h4><a href="https://www.linkedin.com/in/seandinwiddie/" target="_blank" rel="noopener noreferrer">Sean Dinwiddie</a></h4>
                     <p><strong>Founder, president and chair</strong><br/>Architect of the ForbocAI NPC Protocol. Built the API it runs through, Servitor™ from dataset to release, and the TypeScript and Unreal Engine 5 SDKs.</p>
                 </div>
                 <div class="team-member">
-                    <h4>Tiernan Omalley</h4>
+                    <h4><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan Omalley</a></h4>
                     <p><strong>Corporate partnerships &amp; investor relations</strong><br/>Leads the company’s relationships with its corporate partners, venture capital and investors.</p>
                 </div>
                 <div class="team-member">
-                    <h4>Antara Bhavsar</h4>
-                    <p><strong>Software developer</strong><br/>Built the NPC runtime at the heart of the API, carried structured personas end to end across the API and SDK, retrained the model on Qwen, and brought the Platform game onto the SDK. Now building the Soul’s encrypted transport.</p>
+                    <h4><a href="https://www.linkedin.com/in/antara-bhavsar-74b7a4187/" target="_blank" rel="noopener noreferrer">Antara Bhavsar</a></h4>
+                    <p><strong>Software developer</strong><br/>Built the NPC runtime at the heart of the API, carried structured personas end to end across the API and SDK, retrained the model, and brought the Platform game onto the SDK. Now building the Soul’s encrypted transport.</p>
                 </div>
             </div>
             <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category will be bought on. That is what the rate of arrival looks like from inside it.</p>

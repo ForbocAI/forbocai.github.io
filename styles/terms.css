@@ -85,6 +85,23 @@
     color: var(--night-ink);
 }
 
+/* Each name opens its person's profile. The name keeps its own ink and
+   carries a quiet underline in the warm accent, so it reads as a name that
+   can be followed, not a link that interrupts the list. */
+.terms-team strong a,
+.team-member h4 a {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-color: color-mix(in srgb, var(--copper) 45%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+}
+
+.terms-team strong a:hover,
+.team-member h4 a:hover {
+    text-decoration-color: var(--copper);
+}
+
 /* Side by side once there is room for the question to stand beside its
    answer, which is how a specification sheet reads and how a paragraph does
    not. Intrinsic, so it folds on its own when the column narrows. */
