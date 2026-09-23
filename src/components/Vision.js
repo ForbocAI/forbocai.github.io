@@ -57,8 +57,8 @@ export const Vision = () => {
                     <dd>
                         <ul class="terms-team">
                             <li><strong>Sean Dinwiddie</strong> — president, board and lead developer; builds the API, the ForbocAI NPC Protocol, Servitor™ and the TypeScript SDK.</li>
-                            <li><strong>Tiernan Omalley</strong> — business development; studio partnerships and publisher conversations.</li>
-                            <li><strong>Antara Bhavsar</strong> — software developer; engine integration and Unreal Engine&nbsp;5 parity.</li>
+                            <li><strong>Tiernan Omalley</strong> — corporate partnerships and investor relations; studio and publisher conversations.</li>
+                            <li><strong>Antara Bhavsar</strong> — software developer; the NPC runtime, structured personas across the API and SDK, and the Soul’s encrypted transport.</li>
                         </ul>
                     </dd>
                 </div>

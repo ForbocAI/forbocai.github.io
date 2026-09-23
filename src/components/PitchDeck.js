@@ -207,11 +207,11 @@ const slides = [
                 </div>
                 <div class="team-member">
                     <h4>Tiernan Omalley</h4>
-                    <p><strong>Business development</strong><br/>Studio partnerships, publisher conversations and the developer community.</p>
+                    <p><strong>Corporate partnerships &amp; investor relations</strong><br/>Corporate and studio partnerships, publisher conversations, investor relations and the developer community.</p>
                 </div>
                 <div class="team-member">
                     <h4>Antara Bhavsar</h4>
-                    <p><strong>Software developer</strong><br/>Engine integration, focused on the Unreal Engine 5 plugin and SDK parity across bindings.</p>
+                    <p><strong>Software developer</strong><br/>The NPC runtime: Servitor™’s inference path in the API, structured personas across the API and SDK, the model’s retrain, the Platform game built on the SDK, and now the Soul’s encrypted transport.</p>
                 </div>
             </div>
             <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category will be bought on. That is what the rate of arrival looks like from inside it.</p>
