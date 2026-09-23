@@ -159,9 +159,9 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
                  disc's rim at 0.6 opacity drew "a hard halo ring, like a
                  sticker". -->
             <radialGradient id="${uid}-sun">
-                <stop offset="0" stop-color="var(--lantern)" stop-opacity="0.5"/>
-                <stop offset="0.22" stop-color="var(--lantern)" stop-opacity="0.28"/>
-                <stop offset="0.55" stop-color="var(--honey)" stop-opacity="0.08"/>
+                <stop offset="0" stop-color="var(--lantern)" stop-opacity="0.75"/>
+                <stop offset="0.16" stop-color="var(--lantern)" stop-opacity="0.45"/>
+                <stop offset="0.4" stop-color="var(--honey)" stop-opacity="0.16"/>
                 <stop offset="1" stop-color="var(--honey)" stop-opacity="0"/>
             </radialGradient>
             <radialGradient id="${uid}-pool">
@@ -237,8 +237,10 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
                 <stop offset="1" stop-color="var(--lantern)" stop-opacity="0"/>
             </linearGradient>
         </defs>
-        <circle cx="${round(sx)}" cy="${round(sy)}" r="${round(sr * 4.5)}" fill="url(#${uid}-sun)"/>
-        <circle class="horizon-sun" cx="${round(sx)}" cy="${round(sy)}" r="${round(sr)}" fill="var(--lantern)"/>
+        <circle cx="${round(sx)}" cy="${round(sy)}" r="${round(sr * 6.5)}" fill="url(#${uid}-sun)"/>
+        <!-- Its edge dissolves into its own light: a crisp rim read as a
+             flat disc laid on the sky. -->
+        <circle class="horizon-sun" cx="${round(sx)}" cy="${round(sy)}" r="${round(sr)}" fill="var(--lantern)" filter="url(#${uid}-soft)"/>
         <g filter="url(#${uid}-paint)">
             <path class="horizon-far" d="${far.d}" fill="url(#${uid}-far)" filter="url(#${uid}-soft)"/>
             <path class="horizon-rim" d="${far.top}" fill="none" stroke="url(#${uid}-rim)" stroke-width="${round(Math.max(2, span * 0.1))}" stroke-linejoin="round"/>
