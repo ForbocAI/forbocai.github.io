@@ -33,7 +33,7 @@
  */
 
 import { seedOf, rngOf, round } from './stem/seed.js';
-import { centreline, xAt, stemPath, leaf, branch } from './stem/geometry.js';
+import { centreline, xAt, stemPath, leaf, branch, taper, tendril } from './stem/geometry.js';
 
 /**
  * @param {object} spec
@@ -90,6 +90,18 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
         return { ...branch(rand, xAt(line, y), y, reach, droop, curl), t, y, x0: xAt(line, y) };
     });
 
+    // A side shoot from each major branch, part way along and bending away
+    // from it: a plant forks, and a set of single arcs read as a comb.
+    const droopSign = (b) => (b.tip.y >= b.along(0).y ? 1 : -1);
+    grown.forEach((b) => {
+        const p = b.along(0.35 + rand() * 0.25);
+        const dir = -droopSign(b);
+        const f = branch(rand, p.x, p.y, (b.tip.x - b.along(0).x) * (0.3 + rand() * 0.2), dir * (8 + rand() * 16), curl);
+        const l = (14 + (1 - b.t) * 8) * (0.8 + rand() * 0.4);
+        b.fork = `<path d="${taper(f, 1.4, 0.25)}" fill="currentColor"/>`
+            + `<path d="${leaf(f.tip.x, f.tip.y, f.ang + dir * 0.4, l, l * aspect)}" fill="currentColor"/>`;
+    });
+
     // The leaves of one branch: a few set along it, alternating sides and
     // turned off its line, then one at the tip turned the same way the last
     // of them was not, so no leaf ever points straight on along its branch.
@@ -98,10 +110,19 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
         const out = [];
         for (let k = 0; k < count; k += 1) {
             const p = b.along(0.38 + (k / Math.max(1, count)) * 0.42);
-            out.push(`<path d="${leaf(p.x, p.y, p.ang + side * splay, len * 0.78, len * 0.78 * aspect)}" fill="currentColor"/>`);
+            // No two leaves one size: a stamped leaf was half of "a comb".
+            const l = len * 0.78 * (0.7 + rand() * 0.6);
+            out.push(`<path d="${leaf(p.x, p.y, p.ang + side * splay, l, l * aspect)}" fill="currentColor"/>`);
             side = -side;
         }
-        out.push(`<path${cls} d="${leaf(b.tip.x, b.tip.y, b.ang + side * splay * 0.55, len, len * aspect)}" fill="currentColor"/>`);
+        // The tip carries a small fan — the newest leaves, not yet spread —
+        // rather than one leaf continuing the line.
+        const fan = cls ? 2 + Math.round(rand()) : 1;
+        for (let k = 0; k < fan; k += 1) {
+            const l = len * (k ? 0.55 + rand() * 0.25 : 1);
+            const turn = (k - (fan - 1) / 2) * 0.7 + side * splay * 0.3;
+            out.push(`<path${k ? '' : cls} d="${leaf(b.tip.x, b.tip.y, b.ang + turn, l, l * aspect)}" fill="currentColor"/>`);
+        }
         side = -side;
         return out.join('');
     };
@@ -112,8 +133,9 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
     const nodeAt = (x, y, t) => `<ellipse cx="${round(x)}" cy="${round(y)}" rx="${round(1.4 + (1 - t) * 1.6)}" ry="${round(2 + (1 - t) * 2.2)}" fill="currentColor"/>`;
 
     // Fading to 28% by the foot made the lower half of a 1,300px column
-    // invisible again, which is the half the reviewers measured.
-    const fadeOf = (t) => round(Math.max(0, 1 - t * 0.42));
+    // invisible again, which is the half the reviewers measured; at 58% a
+    // judge still read the plant as withering while the page scrolled.
+    const fadeOf = (t) => round(Math.max(0, 1 - t * 0.24));
 
     /* The beat between the movements.
        Measured first against movements alone, #servitor put out two branches
@@ -131,25 +153,28 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
         const b = branch(rand, x0, y, reach, droop, curl);
         return `<g class="stem-minor" opacity="${round(fadeOf(t) * 0.72)}">
             ${nodeAt(x0, y, t * 1.4)}
-            <path d="${b.path}" fill="none" stroke="currentColor" stroke-width="0.85" stroke-linecap="round"/>
-            ${leavesOf(b, 11 + (1 - t) * 6, '', 0)}
+            <path d="${taper(b, 1.5, 0.3)}" fill="currentColor"/>
+            ${rand() < 0.4
+        ? `<path d="${tendril(b.tip.x, b.tip.y, b.ang, 4 + rand() * 4, droopSign(b))}" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/>`
+        : leavesOf(b, (15 + (1 - t) * 7) * (0.75 + rand() * 0.5), '', 1 + Math.round(rand()))}
         </g>`;
     }).join('');
 
     const branches = grown.map((b, i) => `
         <g class="stem-branch" data-movement="${i}" opacity="${fadeOf(b.t)}">
             ${nodeAt(b.x0, b.y, b.t)}
-            <path d="${b.path}" fill="none" stroke="currentColor" stroke-width="${round(1.05 + (1 - b.t) * 0.75)}" stroke-linecap="round"/>
+            <path d="${taper(b, 2.2 + (1 - b.t) * 1.4, 0.4)}" fill="currentColor"/>
+            ${b.fork}
             ${b.hairs.map((h) => `<path d="${h}" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.7"/>`).join('')}
-            ${leavesOf(b, 14 + (1 - b.t) * 12, ' class="stem-node"')}
+            ${leavesOf(b, 20 + (1 - b.t) * 14, ' class="stem-node"')}
         </g>`).join('');
 
     return `<svg class="stem-svg" width="${round(width)}" height="${round(height)}" viewBox="0 0 ${round(width)} ${round(height)}" fill="none" aria-hidden="true" focusable="false">
         <defs>
             <linearGradient id="${uid}" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0" stop-color="currentColor" stop-opacity="0.92"/>
-                <stop offset="0.46" stop-color="currentColor" stop-opacity="0.58"/>
-                <stop offset="1" stop-color="currentColor" stop-opacity="0.06"/>
+                <stop offset="0.46" stop-color="currentColor" stop-opacity="0.72"/>
+                <stop offset="1" stop-color="currentColor" stop-opacity="0.3"/>
             </linearGradient>
         </defs>
         <path d="${stemPath(line, height, base)}" fill="url(#${uid})"/>

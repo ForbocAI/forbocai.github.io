@@ -130,3 +130,37 @@ export const branch = (rand, x, y, reach, droop, curl = 0.42) => {
     });
     return { path, hairs, ang, along, tip: { x: ex, y: ey } };
 };
+
+/**
+ * A branch as a tapered shape rather than a stroke of one weight: full where
+ * it leaves the trunk and thinning to its tip, the way the trunk itself does.
+ * One weight end to end was what made each branch "a wire ending in a leaf".
+ */
+export const taper = (b, w0, w1 = 0.25) => {
+    const n = 14;
+    const pts = Array.from({ length: n + 1 }, (_, i) => {
+        const t = i / n;
+        const p = b.along(t);
+        const hw = (w0 * (1 - t) + w1 * t) / 2;
+        return { p, nx: -Math.sin(p.ang) * hw, ny: Math.cos(p.ang) * hw };
+    });
+    const a = pts.map(({ p, nx, ny }) => `${round(p.x + nx)},${round(p.y + ny)}`);
+    const z = [...pts].reverse().map(({ p, nx, ny }) => `${round(p.x - nx)},${round(p.y - ny)}`);
+    return `M${a.join('L')}L${z.join('L')}Z`;
+};
+
+/**
+ * A tendril: the tip of a shoot that found nothing to hold, winding into a
+ * loose spiral turned the way it was already bending.
+ */
+export const tendril = (x, y, ang, r, dir) => {
+    const turns = 1.4;
+    const n = 20;
+    const pts = Array.from({ length: n + 1 }, (_, i) => {
+        const t = i / n;
+        const a = ang + dir * t * turns * Math.PI * 2;
+        const rr = r * (1 - t * 0.8);
+        return `${round(x + Math.cos(ang) * r * t * 1.2 + Math.cos(a + dir * Math.PI / 2) * rr - Math.cos(ang + dir * Math.PI / 2) * r)},${round(y + Math.sin(ang) * r * t * 1.2 + Math.sin(a + dir * Math.PI / 2) * rr - Math.sin(ang + dir * Math.PI / 2) * r)}`;
+    });
+    return `M${round(x)},${round(y)}L${pts.join('L')}`;
+};
