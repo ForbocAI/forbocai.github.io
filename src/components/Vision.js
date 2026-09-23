@@ -130,7 +130,7 @@ export const Vision = () => {
 
             <aside class="soul-economy">
                 <h3>What $FAI is</h3>
-                <p><strong>A character a player carries is a Soul</strong>: her memory, her persona and the history she earned, in a record the player owns. <strong>$FAI is the currency that record lives in.</strong> Souls are minted and grown with it and change hands in it. Creators shape characters, studios welcome them into their worlds, and every trade returns the protocol its share.</p>
+                <p><strong>A character a player carries is a Soul</strong>: her memory, her persona and the history she earned, in a record the player owns. <strong>$FAI is the currency that record lives in.</strong> Souls are minted and grown with it and change hands in it. Creators shape her, studios welcome her, players carry her, and every trade of her runs on $FAI.</p>
             </aside>
         </div>
     </section>
