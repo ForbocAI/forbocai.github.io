@@ -208,7 +208,7 @@ const slides = [
                 </div>
                 <div class="team-member">
                     <h4><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan Omalley</a></h4>
-                    <p><strong>Corporate partnerships &amp; investor relations</strong><br/>Leads the company’s relationships with its corporate partners, venture capital and investors.</p>
+                    <p><strong>Co-founder · Corporate partnerships &amp; investor relations</strong><br/>Leads the company’s relationships with its corporate partners, venture capital and investors.</p>
                 </div>
                 <div class="team-member">
                     <h4><a href="https://www.linkedin.com/in/antara-bhavsar-74b7a4187/" target="_blank" rel="noopener noreferrer">Antara Bhavsar</a></h4>
