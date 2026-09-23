@@ -53,7 +53,7 @@ export const Mission = () => {
             <p class="mission-destination"><strong>Every company gets one destination. Ours is a world with no non-player characters in it.</strong> The innkeeper deciding what a latecomer is owed. The miner who speaks up for a debt nobody asked him to mention. The child still deciding what your choice made you. Four hundred of them, not one repeating.</p>
 
             <p class="mission-felt"><strong>Full strength is a whole settlement, no two alike.</strong> A captain disobeys because her authored loyalty outweighed the order. A town receives you differently in spring for the winter you walked away from. Servitor™ supplies every one of those decisions; your faction system still rules what they cost.</p>
-            <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade. Yours included, whether or not you are in it.</p>
+            <p class="mission-felt">The first cast that answers the question nobody wrote becomes the reference for a decade. Every cast after it is measured against it, yours too.</p>
             </div>
             </div>
         </div>
