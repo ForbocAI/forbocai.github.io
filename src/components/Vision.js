@@ -49,11 +49,9 @@ export const Vision = () => {
                     <dd>TypeScript and native Unreal Engine&nbsp;5 paths. Unity and Godot follow, each released when it holds the same contract. Memory writes to storage your studio owns and can read without us, and every action arrives as a proposal your game is free to refuse.</dd>
                 </div>
                 <div>
-                    <dt>Who is building it</dt>
-                    <!-- Current roles only. brochure-commercial-claim-authority.md
-                         §12 marks current roles publishable and blocks any
-                         prior-company, prior-title or prior-model claim until
-                         the founders supply fact-checked biographies. -->
+                    <dt>The three who hold it</dt>
+                    <!-- brochure-commercial-claim-authority.md §12 publishes these
+                         roles and biographies; the order is fixed. -->
                     <dd>
                         <ul class="terms-team">
                             <li><strong><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan O’Malley</a></strong> — co-founder; corporate partnerships and investor relations. Opens markets for a living — cybersecurity and technology at Framework Security, Hays and IDMWORKS — with an MBA underway at Rice Business.</li>
