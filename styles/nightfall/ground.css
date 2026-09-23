@@ -38,9 +38,17 @@
        single-row step from cream (221,198,159) to clay (187,126,95), about 50
        luminance levels, full width, at the one boundary the whole design is
        about. A reviewer measured a 144-level cliff here and could not tell
-       whether it was a cut; it was. The phone rule already keeps the two
-       equal, at 8rem each. */
-    margin-top: 26rem;
+       whether it was a cut; it was.
+
+       One number for both, and it follows the screen. The phone had its own
+       pair at 8rem, which kept them equal but made the sunset 128px: both
+       reviewers read it as "a salmon stripe, terracotta to brown to green in
+       about 70px" and "a 60px bruised band under the header". A sunset is as
+       tall as the sky it is seen in, so this is a share of the viewport,
+       floored where it stops being an event and capped where it becomes a
+       void — 26rem at a desktop, about a third of a phone. */
+    --dusk-h: clamp(14rem, 38svh, 26rem);
+    margin-top: var(--dusk-h);
     /* The lantern halos are wider than the page on purpose. Clip only the
        horizontal axis, so light still spills up into the sunset and down into
        the footer without the halos widening the document. */
@@ -57,8 +65,8 @@
        design language actually happens. It was 14rem carrying a 161-point
        luminance step, which reads as two websites stapled together rather than
        as a sunset. At 26rem the ramp has room to be an evening. */
-    top: -26rem;
-    height: 26rem;
+    top: calc(-1 * var(--dusk-h, 26rem));
+    height: var(--dusk-h, 26rem);
     /* Parchment straight to moss is a luminance ramp with no chromatic event,
        which reads as fog. Passing through petal clay and copper makes it an
        evening, and the stops stay warm until it is dark enough for the green

@@ -52,6 +52,11 @@
 #mission {
     background-color: var(--day-bg-deep);
     --chapter-base: var(--day-bg-deep);
+    /* The hero has no ground of its own; it stands on the day ramp above, which
+       is at about --day-1 where the hero ends. Without this the first seam on
+       the page was the one the other two already dissolve: (241,231,212) over
+       (235,221,192) in one row, "a tide line across the landing screen". */
+    --seam-from: var(--day-1);
 }
 
 #servitor {

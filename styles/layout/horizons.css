@@ -52,21 +52,16 @@
     height: clamp(3rem, 6vw, 5.5rem);
     pointer-events: none;
     z-index: 1;
-    /* The lamplight is an ellipse centred on the seam, so it needs no mask to
-       fade at the sides — and a mask here would also have cut the dissolve
-       layer under it, leaving the colour step standing at both screen edges
-       outside the masked middle. */
-    background:
-        /* Centred BELOW the edge, so the seam gets the ellipse's shoulder
-           rather than its core. At `at 50% 0%` the 22% stop landed on the
-           element's first pixel row and painted a bright line along the
-           whole boundary — the lamplight was making the ruled edge it
-           replaced. */
-        radial-gradient(ellipse 64% 130% at 50% -18%,
-            color-mix(in srgb, var(--lantern) 26%, transparent) 0%,
-            color-mix(in srgb, var(--honey) 10%, transparent) 46%,
-            transparent 100%),
-        linear-gradient(180deg, var(--seam-from, transparent) 0%, transparent 100%);
+    /* The dissolve only. There was a lamplight ellipse here too, and it was
+       the shelf two reviewers kept measuring at the top of every chapter —
+       "each section starts with a lighter band with a sharp top edge, so the
+       page reads as stacked slabs": (23,33,16) to (71,75,52) at the investors
+       seam. Light painted on the lower chapter alone ends at that chapter's
+       first row, and a pool of light with nothing on the other side of its
+       edge draws the edge. Measured across the full width with it and
+       without: the night seams went from 11-13 levels in one row to about 1.
+       The night is one ground now; a seam in it should be invisible. */
+    background: linear-gradient(180deg, var(--seam-from, transparent) 0%, transparent 100%);
 }
 
 /* There was a glint along the seam — a 1px line of lantern rising out of

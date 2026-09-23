@@ -54,19 +54,9 @@
         margin-top: 0;
     }
 
-    /* 14rem of empty horizon is a quarter of a phone screen. Keep the sunset,
-       shorten it. Not on a page that IS the night: ledger.css zeroes this for
-       .nightfall-page, and this rule — same specificity, later file — was
-       quietly putting 128px of parchment back under the header on /#scenes at
-       phone widths. Third time this cascade shape has bitten this project. */
-    .nightfall:not(.nightfall-page) {
-        margin-top: 8rem;
-    }
-
-    .nightfall-edge {
-        top: -8rem;
-        height: 8rem;
-    }
+    /* The phone's sunset used to be fixed at 8rem here. It follows the screen
+       now, from --dusk-h in styles/nightfall/ground.css: at 8rem it was 128px
+       of sunset and both reviewers read it as a stripe, not an evening. */
 
     /* Five entries in two columns leaves the fifth alone on a third row. */
     .doc-contents ol {

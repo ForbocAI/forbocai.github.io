@@ -127,10 +127,14 @@
 }
 
 .nightfall .chapter:nth-of-type(3n+2) {
-    --colony-hue: var(--spore);
-    /* Spore violet at the same luminance as the cyan above it, so the rarer
-       colony is a different COLOUR and not a brighter patch. */
-    --colony-deep: #2a1f47;
+    --colony-hue: var(--biolume-core);
+    /* A greener colony at the same luminance as the cyan above it, so the rarer
+       one is a different COLOUR and not a brighter patch. It was spore violet,
+       and two reviewers found it where it lands — down the right edge — as "a
+       cold violet strip, (40,37,58); that hue is not moss and not lantern"
+       and "an off-palette wash that belongs to no light source and fights the
+       moss". Grown light is green; the two colonies differ inside that family. */
+    --colony-deep: #0f3325;
     --colony-x: 100%;
     --colony-span: 1750px;
     --colony-ty: 17%;
@@ -188,7 +192,13 @@
         color-mix(in srgb, var(--moss-hue) 46%, transparent) 0%,
         color-mix(in srgb, var(--moss-hue) 17%, transparent) 44%,
         transparent 72%);
-    --moss-hue: var(--creek);
+    /* Leaf-green, not creek. Pure --creek is a blue (hue about 195), and on
+       warm sand a blue shade is damp, not moss: both reviewers found it as "a
+       blue-grey bloom on the parchment that reads as damp, not as dusk" and "a
+       grey-teal stain". A quarter of creek in the sage keeps the colony cool
+       enough to separate from parchment's own hue, which is why sage alone was
+       not enough, while leaving it green. */
+    --moss-hue: color-mix(in oklab, var(--sage) 75%, var(--creek));
     --moss-x: 2%;
     --moss-span: 1500px;
     --moss-ty: 38%;
