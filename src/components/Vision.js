@@ -42,7 +42,7 @@ export const Vision = () => {
             <dl class="terms">
                 <div>
                     <dt>What it costs</dt>
-                    <dd>The price comes with the contract that binds what counts as a billable judgment; the <a href="#whitepaper" data-link>whitepaper</a> sets out the terms.</dd>
+                    <dd>Studios pay in ordinary money; the price is named to the worlds that come through first.</dd>
                 </div>
                 <div>
                     <dt>What it runs through</dt>
