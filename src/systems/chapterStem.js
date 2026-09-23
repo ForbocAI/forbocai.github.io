@@ -205,6 +205,23 @@ const shade = (grown) => {
             // the head rode down over it.
             stem.style.setProperty('--cut-a', `${Math.round(top)}px`);
             stem.style.setProperty('--cut-b', `${Math.round(bottom)}px`);
+
+            /* But not in the rail. The band above hid the whole head's height,
+               including the strip directly under the seal, so at a chapter's
+               start the plant appeared 170px below the medallion it grows
+               from: "not attached to the medallion anywhere", with branches
+               showing as "orphaned arcs, no stem" wherever the trunk above them
+               was hidden. The rail is the strip left of the title's own text;
+               nothing is written there, so the trunk can stay visible in it
+               from wherever the medallion currently is, downward. */
+            const mark = head.querySelector('.chapter-mark');
+            const title = head.querySelector('h2, h1');
+            if (mark && title) {
+                const railW = Math.max(0, title.getBoundingClientRect().left - sb.left - 6);
+                const medB = mark.getBoundingClientRect().bottom - sb.top + 3;
+                stem.style.setProperty('--rail-w', `${Math.round(railW)}px`);
+                stem.style.setProperty('--med-b', `${Math.round(medB)}px`);
+            }
         });
     });
 };

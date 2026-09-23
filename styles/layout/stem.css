@@ -19,12 +19,28 @@
        defaults sit above the layer, which leaves everything visible. */
     --cut-a: -200px;
     --cut-b: -120px;
-    -webkit-mask-image: linear-gradient(180deg,
-        #000 calc(var(--cut-a) - 22px), transparent var(--cut-a),
-        transparent var(--cut-b), #000 calc(var(--cut-b) + 22px));
-    mask-image: linear-gradient(180deg,
-        #000 calc(var(--cut-a) - 22px), transparent var(--cut-a),
-        transparent var(--cut-b), #000 calc(var(--cut-b) + 22px));
+    /* And a second layer, added to the first: the rail left of the title's
+       text, visible from the medallion's current bottom edge down. Together
+       they show everything outside the head's band, plus the trunk growing out
+       from under the seal wherever the seal has ridden to. */
+    --rail-w: 0px;
+    --med-b: 0px;
+    -webkit-mask-image:
+        linear-gradient(180deg,
+            #000 calc(var(--cut-a) - 22px), transparent var(--cut-a),
+            transparent var(--cut-b), #000 calc(var(--cut-b) + 22px)),
+        linear-gradient(180deg, transparent var(--med-b), #000 calc(var(--med-b) + 10px));
+    mask-image:
+        linear-gradient(180deg,
+            #000 calc(var(--cut-a) - 22px), transparent var(--cut-a),
+            transparent var(--cut-b), #000 calc(var(--cut-b) + 22px)),
+        linear-gradient(180deg, transparent var(--med-b), #000 calc(var(--med-b) + 10px));
+    -webkit-mask-size: 100% 100%, var(--rail-w) 100%;
+    mask-size: 100% 100%, var(--rail-w) 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-composite: source-over;
+    mask-composite: add;
     /* The plant is ground, not ink. It stands behind a title that rides over
        it as the reader scrolls, and a hairline crossing a 34px glyph has to
        be invisible against the sentence and present against the page. */

@@ -32,139 +32,8 @@
  * viewport"; two chapters cannot share a stem.
  */
 
-/** A small deterministic hash, so an id always seeds the same plant. */
-const seedOf = (text) => {
-    let h = 2166136261;
-    for (let i = 0; i < text.length; i += 1) {
-        h ^= text.charCodeAt(i);
-        h = Math.imul(h, 16777619);
-    }
-    return h >>> 0;
-};
-
-/** Mulberry32 — the same generator the Sigil grows from. */
-const rngOf = (seed) => () => {
-    seed |= 0;
-    seed = (seed + 0x6d2b79f5) | 0;
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-};
-
-const round = (n) => Math.round(n * 10) / 10;
-
-/**
- * The centreline.
- *
- * A drawn stem is never plumb. It leans by a few pixels over its whole length
- * and corrects, which is the entire difference between a plant and a border-
- * left. The lean is a fraction of the column, not a pixel count, so a narrow
- * column gets a subtle one and a wide column a generous one without a number
- * being chosen for either.
- */
-const centreline = (rand, x0, height, sway) => {
-    const steps = Math.max(6, Math.round(height / 120));
-    const phase = rand() * Math.PI * 2;
-    const turns = 1.1 + rand() * 1.4;
-    return Array.from({ length: steps + 1 }, (_, i) => {
-        const t = i / steps;
-        return {
-            t,
-            y: round(t * height),
-            // Damped, so the stem is at its most wayward in the middle and
-            // arrives straight — a stem is held at the base and tapers to
-            // nothing, so it cannot swing at either end.
-            //
-            // And it leans RIGHT, into the empty column, twice as far as it
-            // leans left. Symmetric, a 52px swing carried the trunk 40px left
-            // of its own column: a reviewer measured it riding a card's border
-            // at x=169 and running to within 8px of the screen edge on a
-            // tablet. Left of the stem is the page's edge; right of it is the
-            // ground the plant is there to fill.
-            x: round(x0 + ((Math.sin(phase + t * Math.PI * turns) + 0.35) / 1.35) * sway * Math.sin(t * Math.PI)),
-        };
-    });
-};
-
-/** The x of the centreline at an arbitrary height, by linear interpolation. */
-const xAt = (line, y) => {
-    const after = line.findIndex((p) => p.y >= y);
-    if (after <= 0) return line[0].x;
-    const a = line[after - 1];
-    const b = line[after];
-    const k = (y - a.y) / Math.max(1, b.y - a.y);
-    return a.x + (b.x - a.x) * k;
-};
-
-/**
- * The stem as a filled shape rather than a stroked line, because a stroke
- * cannot taper. Down one side at a falling half-width and back up the other:
- * full weight where the chapter starts, nothing where it ends, which is the
- * venation rule the rest of the page already keeps.
- */
-const stemPath = (line, height, base) => {
-    const halfAt = (t) => base * (1 - t) ** 1.35 + 0.12;
-    const down = line.map((p) => `${round(p.x - halfAt(p.t))},${p.y}`);
-    const up = [...line].reverse().map((p) => `${round(p.x + halfAt(p.t))},${p.y}`);
-    return `M${down.join('L')}L${up.join('L')}Z`;
-};
-
-/**
- * A leaf, drawn along a direction.
- *
- * The first version ended every branch in a filled dot, and a reviewer read the
- * whole drawing correctly for what that grammar is: "a near-horizontal
- * single-weight hairline terminating in a solid filled dot — that is the visual
- * grammar of a leader line, so my eye follows each one looking for the thing it
- * points at, and there is nothing there". Two of the dots landed inside words
- * and were read as an interpunct in the product's own name. A leaf points at
- * nothing and asks to be followed nowhere.
- */
-const leaf = (x, y, ang, len, wid) => {
-    const dx = Math.cos(ang);
-    const dy = Math.sin(ang);
-    const px = -dy;
-    const py = dx;
-    const tx = round(x + dx * len);
-    const ty = round(y + dy * len);
-    const m = 0.38;
-    const a = `${round(x + dx * len * m + px * wid)},${round(y + dy * len * m + py * wid)}`;
-    const b = `${round(x + dx * len * m - px * wid)},${round(y + dy * len * m - py * wid)}`;
-    return `M${round(x)},${round(y)}Q${a} ${tx},${ty}Q${b} ${round(x)},${round(y)}Z`;
-};
-
-/**
- * A branch, reaching toward the text it marks.
- *
- * It reaches RIGHT — across the empty column, toward the body — because that
- * is the direction the thing it annotates is in, and because that is where the
- * dead ground is. Length varies per branch so the column's right edge is
- * ragged; a set of equal branches would be a bar chart.
- *
- * It also RISES or FALLS by a real amount rather than running level. Level
- * hairlines across a column of text are struck-through text, which is exactly
- * what a reviewer saw: "a hairline runs horizontally through the second line of
- * the title", "a strikethrough through a clickable accordion label".
- */
-const branch = (rand, x, y, reach, droop, curl = 0.42) => {
-    const cx = x + reach * curl;
-    const cy = y - droop * 0.5;
-    const ex = round(x + reach);
-    const ey = round(y + droop);
-    const path = `M${round(x)},${round(y)}Q${round(cx)},${round(cy)} ${ex},${ey}`;
-    const ang = Math.atan2(ey - cy, ex - cx);
-    // One or two filaments off the branch, which is what makes it read as
-    // something grown rather than a leader line on a diagram.
-    const hairs = Array.from({ length: 1 + Math.round(rand()) }, () => {
-        const t = 0.45 + rand() * 0.4;
-        const hx = round(x + reach * t);
-        const hy = round(y + droop * t - 1);
-        const len = round(reach * (0.06 + rand() * 0.1));
-        const lift = round(-3 - rand() * 7);
-        return `M${hx},${hy}q${round(len * 0.5)},${round(lift * 0.7)} ${len},${lift}`;
-    });
-    return { path, hairs, ang, tip: { x: ex, y: ey } };
-};
+import { seedOf, rngOf, round } from './stem/seed.js';
+import { centreline, xAt, stemPath, leaf, branch } from './stem/geometry.js';
 
 /**
  * @param {object} spec
@@ -194,11 +63,18 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
        identical almond leaf, identical easing on every arc. It reads as one
        generator at different settings, which is precisely the procedural tell
        the brief is trying to avoid." The seed now also chooses the leaf's
-       shape, how hard a branch curls, and whether its tip carries one leaf or
-       a forked pair — the three things an eye uses to tell two plants apart. */
-    const aspect = 0.2 + rand() * 0.32;
+       shape, how hard a branch curls, how far its leaves turn off it and how
+       many it carries — what an eye uses to tell two plants apart. */
+    const aspect = 0.34 + rand() * 0.26;
     const curl = 0.28 + rand() * 0.34;
-    const paired = rand() < 0.5;
+    // How far a leaf turns off its branch, and how many sit along each branch
+    // before the tip. These replace a forked pair at the tip, which both
+    // reviewers read as the opposite of a plant: "wire ending in an
+    // arrowhead — it reads as a cursor", "leaves are spear-tips on
+    // fishing-line arcs". A leaf that continues its branch's own line IS a
+    // spear point; a leaf set at an angle to its stem is a leaf.
+    const splay = 0.62 + rand() * 0.38;
+    const alongCount = 1 + Math.round(rand() * 1.4);
     // Thicker on a tall chapter: a plant that carried more is thicker at the
     // base, and this is the one place a proportion should come from the
     // content rather than from a constant.
@@ -214,11 +90,20 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
         return { ...branch(rand, xAt(line, y), y, reach, droop, curl), t, y, x0: xAt(line, y) };
     });
 
-    // The leaf at a tip: one, or a forked pair splayed either side of the
-    // branch's own direction, in the plant's own proportions.
-    const leavesAt = (tip, ang, len, cls = '') => {
-        const one = (a) => `<path${cls} d="${leaf(tip.x, tip.y, a, len, len * aspect)}" fill="currentColor"/>`;
-        return paired ? one(ang - 0.42) + one(ang + 0.36) : one(ang);
+    // The leaves of one branch: a few set along it, alternating sides and
+    // turned off its line, then one at the tip turned the same way the last
+    // of them was not, so no leaf ever points straight on along its branch.
+    let side = rand() < 0.5 ? -1 : 1;
+    const leavesOf = (b, len, cls = '', count = alongCount) => {
+        const out = [];
+        for (let k = 0; k < count; k += 1) {
+            const p = b.along(0.38 + (k / Math.max(1, count)) * 0.42);
+            out.push(`<path d="${leaf(p.x, p.y, p.ang + side * splay, len * 0.78, len * 0.78 * aspect)}" fill="currentColor"/>`);
+            side = -side;
+        }
+        out.push(`<path${cls} d="${leaf(b.tip.x, b.tip.y, b.ang + side * splay * 0.55, len, len * aspect)}" fill="currentColor"/>`);
+        side = -side;
+        return out.join('');
     };
 
     // A node where a branch leaves the trunk. "A branch with no node is not
@@ -247,7 +132,7 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
         return `<g class="stem-minor" opacity="${round(fadeOf(t) * 0.72)}">
             ${nodeAt(x0, y, t * 1.4)}
             <path d="${b.path}" fill="none" stroke="currentColor" stroke-width="0.85" stroke-linecap="round"/>
-            ${leavesAt(b.tip, b.ang, 7 + (1 - t) * 5)}
+            ${leavesOf(b, 11 + (1 - t) * 6, '', 0)}
         </g>`;
     }).join('');
 
@@ -256,7 +141,7 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
             ${nodeAt(b.x0, b.y, b.t)}
             <path d="${b.path}" fill="none" stroke="currentColor" stroke-width="${round(1.05 + (1 - b.t) * 0.75)}" stroke-linecap="round"/>
             ${b.hairs.map((h) => `<path d="${h}" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.7"/>`).join('')}
-            ${leavesAt(b.tip, b.ang, 14 + (1 - b.t) * 12, ' class="stem-node"')}
+            ${leavesOf(b, 14 + (1 - b.t) * 12, ' class="stem-node"')}
         </g>`).join('');
 
     return `<svg class="stem-svg" width="${round(width)}" height="${round(height)}" viewBox="0 0 ${round(width)} ${round(height)}" fill="none" aria-hidden="true" focusable="false">
