@@ -22,7 +22,7 @@ export const Investors = () => {
 
             <div class="chapter-body investors-body">
                 <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earns a yes. Nobody scheduled it, and it waits on no one's roadmap. The only open question is who builds the layer they think with.</p>
-                <p><strong>You run the experiment yourself, on every title, without meaning to.</strong> The characters players quote back to you are never the ones with the most lines. You prove the thesis before anyone pitches it to you.</p>
+                <p><strong>Studios run the experiment on every title without meaning to.</strong> The characters players quote back are never the ones with the most lines. Every studio proves the thesis before anyone pitches it.</p>
                 <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built and you can read it today. The model answers today.</p>
                 <p><strong>Nobody has to be talked into wanting this.</strong> Every studio in the industry wants characters who think, and wanting it is never the problem. Having it is. An open-ended voice loose in your world with your character's name on it is not a feature, it is an incident.</p>
                 <p><strong>So neither half ships without the other.</strong> A model that reasons like a person and cannot be stopped from moving your state is a liability, and a boundary with nothing behind it is a config file. Servitor™ needs the Protocol's law to enter a world at all. That is why they are one thing, and why the thing is served rather than shipped loose.</p>
