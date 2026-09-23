@@ -30,6 +30,7 @@ export const Mission = () => {
                     <h2>Someone is home in the world you built</h2>
                     <div class="mission-turn">
                         <p class="mission-turn-label">Character Intelligence</p>
+                        <p class="mission-turn-punch">Not what a model knows. Who a character is.</p>
                         ${Deeper({
                             summary: 'Why a general model cannot do this, and what it costs a studio today',
                             body: `<p><strong>Servitor™ is how open-ended intelligence arrives as your person instead of as itself.</strong> That intelligence is older and larger than any game, and already awake. It speaks only as her, through the door the Protocol keeps.</p>
