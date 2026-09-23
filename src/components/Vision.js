@@ -77,14 +77,14 @@ export const Vision = () => {
                     <h2>Dev born. Player grown. Yours to carry.</h2>
                     ${Deeper({
                         summary: 'What decades of paying for characters already proved',
-                        body: `<p class="soul-card"><strong>People have spent decades paying for characters they can keep, and every one of them was a picture.</strong> A card preserves who a character is. A tradable NPC carries who she became with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>`,
+                        body: `<p class="soul-card"><strong>People pay for characters they can keep, and every one of them is a picture.</strong> A card preserves who a character is. A tradable NPC carries who she becomes with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>`,
                     })}
                 </div>
             </header>
 
             <div class="chapter-body">
             <p class="chapter-lead"><strong>No one can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>
-            <p class="soul-decouple"><strong>The player does not carry an image of who Maeve was. They carry the history of who she became with them.</strong> A Soul is that history made portable: a player-owned, encrypted record of identity, memory, relationships and temperament, which a receiving title inspects, verifies and admits on its own terms.</p>
+            <p class="soul-decouple"><strong>The player does not carry an image of who Maeve is. They carry the history of who she becomes with them.</strong> A Soul is that history made portable: a player-owned, encrypted record of identity, memory, relationships and temperament, which a receiving title inspects, verifies and admits on its own terms.</p>
             </div>
             </div>
 
@@ -115,7 +115,7 @@ export const Vision = () => {
                 </header>
                 <div class="chapter-body">
                 <p class="soul-market">Two years later, a different studio, a different engine, a harbour town that has never heard of Lanternbough. The player brings her. The receiving world opens the record and decides what it is willing to know.</p>
-                <p class="soul-market"><strong>The harbour town threw half of her away, and she is still herself.</strong> It refused her brother — no such man in this canon — and kept his request, because that had become hers. Then a stranger on the harbour road asks her to pass something along.</p>
+                <p class="soul-market"><strong>The harbour town throws half of her away, and she is still herself.</strong> It refuses her brother — no such man in this canon — and keeps his request, because that has become hers. Then a stranger on the harbour road asks her to pass something along.</p>
                 <pre class="turn-code"><code>// a studio that never heard of Lanternbough
 // legalActions: ['tell', 'refuse']
 {
@@ -123,7 +123,7 @@ export const Vision = () => {
   reasoningText: "I do not know this man and I owe him nothing either way. But what he wants passed along was given to me to keep, by someone this harbour has never heard of, before I ever stood on this road. A place does not unmake a promise by not knowing about it.",
   action: { type: 'refuse' },
 }</code></pre>
-                <p class="soul-market"><strong>No character born in that town could have reached that.</strong> She refused a harbour man for the sake of one this world would not admit — inside a law this studio wrote, in a scene neither studio staged. The record was never luggage. It is what she thinks with, and no studio on earth can sell you a character who was made somewhere else and still walked in.</p>
+                <p class="soul-market"><strong>No character born in that town reaches that.</strong> She refuses a harbour man for the sake of one this world does not admit — inside a law this studio wrote, in a scene neither studio staged. The record is not luggage. It is what she thinks with, and no studio on earth can sell you a character made somewhere else who still walks in.</p>
                 </div>
                 </div>
             </div>
