@@ -102,7 +102,7 @@ export const TurnWalkthrough = () => `
 }</code></pre>
                 ${Deeper({
                     summary: 'How a narrative lead approves a cast before you ship',
-                    body: `<p class="turn-note"><strong>Your narrative lead approves the cast before you ship, by reading where it argued with itself.</strong> Every turn is a payload, so a cast re-runs against a corpus of them sorted by disagreement — judgments that went against the document, characters drifting toward one another, refusals that stopped refusing. Nobody reads four hundred people's reasoning. They read the exceptions, the way an editor reads a diff. One build holds across that window, so the cast you signed is the cast that answers on launch day.</p>`,
+                    body: `<p class="turn-note"><strong>Your narrative lead approves the cast before you ship, by reading where it argued with itself.</strong> Every turn is a payload, so a cast re-runs against a corpus of them sorted by disagreement — judgments that went against the document, characters drifting toward one another, refusals that stopped refusing. Nobody reads four hundred people's reasoning. They read the exceptions, the way an editor reads a diff. Release pinning, the Standard’s seventh term, holds one build across that window, so the cast you signed is the cast that answers on launch day.</p>`,
                 })}
                 <p class="turn-note"><strong>Your writers do not edit her lines. They edit what she reasons from.</strong> Every turn hands back her reason in her own words, and that is what your narrative lead reviews. A line that lands wrong is usually a missing loyalty, or a constraint the document implied instead of stating. Change the document, run the scene, read the reason — a morning, not a milestone.</p>
                 ${Deeper({
@@ -150,7 +150,7 @@ export const TurnWalkthrough = () => `
                     <p class="turn-note">She has <code>offer_item</code> on the table and does not take it.</p>
                     ${Deeper({
                         summary: 'How your QA files a bug against a line nobody wrote',
-                        body: `<p class="turn-note">They attach the payload, not a video. Every judgment is a function of four things your build already holds — the persona document, the memory excerpt, the world context and the legal action set — against one recorded model and runtime build. QA files the payload and it replays. A tester who cannot reproduce a line cannot file it, which is why the turn is a record before it is a performance. One build holds across your ship window, so that record stays stable through certification.</p>`,
+                        body: `<p class="turn-note">They attach the payload, not a video. Every judgment is a function of four things your build already holds — the persona document, the memory excerpt, the world context and the legal action set — against one recorded model and runtime build. QA files the payload and it replays. A tester who cannot reproduce a line cannot file it, which is why the turn is a record before it is a performance. Release pinning holds that build across your ship window, so the record stays stable through certification.</p>`,
                     })}
                     ${Deeper({
                         summary: 'What <code>valid: true</code> does and does not cover',
