@@ -42,7 +42,7 @@ export const Vision = () => {
             <dl class="terms">
                 <div>
                     <dt>What it costs</dt>
-                    <dd>Studios pay in ordinary money; the price is named to the worlds that come through first.</dd>
+                    <dd>Studios subscribe in ordinary money, in tiers that grow with the cast; publishers across many titles take enterprise terms.</dd>
                 </div>
                 <div>
                     <dt>What it runs through</dt>
