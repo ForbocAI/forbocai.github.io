@@ -125,7 +125,7 @@ export const RoomTeaser = () => `
             <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
             <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt that is news to her. Two people is every pair; five is every combination of five in every order; a raid is that with a boss in the middle.</p>
 
-            <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">Watch the whole room decide</a></p>
+            <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">See the whole room decide</a></p>
             </div>
             </div>
         </div>

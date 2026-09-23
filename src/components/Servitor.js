@@ -74,7 +74,7 @@ export const Servitor = () => `
             </div>
 
             <div class="hero-buttons">
-                <a href="#turn" class="btn btn-primary" data-link>Watch one judgment</a>
+                <a href="#turn" class="btn btn-primary" data-link>See one judgment</a>
                 <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the developer docs</a>
             </div>
         </div>

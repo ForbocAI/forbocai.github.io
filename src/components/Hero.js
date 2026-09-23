@@ -19,7 +19,7 @@ export const Hero = () => {
                 <div class="hero-buttons hero-buttons-lead">
                     <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
                     <span class="row-break" aria-hidden="true"></span>
-                    <a href="#turn" class="text-link" data-link>Watch one judgment</a>
+                    <a href="#turn" class="text-link" data-link>See one judgment</a>
                     <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
                 </div>
             </div>
