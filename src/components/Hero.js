@@ -15,14 +15,14 @@ export const Hero = () => {
             <div class="hero-copy">
                 <p class="kicker">ForbocAI — the NPC language model company</p>
                 <h1>The next great language model is the characters in your game.</h1>
-                <p class="hero-potion"><strong><span class="beat">Dev born. Player grown.</span> <span class="beat">Yours to carry.</span></strong> <span class="hero-gloss">Your writers author them. Players make them specific — a different version of the same cast in every save. Then they belong to their players, and leave with them.</span></p>
+                <p class="hero-potion"><strong><span class="beat">Dev born. Player grown.</span> <span class="beat">Yours to carry.</span></strong> <span class="hero-gloss">Your writers author them. Players make them specific — a different version of the same cast in every save. Then who they became together belongs to the player, and leaves with them.</span></p>
                 <div class="hero-buttons hero-buttons-lead">
                     <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
                     <span class="row-break" aria-hidden="true"></span>
                     <a href="#turn" class="text-link" data-link>See one judgment</a>
                     <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
                 </div>
-                <p class="hero-ground">The companies that own a layer of language intelligence are valued <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank" rel="noopener noreferrer">near a trillion dollars</a>. The characters in your game are the next one, and this is its ground floor.</p>
+                <p class="hero-ground">The companies that own a layer of language intelligence are valued <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank" rel="noopener noreferrer">near a trillion dollars</a>. Character intelligence is the layer beneath every cast, nobody has priced it yet, and this is its ground floor.</p>
             </div>
 
             <div class="hero-vista" aria-hidden="true"></div>

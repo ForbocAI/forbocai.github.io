@@ -36,7 +36,7 @@ export const Investors = () => {
 <p class="investors-takeaway">First worlds are being chosen now. Whoever is inside when the first cast ships holds a position in the only market that has a standard, beside the company that writes it.</p>`,
                 })}
                 <p class="investors-takeaway">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player forgets the scene and still remembers her.</p>
-                <p class="investors-takeaway"><strong>The seed round is open.</strong> It takes the first partner worlds live and brings Souls and Ghost into play.</p>
+                <p class="investors-takeaway"><strong>The seed round is open.</strong> It carries the first partner worlds through the first door, and the first Soul between two live titles.</p>
             </div>
             </div>
 
