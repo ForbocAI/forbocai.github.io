@@ -32,7 +32,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Walking worlds</p>
                         <h3>See the world before players do</h3>
-                        <p>Ghost walks our test worlds today as a thousand players at once. What it finds — the room nobody can reach, the loop nobody closes — becomes a map a producer outside this building acts on.</p>
+                        <p>Testing takes <a href="https://www.gamedeveloper.com/programming/how-much-people-time-and-money-should-qa-take-part1" target="_blank" rel="noopener noreferrer">up to a fifth of a game’s budget</a>. Ghost walks our test worlds today as a thousand players at once. What it finds — the room nobody can reach, the loop nobody closes — becomes a map a producer outside this building acts on.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
