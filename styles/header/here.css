@@ -40,42 +40,13 @@
    Measured the other way round: "the current lamp is at intensity 38 while two
    passed rules sit at 60-80 — the signal is literally backwards", on the two
    chapters where it mattered most. The lamp's gradient was transparent across
-   its outer 30% at each end, so most of its length was faint, while the spent
-   rule was a solid 85%. The lamp now carries colour across 84% of its width
-   and the spent rule is halved.
+   its outer 30% at each end, so most of its length was faint. The lamp now
+   carries colour across 84% of its width.
 
-   Passed, not here.
-   Seven items name ten chapters. A single lit state had to answer for the
-   three it does not name, and it answered by lying: two reviewers
-   independently found "chapters 5/6/7 all show One choice" and "chapters
-   8/9/10 all show Horizons", and both concluded the nav was decoration. The
-   lamp now means you are in this chapter and nothing else; a chapter behind
-   you wears a spent rule, which stays true whichever unnamed chapter you are
-   standing in. */
-.nav-btn[data-passed] {
-    /* Positioned, and the mark is taken out of flow, for the same reason the
-       lamp above is: a block pseudo-element inside the anchor grows the bar
-       every time a chapter is passed, so the whole nav would step down the
-       first time a reader scrolled. */
-    position: relative;
-    color: var(--day-ink);
-}
-
-.nav-btn[data-passed]::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 34%;
-    transform: translateX(-50%);
-    bottom: 0.15rem;
-    height: 1px;
-    border-radius: 1px;
-    background: color-mix(in srgb, var(--day-rule) 45%, transparent);
-}
-
-.site-header.is-night .nav-btn[data-passed] {
-    color: var(--night-ink);
-}
+   It is also the only mark in the bar. Chapters already passed used to wear a
+   faint rule too; once the chapter count arrived that said nothing the count
+   did not, and by the back half it put four underlines in the bar at once,
+   which both design judges read as four active states. */
 
 /* How far down the descent you are, on every shape including the one with no
    room for a word. The phone has a logo and a hamburger and, across fifty

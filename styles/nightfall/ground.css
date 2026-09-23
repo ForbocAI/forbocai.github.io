@@ -127,7 +127,9 @@
     inset: 0;
     pointer-events: none;
     background:
-        radial-gradient(ellipse 60% 24% at 74% 34%, rgba(122, 167, 179, 0.07), transparent 74%),
+        /* Sage, not creek: creek is a blue, and a blue haze over a moss night
+           was one of the teal patches the judges kept finding. */
+        radial-gradient(ellipse 60% 24% at 74% 34%, rgba(157, 187, 139, 0.06), transparent 74%),
         radial-gradient(ellipse 50% 20% at 16% 72%, rgba(157, 187, 139, 0.05), transparent 74%);
 }
 

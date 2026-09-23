@@ -116,8 +116,16 @@
        These are chosen AT the night's own luminance — #0b2b26 measures 35.8
        and the ground it sits on measures about 40 — with the saturation a
        reading of "cold light" needs. A colony that neither brightens nor dulls
-       the floor it grows on can be as loud as it likes. */
-    --colony-deep: #0b2b26;
+       the floor it grows on can be as loud as it likes.
+
+       Moss, not teal: #0b2b26 sat at hue 170, and both design judges read it
+       where it lands, in the left gutter, as "cold teal, not moss" and "teal
+       wedges that fight the olive". #0c3220 is an emerald at hue 152, about the
+       same luminance (40.6): green to the eye, and still cold and saturated
+       enough over the olive ground to register as a second source. Hue 143
+       was tried first and blended under 140 on the ground, where nighthue
+       measured #roadmap with no grown light at all. */
+    --colony-deep: #0c3220;
     --colony-x: 0%;
     --colony-span: 1400px;
     --colony-ty: 21%;

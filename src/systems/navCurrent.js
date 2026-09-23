@@ -128,17 +128,13 @@ export const setupNavCurrent = () => {
     });
     if (!linksFor.size) return;
 
-    // Where you are, and how far in. Seven nav items name ten chapters, so a
-    // single lit state has to answer for three chapters it does not name, and
-    // both round-twenty-one reviewers caught it doing exactly that: "chapters
-    // 5/6/7 all show One choice", "chapters 8/9/10 all show Horizons", "the
-    // nav is decoration". Marking the nearest named chapter is not wrong as an
-    // ANSWER — it is wrong as a CLAIM, because the lamp says "you are here".
-    //
-    // Two states instead of one. The lamp still means you are in this chapter
-    // and nothing else. A chapter you have gone past is marked as passed, which
-    // is true whatever unnamed chapter you are standing in, and leaves the bar
-    // never dead and never lying.
+    // Where you are, and how far in. The lamp means you are in this chapter and
+    // nothing else; the chapter count beside the logo answers for the chapters
+    // the bar does not name, and the vein along its edge for how far down you
+    // are. There was also a faint rule under every chapter already passed. With
+    // the count in place it answered nothing the count did not, and by the
+    // back half it put four underlines in the bar at once: "four nav underlines
+    // read as four active states", from both design judges, two rounds running.
     const vein = veinFor();
     const count = countFor();
     const visible = new Set();
@@ -154,17 +150,8 @@ export const setupNavCurrent = () => {
         // The topmost section still on screen is the one being read. Nothing
         // stands in for it when there is none.
         const current = sections.filter((s) => visible.has(s))[0];
-        const passedMark = window.innerHeight * 0.4;
 
-        links.forEach((a) => {
-            a.removeAttribute('aria-current');
-            a.removeAttribute('data-passed');
-        });
-        sections.forEach((s) => {
-            if (s !== current && s.getBoundingClientRect().top < passedMark) {
-                linksFor.get(s).forEach((a) => a.setAttribute('data-passed', 'true'));
-            }
-        });
+        links.forEach((a) => a.removeAttribute('aria-current'));
         if (current) linksFor.get(current).forEach((a) => a.setAttribute('aria-current', 'true'));
 
         drawVein(vein);

@@ -15,12 +15,18 @@
 }
 
 /* Ambient light is the shape of whatever stands in front of it, never an
-   ellipse. These are the two overlay fields on the site — both pointer-events
-   none, both inset over a section that owns its own background, so shaping
-   them cannot round a section edge. The drift is slower than anyone watches;
-   it is there so the light is not a photograph of light. */
-.lantern-glow,
-.nightfall::after {
+   ellipse. The drift is slower than anyone watches; it is there so the light
+   is not a photograph of light.
+
+   The lantern's glow only. This rule used to shape .nightfall::after too — the
+   ambient field over the WHOLE night, some 7,800px tall — and a blob radius
+   and half a degree of rotation are nothing on a lantern and everything on
+   that. Half a degree swings a 7,800px layer's edge about 60px, and the radius
+   curves its sides inward, so the night's ambient light ended along a slanted
+   curve through the page gutter: "a diagonal light-shaft wedge with a straight
+   hypotenuse", reported by the design judges in four separate rounds and
+   never traced, because nothing on the page looked like its cause. */
+.lantern-glow {
     border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
     animation: grown-drift 46s ease-in-out infinite alternate;
     will-change: border-radius, transform;

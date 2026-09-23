@@ -82,10 +82,6 @@
     box-shadow: 0 0 10px color-mix(in srgb, var(--lantern) 55%, transparent);
 }
 
-.site-header.is-night .nav-btn[data-passed]::after {
-    background: color-mix(in srgb, var(--night-rule) 55%, transparent);
-}
-
 @media (prefers-reduced-motion: no-preference) {
     .read-vein {
         transition: transform 0.12s linear;
@@ -94,10 +90,12 @@
 
 /* On a phone the bar is a logo and a hamburger, which is exactly where the
    absence was worst — twenty-five screenshots with no position feedback at
-   all. It sits between them. */
+   all. It sits with the logo, as a caption to it. Centred in the space
+   between, it "floats off-centre with nothing around it". The hamburger
+   already takes the far edge on its own. */
 @media (max-width: 900px) {
     .read-count {
-        margin-left: auto;
-        margin-right: 0.85rem;
+        margin-left: 0.7rem;
+        margin-right: 0;
     }
 }
