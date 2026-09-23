@@ -77,7 +77,7 @@ export const Room = () => {
                     <p class="turn-note"><strong>She holds.</strong> Leaned on publicly, in her own house, by a lodger whose word carries — and the letter is still sealed, because her writer types <em>the letter does not open on a debt</em>, and the room cannot talk her out of it. What moves is what she pays instead: she finds the debt elsewhere and settles it out of the inn.</p>
                 </div>
 
-                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> He changes what is true in the room, and now she is weighing a debt that is news to her. <strong>There is no tree in which that scene exists.</strong> Every voice you add multiplies the scenes nobody can write; a raid is all of them at once, with a boss in the middle. This is why party banter runs dry in every long game.</p>
+                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> He changes what is true in the room, and now she is weighing a debt that is news to her. <strong>There is no tree in which that scene exists.</strong> Every voice you add multiplies the scenes nobody can write; a full tavern is all of them at once. This is why party banter runs dry in every long game.</p>
             </section>
                 ${Deeper({
                     summary: 'What this costs a narrative team: localisation, voice, and what a refusal becomes',
@@ -123,7 +123,7 @@ export const RoomTeaser = () => `
 
             <div class="chapter-body">
             <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
-            <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt that is news to her. Every voice you add multiplies the scenes nobody can write; a raid is all of them at once, with a boss in the middle.</p>
+            <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt that is news to her. Every voice you add multiplies the scenes nobody can write; a full tavern is all of them at once.</p>
 
             <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">See the whole room decide</a></p>
             </div>
