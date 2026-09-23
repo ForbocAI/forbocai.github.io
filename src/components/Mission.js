@@ -29,7 +29,7 @@ export const Mission = () => {
                 <div>
                     <h2>Someone is home in the world you built</h2>
                     <div class="mission-turn">
-                        <p class="mission-turn-label">The category: Character Intelligence</p>
+                        <p class="mission-turn-label">Character Intelligence</p>
                         ${Deeper({
                             summary: 'Why a general model cannot do this, and what it costs a studio today',
                             body: `<p><strong>Servitor™ is how open-ended intelligence arrives as your person instead of as itself.</strong> That intelligence is a spring already running into every world; the Protocol is the channel it runs through.</p>
