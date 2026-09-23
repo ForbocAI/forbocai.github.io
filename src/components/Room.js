@@ -77,7 +77,7 @@ export const Room = () => {
                     <p class="turn-note"><strong>She held.</strong> Leaned on publicly, in her own house, by a lodger whose word carries — and the letter is still sealed, because her writer typed <em>the letter does not open on a debt</em>, and the room cannot talk her out of it. What moved is what she paid instead: she found the debt elsewhere and settled it out of the inn.</p>
                 </div>
 
-                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> He changes what is true in the room, and now she is weighing a debt that is news to her. <strong>There is no tree in which that scene exists.</strong> Every voice you add multiplies the scenes nobody can write; a raid is all of them at once, with a boss in the middle. This is why party banter dies in month thirty of every game ever made.</p>
+                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> He changes what is true in the room, and now she is weighing a debt that is news to her. <strong>There is no tree in which that scene exists.</strong> Every voice you add multiplies the scenes nobody can write; a raid is all of them at once, with a boss in the middle. This is why party banter runs dry in every long game.</p>
             </section>
                 ${Deeper({
                     summary: 'What this costs a narrative team: localisation, voice, and what a refusal becomes',
