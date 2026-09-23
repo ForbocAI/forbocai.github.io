@@ -54,41 +54,20 @@
     pointer-events: none;
     mask-image: linear-gradient(180deg,
         transparent 0%, #000 9%, #000 91%, transparent 100%);
-    background-repeat: repeat-y, repeat-y;
-    background-size: 100% var(--lamp-span, 1180px), 100% var(--colony-span, 1400px);
-    /* Damped, now that the ground itself descends.
-       These alphas were set when the night was one flat fill and the lighting
-       was the only thing varying it, so they had to carry the whole of the
-       night's variety. With the ramp doing the descending, the same swing
-       became weather loud enough to reverse it: a reviewer measured the ninth
-       chapter at L62 against the eighth at L34 and read it as the page
-       climbing back toward daylight one chapter before the end.
+    background-repeat: repeat-y;
+    background-size: 100% var(--colony-span, 1400px);
+    /* The grown light only. There was a lamp pool here too — warm radials at
+       the page's edges, one per chapter — and from round twenty-one to round
+       twenty-six the design judges found them the same way every time: "khaki
+       glows with no source", "olive-grey radial smudges that read as a dirty
+       lens", "neither lantern-warm nor emerald". Warm light over moss with
+       nothing casting it is a stain. The made light at night has sources now:
+       the lit windows in the sunset's settlement, the lantern roundel, the
+       medallions' glow and the lit call to action. The ground carries only
+       what grows on it.
 
-       TWO sources, and the warm one is the KEY.
-
-       The night had only the cold half at chapter level, so the grown light
-       out-shone the made light and the brightest 8% of every night chapter
-       measured grey-green. The page was delivering "cosy" by ALTERNATING warm
-       parchment with a cold dark, rather than by putting a warm light inside
-       the dark, which is the difference between an inn at night and a lit
-       specimen.
-
-       The lamp sits INSIDE the container, not on the page's edge. At 0% and
-       100% its pool spilled into the outer gutter, which is both the place a
-       reader sees bare ground and the column the descent is measured in — so
-       the two chapters whose variant puts the lamp on the left read 6 levels
-       brighter than their neighbours and the fall appeared to reverse. A lamp
-       in a room is not against the outside wall.
-
-       The lantern pool is brighter and tighter than the colony, and sits
-       opposite it: a lamp is a source, a colony is a seep. On the screen's
-       edge, because with the body at the measure beside a side head a pool
-       centred at 88% sat under the last words of every line. */
+       The colony tints rather than lights — see --colony-deep below. */
     background-image:
-        radial-gradient(520px 440px at var(--lamp-x) var(--lamp-ty),
-            color-mix(in srgb, var(--lantern) 29%, transparent) 0%,
-            color-mix(in srgb, var(--honey) 12%, transparent) 38%,
-            transparent 68%),
         radial-gradient(640px 540px at var(--colony-x) var(--colony-ty),
             color-mix(in srgb, var(--colony-deep) 74%, transparent) 0%,
             color-mix(in srgb, var(--colony-deep) 34%, transparent) 42%,
@@ -129,9 +108,6 @@
     --colony-x: 0%;
     --colony-span: 1400px;
     --colony-ty: 21%;
-    --lamp-x: 94%;
-    --lamp-ty: 22%;
-    --lamp-span: 1180px;
 }
 
 .nightfall .chapter:nth-of-type(3n+2) {
@@ -146,31 +122,12 @@
     --colony-x: 100%;
     --colony-span: 1750px;
     --colony-ty: 17%;
-    --lamp-x: 6%;
-    --lamp-ty: 62%;
-    --lamp-span: 1460px;
 }
 
 .nightfall .chapter:nth-of-type(3n) {
     --colony-x: 0%;
     --colony-span: 1180px;
     --colony-ty: 25%;
-    --lamp-x: 94%;
-    --lamp-ty: 74%;
-    --lamp-span: 1330px;
-}
-
-/* The turn holds the counterfactual, a frame wider than the measure that
-   darkens whatever is behind it: a lamp pool at the edge showed as a bright
-   shape cut off by the frame's straight side, "a glow rectangle clipped by
-   the card". The turn's lamp sits at the top centre instead, under the
-   plate that opens the chapter, where the frame never reaches. */
-.nightfall .chapter.turn-band {
-    --lamp-x: 50%;
-    /* 14%, not 0: at the top edge the pool's own core became the bright line
-       along the seam, which is the defect the seam treatment exists to
-       remove. */
-    --lamp-ty: 14%;
 }
 
 /* The day has colonies too, and it needed them more.

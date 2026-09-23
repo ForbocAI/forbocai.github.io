@@ -3,9 +3,6 @@
 
 /* Nightfall: the header follows the page down rather than sitting on it as a
    lit bar. Toggled from main.js when a dark region passes under the header. */
-.site-header.is-night {
-    border-bottom-color: color-mix(in srgb, var(--night-rule) 40%, transparent);
-}
 
 .is-night .logo-icon {
     background-color: var(--honey);

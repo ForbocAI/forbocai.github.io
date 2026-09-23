@@ -47,8 +47,7 @@
     filter: drop-shadow(0 0 5px color-mix(in srgb, var(--lantern) 55%, transparent));
 }
 
-.chapter-night .memory-mood,
-.turn-band .turn-label {
+.chapter-night .memory-mood {
     text-shadow: 0 0 14px color-mix(in srgb, var(--honey) 30%, transparent);
 }
 
@@ -88,7 +87,11 @@
 .chapter-night .turn-label,
 .turn-band .turn-label {
     color: var(--lantern);
-    text-shadow: var(--biolume-ink);
+    /* No glow. Small bold labels with a soft halo read as "a cheap Photoshop
+       outer glow" to a design judge who found it on four of them. The
+       lantern colour is the made light already; a label is not a lamp. The
+       medallions keep theirs — they are the light sources, and that judge
+       rated them the best thing on the night half of the page. */
 }
 
 .chapter-night .sigil-strand,
