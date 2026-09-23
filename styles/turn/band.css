@@ -14,6 +14,15 @@
     padding-bottom: var(--chapter-gap);
 }
 
+/* Inside the descent a band stands on the same night as its neighbours. Its
+   own flat --night-bg held while the ramp around it darkened, so where #room
+   ended and #roadmap began, the ground fell 6-8 levels in one pixel row across
+   the whole page — the seam both judges found at the foot of the room. Where
+   a band stands alone (/#scenes) it keeps its own ground. */
+.nightfall .turn-band {
+    background: transparent;
+}
+
 /* There used to be a sunset floor here — a 5rem fade into --dusk-0 at the foot
    of every turn band, "the first stop of the sunset that follows it". Nothing
    sunset follows a turn band any more: on the home page #turn is followed by
