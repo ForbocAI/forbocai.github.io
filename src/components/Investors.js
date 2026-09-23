@@ -49,7 +49,7 @@ export const Investors = () => {
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-primary">Investors, come inside</a>
-                <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20remember" class="btn btn-ghost">Bring the character players remember</a>
+                <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-ghost">Bring one character to life</a>
             </div>
         </div>
     </section>

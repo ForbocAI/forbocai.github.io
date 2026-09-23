@@ -231,8 +231,8 @@ const slides = [
             </div>
             <p class="ask-note">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player forgets the scene and still remembers her.</p>
             <div class="contact-box">
-                <a href="mailto:hello@forboc.ai?subject=One%20of%20the%20first%20three%20integrations" class="btn btn-primary">Put your character in the room</a>
-                <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="text-link">Investors: come inside</a>
+                <a href="mailto:hello@forboc.ai?subject=Bring%20one%20character%20to%20life" class="btn btn-primary">Bring one character to life</a>
+                <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="text-link">Investors, come inside</a>
             </div>
             </div>
         `
