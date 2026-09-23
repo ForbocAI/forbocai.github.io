@@ -46,16 +46,28 @@
 --membrane-night:
     inset 2px 2px 0 -1px rgba(241, 232, 214, 0.14),
     inset -12px -14px 26px -22px rgba(5, 9, 6, 0.45),
-    inset 0 0 80px -24px rgba(255, 243, 194, 0.34),
+    /* The lamp's light inside the card, from its side only: all round the
+       inner edge at 0.34 it lit the card from within, as glass. */
+    inset 14px 16px 60px -34px rgba(255, 243, 194, 0.2),
     /* Grown light, on the side the lamp does not reach. The warm source sits
        up and left (--light-x/--light-y), so the colony seeps in from down and
        right. Dimmer and further out than the made light: a fungus does not
        out-shine a sign, it creeps around it. */
     inset -20px -24px 58px -42px rgba(95, 227, 205, 0.34),
-    -6px -4px 52px -10px rgba(255, 243, 194, 0.24),
-    18px 22px 92px -18px rgba(95, 227, 205, 0.14),
-    14px 18px 130px 6px rgba(255, 243, 194, 0.07),
-    10px 16px 30px -22px rgba(5, 9, 6, 0.9);
+    /* No outer bloom. A card is not a lamp: the glow it threw on every side
+       read as "a luminous glass panel with an outer glow — nothing in the
+       scene lights it". What an object does in lamplight is cast a shadow
+       away from the lamp, so that is all that falls outside it. */
+    12px 18px 36px -16px rgba(5, 9, 6, 0.8),
+    4px 6px 12px -6px rgba(5, 9, 6, 0.55);
+
+/* A painting hung in the world: the lamp catches its upper-left edge and it
+   throws a shadow down and right. The day membrane's bloom on the plates
+   spread an even yellow halo on all four sides, "a lamp would light one
+   side". The shadow list is in scenes.css, since a custom property that
+   reads another resolves where it is declared, and the night darkens this
+   one on the plate itself. */
+--plate-shade: rgba(45, 62, 52, 0.42);
 
 /* ------------------------------------------------- biomorphic colour ----- */
 
@@ -110,18 +122,22 @@
 
 --surface-night:
     radial-gradient(120% 96% at 34% 22%,
-        color-mix(in srgb, var(--lantern) 13%, transparent) 0%,
-        color-mix(in srgb, var(--lantern) 5%, transparent) 40%,
+        color-mix(in srgb, var(--lantern) 8%, transparent) 0%,
+        color-mix(in srgb, var(--lantern) 3%, transparent) 40%,
         transparent 76%),
+    /* Moss where the lamp does not reach, not creek: the creek-teal read
+       as "grey-sage, neither moss nor lantern". */
     radial-gradient(112% 90% at 84% 86%,
-        color-mix(in srgb, var(--biolume-core) 10%, transparent) 0%,
-        color-mix(in srgb, var(--biolume-core) 4%, transparent) 38%,
+        color-mix(in srgb, var(--sage) 9%, transparent) 0%,
+        color-mix(in srgb, var(--sage) 3%, transparent) 38%,
         transparent 72%),
     linear-gradient(148deg,
-        color-mix(in srgb, var(--honey) 18%, var(--night-surface)) 0%,
-        var(--night-surface) 44%,
-        color-mix(in srgb, var(--creek) 16%, var(--night-bg)) 78%,
-        color-mix(in srgb, var(--sage) 13%, var(--night-bg)) 100%);
+        /* Near the ground it lies on: a surface far lighter than the night
+           around it read as a lit pane whatever its edges did. */
+        color-mix(in srgb, var(--honey) 6%, color-mix(in srgb, var(--night-surface) 50%, var(--night-floor))) 0%,
+        color-mix(in srgb, var(--night-surface) 50%, var(--night-floor)) 44%,
+        color-mix(in srgb, var(--night-mid) 60%, var(--night-bg)) 78%,
+        color-mix(in srgb, var(--sage) 8%, var(--night-bg)) 100%);
 
 /* Neon, two sources, the way a street actually looks.
    Hong Kong retro signage is never one colour: warm sodium and amber stacked

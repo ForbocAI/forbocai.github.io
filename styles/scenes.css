@@ -17,7 +17,16 @@
     border-radius: var(--radius-lg);
     overflow: hidden;
     isolation: isolate;
-    box-shadow: var(--membrane-day);
+    box-shadow:
+        inset 1px 1px 0 rgba(255, 243, 194, 0.22),
+        14px 20px 44px -18px var(--plate-shade),
+        4px 6px 14px -8px var(--plate-shade);
+}
+
+.nightfall .maeve-scene,
+.chapter-night .maeve-scene,
+.turn-band .maeve-scene {
+    --plate-shade: rgba(5, 9, 6, 0.78);
 }
 
 .maeve-scene img {
