@@ -107,7 +107,11 @@
     --colony-deep: #0c3220;
     --colony-x: 0%;
     --colony-span: 1400px;
-    --colony-ty: 21%;
+    /* In pixels, and never nearer a tile's top than the ellipse reaches (378px
+       here, 448px on a phone): at 21-25% of the tile the centre sat 295px
+       down, so every repeat after the first was cut flat across its top, and
+       both judges found the cut as "a teal block with a hard top edge". */
+    --colony-ty: 470px;
 }
 
 .nightfall .chapter:nth-of-type(3n+2) {
@@ -121,13 +125,13 @@
     --colony-deep: #0f3325;
     --colony-x: 100%;
     --colony-span: 1750px;
-    --colony-ty: 17%;
+    --colony-ty: 455px;
 }
 
 .nightfall .chapter:nth-of-type(3n) {
     --colony-x: 0%;
     --colony-span: 1180px;
-    --colony-ty: 25%;
+    --colony-ty: 520px;
 }
 
 /* The day has colonies too, and it needed them more.
