@@ -17,10 +17,10 @@ export const Vision = () => {
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛃ' })}
                 <div>
-                    <h2>Paid access to all three is the business</h2>
+                    <h2>Paid access to the model, the protocol and the tradable characters is the business</h2>
                     ${Deeper({
                         summary: 'The size of that room, and how we read it',
-                        body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium, not an addressable slice, and we will not pretend a share of it — it evidences the size of the room, not our position in it.</p>`,
+                        body: `<p class="soul-market"><a href="https://newzoo.com/" target="_blank" rel="noopener noreferrer">Newzoo puts the global games market at roughly $188&nbsp;billion in 2025, heading toward $205&nbsp;billion in 2026</a>. That is the whole medium: the size of the room this opens into.</p>`,
                     })}
                 </div>
             </header>
@@ -42,7 +42,7 @@ export const Vision = () => {
             <dl class="terms">
                 <div>
                     <dt>What it costs</dt>
-                    <dd>The price is released with the contract that binds what counts as a billable judgment — clause four of the <a href="#whitepaper" data-link>whitepaper</a>, opened in its turn.</dd>
+                    <dd>The price is released in its turn, with the contract that binds what counts as a billable judgment; the <a href="#whitepaper" data-link>whitepaper</a> sets out the terms.</dd>
                 </div>
                 <div>
                     <dt>What it runs through</dt>

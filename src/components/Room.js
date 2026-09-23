@@ -73,7 +73,7 @@ export const Room = () => {
   action: { type: 'offer_item', payload: { item: 'corner_room_key' } },
 }</code></pre>`,
                     })}
-                    <p class="turn-note"><strong>Nothing in that call established that the corner room exists, is empty, or is hers to give.</strong> She reasons from the evidence you send, and evidence you withhold is evidence she can reach past. Your validation rules refuse the key or they do not. Clause twelve, again.</p>
+                    <p class="turn-note"><strong>Nothing in that call established that the corner room exists, is empty, or is hers to give.</strong> She reasons from the evidence you send, and evidence you withhold is evidence she can reach past. Your validation rules refuse the key or they do not.</p>
                     <p class="turn-note"><strong>She held.</strong> Leaned on publicly, in her own house, by a lodger whose word carries — and the letter is still sealed, because her writer typed <em>the letter does not open on a debt</em>, and the room cannot talk her out of it. What moved is what she paid instead: she found the debt elsewhere and settled it out of the inn.</p>
                 </div>
 
@@ -83,7 +83,7 @@ export const Room = () => {
                     summary: 'What this costs a narrative team: localisation, voice, and what a refusal becomes',
                     body: `<p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localization lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what would you have put back in?</p>
 
-            <p class="turn-consequence"><strong>Her judgment was never a string, so it was never on the string table, and the lock that cut your arc has nothing to hold her against.</strong> That is the freedom and it is also the problem. She reaches the decision once and a decision is language-independent — but delivery is not: register, idiom, honorifics, and what a refusal sounds like in a language where refusing is done sideways. Shipping her in nine languages means trusting her to be the same person in all nine and native in each. That is clause twenty-five, the hardest line in the Standard.</p>
+            <p class="turn-consequence"><strong>Her judgment was never a string, so it was never on the string table, and the lock that cut your arc has nothing to hold her against.</strong> That is the freedom and it is also the problem. She reaches the decision once and a decision is language-independent — but delivery is not: register, idiom, honorifics, and what a refusal sounds like in a language where refusing is done sideways. Shipping her in nine languages means trusting her to be the same person in all nine and native in each. That is the hardest line in the Standard.</p>
 
             <p class="turn-consequence"><strong>A line nobody wrote is a line nobody recorded, so she starts where a cast is largest and least served — the hundreds your budget was always going to subtitle, who have been reading the same six barks since launch.</strong> Your performed principals stay performed, exactly as written and recorded. Where a studio wants her reaching voice, that is a contract between the studio and the performer, and the standard we hold is the one we would want on the other side of it: a voice is a person's work, it is used with their consent, and it is paid for.</p>
 

@@ -17,7 +17,7 @@ export const Turn = () => {
         <div class="container">
             <figure class="maeve-scene turn-scene">
                 <img src="maeve-letter-scene.webp" alt="The sealed letter in Maeve's hand, close, across the Lanternbough counter." width="1672" height="941" loading="lazy">
-                <figcaption>The letter is in her hand. The question has already been asked.</figcaption>
+                <figcaption>The letter is sealed. The question has already been asked.</figcaption>
             </figure>
 
             <header class="chapter-head">
@@ -102,7 +102,7 @@ export const TurnWalkthrough = () => `
 }</code></pre>
                 ${Deeper({
                     summary: 'How a narrative lead approves a cast before you ship',
-                    body: `<p class="turn-note"><strong>Your narrative lead approves the cast before you ship, by reading where it argued with itself.</strong> Every turn is a payload, so a cast re-runs against a corpus of them sorted by disagreement — judgments that went against the document, characters drifting toward one another, refusals that stopped refusing. Nobody reads four hundred people's reasoning. They read the exceptions, the way an editor reads a diff. Holding one build across that window, so the cast you signed is the cast that answers on launch day, is clause seven.</p>`,
+                    body: `<p class="turn-note"><strong>Your narrative lead approves the cast before you ship, by reading where it argued with itself.</strong> Every turn is a payload, so a cast re-runs against a corpus of them sorted by disagreement — judgments that went against the document, characters drifting toward one another, refusals that stopped refusing. Nobody reads four hundred people's reasoning. They read the exceptions, the way an editor reads a diff. One build holds across that window, so the cast you signed is the cast that answers on launch day.</p>`,
                 })}
                 <p class="turn-note"><strong>Your writers do not edit her lines. They edit what she reasons from.</strong> Every turn hands back her reason in her own words, and that is what your narrative lead reviews. A line that lands wrong is usually a missing loyalty, or a constraint the document implied instead of stating. Change the document, run the scene, read the reason — a morning, not a milestone.</p>
                 ${Deeper({
@@ -150,13 +150,13 @@ export const TurnWalkthrough = () => `
                     <p class="turn-note">She had <code>offer_item</code> on the table and did not take it.</p>
                     ${Deeper({
                         summary: 'How your QA files a bug against a line nobody wrote',
-                        body: `<p class="turn-note">They attach the payload, not a video. Every judgment is a function of four things your build already holds — the persona document, the memory excerpt, the world context and the legal action set — against one recorded model and runtime build. QA files the payload and it replays. A tester who cannot reproduce a line cannot file it, which is why the turn is a record before it is a performance. Holding one build across your ship window, so that record stays stable through certification, is clause seven.</p>`,
+                        body: `<p class="turn-note">They attach the payload, not a video. Every judgment is a function of four things your build already holds — the persona document, the memory excerpt, the world context and the legal action set — against one recorded model and runtime build. QA files the payload and it replays. A tester who cannot reproduce a line cannot file it, which is why the turn is a record before it is a performance. One build holds across your ship window, so that record stays stable through certification.</p>`,
                     })}
                     ${Deeper({
                         summary: 'What <code>valid: true</code> does and does not cover',
                         body: `<p class="turn-note">It means the turn met its deadline and passed its checks. It does not mean every word she says is true about your world — that limit is printed below, on our own demo.</p>`,
                     })}
-                    <p class="turn-note"><strong>Look at <em>He went north.</em></strong> The refusal is guaranteed — your state never moved. The road is prose, and nothing checked it. If act two moved her brother south, it is in the player's quest log by morning. Prose grounding is clause twelve.</p>
+                    <p class="turn-note"><strong>Look at <em>He went north.</em></strong> The refusal is guaranteed — your state never moved. The road is prose, and nothing checked it. If act two moved her brother south, it is in the player's quest log by morning. Grounding her prose in your world is the next term to open.</p>
                     <p class="turn-note"><strong>One judgment, one call.</strong> Not a chain of calls per line, not a re-roll to get a parseable action.</p>
                     ${Deeper({
                         summary: 'What happens when a turn misses its deadline',
