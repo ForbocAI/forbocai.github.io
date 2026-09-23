@@ -157,20 +157,23 @@
         color-mix(in srgb, var(--moss-hue) 46%, transparent) 0%,
         color-mix(in srgb, var(--moss-hue) 17%, transparent) 44%,
         transparent 72%);
-    /* Leaf-green, not creek. Pure --creek is a blue (hue about 195), and on
-       warm sand a blue shade is damp, not moss: both reviewers found it as "a
-       blue-grey bloom on the parchment that reads as damp, not as dusk" and "a
-       grey-teal stain". A quarter of creek in the sage keeps the colony cool
-       enough to separate from parchment's own hue, which is why sage alone was
-       not enough, while leaving it green. */
-    --moss-hue: color-mix(in oklab, var(--sage) 75%, var(--creek));
+    /* Warm shade, not green. Creek was read as "a blue-grey bloom, damp", and
+       the leaf-green that replaced it was read, three rounds running, as
+       "sage mildew", "cold mint and sage stains", "water damage": any green on
+       paper is a stain, because nothing on a sunlit page grows green in a soft
+       patch. Taking the shade away was measured too, and left #mission's
+       margins at zero variation — the flat day this layer exists to prevent.
+       So the shade stays and changes hue: the parchment's own umber, deeper
+       toward the page's edges, which is how light falls off across paper in
+       lamplight. The grown things on the day half are the drawn plants. */
+    --moss-hue: color-mix(in oklab, var(--copper) 40%, var(--day-rule));
     --moss-x: 2%;
     --moss-span: 1500px;
     --moss-ty: 38%;
 }
 
 .daylight .chapter:nth-of-type(3n+2) {
-    --moss-hue: var(--sage);
+    --moss-hue: var(--day-rule);
     --moss-x: 98%;
     --moss-span: 1840px;
     --moss-ty: 28%;
