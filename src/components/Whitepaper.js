@@ -113,7 +113,7 @@ export const Whitepaper = () => {
 
                 <section id="wp-souls">
                     <h2>4. The Soul economy</h2>
-                    <p class="doc-aside"><strong>$FAI is live on Solana. Every $FAI link on this site leads to its one contract.</strong></p>
+                    <p class="doc-aside"><strong>$FAI is live on Solana.</strong></p>
                     <p>The Soul layer carries the history a player and character make together. It is the player-owned record — identity, memory, relationships and temperament — while every receiving title decides what enters.</p>
                     <ul>
                         <li><strong>Player value.</strong> A character can retain earned specificity instead of resetting to a template at every title boundary.</li>
