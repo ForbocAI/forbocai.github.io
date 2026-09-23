@@ -210,6 +210,12 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
                 <feTurbulence type="fractalNoise" baseFrequency="0.05 0.08" numOctaves="3" seed="11" result="edge"/>
                 <feDisplacementMap in="SourceGraphic" in2="edge" scale="${round(span * 0.32)}" xChannelSelector="R" yChannelSelector="G"/>
             </filter>
+            <!-- The houses in the same hand, lighter: a roof line drawn with a
+                 brush wavers a little and stays a roof. -->
+            <filter id="${uid}-hand" x="-5%" y="-10%" width="110%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="5" result="edge"/>
+                <feDisplacementMap in="SourceGraphic" in2="edge" scale="${round(Math.max(1.5, span * 0.07))}" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
             <!-- The near ground's pigment thins out before the band's foot,
                  where the page's own flat ground takes over: stopping at the
                  edge it drew a line across the page. -->
@@ -243,6 +249,6 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
         </g>
         <path class="horizon-near" d="${near.d}" fill="var(--hz-near)" filter="url(#${uid}-tear)"/>
         <g mask="url(#${uid}-fade)"><path d="${near.d}" fill="var(--hz-near)" filter="url(#${uid}-paint)"/></g>
-        ${village}
+        <g filter="url(#${uid}-hand)">${village}</g>
     </svg>`;
 };
