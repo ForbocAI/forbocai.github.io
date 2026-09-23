@@ -26,7 +26,7 @@ export const Vision = () => {
             </header>
 
             <div class="chapter-body">
-            <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and throwing most of that spend away on paths a player never walks.</p>
+            <p class="chapter-lead"><strong>The unit is one character judgment: her reasoning, her line and what she proposes to do, arriving together.</strong> Every studio shipping a cast is already paying to write these people by hand, one branch at a time, and spending most of it on paths no player walks.</p>
             <p class="soul-market"><strong>The people are the one surface of a game nobody has finished.</strong> That spend is already in the building, already annual, and it has nowhere else to go.</p>
 
             <!-- The four things a studio buyer has to carry back to a producer.
@@ -83,7 +83,7 @@ export const Vision = () => {
             </header>
 
             <div class="chapter-body">
-            <p class="chapter-lead"><strong>That is the whole of it, and no company on earth can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>
+            <p class="chapter-lead"><strong>No one can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself.</p>
             <p class="soul-decouple"><strong>The player does not carry an image of who Maeve was. They carry the history of who she became with them.</strong> A Soul is that history made portable: a player-owned, encrypted record of identity, memory, relationships and temperament, which a receiving title inspects, verifies and admits on its own terms.</p>
             </div>
             </div>

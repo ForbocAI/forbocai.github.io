@@ -21,7 +21,7 @@ export const Investors = () => {
             </header>
 
             <div class="chapter-body investors-body">
-                <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earned a yes. Nobody voted on this and nobody scheduled it, and it is not waiting for anyone's roadmap. The only open question is who builds the layer they think with.</p>
+                <p class="chapter-lead"><strong>Games are already filling with people who decide.</strong> Not branches that fire — people who keep a loyalty when it costs them, and refuse a player who earned a yes. Nobody scheduled it, and it waits on no one's roadmap. The only open question is who builds the layer they think with.</p>
                 <p><strong>You ran the experiment yourself, on your own titles, without meaning to.</strong> The characters players quote back to you were never the ones with the most lines. You proved the thesis before anyone pitched it to you.</p>
                 <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built and you can read it today. The model answers today.</p>
                 <p><strong>Nobody has to be talked into wanting this.</strong> Every studio in the industry has wanted characters who think since the first branch ran out, and wanting it was never the problem. Having it was. An open-ended voice loose in your world with your character's name on it is not a feature, it is an incident.</p>
