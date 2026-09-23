@@ -42,11 +42,11 @@ export const Vision = () => {
             <dl class="terms">
                 <div>
                     <dt>What it costs</dt>
-                    <dd>What counts as a billable judgment gets bound in the release contract, and that contract goes live with a public price attached, not before. The <a href="#whitepaper" data-link>whitepaper</a> publishes commercial release terms as an open gate rather than an answer we do not have yet.</dd>
+                    <dd>The price is released with the contract that binds what counts as a billable judgment — clause four of the <a href="#whitepaper" data-link>whitepaper</a>, opened in its turn.</dd>
                 </div>
                 <div>
                     <dt>What it runs through</dt>
-                    <dd>TypeScript and native Unreal Engine&nbsp;5 paths. Unity and Godot are integration scaffolds, not supported until they pass the same contract. Memory writes to storage your studio owns and can read without us, and every action arrives as a proposal your game is free to refuse.</dd>
+                    <dd>TypeScript and native Unreal Engine&nbsp;5 paths. Unity and Godot follow, each released when it holds the same contract. Memory writes to storage your studio owns and can read without us, and every action arrives as a proposal your game is free to refuse.</dd>
                 </div>
                 <div>
                     <dt>Who is building it</dt>
