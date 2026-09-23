@@ -56,7 +56,7 @@ export const Vision = () => {
                          the founders supply fact-checked biographies. -->
                     <dd>
                         <ul class="terms-team">
-                            <li><strong><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan Omalley</a></strong> — co-founder; corporate partnerships and investor relations. The company’s bond with its corporate partners, its venture capital and its investors.</li>
+                            <li><strong><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan O’Malley</a></strong> — co-founder; corporate partnerships and investor relations. The company’s bond with its corporate partners, its venture capital and its investors.</li>
                             <li><strong><a href="https://www.linkedin.com/in/seandinwiddie/" target="_blank" rel="noopener noreferrer">Sean Dinwiddie</a></strong> — founder, president and chair. Architect of the ForbocAI NPC Protocol; builds the API it runs through, Servitor™ from dataset to release, and the TypeScript and Unreal Engine&nbsp;5 SDKs.</li>
                             <li><strong><a href="https://www.linkedin.com/in/antara-bhavsar-74b7a4187/" target="_blank" rel="noopener noreferrer">Antara Bhavsar</a></strong> — co-founder and founding engineer. Engineers the NPC runtime at the heart of the API, the personas that run through it from API to SDK, the model’s training and the Soul’s encrypted transport.</li>
                         </ul>

@@ -203,7 +203,7 @@ const slides = [
         content: `
             <div class="team-grid">
                 <div class="team-member">
-                    <h4><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan Omalley</a></h4>
+                    <h4><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan O’Malley</a></h4>
                     <p><strong>Co-founder · Corporate partnerships &amp; investor relations</strong><br/>The company’s bond with its corporate partners, its venture capital and its investors.</p>
                 </div>
                 <div class="team-member">
