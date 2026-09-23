@@ -22,7 +22,7 @@ export const Hero = () => {
                     <a href="#turn" class="text-link" data-link>See one judgment</a>
                     <a href="https://docs.forboc.ai" class="text-link" target="_blank" rel="noopener noreferrer">Read the docs</a>
                 </div>
-                <p class="hero-ground">The nearest company to this market is valued at half a billion dollars. This is the ground floor of the one that comes after it.</p>
+                <p class="hero-ground">The companies that own a layer of language intelligence are valued <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank" rel="noopener noreferrer">near a trillion dollars</a>. The characters in your game are the next one, and this is its ground floor.</p>
             </div>
 
             <div class="hero-vista" aria-hidden="true"></div>
