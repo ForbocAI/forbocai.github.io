@@ -108,7 +108,7 @@ export const Vision = () => {
     'Aldren, her brother',        // no such person in this canon
     'the corner room, the inn',   // she owns nothing here
   ],
-  verified: 'registry',
+  verified: 'soul record, owner-signed',
 }</code></pre>`,
                         })}
                     </div>
@@ -130,7 +130,7 @@ export const Vision = () => {
 
             <aside class="soul-economy">
                 <h3>What $FAI is</h3>
-                <p><strong>Two studios competing for the same player will not keep each other's canon</strong>, or take the other's word that a character arrived carrying what she claims to. A character crossing between rivals has to be checkable somewhere neither of them owns. <strong>$FAI is that place</strong> — it records that this history is the history, so a receiving world can verify before it admits her. Ownership needs a registry the way judgment needs a law.</p>
+                <p><strong>A character a player carries is a Soul</strong>: her memory, her persona and the history she earned, in a record the player owns. <strong>$FAI is the currency that record lives in.</strong> Souls are minted and grown with it and change hands in it. Creators shape characters, studios welcome them into their worlds, and every trade returns the protocol its share.</p>
             </aside>
         </div>
     </section>
