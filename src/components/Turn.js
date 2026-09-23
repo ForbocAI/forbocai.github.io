@@ -17,7 +17,7 @@ export const Turn = () => {
         <div class="container">
             <figure class="maeve-scene turn-scene">
                 <img src="maeve-letter-scene.webp" alt="The sealed letter in Maeve's hand, close, across the Lanternbough counter." width="1672" height="941" loading="lazy">
-                <figcaption>The promise kept, and the letter already crossing the counter.</figcaption>
+                <figcaption>Which way the letter crosses is hers to decide.</figcaption>
             </figure>
 
             <header class="chapter-head">
@@ -34,7 +34,7 @@ export const Turn = () => {
                 <div class="turn-counterfactual-head">
                     <p class="turn-label">The character changes when the meaning changes</p>
                     <h3 id="turn-counterfactual-title">One changed truth. A different choice.</h3>
-                    <p class="turn-diffline">The player keeps the promise: back before the thaw, with word of her brother.</p>
+                    <p class="turn-diffline">The only difference: this time the player comes back, with news of her brother.</p>
                 </div>
                 <div class="turn-counterfactual-pair">
                     <article>

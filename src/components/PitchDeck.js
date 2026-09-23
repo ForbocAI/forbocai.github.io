@@ -116,7 +116,7 @@ const slides = [
     },
     {
         id: 7,
-        title: 'Intelligence enters the world through The ForbocAI NPC Protocol.',
+        title: 'Intelligence enters the world through the ForbocAI NPC Protocol.',
         content: `
             <ol class="command-boundary" aria-label="Authority boundary">
                 <li class="boundary-stage is-studio">

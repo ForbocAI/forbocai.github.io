@@ -81,7 +81,7 @@ export const Vision = () => {
             </header>
 
             <div class="chapter-body">
-            <p class="chapter-lead"><strong>No one can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself, and more awake for the crossing.</p>
+            <p class="chapter-lead"><strong>No one can hand you the third without the first two.</strong> Your writers give her a self worth having. A player spends a hundred hours making it specific. And then she is theirs — carried out of your world and into the next one, still herself, with every night she spent with them.</p>
             <p class="soul-decouple"><strong>The player does not carry an image of who Maeve is. They carry the history of who she becomes with them.</strong> A Soul is that history made portable: a player-owned, encrypted record of identity, memory, relationships and temperament, which a receiving title inspects, verifies and admits on its own terms.</p>
             </div>
             </div>
