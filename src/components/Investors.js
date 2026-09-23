@@ -29,7 +29,7 @@ export const Investors = () => {
                 <p><strong>The moat is not the boundary.</strong> It is the model, and what is in it cannot be prompted back out. <strong>Selflessness is weights, not a prompt.</strong></p>
                 <p>We write this category’s measure. Every rival is held to it, as we are. Whoever writes a category's measurement writes its purchasing criteria.</p>
 
-                <p class="investors-takeaway"><strong>Studios pay for this by accident.</strong> The character players quote makes a decision nobody wrote, and no budget line can order another.</p>
+                <p class="investors-takeaway"><strong>No budget line can order the character players quote.</strong> She makes a decision nobody wrote.</p>
                 ${Deeper({
                     summary: 'The position, argued',
                     body: `<p class="investors-takeaway">A handful of studios come through this door first. After them, it is a hallway everyone walks. In here, a character refuses a player for a reason she can name and hands you the reason she holds. Out there, it is still a tree you pay to build whole so one player can walk one path through it. You are reading this from one side of that.</p>
