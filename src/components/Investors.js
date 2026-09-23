@@ -47,8 +47,8 @@ export const Investors = () => {
             </figure>
 
             <div class="hero-buttons">
-                <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20remember" class="btn btn-primary">Bring the character players remember</a>
-                <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-ghost">Investors, come inside</a>
+                <a href="mailto:hello@forboc.ai?subject=Investor%20introduction" class="btn btn-primary">Investors, come inside</a>
+                <a href="mailto:hello@forboc.ai?subject=Bring%20the%20character%20players%20remember" class="btn btn-ghost">Bring the character players remember</a>
             </div>
         </div>
     </section>
