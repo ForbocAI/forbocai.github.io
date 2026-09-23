@@ -82,7 +82,7 @@ export const TurnWalkthrough = () => `
                 <div class="turn-authored-head">
                     <p class="turn-label">What your writer hands us</p>
                     <h3>The document is the character, and every one of yours has one. We do not write them and we cannot.</h3>
-                    <p class="turn-note">This is <code>maeve</code> — what the call below passes as <code>structuredPersona</code>. Every line was typed by someone on your narrative team, and it is the most load-bearing asset in your build. The better it is written, the better she judges.</p>
+                    <p class="turn-note">This is <code>maeve</code> — what the call below passes as <code>structuredPersona</code>. Every line is typed by someone on your narrative team, and it is the most load-bearing asset in your build. The better it is written, the better she judges.</p>
                 </div>
                 <pre class="turn-code"><code>const maeve = {
   traits: ['Keeps a confidence past the point it costs her',
@@ -125,7 +125,7 @@ export const TurnWalkthrough = () => `
     legalActions: ['offer_item', 'refuse'],
   }),
 ).unwrap()</code></pre>
-                    <p class="turn-note"><strong>You wrote what she is allowed to do. You did not write what she would say while doing it.</strong> <code>offer_item</code> and <code>refuse</code> were the two actions on the table; she took the refusal, then gave the road anyway — in the line itself, nowhere in your tree. The vocabulary is yours and stays yours.</p>
+                    <p class="turn-note"><strong>You write what she is allowed to do. You do not write what she says while doing it.</strong> <code>offer_item</code> and <code>refuse</code> are the two actions on the table; she takes the refusal, then gives the road anyway — in the line itself, nowhere in your tree. The vocabulary is yours and stays yours.</p>
                     ${Deeper({
                         summary: 'What your game owns in this call',
                         body: `<p class="turn-note">Memory is a store your studio created and can read without us. World context and the legal action set belong to this turn. In Unreal, the equivalent entry is <code>UForbocAISubsystem::ProcessNPC</code>; Blueprint exposes <code>Process NPC</code>.</p>`,
@@ -147,7 +147,7 @@ export const TurnWalkthrough = () => `
   },
   metadata: { valid: true },
 }</code></pre>
-                    <p class="turn-note">She had <code>offer_item</code> on the table and did not take it.</p>
+                    <p class="turn-note">She has <code>offer_item</code> on the table and does not take it.</p>
                     ${Deeper({
                         summary: 'How your QA files a bug against a line nobody wrote',
                         body: `<p class="turn-note">They attach the payload, not a video. Every judgment is a function of four things your build already holds — the persona document, the memory excerpt, the world context and the legal action set — against one recorded model and runtime build. QA files the payload and it replays. A tester who cannot reproduce a line cannot file it, which is why the turn is a record before it is a performance. One build holds across your ship window, so that record stays stable through certification.</p>`,
