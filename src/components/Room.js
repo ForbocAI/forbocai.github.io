@@ -24,7 +24,7 @@ export const Room = () => {
 
             <figure class="maeve-scene room-scene">
                 <img src="living-cast-scene.webp" alt="Maeve and the living cast of Lanternbough after the storm." width="1672" height="941" loading="lazy">
-                <figcaption>Everyone within earshot has something at stake in what she just said.</figcaption>
+                <figcaption>By morning, the whole market knows what she said at the counter.</figcaption>
             </figure>
 
             <section class="turn-room" aria-labelledby="turn-room-title">
@@ -111,7 +111,7 @@ export const RoomTeaser = () => `
             <div class="chapter-spread">
             <figure class="maeve-scene room-scene">
                 <img src="living-cast-scene.webp" alt="Maeve and the living cast of Lanternbough after the storm." width="1672" height="941" loading="lazy">
-                <figcaption>Everyone within earshot has something at stake in what she just said.</figcaption>
+                <figcaption>By morning, the whole market knows what she said at the counter.</figcaption>
             </figure>
 
             <header class="chapter-head">
