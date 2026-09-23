@@ -31,7 +31,16 @@
         var(--night-mid) 52%,
         var(--night-floor) 100%);
     color: var(--night-ink);
-    margin-top: 14rem;
+    /* The room the sunset below stands in, and it must be the sunset's own
+       height. The edge was lengthened from 14rem to 26rem and this margin was
+       left at 14rem, so the top 12rem of the sunset sat hidden behind the last
+       day chapter and the visible part began HALFWAY down its own ramp: a
+       single-row step from cream (221,198,159) to clay (187,126,95), about 50
+       luminance levels, full width, at the one boundary the whole design is
+       about. A reviewer measured a 144-level cliff here and could not tell
+       whether it was a cut; it was. The phone rule already keeps the two
+       equal, at 8rem each. */
+    margin-top: 26rem;
     /* The lantern halos are wider than the page on purpose. Clip only the
        horizontal axis, so light still spills up into the sunset and down into
        the footer without the halos widening the document. */
@@ -51,8 +60,9 @@
     top: -26rem;
     height: 26rem;
     /* Parchment straight to moss is a luminance ramp with no chromatic event,
-       which reads as fog. Passing through petal clay and dusk lavender makes it
-       an evening, and puts two pinned palette colours to work. */
+       which reads as fog. Passing through petal clay and copper makes it an
+       evening, and the stops stay warm until it is dark enough for the green
+       to arrive without a colour event — see --dusk-4 and --dusk-5. */
     /* Opens on the exact colour .daylight closes on — a transparent first stop
        revealed the body parchment underneath and made the sunset start with a
        step *lighter*. Chroma is held above ~30 into the last third so the fall

@@ -106,13 +106,23 @@
     --dusk-1: #dfae8a;
     --dusk-2: #c98a68;
     --dusk-3: #9c6247;
-    /* Plum, then slate, not brown then grey-green. The run from copper to
-       moss went through #5d4b3c and #3a4336, and the last 113px of it —
-       what a chapter arrival shows — read as "a muddy brown band, a dirty
-       bar". A sunset goes violet before it goes dark. Same luminance as
-       the two they replace, so the header's crossing math and every
-       contrast figure hold. */
-    --dusk-4: #5c4657;
-    --dusk-5: #3b3f48;
+    /* Warm while it is light, green only once it is dark.
+       Two attempts at these two stops failed the same way from opposite
+       sides. Brown then grey-green (#5d4b3c, #3a4336) read as "a muddy brown
+       band, a dirty bar". Plum then slate (#5c4657, #3b3f48) fixed the mud
+       and read, for two rounds running, as "a bruise — mauve and slate exist
+       nowhere else on this site; no colourist routes parchment to moss
+       through plum". Both are what happens turning orange into green at
+       mid-lightness: in sRGB the middle is grey, and routing around the
+       grey means leaving the palette.
+       So the hue does not turn in the middle. Measured in OKLCH, the fourth
+       stop stays in the warm family at twice the old brown's chroma — an
+       ember, not mud (h 73, C 0.062) — and the green arrives at the fifth,
+       where it is dark enough that a hue change reads as the forest closing
+       in rather than as a colour event (h 117, C 0.047). Luminance is the
+       old stops' exactly, so the header's crossing math and every contrast
+       figure still hold. */
+    --dusk-4: #624825;
+    --dusk-5: #3c4124;
     --dusk-6: #263127;
 }

@@ -80,6 +80,31 @@ export const setupHeaderTone = () => {
     const bandEls = [...document.querySelectorAll('.turn-band')];
     const edgeEl = document.querySelector('.nightfall-edge');
     const footer = document.querySelector('.site-footer');
+    const nightEl = document.querySelector('.nightfall');
+
+    /* The night keeps falling, and so does the bar.
+       Once past the crossing the bar settled on one colour for the whole
+       night, while the ground under it went on descending to its floor: a
+       reviewer measured the header at a constant (38,49,39) over a page falling
+       to (23,33,17) — "the one surface in the essay that refuses to fall". It
+       reads the SAME stops at the SAME positions as the ramp in
+       styles/nightfall/ground.css, from the stylesheet's own properties, so the
+       two cannot drift apart the way the day stops once did. */
+    const root = getComputedStyle(document.documentElement);
+    const nightStops = [
+        [0, root.getPropertyValue('--dusk-6').trim()],
+        [0.14, root.getPropertyValue('--night-bg').trim()],
+        [0.52, root.getPropertyValue('--night-mid').trim()],
+        [1, root.getPropertyValue('--night-floor').trim()],
+    ];
+    const floor = rgb(nightStops[nightStops.length - 1][1]);
+    const nightAt = (docY) => {
+        if (!nightEl) return night;
+        const top = docTop(nightEl);
+        const t = (docY - top) / Math.max(1, nightEl.offsetHeight);
+        if (t >= 1) return floor;
+        return sampleStops(nightStops, Math.max(0, t));
+    };
 
     // Measured per frame, not cached at setup: a web font swapping in moves
     // every section below it, and a set of boundaries captured before that
@@ -105,10 +130,10 @@ export const setupHeaderTone = () => {
     const groundAt = (docY) => {
         const { bands, edgeTop, edgeBottom } = zones();
         for (const band of bands) {
-            if (docY >= band.top && docY < band.bottom) return night;
+            if (docY >= band.top && docY < band.bottom) return nightAt(docY);
         }
 
-        if (docY >= edgeBottom) return night;
+        if (docY >= edgeBottom) return nightAt(docY);
 
         if (docY >= edgeTop) {
             const span = edgeBottom - edgeTop || 1;
