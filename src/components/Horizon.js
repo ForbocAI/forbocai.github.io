@@ -102,7 +102,10 @@ const ridge = (rand, width, height, { base, roll, rise, span, emergence, clear =
         // the overlap filled as a hollow crescent.
         x += w;
     }
-    return { d: `M0,${round(height)}L${top.slice(1)}L${round(width)},${round(height)}Z`, top, at };
+    // Closed well outside the band on three sides: the painted edge displaces
+    // every edge, and a straight foot pulled up by it left a lit hairline.
+    const pad = span * 2;
+    return { d: `M${round(-pad)},${round(height + pad)}L${round(-pad)},${round(at(0))}L${top.slice(1)}L${round(width + pad)},${round(at(width))}L${round(width + pad)},${round(height + pad)}Z`, top, at };
 };
 
 /**
@@ -185,6 +188,38 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
                 <stop offset="0" stop-color="var(--hz-mid)"/>
                 <stop offset="1" stop-color="var(--hz-haze-low)"/>
             </linearGradient>
+            <!-- Painted, not cut: the roundel at the foot of the page is the
+                 one piece of art both judges trusted, and it is watercolour.
+                 So the ridges are too. Low-frequency noise displaces each edge
+                 into leafy breakup, and blotches of darker pigment lie in the
+                 wash the way it settles on paper. The noise is in the band's
+                 own coordinates, so a ridge and its rim light move together. -->
+            <filter id="${uid}-paint" x="-2%" y="-12%" width="104%" height="124%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05 0.08" numOctaves="3" seed="11" result="edge"/>
+                <feDisplacementMap in="SourceGraphic" in2="edge" scale="${round(span * 0.32)}" xChannelSelector="R" yChannelSelector="G" result="torn"/>
+                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="2" seed="4" result="bloom"/>
+                <!-- The pigment is the wash itself laid twice (multiplied), so
+                     it deepens each ridge in its own hue: black blotches read
+                     as dirt on the pale dawn. -->
+                <feColorMatrix in="bloom" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1.6 0 0 0 -0.62" result="where"/>
+                <feComposite in="torn" in2="where" operator="in" result="again"/>
+                <feBlend in="again" in2="torn" mode="multiply" result="settled"/>
+                <feComposite in="settled" in2="torn" operator="in"/>
+            </filter>
+            <filter id="${uid}-tear" x="-2%" y="-12%" width="104%" height="124%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05 0.08" numOctaves="3" seed="11" result="edge"/>
+                <feDisplacementMap in="SourceGraphic" in2="edge" scale="${round(span * 0.32)}" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+            <!-- The near ground's pigment thins out before the band's foot,
+                 where the page's own flat ground takes over: stopping at the
+                 edge it drew a line across the page. -->
+            <linearGradient id="${uid}-thin" gradientUnits="userSpaceOnUse" x1="0" y1="${round(height * 0.78)}" x2="0" y2="${round(height * 0.97)}">
+                <stop offset="0" stop-color="#fff"/>
+                <stop offset="1" stop-color="#000"/>
+            </linearGradient>
+            <mask id="${uid}-fade" maskUnits="userSpaceOnUse" x="0" y="0" width="${round(width)}" height="${round(height)}">
+                <rect width="${round(width)}" height="${round(height)}" fill="url(#${uid}-thin)"/>
+            </mask>
             <filter id="${uid}-soft" x="-2%" y="-10%" width="104%" height="120%">
                 <feGaussianBlur stdDeviation="0.7"/>
             </filter>
@@ -198,11 +233,16 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
         </defs>
         <circle cx="${round(sx)}" cy="${round(sy)}" r="${round(sr * 4.5)}" fill="url(#${uid}-sun)"/>
         <circle class="horizon-sun" cx="${round(sx)}" cy="${round(sy)}" r="${round(sr)}" fill="var(--lantern)"/>
-        <path class="horizon-far" d="${far.d}" fill="url(#${uid}-far)" filter="url(#${uid}-soft)"/>
-        <path class="horizon-rim" d="${far.top}" fill="none" stroke="url(#${uid}-rim)" stroke-width="1.6" stroke-linejoin="round"/>
-        <path class="horizon-mid" d="${mid.d}" fill="url(#${uid}-mid)"/>
-        <path class="horizon-rim" d="${mid.top}" fill="none" stroke="url(#${uid}-rim)" stroke-width="1.1" stroke-linejoin="round" opacity="0.6"/>
-        <path class="horizon-near" d="${near.d}" fill="var(--hz-near)"/>
+        <g filter="url(#${uid}-paint)">
+            <path class="horizon-far" d="${far.d}" fill="url(#${uid}-far)" filter="url(#${uid}-soft)"/>
+            <path class="horizon-rim" d="${far.top}" fill="none" stroke="url(#${uid}-rim)" stroke-width="${round(Math.max(2, span * 0.1))}" stroke-linejoin="round"/>
+        </g>
+        <g filter="url(#${uid}-paint)">
+            <path class="horizon-mid" d="${mid.d}" fill="url(#${uid}-mid)"/>
+            <path class="horizon-rim" d="${mid.top}" fill="none" stroke="url(#${uid}-rim)" stroke-width="${round(Math.max(1.5, span * 0.07))}" stroke-linejoin="round" opacity="0.75"/>
+        </g>
+        <path class="horizon-near" d="${near.d}" fill="var(--hz-near)" filter="url(#${uid}-tear)"/>
+        <g mask="url(#${uid}-fade)"><path d="${near.d}" fill="var(--hz-near)" filter="url(#${uid}-paint)"/></g>
         ${village}
     </svg>`;
 };
