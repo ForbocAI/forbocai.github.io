@@ -56,7 +56,7 @@ export const Turn = () => {
 }</code></pre>
                     </article>
                 </div>
-                <p class="turn-counterfactual-foot"><strong>Nothing about Maeve changed.</strong> Same persona, same question, same two verbs on the table. Her brother's request still stands and she still weighs it the same way. What changed is what the player made true — and that is the whole difference between a character and a generator.</p>
+                <p class="turn-counterfactual-foot"><strong>Nothing about Maeve changes.</strong> Same persona, same question, same two verbs on the table. Her brother's request still stands and she still weighs it the same way. What changes is what the player makes true — and that is the whole difference between a character and a generator.</p>
             </section>
 
 
@@ -109,7 +109,7 @@ export const TurnWalkthrough = () => `
                     summary: 'What it costs to author four hundred of these',
                     body: `<p class="turn-note">Four hundred pages. A writer-week buys about a dozen, so a cast is a season for a small room — against the hundreds of thousands of words of branch it replaces. Your bible already has most of a persona document in it. What changes is where it goes: today it becomes thirty thousand words of branch nobody walks, and here it stays a page. A cast gets dearer to imagine and far cheaper to cover.</p>`,
                 })}
-                <p class="turn-note turn-authored-foot"><em>The letter does not open on a debt</em> is a writer's constraint, typed on a Tuesday. At the counter, with this player in front of her, it costs her the letter. Nobody typed the second one — and your writer authored the half that decided it.</p>
+                <p class="turn-note turn-authored-foot"><em>The letter does not open on a debt</em> is a writer's constraint, typed on a Tuesday. At the counter, with this player in front of her, it costs her the letter. Nobody typed the second one — and your writer authors the half that decides it.</p>
             </div>
 
             <div class="turn-grid">
