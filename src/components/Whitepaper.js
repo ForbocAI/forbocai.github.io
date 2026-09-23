@@ -114,7 +114,7 @@ export const Whitepaper = () => {
                 <section id="wp-souls">
                     <h2>4. The Soul economy</h2>
                     <p class="doc-aside"><strong>$FAI is live on Solana. Every $FAI link on this site leads to its one contract.</strong></p>
-                    <p>The Soul layer carries the history a player and character made together. It is the player-owned record — identity, memory, relationships and temperament — while every receiving title decides what enters.</p>
+                    <p>The Soul layer carries the history a player and character make together. It is the player-owned record — identity, memory, relationships and temperament — while every receiving title decides what enters.</p>
                     <ul>
                         <li><strong>Player value.</strong> A character can retain earned specificity instead of resetting to a template at every title boundary.</li>
                         <li><strong>Studio authority.</strong> Gather, encrypt, upload, verify, restore — every participating title still chooses what its technical, moderation and rights rules admit.</li>
@@ -122,7 +122,7 @@ export const Whitepaper = () => {
                     </ul>
 
                     <h3>4.1 Why durable identity matters</h3>
-                    <p><strong>A card preserves who a character is. A Soul carries who she became with you.</strong> Trading cards proved the appetite decades ago — identity, strategy, collecting, and a cast that grows across releases. People have been paying for identity they can keep ever since, and a card has never once been able to remember them back.</p>
+                    <p><strong>A card preserves who a character is. A Soul carries who she becomes with you.</strong> Trading cards prove the appetite — identity, strategy, collecting, and a cast that grows across releases. People pay for identity they can keep, and a card never remembers them back.</p>
                     <p><a href="https://www.npc.com/" target="_blank" rel="noopener noreferrer">Non-Playable Coin packages collectible identity as a memecoin–NFT hybrid</a>, while <a href="https://whitepaper.virtuals.io/about-virtuals/about-virtuals-protocol.md" target="_blank" rel="noopener noreferrer">Virtuals frames agents as autonomous economic actors</a>. A market is already convinced that a character can be an asset. What none of them has is a character worth keeping — someone whose history is earned inside a world that rules on it.</p>
                     <p>ForbocAI points that appetite at continuity for the player and authority for every receiving studio.</p>
                 </section>

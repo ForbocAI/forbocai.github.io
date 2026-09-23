@@ -76,7 +76,7 @@ export const Vision = () => {
                 <div>
                     <h2>Dev born. Player grown. Yours to carry.</h2>
                     ${Deeper({
-                        summary: 'What decades of paying for characters already proved',
+                        summary: 'What decades of paying for characters prove',
                         body: `<p class="soul-card"><strong>People pay for characters they can keep, and every one of them is a picture.</strong> A card preserves who a character is. A tradable NPC carries who she becomes with you — what she refused, who she trusted, and the argument she is still having because of something you did in somebody else's game.</p>`,
                     })}
                 </div>
