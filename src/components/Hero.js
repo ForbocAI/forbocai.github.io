@@ -24,6 +24,8 @@ export const Hero = () => {
                 </div>
             </div>
 
+            <div class="hero-vista" aria-hidden="true"></div>
+
             <figure class="memory-panel">
                 <figcaption class="memory-panel-head">
                     <span class="memory-who sigil-pair">

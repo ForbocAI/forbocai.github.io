@@ -18,20 +18,23 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: clamp(9rem, 30svh, 18rem);
+    height: clamp(12rem, 42svh, 27rem);
     z-index: 0;
     pointer-events: none;
-    /* The sun coming up on the opposite side from where it sets in the
-       sunset, low and just clearing the trees. */
-    background: radial-gradient(ellipse 30% 46% at 22% 70%,
+    /* The sun coming up in the gutter between the words and the card, low
+       and just clearing the trees: at 22% it rose under a link. */
+    background: radial-gradient(ellipse 30% 46% at 52% 62%,
         color-mix(in srgb, var(--lantern) 38%, transparent) 0%,
         color-mix(in srgb, var(--honey) 12%, transparent) 45%,
         transparent 100%);
-    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 52%, transparent 100%);
-    mask-image: linear-gradient(180deg, #000 0%, #000 52%, transparent 100%);
+    /* Held to near the foot, so the near ridge is ground and not a fringe
+       dissolving into the parchment half way down its own trees. */
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 80%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 80%, transparent 100%);
 }
 
-.hero-horizon .horizon-svg {
+.hero-horizon .horizon-svg,
+.hero-vista .horizon-svg {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -44,7 +47,8 @@
    front of it. A shade deeper than the first version, which a judge measured
    as "a sage silhouette at about 15% opacity, like dust at the foot of the
    page" — a morning is pale, but a forest is still a forest. */
-.hero-horizon {
+.hero-horizon,
+.hero-vista {
     --hz-far: color-mix(in oklab, var(--day-3) 64%, var(--sage));
     --hz-haze: var(--day-1);
     --hz-mid: color-mix(in oklab, var(--day-4) 48%, var(--sage));
@@ -56,4 +60,47 @@
 .hero > .hero-grid {
     position: relative;
     z-index: 1;
+}
+
+/* The forest stands under the words and the card, not behind them: the hero
+   keeps room at its foot for the treeline, so the card no longer covers the
+   one piece of landscape the first screen has. */
+@media (min-width: 1001px) {
+    .hero {
+        padding-bottom: clamp(5rem, 20svh, 13rem);
+    }
+
+    .hero-vista {
+        display: none;
+    }
+}
+
+/* On a phone: the same forest, full-bleed, between the calls to action and
+   Maeve's card, with the card set down into its near ground. */
+@media (max-width: 1000px) {
+    .hero-horizon {
+        display: none;
+    }
+
+    .hero-vista {
+        position: relative;
+        height: clamp(9rem, 26svh, 14rem);
+        margin-inline: calc(-1 * var(--gutter));
+        /* Its empty sky rises behind the links (the copy paints above it),
+           so the treeline starts where the words stop. */
+        margin-block: calc(-1 * clamp(5rem, 13svh, 7rem)) calc(-1 * clamp(4rem, 9svh, 6rem));
+        -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+        mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+        background: radial-gradient(ellipse 34% 50% at 70% 58%,
+            color-mix(in srgb, var(--lantern) 34%, transparent) 0%,
+            color-mix(in srgb, var(--honey) 10%, transparent) 45%,
+            transparent 100%);
+        pointer-events: none;
+    }
+
+    .hero-copy,
+    .hero-vista + .memory-panel {
+        position: relative;
+        z-index: 1;
+    }
 }

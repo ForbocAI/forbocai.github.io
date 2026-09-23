@@ -13,8 +13,12 @@ let idle = 0;
 // dusk in the sunset, with a few windows lit. One seed, so it is one place,
 // and the page between them is one day.
 // The sun rises on the left and sets on the right.
+// On a phone the dawn band would sit at the hero's foot, a screen and a half
+// down under Maeve's card, so the same forest grows in the gap between the
+// words and the card instead (.hero-vista), where the first screen shows it.
 const PLACES = [
-    ['.hero-horizon', false, 0.22],
+    ['.hero-horizon', false, 0.52],
+    ['.hero-vista', false, 0.7],
     ['.nightfall-edge', true, 0.68],
 ];
 
