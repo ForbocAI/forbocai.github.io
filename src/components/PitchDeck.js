@@ -37,7 +37,7 @@ const slides = [
                     <p>Identity survives the unscripted moment. Memory supplies evidence. Motive gives it weight. Judgment creates the next possibility.</p>
                 </div>
             </div>
-            <p class="impact-statement">The worlds that define this decade are the ones whose people judge — not the ones with more lines.</p>
+            <p class="impact-statement">The worlds that define this decade are the ones whose people judge, and <a href="https://www.prnewswire.com/news-releases/inworld-ai-99-of-gamers-are-excited-by-the-potential-of-smart-npcs-powered-by-advanced-artificial-intelligence-301747635.html" target="_blank" rel="noopener noreferrer">81 in 100</a> players would pay more to play them.</p>
         `
     },
     {
@@ -194,7 +194,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>One model, every cast in a catalogue. An innkeeper, a fleet commander, a child in a besieged city. No two of them sounding like the same mind.</p></div>
                 <div class="business-item"><span class="business-phase">Carry</span><h4>Characters that change hands</h4><p>A character a player carries is a Soul, minted, grown and traded in $FAI.</p></div>
             </div>
-            <p class="impact-statement">What compounds is the range of worlds one contract holds in, and the instrument that measures whether any character model holds at all. The first worlds through set the range, and the range is what the whole thesis rests on.</p>
+            <p class="impact-statement">Character technology already commands billions: one company’s was licensed for <a href="https://www.cnbc.com/2024/08/02/ex-google-engineers-from-characterai-re-join-company-with-new-ai-partnership-.html" target="_blank" rel="noopener noreferrer">$2.7&nbsp;billion</a>. The living cast is the layer above it, and the first worlds through set its range.</p>
         `
     },
     {
