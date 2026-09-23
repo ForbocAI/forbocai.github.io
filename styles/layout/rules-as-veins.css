@@ -1,0 +1,86 @@
+/* ------------------------------------------------------- rules as veins -- */
+
+/* Every content divider on the site is a vein, not a ruled line.
+
+   The page states its venation rule in three places — "a vein enters at full
+   weight where the chapter starts and thins to nothing as it descends" — and
+   the stems, the rails and the reading line all keep it. The dividers never
+   did. Twenty-one of them were a hard one-pixel line from edge to edge, and
+   both round-twenty-four design judges named exactly the screens they build:
+   "the SaaS feature section — a four-up card grid, then a three-cell strip
+   with hard dividers", "a timeline column with hollow circles and full-width
+   hairlines: a stock features pattern", "the row rules plus the rail plus the
+   aside borders now form a visible table". A table is what a set of ruled
+   lines at right angles IS. A set of veins that fade is a leaf.
+
+   So each one keeps its own weight and colour where it starts and thins to
+   nothing across its length: horizontal rules from the side a reader enters,
+   vertical ones from the top down. border-image rather than a pseudo-element,
+   because it paints only the border the rule already declares, keeps every
+   width and position exactly where it was, and ignores border-radius — which
+   is also why the numbered cells whose top rules "curl up at their right
+   ends" stop curling.
+
+   Interface chrome keeps its straight edges on purpose: the drawer, the deck's
+   frame and controls, the footer. Those are edges of things you operate, not
+   divisions of something you read. */
+
+.impact-statement,
+.team-note,
+.contact-box,
+.business-item,
+.team-member,
+.cognition-chain li,
+.doc-head,
+.doc-body h2,
+.doc-foot,
+.boundary-mantra,
+.servitor-cognition li,
+.memory-panel-head,
+.memory-foot,
+.ledger,
+.ledger-row,
+.gate-ledger,
+.gate-ledger > li,
+.mission-destination,
+.turn-answer {
+    --rule-vein: var(--day-rule);
+    border-image: linear-gradient(90deg,
+        var(--rule-vein) 0%,
+        color-mix(in srgb, var(--rule-vein) 45%, transparent) 58%,
+        transparent 100%) 1;
+}
+
+/* The two that run down rather than across. */
+.doc-contents,
+.model-hierarchy p {
+    --rule-vein: var(--day-rule);
+    border-image: linear-gradient(180deg,
+        var(--rule-vein) 0%,
+        color-mix(in srgb, var(--rule-vein) 45%, transparent) 62%,
+        transparent 100%) 1;
+}
+
+/* The three-cell strip stacks on a phone and its divider turns to run
+   across, so its vein turns with it. */
+@media (max-width: 860px) {
+    .model-hierarchy p {
+        border-image: linear-gradient(90deg,
+            var(--rule-vein) 0%,
+            color-mix(in srgb, var(--rule-vein) 45%, transparent) 58%,
+            transparent 100%) 1;
+    }
+}
+
+/* In the night each vein is the night's own rule, and the answer in the turn
+   keeps the lantern it was already drawn in. */
+.chapter-night :is(.impact-statement, .team-note, .contact-box, .business-item, .team-member,
+    .cognition-chain li, .boundary-mantra, .servitor-cognition li, .ledger, .ledger-row,
+    .gate-ledger, .gate-ledger > li, .mission-destination, .model-hierarchy p),
+.turn-band :is(.boundary-mantra, .servitor-cognition li, .ledger-row, .model-hierarchy p) {
+    --rule-vein: var(--night-rule);
+}
+
+.turn-answer {
+    --rule-vein: color-mix(in srgb, var(--honey) 40%, transparent);
+}

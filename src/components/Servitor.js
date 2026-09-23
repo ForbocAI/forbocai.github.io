@@ -68,7 +68,7 @@ export const Servitor = () => `
             </div>
 
             <div class="model-hierarchy" aria-label="ForbocAI product hierarchy">
-                <p><span>Intelligence</span> <strong>Servitor™ creates a character's next possibility.</strong></p>
+                <p><span>Intelligence</span> <strong>Servitor<span class="tm">™</span> creates a character's next possibility.</strong></p>
                 <p><span>Law</span> <strong>The Protocol makes it native to the world.</strong></p>
                 <p><span>Authorship</span> <strong>Your game turns choice into history and play.</strong></p>
             </div>

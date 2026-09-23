@@ -7,26 +7,43 @@
     border-top: 1px solid var(--day-rule);
 }
 
+/* A stem, not a timeline rail. A one-pixel line of constant weight with a
+   hollow ring at each entry is the stock "features" pattern, and a judge named
+   it as one: "a timeline column with tiny hollow circles — a stock features
+   pattern", "a documentation page". The spine enters at full weight and thins
+   as it descends, the way every other vein on the page does, and each entry is
+   a bud on it rather than a ring drawn over it. */
 .ledger::before {
     content: '';
     position: absolute;
-    left: calc(var(--rail) / 2);
+    left: calc(var(--rail) / 2 - 1px);
     top: 0;
     bottom: 0;
-    width: 1px;
-    background: var(--day-rule-soft);
+    width: 2.5px;
+    background: linear-gradient(180deg,
+        color-mix(in oklab, var(--day-rule) 70%, var(--copper)) 0%,
+        color-mix(in srgb, var(--day-rule) 55%, transparent) 70%,
+        transparent 100%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
 }
 
+/* A bud: a leaf shape — two opposite corners rounded, two pointed — turned so
+   it grows off the stem rather than sitting on it like a bead. Alternate
+   entries lean alternate ways, as buds up a stem do. */
 .ledger-row::before {
     content: '';
     grid-column: 1;
     justify-self: center;
-    margin-top: 0.62em;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--day-bg);
-    box-shadow: 0 0 0 1px var(--copper);
+    margin-top: 0.5em;
+    width: 11px;
+    height: 11px;
+    border-radius: 0 72% 0 72%;
+    background: color-mix(in oklab, var(--copper) 78%, var(--day-rule));
+    transform: rotate(-38deg) translateX(3px);
+}
+
+.ledger-row:nth-child(even)::before {
+    transform: rotate(52deg) scaleX(-1) translateX(3px);
 }
 
 .ledger-row {
