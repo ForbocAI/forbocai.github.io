@@ -123,7 +123,7 @@ export const RoomTeaser = () => `
 
             <div class="chapter-body">
             <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
-            <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt that is news to her. Every voice you add multiplies the scenes nobody can write; a full tavern is all of them at once.</p>
+            <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> “Maeve. This one covered my room in the autumn.” She answers, “Then I owe them a bed, not a letter.” Every voice you add multiplies the scenes nobody can write; a full tavern is all of them at once.</p>
 
             <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">See the whole room decide</a></p>
             </div>

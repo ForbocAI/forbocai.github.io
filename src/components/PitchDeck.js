@@ -78,7 +78,7 @@ const slides = [
                 </div>
                 <figure class="maeve-scene maeve-choice-scene">
                     <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941">
-                    <figcaption>Servitor™ weighs who she is, what this player made matter and what the moment now demands.</figcaption>
+                    <figcaption>In the save where the player brings news of her brother, she offers the letter.</figcaption>
                 </figure>
             </div>
         `
@@ -221,7 +221,7 @@ const slides = [
     },
     {
         id: 13,
-        title: 'The first three worlds are the whole thesis.',
+        title: 'The first cast to ship is the whole thesis.',
         content: `
             <div class="threshold-spread">
             <div class="threshold-call">

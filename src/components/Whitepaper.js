@@ -90,7 +90,7 @@ export const Whitepaper = () => {
                         <li><strong><span class="gate-n">6.</span> Platform certification.</strong> Moderation and console requirements met for a named platform.</li>
                         <li><strong><span class="gate-n">7.</span> Release pinning.</strong> A studio holds one build of the model across its ship window.</li>
                         <li><strong><span class="gate-n">8.</span> Support window.</strong> The support term bound in writing.</li>
-                        <li><strong><span class="gate-n">9.</span> Continuity if we stop.</strong> Escrowed weights, released on our failure, so a shipped title keeps running.</li>
+                        <li><strong><span class="gate-n">9.</span> Continuity.</strong> Escrowed weights, so a shipped title keeps running whatever comes.</li>
                         <li><strong><span class="gate-n">10.</span> Producer-facing Ghost reports.</strong> A producer outside ForbocAI reads a coverage report from their own world.</li>
                         <li><strong><span class="gate-n">11.</span> Soul continuity.</strong> One Soul carried end to end between two titles.</li>
                         <li><strong><span class="gate-n">12.</span> Prose grounding.</strong> A character's prose measurably checked against the world you supplied.</li>

@@ -49,7 +49,7 @@ export const Mission = () => {
                 <p class="mission-opening"><strong>Every other surface of a game is alive. The people are not.</strong> Even the finest-written of them are portraits: beautiful, and never looking back at you.</p>
                 <p class="mission-turn-line"><strong>Not anymore.</strong></p>
                 <p class="mission-opening"><strong>Everyone else is making the model more itself. We take the self out.</strong> The ForbocAI NPC LM Servitor™ has no self to defend, so the people your writers authored are the ones who answer — reasoning past the end of your script and deciding as themselves. Not lines retrieved. Judgments made, in the moment, by someone.</p>
-                <p class="mission-opening"><strong>The ForbocAI NPC Protocol is how they enter your world without being able to change it.</strong> They decide like people and cannot move your state. The model is the invention. The Protocol is why it can be handed to anyone at all.</p>
+                <p class="mission-opening"><strong>The ForbocAI NPC Protocol is how they enter your world without being able to change it.</strong> The model is the invention. The Protocol is why it can be handed to anyone at all. The Soul is why a player can own one of them.</p>
 
             <p class="mission-destination"><strong>Every company gets one destination. We are standing in ours: a world that keeps living after you walk out of the room.</strong> The innkeeper weighing her brother’s letter against her own heart. The miner carrying a debt nobody asked him to carry. The child deciding who they will become, and knowing they are deciding. Four hundred of them, each awake to their own life — and every one of them remembers you.</p>
 
