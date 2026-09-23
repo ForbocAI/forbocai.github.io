@@ -53,7 +53,7 @@ export const Technology = () => {
 
             <div class="hero-buttons">
                 <a href="mailto:hello@forboc.ai?subject=Bring%20the%20scene%20your%20dialogue%20tree%20cannot%20hold" class="btn btn-primary">Bring the scene your dialogue tree cannot hold</a>
-                <a href="#whitepaper" class="text-link" data-link>See how intelligence enters the world</a>
+                <a href="#whitepaper" class="text-link" data-link>Read the whitepaper</a>
             </div>
         </div>
     </section>
