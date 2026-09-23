@@ -131,9 +131,9 @@ export const Whitepaper = () => {
                     <h2>5. The arrival sequence</h2>
                     <ul>
                         <li><strong>Working layer.</strong> Servitor™ Character Intelligence, studio-controlled local memory, structured action proposals and validation, TypeScript and Unreal Engine 5 interfaces, itemized in 3.5. Soul continuity is a separate development track, and $FAI is described in section 4.</li>
-                        <li><strong>In development.</strong> Producer-facing Ghost coverage reporting — clause ten.</li>
-                        <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. The crossing follows the worlds it runs between: a character crosses between live titles or not at all, which is clause eleven, and clause one comes first.</li>
-                        <li><strong>Governed continuity.</strong> She is the player's, and a receiving world still rules what it admits — both are true, and clause eleven is where they meet.</li>
+                        <li><strong>In development.</strong> Ghost’s coverage reports, opening to producers.</li>
+                        <li><strong>Active development tracks.</strong> Account and billing qualification, SDK 1.0, engine distribution and further core bindings form the studio path. The crossing follows the worlds it runs between: a character crosses between live titles or not at all, so the first shipped title comes first.</li>
+                        <li><strong>Governed continuity.</strong> She is the player's, and a receiving world still rules what it admits — both are true, and the crossing is where they meet.</li>
                     </ul>
                 </section>
             </div>
