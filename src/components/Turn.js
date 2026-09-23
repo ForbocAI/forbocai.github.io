@@ -34,7 +34,7 @@ export const Turn = () => {
                 <div class="turn-counterfactual-head">
                     <p class="turn-label">The character changes when the meaning changes</p>
                     <h3 id="turn-counterfactual-title">One changed truth. A different choice.</h3>
-                    <p class="turn-diffline">The player keeps the promise: back before the thaw, with her brother's ring.</p>
+                    <p class="turn-diffline">The player keeps the promise: back before the thaw, with word of her brother.</p>
                 </div>
                 <div class="turn-counterfactual-pair">
                     <article>
