@@ -18,6 +18,7 @@ import { setupMemoryEntrance } from './systems/memoryEntrance.js';
 import { setupDocContents } from './systems/docContents.js';
 import { setupNavCurrent } from './systems/navCurrent.js';
 import { setupChapterStem } from './systems/chapterStem.js';
+import { setupHorizon } from './systems/horizon.js';
 import { arrive } from './systems/arrival.js';
 
 // Initialize Store
@@ -45,6 +46,7 @@ const render = () => {
         setupDocContents();
         setupNavCurrent();
         setupChapterStem();
+        setupHorizon();
 
         // Post-render: where the page lands.
         arrive(state);

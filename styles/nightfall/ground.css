@@ -75,15 +75,47 @@
        revealed the body parchment underneath and made the sunset start with a
        step *lighter*. Chroma is held above ~30 into the last third so the fall
        does not go grey on the way down. */
-    background: linear-gradient(180deg,
-        var(--dusk-0) 0%,
-        var(--dusk-1) 22%,
-        var(--dusk-2) 42%,
-        var(--dusk-3) 60%,
-        var(--dusk-4) 78%,
-        var(--dusk-5) 90%,
-        var(--dusk-6) 100%);
+    /* The SKY keeps only its warm stops now. The olive and the moss are the
+       treeline's (src/components/Horizon.js), which rises through the lower
+       half of the band: a dusk sky does not turn green, the forest does. The
+       low sun sits just above the far ridge, where the last light is. This
+       gradient is also what shows before the treeline is grown, and without
+       JavaScript, so it still ends on the night's colour. */
+    background:
+        radial-gradient(ellipse 30% 34% at 68% 56%,
+            color-mix(in srgb, var(--lantern) 72%, transparent) 0%,
+            color-mix(in srgb, var(--honey) 30%, transparent) 40%,
+            transparent 100%),
+        linear-gradient(180deg,
+            var(--dusk-0) 0%,
+            var(--dusk-1) 26%,
+            var(--dusk-2) 48%,
+            var(--dusk-3) 68%,
+            var(--dusk-4) 86%,
+            var(--dusk-6) 100%);
     pointer-events: none;
+}
+
+.nightfall-edge .horizon-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Far to near: hazed by the warm air, then darker, then the night's own
+   opening colour, which the ground below continues without a seam. */
+.horizon-far {
+    fill: color-mix(in oklab, var(--dusk-3) 38%, var(--dusk-5));
+}
+
+.horizon-mid {
+    fill: var(--dusk-5);
+}
+
+.horizon-near {
+    fill: var(--dusk-6);
 }
 
 /* Ambient only. The measurable light now comes from the lanterns themselves —
