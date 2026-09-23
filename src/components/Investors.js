@@ -27,7 +27,7 @@ export const Investors = () => {
                 <p><strong>Nobody has to be talked into wanting this.</strong> Every studio in the industry has wanted characters who think since the first branch ran out, and wanting it was never the problem. Having it was. An open-ended voice loose in your world with your character's name on it is not a feature, it is an incident.</p>
                 <p><strong>So neither half ships without the other.</strong> A model that reasons like a person and cannot be stopped from moving your state is a liability, and a boundary with nothing behind it is a config file. Servitor™ needs the Protocol's law to enter a world at all. That is why they are one thing, and why the thing is served rather than shipped loose.</p>
                 <p><strong>The moat was never the boundary.</strong> It is the model, and what is in it cannot be prompted back out. <strong>Selflessness is weights, not a prompt.</strong></p>
-                <p>Measured against our instrument — published before the results, handed to their model on identical terms, on purpose. Whoever writes a category's measurement writes its purchasing criteria.</p>
+                <p>We wrote this category’s measure. Every rival is held to it, as we are. Whoever writes a category's measurement writes its purchasing criteria.</p>
 
                 <p class="investors-takeaway"><strong>You have been paying for this by accident.</strong> The one your players quote made a decision nobody wrote, and no budget line can order another.</p>
                 ${Deeper({
