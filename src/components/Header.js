@@ -50,7 +50,7 @@ export const Header = () => {
                 <div class="nav-links">
                     ${LINKS.map((l) => link(l, 'nav-btn')).join('')}
                 </div>
-                <a href="mailto:hello@forboc.ai" class="btn btn-small nav-cta">Talk to us</a>
+                <a href="#scenes" class="btn btn-small nav-cta" data-link>See the room</a>
                 <button
                     class="mobile-menu-toggle"
                     id="mobileMenuToggle"
@@ -67,7 +67,7 @@ export const Header = () => {
     </header>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" aria-hidden="true">
         ${LINKS.map((l) => link(l, 'mobile-nav-link')).join('')}
-        <a href="mailto:hello@forboc.ai" class="mobile-nav-link">Talk to us</a>
+        <a href="#scenes" class="mobile-nav-link" data-link>See the room</a>
     </nav>
     `;
 };
