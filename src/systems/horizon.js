@@ -9,12 +9,22 @@ import { horizonSvg } from '../components/Horizon.js';
 let horizonResize = null;
 let idle = 0;
 
+// The same forest twice: at dawn under the hero, with no lamps lit yet, and at
+// dusk in the sunset, with a few windows lit. One seed, so it is one place,
+// and the page between them is one day.
+const PLACES = [
+    ['.hero-horizon', false],
+    ['.nightfall-edge', true],
+];
+
 const grow = () => {
-    const edge = document.querySelector('.nightfall-edge');
-    if (!edge) return;
-    const box = edge.getBoundingClientRect();
-    if (box.width < 40 || box.height < 40) return;
-    edge.innerHTML = horizonSvg({ seed: 'lanternbough', width: box.width, height: box.height });
+    PLACES.forEach(([sel, lights]) => {
+        const el = document.querySelector(sel);
+        if (!el) return;
+        const box = el.getBoundingClientRect();
+        if (box.width < 40 || box.height < 40) return;
+        el.innerHTML = horizonSvg({ seed: 'lanternbough', width: box.width, height: box.height, lights });
+    });
 };
 
 export const setupHorizon = () => {

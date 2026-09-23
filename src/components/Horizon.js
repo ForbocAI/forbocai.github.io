@@ -65,10 +65,11 @@ const ridge = (rand, width, height, { base, roll, rise, span, pines }) => {
  * @param {object} spec
  * @param {string} spec.seed    the treeline's identity
  * @param {number} spec.width   the page's width, in px
- * @param {number} spec.height  the sunset's height, in px
+ * @param {number} spec.height  the band's height, in px
+ * @param {boolean} [spec.lights] lit windows in the middle ridge — evening only
  * @returns {string} SVG markup
  */
-export const horizonSvg = ({ seed, width, height }) => {
+export const horizonSvg = ({ seed, width, height, lights = true }) => {
     const rand = rngOf(seedOf(seed));
     // Crowns scale with the band, not the page: a phone's third-of-a-screen
     // sunset gets smaller trees rather than three giant ones.
@@ -82,7 +83,9 @@ export const horizonSvg = ({ seed, width, height }) => {
        the ridge's own baseline and kept clear of the page's outer tenth, so
        they read as a settlement in the trees rather than stars. */
     const count = 3 + Math.round(rand() * 3);
-    const windows = Array.from({ length: count }, () => {
+    // The ridges consume the seed before this line, so the forest itself is
+    // the same morning and evening; only whether anyone has lit a lamp differs.
+    const windows = !lights ? '' : Array.from({ length: count }, () => {
         const x = width * (0.12 + rand() * 0.76);
         const y = mid.at(x) + height * (0.015 + rand() * 0.03);
         return `<circle cx="${round(x)}" cy="${round(y)}" r="${round(span * 0.34)}" fill="url(#hz-glow)"/>`

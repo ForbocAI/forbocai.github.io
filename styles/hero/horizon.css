@@ -1,0 +1,60 @@
+/* --------------------------------------------------------- hero horizon -- */
+
+/* The world, at dawn.
+   The design director's first cap, round twenty-five: "no key art or
+   spectacle — the hero is type plus a card. AAA sites lead with a world." This
+   site already has a world: the forest the sunset shows at dusk. Here is the
+   same forest — the same seed, so the same treeline — at the foot of the hero
+   in morning light, before anyone has lit a lamp. The page opens on it and
+   closes the day over it, so the descent between is one day in one place
+   rather than a gradient between two colour schemes.
+
+   Pale, far and misted, because it stands behind the page's first words and
+   the calls to action: the farther a ridge, the more of the morning air is in
+   it, and the whole band dissolves into the parchment at its foot so the
+   first chapter below meets ground, not a silhouette. */
+.hero-horizon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: clamp(9rem, 30svh, 18rem);
+    z-index: 0;
+    pointer-events: none;
+    /* The sun coming up on the opposite side from where it sets in the
+       sunset, low and just clearing the trees. */
+    background: radial-gradient(ellipse 30% 46% at 22% 70%,
+        color-mix(in srgb, var(--lantern) 38%, transparent) 0%,
+        color-mix(in srgb, var(--honey) 12%, transparent) 45%,
+        transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 52%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 52%, transparent 100%);
+}
+
+.hero-horizon .horizon-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Aerial perspective: the far ridge is mostly morning air, the near one
+   mostly moss. */
+.hero-horizon .horizon-far {
+    fill: color-mix(in oklab, var(--day-2) 72%, var(--sage));
+}
+
+.hero-horizon .horizon-mid {
+    fill: color-mix(in oklab, var(--day-3) 58%, var(--sage));
+}
+
+.hero-horizon .horizon-near {
+    fill: color-mix(in oklab, var(--day-4) 46%, var(--sage));
+}
+
+/* The page stands in front of its landscape. */
+.hero > .hero-grid {
+    position: relative;
+    z-index: 1;
+}

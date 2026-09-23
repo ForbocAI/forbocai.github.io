@@ -10,6 +10,7 @@ import { Sigil } from './Sigil.js';
 export const Hero = () => {
     return `
     <section class="hero">
+        <div class="hero-horizon" aria-hidden="true"></div>
         <div class="container hero-grid">
             <div class="hero-copy">
                 <p class="kicker">ForbocAI — the NPC language model company</p>
