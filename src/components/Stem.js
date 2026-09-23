@@ -74,7 +74,14 @@ const centreline = (rand, x0, height, sway) => {
             // Damped, so the stem is at its most wayward in the middle and
             // arrives straight — a stem is held at the base and tapers to
             // nothing, so it cannot swing at either end.
-            x: round(x0 + Math.sin(phase + t * Math.PI * turns) * sway * Math.sin(t * Math.PI)),
+            //
+            // And it leans RIGHT, into the empty column, twice as far as it
+            // leans left. Symmetric, a 52px swing carried the trunk 40px left
+            // of its own column: a reviewer measured it riding a card's border
+            // at x=169 and running to within 8px of the screen edge on a
+            // tablet. Left of the stem is the page's edge; right of it is the
+            // ground the plant is there to fill.
+            x: round(x0 + ((Math.sin(phase + t * Math.PI * turns) + 0.35) / 1.35) * sway * Math.sin(t * Math.PI)),
         };
     });
 };
@@ -139,8 +146,8 @@ const leaf = (x, y, ang, len, wid) => {
  * what a reviewer saw: "a hairline runs horizontally through the second line of
  * the title", "a strikethrough through a clickable accordion label".
  */
-const branch = (rand, x, y, reach, droop) => {
-    const cx = x + reach * 0.42;
+const branch = (rand, x, y, reach, droop, curl = 0.42) => {
+    const cx = x + reach * curl;
     const cy = y - droop * 0.5;
     const ex = round(x + reach);
     const ey = round(y + droop);
@@ -175,8 +182,23 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
     // "The trunk is a dead-straight single-weight vertical with no taper, no
     // curve, no thickness change." At 16px over 1,300 the lean was below
     // noticing, which is the same as not being there.
-    const sway = Math.min(width * 0.16, 52);
+    //
+    // Bounded by where it stands. The rightward lean reaches 0.48 of the sway
+    // to the left at most, so that much must fit between the stem and the
+    // column's own edge.
+    const sway = Math.min(width * 0.18, 60, Math.max(8, (stemX - 4) / 0.48));
     const line = centreline(rand, stemX, height, sway);
+
+    /* Each plant is its own species, not one generator at another setting.
+       A reviewer: "the vocabulary never changes — identical stroke weight,
+       identical almond leaf, identical easing on every arc. It reads as one
+       generator at different settings, which is precisely the procedural tell
+       the brief is trying to avoid." The seed now also chooses the leaf's
+       shape, how hard a branch curls, and whether its tip carries one leaf or
+       a forked pair — the three things an eye uses to tell two plants apart. */
+    const aspect = 0.2 + rand() * 0.32;
+    const curl = 0.28 + rand() * 0.34;
+    const paired = rand() < 0.5;
     // Thicker on a tall chapter: a plant that carried more is thicker at the
     // base, and this is the one place a proportion should come from the
     // content rather than from a constant.
@@ -189,8 +211,20 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
         const t = Math.min(1, y / Math.max(1, height));
         const reach = room * (0.42 + rand() * 0.46);
         const droop = (rand() < 0.5 ? -1 : 1) * (16 + rand() * 40);
-        return { ...branch(rand, xAt(line, y), y, reach, droop), t, y };
+        return { ...branch(rand, xAt(line, y), y, reach, droop, curl), t, y, x0: xAt(line, y) };
     });
+
+    // The leaf at a tip: one, or a forked pair splayed either side of the
+    // branch's own direction, in the plant's own proportions.
+    const leavesAt = (tip, ang, len, cls = '') => {
+        const one = (a) => `<path${cls} d="${leaf(tip.x, tip.y, a, len, len * aspect)}" fill="currentColor"/>`;
+        return paired ? one(ang - 0.42) + one(ang + 0.36) : one(ang);
+    };
+
+    // A node where a branch leaves the trunk. "A branch with no node is not
+    // botany" — every arc left the stem at a perfect tangent with no swelling
+    // and read as a line that forked, not a plant that grew.
+    const nodeAt = (x, y, t) => `<ellipse cx="${round(x)}" cy="${round(y)}" rx="${round(1.4 + (1 - t) * 1.6)}" ry="${round(2 + (1 - t) * 2.2)}" fill="currentColor"/>`;
 
     // Fading to 28% by the foot made the lower half of a 1,300px column
     // invisible again, which is the half the reviewers measured.
@@ -208,18 +242,21 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
         const t = Math.min(1, y / Math.max(1, height));
         const reach = room * (0.17 + rand() * 0.3);
         const droop = (rand() < 0.5 ? -1 : 1) * (9 + rand() * 20);
-        const b = branch(rand, xAt(line, y), y, reach, droop);
+        const x0 = xAt(line, y);
+        const b = branch(rand, x0, y, reach, droop, curl);
         return `<g class="stem-minor" opacity="${round(fadeOf(t) * 0.72)}">
+            ${nodeAt(x0, y, t * 1.4)}
             <path d="${b.path}" fill="none" stroke="currentColor" stroke-width="0.85" stroke-linecap="round"/>
-            <path d="${leaf(b.tip.x, b.tip.y, b.ang, 7 + (1 - t) * 5, 2.1 + (1 - t) * 1.4)}" fill="currentColor"/>
+            ${leavesAt(b.tip, b.ang, 7 + (1 - t) * 5)}
         </g>`;
     }).join('');
 
     const branches = grown.map((b, i) => `
         <g class="stem-branch" data-movement="${i}" opacity="${fadeOf(b.t)}">
+            ${nodeAt(b.x0, b.y, b.t)}
             <path d="${b.path}" fill="none" stroke="currentColor" stroke-width="${round(1.05 + (1 - b.t) * 0.75)}" stroke-linecap="round"/>
             ${b.hairs.map((h) => `<path d="${h}" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.7"/>`).join('')}
-            <path class="stem-node" d="${leaf(b.tip.x, b.tip.y, b.ang, 14 + (1 - b.t) * 12, 4 + (1 - b.t) * 3)}" fill="currentColor"/>
+            ${leavesAt(b.tip, b.ang, 14 + (1 - b.t) * 12, ' class="stem-node"')}
         </g>`).join('');
 
     return `<svg class="stem-svg" width="${round(width)}" height="${round(height)}" viewBox="0 0 ${round(width)} ${round(height)}" fill="none" aria-hidden="true" focusable="false">

@@ -16,6 +16,7 @@
 #   leadwidth          a paragraph capped far below the column it sits in
 #   navcurrent         a chapter that does not mark its own nav link
 #   readcount          a chapter the header cannot name by number
+#   navwrap            a nav label broken onto two lines, or the bar on two rows
 #   stickyoverlap      a pinned chapter title riding over the body beside it
 #   stemtouch          the drawn margin sitting on a word instead of behind it
 #   deckfold           a slide that runs past the window or hides its words
@@ -63,7 +64,7 @@ if [ -d .dream-loop ] && command -v node >/dev/null; then
     server=$!
     sleep 2
   fi
-  for check in layout contrast type leadwidth navcurrent readcount stickyoverlap stemtouch sidehead deckfold decktravel descent-gate gates errors; do
+  for check in layout contrast type leadwidth navcurrent readcount navwrap stickyoverlap stemtouch sidehead deckfold decktravel descent-gate gates errors; do
     [ -f ".dream-loop/$check.mjs" ] && run "$check" node ".dream-loop/$check.mjs"
   done
   [ -n "$server" ] && kill "$server" 2>/dev/null

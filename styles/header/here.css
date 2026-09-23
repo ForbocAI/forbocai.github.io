@@ -98,6 +98,13 @@
         color-mix(in srgb, var(--copper) 55%, transparent),
         var(--copper) 62%,
         var(--copper-ink));
+    /* A growing tip, not a guillotine. A reviewer measured the head falling
+       193 luminance levels in two pixels and read the whole thing as "a
+       browser loading bar rather than a vein". The mask is in the element's
+       own space, so it scales with the fill and the tip stays a tip at any
+       length. */
+    -webkit-mask-image: linear-gradient(90deg, #000 88%, rgba(0, 0, 0, 0.35) 96%, transparent);
+    mask-image: linear-gradient(90deg, #000 88%, rgba(0, 0, 0, 0.35) 96%, transparent);
 }
 
 

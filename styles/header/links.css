@@ -4,12 +4,21 @@
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: clamp(0.1rem, 0.35vw, 0.35rem);
     margin-left: auto;
 }
 
+/* A label is one line, and the room around it is what gives.
+   The chapter count took 50px from this bar, and at 960-1024 that was enough
+   for "Living worlds", "One choice" and "Vision deck" to break onto two lines
+   while the rest stayed on one — three baselines in one navbar, which also put
+   the passed rules at three different heights and made the lamp-versus-rule
+   distinction illegible. Both reviewers found it. The padding follows the
+   width now, so the bar fits by construction rather than by a breakpoint, and
+   the words are never the thing that bends. */
 .nav-btn {
-    padding: 0.45rem 0.8rem;
+    white-space: nowrap;
+    padding: 0.45rem clamp(0.35rem, 0.85vw, 0.8rem);
     border-radius: var(--radius-sm);
     font-size: var(--step--1);
     font-weight: 500;

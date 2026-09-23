@@ -46,11 +46,21 @@ export const Vision = () => {
                 </div>
                 <div>
                     <dt>What it runs through</dt>
-                    <dd>TypeScript and native Unreal Engine&nbsp;5 paths. Memory writes to storage your studio owns and can read without us, and every action arrives as a proposal your game is free to refuse.</dd>
+                    <dd>TypeScript and native Unreal Engine&nbsp;5 paths. Unity and Godot are integration scaffolds, not supported until they pass the same contract. Memory writes to storage your studio owns and can read without us, and every action arrives as a proposal your game is free to refuse.</dd>
                 </div>
                 <div>
                     <dt>Who is building it</dt>
-                    <dd>Three people hold the model, the law it enters through and the instrument this category will be bought on. <a href="#pitch/12" data-link>Their names and what each one does</a>.</dd>
+                    <!-- Current roles only. brochure-commercial-claim-authority.md
+                         §12 marks current roles publishable and blocks any
+                         prior-company, prior-title or prior-model claim until
+                         the founders supply fact-checked biographies. -->
+                    <dd>
+                        <ul class="terms-team">
+                            <li><strong>Sean Dinwiddie</strong> — president, board and lead developer; builds the API, the ForbocAI NPC Protocol, Servitor™ and the TypeScript SDK.</li>
+                            <li><strong>Tiernan Omalley</strong> — business development; studio partnerships and publisher conversations.</li>
+                            <li><strong>Antara Bhavsar</strong> — software developer; engine integration and Unreal Engine&nbsp;5 parity.</li>
+                        </ul>
+                    </dd>
                 </div>
             </dl>
             </div>

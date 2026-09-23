@@ -56,12 +56,33 @@ const growOne = (spread) => {
     const rail = parseFloat(getComputedStyle(spread).getPropertyValue('--rail')) || 24;
     const movements = [...body.querySelectorAll(MOVEMENTS)];
 
-    // Offsets from the spread's own top, which is what the SVG is drawn in.
+    /* The plant grows OUT OF the chapter's seal, below the chapter's picture.
+       It used to start at the spread's own top, and a spread with a lead
+       figure puts that figure first, so the stem ran straight down over the
+       illustration: a reviewer measured it "35px inside the picture, drawn over
+       the serving-girl's apron and the lantern post — lighter than the wood it
+       crosses, so it reads as a scratch on the print". It also passed through
+       the medallion in every chapter that has one, and "a line through a
+       closed glyph reads as a mistake", and it began in a blunt square cut —
+       "the stem doesn't begin, it just starts".
+       One change answers all three: the seal is the seed. The head's natural
+       top is the body's top, since they share a grid row and only the head is
+       sticky; the seal's offset inside the head is fixed however far the head
+       has ridden. */
+    const bodyTop = body.getBoundingClientRect().top - spreadBox.top;
+    const mark = head.querySelector('.chapter-mark');
+    const markBox = mark?.getBoundingClientRect();
+    const rootY = markBox ? bodyTop + (markBox.bottom - headBox.top) + 4 : bodyTop;
+    const stemX = markBox ? markBox.left + markBox.width / 2 - headBox.left : rail / 2;
+    const tall = height - rootY;
+    if (tall < 160) return null;
+
+    // Offsets from the STEM's own top, which is what the SVG is drawn in.
     // A sticky head has already left the top of the spread by the time a
     // reader is deep in a chapter, so nothing here can be measured against
     // the viewport.
-    const inSpread = (y) => y > 12 && y < height - 12;
-    const offsetOf = (el) => el.getBoundingClientRect().top - spreadBox.top;
+    const inSpread = (y) => y > 12 && y < tall - 12;
+    const offsetOf = (el) => el.getBoundingClientRect().top - spreadBox.top - rootY;
 
     const nodes = movements.map(offsetOf).filter(inSpread);
 
@@ -83,23 +104,21 @@ const growOne = (spread) => {
     stem.className = 'chapter-stem';
     stem.setAttribute('aria-hidden', 'true');
     stem.style.left = `${headBox.left - spreadBox.left}px`;
+    stem.style.top = `${rootY}px`;
     stem.style.width = `${width}px`;
-    stem.style.height = `${height}px`;
+    stem.style.height = `${tall}px`;
     // Two chapters share the id #souls, so the seed alone would grow the same
     // plant twice on one page.
     const twin = document.querySelectorAll(`.chapter-stem[data-seed^="${seed}"]`).length;
     stem.dataset.seed = twin ? `${seed}-${twin}` : seed;
-    stem.innerHTML = stemSvg({ seed: stem.dataset.seed, width, height, stemX: rail / 2, nodes, minors });
+    stem.innerHTML = stemSvg({ seed: stem.dataset.seed, width, height: tall, stemX, nodes, minors });
 
     spread.appendChild(stem);
     return {
         stem,
         spread,
         head,
-        movements: movements.filter((el) => {
-            const y = el.getBoundingClientRect().top - spreadBox.top;
-            return y > 12 && y < height - 12;
-        }),
+        movements: movements.filter((el) => inSpread(offsetOf(el))),
         // Every drawn group with the extent it actually OCCUPIES, measured
         // once from the SVG rather than taken from the height it grew at.
         //
@@ -167,8 +186,10 @@ const watch = (grown) => {
 const shade = (grown) => {
     cancelAnimationFrame(shadeRaf);
     shadeRaf = requestAnimationFrame(() => {
-        grown.forEach(({ spread, head, parts }) => {
-            const sb = spread.getBoundingClientRect();
+        grown.forEach(({ stem, head, parts }) => {
+            // In the STEM's coordinates, which is what the SVG is drawn in and
+            // no longer the spread's, now that the plant starts at the seal.
+            const sb = stem.getBoundingClientRect();
             const hb = head.getBoundingClientRect();
             const top = hb.top - sb.top - 10;
             const bottom = hb.bottom - sb.top + 10;
@@ -177,6 +198,13 @@ const shade = (grown) => {
                 // the head is the one that crosses a line of it.
                 el.classList.toggle('is-shaded', bt >= top && t <= bottom);
             });
+            // And the TRUNK, which the class above cannot reach: it is one
+            // path the whole height of the chapter, so it is cut out of view
+            // by a band on the layer's own mask, feathered either side. Without
+            // it the stem ran straight through the medallion and the title as
+            // the head rode down over it.
+            stem.style.setProperty('--cut-a', `${Math.round(top)}px`);
+            stem.style.setProperty('--cut-b', `${Math.round(bottom)}px`);
         });
     });
 };

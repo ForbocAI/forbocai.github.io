@@ -46,9 +46,13 @@
     outline-color: var(--lantern);
 }
 
+/* Grown moss at the root, the made lamp at the tip: the two sources in the
+   order a reader meets them. It began in --creek, the same teal a reviewer
+   caught on the stem — "both of this round's new ornaments are drawn in a
+   colour that belongs to neither declared light source". */
 .site-header.is-night .read-vein {
     background: linear-gradient(90deg,
-        color-mix(in srgb, var(--creek) 55%, transparent),
+        color-mix(in oklab, var(--sage) 55%, transparent),
         var(--honey) 62%,
         var(--lantern));
 }

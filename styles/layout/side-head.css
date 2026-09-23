@@ -33,13 +33,23 @@
    this colour now, and needs it at every width the system might measure at.
    --vein-lit is the lamp on the branch the reader is level with. */
 .chapter-spread {
-    --vein: var(--day-rule);
+    /* A shade deeper than the rule it was: on parchment the stem measured 15-27
+       luminance levels off its ground, "at the threshold of visibility, which
+       is exactly how a print artifact looks". */
+    --vein: color-mix(in oklab, var(--day-rule) 68%, var(--copper));
     --vein-lit: var(--copper);
 }
 
+/* Moss, not teal. A reviewer sampled the night stem at RGB(84,119,122), hue
+   about 185, against a night of hue about 100: "the plant is 85 degrees of hue
+   away from the world it grows in. Two light sources is the thesis; the page
+   has three, and the third one is the one the code drew." It was --creek, a
+   surface colour, mixed toward the rule. A plant is GROWN, so it wears the
+   grown half of the model — the night's own green, lifted — and the lamp on the
+   branch a reader is level with is the MADE half. */
 .chapter-night .chapter-spread,
 .turn-band .chapter-spread {
-    --vein: color-mix(in srgb, var(--creek) 86%, var(--night-rule));
+    --vein: color-mix(in oklab, var(--sage) 70%, var(--night-bg));
     --vein-lit: var(--lantern);
 }
 

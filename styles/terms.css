@@ -35,7 +35,9 @@
 
 .chapter-night .terms > div,
 .turn-band .terms > div {
-    --vein-term: color-mix(in srgb, var(--creek) 80%, var(--night-rule));
+    /* The chapter stem's own moss, so the terms and the plant beside them are
+       one vein system rather than a teal rule next to a green one. */
+    --vein-term: color-mix(in oklab, var(--sage) 70%, var(--night-bg));
 }
 
 .terms dt {
@@ -61,6 +63,26 @@
 .chapter-night .terms dd,
 .turn-band .terms dd {
     color: var(--night-ink-soft);
+}
+
+/* Three people, one per line. A buyer was sent to slide twelve of the deck to
+   learn who they were, and read the link as "two doors, same locked room". */
+.terms-team {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+}
+
+.terms-team strong {
+    font-weight: 700;
+    color: var(--day-ink);
+}
+
+.chapter-night .terms-team strong,
+.turn-band .terms-team strong {
+    color: var(--night-ink);
 }
 
 /* Side by side once there is room for the question to stand beside its
