@@ -27,6 +27,7 @@ export const Hero = () => {
 
             <div class="hero-vista" aria-hidden="true"></div>
 
+            <div class="hero-side">
             <figure class="memory-panel">
                 <figcaption class="memory-panel-head">
                     <span class="memory-who sigil-pair">
@@ -56,6 +57,12 @@ export const Hero = () => {
                 <p class="memory-weigh" style="--i:3">The weather is the safe answer. Her brother asked her to keep the letter sealed. This player is the only one who ever asked after him — and that is still not the same as being asked by her brother.</p>
                 <p class="memory-foot" style="--i:4">Memory is the evidence. Judgment is the intelligence.</p>
             </figure>
+            <dl class="hero-figures">
+                <div><dt><a href="https://www.cnbc.com/2024/08/02/ex-google-engineers-from-characterai-re-join-company-with-new-ai-partnership-.html" target="_blank" rel="noopener noreferrer">$2.7B</a></dt><dd>paid to license one company’s character technology</dd></div>
+                <div><dt><a href="https://www.prnewswire.com/news-releases/inworld-ai-99-of-gamers-are-excited-by-the-potential-of-smart-npcs-powered-by-advanced-artificial-intelligence-301747635.html" target="_blank" rel="noopener noreferrer">81%</a></dt><dd>of players would pay more for characters like these</dd></div>
+                <div><dt><a href="https://playerdriven.io/articles/the-global-games-market-in-2025-growth-shifts-and-what-comes-next" target="_blank" rel="noopener noreferrer">3.6B</a></dt><dd>players in the worlds they enter</dd></div>
+            </dl>
+            </div>
         </div>
     </section>
     `;

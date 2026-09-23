@@ -99,7 +99,7 @@
     }
 
     .hero-copy,
-    .hero-vista + .memory-panel {
+    .hero-vista + .hero-side {
         position: relative;
         z-index: 1;
     }

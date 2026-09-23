@@ -1,0 +1,63 @@
+/* Three cited figures under the ground line: the weight of the door, in
+   numbers an investor can carry out of the first view. Each figure is its own
+   citation, so the number and its source are one tap. */
+.hero-figures {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem clamp(0.9rem, 2.4vw, 1.6rem);
+    margin: 1.4rem clamp(0.4rem, 1.5vw, 1.2rem) 0;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--day-rule);
+}
+
+.hero-figures div {
+    min-width: 0;
+}
+
+.hero-figures dt {
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.hero-figures dt a {
+    color: var(--copper-ink);
+    text-decoration: none;
+}
+
+.hero-figures dt a:hover,
+.hero-figures dt a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.hero-figures dd {
+    margin: 0.3rem 0 0;
+    font-size: var(--step--1);
+    line-height: 1.35;
+    color: var(--day-ink-soft);
+}
+
+/* A phone has no room for three columns of words: each figure takes a row,
+   with its number on the left and what it counts on the right. */
+@media (max-width: 620px) {
+    .hero-figures {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-figures div {
+        display: grid;
+        grid-template-columns: 4.6rem minmax(0, 1fr);
+        align-items: baseline;
+        gap: 0.8rem;
+    }
+
+    .hero-figures dt {
+        font-size: var(--step-1);
+    }
+
+    .hero-figures dd {
+        margin: 0;
+    }
+}
