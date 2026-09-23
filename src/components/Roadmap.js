@@ -32,7 +32,7 @@ export const Roadmap = () => {
                     <div class="timeline-content">
                         <p class="timeline-status">Walking worlds</p>
                         <h3>See the world before players do</h3>
-                        <p>Ghost walks our own test worlds today, the way a thousand players would. What it finds — the room nobody can reach, the loop nobody closes — reaches producers outside this building as that term opens.</p>
+                        <p>Ghost walks our own test worlds today, the way a thousand players would. What it finds — the room nobody can reach, the loop nobody closes — becomes a map a producer outside this building acts on.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
