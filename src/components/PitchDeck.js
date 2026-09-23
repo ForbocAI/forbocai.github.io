@@ -212,7 +212,7 @@ const slides = [
                 </div>
                 <div class="team-member">
                     <h4><a href="https://www.linkedin.com/in/antara-bhavsar-74b7a4187/" target="_blank" rel="noopener noreferrer">Antara Bhavsar</a></h4>
-                    <p><strong>Software developer</strong><br/>Built the NPC runtime at the heart of the API, carried structured personas end to end across the API and SDK, retrained the model, and brought the Platform game onto the SDK. Now building the Soul’s encrypted transport.</p>
+                    <p><strong>Co-founder &amp; Founding Engineer</strong><br/>Built the NPC runtime at the heart of the API, carried structured personas end to end across the API and SDK, retrained the model, and brought the Platform game onto the SDK. Now building the Soul’s encrypted transport.</p>
                 </div>
             </div>
             <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category will be bought on. That is what the rate of arrival looks like from inside it.</p>
