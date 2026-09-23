@@ -20,6 +20,7 @@ import { setupNavCurrent } from './systems/navCurrent.js';
 import { setupChapterStem } from './systems/chapterStem.js';
 import { setupHorizon } from './systems/horizon.js';
 import { setupChapterSprig } from './systems/chapterSprig.js';
+import { setupNightFungus } from './systems/nightFungus.js';
 import { arrive } from './systems/arrival.js';
 
 // Initialize Store
@@ -49,6 +50,7 @@ const render = () => {
         setupChapterStem();
         setupHorizon();
         setupChapterSprig();
+        setupNightFungus();
 
         // Post-render: where the page lands.
         arrive(state);

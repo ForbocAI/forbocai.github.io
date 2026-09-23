@@ -1,0 +1,42 @@
+/* --------------------------------------------------------------- fungus -- */
+
+/* Foxfire on the page's edge: the source of each night chapter's colony.
+   Placed and sized by src/systems/nightFungus.js; drawn growing out of the
+   left edge, and mirrored where the colony is on the right. */
+.night-fungus {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    /* Warm-dark caps, bark-brown, not the grey of a flat fill. */
+    --fungus-cap: color-mix(in oklab, var(--copper) 16%, var(--night-floor));
+    --fungus-cap-lit: color-mix(in oklab, var(--copper) 22%, var(--night-mid));
+    --fungus-band: color-mix(in oklab, var(--copper) 40%, var(--night-mid));
+    --fungus-bark: color-mix(in oklab, var(--night-floor) 70%, #000);
+    --fungus-lit: color-mix(in oklab, var(--sage) 72%, #d8f0b8);
+    --fungus-moss: color-mix(in oklab, var(--sage) 30%, var(--night-mid));
+}
+
+.night-fungus.is-right {
+    left: auto;
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.night-fungus .fungus-svg {
+    display: block;
+    overflow: visible;
+}
+
+/* The gills breathe, slowly, the way foxfire is said to: a light that is
+   alive rather than switched on. */
+@media (prefers-reduced-motion: no-preference) {
+    .night-fungus .fungus-svg {
+        animation: foxfire 9s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes foxfire {
+    from { opacity: 0.82; }
+    to { opacity: 1; }
+}
