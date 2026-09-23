@@ -19,6 +19,7 @@ import { setupDocContents } from './systems/docContents.js';
 import { setupNavCurrent } from './systems/navCurrent.js';
 import { setupChapterStem } from './systems/chapterStem.js';
 import { setupHorizon } from './systems/horizon.js';
+import { setupChapterSprig } from './systems/chapterSprig.js';
 import { arrive } from './systems/arrival.js';
 
 // Initialize Store
@@ -47,6 +48,7 @@ const render = () => {
         setupNavCurrent();
         setupChapterStem();
         setupHorizon();
+        setupChapterSprig();
 
         // Post-render: where the page lands.
         arrive(state);

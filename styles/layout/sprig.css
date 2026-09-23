@@ -1,0 +1,33 @@
+/* ---------------------------------------------------------------- sprig -- */
+
+/* The chapter plant on a phone: a tendril along the seal's own line. Placed
+   and sized in pixels by src/systems/chapterSprig.js; this is where it sits
+   and what colour it is — the margin plant's colours, day and night. */
+.chapter-head {
+    position: relative;
+}
+
+.chapter-sprig {
+    position: absolute;
+    pointer-events: none;
+    color: color-mix(in oklab, var(--day-rule) 68%, var(--copper));
+    opacity: 0.9;
+}
+
+.chapter-sprig .sprig-svg {
+    display: block;
+    overflow: visible;
+}
+
+.nightfall .chapter-sprig,
+.chapter-night .chapter-sprig,
+.turn-band .chapter-sprig {
+    color: color-mix(in oklab, var(--sage) 70%, var(--night-bg));
+}
+
+/* The margin plant takes over where there is a margin. */
+@media (min-width: 960px) {
+    .chapter-sprig {
+        display: none;
+    }
+}
