@@ -19,10 +19,10 @@ export const Footer = () => {
                     <p class="footer-group-label">Product</p>
                     <a href="#servitor" data-link>Servitor™</a>
                     <a href="https://docs.forboc.ai" target="_blank" rel="noopener noreferrer">Developer docs</a>
-                    <a href="#turn" data-link>One impossible choice</a>
+                    <a href="#turn" data-link>One choice</a>
                     <a href="#technology" data-link>Living worlds</a>
-                    <a href="#roadmap" data-link>Active horizons</a>
-                    <a href="#souls" data-link>Soul continuity</a>
+                    <a href="#roadmap" data-link>Horizons</a>
+                    <a href="#souls" data-link>Souls</a>
                     <a href="#whitepaper">Whitepaper</a>
                     <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>
                 </nav>
@@ -31,7 +31,7 @@ export const Footer = () => {
                     <p class="footer-group-label">Company</p>
                     <a href="#investors" data-link>Investors</a>
                     <a href="#pitch/12" data-link>Who is building this</a>
-                    <a href="#whitepaper" data-link>Commercial terms</a>
+                    <a href="#whitepaper" data-link>The Standard</a>
                     <a href="#pitch/1">Vision deck</a>
                     <a href="mailto:hello@forboc.ai">hello@forboc.ai</a>
                     <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Careers</a>
