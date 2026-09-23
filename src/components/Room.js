@@ -17,7 +17,7 @@ export const Room = () => {
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛖ' })}
                 <div>
-                    <h2>The rest of the room was listening</h2>
+                    <h2>The rest of the room is listening</h2>
                     <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
                 </div>
             </header>
@@ -34,7 +34,7 @@ export const Room = () => {
                     <p>Brannoc is at the end of the counter. The player covered his room in the autumn when he came up short, and he has never mentioned it. He is close enough to hear Maeve say no.</p>
                 </div>
                 ${Deeper({
-                    summary: 'The document your writer handed us, and what he did about it',
+                    summary: 'The document your writer hands us, and what he does about it',
                     body: `<div class="turn-counterfactual-pair">
                     <article>
                         <span class="sigil-pair">${Sigil({ name: 'Brannoc, miner, Lanternbough', size: 40, tone: 'creek' })} What your writer handed us</span>
@@ -51,7 +51,7 @@ export const Room = () => {
 }</code></pre>
                     </article>
                     <article>
-                        <span>What he did about it — your game fired this call, not us</span>
+                        <span>What he does about it — your game fires this call, not us</span>
                         <pre class="turn-code"><code>// legalActions: ['speak_to', 'stay_silent']
 {
   dialogue: "Maeve. It was the two of them that covered my room in the autumn.",
@@ -77,15 +77,15 @@ export const Room = () => {
                     <p class="turn-note"><strong>She held.</strong> Leaned on publicly, in her own house, by a lodger whose word carries — and the letter is still sealed, because her writer typed <em>the letter does not open on a debt</em>, and the room cannot talk her out of it. What moved is what she paid instead: she found the debt elsewhere and settled it out of the inn.</p>
                 </div>
 
-                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> He changes what is true in the room, and now she is weighing a debt she did not know about. <strong>There is no tree in which that scene exists.</strong> Two people is every pair; five is every combination of five in every order; a raid is that with a boss in the middle. This is why party banter dies in month thirty of every game ever made.</p>
+                <p class="turn-note turn-counterfactual-foot"><strong>He never contradicts her.</strong> He changes what is true in the room, and now she is weighing a debt that is news to her. <strong>There is no tree in which that scene exists.</strong> Two people is every pair; five is every combination of five in every order; a raid is that with a boss in the middle. This is why party banter dies in month thirty of every game ever made.</p>
             </section>
                 ${Deeper({
                     summary: 'What this costs a narrative team: localisation, voice, and what a refusal becomes',
-                    body: `<p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localization lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what would you have put back in?</p>
+                    body: `<p class="turn-consequence"><strong>Think about the arc your narrative director cut this cycle.</strong> Not for quality — for the localization lock. If a character could hold the loyalty your writers authored and still surprise you in hour forty, what do you put back in?</p>
 
-            <p class="turn-consequence"><strong>Her judgment was never a string, so it was never on the string table, and the lock that cut your arc has nothing to hold her against.</strong> That is the freedom and it is also the problem. She reaches the decision once and a decision is language-independent — but delivery is not: register, idiom, honorifics, and what a refusal sounds like in a language where refusing is done sideways. Shipping her in nine languages means trusting her to be the same person in all nine and native in each. That is the hardest line in the Standard.</p>
+            <p class="turn-consequence"><strong>Her judgment is never a string, so it is never on the string table, and the lock that cut your arc has nothing to hold her against.</strong> That is the freedom and it is also the problem. She reaches the decision once and a decision is language-independent — but delivery is not: register, idiom, honorifics, and what a refusal sounds like in a language where refusing is done sideways. Shipping her in nine languages means trusting her to be the same person in all nine and native in each. That is the hardest line in the Standard.</p>
 
-            <p class="turn-consequence"><strong>A line nobody wrote is a line nobody recorded, so she starts where a cast is largest and least served — the hundreds your budget was always going to subtitle, who have been reading the same six barks since launch.</strong> Your performed principals stay performed, exactly as written and recorded. Where a studio wants her reaching voice, that is a contract between the studio and the performer, and the standard we hold is the one we would want on the other side of it: a voice is a person's work, it is used with their consent, and it is paid for.</p>
+            <p class="turn-consequence"><strong>A line nobody wrote is a line nobody recorded, so she starts where a cast is largest and least served — the hundreds your budget subtitles, who have been reading the same six barks since launch.</strong> Your performed principals stay performed, exactly as written and recorded. Where a studio wants her reaching voice, that is a contract between the studio and the performer, and the standard we hold is the one we want on the other side of it: a voice is a person's work, it is used with their consent, and it is paid for.</p>
 
             <p class="turn-consequence"><strong>A refusal becomes the next piece of evidence too.</strong> The letter stays sealed, the world remembers that it was asked for, and Maeve enters the next encounter as the person who kept her brother's confidence — and who knows this player asked after him anyway.</p>`,
                 })}
@@ -117,13 +117,13 @@ export const RoomTeaser = () => `
             <header class="chapter-head">
                 ${ChapterMark({ rune: 'ᛖ' })}
                 <div>
-                    <h2>The rest of the room was listening</h2>
+                    <h2>The rest of the room is listening</h2>
                 </div>
             </header>
 
             <div class="chapter-body">
             <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
-            <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt she did not know about. Two people is every pair; five is every combination of five in every order; a raid is that with a boss in the middle.</p>
+            <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> He never contradicts her. He changes what is true in the room, and now she is weighing a debt that is news to her. Two people is every pair; five is every combination of five in every order; a raid is that with a boss in the middle.</p>
 
             <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">Watch the whole room decide</a></p>
             </div>
