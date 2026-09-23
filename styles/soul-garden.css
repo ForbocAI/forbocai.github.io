@@ -159,6 +159,15 @@
     margin-top: 0.1rem;
 }
 
+/* Centred in the rail; below the rail's breakpoint the head is one column,
+   and centred there it stood alone mid-line above left-set titles, the one
+   chapter whose seal did not start the line. */
+@media (max-width: 959px) {
+    .crossing-head > .sigil {
+        justify-self: start;
+    }
+}
+
 /* The pocket, and nothing the shared rule already says. This block was a
    copy-paste of .turn-code that carried two values its source had since
    moved past: a `max-width: 72ch` measured against a frozen 12.5px font, so

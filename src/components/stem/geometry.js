@@ -103,8 +103,13 @@ export const leaf = (x, y, ang, len, wid) => {
  * the title", "a strikethrough through a clickable accordion label".
  */
 export const branch = (rand, x, y, reach, droop, curl = 0.42) => {
-    const cx = x + reach * curl;
-    const cy = y - droop * 0.5;
+    // A rising branch climbs as it leaves the stem and eases outward toward
+    // its tip, the control above its end; with the control below, it dipped
+    // first and hooked up, a swag rather than a shoot. A falling one arches
+    // over, as a weeping branch does.
+    const rising = droop < 0;
+    const cx = x + reach * curl * (rising ? 0.55 : 1);
+    const cy = rising ? y + droop * 1.25 : y - droop * 0.5;
     const ex = round(x + reach);
     const ey = round(y + droop);
     const path = `M${round(x)},${round(y)}Q${round(cx)},${round(cy)} ${ex},${ey}`;

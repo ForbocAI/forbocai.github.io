@@ -86,7 +86,10 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
     const grown = nodes.map((y) => {
         const t = Math.min(1, y / Math.max(1, height));
         const reach = room * (0.42 + rand() * 0.46);
-        const droop = (rand() < 0.5 ? -1 : 1) * (16 + rand() * 40);
+        // Mostly rising, and by a share of its own reach: 16-56px over a
+        // 200px branch left every one nearly level, and at the even spacing
+        // the text sets they read as "ladder rungs".
+        const droop = (rand() < 0.7 ? -1 : 1) * reach * (0.14 + rand() * 0.3);
         return { ...branch(rand, xAt(line, y), y, reach, droop, curl), t, y, x0: xAt(line, y) };
     });
 
@@ -148,7 +151,7 @@ export const stemSvg = ({ seed, width, height, stemX, nodes, minors = [] }) => {
     const small = minors.map((y) => {
         const t = Math.min(1, y / Math.max(1, height));
         const reach = room * (0.17 + rand() * 0.3);
-        const droop = (rand() < 0.5 ? -1 : 1) * (9 + rand() * 20);
+        const droop = (rand() < 0.65 ? -1 : 1) * reach * (0.18 + rand() * 0.35);
         const x0 = xAt(line, y);
         const b = branch(rand, x0, y, reach, droop, curl);
         return `<g class="stem-minor" opacity="${round(fadeOf(t) * 0.72)}">
