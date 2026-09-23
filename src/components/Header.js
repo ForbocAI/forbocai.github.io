@@ -14,6 +14,7 @@ const LINKS = [
     { href: '#technology', label: 'Living worlds', internal: true },
     { href: '#turn', label: 'One choice', internal: true },
     { href: '#roadmap', label: 'Horizons', internal: true },
+    { href: '#investors', label: 'Investors', internal: true },
     { href: 'https://docs.forboc.ai', label: 'Docs', internal: false },
     { href: '#whitepaper', label: 'Whitepaper', internal: true },
     { href: '#pitch/1', label: 'Vision deck', internal: true },
