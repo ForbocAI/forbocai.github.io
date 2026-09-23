@@ -29,6 +29,14 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
 }
 
+/* The economy runs in four phases, and they read as one sequence only on one
+   row. At 13rem a tablet's slide held three, and the fourth fell to a row of
+   its own, which made this slide taller than the others and moved the deck's
+   controls. */
+.business-grid.model-economy {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+}
+
 .problem-column h3,
 .business-item h4,
 .team-member h4 {

@@ -192,6 +192,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Enter</span><h4>One impossible choice</h4><p>A single scene reveals the new unit: a judgment no branch contained.</p></div>
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>One model, every cast in a catalogue. An innkeeper, a fleet commander, a child in a besieged city. No two of them sounding like the same mind.</p></div>
+                <div class="business-item"><span class="business-phase">Carry</span><h4>Characters that change hands</h4><p>A character a player carries is a Soul, minted, grown and traded in $FAI.</p></div>
             </div>
             <p class="impact-statement">What compounds is the range of worlds one contract holds in, and the instrument that measures whether any character model holds at all. The first worlds through set the range, and the range is what the whole thesis rests on.</p>
         `
