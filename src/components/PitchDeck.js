@@ -227,7 +227,7 @@ const slides = [
             <div class="threshold-call">
                 <p class="proof-label">The window</p>
                 <p class="threshold-lead">Character Intelligence has its model and its law. What it does not have yet is a cast a player has argued with in public — and the studio that ships first decides what this category means for everyone who follows it.</p>
-                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> A studio. Then a character who stays herself under an evaluation somebody else designed. Then that evaluation published and handed to our rivals, because whoever authors a category's test authors what the category is worth. It asks whether you are in the room while the law is written, or reading it afterwards.</p>
+                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> The companies that own a layer of language intelligence are valued <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank" rel="noopener noreferrer">near a trillion dollars</a>. Character Intelligence is the next layer, and whoever authors its measure authors what it is worth. That measure is being written in this room.</p>
             </div>
             <p class="ask-note">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player forgets the scene and still remembers her.</p>
             <div class="contact-box">
