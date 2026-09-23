@@ -24,7 +24,7 @@ export const Footer = () => {
                     <a href="#roadmap" data-link>Horizons</a>
                     <a href="#souls" data-link>Souls</a>
                     <a href="#whitepaper">Whitepaper</a>
-                    <a href="https://pump.fun/coin/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>
+                    <a href="https://solscan.io/token/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>
                 </nav>
 
                 <nav class="footer-link-group" aria-label="Company">
