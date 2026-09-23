@@ -26,7 +26,7 @@ export const Investors = () => {
                 <p>What has never existed is a way to get that character on purpose instead of by luck. The boundary is built. The model answers today.</p>
                 <p><strong>Every studio wants characters who think.</strong> Wanting them is never the problem; having them is. An open-ended voice loose in your world with your character's name on it is not a feature, it is an incident.</p>
                 <p><strong>So neither half ships without the other.</strong> A model that reasons like a person and cannot be stopped from moving your state is a liability, and a boundary with nothing behind it is a config file. Servitor™ needs the Protocol's law to enter a world at all. That is why they are one thing, and why the thing is served rather than shipped loose.</p>
-                <p><strong>The moat is not the boundary.</strong> It is the model, and what is in it cannot be prompted back out. <strong>Selflessness is weights, not a prompt.</strong></p>
+                <p><strong>The moat is not the boundary.</strong> It is the model — the kind of asset a tech giant paid <a href="https://www.cnbc.com/2024/08/02/ex-google-engineers-from-characterai-re-join-company-with-new-ai-partnership-.html" target="_blank" rel="noopener noreferrer">$2.7&nbsp;billion</a> to license — and what is in it cannot be prompted back out. <strong>Selflessness is weights, not a prompt.</strong></p>
                 <p>We write this category’s measure. Every rival is held to it, as we are. Whoever writes a category's measurement writes its purchasing criteria.</p>
 
                 <p class="investors-takeaway"><strong>No budget line can order the character players quote.</strong> She makes a decision nobody wrote.</p>
