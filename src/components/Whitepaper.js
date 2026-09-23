@@ -40,7 +40,7 @@ export const Whitepaper = () => {
                     <ul>
                         <li><strong>Latency.</strong> A round trip that reads fine in a chat window is a broken beat in live play.</li>
                         <li><strong>Cost.</strong> A model demo says nothing about unit economics at a shipped title's concurrency. The shape is this: one character judgment is one call. The dialogue, the reasoning behind it and the structured action come back from the same attempt — not a chain of calls per line, not a re-roll to get a parseable action, not a second request to explain the first. Concurrency and unit economics are clause four; the call count per decision is not.</li>
-                        <li><strong>Incoherence.</strong> A model that lacks inventory evidence can propose an item the player never had.</li>
+                        <li><strong>Incoherence.</strong> A model that lacks inventory evidence can propose an item the player does not hold.</li>
                     </ul>
                     <p>The protocol makes the decision boundary inspectable, and the Standard measures the rest in public.</p>
                 </section>
@@ -61,13 +61,13 @@ export const Whitepaper = () => {
                     <p>The reply and any proposed action are checked separately. Transport failures reject the request. A server deadline miss or a reply that fails its required rules returns a typed invalid result. Proposed actions that fail the studio's rules are not applied. None can authorize a memory write or state change, and the game owns the fallback. These checks alone do not guarantee factual accuracy — clause twelve — nor moderation or console certification, which is clause six.</p>
 
                     <h4>Entities, state, and world rules</h4>
-                    <p>An entity-component system, an object graph, or a simulation you built yourself — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world. The validation step enforces that for actions, which is why a proposal your rules reject never touches state. The reply check is mechanical and narrow: the reply must name the action she proposed, must not argue for an action it did not take, and must not claim a comparison the supplied evidence does not carry. It is not a lore check. A character can still state something about your world that is untrue — she reasons from the evidence you supply, which bounds what she reaches for without preventing her reaching past it. That is clause twelve.</p>
+                    <p>An entity-component system, an object graph, or a simulation you built yourself — the principle does not change. Character reasoning has to stay grounded in whatever data model actually drives your world. The validation step enforces that for actions, which is why a proposal your rules reject never touches state. The reply check is mechanical and narrow: the reply must name the action she proposes, must not argue for an action it does not take, and must not claim a comparison the supplied evidence does not carry. It is not a lore check. A character can still state something about your world that is untrue — she reasons from the evidence you supply, which bounds what she reaches for without preventing her reaching past it. That is clause twelve.</p>
 
                     <h4>Beyond dialogue</h4>
                     <p>Speech is the visible part. The same layer carries the rest of a character's cognitive surface:</p>
                     <ul>
                         <li><strong>Decisions.</strong> Moves, trades, follow-ups, and social actions arrive as structured intent, not prose to be parsed.</li>
-                        <li><strong>Evidence.</strong> Prior events, relationships and local context are what the character reasons from — not trivia she can mention, but the grounds on which she decides differently in hour forty than she would have in hour three.</li>
+                        <li><strong>Evidence.</strong> Prior events, relationships and local context are what the character reasons from — not trivia she can mention, but the grounds on which she decides differently in hour forty than in hour three.</li>
                         <li><strong>Continuity of feeling.</strong> Mood, trust, and whatever other signals you author shape what she does next, and only then how she says it.</li>
                     </ul>
 
@@ -106,9 +106,9 @@ export const Whitepaper = () => {
                         <li><strong><span class="gate-n">22.</span> A studio pays.</strong> A studio that is not ForbocAI pays for character judgments.</li>
                         <li><strong><span class="gate-n">23.</span> Independent cast provenance.</strong> The casts behind thirteen to fifteen come from a party with no relationship to us, named beside the result.</li>
                         <li><strong><span class="gate-n">24.</span> $FAI utility.</strong> A Soul minted, carried and restored using $FAI between two live titles.</li>
-                        <li><strong><span class="gate-n">25.</span> She is herself in every language you ship, and in every voice.</strong> Her line was never on the string table — that is the point of this company, and it is what makes this the hardest gate on the list. A judgment reached in one language, arriving in a locale no translator has seen, with a position on the performed half that a studio's voice contracts can live with.</li>
+                        <li><strong><span class="gate-n">25.</span> She is herself in every language you ship, and in every voice.</strong> Her line is never on the string table — that is the point of this company, and it is what makes this the hardest gate on the list. A judgment reached in one language, arriving in a locale no translator has seen, with a position on the performed half that a studio's voice contracts can live with.</li>
                     </ol>
-                    <p>Twelve is the fault a studio fears. Thirteen, fourteen and fifteen are the three we most want to hand over, because together they are the claim this company rests on: that an authored person holds under pressure, that four hundred of them stay different from one another, and that the reason she gives is the reason she had. Servitor™ was trained for all three. <strong>A limitation without a gate is just a well-worded no, and a strength without one is just a well-worded yes.</strong></p>
+                    <p>Twelve is the fault a studio fears. Thirteen, fourteen and fifteen are the three we most want to hand over, because together they are the claim this company rests on: that an authored person holds under pressure, that four hundred of them stay different from one another, and that the reason she gives is the reason she holds. Servitor™ is trained for all three. <strong>A limitation without a gate is just a well-worded no, and a strength without one is just a well-worded yes.</strong></p>
                 </section>
 
                 <section id="wp-souls">
@@ -123,7 +123,7 @@ export const Whitepaper = () => {
 
                     <h3>4.1 Why durable identity matters</h3>
                     <p><strong>A card preserves who a character is. A Soul carries who she became with you.</strong> Trading cards proved the appetite decades ago — identity, strategy, collecting, and a cast that grows across releases. People have been paying for identity they can keep ever since, and a card has never once been able to remember them back.</p>
-                    <p><a href="https://www.npc.com/" target="_blank" rel="noopener noreferrer">Non-Playable Coin packages collectible identity as a memecoin–NFT hybrid</a>, while <a href="https://whitepaper.virtuals.io/about-virtuals/about-virtuals-protocol.md" target="_blank" rel="noopener noreferrer">Virtuals frames agents as autonomous economic actors</a>. A market is already convinced that a character can be an asset. What none of them has is a character worth keeping — someone whose history was earned inside a world that ruled on it.</p>
+                    <p><a href="https://www.npc.com/" target="_blank" rel="noopener noreferrer">Non-Playable Coin packages collectible identity as a memecoin–NFT hybrid</a>, while <a href="https://whitepaper.virtuals.io/about-virtuals/about-virtuals-protocol.md" target="_blank" rel="noopener noreferrer">Virtuals frames agents as autonomous economic actors</a>. A market is already convinced that a character can be an asset. What none of them has is a character worth keeping — someone whose history is earned inside a world that rules on it.</p>
                     <p>ForbocAI points that appetite at continuity for the player and authority for every receiving studio.</p>
                 </section>
 
