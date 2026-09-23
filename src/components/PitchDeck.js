@@ -204,7 +204,7 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <h4><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan O’Malley</a></h4>
-                    <p><strong>Co-founder · Corporate partnerships &amp; investor relations</strong><br/>The company’s bond with its corporate partners, its venture capital and its investors. Opens markets in cybersecurity and technology — Framework Security, Hays, IDMWORKS — with an MBA underway at Rice Business.</p>
+                    <p><strong>Co-founder · Corporate partnerships &amp; investor relations</strong><br/>Opens markets for a living — cybersecurity and technology at Framework Security, Hays and IDMWORKS — with an MBA underway at Rice Business.</p>
                 </div>
                 <div class="team-member">
                     <h4><a href="https://www.linkedin.com/in/seandinwiddie/" target="_blank" rel="noopener noreferrer">Sean Dinwiddie</a></h4>
