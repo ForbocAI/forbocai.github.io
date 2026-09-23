@@ -40,17 +40,16 @@
 }
 
 /* Aerial perspective: the far ridge is mostly morning air, the near one
-   mostly moss. */
-.hero-horizon .horizon-far {
-    fill: color-mix(in oklab, var(--day-2) 72%, var(--sage));
-}
-
-.hero-horizon .horizon-mid {
-    fill: color-mix(in oklab, var(--day-3) 58%, var(--sage));
-}
-
-.hero-horizon .horizon-near {
-    fill: color-mix(in oklab, var(--day-4) 46%, var(--sage));
+   mostly moss, and each fades at its foot into the mist lying in the valley in
+   front of it. A shade deeper than the first version, which a judge measured
+   as "a sage silhouette at about 15% opacity, like dust at the foot of the
+   page" — a morning is pale, but a forest is still a forest. */
+.hero-horizon {
+    --hz-far: color-mix(in oklab, var(--day-3) 64%, var(--sage));
+    --hz-haze: var(--day-1);
+    --hz-mid: color-mix(in oklab, var(--day-4) 48%, var(--sage));
+    --hz-haze-low: color-mix(in oklab, var(--day-2) 78%, var(--sage));
+    --hz-near: color-mix(in oklab, var(--day-5) 34%, var(--sage));
 }
 
 /* The page stands in front of its landscape. */

@@ -105,17 +105,15 @@
 }
 
 /* Far to near: hazed by the warm air, then darker, then the night's own
-   opening colour, which the ground below continues without a seam. */
-.horizon-far {
-    fill: color-mix(in oklab, var(--dusk-3) 38%, var(--dusk-5));
-}
-
-.horizon-mid {
-    fill: var(--dusk-5);
-}
-
-.horizon-near {
-    fill: var(--dusk-6);
+   opening colour, which the ground below continues without a seam. Each far
+   ridge fades at its foot into the haze named here, which is the evening air
+   pooled in the valley in front of it. */
+.nightfall-edge {
+    --hz-far: color-mix(in oklab, var(--dusk-3) 38%, var(--dusk-5));
+    --hz-haze: color-mix(in oklab, var(--dusk-3) 72%, var(--dusk-2));
+    --hz-mid: var(--dusk-5);
+    --hz-haze-low: color-mix(in oklab, var(--dusk-5) 55%, var(--dusk-3));
+    --hz-near: var(--dusk-6);
 }
 
 /* Ambient only. The measurable light now comes from the lanterns themselves —
