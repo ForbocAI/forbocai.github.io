@@ -104,6 +104,10 @@
     /* Empty above the first chapter and on the routes, and an empty box must
        not leave a gap where a reader reads one. */
     min-width: 0;
+    /* But a full one is never crushed: at 1024 the nav squeezed it to 9px
+       and "07 / 09" spilled into the first link, reading as "07 / 09
+       Servitor™". An empty box is zero wide anyway. */
+    flex-shrink: 0;
 }
 
 .read-count:empty,
