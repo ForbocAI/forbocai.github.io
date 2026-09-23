@@ -17,7 +17,7 @@ export const Turn = () => {
         <div class="container">
             <figure class="maeve-scene turn-scene">
                 <img src="maeve-letter-scene.webp" alt="The sealed letter in Maeve's hand, close, across the Lanternbough counter." width="1672" height="941" loading="lazy">
-                <figcaption>The drawer is behind her. The question has already been asked.</figcaption>
+                <figcaption>The letter is in her hand. The question has already been asked.</figcaption>
             </figure>
 
             <header class="chapter-head">
