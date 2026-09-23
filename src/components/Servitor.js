@@ -13,8 +13,8 @@ export const Servitor = () => `
         <div class="container">
             <div class="chapter-spread">
             <figure class="maeve-scene servitor-scene">
-                    <img src="maeve-letter-scene.webp" alt="Maeve offers her brother's sealed letter across the Lanternbough counter during a storm." width="1672" height="941" loading="lazy">
-                    <figcaption>Maeve does not search for the nearest line. She chooses who receives the letter.</figcaption>
+                    <img src="living-cast-portraits.webp" alt="Five people of the Lanternbough market — an archer, a herbwife, a tinker, a troll and a bridgekeeper — each with a face of their own." width="1672" height="941" loading="lazy">
+                    <figcaption>One mind beneath the whole market. Every face in it answers as itself.</figcaption>
             </figure>
 
             <header class="chapter-head">
