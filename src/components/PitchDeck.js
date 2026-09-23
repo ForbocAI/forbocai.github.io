@@ -204,15 +204,15 @@ const slides = [
             <div class="team-grid">
                 <div class="team-member">
                     <h4><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan Omalley</a></h4>
-                    <p><strong>Co-founder · Corporate partnerships &amp; investor relations</strong><br/>Leads the company’s relationships with its corporate partners, venture capital and investors.</p>
+                    <p><strong>Co-founder · Corporate partnerships &amp; investor relations</strong><br/>The company’s bond with its corporate partners, its venture capital and its investors.</p>
                 </div>
                 <div class="team-member">
                     <h4><a href="https://www.linkedin.com/in/seandinwiddie/" target="_blank" rel="noopener noreferrer">Sean Dinwiddie</a></h4>
-                    <p><strong>Founder, president and chair</strong><br/>Architect of the ForbocAI NPC Protocol. Built the API it runs through, Servitor™ from dataset to release, and the TypeScript and Unreal Engine 5 SDKs.</p>
+                    <p><strong>Founder, president and chair</strong><br/>Architect of the ForbocAI NPC Protocol. Builds the API it runs through, Servitor™ from dataset to release, and the TypeScript and Unreal Engine 5 SDKs.</p>
                 </div>
                 <div class="team-member">
                     <h4><a href="https://www.linkedin.com/in/antara-bhavsar-74b7a4187/" target="_blank" rel="noopener noreferrer">Antara Bhavsar</a></h4>
-                    <p><strong>Co-founder &amp; Founding Engineer</strong><br/>Built the NPC runtime at the heart of the API, carried structured personas end to end across the API and SDK, retrained the model, and brought the Platform game onto the SDK. Now building the Soul’s encrypted transport.</p>
+                    <p><strong>Co-founder &amp; Founding Engineer</strong><br/>Engineers the NPC runtime at the heart of the API, the personas that run through it from API to SDK, the model’s training, the Platform game on the SDK, and the Soul’s encrypted transport.</p>
                 </div>
             </div>
             <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category will be bought on. That is what the rate of arrival looks like from inside it.</p>
