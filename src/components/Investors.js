@@ -35,7 +35,7 @@ export const Investors = () => {
                     body: `<p class="investors-takeaway">A handful of studios come through this door first. After them, it is a hallway everyone walks. In here, a character refuses a player for a reason she can name and hands you the reason she holds. Out there, it is still a tree you pay to build whole so one player can walk one path through it. You are reading this from one side of that.</p>
 <p class="investors-takeaway">First worlds are being chosen now. Whoever is inside when the first cast ships holds a position in the only market that has a standard, beside the company that writes it.</p>`,
                 })}
-                <p class="investors-takeaway">Send us one character. We take her to the moment your tree ends. Eighteen months on, a player forgets the scene and still remembers her.</p>
+                <p class="investors-takeaway">Send us one character you would stake the game on. We take her to the moment your tree ends. Eighteen months on, a player forgets the scene and still remembers her.</p>
                 <p class="investors-takeaway"><strong>The seed round is open.</strong> It carries the first partner worlds through the first door, and the first Soul between two live titles.</p>
             </div>
             </div>
