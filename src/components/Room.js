@@ -54,7 +54,7 @@ export const Room = () => {
                         <span>What he does about it — your game fires this call, not us</span>
                         <pre class="turn-code"><code>// legalActions: ['speak_to', 'stay_silent']
 {
-  dialogue: "Maeve. It was the two of them that covered my room in the autumn.",
+  dialogue: "Maeve. This one covered my room in the autumn.",
   reasoningText: "She is not wrong about the letter, and I will not say she is. But she is weighing what this one is owed without knowing the half of it. The half she is missing is mine to give her.",
   action: { type: 'speak_to', payload: { target: 'maeve' } },
 }</code></pre>
