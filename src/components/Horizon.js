@@ -25,21 +25,12 @@
  * lit windows that read as dust specks". So crowns are lopsided and sometimes
  * two-lobed, pines are tiered rather than triangles and never stand in the
  * nearest ridge (a lone near spike read as wrong depth), the sun is a disc the
- * far ridge half hides, the crowns facing it carry its rim light, and the
- * lamps are a few warm panes gathered into one settlement.
+ * far ridge half hides, and the crowns facing it carry its rim light.
+ * Round twenty-seven read the tiered pines as pagodas at this size, so the
+ * treeline is broadleaf crowns only, and the lamps are houses (settlement.js).
  */
 import { seedOf, rngOf, round } from './stem/seed.js';
-
-/* A pine in tiers: the left edge steps out and in three times on its way to
-   the tip, and the right edge mirrors it. A triangle is a symbol for a pine;
-   this is the outline of one. */
-const pine = (x, w, y0, y1, h) => {
-    const b = Math.min(y0, y1);
-    const at = (fx, fy) => `${round(x + w * fx)},${round(b - h * fy)}`;
-    return `L${at(0.1, 0.26)}L${at(0.28, 0.3)}L${at(0.17, 0.52)}L${at(0.33, 0.55)}`
-        + `L${at(0.27, 0.78)}L${at(0.5, 1)}L${at(0.73, 0.78)}L${at(0.67, 0.55)}`
-        + `L${at(0.83, 0.52)}L${at(0.72, 0.3)}L${at(0.9, 0.26)}L${round(x + w)},${round(y1)}`;
-};
+import { settlement } from './horizon/settlement.js';
 
 /* A crown, lopsided: the two shoulders rise to different heights, and now and
    then it has two lobes. Equal domes on a line were the stamp. */
@@ -61,7 +52,7 @@ const crown = (rand, x, w, y0, y1, h) => {
    crown stands above the baseline, as a fraction of the band, so a taller
    sunset grows taller trees. Returns the filled shape and its open top edge,
    which carries the rim light. */
-const ridge = (rand, width, height, { base, roll, rise, span, pines, emergence }) => {
+const ridge = (rand, width, height, { base, roll, rise, span, emergence, clear = [0, 0] }) => {
     // Two frequencies of hill, so the land swells and settles rather than
     // tracing one even wave. The first render was a straight band of crowns:
     // "a picket fence", which is what trees on a level line are.
@@ -77,13 +68,15 @@ const ridge = (rand, width, height, { base, roll, rise, span, pines, emergence }
         const w = span * (0.55 + rand() * 1.1);
         // A clearing now and then — the ground shows between the crowns —
         // and now and then one tree standing well above the rest.
-        const clearing = rand() < 0.07;
+        // The settlement's own clearing, where the forest was cut back for
+        // the houses, is kept open whatever the dice say.
+        const cut = x + w > clear[0] && x < clear[1];
+        const clearing = rand() < 0.07 || cut;
         const emergent = rand() < emergence ? 1.6 + rand() * 0.5 : 1;
         const h = clearing ? 0 : height * rise * (0.45 + rand() * 0.85) * emergent;
         const y0 = at(x);
         const y1 = at(x + w);
         if (clearing) top += `L${round(x + w)},${round(y1)}`;
-        else if (rand() < pines) top += pine(x, w, y0, y1, h * 1.35);
         else top += crown(rand, x, w, y0, y1, h);
         x += w * (0.55 + rand() * 0.35);
     }
@@ -110,9 +103,15 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
     // solid ground under it: at a chapter's top the band's last stretch shows
     // under the header, and crowns there read as "a dark scalloped band, like
     // a rendering glitch".
-    const far = ridge(rand, width, height, { base: 0.57, roll: 0.08, rise: 0.06, span: span * 0.8, pines: 0.16, emergence: 0.1 });
-    const mid = ridge(rand, width, height, { base: 0.69, roll: 0.07, rise: 0.085, span, pines: 0.12, emergence: 0.08 });
-    const near = ridge(rand, width, height, { base: 0.8, roll: 0.045, rise: 0.1, span: span * 1.3, pines: 0, emergence: 0 });
+    const far = ridge(rand, width, height, { base: 0.57, roll: 0.08, rise: 0.06, span: span * 0.8, emergence: 0.1 });
+    const mid = ridge(rand, width, height, { base: 0.69, roll: 0.07, rise: 0.085, span, emergence: 0.08 });
+    // Where the houses stand: chosen before the nearest ridge grows, so that
+    // ridge can leave them their clearing. Evening only; at dawn the same
+    // stretch is forest.
+    const cx = width * (0.24 + rand() * 0.3);
+    const homes = lights ? 3 + Math.round(rand() * 2) : 0;
+    const reachX = span * 2.1 * homes;
+    const near = ridge(rand, width, height, { base: 0.8, roll: 0.045, rise: 0.1, span: span * 1.3, emergence: 0, clear: [cx - reachX / 2, cx + reachX / 2] });
 
     // Half the disc above the far ridge, half behind it: a sun that is going,
     // or coming, and not a glow with nothing at its centre.
@@ -122,23 +121,7 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
     // baseline the whole disc sat behind the trees.
     const sy = far.at(sx) - height * 0.06 - sr * 0.15;
 
-    /* The lamps: a few warm panes gathered into one settlement on the middle
-       ridge, each with its own small glow. Scattered single dots read as dust;
-       a cluster of windows reads as somewhere people live. */
-    // The ridges consume the seed before this line, so the forest itself is
-    // the same morning and evening; only whether anyone has lit a lamp differs.
-    const cx = width * (0.24 + rand() * 0.3);
-    const panes = 3 + Math.round(rand() * 2);
-    const windows = !lights ? '' : Array.from({ length: panes }, (_, i) => {
-        const x = cx + (i - panes / 2) * span * (0.5 + rand() * 0.45);
-        // In the strip of the middle ridge the near crowns leave uncovered, in
-        // its mist, rather than low on it where the near ridge hid them.
-        const y = mid.at(x) - height * (0.012 + rand() * 0.02);
-        const pw = Math.max(3, span * 0.13);
-        const ph = pw * 1.3;
-        return `<circle cx="${round(x)}" cy="${round(y)}" r="${round(span * 0.55)}" fill="url(#${uid}-glow)"/>`
-            + `<rect x="${round(x - pw / 2)}" y="${round(y - ph / 2)}" width="${round(pw)}" height="${round(ph)}" rx="0.6" fill="var(--honey)"/>`;
-    }).join('');
+    const village = settlement(rand, near, { cx, homes, span, height, uid });
 
     return `<svg class="horizon-svg" width="${round(width)}" height="${round(height)}" viewBox="0 0 ${round(width)} ${round(height)}" aria-hidden="true" focusable="false">
         <defs>
@@ -146,10 +129,20 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
                 <stop offset="0" stop-color="var(--honey)" stop-opacity="0.55"/>
                 <stop offset="1" stop-color="var(--honey)" stop-opacity="0"/>
             </radialGradient>
+            <!-- The sun's air, not its edge: the disc itself is solid, and this
+                 falls to nothing well outside it. A gradient that ended at the
+                 disc's rim at 0.6 opacity drew "a hard halo ring, like a
+                 sticker". -->
             <radialGradient id="${uid}-sun">
-                <stop offset="0" stop-color="var(--lantern)" stop-opacity="1"/>
-                <stop offset="0.7" stop-color="var(--lantern)" stop-opacity="0.92"/>
-                <stop offset="1" stop-color="var(--honey)" stop-opacity="0.6"/>
+                <stop offset="0" stop-color="var(--lantern)" stop-opacity="0.5"/>
+                <stop offset="0.22" stop-color="var(--lantern)" stop-opacity="0.28"/>
+                <stop offset="0.55" stop-color="var(--honey)" stop-opacity="0.08"/>
+                <stop offset="1" stop-color="var(--honey)" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="${uid}-pool">
+                <stop offset="0" stop-color="var(--honey)" stop-opacity="0.22"/>
+                <stop offset="0.5" stop-color="var(--honey)" stop-opacity="0.07"/>
+                <stop offset="1" stop-color="var(--honey)" stop-opacity="0"/>
             </radialGradient>
             <!-- Each far ridge darkens toward its crest and dissolves into the
                  haze at its foot, where the ridge in front of it stands in
@@ -181,12 +174,13 @@ export const horizonSvg = ({ seed, width, height, lights = true, sun = 0.68 }) =
                 <stop offset="1" stop-color="var(--lantern)" stop-opacity="0"/>
             </linearGradient>
         </defs>
-        <circle class="horizon-sun" cx="${round(sx)}" cy="${round(sy)}" r="${round(sr)}" fill="url(#${uid}-sun)"/>
+        <circle cx="${round(sx)}" cy="${round(sy)}" r="${round(sr * 4.5)}" fill="url(#${uid}-sun)"/>
+        <circle class="horizon-sun" cx="${round(sx)}" cy="${round(sy)}" r="${round(sr)}" fill="var(--lantern)"/>
         <path class="horizon-far" d="${far.d}" fill="url(#${uid}-far)" filter="url(#${uid}-soft)"/>
         <path class="horizon-rim" d="${far.top}" fill="none" stroke="url(#${uid}-rim)" stroke-width="1.6" stroke-linejoin="round"/>
         <path class="horizon-mid" d="${mid.d}" fill="url(#${uid}-mid)"/>
         <path class="horizon-rim" d="${mid.top}" fill="none" stroke="url(#${uid}-rim)" stroke-width="1.1" stroke-linejoin="round" opacity="0.6"/>
-        ${windows}
         <path class="horizon-near" d="${near.d}" fill="var(--hz-near)"/>
+        ${village}
     </svg>`;
 };
