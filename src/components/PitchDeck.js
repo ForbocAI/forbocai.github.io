@@ -215,7 +215,7 @@ const slides = [
                     <p><strong>Co-founder &amp; Founding Engineer</strong><br/>Engineers the NPC runtime at the heart of the API, the personas that run through it from API to SDK, the model’s training, the Platform game on the SDK, and the Soul’s encrypted transport. Production AI and distributed systems from Amazon, Motorola and Indiana University; MS in computer science.</p>
                 </div>
             </div>
-            <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category will be bought on.</p>
+            <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category is bought on.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },

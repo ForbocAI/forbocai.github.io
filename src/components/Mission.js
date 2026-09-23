@@ -45,7 +45,7 @@ export const Mission = () => {
             </header>
 
             <div class="chapter-body">
-                <p class="mission-opening"><strong>Every other surface of a game came alive. The people did not.</strong> They still run out of script the moment a player asks something nobody wrote, which is why a whole cast sounds like one actor doing accents.</p>
+                <p class="mission-opening"><strong>Every other surface of a game is alive. The people are not.</strong> They run out of script the moment a player asks something nobody wrote, which is why a whole cast sounds like one actor doing accents.</p>
                 <p class="mission-turn-line"><strong>That ended.</strong></p>
                 <p class="mission-opening"><strong>Everyone else is making the model more itself. We took the self out.</strong> The ForbocAI NPC LM Servitor™ has no self to defend, so the people your writers authored are the ones who answer — reasoning past the end of your script and deciding as themselves. Not lines retrieved. Judgments made, in the moment, by someone.</p>
                 <p class="mission-opening"><strong>The ForbocAI NPC Protocol is how they enter your world without being able to change it.</strong> They decide like people and cannot move your state. The model is the invention. The Protocol is why it can be handed to anyone at all.</p>
