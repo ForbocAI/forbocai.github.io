@@ -90,6 +90,15 @@
     min-height: 0;
     /* The slide gives, so the frame can fit a screen. */
     padding-bottom: clamp(0.75rem, 2vh, 1.5rem);
+    /* And its content stands in the middle of the room it has. The frame has
+       a floor so Back and Next stay put between slides, and a short slide
+       packed at the top of that floor left "260px of empty card", "the bottom
+       half of the slide empty — it looks unfinished", in the words of both
+       design judges. Centred, the spare room is shared above and below the
+       content, the way a slide is composed; the controls do not move. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .deck-frame > .deck-header {

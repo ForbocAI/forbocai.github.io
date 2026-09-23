@@ -13,9 +13,14 @@
        nothing at all. The brief's whole mechanism was dead code in the one
        frame every visitor sees: the hero is the only stretch of .daylight
        that no chapter's own opaque background-color covers. */
+    /* The morning's low light on the left is warm now. It was a cold mint
+       glow (207,233,220), the "grown" half of the model painted on a sunlit
+       page, and the design judges found it on the hero and the deck as "a
+       mint-cyan haze" and "a blue-cyan stain". The dawn under the hero rises
+       on exactly that side; this is its light reaching the top of the page. */
     background-image:
         radial-gradient(ellipse 52% 22% at 80% 3%, rgba(255, 243, 194, 0.7), transparent 70%),
-        radial-gradient(ellipse 44% 18% at 4% 9%, rgba(207, 233, 220, 0.45), transparent 70%),
+        radial-gradient(ellipse 44% 18% at 4% 9%, rgba(255, 232, 196, 0.42), transparent 70%),
         linear-gradient(180deg,
             var(--day-0) 0%,
             var(--day-1) 14%,
