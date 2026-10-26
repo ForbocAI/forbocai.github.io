@@ -1,72 +1,52 @@
-/**
- * Main Entry Point
- * Bootstraps the functional application.
- *
- *        .-.
- *     .-(   )-.
- *    (___.-.___)
- *       /_|_\
- */
 import { createStore } from './domains/store.js';
 import { rootReducer } from './domains/rootReducer.js';
-import { navigate } from './domains/navigationSlice.js';
+import { navigate, selectCurrentPage, selectPitchSlide } from './domains/navigationSlice.js';
 import { App } from './components/App.js';
-import { wakeSprites } from './components/Sprites.js';
 import { setupMobileMenu } from './systems/mobileMenu.js';
-import { setupHeaderTone } from './systems/headerTone.js';
-import { setupMemoryEntrance } from './systems/memoryEntrance.js';
+import { setupHeaderState } from './systems/headerState.js';
 import { setupDocContents } from './systems/docContents.js';
 import { setupNavCurrent } from './systems/navCurrent.js';
-import { setupChapterStem } from './systems/chapterStem.js';
-import { setupHorizon } from './systems/horizon.js';
-import { setupChapterSprig } from './systems/chapterSprig.js';
-import { setupNightFungus } from './systems/nightFungus.js';
+import { setupTabs } from './systems/tabs.js';
 import { arrive } from './systems/arrival.js';
 
-// Initialize Store
 const store = createStore(rootReducer, undefined);
 
-let stopSprites = null;
+const viewOf = (state) => `${selectCurrentPage(state)}/${selectPitchSlide(state)}`;
+let shownView = null;
 
-// Render Loop
 const render = () => {
     const state = store.getState();
     const appElement = document.getElementById('app');
 
+    if (appElement && viewOf(state) === shownView) {
+        arrive(state);
+        return;
+    }
+
     if (appElement) {
-        // Pure functional rendering: State -> UI
+        shownView = viewOf(state);
         appElement.innerHTML = App(state);
 
-        // The systems: everything that runs over the rendered DOM rather than
-        // producing it. Each lives in src/systems under the name of the one
-        // thing it does, and each tears down what its last run set up.
         setupMobileMenu();
-        setupHeaderTone();
-        setupMemoryEntrance();
-        stopSprites?.();
-        stopSprites = wakeSprites();
+        setupHeaderState();
         setupDocContents();
-        setupNavCurrent();
-        setupChapterStem();
-        setupHorizon();
-        setupChapterSprig();
-        setupNightFungus();
+        setupNavCurrent(state);
+        setupTabs();
 
-        // Post-render: where the page lands.
         arrive(state);
     }
 };
 
-// Subscribe to state changes
 store.subscribe(render);
 
-// Handle Navigation via Hash
 window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#main-content') {
+        document.getElementById('main-content')?.focus();
+        return;
+    }
     store.dispatch(navigate(window.location.hash));
 });
 
-// Initial Render
 render();
 
-// Debugging
 window.__STORE__ = store;

@@ -1,5 +1,3 @@
-/* ------------------------------------------------------------- buttons --- */
-
 .btn {
     display: inline-flex;
     align-items: center;
@@ -21,11 +19,6 @@
     transform: translateY(1px);
 }
 
-.btn-small {
-    padding: 0.45rem 0.95rem;
-    font-size: var(--step--1);
-}
-
 .btn-primary {
     background: var(--day-ink);
     color: var(--lantern);
@@ -36,43 +29,7 @@
     background: #16211a;
     box-shadow: 0 0 0 4px color-mix(in srgb, var(--honey) 32%, transparent);
 }
-
-.btn-ghost {
-    background: transparent;
-    border-color: color-mix(in srgb, var(--honey) 55%, transparent);
-    color: var(--honey);
-}
-
-.btn-ghost:hover {
-    background: color-mix(in srgb, var(--honey) 14%, transparent);
-    color: var(--lantern);
-    border-color: var(--lantern);
-}
-
-/* The hero's primary is the page's one next step, so the persistent header CTA
-   is an outline. It must come after .btn: that rule sets a transparent border
-   at the same specificity, and on source order it was winning. */
-.site-header .nav-cta {
-    flex-shrink: 0;
-    background: transparent;
-    border-color: var(--copper);
-    color: var(--copper-ink);
-}
-
-.site-header .nav-cta:hover {
-    background: color-mix(in srgb, var(--honey) 30%, transparent);
-    border-color: var(--copper-ink);
-}
-
-/* On the night half the primary button is the lantern itself — on EVERY
-   night chapter. This keyed on .chapter-night, and the turn and the room are
-   night by standing inside .nightfall rather than by carrying that class, so
-   their primary fell back to the day's dark pill on a dark ground: "dark
-   green on dark green, it almost disappears". The lit button in the finale
-   is the one both design judges keep rating among the best things on the
-   page; it is what a button in the night should be. */
 .nightfall .btn-primary,
-.chapter-night .btn-primary,
 .turn-band .btn-primary,
 .site-footer .btn-primary {
     background: var(--lantern);
@@ -81,18 +38,11 @@
 }
 
 .nightfall .btn-primary:hover,
-.chapter-night .btn-primary:hover,
 .turn-band .btn-primary:hover,
 .site-footer .btn-primary:hover {
     background: #fffae0;
     box-shadow: 0 0 46px -4px rgba(255, 243, 194, 0.8);
 }
-
-/* The way back. Declared in Scenes.js and defined nowhere, it fell through to
-   .btn alone: bold pill-weight type carrying a pill's padding for a pill that
-   never painted, indented past its own column, with no hover affordance at
-   all — .btn removes the underline and nothing was left to change on hover.
-   It is the first ink a reader meets on /#scenes. Quiet, but a control. */
 .btn-quiet {
     padding-inline: 0;
     font-weight: 600;
@@ -107,9 +57,6 @@
     color: var(--lantern);
     text-decoration-color: color-mix(in srgb, var(--lantern) 60%, transparent);
 }
-
-/* A subordinate next step reads as a link, not as a second pill competing
-   with the primary one. */
 .text-link {
     align-self: center;
     font-weight: 700;
@@ -122,27 +69,4 @@
 
 .text-link:hover {
     color: var(--day-ink);
-}
-
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 2rem;
-}
-
-
-/* The deck's closing contact box sits on parchment. .btn-ghost is tuned for the
-   night chapters, and its honey outline measures 1.43:1 against cream — the
-   investor CTA was effectively invisible there. This is the one light-background
-   ghost on the site, so it takes the copper the parchment sections use for ink. */
-.contact-box .btn-ghost {
-    border-color: color-mix(in srgb, var(--copper) 55%, transparent);
-    color: var(--copper-ink);
-}
-
-.contact-box .btn-ghost:hover {
-    background: color-mix(in srgb, var(--copper) 12%, transparent);
-    color: var(--day-ink);
-    border-color: var(--copper);
 }

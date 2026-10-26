@@ -1,0 +1,124 @@
+.platform {
+    padding-block: var(--space-section);
+}
+
+.platform-head {
+    text-align: center;
+    margin-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+
+.platform-head .title {
+    margin-inline: auto;
+    max-width: 16ch;
+}
+
+.platform-head .lead {
+    margin-inline: auto;
+}
+
+.loop {
+    position: relative;
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 860px) {
+    .loop {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+    .loop::before {
+        content: '';
+        position: absolute;
+        top: 3rem;
+        left: 16.67%;
+        right: 16.67%;
+        height: 1px;
+        background: linear-gradient(90deg, var(--line-strong), var(--accent), var(--line-strong));
+    }
+}
+
+.loop-step {
+    position: relative;
+    text-align: center;
+}
+
+.loop-node {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 1.75rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--floral);
+    background: var(--carbon);
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+}
+
+.is-forboc .loop-node {
+    background: var(--paprika);
+    border-color: var(--paprika);
+    box-shadow: 0 0 0 10px color-mix(in srgb, var(--paprika) 14%, transparent);
+}
+
+.is-forboc .brand-icon {
+    width: 68px;
+    height: 68px;
+    background-color: var(--floral);
+}
+
+.site-main .loop-title {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.3rem, 1.15rem + 0.5vw, 1.6rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.loop-title strong {
+    display: block;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.is-forboc .loop-title strong {
+    color: var(--accent-ink);
+}
+
+.loop-step p {
+    margin-inline: auto;
+    max-width: 22rem;
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+.platform-foot {
+    display: grid;
+    justify-items: center;
+    gap: 0.4rem;
+    margin-top: clamp(3rem, 6vw, 4.5rem);
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.site-main .platform-sdks {
+    margin: 0 0 0.35rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.platform-sdks span {
+    white-space: nowrap;
+}
+
+@supports (corner-shape: superellipse(2)) {
+    .loop-node {
+        corner-shape: round;
+    }
+}

@@ -1,124 +1,16 @@
-/* -------------------------------------------------------------- nightfall */
-
 .nightfall {
     position: relative;
-
-    /* The night was a single flat fill, and that is the whole reason it
-       measured 86-96% one hue: the cold half of the lighting model existed
-       only on sigils and chapter marks, which are 2.6rem glyphs — a decoration,
-       not a source. A second source needs AREA, which means it has to light
-       ground. See the colonies on .nightfall .chapter below. */
     background-color: var(--night-bg);
-    /* And the descent does not stop at the horizon.
-       One element holds the entire night, so a single ramp across it cannot
-       band the way a per-chapter fill did — the same reason the day's own ramp
-       lives on one element. It OPENS on --dusk-6, the exact colour the sunset
-       above closes on, because a night that started even five levels lighter
-       than the dusk landing would trade a flat back half for a fresh seam at
-       the one boundary the whole design is about.
-       Only downward from there, so every contrast on this ground improves.
-
-       Steep enough to beat its own weather. A gentler first ramp took the
-       night from 46 to 29 and the per-chapter means still went DOWN, UP, down,
-       UP: the colonies swing the ground by about eight levels and adjacent
-       chapters are only a few hundred pixels apart on the ramp, so the
-       lighting out-voted the descent locally. At this rate the trend wins over
-       any two chapters while the weather still varies inside each one, which
-       is what a forest floor does. */
     background-image: linear-gradient(180deg,
         var(--dusk-6) 0%,
         var(--night-bg) 14%,
         var(--night-mid) 52%,
         var(--night-floor) 100%);
     color: var(--night-ink);
-    /* The room the sunset below stands in, and it must be the sunset's own
-       height. The edge was lengthened from 14rem to 26rem and this margin was
-       left at 14rem, so the top 12rem of the sunset sat hidden behind the last
-       day chapter and the visible part began HALFWAY down its own ramp: a
-       single-row step from cream (221,198,159) to clay (187,126,95), about 50
-       luminance levels, full width, at the one boundary the whole design is
-       about. A reviewer measured a 144-level cliff here and could not tell
-       whether it was a cut; it was.
-
-       One number for both, and it follows the screen. The phone had its own
-       pair at 8rem, which kept them equal but made the sunset 128px: both
-       reviewers read it as "a salmon stripe, terracotta to brown to green in
-       about 70px" and "a 60px bruised band under the header". A sunset is as
-       tall as the sky it is seen in, so this is a share of the viewport,
-       floored where it stops being an event and capped where it becomes a
-       void — 26rem at a desktop, about a third of a phone. */
     --dusk-h: clamp(14rem, 38svh, 26rem);
     margin-top: var(--dusk-h);
-    /* The lantern halos are wider than the page on purpose. Clip only the
-       horizontal axis, so light still spills up into the sunset and down into
-       the footer without the halos widening the document. */
     overflow-x: clip;
 }
-
-/* Dusk: the parchment above dissolving into moss. */
-.nightfall-edge {
-    position: absolute;
-    left: 0;
-    right: 0;
-    /* The page now descends exactly once — day, dusk, night, never back up —
-       which makes this the only tonal event on the site and the one place the
-       design language actually happens. It was 14rem carrying a 161-point
-       luminance step, which reads as two websites stapled together rather than
-       as a sunset. At 26rem the ramp has room to be an evening. */
-    top: calc(-1 * var(--dusk-h, 26rem));
-    height: var(--dusk-h, 26rem);
-    /* Parchment straight to moss is a luminance ramp with no chromatic event,
-       which reads as fog. Passing through petal clay and copper makes it an
-       evening, and the stops stay warm until it is dark enough for the green
-       to arrive without a colour event — see --dusk-4 and --dusk-5. */
-    /* Opens on the exact colour .daylight closes on — a transparent first stop
-       revealed the body parchment underneath and made the sunset start with a
-       step *lighter*. Chroma is held above ~30 into the last third so the fall
-       does not go grey on the way down. */
-    /* The SKY keeps only its warm stops now. The olive and the moss are the
-       treeline's (src/components/Horizon.js), which rises through the lower
-       half of the band: a dusk sky does not turn green, the forest does. The
-       low sun sits just above the far ridge, where the last light is. This
-       gradient is also what shows before the treeline is grown, and without
-       JavaScript, so it still ends on the night's colour. */
-    background:
-        radial-gradient(ellipse 30% 34% at 68% 56%,
-            color-mix(in srgb, var(--lantern) 72%, transparent) 0%,
-            color-mix(in srgb, var(--honey) 30%, transparent) 40%,
-            transparent 100%),
-        linear-gradient(180deg,
-            var(--dusk-0) 0%,
-            var(--dusk-1) 26%,
-            var(--dusk-2) 48%,
-            var(--dusk-3) 68%,
-            var(--dusk-4) 86%,
-            var(--dusk-6) 100%);
-    pointer-events: none;
-}
-
-.nightfall-edge .horizon-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-/* Far to near: hazed by the warm air, then darker, then the night's own
-   opening colour, which the ground below continues without a seam. Each far
-   ridge fades at its foot into the haze named here, which is the evening air
-   pooled in the valley in front of it. */
-.nightfall-edge {
-    --hz-far: color-mix(in oklab, var(--dusk-3) 38%, var(--dusk-5));
-    --hz-haze: color-mix(in oklab, var(--dusk-3) 72%, var(--dusk-2));
-    --hz-mid: var(--dusk-5);
-    --hz-haze-low: color-mix(in oklab, var(--dusk-5) 55%, var(--dusk-3));
-    --hz-near: var(--dusk-6);
-}
-
-/* Ambient only. The measurable light now comes from the lanterns themselves —
-   ambient gradients with nothing casting them read as lighter patches, not as
-   a lit room. */
 .nightfall::after {
     content: '';
     position: absolute;
@@ -130,5 +22,3 @@
         radial-gradient(ellipse 60% 24% at 74% 34%, rgba(157, 187, 139, 0.06), transparent 74%),
         radial-gradient(ellipse 50% 20% at 16% 72%, rgba(157, 187, 139, 0.05), transparent 74%);
 }
-
-

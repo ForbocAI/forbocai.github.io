@@ -1,5 +1,3 @@
-/* ---------------------------------------------------------------- layout -- */
-
 .container {
     width: 100%;
     max-width: var(--shell);
@@ -17,32 +15,8 @@ main {
 .chapter {
     position: relative;
     padding-block: var(--chapter-gap);
-    /* The header is fixed and 66-76px tall. A nav link, a "Watch one
-       judgment" door or a back link scrolls its target to the very top of the
-       window, which put the first heading of every chapter under the bar —
-       tablet and short shots showed only descenders, and the counterfactual's
-       eyebrow sat 15px under the nav. The target itself declares the room. */
-    /* And less the chapter's own top padding, so a reader arrives at the
-       chapter's first ink rather than at its top edge: with the full gap
-       kept, every arrival showed 100px of the previous chapter's tail —
-       a card bottom, a released title cut in half — under the bar before
-       the heading. The seam sits just above the bar; the head is one
-       breath under it. */
     scroll-margin-top: calc(var(--header-height) + 2rem - var(--chapter-gap));
 }
-
-/* Consecutive chapters on the same ground need a seam, not the full break
-   that separates day from night. */
-.chapter-day + .chapter-day,
-.chapter-night + .chapter-night,
-.turn-band + .turn-band,
-.turn-band + .chapter-night,
-.chapter-night + .turn-band {
-    /* The turn-band chapters are night too, and they fell through this rule:
-       #turn and #room got the full chapter gap on both sides of their shared
-       seam, which is the 350px of bare moss round fourteen measured between
-       them on the home page, and the 277px between the walkthrough and the
-       room on /#scenes — the two largest holes on either page. */
+.turn-band + .turn-band {
     padding-top: var(--chapter-seam);
 }
-

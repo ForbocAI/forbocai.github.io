@@ -1,20 +1,3 @@
-/* ------------------------------------------------------- counterfactual -- */
-
-/* This block shipped with no styling at all, which is most of why a reader
-   took the heading's promise of a changed truth for an empty payload. It is
-   one organism under two conditions, so it is drawn as one: a cell, and the
-   same cell after it divided. Nothing about Maeve changes between the two
-   blocks — that is the argument the shape is making. */
-.turn-counterfactual {
-    position: relative;
-    isolation: isolate;
-    margin-top: clamp(2.75rem, 5vw, 4rem);
-    padding: clamp(1.75rem, 3.5vw, 2.75rem);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--night-rule);
-    background: var(--surface-night);
-}
-
 .turn-counterfactual-head {
     max-width: 58ch;
     margin-bottom: clamp(1.5rem, 3vw, 2rem);
@@ -25,29 +8,12 @@
     font-size: var(--step-2);
 }
 
-/* The plain descriptive paragraph, and only that one. Unscoped, this matched
-   every <p> in the head and beat both of them on specificity: the eyebrow
-   (.turn-label, 0-1-0) was demoted to caption size, and the diff line
-   (.turn-diffline) lost its size, its honey, its top margin and its centring
-   — so the page's declared climax, the one composed frame on the site, was
-   introduced by two captions and three different centre axes. */
-.turn-counterfactual-head > p:not(.turn-label):not(.turn-diffline) {
-    margin: 0;
-    max-width: 52ch;
-    font-size: var(--step--1);
-    line-height: 1.6;
-    color: var(--night-ink-soft);
-}
-
 .turn-counterfactual-pair {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
     gap: clamp(1.25rem, 3vw, 2.25rem);
     align-items: start;
 }
-
-/* Each condition is a cell: a membrane, and light sitting under it the way it
-   sits under something translucent rather than on top of something opaque. */
 .turn-counterfactual-pair article {
     position: relative;
     padding: clamp(1.1rem, 2.4vw, 1.6rem);
@@ -60,9 +26,6 @@
         color-mix(in srgb, var(--night-bg) 55%, transparent);
     box-shadow: inset 0 1px 0 color-mix(in srgb, var(--night-ink) 9%, transparent);
 }
-
-/* The second cell is the one that divided off: a sibling, not a copy, so it
-   runs warm where the first runs cool. */
 .turn-counterfactual-pair article:last-child {
     border-color: color-mix(in srgb, var(--honey) 26%, transparent);
     background:
@@ -70,9 +33,6 @@
             color-mix(in srgb, var(--honey) 9%, transparent), transparent 66%),
         color-mix(in srgb, var(--night-bg) 55%, transparent);
 }
-
-/* The filament still joining them. Across the gap when they sit side by side,
-   down it when they stack — either way it says these did not arrive apart. */
 .turn-counterfactual-pair article:first-child::after {
     content: '';
     position: absolute;
@@ -85,11 +45,6 @@
         color-mix(in srgb, var(--creek) 52%, transparent),
         color-mix(in srgb, var(--honey) 52%, transparent));
 }
-
-/* One colour for both labels. The first cell's label ran creek and the
-   second's honey, to say cold-before and warm-after; two reviewers read a
-   blue label and a gold one as two themes, not two temperatures. The cells'
-   own grounds still lean cool and warm, which is as much as the eye needs. */
 .turn-counterfactual-pair article > span {
     display: block;
     margin-bottom: 0.75rem;
@@ -108,11 +63,6 @@
     font-style: italic;
     color: var(--night-ink);
 }
-
-/* Side by side these columns are half the width of the ones above, so the
-   returned block wraps rather than running off its own edge. Indented
-   continuation keeps the shape of the object readable through the wrap. */
-/* The returned block is recessed: what the cell produced, not the cell. */
 .turn-counterfactual-pair .turn-code {
     margin: 0;
     padding: 0.85rem 1rem;
@@ -140,4 +90,3 @@
             color-mix(in srgb, var(--honey) 52%, transparent));
     }
 }
-

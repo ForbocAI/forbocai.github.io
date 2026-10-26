@@ -1,15 +1,6 @@
 import { Deeper } from './Deeper.js';
 import { Sigil, ChapterMark } from './Sigil.js';
 
-/**
- * The room.
- *
- * The turn chapter proves one character deciding. This one proves the thing
- * branch writing cannot buy at any price: a second authored person with
- * standing, responding to a judgment nobody wrote, in front of a player.
- * It was the back half of #turn, which had grown to 6.4 screens — a third of
- * the page under a single heading, which is a wall rather than a chapter.
- */
 export const Room = () => {
     return `
     <section id="room" class="chapter turn-band">
@@ -95,39 +86,3 @@ export const Room = () => {
     </section>
     `;
 };
-
-/**
- * The teaser the home page carries instead of the whole scene.
- *
- * The full scene is 2.5 screens of second demonstration, and the home page had
- * 19.4 of them against an AAA benchmark of 6-7. Everything it proves is still
- * proven — it is one link away on /#scenes rather than in the scroll of
- * someone deciding whether to care yet. The claim, the picture and the one
- * line that lands stay here; the walkthrough moves.
- */
-export const RoomTeaser = () => `
-    <section id="room" class="chapter turn-band">
-        <div class="container">
-            <div class="chapter-spread">
-            <figure class="maeve-scene room-scene">
-                <img src="living-cast-scene.webp" alt="Maeve and the living cast of Lanternbough after the storm." width="1672" height="941" loading="lazy">
-                <figcaption>By morning, the whole market knows what she said at the counter.</figcaption>
-            </figure>
-
-            <header class="chapter-head">
-                ${ChapterMark({ rune: 'ᛖ' })}
-                <div>
-                    <h2>The rest of the room is listening</h2>
-                </div>
-            </header>
-
-            <div class="chapter-body">
-            <p class="chapter-lead">A tree gives you a conversation. A world gives you everyone who can hear it.</p>
-            <p class="turn-refusal"><strong>Nobody wrote a branch for what the miner does while she refuses.</strong> “Maeve. This one covered my room in the autumn.” She answers, “Then I owe them a bed, not a letter.” Every voice you add multiplies the scenes nobody can write; a full tavern is all of them at once.</p>
-
-            <p class="hero-buttons"><a class="btn btn-primary" href="#scenes">See the whole room decide</a></p>
-            </div>
-            </div>
-        </div>
-    </section>
-`;

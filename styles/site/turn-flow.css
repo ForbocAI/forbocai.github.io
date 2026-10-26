@@ -1,0 +1,136 @@
+.scene-flow {
+    display: grid;
+    gap: 0;
+}
+.scene-flow[hidden] {
+    display: none;
+}
+
+.scene-flow > li {
+    position: relative;
+    padding: 0 0 1.4rem 1.5rem;
+    border-left: 2px solid var(--line-strong);
+}
+
+.scene-flow > li:last-child {
+    padding-bottom: 0.1rem;
+}
+
+.scene-flow > li::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0.2rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--surface-1);
+    border: 2px solid var(--silver);
+}
+
+.scene-flow > .flow-forboc {
+    border-left-color: var(--paprika);
+}
+
+.scene-flow > .flow-forboc::before {
+    background: var(--paprika);
+    border-color: var(--paprika);
+}
+
+.site-main .flow-role {
+    margin: 0 0 0.55rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-faint);
+}
+
+.site-main .flow-forboc .flow-role {
+    color: var(--accent-ink);
+}
+
+.flow-context {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+}
+
+.flow-context div {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 0.75rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+}
+
+.flow-context dt {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-faint);
+}
+
+.flow-context dd {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--text);
+}
+.flow-context .is-changed {
+    background: color-mix(in srgb, var(--paprika) 14%, transparent);
+}
+
+.flow-context .is-changed dt {
+    color: var(--accent-ink);
+}
+
+.scene-panel:not([hidden]) .is-changed {
+    animation: changed 1.4s var(--ease);
+}
+
+@keyframes changed {
+    from { background: color-mix(in srgb, var(--paprika) 45%, transparent); }
+}
+
+.site-main .scene-reply {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.5rem, 1.15rem + 1.3vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--text);
+}
+
+.site-main .flow-proposal {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0.35rem 0.4rem 0.35rem 0.75rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: 6px;
+}
+
+.flow-proposal strong {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.95rem;
+    color: var(--carbon);
+    background: var(--paprika);
+    border-radius: 4px;
+}
+
+.site-main .flow-outcome {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+@media (max-width: 600px) {
+    .flow-context div {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+    }
+}

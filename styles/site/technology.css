@@ -1,0 +1,56 @@
+.tech-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+
+@media (min-width: 960px) {
+    .tech-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0;
+    }
+    .tech-col {
+        padding-inline: 2rem;
+    }
+    .tech-col:first-child {
+        padding-left: 0;
+    }
+    .tech-col:last-child {
+        padding-right: 0;
+    }
+    .tech-col + .tech-col {
+        border-left: 1px solid var(--line);
+    }
+}
+
+.tech-col {
+    padding-top: 1.5rem;
+    border-top: 2px solid currentColor;
+}
+
+.tech-live { color: var(--ok); }
+.tech-building { color: var(--dev); }
+.tech-next { color: var(--next); }
+
+.tech-col .subtitle {
+    margin-top: 0.75rem;
+    color: var(--text);
+}
+
+.tech-list {
+    display: grid;
+    gap: 1.25rem;
+    margin: 1.5rem 0 0;
+}
+
+.tech-list dt {
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.35;
+}
+
+.tech-list dd {
+    margin: 0.25rem 0 0;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: var(--text-soft);
+}

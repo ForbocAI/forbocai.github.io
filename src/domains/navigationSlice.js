@@ -1,12 +1,5 @@
-/**
- * Navigation Domain
- * Handles the application's routing state (hash-based).
- */
-
-// Actions
 const NAVIGATE = 'navigation/NAVIGATE';
 
-// Action Creators
 export const navigate = (path) => ({
     type: NAVIGATE,
     payload: path
@@ -17,12 +10,10 @@ const getPathFromHash = () => {
     return hash || 'hero';
 };
 
-// Initial State
 const initialState = {
     currentPath: getPathFromHash()
 };
 
-// Pure Reducer
 export const navigationReducer = (state = initialState, action) => {
     switch (action.type) {
         case NAVIGATE:
@@ -35,12 +26,13 @@ export const navigationReducer = (state = initialState, action) => {
     }
 };
 
-// Selectors
 export const selectCurrentPath = (state) => state.navigation.currentPath;
 
 export const selectCurrentPage = (state) => {
     const path = selectCurrentPath(state);
-    if (path === 'whitepaper') return 'whitepaper';
+    if (path === 'whitepaper' || path.startsWith('wp-')) return 'whitepaper';
+    if (path === 'company' || path.startsWith('co-')) return 'company';
+    if (path === 'developers' || path.startsWith('dev-')) return 'developers';
     if (path === 'scenes') return 'scenes';
     if (path.startsWith('pitch')) return 'pitch';
     return 'index';

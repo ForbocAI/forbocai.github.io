@@ -1,0 +1,64 @@
+.approach {
+    padding-block: var(--space-section);
+    border-top: 1px solid var(--line);
+}
+
+.approach-head {
+    margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.approach-head .title {
+    max-width: 16ch;
+}
+
+.approach-list {
+    display: grid;
+    gap: 0;
+    border-top: 3px solid var(--text);
+}
+
+@media (min-width: 860px) {
+    .approach-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.approach-list li {
+    padding: 2rem 0 2.25rem;
+    border-bottom: 1px solid var(--line-strong);
+}
+
+.site-main .approach-title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.75rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.site-main .approach-today,
+.site-main .approach-next {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.site-main .approach-today {
+    color: var(--text);
+}
+
+.site-main .approach-next {
+    margin-top: 0.9rem;
+    font-size: 1rem;
+    color: var(--text-faint);
+}
+
+.approach-list .status {
+    display: flex;
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.site-main .approach-foot {
+    margin: 2.5rem 0 0;
+}

@@ -2,27 +2,13 @@
     body {
         font-size: 1.0625rem;
     }
-
-    /* The wrap treatment is the base rule now, at every width. A phone only
-       needs the size step. */
     .turn-code {
         font-size: 0.75rem;
     }
 
-    .soul-economy {
-        margin-left: 0;
-    }
-
-    .chapter-head,
-    .ledger-row,
-    .timeline-item {
+    .chapter-head {
         grid-template-columns: minmax(0, 1fr);
         gap: 0;
-    }
-
-    .ledger::before,
-    .ledger-row::before {
-        display: none;
     }
 
     .chapter-mark {
@@ -33,51 +19,17 @@
     .chapter-mark::after {
         display: none;
     }
-
-    .ledger-fact {
-        grid-column: 1;
-    }
-
-    .timeline-item {
-        padding-left: 1.6rem;
-    }
-
-    .timeline-item::before {
-        left: 6px;
-        top: 1.5rem;
-    }
-
-    .timeline-marker {
-        position: absolute;
-        left: 0;
-        top: 0.35rem;
-        margin-top: 0;
-    }
-
-    /* The phone's sunset used to be fixed at 8rem here. It follows the screen
-       now, from --dusk-h in styles/nightfall/ground.css: at 8rem it was 128px
-       of sunset and both reviewers read it as a stripe, not an evening. */
-
-    /* Five entries in two columns leaves the fifth alone on a third row. */
     .doc-contents ol {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .page-inner:not(.page-night) + .site-footer {
+    .page-inner + .site-footer {
         margin-top: 3rem;
     }
 
-    .page-inner:not(.page-night) + .site-footer::before {
+    .page-inner + .site-footer::before {
         top: -3rem;
         height: 3rem;
-    }
-
-    .memory-panel-head {
-        gap: 0.5rem 0.75rem;
-    }
-
-    .memory-mood {
-        font-size: 0.8125rem;
     }
 
     .problem-grid,
@@ -97,4 +49,3 @@
         width: 100%;
     }
 }
-

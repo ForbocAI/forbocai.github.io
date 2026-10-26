@@ -1,100 +1,21 @@
-/* ------------------------------------------------------------ night light -- */
-
-/* How the night's two lights land on ink and marks: the lantern's warmth on
-   the labels and rune, the colony's cold on the sigils and marks. This file
-   was lantern.css and held the lamp glyphs too. The glyphs are gone: three
-   rounds of review read them as ornaments hung from nothing — "one ornament,
-   four positions, no anchor" — and a lamp that lights nothing is decoration.
-   The warm light in the night is the lamp pools in the chapter grounds
-   (colonies.css) and the lanterns inside the paintings. */
-
-.chapter-night h1,
-.chapter-night h2,
-.chapter-night h3,
-.chapter-night h4 {
-    color: var(--night-ink);
-}
-
-.chapter-night .chapter-lead,
-.chapter-night p {
-    color: var(--night-ink-soft);
-}
-
-/* The lead alone takes the full ink. It is the first thing read in a chapter,
-   it sits at 19px, and the colonies light the ground under it — --night-ink-soft
-   measured 3.53:1 there at 390px, where the page has no margins for a colony to
-   stay out of. Body copy stays soft, so the tonal step between a lead and the
-   prose under it survives. Gated by .dream-loop/nightcontrast.mjs. */
-.chapter-night .chapter-lead {
-    color: var(--night-ink);
-}
-
-.chapter-night .chapter-mark {
-    color: var(--lantern);
-}
-
-.chapter-night .chapter-mark::after {
-    background: linear-gradient(var(--night-rule), transparent);
-}
-
-.chapter-night .chapter-mark-rune,
 .turn-band .chapter-mark-rune {
     text-shadow: var(--neon-ink);
 }
 
-.chapter-night .sigil-core,
 .turn-band .sigil-core {
     filter: drop-shadow(0 0 5px color-mix(in srgb, var(--lantern) 55%, transparent));
 }
-
-.chapter-night .memory-mood {
-    text-shadow: 0 0 14px color-mix(in srgb, var(--honey) 30%, transparent);
-}
-
-/* The overgrowth. A sigil is an organism, so it does not borrow the lantern's
-   warmth — it makes its own cold light, the way the fungus eating a neon sign
-   does. This is also where --creek and --sage finally do structural work
-   instead of sitting in the token file unused. */
-.chapter-night .sigil-core,
 .turn-band .sigil-core,
-.chapter-night .chapter-mark-cell,
 .turn-band .chapter-mark-cell {
     color: color-mix(in srgb, var(--creek) 72%, var(--honey));
     filter:
         drop-shadow(0 0 9px color-mix(in srgb, var(--creek) 70%, transparent))
         drop-shadow(0 0 26px color-mix(in srgb, var(--sage) 46%, transparent));
 }
-
-/* The cold light is emitted by the sigil itself — see the drop-shadows above,
-   which follow the drawn strands.
-
-   There was a `box-shadow: var(--biolume); border-radius: 50%` here. The mark
-   is a 2.6rem box with no background, so an outer box-shadow paints a hard rim
-   with an unlit middle — an annulus, not a glow — and the blanket
-   `corner-shape: superellipse(2.4)` turned that 50% into a squircle, because
-   .chapter-mark is not on the round exemption list. So the site's one
-   procedurally grown mark sat inside a machined rounded square of light, which
-   is the exact thing Sigil.js says it removed from the markup: "The rune was
-   sitting in a perfect circle with a hairline border — the constructed version
-   of the exact form the sigil grows." A lighting rule had put it back, larger. */
-
-/* --honey measured 4.4:1 against the lit panel — just under AA for 15px/700.
-   The ground under these labels is not the flat night, it is --surface-night's
-   own warm lantern radial, which has lit them since long before the colonies
-   existed. --lantern is the same made light one step brighter, so the warm
-   system is unchanged and the label clears AA. Gated by
-   .dream-loop/nightcontrast.mjs, measured from rendered pixels. */
-.chapter-night .turn-label,
 .turn-band .turn-label {
     color: var(--lantern);
-    /* No glow. Small bold labels with a soft halo read as "a cheap Photoshop
-       outer glow" to a design judge who found it on four of them. The
-       lantern colour is the made light already; a label is not a lamp. The
-       medallions keep theirs — they are the light sources, and that judge
-       rated them the best thing on the night half of the page. */
 }
 
-.chapter-night .sigil-strand,
 .turn-band .sigil-strand {
     stroke: var(--sage);
     opacity: 0.72;

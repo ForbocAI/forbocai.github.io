@@ -1,0 +1,58 @@
+.vision {
+    padding-block: clamp(6rem, 13vw, 11rem);
+}
+
+.vision .eyebrow::before {
+    background: var(--carbon);
+}
+
+.vision-title {
+    max-width: 14ch;
+    font-size: clamp(2.8rem, 1.2rem + 5.6vw, 7rem);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.site-main .vision-line {
+    margin: 0;
+    max-width: 40ch;
+    padding-top: 2rem;
+    border-top: 3px solid var(--carbon);
+    font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.6rem);
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--carbon);
+}
+
+.vision-steps {
+    display: grid;
+    gap: 2rem 4rem;
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+@media (min-width: 860px) {
+    .vision-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.vision-steps > div {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line-strong);
+}
+
+.site-main .vision-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--carbon);
+}
+
+.site-main .vision-steps p:not(.vision-label) {
+    margin: 0;
+    max-width: 40ch;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--carbon);
+}
