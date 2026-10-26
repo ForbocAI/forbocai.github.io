@@ -1,5 +1,3 @@
-/* ------------------------------------------------------------ typography -- */
-
 h1,
 h2,
 h3,
@@ -11,10 +9,6 @@ h4 {
     margin: 0;
     text-wrap: balance;
 }
-
-/* The page opens at a size nothing else reaches. It had shared step-4 with two
-   mid-page headings, so there were three co-equal maxima and the hero did not
-   out-rank the body. */
 h1 {
     font-size: var(--step-5);
     line-height: 0.96;
@@ -38,32 +32,15 @@ h4 {
 p {
     margin: 0 0 1.1em;
     max-width: var(--measure);
-    /* The last line of a paragraph is never a two-letter word. "…without
-       being able to change / it." and "…no non-player characters in / it."
-       stood on every wide shape; the browser can trade a slightly shorter
-       line above for a whole word below, and does. */
     text-wrap: pretty;
 }
 
 p:last-child {
     margin-bottom: 0;
 }
-
-/* `pretty` is worth its price on a wide column and not on a narrow one.
-   It buys a whole word off the last line by trading a slightly shorter line
-   above, which is invisible at a 61ch measure. At a phone's 300px it is three
-   visibly short lines in a row: a reviewer measured a paragraph whose lines
-   ended at 272, 279 and 264 while its neighbours ran to 328-337, and read the
-   column as damaged. Measured here on that same paragraph: 48px mean shortfall
-   with `pretty`, 37px without.
-
-   One width, for one typographic setting, because the thing it should follow
-   is the column and CSS cannot ask an element how wide it is without
-   containment this page has no other reason to carry. */
 @media (max-width: 640px) {
     p,
     .chapter p > strong:first-child,
-    .investors-body p > strong:first-child,
     .doc-body p > strong:first-child {
         text-wrap: wrap;
     }
@@ -90,7 +67,6 @@ a:hover {
     border-radius: var(--radius-xs);
 }
 
-.chapter-night :focus-visible,
 .site-footer :focus-visible {
     outline-color: var(--lantern);
 }
@@ -111,38 +87,7 @@ a:hover {
 .skip-link:focus {
     top: 1rem;
 }
-
-.kicker {
-    margin-bottom: 0.45rem;
-    font-family: var(--font-body);
-    font-size: var(--step--1);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: var(--copper-ink);
-    margin-bottom: 0.9rem;
-}
-
-/* --------------------------------------------------- the skim layer ------ */
-
-/* Two references asking for the same thing.
-   Backlinko's rule for a page somebody scans is abundant subheadings and
-   takeaway lines; a reviewer has scored this site's read-at-speed at under a
-   third for four rounds running, on 4,807 words with no skim path. And the
-   biomorphic property still missing from the audit is fractal self-similarity:
-   the same rule holding at every scale, where a chapter has a heading and its
-   movements have none.
-
-   Those are one update, and it costs no new words, because the takeaway lines
-   are already written — sixty paragraphs across the site open with a bolded
-   lead-in that states the point and is then buried inline where the eye cannot
-   catch it. Promoting them to their own line turns prose the reader must enter
-   into prose they can scan and choose to enter. The chapter's heading rule,
-   repeating one scale down.
-
-   Only where a paragraph opens with one. A bold inside a sentence stays
-   inside it. */
 .chapter p > strong:first-child,
-.investors-body p > strong:first-child,
 .doc-body p > strong:first-child {
     display: block;
     margin-bottom: 0.25rem;
@@ -150,20 +95,14 @@ a:hover {
     font-size: var(--step-0);
     font-weight: 700;
     line-height: 1.4;
-    /* A block of its own, so the paragraph's `pretty` does not reach it:
-       "…no non-player characters in / it." stood in the lead-in itself. */
     text-wrap: pretty;
     letter-spacing: 0.01em;
     color: var(--day-ink);
 }
 
-.chapter-night p > strong:first-child,
 .turn-band p > strong:first-child {
     color: var(--night-ink);
 }
-
-/* The takeaway inside a small note or a code caption is already doing its job
-   at that scale; promoting it there would make a caption shout. */
 .turn-note > strong:first-child,
 .deeper-body p > strong:first-child,
 .ask-note > strong:first-child,
@@ -175,40 +114,17 @@ a:hover {
     line-height: inherit;
     letter-spacing: inherit;
 }
-
-/* And a lede inside a paragraph that is ALREADY above body size keeps that
-   size. Promotion assumes the paragraph under it is body copy; six paragraphs
-   are set larger than that, so their opening sentence was DEMOTED — on
-   .mission-destination the page's thesis line sat at 19px sans on top of its
-   own 32px Vollkorn continuation, the least prominent thing in its own
-   paragraph. It still becomes its own block; only the size follows the
-   paragraph it opens. Specificity has to beat the promotion rule's 0-2-2,
-   hence the redundant element and class. */
-.chapter p.chapter-lead > strong:first-child,
-.chapter p.mission-destination > strong:first-child,
-.chapter p.mission-turn-line > strong:first-child,
-.chapter p.mission-felt > strong:first-child,
-.chapter p.hero-potion > strong:first-child {
+.chapter p.chapter-lead > strong:first-child {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
     letter-spacing: inherit;
 }
-
-
-/* Five tiers with air between them. The promoted scan lines moved off --step-1
-   and onto body size, which freed that step for the headings that are actually
-   headings; they had been sharing 21px with sixty paragraph openers. */
 .chapter h3,
 .doc-body h3 {
     font-size: var(--step-2);
     line-height: 1.2;
 }
-
-/* A trademark at display size is a mark, not a word. Vollkorn sets ™ at about
-   half the cap height and raises it above the cap line, so at 32px+ it read as
-   a separate word tacked onto the product's own name — correct in the nav and
-   in body copy at 15-19px, wrong in the one place the name is set large. */
 .tm {
     font-size: 0.4em;
     vertical-align: 0.62em;

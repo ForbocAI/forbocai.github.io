@@ -1,47 +1,10 @@
-/* ------------------------------------------------------------- horizons -- */
-
-/* Drama, taken from the AAA sites and left cozy.
-   Diablo IV runs abrupt full-width edges so a reader gets distinct visual
-   chapters — you always know you have arrived somewhere. This page runs one
-   continuous gradient from parchment to moss, which is beautiful and is also
-   why every section feels like the same section: nothing ever ARRIVES, it just
-   keeps fading.
-
-   The cozy version of an abrupt edge is not a hard cut, it is a horizon. The
-   light changes at a line, the way the sun drops behind a ridge, and the last
-   of it catches along the seam before the next ground takes over. Dramatic
-   because it is an event; warm because the event is a sunset rather than a
-   scene change.
-
-   Every chapter boundary, not a chosen few.
-
-   What two rounds of reviewers then said, four times over: the boundary was a
-   ruler. Each chapter's ground stopped at a straight edge — a colour step on
-   the day side, a colony cut clean through on the night side — with a 1300px
-   line laid along it, and "the page is a stack of rectangles with tinted
-   backgrounds". A ridge is not a ruler. So the seam now dissolves: the ground
-   above fades into its own base before the edge (::after, below), the ground
-   below opens with the colour it is leaving (--seam-from, in ground.css), and
-   the last of the light is a glint along the crown of the ridge, not a line
-   across the page. */
 .chapter {
     --chapter-base: var(--night-bg);
 }
-
-/* .hero + .chapter as well. The hero is not a .chapter, so the page's FIRST
-   horizon — parchment to the mission's deeper parchment — matched neither
-   half of this treatment and stayed a dead-straight 1440px colour step, in a
-   file whose own contract is "every chapter boundary, not a chosen few". It
-   also left #mission without a positioning context, so its leaving-fade
-   resolved against .daylight and painted at the foot of the whole day half
-   instead of at the foot of the chapter. */
 .hero + .chapter,
 .chapter + .chapter {
     position: relative;
 }
-
-/* The ground below, arriving: the colour it is leaving dissolves into its own
-   over the top of the band, and the lamplight catches along the seam. */
 .hero + .chapter::before,
 .chapter + .chapter::before {
     content: '';
@@ -52,51 +15,5 @@
     height: clamp(3rem, 6vw, 5.5rem);
     pointer-events: none;
     z-index: 1;
-    /* The dissolve only. There was a lamplight ellipse here too, and it was
-       the shelf two reviewers kept measuring at the top of every chapter —
-       "each section starts with a lighter band with a sharp top edge, so the
-       page reads as stacked slabs": (23,33,16) to (71,75,52) at the investors
-       seam. Light painted on the lower chapter alone ends at that chapter's
-       first row, and a pool of light with nothing on the other side of its
-       edge draws the edge. Measured across the full width with it and
-       without: the night seams went from 11-13 levels in one row to about 1.
-       The night is one ground now; a seam in it should be invisible. */
     background: linear-gradient(180deg, var(--seam-from, transparent) 0%, transparent 100%);
-}
-
-/* There was a glint along the seam — a 1px line of lantern rising out of
-   nothing past a quarter of the width and gone before three quarters, "the
-   last of the light along the crown of the ridge". Four reviews called it a
-   ruled line, and at 800px across a screen that is what a 1px line is,
-   whatever it fades at. The lamplight at the seam is the whole event now: a
-   soft ellipse of light where two grounds meet, which is how light actually
-   catches a ridge. */
-
-/* No lamplight at the dusk. The turn is the first night chapter and it
-   arrives out of the sunset; a cream-to-amber band at its top edge, on the
-   dark, read as "a 60px render stripe under the nav" rather than as the
-   crossing it sits under. The sunset is the event there. */
-.chapter-day + .turn-band::before {
-    background: none;
-}
-
-/* The ground above, leaving: whatever the chapter grew on its ground — a
-   colony, a lamp pool, the day's moss — settles into the chapter's own base
-   colour before the seam, so nothing is cut through by the edge.
-
-   Day chapters only. Every night chapter shares --night-bg, so on the night
-   half this faded the ground to the colour it already was — which did
-   nothing for the colour step and everything to the colony passing under it,
-   flattening the grown light to flat moss for the last 4-7rem of every
-   chapter and making the boundary the hard edge it was meant to dissolve. */
-.chapter-day::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: clamp(4rem, 8vw, 7rem);
-    pointer-events: none;
-    z-index: 1;
-    background: linear-gradient(180deg, transparent, var(--chapter-base));
 }

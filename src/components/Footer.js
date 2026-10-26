@@ -1,53 +1,69 @@
-/**
- * Footer Component
- * Deepest night. Four even columns so nothing floats.
- */
-export const Footer = () => {
-    return `
+const GROUPS = [
+    {
+        label: 'Product',
+        links: [
+            ['#product', 'See it in a scene'],
+            ['#platform', 'Platform'],
+            ['#vision', 'The future'],
+            ['#scenes', 'One turn, line by line'],
+        ],
+    },
+    {
+        label: 'Developers',
+        links: [
+            ['#developers', 'Get started'],
+            ['#dev-technology', 'Technology'],
+            ['https://docs.forboc.ai', 'Documentation'],
+            ['https://docs.forboc.ai/ue/welcome', 'Unreal Engine guide'],
+            ['https://www.npmjs.com/org/forbocai', 'npm packages'],
+            ['https://account.forboc.ai', 'Account and API keys'],
+        ],
+    },
+    {
+        label: 'Company',
+        links: [
+            ['#company', 'Company & investors'],
+            ['#whitepaper', 'Whitepaper'],
+            ['#pitch/1', 'Vision deck'],
+            ['https://wellfound.com/company/forboc-ai', 'Careers'],
+            ['https://solscan.io/token/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump', '$FAI'],
+        ],
+    },
+    {
+        label: 'Community',
+        links: [
+            ['https://discord.gg/6hr2jHqnsG', 'Discord'],
+            ['https://github.com/ForbocAI', 'GitHub'],
+            ['https://x.com/ForbocAi', 'X'],
+            ['https://www.linkedin.com/company/forbocai', 'LinkedIn'],
+            ['https://t.me/forbocai', 'Telegram'],
+        ],
+    },
+];
+
+const link = ([href, label]) => href.startsWith('#')
+    ? `<a href="${href}">${label}</a>`
+    : `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+
+export const Footer = () => `
     <footer class="site-footer">
-        <div class="container">
+        <div class="wrap">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a class="logo" href="#">
-                        <span class="logo-icon" aria-hidden="true"></span>
-                        <span class="logo-word">ForbocAI</span>
+                    <a class="brand" href="#" aria-label="ForbocAI home">
+                        <span class="brand-icon" aria-hidden="true"></span>
+                        <span class="brand-word">ForbocAI</span>
                     </a>
-                    <p class="footer-tagline">Character Intelligence for the age of the living cast.</p>
+                    <p>AI infrastructure for game characters.</p>
+                    <a class="footer-mail" href="mailto:hello@forboc.ai">hello@forboc.ai</a>
                 </div>
-
-                <nav class="footer-link-group" aria-label="Product">
-                    <p class="footer-group-label">Product</p>
-                    <a href="#servitor" data-link>Servitor™</a>
-                    <a href="https://docs.forboc.ai" target="_blank" rel="noopener noreferrer">Developer docs</a>
-                    <a href="#turn" data-link>One choice</a>
-                    <a href="#technology" data-link>Living worlds</a>
-                    <a href="#roadmap" data-link>Horizons</a>
-                    <a href="#souls" data-link>Souls</a>
-                    <a href="#whitepaper">Whitepaper</a>
-                    <a href="https://solscan.io/token/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>
-                </nav>
-
-                <nav class="footer-link-group" aria-label="Company">
-                    <p class="footer-group-label">Company</p>
-                    <a href="#investors" data-link>Investors</a>
-                    <a href="#pitch/12" data-link>Who is building this</a>
-                    <a href="#whitepaper" data-link>The Standard</a>
-                    <a href="#pitch/1">Vision deck</a>
-                    <a href="mailto:hello@forboc.ai">hello@forboc.ai</a>
-                    <a href="https://wellfound.com/company/forboc-ai" target="_blank" rel="noopener noreferrer">Careers</a>
-                </nav>
-
-                <nav class="footer-link-group" aria-label="Elsewhere">
-                    <p class="footer-group-label">Elsewhere</p>
-                    <a href="https://discord.gg/6hr2jHqnsG" target="_blank" rel="noopener noreferrer">Discord</a>
-                    <a href="https://x.com/ForbocAi" target="_blank" rel="noopener noreferrer">Twitter / X</a>
-                    <a href="https://github.com/ForbocAI" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://www.linkedin.com/company/forbocai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </nav>
+                ${GROUPS.map((g) => `
+                <nav class="footer-group" aria-label="${g.label}">
+                    <p class="footer-label">${g.label}</p>
+                    ${g.links.map(link).join('')}
+                </nav>`).join('')}
             </div>
-
-            <p class="footer-copy">&copy; 2026 ForbocAI, Inc. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2026 ForbocAI, Inc. All rights reserved. Servitor™ is a trademark of ForbocAI, Inc.</p>
         </div>
     </footer>
-    `;
-};
+`;

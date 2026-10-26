@@ -1,59 +1,28 @@
-/**
- * Header Component
- * Pure function returning the header HTML string.
- */
-const LINKS = [
-    { href: '#servitor', label: 'Servitor™', internal: true },
-    /* In PAGE order. #technology comes before #turn in the document, and the
-       bar listed them the other way round, so as a reader scrolled forward the
-       lamp moved LEFT and a chapter already behind them sat to the right of the
-       one they were in. A reviewer read it as the nav contradicting itself:
-       "the lamp goes Living worlds, One choice, Living worlds while I scroll
-       forward. Navigation moving backwards." Passed-and-current only mean
-       anything against a bar that runs the way the page does. */
-    { href: '#technology', label: 'Living worlds', internal: true },
-    { href: '#turn', label: 'One choice', internal: true },
-    { href: '#roadmap', label: 'Horizons', internal: true },
-    { href: '#souls', label: 'Souls', internal: true },
-    { href: '#investors', label: 'Investors', internal: true },
-    { href: '#whitepaper', label: 'Whitepaper', internal: true },
-    { href: '#pitch/1', label: 'Vision deck', internal: true },
+export const NAV = [
+    { href: '#product', label: 'Product' },
+    { href: '#platform', label: 'Platform' },
+    { href: '#developers', label: 'Developers' },
+    { href: '#company', label: 'Company' },
 ];
 
-const link = ({ href, label, internal }, className) => internal
-    ? `<a href="${href}" class="${className}" data-link>${label}</a>`
-    : `<a href="${href}" class="${className}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+export const CONTACT = 'mailto:hello@forboc.ai?subject=Hello%20ForbocAI';
 
-export const Header = () => {
-    return `
+export const Header = () => `
     <header class="site-header">
-        <div class="container">
-            <nav aria-label="Primary">
-                <a class="logo" href="#">
-                    <span class="logo-icon" aria-hidden="true"></span>
-                    <span class="logo-word">ForbocAI</span>
-                </a>
-                <!-- Which chapter of how many. Seven nav items name ten
-                     chapters, so four consecutive chapters — 40% of the essay,
-                     and the darkest, most disorienting stretch of it — could
-                     never light a lamp whatever the marking rules were. Both
-                     reviewers led on it twice: "the navigation says you have
-                     passed everything and you are nowhere", "I stopped looking
-                     at the header after chapter 7 because it stopped
-                     changing."
-                     A count answers for every chapter, named or not, and on
-                     every shape including the one with no room for a word. It
-                     is also the device both reviewers already singled out as
-                     working elsewhere on this site — "1 / 13 instantly legible
-                     as a deck". src/systems/navCurrent.js fills it. -->
-                <p class="read-count" aria-live="polite"><span class="read-at"></span><span class="read-of"></span></p>
-                <div class="nav-links">
-                    ${LINKS.map((l) => link(l, 'nav-btn')).join('')}
-                </div>
-                <a href="#scenes" class="btn btn-small nav-cta" data-link>See the room</a>
+        <div class="wrap header-bar">
+            <a class="brand" href="#" aria-label="ForbocAI home">
+                <span class="brand-icon" aria-hidden="true"></span>
+                <span class="brand-word">ForbocAI</span>
+            </a>
+            <nav class="header-nav" aria-label="Primary">
+                ${NAV.map(({ href, label }) => `<a href="${href}" class="header-link">${label}</a>`).join('')}
+            </nav>
+            <div class="header-end">
+                <a href="${CONTACT}" class="button button-primary button-small header-cta">Contact</a>
                 <button
                     class="mobile-menu-toggle"
                     id="mobileMenuToggle"
+                    type="button"
                     aria-label="Open menu"
                     aria-controls="mobileNav"
                     aria-expanded="false"
@@ -62,12 +31,11 @@ export const Header = () => {
                     <span></span>
                     <span></span>
                 </button>
-            </nav>
+            </div>
         </div>
     </header>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" aria-hidden="true">
-        ${LINKS.map((l) => link(l, 'mobile-nav-link')).join('')}
-        <a href="#scenes" class="mobile-nav-link" data-link>See the room</a>
+        ${NAV.map(({ href, label }) => `<a href="${href}" class="mobile-nav-link">${label}</a>`).join('')}
+        <a href="${CONTACT}" class="button button-primary mobile-nav-cta">Contact</a>
     </nav>
-    `;
-};
+`;

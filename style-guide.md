@@ -63,6 +63,26 @@ invisible on cream. Deep moss at nightfall is not the monochrome fork returning
 — `#263127` is the palette's own colour, and the section is lit from within.
 Black-on-black severity stays out.
 
+## 2c. The company layer (October 2026)
+
+Every page except the vision deck uses a bold corporate theme on a black and
+gold palette: white `#FFFFFF`, light grey `#E5E5E5`, navy `#14213D`, black
+`#000000`, and gold `#FCA311` as the only accent. Small accent text on white
+uses `#9A5B00` for contrast. Type is Inter, set heavy and tight. Sections
+alternate white, grey, black (`.theme-dark`) and one gold field
+(`.theme-accent`); there is no background imagery behind text. Styles live in
+`styles/site/`; components in `src/components/home/`, `developers/` and
+`company/`. The scenes page reuses its chapter styles with the palette
+remapped in `styles/site/scenes.css`.
+
+The home page runs: hero (with one illustrated character turn), the product
+demo (Maeve, two player histories), the problem, the platform, technology,
+vision, and company and contact. SDKs, code and engine support live on
+`#developers`; the investor story on `#company`.
+
+Every illustration of the product is labelled as one. There is no gameplay
+capture on the site yet; when one exists, it replaces the demo artwork.
+
 ## 3. Typography
 
 Two families carry the site, plus the wordmark:

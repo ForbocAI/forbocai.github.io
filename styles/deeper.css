@@ -1,29 +1,7 @@
-/* ---------------------------------------------------------------- deeper -- */
-
-/* The disclosure layer. See src/components/Deeper.js for why it exists: the
-   pitch runs at full speed on the surface, and everything we owe a careful
-   reader sits one click under it rather than being cut.
-   Deliberately quiet. A row of loud accordions would say "there is a lot of
-   fine print here", which is the opposite of what a reader should feel. It is
-   a hairline, a short label and a karat — the page's own furniture, not a
-   widget dropped onto it. */
-
 .deeper {
     margin-top: 1.1rem;
-    /* The rule belongs to the paragraph above it. Run it to the full container
-       and it stops reading as a control and starts reading as a chapter
-       break. */
     max-width: var(--measure);
-    /* A vein, like every other directional rule on the site. This one leads
-       into the fold, so it enters at full weight where the eye starts and
-       thins away — fifteen of these were the largest population of uniform
-       hairlines left on the page. */
     border-top: 1px solid transparent;
-    /* And a vein below, with room under it. With a rule above only, a closed
-       disclosure and the paragraph after it read as one thing: a chevron
-       with a paragraph "sitting directly beneath it — whether the panel is
-       open or closed cannot be read from the screen". Two rules make it a
-       drawer; the gap makes the paragraph the next thing, not the contents. */
     border-bottom: 1px solid transparent;
     border-image: linear-gradient(90deg,
         var(--day-rule) 0%,
@@ -43,8 +21,6 @@
     color: var(--day-ink-faint);
     transition: color 0.2s var(--ease);
 }
-
-/* Safari and Chrome each draw their own marker; we draw ours. */
 .deeper summary::-webkit-details-marker { display: none; }
 .deeper summary::marker { content: ''; }
 
@@ -64,9 +40,6 @@
     font-weight: 600;
     line-height: 1.3;
 }
-
-/* The karat. A chevron drawn from two borders, so there is no asset to load
-   and it inherits the colour of the row it sits in. */
 .deeper-karat {
     flex: none;
     width: 0.5rem;
@@ -87,7 +60,6 @@
 
 .deeper-body {
     padding-bottom: 1rem;
-    /* Opening a disclosure should feel like a drawer, not a jump cut. */
     animation: deeper-open 0.3s var(--ease);
 }
 
@@ -96,9 +68,6 @@
     to { opacity: 1; transform: none; }
 }
 
-/* --------------------------------------------------------------- night -- */
-
-.chapter-night .deeper,
 .turn-band .deeper,
 .deeper-night {
     border-image: linear-gradient(90deg,
@@ -106,23 +75,11 @@
         color-mix(in srgb, var(--night-rule) 42%, transparent) 46%,
         transparent 92%) 1;
 }
-
-/* --night-ink-faint measured 4.36:1 against the night panel — under AA for
-   19px/400 before the colonies existed, and 3.6:1 once they lit the ground
-   behind it. A disclosure label is the one piece of interface on this page a
-   reader has to find in order to get the proof, so it does not get to be the
-   faintest thing on the screen. --night-ink-soft clears AA with room to spare
-   even where a colony is brightest. Gated by .dream-loop/nightcontrast.mjs,
-   which measures rendered pixels — computed backgroundColor is transparent
-   over a gradient and reports a false ratio. */
-.chapter-night .deeper summary,
 .turn-band .deeper summary,
 .deeper-night summary {
     color: var(--night-ink);
 }
 
-.chapter-night .deeper summary:hover,
-.chapter-night .deeper[open] summary,
 .turn-band .deeper summary:hover,
 .turn-band .deeper[open] summary,
 .deeper-night summary:hover,
@@ -130,7 +87,6 @@
     color: var(--night-ink);
 }
 
-.chapter-night .deeper summary:focus-visible,
 .turn-band .deeper summary:focus-visible,
 .deeper-night summary:focus-visible {
     outline-color: var(--honey);

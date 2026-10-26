@@ -1,0 +1,242 @@
+.co-team {
+    display: grid;
+    gap: 1.25rem;
+}
+
+@media (min-width: 900px) {
+    .co-team {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+.co-person {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    background: var(--floral);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+}
+
+.co-avatar {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    color: var(--floral);
+    background: var(--carbon);
+    border: 0;
+}
+
+.site-main .co-name {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.site-main .co-role {
+    margin: 0.2rem 0 1rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-ink);
+}
+
+.site-main .co-bio {
+    flex: 1;
+    margin: 0 0 1.25rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--text-soft);
+}
+
+.co-profile {
+    align-self: flex-start;
+    padding-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    border-top: 1px solid var(--line);
+    width: 100%;
+}
+
+.co-profile:hover {
+    color: var(--accent-ink);
+}
+
+.site-main .co-join {
+    margin: 2rem 0 0;
+}
+
+.co-timeline {
+    position: relative;
+    display: grid;
+    gap: 1.75rem;
+    counter-reset: none;
+}
+
+.co-timeline li {
+    position: relative;
+    padding-left: 3.75rem;
+}
+
+.co-timeline li::before {
+    content: '';
+    position: absolute;
+    left: 1.2rem;
+    top: 2.6rem;
+    bottom: -1.75rem;
+    width: 2px;
+    background: var(--line-strong);
+}
+
+.co-timeline li:last-child::before {
+    display: none;
+}
+
+.co-step {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    font-weight: 800;
+    color: var(--floral);
+    background: var(--carbon);
+    border-radius: 50%;
+}
+
+.co-timeline li:first-child .co-step {
+    background: var(--paprika);
+    color: var(--carbon);
+}
+
+.site-main .co-timeline h3 {
+    margin: 0.35rem 0 0.4rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.site-main .co-timeline p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: var(--text-soft);
+}
+
+@media (min-width: 1000px) {
+    .co-timeline {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+    .co-timeline li {
+        padding: 3.75rem 0 0;
+    }
+    .co-timeline li::before {
+        left: 2.6rem;
+        right: -1.5rem;
+        top: 1.25rem;
+        bottom: auto;
+        width: auto;
+        height: 2px;
+    }
+}
+
+.co-round {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: clamp(3rem, 6vw, 4.5rem);
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    border-radius: var(--r-lg);
+    background:
+        radial-gradient(40rem 20rem at 100% 0%, rgba(252, 163, 17, 0.18), transparent 60%),
+        var(--carbon);
+}
+
+@media (min-width: 900px) {
+    .co-round {
+        grid-template-columns: 1fr auto;
+        gap: 3rem;
+    }
+}
+
+.site-main .co-round h3 {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.4rem, 1.2rem + 0.7vw, 1.85rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.site-main .co-round p {
+    margin: 0;
+    max-width: 62ch;
+    line-height: 1.6;
+    color: var(--text-soft);
+}
+
+.co-contact {
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 960px) {
+    .co-contact {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+        gap: 5rem;
+        align-items: start;
+    }
+}
+
+.co-contact-list {
+    display: grid;
+    border-top: 1px solid var(--line-strong);
+}
+
+.co-contact-list a {
+    position: relative;
+    display: grid;
+    gap: 0.15rem;
+    padding: 1.35rem 2.5rem 1.35rem 0;
+    text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+}
+
+.co-contact-list a::after {
+    content: '→';
+    position: absolute;
+    right: 0.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--paprika);
+    transition: transform 0.2s var(--ease);
+}
+
+.co-contact-list a:hover::after {
+    transform: translate(4px, -50%);
+}
+
+.co-contact-list span {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-ink);
+}
+
+.co-contact-list strong {
+    font-size: clamp(1.3rem, 1.15rem + 0.5vw, 1.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.site-main .co-contact-side p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-soft);
+}
