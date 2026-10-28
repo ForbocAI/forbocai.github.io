@@ -1,0 +1,68 @@
+/* A slide is a fixed canvas, so a full-height plate pushes everything else off
+   it. Inside the deck these scenes are a band across the composition, cropped
+   to the part that carries the moment. */
+/* EVERY picture in a slide, not only the scene photographs.
+   Slide 4 carries a 618px .paired-proof image that no rule in this file named,
+   and that one image alone put the slide 298px past a 1440x900 window while
+   every measurement here was pointed at .maeve-scene. A deck slide's picture
+   is as tall as the slide has room for, whatever the picture is of.
+
+   `contain` rather than `cover`, because a diagram loses its argument when it
+   is cropped; the scene photographs keep their own crop through the more
+   specific rule below. */
+.slide img {
+    max-height: clamp(110px, 32vh, 420px);
+    object-fit: contain;
+}
+
+.slide .maeve-scene img {
+    /* Continuous, not stepped. This was a flat 215px with the relief hidden
+       behind `@media (max-height: 820px)`, so a 1440x900 window — the commonest
+       shape there is — got none of it and slides 4 and 9 ran 298px and 179px
+       past the fold. A picture in a deck is as tall as the deck has room for. */
+    max-height: clamp(120px, 24vh, 215px);
+    object-fit: cover;
+    object-position: center 38%;
+}
+
+@media (max-width: 720px) {
+    .slide .maeve-scene img {
+        max-height: clamp(110px, 18vh, 170px);
+    }
+}
+
+
+/* Where height is scarce, the slide spends less of it on padding. A deck slide
+   that does not fit its screen is the defect; the room around the words is the
+   first thing to give up. */
+/* Where height is scarce, the slide spends less of it on chrome and on title.
+   A deck slide that does not fit its screen is the defect; the room around the
+   words gives up first, then the size of the title, and the words themselves
+   never do. Closing the last of it — mobile ran 259px past the window — takes
+   the title down a step and the gaps with it. */
+.deck {
+    /* Block padding follows the height it has, at every height, for the same
+       reason --deck-air already does. The stepped version below kept the full
+       48px at 900px tall and dropped to 24px at 819px. */
+    --deck-pad-block: clamp(0.9rem, 3.4vh, 3rem);
+}
+
+@media (max-height: 820px), (max-width: 760px) {
+    .deck {
+        --deck-pad: clamp(1rem, 3vw, 1.6rem);
+        --deck-pad-block: clamp(0.9rem, 2.2vh, 1.5rem);
+    }
+
+    .slide-title {
+        font-size: clamp(1.4rem, 1.1rem + 1.5vw, 1.9rem);
+    }
+
+    .slide .maeve-scene img {
+        max-height: min(150px, 18vh);
+    }
+
+    .deck-header,
+    .deck-controls {
+        padding-block: 0.55rem;
+    }
+}

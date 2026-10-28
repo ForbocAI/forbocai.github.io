@@ -1,0 +1,8 @@
+@media (min-width: 900px) {
+    .turn-authored,
+    .turn-room,
+    .turn-answer {
+        padding-left: var(--panel-inset);
+        padding-right: var(--panel-inset);
+    }
+}

@@ -1,0 +1,154 @@
+.co-hero {
+    padding: calc(var(--header-height) + clamp(4rem, 8vw, 6.5rem)) 0 clamp(4rem, 7vw, 6rem);
+    background:
+        radial-gradient(60rem 30rem at 85% 0%, rgba(252, 163, 17, 0.12), transparent 60%),
+        var(--carbon);
+}
+
+.co-hero-grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 1040px) {
+    .co-hero-grid {
+        grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+        gap: 5rem;
+    }
+}
+
+.co-display {
+    font-size: clamp(2.4rem, 1.4rem + 2.8vw, 3.9rem);
+    max-width: 19ch;
+}
+
+.co-hero .lead {
+    max-width: 52ch;
+}
+.co-glance {
+    padding: clamp(1.5rem, 3vw, 2rem);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line-strong);
+    border-top: 4px solid var(--paprika);
+    border-radius: var(--r-lg);
+}
+
+.site-main .co-glance-title {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+}
+
+.co-glance dl {
+    display: grid;
+    margin: 0;
+}
+
+.co-glance dl div {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 1rem;
+    padding: 0.95rem 0;
+    border-top: 1px solid var(--line);
+}
+
+.co-glance dt {
+    font-size: 0.92rem;
+    color: var(--text-faint);
+}
+
+.co-glance dd {
+    margin: 0;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.co-contents {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.co-contents .wrap {
+    display: flex;
+    gap: 0.25rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.co-contents a {
+    flex-shrink: 0;
+    padding: 1rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-faint);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.co-contents a:hover {
+    color: var(--text);
+}
+
+.co-contents a[aria-current] {
+    color: var(--text);
+    border-bottom-color: var(--paprika);
+}
+
+.co-band {
+    padding-block: clamp(4.5rem, 9vw, 7.5rem);
+    scroll-margin-top: 1.75rem;
+}
+
+.co-band-tint {
+    background: var(--ground-2);
+}
+
+.co-head {
+    max-width: 52rem;
+    margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.site-main .co-title {
+    margin: 0;
+    font-size: clamp(2rem, 1.3rem + 2.4vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+}
+
+.site-main .co-intro {
+    margin: 1.25rem 0 0;
+    max-width: 60ch;
+    font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
+    line-height: 1.55;
+    color: var(--text-soft);
+}
+
+.site-main .co-subhead {
+    margin: clamp(3rem, 6vw, 4rem) 0 1.25rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.site-main .co-fine {
+    margin: 1.5rem 0 0;
+    max-width: 75ch;
+    font-size: 0.92rem;
+    color: var(--text-faint);
+}
+
+.co-fine a {
+    color: var(--accent-ink);
+    font-weight: 700;
+}

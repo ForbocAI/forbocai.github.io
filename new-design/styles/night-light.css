@@ -1,0 +1,23 @@
+.turn-band .chapter-mark-rune {
+    text-shadow: var(--neon-ink);
+}
+
+.turn-band .sigil-core {
+    filter: drop-shadow(0 0 5px color-mix(in srgb, var(--lantern) 55%, transparent));
+}
+.turn-band .sigil-core,
+.turn-band .chapter-mark-cell {
+    color: color-mix(in srgb, var(--creek) 72%, var(--honey));
+    filter:
+        drop-shadow(0 0 9px color-mix(in srgb, var(--creek) 70%, transparent))
+        drop-shadow(0 0 26px color-mix(in srgb, var(--sage) 46%, transparent));
+}
+.turn-band .turn-label {
+    color: var(--lantern);
+}
+
+.turn-band .sigil-strand {
+    stroke: var(--sage);
+    opacity: 0.72;
+    filter: drop-shadow(0 0 7px color-mix(in srgb, var(--sage) 60%, transparent));
+}

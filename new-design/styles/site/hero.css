@@ -1,0 +1,144 @@
+.hero-stage {
+    display: flex;
+    align-items: center;
+    min-height: min(92svh, 920px);
+    padding: calc(var(--header-height) + clamp(3rem, 8vh, 6rem)) 0 clamp(3.5rem, 7vw, 5.5rem);
+    border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+    display: grid;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+@media (min-width: 1040px) {
+    .hero-grid {
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: 5rem;
+    }
+}
+
+.hero-title {
+    max-width: 13ch;
+    font-size: clamp(2.8rem, 1.3rem + 4.6vw, 5.75rem);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.75rem;
+}
+
+.hero-title span {
+    color: var(--accent);
+}
+
+.site-main .hero-line {
+    margin: 0;
+    max-width: 36ch;
+    font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem);
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--text);
+}
+
+.site-main .hero-line-sub {
+    margin-top: 1rem;
+    font-size: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+    font-weight: 400;
+    color: var(--text-soft);
+}
+
+.hero-card {
+    margin: 0;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-lift);
+    border-top: 4px solid var(--paprika);
+}
+
+.site-main .hero-card-who {
+    margin: 0 0 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-faint);
+    border-bottom: 1px solid var(--line);
+}
+
+.hero-card-who strong {
+    margin-right: 0.5rem;
+    font-size: 1.15rem;
+    color: var(--text);
+}
+
+.hero-card-step + .hero-card-step {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+}
+
+.hero-card-step span {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-ink);
+}
+
+.site-main .hero-card-step p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: var(--text);
+}
+
+.site-main .hero-card-step .hero-card-line {
+    font-size: clamp(1.45rem, 1.2rem + 0.8vw, 1.85rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.site-main .hero-card-step .hero-card-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: 0.75rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-soft);
+}
+
+.hero-card-action strong {
+    padding: 0.15rem 0.55rem;
+    font-family: var(--font-code);
+    font-weight: 600;
+    color: var(--carbon);
+    background: var(--paprika);
+    border-radius: 4px;
+}
+
+.site-main .hero-card-step .hero-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.7rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-soft);
+}
+
+.hero-card code {
+    padding: 0.1rem 0.45rem;
+    font-family: var(--font-code);
+    font-size: 0.85em;
+    color: var(--text);
+    background: var(--surface-2);
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+}
+
+.hero-card figcaption {
+    margin-top: 1.75rem;
+    font-size: 0.85rem;
+    color: var(--text-faint);
+}

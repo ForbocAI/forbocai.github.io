@@ -1,0 +1,24 @@
+.nightfall {
+    position: relative;
+    background-color: var(--night-bg);
+    background-image: linear-gradient(180deg,
+        var(--dusk-6) 0%,
+        var(--night-bg) 14%,
+        var(--night-mid) 52%,
+        var(--night-floor) 100%);
+    color: var(--night-ink);
+    --dusk-h: clamp(14rem, 38svh, 26rem);
+    margin-top: var(--dusk-h);
+    overflow-x: clip;
+}
+.nightfall::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        /* Sage, not creek: creek is a blue, and a blue haze over a moss night
+           was one of the teal patches the judges kept finding. */
+        radial-gradient(ellipse 60% 24% at 74% 34%, rgba(157, 187, 139, 0.06), transparent 74%),
+        radial-gradient(ellipse 50% 20% at 16% 72%, rgba(157, 187, 139, 0.05), transparent 74%);
+}

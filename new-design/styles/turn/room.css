@@ -1,0 +1,30 @@
+.turn-room {
+    margin-top: clamp(2.75rem, 5vw, 4rem);
+    padding: clamp(1.75rem, 3.5vw, 2.75rem);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--night-rule);
+    background: var(--surface-night);
+}
+.turn-room > .turn-note {
+    max-width: 62ch;
+}
+.turn-answer {
+    margin-top: clamp(1.5rem, 3vw, 2.25rem);
+    padding-top: clamp(1.25rem, 2.5vw, 1.75rem);
+    border-top: 1px solid color-mix(in srgb, var(--honey) 26%, transparent);
+}
+.turn-answer .turn-code {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
+    background: color-mix(in srgb, #12180f 58%, transparent);
+    font-size: 0.78125rem;
+}
+
+.turn-answer .turn-note {
+    max-width: 62ch;
+    margin-top: 0.9rem;
+}
+
+.turn-answer .turn-note em { font-style: italic; color: var(--night-ink); }

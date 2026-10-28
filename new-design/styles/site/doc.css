@@ -1,0 +1,223 @@
+.page-doc .doc-head {
+    padding: calc(var(--header-height) + clamp(3.5rem, 7vw, 5.5rem)) 0 clamp(3rem, 6vw, 4.5rem);
+    background:
+        radial-gradient(60rem 30rem at 85% 0%, rgba(252, 163, 17, 0.12), transparent 60%),
+        var(--carbon);
+}
+
+.page-doc .doc-title {
+    max-width: 18ch;
+    font-size: clamp(2.4rem, 1.4rem + 3vw, 4.25rem);
+}
+
+.site-main .doc-meta {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-faint);
+}
+
+.page-doc .doc-shell {
+    display: grid;
+    gap: 2.5rem;
+    padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(4rem, 8vw, 6rem);
+}
+
+@media (min-width: 1000px) {
+    .page-doc .doc-shell {
+        grid-template-columns: 15rem minmax(0, 1fr);
+        gap: 4.5rem;
+        align-items: start;
+    }
+}
+
+.page-doc .doc-contents {
+    padding: 1.25rem 1.25rem 1rem;
+    background: var(--surface-1);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+}
+
+@media (min-width: 1000px) {
+    .page-doc .doc-contents {
+        position: sticky;
+        top: calc(var(--header-height) + 2rem);
+    }
+}
+
+.site-main .doc-contents-label {
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+}
+
+.page-doc .doc-contents ol {
+    display: grid;
+    gap: 0.15rem;
+    counter-reset: doc;
+}
+
+.page-doc .doc-contents li {
+    counter-increment: doc;
+}
+
+.page-doc .doc-contents li::before {
+    content: none;
+}
+
+.page-doc .doc-contents a {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.45rem 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.page-doc .doc-contents a::before {
+    content: counter(doc);
+    min-width: 1rem;
+    font-weight: 800;
+    color: var(--text-faint);
+}
+
+.page-doc .doc-contents a:hover {
+    color: var(--text);
+    background: var(--surface-2);
+}
+
+.page-doc .doc-contents a[aria-current] {
+    color: var(--text);
+    background: color-mix(in srgb, var(--paprika) 18%, transparent);
+}
+
+.page-doc .doc-contents a[aria-current]::before {
+    color: var(--accent-ink);
+}
+
+.page-doc .doc-body {
+    max-width: 46rem;
+}
+
+.page-doc .doc-body > section {
+    padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.page-doc .doc-body > section + section {
+    padding-top: clamp(2.5rem, 5vw, 3.5rem);
+    border-top: 1px solid var(--line);
+}
+
+.site-main .doc-body h2 {
+    margin: 0 0 1.25rem;
+    padding: 0;
+    border: 0;
+    font-size: clamp(1.7rem, 1.35rem + 1.2vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+}
+
+.site-main .doc-body h3 {
+    margin: 2.25rem 0 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.site-main .doc-body h4 {
+    margin: 1.75rem 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent-ink);
+}
+
+.site-main .doc-body p,
+.site-main .doc-body li {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--text-soft);
+    max-width: none;
+}
+
+.site-main .doc-body p {
+    margin: 0 0 1.1rem;
+}
+
+.site-main .doc-body strong {
+    color: var(--text);
+}
+
+.site-main .doc-body a {
+    color: var(--accent-ink);
+    font-weight: 600;
+}
+
+.page-doc .doc-body ul {
+    display: grid;
+    gap: 0.6rem;
+    margin: 0 0 1.25rem;
+}
+
+.page-doc .doc-body ul li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.page-doc .doc-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 0.7em;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--paprika);
+}
+
+.site-main .doc-aside {
+    margin: 1.5rem 0;
+    padding: 1.1rem 1.25rem;
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: var(--text);
+    background: color-mix(in srgb, var(--paprika) 12%, transparent);
+    border-left: 4px solid var(--paprika);
+    border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.page-doc .gate-ledger {
+    display: grid;
+    gap: 0;
+    margin: 1.5rem 0 1.75rem;
+    border-top: 2px solid var(--text);
+}
+
+.page-doc .gate-ledger li {
+    padding: 0.9rem 0 0.9rem 3rem;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+}
+
+.page-doc .gate-ledger li::before {
+    content: none;
+}
+
+.page-doc .gate-n {
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    width: 2.2rem;
+    font-weight: 800;
+    color: var(--accent-ink);
+}
+
+.page-doc .doc-foot {
+    padding: 2rem 0 clamp(4rem, 8vw, 6rem);
+    border-top: 1px solid var(--line);
+}

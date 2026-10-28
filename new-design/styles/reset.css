@@ -1,0 +1,61 @@
+/* ---------------------------------------------------------------- reset -- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 1.5rem);
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: var(--day-bg);
+    color: var(--day-ink);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Grain: a paper tooth over the whole page, cheap and non-repeating enough. */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    /* This sat at z-index 1 and rendered nothing: section backgrounds paint at
+       3 and above, so the paper tooth was covered by the very paper it was
+       meant to bite into. Measured — removing its texture produced a
+       byte-identical screenshot until the layer was raised. It sits above the
+       chapters now and below the lanterns (2-3 within their sections), the
+       footer, the header (100) and the skip link (200), and it has never taken
+       pointer events. */
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0.28;
+    mix-blend-mode: multiply;
+    /* The filter reference is url(%23n) — the SVG's own #n. The stylesheet
+       split (0c2e079) rewrote it to url(../%23n) along with every asset path,
+       and with no filter to reach the rect rendered as flat black: the
+       "grain" was a 9% darkening of everything with no grain in it. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.34'/%3E%3C/svg%3E");
+}
+

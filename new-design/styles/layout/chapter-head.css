@@ -1,0 +1,84 @@
+/* The rail. Section marks live here and nowhere else — that is the whole
+   job the runes have on this site now. */
+.chapter-head {
+    display: grid;
+    grid-template-columns: var(--rail) minmax(0, 1fr);
+    gap: 0 1.5rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* The rune sits in a struck brass disc — enough presence to read as a section
+   mark rather than a stray glyph. */
+.chapter-mark {
+    position: relative;
+    justify-self: start;
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: 0.15rem;
+    /* The membrane is drawn, not bordered — see styles/sigil.css. */
+    font-family: var(--font-rune);
+    font-size: 1.15rem;
+    line-height: 1;
+    color: var(--copper-ink);
+}
+
+.chapter-mark::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 0.7rem);
+    width: 1px;
+    height: 3rem;
+    background: linear-gradient(var(--day-rule), transparent);
+}
+
+.chapter-lead {
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--day-ink-soft);
+    /* The measure, like every other paragraph. This was 54ch, and the 62ch
+       lift below it was scoped to a lead inside a HEAD — so a lead the markup
+       puts in the body column instead (the room, business and souls chapters)
+       matched neither rule, fell to 54ch inside a 61ch column, and widowed its
+       own last line while the prose beneath it ran on. One measure. */
+    max-width: var(--measure);
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+
+/* One right edge for the text column.
+   Measured at 1440px: chapter headings ran to 1310 while the prose beneath them
+   stopped at 790, so every section read as a wide title stepping down onto a
+   narrow column with ~650px of empty parchment beside it. The prose measure is
+   correct (64-75 characters) and must not be widened to close that gap, so the
+   headings come in to meet it instead. The margin then reads as an intentional
+   editorial margin rather than as a column that ran out. */
+/* h1 as well as h2: /#scenes is the site's one page-level chapter heading and
+   it was exempt by element name, so its title ran the full 985px while the
+   lead beneath it stopped at 925 — the exact overhang this rule exists to
+   close, in the one place the rule did not reach. */
+.chapter-head h1,
+.chapter-head h2 {
+    max-width: 22ch;
+}
+
+/* The lead is prose and keeps the prose measure. It was in the rule above,
+   with a 62ch override immediately after; the override went out with the
+   62ch-to-measure pass and left every chapter lead capped at 22ch — about
+   230px, four words a line, beside a thousand pixels of empty ground. It was
+   the turn's own opening paragraph, which is the best writing on the page. */
+.chapter-head .chapter-lead {
+    max-width: var(--measure);
+}
+
+
+@media (min-width: 1100px) {
+    .chapter-head h1,
+    .chapter-head h2 {
+        max-width: 30ch;
+    }
+}
+

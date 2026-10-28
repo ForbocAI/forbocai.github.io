@@ -1,0 +1,212 @@
+:root {
+    --floral: #ffffff;
+    --silver: #e5e5e5;
+    --charcoal: #14213d;
+    --carbon: #000000;
+    --paprika: #fca311;
+
+    --sans: 'Inter', 'Helvetica Neue', Arial, system-ui, sans-serif;
+
+    --wrap: 1240px;
+    --space-section: clamp(5.5rem, 10vw, 9rem);
+    --r-sm: 8px;
+    --r: 14px;
+    --r-lg: 20px;
+}
+
+.site-main,
+.site-header,
+.site-footer,
+.mobile-nav {
+    --ground-0: var(--floral);
+    --ground-1: var(--floral);
+    --ground-2: color-mix(in srgb, var(--silver) 22%, var(--floral));
+    --surface-1: color-mix(in srgb, var(--silver) 18%, var(--floral));
+    --surface-2: color-mix(in srgb, var(--silver) 40%, var(--floral));
+    --line: rgba(0, 0, 0, 0.14);
+    --line-strong: rgba(0, 0, 0, 0.3);
+    --text: var(--carbon);
+    --text-soft: var(--charcoal);
+    --text-faint: #5b6170;
+    --accent: var(--paprika);
+    --accent-ink: #9a5b00;
+    --accent-strong: #c27a00;
+    --on-accent: var(--floral);
+    --ok: #3f7a4a;
+    --dev: #2f6690;
+    --next: #7a4f9a;
+    --shadow-lift: 0 24px 60px -28px rgba(0, 0, 0, 0.35);
+    --font-display: var(--sans);
+    --font-body: var(--sans);
+    --font-mark: var(--sans);
+    font-family: var(--sans);
+}
+
+.theme-dark,
+.site-footer {
+    --ground-0: #0a0f1c;
+    --ground-1: var(--carbon);
+    --ground-2: var(--charcoal);
+    --surface-1: #1b2a4a;
+    --surface-2: var(--charcoal);
+    --line: rgba(255, 255, 255, 0.14);
+    --line-strong: rgba(255, 255, 255, 0.3);
+    --text: var(--floral);
+    --text-soft: var(--silver);
+    --text-faint: #a6adbb;
+    --accent-ink: #fca311;
+    --accent-strong: #fca311;
+    --ok: #8fc79a;
+    --dev: #8cbbe0;
+    --next: #c4a6dc;
+    --shadow-lift: 0 30px 70px -30px rgba(0, 0, 0, 0.7);
+    background: var(--ground-1);
+    color: var(--text);
+}
+
+.theme-accent {
+    --ground-1: var(--paprika);
+    --line: rgba(0, 0, 0, 0.22);
+    --line-strong: rgba(0, 0, 0, 0.4);
+    --text: var(--carbon);
+    --text-soft: var(--carbon);
+    --text-faint: var(--carbon);
+    --accent: var(--carbon);
+    --accent-ink: var(--carbon);
+    --accent-strong: var(--carbon);
+    --on-accent: var(--floral);
+    background: var(--paprika);
+    color: var(--text);
+}
+
+body {
+    background: var(--floral);
+}
+
+.site-main {
+    color: var(--text);
+    background: var(--ground-1);
+}
+
+.wrap {
+    width: 100%;
+    max-width: var(--wrap);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+    position: relative;
+}
+
+.band {
+    position: relative;
+    padding-block: var(--space-section);
+    scroll-margin-top: 0;
+}
+
+.band-alt {
+    background: var(--ground-2);
+}
+
+.site-main h1,
+.site-main h2,
+.site-main h3 {
+    font-family: var(--font-display);
+    color: var(--text);
+    text-wrap: balance;
+}
+
+.display {
+    font-size: clamp(3rem, 1.4rem + 5.6vw, 6.75rem);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    margin: 0 0 1.5rem;
+}
+
+.title {
+    font-size: clamp(2.25rem, 1.3rem + 3.2vw, 4.25rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    margin: 0 0 1.25rem;
+    max-width: 20ch;
+}
+
+.subtitle {
+    font-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.65rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.6rem;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1.25rem;
+    color: var(--accent-ink);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+}
+
+.eyebrow::before {
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    background: var(--accent);
+}
+
+.lead {
+    font-size: clamp(1.15rem, 1.05rem + 0.35vw, 1.35rem);
+    line-height: 1.55;
+    color: var(--text-soft);
+    max-width: 60ch;
+}
+
+.site-main p {
+    color: var(--text-soft);
+}
+
+.site-main strong {
+    color: var(--text);
+}
+
+.fine {
+    font-size: var(--step--1);
+    color: var(--text-faint);
+    max-width: 70ch;
+}
+
+.site-main .fine {
+    color: var(--text-faint);
+}
+
+.band-head {
+    display: grid;
+    gap: 1.5rem 4rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+@media (min-width: 960px) {
+    .band-head-split {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        align-items: end;
+    }
+    .band-head-split .lead {
+        margin-bottom: 1.4rem;
+    }
+}
+.page-inner {
+    padding-top: var(--header-height);
+}
+.page-head {
+    padding: calc(var(--header-height) + clamp(4rem, 9vw, 7rem)) 0 clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--line);
+}
+
+.page-title {
+    max-width: 16ch;
+    font-size: clamp(2.5rem, 1.5rem + 3.6vw, 4.75rem);
+}

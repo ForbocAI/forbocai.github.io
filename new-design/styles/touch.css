@@ -1,0 +1,29 @@
+@media (pointer: coarse), (max-width: 860px) {
+    .doc-contents ol a {
+        padding-block: 0.85rem;
+    }
+
+    .doc-contents ol li + li {
+        margin-top: 0;
+    }
+    .text-link {
+        display: inline-block;
+        padding-block: 0.5rem;
+    }
+
+    .logo,
+    .mobile-menu-toggle,
+    .btn-control {
+        min-height: 44px;
+    }
+
+    .logo,
+    .btn-control {
+        display: inline-flex;
+        align-items: center;
+    }
+    .slide-dot {
+        width: 30px;
+        height: 44px;
+    }
+}

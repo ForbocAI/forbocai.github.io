@@ -1,0 +1,51 @@
+@media (max-width: 620px) {
+    body {
+        font-size: 1.0625rem;
+    }
+    .turn-code {
+        font-size: 0.75rem;
+    }
+
+    .chapter-head {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .chapter-mark {
+        margin-bottom: 0.9rem;
+        padding-top: 0;
+    }
+
+    .chapter-mark::after {
+        display: none;
+    }
+    .doc-contents ol {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .page-inner + .site-footer {
+        margin-top: 3rem;
+    }
+
+    .page-inner + .site-footer::before {
+        top: -3rem;
+        height: 3rem;
+    }
+
+    .problem-grid,
+    .team-grid,
+    .business-grid,
+    .footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .deck-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .slide-dots {
+        order: 3;
+        width: 100%;
+    }
+}

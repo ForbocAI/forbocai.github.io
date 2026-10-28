@@ -1,0 +1,62 @@
+.maeve-scene {
+    position: relative;
+    margin: 1.6rem 0 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow:
+        inset 1px 1px 0 rgba(255, 243, 194, 0.22),
+        14px 20px 44px -18px var(--plate-shade),
+        4px 6px 14px -8px var(--plate-shade);
+}
+
+.nightfall .maeve-scene,
+.turn-band .maeve-scene {
+    --plate-shade: rgba(5, 9, 6, 0.78);
+}
+
+.maeve-scene img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.maeve-scene figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0.85rem 1rem 0.95rem;
+    background-color: rgba(19, 28, 21, 0.84);
+    color: var(--night-ink);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+.maeve-scene figcaption::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: min(5rem, 18%);
+    background: linear-gradient(rgba(19, 28, 21, 0), rgba(19, 28, 21, 0.84));
+    pointer-events: none;
+}
+.room-scene {
+    margin: 0 0 clamp(1.75rem, 3.5vw, 2.75rem);
+    max-width: none;
+}
+
+.room-scene img {
+    aspect-ratio: 21 / 9;
+    max-height: 52vh;
+    object-fit: cover;
+    object-position: center 42%;
+}
+@media (max-width: 620px) {
+    .room-scene img {
+        aspect-ratio: 4 / 3;
+    }
+
+}

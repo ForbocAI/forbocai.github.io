@@ -1,0 +1,129 @@
+/* ------------------------------------------------------- the title slide -- */
+
+/* The deck's opening frame: the headline set as a headline rather than a slide
+   caption, the world art beside it, and the dateline under both. */
+
+/* ------------------------------------------------------------ slide parts -- */
+
+.title-slide {
+    display: grid;
+    /* Both from --deck-air (deck.css). The padding was a WIDTH clamp, which on
+       a short wide window paid its full 24px twice for nothing; at half the
+       air it is 8px on a short screen and 10 on a phone, where the full token
+       pushed the art 6px through the fold. */
+    gap: var(--deck-air);
+    padding-block: calc(var(--deck-air) * 0.5);
+}
+
+/* The title slide's headline is the h1 itself now, so it is set like one. The
+   art sits beside the supporting copy — the grid has to go on .slide-body,
+   which is where both of them actually live. */
+.slide:has(.title-slide) .slide-title {
+    /* This selector outranks the short-window .slide-title step in deck.css,
+       so the one headline that most needed to give on a 700px screen was the
+       one that could not. The height term does what that step does for the
+       others: 5.6vh is 39px at 700 and past the cap by 900. */
+    font-size: min(clamp(1.7rem, 1.2rem + 2.1vw, 2.7rem), 5.6vh);
+    max-width: 26ch;
+    margin-bottom: calc(var(--deck-air) * 1.2);
+}
+
+.slide-body:has(.title-slide) {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+}
+
+.title-slide-art {
+    grid-column: 2;
+    justify-self: center;
+    width: min(100%, 290px);
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 42%, transparent 72%);
+    mask-image: radial-gradient(circle at 50% 50%, #000 42%, transparent 72%);
+}
+
+.title-slide .subtitle {
+    font-size: var(--step-1);
+    color: var(--day-ink-soft);
+    max-width: 52ch;
+}
+
+.deck-meta {
+    font-size: var(--step--1);
+    color: var(--day-ink-faint);
+}
+
+/* The title slide's plate is the one image on the deck that carries weight, so
+   it is the exception to .title-slide-art's faded, multiplied treatment: full
+   strength, arched like a window, and tall enough to hold the right column.
+   Left as the general rule it rendered as a small washed-out oval floating in
+   the middle of the column. */
+/* `.slide .title-slide-world`, not the bare class: `.slide img` sets
+   `contain` for the deck's diagrams and outranks a single class, so this
+   painting was letterboxed inside its own 4:5 box on every slide shape —
+   floating low with empty frame above it on a desktop, and a 106px
+   thumbnail in a 237px gap on a phone. */
+.slide .title-slide-world {
+    width: min(100%, 400px);
+    opacity: 1;
+    mix-blend-mode: normal;
+    -webkit-mask-image: none;
+    mask-image: none;
+    /* The site's own grown radius, not an arch. The arch — round on top,
+       flat on the bottom — read as a window in one review and a tombstone
+       on a shelf in the next, and squashed to a half-ellipse on a short
+       screen. This corner set is what every card and panel on the site
+       already wears. */
+    border-radius: var(--radius-lg);
+    /* An authored crop. `align-self: stretch` made the plate's HEIGHT the
+       prose column's row height while its width stayed a fixed cap, so
+       `cover` absorbed the difference and the painting's framing was decided
+       by paragraph reflow: a 0.94:1 portrait at 1440x900 and a 2.18:1 strip
+       at 1440x700, where the castle, the waterfall and the sunrise are
+       cropped away. Height from the ratio, so every shape shows the same
+       picture. */
+    align-self: center;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    object-fit: cover;
+    max-height: min(58vh, 520px);
+}
+
+/* Stacked, the art stops being a companion to the headline and becomes a
+   mark under it — directly under it, before the copy, so a phone reader
+   meets the world before the explanation of it, and the thing the fold cuts
+   is a paragraph (which scrolls) rather than a picture (which reads as a
+   defect). */
+@media (max-width: 720px) {
+    .slide-body:has(.title-slide) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .title-slide-art {
+        grid-column: 1;
+        order: -1;
+        width: min(60%, 200px);
+    }
+
+    /* On a phone the painting runs the width of the slide in its own
+       landscape, rather than a portrait crop of a picture a phone is too
+       narrow to stand beside anything. */
+    .slide .title-slide-world {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+    }
+}
+
+/* Where the screen is short, the title art takes its height from the screen
+   rather than from a fixed 520px. It was the last image left straddling the
+   fold on slide 1 — a mark under the headline is worth having, a mark sliced
+   in half by the window edge is not. */
+@media (max-height: 820px), (max-width: 760px) {
+    .title-slide-art,
+    .slide .title-slide-world {
+        max-height: min(34vh, 260px);
+    }
+}
