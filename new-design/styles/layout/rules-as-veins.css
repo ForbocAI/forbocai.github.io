@@ -1,0 +1,30 @@
+.impact-statement,
+.team-note,
+.contact-box,
+.business-item,
+.team-member,
+.cognition-chain li,
+.doc-head,
+.doc-body h2,
+.doc-foot,
+.boundary-mantra,
+.gate-ledger,
+.gate-ledger > li,
+.turn-answer {
+    --rule-vein: var(--day-rule);
+    border-image: linear-gradient(90deg,
+        var(--rule-vein) 0%,
+        color-mix(in srgb, var(--rule-vein) 45%, transparent) 58%,
+        transparent 100%) 1;
+}
+.doc-contents {
+    --rule-vein: var(--day-rule);
+    border-image: linear-gradient(180deg,
+        var(--rule-vein) 0%,
+        color-mix(in srgb, var(--rule-vein) 45%, transparent) 62%,
+        transparent 100%) 1;
+}
+
+.turn-answer {
+    --rule-vein: color-mix(in srgb, var(--honey) 40%, transparent);
+}

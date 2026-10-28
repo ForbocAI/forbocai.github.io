@@ -1,0 +1,133 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.012em;
+    margin: 0;
+    text-wrap: balance;
+}
+h1 {
+    font-size: var(--step-5);
+    line-height: 0.96;
+    letter-spacing: -0.032em;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: var(--step-3);
+    letter-spacing: -0.018em;
+}
+
+h3 {
+    font-size: var(--step-2);
+}
+
+h4 {
+    font-size: var(--step-1);
+}
+
+p {
+    margin: 0 0 1.1em;
+    max-width: var(--measure);
+    text-wrap: pretty;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 640px) {
+    p,
+    .chapter p > strong:first-child,
+    .doc-body p > strong:first-child {
+        text-wrap: wrap;
+    }
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+    color: inherit;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    text-underline-offset: 0.18em;
+    transition: color 0.2s var(--ease), text-decoration-color 0.2s var(--ease);
+}
+
+a:hover {
+    text-decoration-color: currentColor;
+}
+
+:focus-visible {
+    outline: 2.5px solid var(--copper);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+}
+
+.site-footer :focus-visible {
+    outline-color: var(--lantern);
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 200;
+    padding: 0.7rem 1.1rem;
+    background: var(--day-ink);
+    color: var(--lantern);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+.chapter p > strong:first-child,
+.doc-body p > strong:first-child {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    font-weight: 700;
+    line-height: 1.4;
+    text-wrap: pretty;
+    letter-spacing: 0.01em;
+    color: var(--day-ink);
+}
+
+.turn-band p > strong:first-child {
+    color: var(--night-ink);
+}
+.turn-note > strong:first-child,
+.deeper-body p > strong:first-child,
+.ask-note > strong:first-child,
+.team-note > strong:first-child {
+    display: inline;
+    margin-bottom: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+.chapter p.chapter-lead > strong:first-child {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+.chapter h3,
+.doc-body h3 {
+    font-size: var(--step-2);
+    line-height: 1.2;
+}
+.tm {
+    font-size: 0.4em;
+    vertical-align: 0.62em;
+    letter-spacing: 0;
+    margin-left: 0.04em;
+}

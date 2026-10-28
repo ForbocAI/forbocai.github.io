@@ -1,0 +1,8 @@
+@media (min-width: 960px) {
+    .chapter-head .deeper {
+        margin-top: 1.4rem;
+        margin-left: 0;
+        max-width: none;
+    }
+
+}

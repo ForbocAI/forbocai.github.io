@@ -1,0 +1,21 @@
+/* A page that IS the night has no dusk to descend through. The 14rem above
+   .nightfall exists so the home page's parchment can dissolve into moss across
+   .nightfall-edge; on /#scenes there is no parchment above it, and the same
+   margin rendered as 224px of bare ground under the header before the first
+   ink. The page head sits at the top, where a head goes. */
+.nightfall-page {
+    margin-top: 0;
+}
+
+.scenes-head {
+    /* A page head sits close under the header; a chapter's full top gap put
+       the first ink 101px down. And its bottom gap stacked on the walkthrough's
+       top gap into ~300px of bare moss between the lead and the first panel —
+       a head introduces what follows, it does not stand a screen away from it. */
+    padding-top: clamp(1.25rem, 2.6vw, 2rem);
+    padding-bottom: clamp(0.75rem, 1.6vw, 1.25rem);
+}
+
+.scenes-head .doc-return {
+    margin: 0 0 clamp(1.25rem, 2.6vw, 2rem);
+}

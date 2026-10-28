@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    max-width: var(--shell);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+    position: relative;
+    z-index: 3;
+}
+
+main {
+    position: relative;
+    z-index: 3;
+}
+
+.chapter {
+    position: relative;
+    padding-block: var(--chapter-gap);
+    scroll-margin-top: calc(var(--header-height) + 2rem - var(--chapter-gap));
+}
+.turn-band + .turn-band {
+    padding-top: var(--chapter-seam);
+}

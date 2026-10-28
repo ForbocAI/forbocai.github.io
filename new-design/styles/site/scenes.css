@@ -1,0 +1,122 @@
+.page-scenes {
+    --night-bg: var(--carbon);
+    --night-mid: var(--carbon);
+    --night-floor: var(--carbon);
+    --night-surface: var(--charcoal);
+    --night-surface-high: #1b2a4a;
+    --night-rule: rgba(255, 255, 255, 0.16);
+    --night-ink: #ffffff;
+    --night-ink-soft: #e5e5e5;
+    --night-ink-faint: #a6adbb;
+    --honey: var(--paprika);
+    --lantern: var(--paprika);
+    --copper: var(--paprika);
+    --copper-ink: var(--paprika);
+    --creek: #8cbbe0;
+    --sage: #8fc79a;
+    --surface-night: var(--charcoal);
+    --membrane-night: transparent;
+    --plate-shade: transparent;
+    --vein: transparent;
+    --rule-vein: rgba(255, 255, 255, 0.16);
+
+    padding-top: var(--header-height);
+    background: var(--carbon);
+    color: var(--text);
+}
+.page-scenes .nightfall,
+.page-scenes .chapter,
+.page-scenes .turn-band {
+    background: var(--carbon);
+    background-image: none;
+}
+
+.page-scenes .nightfall::before,
+.page-scenes .nightfall::after,
+.page-scenes .chapter::before,
+.page-scenes .chapter::after,
+.page-scenes .turn-band::before,
+.page-scenes .turn-band::after {
+    display: none;
+}
+.page-scenes .chapter-mark {
+    display: none;
+}
+
+.page-scenes .chapter-head {
+    display: block;
+}
+
+.page-scenes .chapter-head h1,
+.page-scenes .chapter-head h2 {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.04;
+}
+
+.page-scenes .chapter-head h1 {
+    font-size: clamp(2.4rem, 1.4rem + 3vw, 4.25rem);
+    max-width: 18ch;
+}
+
+.page-scenes h3 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+.page-scenes .doc-return .btn-quiet {
+    padding: 0;
+    color: var(--paprika);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.page-scenes .doc-return .btn-quiet:hover {
+    color: #ffffff;
+}
+.page-scenes .turn-authored,
+.page-scenes .turn-col,
+.page-scenes .turn-room,
+.page-scenes .turn-counterfactual-pair article,
+.page-scenes .turn-answer {
+    background: var(--charcoal);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--r-lg);
+    box-shadow: none;
+}
+
+.page-scenes .turn-code {
+    color: #e5e5e5;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--r-sm);
+}
+
+.page-scenes .turn-code b {
+    color: var(--paprika);
+}
+
+.page-scenes .turn-label {
+    color: var(--paprika);
+}
+
+.page-scenes .turn-note code,
+.page-scenes p code {
+    color: var(--paprika);
+    background: rgba(252, 163, 17, 0.12);
+}
+
+.page-scenes .maeve-scene {
+    border-radius: var(--r-lg);
+    overflow: hidden;
+}
+
+.page-scenes .maeve-scene figcaption {
+    color: #a6adbb;
+}
+.page-scenes .deeper summary {
+    color: var(--paprika);
+}
+
+.page-scenes .deeper {
+    border-color: rgba(255, 255, 255, 0.16);
+}

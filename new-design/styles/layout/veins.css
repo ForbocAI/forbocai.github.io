@@ -1,0 +1,38 @@
+.deeper,
+.turn-answer {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.turn-answer {
+    border-image: linear-gradient(90deg,
+        var(--day-rule) 0%,
+        color-mix(in srgb, var(--day-rule) 45%, transparent) 42%,
+        transparent 88%) 1;
+}
+
+.turn-band .turn-answer {
+    border-image: linear-gradient(90deg,
+        var(--night-rule) 0%,
+        color-mix(in srgb, var(--night-rule) 45%, transparent) 42%,
+        transparent 88%) 1;
+}
+.turn-refusal,
+.doc-aside {
+    border-left-color: transparent;
+    border-image: linear-gradient(180deg,
+        var(--vein) 0%,
+        color-mix(in srgb, var(--vein) 55%, transparent) 55%,
+        color-mix(in srgb, var(--vein) 12%, transparent) 100%) 1;
+}
+
+.doc-aside {
+    --vein: var(--honey);
+}
+
+.turn-refusal {
+    --vein: var(--honey);
+}
+.chapter-mark::after {
+    content: none;
+}

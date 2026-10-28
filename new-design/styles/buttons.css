@@ -1,0 +1,72 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.78rem 1.4rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.18s var(--ease), background-color 0.2s var(--ease),
+        border-color 0.2s var(--ease), color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background: var(--day-ink);
+    color: var(--lantern);
+    box-shadow: 0 1px 0 rgba(255, 243, 194, 0.28) inset;
+}
+
+.btn-primary:hover {
+    background: #16211a;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--honey) 32%, transparent);
+}
+.nightfall .btn-primary,
+.turn-band .btn-primary,
+.site-footer .btn-primary {
+    background: var(--lantern);
+    color: #20291f;
+    box-shadow: 0 0 34px -6px rgba(255, 243, 194, 0.55);
+}
+
+.nightfall .btn-primary:hover,
+.turn-band .btn-primary:hover,
+.site-footer .btn-primary:hover {
+    background: #fffae0;
+    box-shadow: 0 0 46px -4px rgba(255, 243, 194, 0.8);
+}
+.btn-quiet {
+    padding-inline: 0;
+    font-weight: 600;
+    color: var(--night-ink-soft);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3em;
+    text-decoration-color: color-mix(in srgb, var(--night-ink-soft) 40%, transparent);
+}
+
+.btn-quiet:hover {
+    color: var(--lantern);
+    text-decoration-color: color-mix(in srgb, var(--lantern) 60%, transparent);
+}
+.text-link {
+    align-self: center;
+    font-weight: 700;
+    color: var(--copper-ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    text-decoration-color: color-mix(in srgb, var(--copper) 55%, transparent);
+}
+
+.text-link:hover {
+    color: var(--day-ink);
+}

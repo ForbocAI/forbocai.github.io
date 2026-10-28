@@ -1,0 +1,38 @@
+:root {
+    /* Two shells, because only one thing on the page needed the width.
+
+       Growing ONE shell fixed the headline and broke everything downstream:
+       prose chapters sit at a readable ~660px measure, so a wider container is
+       just more empty right-hand margin. Measured against ink a reader can
+       actually see, page emptiness climbed 44% at 1024 to 62% at 2560 — the
+       biggest screen was the worst-composed one, which is backwards.
+
+       So the prose shell stays put and the hero alone opens up. The hero is
+       the page's peak and is genuinely two-column; a chapter is one column of
+       text and gains nothing from room it cannot fill. */
+    --shell: 1180px;
+
+    /* The hero's own shell. Solved rather than picked: it lands exactly on
+       1180px at 1440 so nothing already composed moves, clears the 1330px that
+       1680x1050 needs, and caps at 1600px — the least width that still holds
+       the headline to four lines at 2560.
+
+       1680x1050 sets that floor, and it is worth writing down why: --step-5
+       takes min(width-term, height-term), so in a tall narrow window the 6.4vh
+       term wins and the type is HEIGHT-driven while the shell is width-driven.
+       A gentler curve left five lines there while every other width had four. */
+    --shell-hero: min(1600px, max(1180px, 62.5vw + 280px));
+    --gutter: clamp(1.25rem, 4vw, 2.5rem);
+    --header-height: 76px;
+    --rail: 3.25rem;
+    /* Two values, everywhere: a full break between grounds and a seam between
+       chapters that share one. */
+    --chapter-gap: clamp(3.5rem, 6vw, 5.5rem);
+    --chapter-seam: clamp(1.75rem, 3vw, 2.75rem);
+
+    /* One inset for every panel, so the page has one panel edge rather than
+       one per component stylesheet. */
+    --panel-inset: clamp(1.4rem, 2.6vw, 2.1rem);
+
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

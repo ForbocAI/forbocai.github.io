@@ -1,0 +1,204 @@
+.page-deck {
+    --day-0: #f4f4f4;
+    --day-1: #f4f4f4;
+    --day-2: #f4f4f4;
+    --day-3: #f4f4f4;
+    --day-4: #f4f4f4;
+    --day-5: #f4f4f4;
+    --day-bg: #f4f4f4;
+    --day-bg-deep: #ececec;
+    --surface-day: var(--floral);
+    --membrane-day: 0 30px 70px -40px rgba(0, 0, 0, 0.35);
+    --day-rule: rgba(0, 0, 0, 0.16);
+    --day-rule-soft: rgba(0, 0, 0, 0.09);
+    --day-ink: var(--carbon);
+    --day-ink-soft: var(--charcoal);
+    --day-ink-faint: #5b6170;
+    --honey: var(--paprika);
+    --lantern: var(--paprika);
+    --copper: var(--paprika);
+    --copper-ink: #9a5b00;
+    --font-display: var(--sans);
+    --font-body: var(--sans);
+    --font-mark: var(--sans);
+    --radius-lg: var(--r-lg);
+    --radius-sm: var(--r-sm);
+
+    font-family: var(--sans);
+    background: #f4f4f4;
+    background-image: none;
+    color: var(--carbon);
+}
+
+.page-deck .deck-frame {
+    border: 1px solid var(--day-rule-soft);
+}
+
+.page-deck .deck-header {
+    background: var(--carbon);
+    border-bottom: 3px solid var(--paprika);
+}
+
+.page-deck .deck-brand {
+    color: var(--floral);
+    letter-spacing: 0.02em;
+}
+
+.page-deck .deck-count {
+    color: #a6adbb;
+}
+
+.page-deck .deck-count .indicator-current {
+    color: var(--paprika);
+}
+
+.page-deck .slide-title {
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    color: var(--carbon);
+}
+
+.page-deck .slide-title .tm {
+    font-weight: 600;
+}
+
+.page-deck .slide-body h2,
+.page-deck .slide-body h3,
+.page-deck .slide-body h4 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--carbon);
+}
+
+.page-deck .slide-body a {
+    color: var(--carbon);
+    text-decoration-color: var(--paprika);
+    text-decoration-thickness: 2px;
+}
+
+.page-deck .proof-label,
+.page-deck .business-phase,
+.page-deck .creative-value-grid article > span,
+.page-deck .boundary-stage > span,
+.page-deck .decision-pair span {
+    font-weight: 700;
+    color: var(--copper-ink);
+}
+
+.page-deck .impact-statement {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    border-top: 3px solid var(--carbon);
+}
+
+.page-deck .boundary-mantra {
+    font-weight: 800;
+    color: var(--carbon);
+}
+
+.page-deck .boundary-stage,
+.page-deck .decision-pair article,
+.page-deck .creative-value-grid article,
+.page-deck .business-item,
+.page-deck .team-member,
+.page-deck .problem-column {
+    background: var(--floral);
+    background-image: none;
+    box-shadow: none;
+}
+
+.page-deck .decision-pair article:last-child,
+.page-deck .problem-column.is-character-intelligence {
+    background: var(--carbon);
+    border-color: var(--carbon);
+}
+
+.page-deck .decision-pair article:last-child strong,
+.page-deck .decision-pair article:last-child span,
+.page-deck .is-character-intelligence h3,
+.page-deck .is-character-intelligence p,
+.page-deck .is-character-intelligence .proof-label {
+    color: var(--floral);
+}
+
+.page-deck .decision-pair article:last-child span,
+.page-deck .is-character-intelligence .proof-label {
+    color: var(--paprika);
+}
+
+.page-deck .cognition-chain li {
+    border-top: 3px solid var(--carbon);
+}
+
+.page-deck .cognition-chain strong {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.page-deck .deck-controls {
+    background: var(--floral);
+}
+
+.page-deck .btn-control {
+    border-color: var(--carbon);
+    box-shadow: none;
+    color: var(--carbon);
+    background: var(--floral);
+}
+
+.page-deck .btn-control:hover {
+    background: var(--paprika);
+    border-color: var(--paprika);
+}
+
+.page-deck .slide-dot.active::after {
+    background: var(--paprika);
+}
+
+.page-deck .slide-dot:hover::after {
+    background: var(--carbon);
+}
+
+.page-deck .btn-primary {
+    color: var(--carbon);
+    background: var(--paprika);
+    border-color: var(--paprika);
+    box-shadow: none;
+}
+
+.page-deck .btn-primary:hover {
+    background: #ffb733;
+    box-shadow: none;
+}
+
+.page-deck .text-link {
+    font-weight: 700;
+    color: var(--carbon);
+    text-decoration-color: var(--paprika);
+}
+
+.page-deck .category-crossing .problem-column {
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--day-rule-soft);
+    border-radius: var(--r);
+}
+
+.page-deck .boundary-stage {
+    background: #f7f7f7;
+    border-top: 3px solid var(--carbon);
+}
+
+.page-deck .boundary-stage.is-model {
+    background: var(--carbon);
+    border-top-color: var(--paprika);
+}
+
+.page-deck .boundary-stage.is-model h2,
+.page-deck .boundary-stage.is-model p {
+    color: var(--floral);
+}
+
+.page-deck .boundary-stage.is-model > span {
+    color: var(--paprika);
+}

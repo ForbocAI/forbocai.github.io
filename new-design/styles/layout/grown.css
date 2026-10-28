@@ -1,0 +1,16 @@
+.boundary-stage:nth-child(even),
+.decision-pair article:nth-child(even),
+.world-expansion article:nth-child(even),
+.turn-counterfactual-pair article:nth-child(even) {
+    border-radius: var(--radius-sm-turn);
+}
+@keyframes grown-drift {
+    from {
+        border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
+        transform: translate3d(-0.6%, 0.4%, 0) rotate(-0.4deg);
+    }
+    to {
+        border-radius: 44% 56% 57% 43% / 57% 45% 55% 43%;
+        transform: translate3d(0.7%, -0.5%, 0) rotate(0.5deg);
+    }
+}

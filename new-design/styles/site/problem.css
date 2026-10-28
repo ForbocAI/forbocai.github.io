@@ -1,0 +1,82 @@
+.why {
+    padding-block: var(--space-section);
+    background: var(--silver);
+    color: var(--carbon);
+}
+
+.site-main .why .title,
+.site-main .why strong {
+    color: var(--carbon);
+}
+
+.why .eyebrow {
+    color: var(--carbon);
+}
+
+.why-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 960px) {
+    .why-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 6rem;
+        align-items: start;
+    }
+}
+
+.site-main .why-lead {
+    margin: 0;
+    max-width: 38ch;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--charcoal);
+}
+
+.why-points {
+    display: grid;
+    counter-reset: why;
+}
+
+.why-points li {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.6rem 0 1.6rem 3.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    counter-increment: why;
+    position: relative;
+}
+
+.why-points li:first-child {
+    padding-top: 0.4rem;
+    border-top: 0;
+}
+
+.why-points li::before {
+    content: counter(why, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.95rem;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--carbon);
+}
+
+.why-points li:first-child::before {
+    top: 0.75rem;
+}
+
+.why-points strong {
+    font-size: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+.why-points span {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--charcoal);
+}

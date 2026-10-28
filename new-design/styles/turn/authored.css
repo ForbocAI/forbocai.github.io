@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------- authored -- */
+
+/* The writer's document, published beside the judgment it produced. Set as a
+   peer of the turn grid rather than a sidebar, because a narrative team's
+   artifact is not an annotation on the engineering — it is the half of this
+   product that decides what she does. */
+.turn-authored {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    border-radius: var(--radius-lg);
+    border: 1px solid color-mix(in srgb, var(--honey) 24%, transparent);
+    background: var(--surface-night);
+    box-shadow: var(--membrane-night);
+}
+
+.turn-authored-head {
+    max-width: 62ch;
+    margin-bottom: 1.2rem;
+}
+
+.turn-authored-head h3 {
+    margin: 0 0 0.6rem;
+    font-size: var(--step-2);
+}
+
+/* This note is not a note. It is the card's lede, and it carries the one
+   instruction a studio has to act on — "it is the most load-bearing asset in
+   your build" — while set at the smallest size on the page, under a 26px
+   heading, beside a full-width code block. A reviewer put it exactly: "the
+   typography contradicts the claim", and measured the result as 532px of
+   empty card beside three lines of 12px type.
+
+   Body size and the reading measure. 68ch at --step--1 rendered 534px wide and
+   still counted as fine print; 68ch at body size would have run past what
+   type.mjs allows anybody to read. */
+.turn-authored .turn-note {
+    font-size: var(--step-0);
+    line-height: 1.5;
+    max-width: var(--measure);
+}
+
+/* The writer's document is a returned object like the judgments below it,
+   and it sits in the same recessed pocket. Bare on the card, "raw monospace
+   with no background, border or padding", it was the one code block on the
+   site with no surface of its own. */
+.turn-authored .turn-code {
+    margin: 0.9rem 0 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid color-mix(in srgb, var(--night-ink) 6%, transparent);
+    background: color-mix(in srgb, #12180f 58%, transparent);
+    font-size: 0.78125rem;
+}
+
+.turn-authored-foot {
+    margin-top: 1.1rem;
+}
+
+.turn-authored-foot em {
+    font-style: italic;
+    color: var(--night-ink);
+}
+

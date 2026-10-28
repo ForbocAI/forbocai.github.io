@@ -1,0 +1,73 @@
+.site-footer {
+    position: relative;
+    z-index: 5;
+    padding: clamp(3.5rem, 6vw, 5rem) 0 2rem;
+    background: var(--ground-0);
+    border-top: 1px solid var(--line);
+    color: var(--text-soft);
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2.5rem 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.footer-brand {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 900px) {
+    .footer-grid {
+        grid-template-columns: minmax(0, 1.5fr) repeat(4, minmax(0, 1fr));
+    }
+    .footer-brand {
+        grid-column: auto;
+    }
+}
+
+.footer-brand p {
+    margin: 1rem 0 0.75rem;
+    max-width: 26ch;
+    font-size: 0.98rem;
+    color: var(--text-faint);
+}
+
+.footer-mail {
+    color: var(--accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-label {
+    margin: 0 0 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.footer-group a {
+    font-size: 0.98rem;
+    color: var(--text-faint);
+    text-decoration: none;
+}
+
+.footer-group a:hover,
+.footer-mail:hover {
+    color: var(--accent-strong);
+}
+
+.footer-copy {
+    margin: 3rem 0 0;
+    padding-top: 1.5rem;
+    max-width: none;
+    font-size: 0.88rem;
+    color: var(--text-faint);
+    border-top: 1px solid var(--line);
+}

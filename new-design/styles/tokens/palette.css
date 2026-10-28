@@ -1,0 +1,128 @@
+/* ===========================================================================
+   ForbocAI — Hearthlight
+   ---------------------------------------------------------------------------
+   The page descends from day into night. Parchment carries the hero and the
+   capability ledger; from the Soul Garden onward everything sits on deep moss,
+   so the lantern light in the brand finally has something to light.
+
+   Palette is pinned by design_ref/palette.md. Type is Vollkorn for headings,
+   Alegreya Sans for everything read at length, Eagle Lake for the wordmark and
+   nothing else.
+   ======================================================================== */
+
+:root {
+    /* Day — parchment side */
+    --day-bg: #f4ead7;
+    --day-bg-deep: #ede0c7;
+    --day-surface: #fbf6ea;
+    /* A hairline has to be a hairline on the WHOLE descent, not only at the
+       top of it. #ddcdae measured 1.012:1 against #technology's --dusk-0
+       ground — the ledger's row dividers were unpainted along their whole
+       length, and what looked like a taper was a decorative colony passing
+       underneath them. These clear 1.3:1 against the darkest day ground and
+       still read as a hairline against the lightest. */
+    --day-rule: #c7ae87;
+    --day-rule-soft: #d8c6a4;
+    --day-ink: #263127;
+    --day-ink-soft: #5c4a3b;
+    /* Both "faint" inks carry real sentences, not decoration, and both measured
+       just under AA at 15-19px once the grounds were lit: --day-ink-faint at
+       4.23 on .ledger-fact and 4.40 on a disclosure label, --night-ink-soft at
+       3.96 on .soul-market and 4.00 on #room's prose. A tone that has to be
+       read is not allowed to be the faintest thing that will still pass — it
+       has to pass. Each moves one step toward its own ink and no further, so
+       the tier below the body copy survives. */
+    --day-ink-faint: #4c4132;
+
+    /* Night — moss side */
+    /* Deep moss, not grey with a green tint.
+
+       The night ground was #263127 — an RGB range of 11, which is a grey.
+       Rendered, every night chapter measured chroma 13-17 out of 255 across
+       53-58% of the scroll, and the brief's "cosy" half was failing on the
+       dark side of the page because a lantern in a grey room is a lit
+       specimen, not an inn.
+
+       Each token keeps its luminance to within a point of the old #263127
+       (46.6) so nothing that clears AA today stops clearing it; only the
+       saturation moves, roughly doubling.
+
+       And the hue sits at olive-moss (~100°), not blue-green (~138°). The first
+       saturated pass went blue-green and read as a cold field: the lamps mix
+       into the ground, and a lantern over blue-green comes out grey-green,
+       which dropped the warm share of the brightest pixels from 80% to 42% in
+       #turn. Over olive the same lantern comes out amber. Overgrowth is green;
+       the light in it is warm; the ground has to let the light stay warm. */
+    --night-bg: #253321;
+    /* The night has a floor, and the way down to it.
+       Measured over the whole page in its own left gutter, the day drifted 29
+       luminance levels across three chapters, fell 137 in one 400px cliff, and
+       then the six night chapters sat inside 13 levels of each other with no
+       direction at all — #roadmap and #souls BRIGHTER than #turn, because what
+       varied was the colony lighting and not the ground. A page whose one idea
+       is a continuous descent spent its whole back half not descending.
+       --night-bg stays the night you arrive in; these are where it goes. */
+    --night-mid: #1c2715;
+    --night-floor: #121a0c;
+    --night-surface: #2c3d27;
+    --night-surface-high: #35492e;
+    --night-rule: #3f5248;
+    --night-ink: #f1e8d6;
+    --night-ink-soft: #d4dcc9;
+    --night-ink-faint: #93a18b;
+
+    /* Lantern and accents */
+    --lantern: #fff3c2;
+    --honey: #e0c38a;
+    --copper: #a46a3f;
+    /* #a46a3f clears 3:1 as a rule or border but only reaches 3.7:1 as text
+       on parchment, so anything set in copper uses this darker ink. */
+    --copper-ink: #6b4429;
+    --ember: #d9896d;
+    --creek: #7aa7b3;
+    --sage: #9dbb8b;
+
+    /* The grown light's own hues. --creek and --sage are surface colours —
+       muted, low-saturation, correct for a wall in the dark and useless as a
+       light source, which is why a two-source model built on them still read as
+       one source. Bioluminescence is saturated; that is the whole visual fact
+       of it. These two are for EMISSION only and never for a surface or ink. */
+    --biolume-core: #5fe3cd;   /* fungal cyan — the colony on the shaded side */
+    --spore: #a98cf5;          /* spore violet — rarer, deepest night only */
+    --mint: #cfe9dc;
+    --lavender: #bda6cf;
+
+    /* The descent, once. Both gradients below and the header tone in main.js
+       read these, so the bar and the page cannot drift apart — they did, at the
+       90% stop, when the list was written out three times. */
+    --day-0: #faf3e5;
+    --day-1: #f4ead7;
+    --day-2: #f1e4cc;
+    --day-3: #ecdabb;
+    --day-4: #e7d3ae;
+    --day-5: #e4cda6;
+
+    --dusk-0: #e4cda6;
+    --dusk-1: #dfae8a;
+    --dusk-2: #c98a68;
+    --dusk-3: #9c6247;
+    /* Warm while it is light, green only once it is dark.
+       Two attempts at these two stops failed the same way from opposite
+       sides. Brown then grey-green (#5d4b3c, #3a4336) read as "a muddy brown
+       band, a dirty bar". Plum then slate (#5c4657, #3b3f48) fixed the mud
+       and read, for two rounds running, as "a bruise — mauve and slate exist
+       nowhere else on this site; no colourist routes parchment to moss
+       through plum". Both are what happens turning orange into green at
+       mid-lightness: in sRGB the middle is grey, and routing around the
+       grey means leaving the palette.
+       So the hue does not turn in the middle. Measured in OKLCH, the fourth
+       stop stays in the warm family at twice the old brown's chroma — an
+       ember, not mud (h 73, C 0.062) — and the green arrives at the fifth,
+       where it is dark enough that a hue change reads as the forest closing
+       in rather than as a colour event (h 117, C 0.047). Luminance is the
+       old stops' exactly, so the header's crossing math and every contrast
+       figure still hold. */
+    --dusk-4: #624825;
+    --dusk-5: #3c4124;
+    --dusk-6: #263127;
+}
