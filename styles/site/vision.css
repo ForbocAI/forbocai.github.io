@@ -56,3 +56,16 @@
     line-height: 1.5;
     color: var(--carbon);
 }
+
+.site-main .vision-steps p.vision-tag {
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.vision-steps a {
+    color: var(--carbon);
+    font-weight: 700;
+    text-decoration-thickness: 2px;
+}

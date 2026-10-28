@@ -171,3 +171,18 @@
     border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
     border-radius: 50%;
 }
+
+.closing-stat {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+}
+
+.closing-stat strong {
+    margin-right: 0.4rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--paprika);
+}

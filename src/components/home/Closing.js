@@ -1,7 +1,7 @@
 import { TEAM } from '../company/team.js';
 
 const FACTS = [
-    ['Why game-specific infrastructure', 'Generative AI is already part of how games are made. Characters need more than a general chat service offers: responses and actions shaped for a game, generated from its context, and kept inside its rules. Building that layer is the opportunity.'],
+    ['Why game-specific infrastructure', 'Generative AI is already part of how games are made. Characters need more than a general chat service offers: responses and actions shaped for a game, generated from its context, and kept inside its rules. Building that layer is the opportunity.<span class="closing-stat"><strong>$12.8B</strong> AI in games market by 2033 · <a href="https://www.markettrendsanalysis.com/product/ai-in-games-market/" target="_blank" rel="noopener noreferrer">Source</a></span>'],
     ['How the business works', 'Studios pay for the hosted service from the first call, on subscription tiers that grow with the size of their cast; publishers with many titles take enterprise terms. Every character turn runs through our runtime, so revenue grows as games use more characters.'],
     ['What we have built', 'Hosted character models, the runtime that serves them, SDKs for TypeScript and Unreal Engine 5, and test worlds where it all runs today.'],
     ['What comes next', 'Integrations with our first partner studios, and production-ready playtesting and playable characters. We’re raising a seed round to qualify the SDK, API and billing path and deliver those integrations.'],

@@ -13,6 +13,8 @@ export const Vision = () => `
                 <div>
                     <p class="vision-label">Building toward</p>
                     <p>Relationships that develop over many sessions. Characters who notice each other as well as the player. And, when a player chooses, a character who carries who they became into another game.</p>
+                    <p class="vision-tag">Dev born. Player grown. Yours to carry.</p>
+                    <p>That carried character is a Soul: a record of who they became, owned by the player. Souls are planned to be minted and traded in <a href="https://solscan.io/token/7zwfQkkPv9aUF6VXA8CbZabJYpXCRJTYbQnjxjynpump" target="_blank" rel="noopener noreferrer">$FAI</a>, ForbocAI’s token.</p>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ export const Hero = () => `
                 <p class="eyebrow">AI infrastructure for interactive worlds</p>
                 <h1 id="hero-title" class="display hero-title">Characters that do more than <span>talk.</span></h1>
                 <p class="hero-line">Game characters should respond to what happens in the world — not just follow dialogue written in advance.</p>
-                <p class="hero-line hero-line-sub">ForbocAI gives game characters the ability to interpret game context, respond to player actions, and propose what to do next. Your game stays in control of the world.</p>
+                <p class="hero-line hero-line-sub">Powered by Servitor™, ForbocAI gives game characters the ability to interpret game context, respond to player actions, and propose what to do next. Your game stays in control of the world.</p>
                 <div class="actions">
                     <a href="#product" class="button button-primary">See the product in action <span aria-hidden="true">→</span></a>
                     <a href="#company" class="button button-secondary">For investors <span aria-hidden="true">→</span></a>

@@ -35,8 +35,8 @@
     width: 32px;
     height: 32px;
     background-color: var(--paprika);
-    -webkit-mask: url('../../logo-mark.png?v=20261026') no-repeat center / contain;
-    mask: url('../../logo-mark.png?v=20261026') no-repeat center / contain;
+    -webkit-mask: url('../../logo-mark.png?v=20261028') no-repeat center / contain;
+    mask: url('../../logo-mark.png?v=20261028') no-repeat center / contain;
 }
 
 .brand-word {

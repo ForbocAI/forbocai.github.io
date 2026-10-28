@@ -6,6 +6,7 @@
  * it into engines; the game remains truth.
  */
 import { selectPitchSlide } from '../domains/navigationSlice.js';
+import { TEAM } from './company/team.js';
 
 const slides = [
     {
@@ -181,7 +182,7 @@ const slides = [
                 <article><span>Collection</span><h3>Every person can be singular</h3><p>A cast becomes a portfolio of identities, not interchangeable content.</p></article>
                 <article><span>Return</span><h3>Continuity deepens belonging</h3><p>A player comes back for the person who remembers what they did last season.</p></article>
             </div>
-            <p class="moat-intro"><strong>Dev born. Player grown. Yours to carry.</strong> Cards prove people return to identities they care about, and a card never remembers them back. She is authored by a studio, made specific by a player, and carried into a second world that reads her record and admits what its canon holds. That is the third pillar, and no company can hand you it without the first two.</p>
+            <p class="moat-intro"><strong>Dev born. Player grown. Yours to carry.</strong> Cards prove people return to identities they care about, and a card never remembers them back. She is authored by a studio and made specific by a player. Next, we are building the third pillar: carrying her into a second world that reads her record and admits only what its canon holds.</p>
         `
     },
     {
@@ -192,7 +193,7 @@ const slides = [
                 <div class="business-item"><span class="business-phase">Enter</span><h4>One impossible choice</h4><p>A single scene reveals the new unit: a judgment no branch contained.</p></div>
                 <div class="business-item"><span class="business-phase">Expand</span><h4>Every living cast</h4><p>Each character who meets the unforeseen creates recurring demand for Character Intelligence.</p></div>
                 <div class="business-item"><span class="business-phase">Compound</span><h4>A portfolio of worlds</h4><p>One model, every cast in a catalogue. An innkeeper, a fleet commander, a child in a besieged city. No two of them sounding like the same mind.</p></div>
-                <div class="business-item"><span class="business-phase">Carry</span><h4>Characters that change hands</h4><p>A character a player carries is a Soul, minted, grown and traded in $FAI.</p></div>
+                <div class="business-item"><span class="business-phase">Carry</span><h4>Characters that change hands</h4><p>Planned: a character a player carries becomes a Soul, to be minted and traded in $FAI.</p></div>
             </div>
             <p class="impact-statement">Character technology already commands billions: one company’s was licensed for <a href="https://www.cnbc.com/2024/08/02/ex-google-engineers-from-characterai-re-join-company-with-new-ai-partnership-.html" target="_blank" rel="noopener noreferrer">$2.7&nbsp;billion</a>. The living cast is the layer above it, and the first worlds through set its range.</p>
         `
@@ -202,20 +203,13 @@ const slides = [
         title: 'Who is building this.',
         content: `
             <div class="team-grid">
+                ${TEAM.map((p) => `
                 <div class="team-member">
-                    <h4><a href="https://www.linkedin.com/in/tiernan-o-malley-219591170/" target="_blank" rel="noopener noreferrer">Tiernan O’Malley</a></h4>
-                    <p><strong>Co-founder · Corporate partnerships &amp; investor relations</strong><br/>Opens markets for a living — cybersecurity and technology at Framework Security, Hays and IDMWORKS — with an MBA underway at Rice Business.</p>
-                </div>
-                <div class="team-member">
-                    <h4><a href="https://www.linkedin.com/in/seandinwiddie/" target="_blank" rel="noopener noreferrer">Sean Dinwiddie</a></h4>
-                    <p><strong>Founder, president and chair</strong><br/>Architect of the ForbocAI NPC Protocol. Builds the API it runs through, Servitor™ from dataset to release, and the TypeScript and Unreal Engine 5 SDKs. Three decades of engineering; games shipped include <em>Call of Duty: Modern Warfare: Mobilized</em>, <em>Spider-Man</em> and <em>X-Men</em>.</p>
-                </div>
-                <div class="team-member">
-                    <h4><a href="https://www.linkedin.com/in/antara-bhavsar-74b7a4187/" target="_blank" rel="noopener noreferrer">Antara Bhavsar</a></h4>
-                    <p><strong>Co-founder &amp; Founding Engineer</strong><br/>Engineers the NPC runtime at the heart of the API, the personas that run through it from API to SDK, the model’s training and the Soul’s encrypted transport. Production AI and distributed systems from Amazon, Motorola and Indiana University; MS in computer science.</p>
-                </div>
+                    <h4><a href="${p.href}" target="_blank" rel="noopener noreferrer">${p.name}</a></h4>
+                    <p><strong>${p.role}</strong><br/>${p.bio}</p>
+                </div>`).join('')}
             </div>
-            <p class="team-note">Three people hold the model, the law it enters through, and the instrument this category is bought on.</p>
+            <p class="team-note">Three people covering the model, the runtime and SDKs, and studio partnerships.</p>
             <p class="team-note">ForbocAI, Inc. — Delaware C corporation, incorporated 13 February 2026. Founders on standard four-year vesting with a twelve-month cliff, and 20% of the cap table reserved for the option pool.</p>
         `
     },
@@ -226,8 +220,8 @@ const slides = [
             <div class="threshold-spread">
             <div class="threshold-call">
                 <p class="proof-label">The window</p>
-                <p class="threshold-lead">Character Intelligence has its model and its law. What it does not have yet is a cast a player has argued with in public — and the studio that ships first decides what this category means for everyone who follows it.</p>
-                <p class="threshold-line"><strong>From the other side of the table, the shape is this.</strong> The companies that own a layer of language intelligence are valued <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank" rel="noopener noreferrer">near a trillion dollars</a>. Character Intelligence is the next layer, and whoever authors its measure authors what it is worth. That measure is being written in this room.</p>
+                <p class="threshold-lead">Servitor™ and the NPC Protocol run in our own test worlds today. What the category does not have yet is a cast players have met in a shipped game — and the studio that ships first sets the reference for everyone who follows.</p>
+                <p class="threshold-line"><strong>The seed round is open.</strong> AI in games is projected to reach <a href="https://www.markettrendsanalysis.com/product/ai-in-games-market/" target="_blank" rel="noopener noreferrer">$12.8 billion by 2033</a>. We are raising to complete partner integrations, support the first external game launch, and put in place the infrastructure and commercial terms studios need in production.</p>
             </div>
             <p class="ask-note">Send us one character you would stake the game on. We take her to the moment your tree ends. Eighteen months after she ships, a player forgets the scene and still remembers her.</p>
             <div class="contact-box">

@@ -30,7 +30,7 @@ const PAGES = {
     developers: { render: DevelopersPage, className: 'site-main page-developers' },
     whitepaper: { render: Whitepaper, className: 'site-main page-doc' },
     scenes: { render: Scenes, className: 'site-main theme-dark page-scenes' },
-    pitch: { render: PitchDeck, className: 'page-inner' },
+    pitch: { render: PitchDeck, className: 'page-inner page-deck' },
 };
 
 export const App = (state) => {
